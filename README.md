@@ -1,8 +1,8 @@
 ![logo](logos/codegator-167x79.png)
 
 # CG.Orange: 
-[![Build Status](https://dev.azure.com/codegator/CG.Orange/_apis/build/status/CodeGator.CG.Orange?branchName=main)](https://dev.azure.com/codegator/CG.Orange/_build/latest?definitionId=93&branchName=main)
-![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Orange/93?logo=codecov&logoColor=white&style=flat-square&token=4BBNQPPATD)
+[![Build Status](https://dev.azure.com/codegator/CG.Orange/_apis/build/status/CodeGator.CG.Orange?branchName=main)](https://dev.azure.com/codegator/CG.Orange/_build/latest?definitionId=95&branchName=main)
+![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Orange/95?logo=codecov&logoColor=white&style=flat-square&token=4BBNQPPATD)
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.Orange/index.html)
 [![GitHub last commit](https://img.shields.io/github/last-commit/CodeGator/CG.Orange?color=594ae2&style=flat-square&logo=github)](https://github.com/CodeGator/CG.Orange)
 
