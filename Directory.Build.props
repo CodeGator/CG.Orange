@@ -13,8 +13,8 @@
 		<Company>CodeGator</Company>
 		<Copyright>Copyright © 2019 - 2023 by CodeGator. All rights reserved.</Copyright>
 		<Title>$(AssemblyName)</Title>
-		<PackageProjectUrl>https://github.com/CodeGator/CG.Purple</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/CodeGator/CG.Purple</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/CodeGator/CG.Orange</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/CodeGator/CG.Orange</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
