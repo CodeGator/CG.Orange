@@ -23,14 +23,14 @@ public partial class Index
     };
 
     /// <summary>
-    /// This field contains the list of files to upload.
+    /// This field contains the list of pending uploads.
     /// </summary>
     private List<FileUploadVM> _pendingUploads = new();
 
     /// <summary>
-    /// This field indicates when we should show the post upload prompt.
+    /// This field contains the list of saved uploads.
     /// </summary>
-    private bool _showPrompt;
+    private List<FileUploadVM> _savedUploads = new();
 
     #endregion
 
@@ -65,6 +65,12 @@ public partial class Index
     protected NavigationManager NavigationManager { get; set; } = null!;
 
     /// <summary>
+    /// This property contains the setting file manager for the page.
+    /// </summary>
+    [Inject]
+    protected ISettingFileManager SettingFileManager { get; set; } = null!;
+
+    /// <summary>
     /// This property contains the name of the current user, or the word
     /// 'anonymous' if nobody is currently authenticated.
     /// </summary>
@@ -87,8 +93,8 @@ public partial class Index
     {
         try
         {
-            // Remove any visible prompt.
-            _showPrompt = false;
+            // Clear any previously saved uploads.
+            _savedUploads.Clear();
 
             // Check for duplicate files.
             if (_pendingUploads.Any(x => x.FileName == file.Name))
@@ -96,7 +102,7 @@ public partial class Index
                 // Prompt the user.
                 await DialogService.ShowMessageBox(
                     title: "Woah!",
-                    markupMessage: new MarkupString($"The file: {file.Name} " +
+                    markupMessage: new MarkupString($"The file: '{file.Name}' " +
                     "has already been uploaded.")
                     );
                 return;
@@ -159,6 +165,8 @@ public partial class Index
         }
     }
 
+    // *******************************************************************
+
     /// <summary>
     /// This method is called to save the uploaded files.
     /// </summary>
@@ -167,10 +175,45 @@ public partial class Index
     {
         try
         {
-            // Loop through the uploads.
+            // Loop and look for conflicts
             foreach (var upload in _pendingUploads)
             {
+                // Look for a conflict.
+                var conflict = await SettingFileManager.AnyAsync(
+                    upload.ApplicationName,
+                    upload.EnvironmentName
+                    );
 
+                // Did we find one?
+                if (conflict)
+                {
+                    // Prompt the user.
+                    await DialogService.ShowMessageBox(
+                        title: "Woah!",
+                        markupMessage: new MarkupString($"The file: '{upload.FileName}' " +
+                        $"has already been uploaded for application: '{upload.ApplicationName}' " +
+                        $"and environment: '{(upload.EnvironmentName ?? "NULL")}'<br /><br />" +
+                        "To continue, either change the application name, or the environment " +
+                        "name, to something unique - or go edit the existing configuration settings.")
+                        );
+                    return;
+                }
+            }
+
+            // Loop and create the files.
+            foreach (var upload in _pendingUploads)
+            {
+                // Create the settings from the uploaded file.
+                _ = await SettingFileManager.CreateAsync(new Models.SettingFile()
+                {
+                    ApplicationName = upload.ApplicationName,   
+                    EnvironmentName = upload.EnvironmentName,
+                    OriginalFileName = upload.FileName,
+                    Length = upload.FileBytes.Length,
+                    Json = Encoding.UTF8.GetString(upload.FileBytes)
+                },
+                UserName
+                );
             }
 
             // Tell the world what happened.
@@ -180,11 +223,11 @@ public partial class Index
                 options => options.CloseAfterNavigation = true
                 );
 
+            // All the pending uploads are now saved.
+            _savedUploads.AddRange(_pendingUploads);
+
             // We don't need these now.
             _pendingUploads.Clear();
-
-            // Show the post upload prompt.
-            _showPrompt = true;
         }
         catch (Exception ex)
         {

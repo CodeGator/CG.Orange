@@ -25,6 +25,10 @@ try
     // Add MudBlazor stuff
     builder.Services.AddMudServices();
 
+    // Add Orange stuff.
+    builder.AddDataAccessLayer()
+        .AddBusinessLayer();
+
     // Build the application.
     var app = builder.Build();
 
@@ -41,6 +45,9 @@ try
     app.UseRouting();
     app.MapBlazorHub();
     app.MapFallbackToPage("/_Host");
+
+    // Use Orange stuff.
+    app.UseDalStartup();
 
     // Run the application.
     app.Run();

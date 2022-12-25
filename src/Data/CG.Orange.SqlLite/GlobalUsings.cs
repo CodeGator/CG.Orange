@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CG.Orange
-{
-    internal class GlobalUsings
-    {
-    }
-}
+﻿global using AutoMapper;
+global using CG.Orange.Models;
+global using CG.Orange.Repositories;
+global using CG.Orange.SqlLite;
+global using CG.Orange.SqlLite.Options;
+global using CG.Orange.SqlLite.Repositories;
+global using CG.Orange.SqlLite.Maps;
+global using CG.Validations;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Design;
+global using Microsoft.EntityFrameworkCore.Infrastructure;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Options;
+global using System.Reflection;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;

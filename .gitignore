@@ -378,3 +378,7 @@ launchSettings.json
 project.lock.json
 *.sublime-workspace
 
+# SqlLite Files
+*.db
+*.db-shm
+*.db-wal
