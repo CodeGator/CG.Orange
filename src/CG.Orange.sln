@@ -32,9 +32,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "30. Providers", "30. Provid
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Host.Controllers", "Services\CG.Orange.Host.Controllers\CG.Orange.Host.Controllers.csproj", "{257E1426-9A05-4802-ABD1-BBC0252A601D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CG.Orange.SqlLite", "Data\CG.Orange.SqlLite\CG.Orange.SqlLite.csproj", "{45115B29-FF71-4C22-BAFA-0317F699B4F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.SqlLite", "Data\CG.Orange.SqlLite\CG.Orange.SqlLite.csproj", "{45115B29-FF71-4C22-BAFA-0317F699B4F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CG.Orange.Providers.Azure", "Providers\CG.Orange.Providers.Azure\CG.Orange.Providers.Azure.csproj", "{9ACE5196-8D33-4043-920E-7F0E2C5EAF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Providers.Azure", "Providers\CG.Orange.Providers.Azure\CG.Orange.Providers.Azure.csproj", "{9ACE5196-8D33-4043-920E-7F0E2C5EAF6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

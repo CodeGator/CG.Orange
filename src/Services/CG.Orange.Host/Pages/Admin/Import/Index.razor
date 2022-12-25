@@ -1,0 +1,82 @@
+﻿@page "/admin/import"
+
+<PageTitle>Import</PageTitle>
+
+<MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
+
+<MudText Typo="Typo.h6" Class="">File Imports</MudText>
+<MudText Typo="Typo.body1" Class="mb-5">Use this page to manage JSON file imports.</MudText>
+
+@if (_pendingUploads.Any())
+{
+    <MudText Typo="Typo.caption" Class="">Once a file is uploaded, use the grid to edit the details.</MudText>
+}
+
+<MudTable Items="_pendingUploads" 
+    Class="my-5"
+    CanCancelEdit
+    EditButtonPosition="TableEditButtonPosition.End"
+    ApplyButtonPosition="TableApplyButtonPosition.End"
+    EditTrigger="TableEditTrigger.EditButton"
+    Dense 
+    Striped 
+    Hover>
+    <ToolBarContent>
+        <MudFileUpload T="IBrowserFile"
+                       Accept=".json"
+                       FilesChanged="OnFilesChangedAsync" MaximumFileCount="10">
+            <ButtonTemplate>
+                <MudButton HtmlTag="label"
+                           Variant="Variant.Filled"
+                           Color="Color.Secondary"
+                           StartIcon="@Icons.Filled.CloudUpload"
+                           for="@context">
+                    Upload JSON File(s)
+                </MudButton>
+            </ButtonTemplate>
+        </MudFileUpload>
+        <MudSpacer />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>File</MudTh>
+        <MudTh>Length (in bytes)</MudTh>
+        <MudTh>Application</MudTh>
+        <MudTh>Environment</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="File">@context.FileName</MudTd>
+        <MudTd DataLabel="Length (in bytes)">@context.FileBytes.Length</MudTd>
+        <MudTd DataLabel="Application">@context.ApplicationName</MudTd>
+        <MudTd DataLabel="Environment">@context.EnvironmentName</MudTd>
+    </RowTemplate>
+    <RowEditingTemplate>
+        <MudTd DataLabel="File">@context.FileName</MudTd>
+        <MudTd DataLabel="Length (in bytes)">@context.FileBytes.Length</MudTd>
+        <MudTd DataLabel="Application">
+            <MudTextField @bind-Value="@context.ApplicationName" Required />
+        </MudTd>
+        <MudTd DataLabel="Environment">
+            <MudTextField @bind-Value="@context.EnvironmentName" />
+        </MudTd>
+    </RowEditingTemplate>
+    <NoRecordsContent>
+        No unsaved uploads were found.
+    </NoRecordsContent>
+</MudTable>
+
+@if (_pendingUploads.Any())
+{
+    <MudText Typo="Typo.caption">Press the 'Save Uploads' button to save the changes, or press the 'Clear Uploads' button to start over.</MudText>
+    <div class="my-5">        
+        <MudButton Variant="Variant.Outlined" OnClick="@(() => _pendingUploads.Clear())">Clear Uploads</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="SaveUploadsAsync">Save Uploads</MudButton>        
+    </div>    
+}
+
+@if (_showPrompt)
+{
+    <MudText Typo="Typo.body2">The file(s) you saved are now in the system and can be seen by going to the Configurations page.</MudText>
+    <MudText Typo="Typo.body2">Would you like to go there now?</MudText>
+    <MudButton Color="Color.Tertiary" Variant="Variant.Outlined" OnClick="@(() => NavigationManager.NavigateTo("/admin/configurations"))">Go To Configurations</MudButton>
+}
+
