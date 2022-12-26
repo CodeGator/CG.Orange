@@ -1,11 +1,12 @@
 ﻿@page "/admin/settings/setting/{SettingId:int}"
+@*@attribute [Authorize(Roles = "Admin")]*@
 
 <PageTitle>Setting</PageTitle>
 
 <MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
 
 <MudText Typo="Typo.h6">Setting</MudText>
-<MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the properties of a configuration.</MudText>
+<MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the properties of this configuration.</MudText>
 
 @if (_model is null)
 {

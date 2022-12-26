@@ -1,3 +1,4 @@
+using Serilog;
 
 try
 {
@@ -27,7 +28,8 @@ try
 
     // Add Orange stuff.
     builder.AddDataAccessLayer()
-        .AddBusinessLayer();
+        .AddBusinessLayer()
+        .AddOrangeIdentity();
 
     // Build the application.
     var app = builder.Build();
@@ -47,11 +49,11 @@ try
     app.MapFallbackToPage("/_Host");
 
     // Use Orange stuff.
-    app.UseDalStartup();
+    app.UseDalStartup()
+        .UseOrangeIdentity();
 
     // Run the application.
     app.Run();
-
 }
 catch (Exception ex)
 {

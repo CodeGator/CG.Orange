@@ -1,0 +1,17 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Authentication
+@attribute [IgnoreAntiforgeryToken]
+
+@functions {
+    public async Task<IActionResult> OnPost()
+    {
+        await HttpContext.SignOutAsync();
+
+        HttpContext.Response.Cookies.Delete(
+            ".AspNetCore.Identity.Application"
+        );
+
+        return Redirect("/");
+    }
+}

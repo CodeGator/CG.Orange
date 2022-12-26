@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="CG.Logging" Version="2023.1.2" />
     <PackageReference Include="CG.Reflection" Version="2023.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.1" />
     <PackageReference Include="MudBlazor" Version="6.1.6" />
     <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
       <PrivateAssets>all</PrivateAssets>
@@ -23,6 +24,10 @@
     <ProjectReference Include="..\..\Libraries\CG.Orange\CG.Orange.csproj" />
     <ProjectReference Include="..\..\Providers\CG.Orange.Providers.Azure\CG.Orange.Providers.Azure.csproj" />
     <ProjectReference Include="..\CG.Orange.Host.Controllers\CG.Orange.Host.Controllers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Options\" />
   </ItemGroup>
 
 </Project>
