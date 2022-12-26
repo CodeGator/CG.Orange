@@ -2,7 +2,7 @@
 namespace CG.Orange.SqlLite.Maps;
 
 /// <summary>
-/// This class represents a base map for entity types derived from <see cref="EntityBase"/>
+/// This class represents a base map for entity types derived from <see cref="Entities.EntityBase"/>
 /// </summary>
 /// <typeparam name="TEntity"></typeparam>
 internal abstract class EntityMapBase<TEntity> : IEntityTypeConfiguration<TEntity>

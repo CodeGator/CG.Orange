@@ -1,0 +1,65 @@
+﻿@page "/admin/settings"
+
+<PageTitle>Settings</PageTitle>
+
+<MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
+
+<MudText Typo="Typo.h6">Settings</MudText>
+<MudText Typo="Typo.body1" Class="pb-5">Use this page to browse configurations.</MudText>
+
+<MudTable Items="_settings"
+          Dense
+          Striped
+          Hover>
+    <ColGroup>
+        <col />
+        <col />
+        <col />
+        <col />
+    </ColGroup>
+    <ToolBarContent>
+        <MudButton StartIcon="@Icons.Material.Filled.Create"
+                   Class="mt-1 mr-2"
+                   Variant="Variant.Filled"
+                   OnClick="OnCreateAsync">Create</MudButton>
+        <MudFileUpload T="IBrowserFile"
+                       Accept=".json"
+                       FilesChanged="OnFilesChangedAsync">
+            <ButtonTemplate>
+                <MudButton HtmlTag="label"
+                           Variant="Variant.Filled"
+                           Color="Color.Secondary"
+                           StartIcon="@Icons.Filled.CloudUpload"
+                           for="@context">
+                    Import
+                </MudButton>
+            </ButtonTemplate>
+        </MudFileUpload>
+        <MudSpacer />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortBy="new Func<SettingFile, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<SettingFile, object>(x=>x.ApplicationName)">Application</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<SettingFile, object>(x=>x.SafeEnvironmentName())">Environment</MudTableSortLabel></MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Disabled"><MudCheckBox Checked="@context.IsDisabled" DisableRipple ReadOnly /></MudTd>
+        <MudTd DataLabel="Application">@context.ApplicationName</MudTd>
+        <MudTd DataLabel="Environment">@context.SafeEnvironmentName()</MudTd>
+        <MudTd>
+            <MudTooltip Text="Edit file">
+                <MudIconButton Icon="@Icons.Material.Rounded.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/settings/setting/{context.Id}"))" />
+            </MudTooltip>
+            <MudTooltip Text="Delete file">
+                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeleteAsync(@context))" />
+            </MudTooltip>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+    <NoRecordsContent>
+        No setting were found.
+    </NoRecordsContent>
+</MudTable>

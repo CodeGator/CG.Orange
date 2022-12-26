@@ -23,8 +23,6 @@ namespace CG.Orange.SqlLite.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     ApplicationName = table.Column<string>(type: "TEXT", nullable: false),
                     EnvironmentName = table.Column<string>(type: "TEXT", nullable: false),
-                    OriginalFileName = table.Column<string>(type: "TEXT", unicode: false, maxLength: 260, nullable: false),
-                    Length = table.Column<int>(type: "INTEGER", nullable: false),
                     Json = table.Column<string>(type: "TEXT", nullable: false),
                     IsDisabled = table.Column<bool>(type: "INTEGER", nullable: false),
                     CreatedBy = table.Column<string>(type: "TEXT", nullable: false),

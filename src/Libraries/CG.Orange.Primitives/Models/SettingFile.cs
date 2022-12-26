@@ -29,16 +29,6 @@ public class SettingFile : ModelBase
     public string? EnvironmentName { get; set; }
 
     /// <summary>
-    /// This property contains the original file name for the settings.
-    /// </summary>
-    public string OriginalFileName { get; set; } = null!;
-
-    /// <summary>
-    /// This property contains the length of the JSON for the settings.
-    /// </summary>
-    public int Length { get; set; }
-
-    /// <summary>
     /// This property contains the JSON for the settings.
     /// </summary>
     public string Json { get; set; } = null!;

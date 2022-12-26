@@ -1,0 +1,82 @@
+﻿@page "/admin/settings/setting/{SettingId:int}"
+
+<PageTitle>Setting</PageTitle>
+
+<MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
+
+<MudText Typo="Typo.h6">Setting</MudText>
+<MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the properties of a configuration.</MudText>
+
+@if (_model is null)
+{
+    <MudText Class="py-5" Typo="Typo.h6" Color="Color.Warning">Ooops! we couldn't find that setting file!</MudText>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(() => NavigationManager.NavigateTo("/admin/settings"))">Back to Settings</MudButton>
+}
+else
+{
+    <EditForm Model="_model" OnValidSubmit="OnValidSubmit">
+        <DataAnnotationsValidator />
+        <MudGrid>
+            <MudItem xs="12">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Save Changes</MudButton>
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField AutoFocus
+                              Variant="Variant.Outlined"
+                              Label="Application"
+                              For="@(() => _model.ApplicationName)"
+                @bind-Value="@_model.ApplicationName" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField Variant="Variant.Outlined"
+                              Label="Environment"
+                              For="@(() => _model.EnvironmentName)"
+                @bind-Value="@_model.EnvironmentName" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudSwitch Label="Disabled"
+                           For="@(() => _model.IsDisabled)"
+                @bind-Value="@_model.IsDisabled" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudButton Class="mb-3" Variant="Variant.Outlined" StartIcon="@Icons.Material.Rounded.Wallpaper" Color="Color.Secondary" OnClick="OnValidateJsonAsync">Validate JSON</MudButton>
+                <MudTextField Variant="Variant.Outlined"
+                              Label="JSON"
+                              Lines="20"
+                              For="@(() => _model.Json)"
+                @bind-Value="@_model.Json" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string"
+                              Variant="Variant.Outlined"
+                              Label="Created On"
+                              ReadOnly
+                              Text="@_model.CreatedOnUtc.ToLocalTime().ToString()" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField Variant="Variant.Outlined"
+                              Label="Created By"
+                              ReadOnly
+                              For="@(() => _model.CreatedBy)"
+                @bind-Value="@_model.CreatedBy" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string"
+                              Variant="Variant.Outlined"
+                              Label="Last Updated On"
+                              ReadOnly
+                              Text="@(_model.LastUpdatedOnUtc == null ? "" : _model.LastUpdatedOnUtc.Value.ToLocalTime().ToString())" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField Variant="Variant.Outlined"
+                              Label="Last Updated By"
+                              ReadOnly
+                              For="@(() => _model.LastUpdatedBy)"
+                @bind-Value="@_model.LastUpdatedBy" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Save Changes</MudButton>
+            </MudItem>
+        </MudGrid>
+    </EditForm>
+}

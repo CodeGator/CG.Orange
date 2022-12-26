@@ -493,7 +493,7 @@ internal class SettingFileRepository : ISettingFileRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<IEnumerable<SettingFile>> FindByApplicationAndEnvironmentAsync(
+    public virtual async Task<SettingFile?> FindByApplicationAndEnvironmentAsync(
         string applicationName,
         string? environmentName,
         CancellationToken cancellationToken = default
@@ -517,22 +517,26 @@ internal class SettingFileRepository : ISettingFileRepository
 
             // Log what we are about to do.
             _logger.LogDebug(
-                "Searching for setting files."
+                "Searching for a setting file."
                 );
 
             // Perform the setting file search.
-            var settingFiles = await dbContext.SettingFiles.Where(x =>
+            var settingFile = await dbContext.SettingFiles.Where(x =>
                 x.ApplicationName == applicationName &&
                 x.EnvironmentName == environmentName
                 ).AsNoTracking()
-                .ToListAsync(
-                cancellationToken
-                ).ConfigureAwait(false);
+                .FirstOrDefaultAsync(
+                    cancellationToken
+                    ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (settingFile is null)
+            {
+                return null;
+            }
 
             // Convert the entities to a models.
-            var result = settingFiles.Select(x =>
-                _mapper.Map<SettingFile>(x)
-                );
+            var result = _mapper.Map<SettingFile>(settingFile);
 
             // Return the results.
             return result;
@@ -542,14 +546,80 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting files by application " +
+                "Failed to search for a setting file by application " +
                 "and environment!"
                 );
 
             // Provider better context.
+            throw new RepositoryException( 
+                message: $"The repository failed to search for a setting " +
+                "file by application and environment!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc/>
+    public virtual async Task<SettingFile?> FindByIdAsync(
+        int id,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfZero(id, nameof(id));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Creating a {ctx} data-context",
+                nameof(OrangeDbContext)
+                );
+
+            // Create a database context.
+            using var dbContext = await _dbContextFactory.CreateDbContextAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Searching for a setting file."
+                );
+
+            // Perform the setting file search.
+            var settingFile = await dbContext.SettingFiles.Where(x =>
+                x.Id == id
+                ).AsNoTracking()
+                .FirstOrDefaultAsync(
+                    cancellationToken
+                    ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (settingFile is null)
+            {
+                return null;
+            }
+
+            // Convert the entities to a models.
+            var result = _mapper.Map<SettingFile>(settingFile);
+
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for a setting file by id"
+                );
+
+            // Provider better context.
             throw new RepositoryException(
-                message: $"The repository failed to search for setting " +
-                "files by application and environment!",
+                message: $"The repository failed to search for a setting " +
+                "file by id",
                 innerException: ex
                 );
         }

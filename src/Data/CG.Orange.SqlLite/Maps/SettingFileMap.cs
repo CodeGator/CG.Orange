@@ -56,15 +56,6 @@ internal class SettingFileMap : EntityMapBase<Entities.SettingFile>
         builder.HasKey(e => new { e.Id });
 
         // Setup the column.
-        builder.Property(e => e.OriginalFileName)
-            .HasMaxLength(260)
-            .IsUnicode(false);
-
-        // Setup the column.
-        builder.Property(e => e.Length)
-            .IsRequired();
-
-        // Setup the column.
         builder.Property(e => e.Json)
             .IsRequired();
 

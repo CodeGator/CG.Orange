@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Managers;
-
 namespace CG.Orange.Repositories;
 
 /// <summary>
@@ -60,7 +58,7 @@ public interface ISettingFileRepository
     /// This method creates a new <see cref="SettingFile"/> object in the 
     /// underlying storage.
     /// </summary>
-    /// <param name="attachment">The model to create in the underlying storage.</param>
+    /// <param name="settingFile">The model to create in the underlying storage.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns the newly created
@@ -70,7 +68,7 @@ public interface ISettingFileRepository
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
     Task<SettingFile> CreateAsync(
-        SettingFile attachment,
+        SettingFile settingFile,
         CancellationToken cancellationToken = default
         );
 
@@ -78,7 +76,7 @@ public interface ISettingFileRepository
     /// This method deletes an existing <see cref="SettingFile"/> object from the 
     /// underlying storage.
     /// </summary>
-    /// <param name="attachment">The model to delete from the underlying storage.</param>
+    /// <param name="settingFile">The model to delete from the underlying storage.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation.</returns>
@@ -87,7 +85,7 @@ public interface ISettingFileRepository
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
     Task DeleteAsync(
-        SettingFile attachment,
+        SettingFile settingFile,
         CancellationToken cancellationToken = default
         );
 
@@ -105,27 +103,45 @@ public interface ISettingFileRepository
         );
 
     /// <summary>
-    /// This method searches for all the <ee cref="SettingFile"/> objects.
+    /// This method searches for a matching <see cref="SettingFile"/> object using the
+    /// given application and environment names.
     /// </summary>
     /// <param name="applicationName">The application name to use for the operation.</param>
     /// <param name="environmentName">The environment name to use for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
-    /// <returns>A task to perform the operation that returns a sequence of 
-    /// <see cref="SettingFile"/> objects.</returns>
+    /// <returns>A task to perform the operation that returns a <see cref="SettingFile"/> 
+    /// objects, if a match was found, of <c>NULL</c> otherwise.</returns>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
-    Task<IEnumerable<SettingFile>> FindByApplicationAndEnvironmentAsync(
+    Task<SettingFile?> FindByApplicationAndEnvironmentAsync(
         string applicationName,
         string? environmentName,
         CancellationToken cancellationToken = default
         );
 
     /// <summary>
+    /// This method searches for a matching <see cref="SettingFile"/> object using the
+    /// given identifier.
+    /// </summary>
+    /// <param name="id">The identifier to use for the operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation that returns a <see cref="SettingFile"/> 
+    /// objects, if a match was found, of <c>NULL</c> otherwise.</returns>
+    /// <exception cref="RepositoryException">This exception is thrown whenever the
+    /// repository fails to complete the operation.</exception>
+    Task<SettingFile?> FindByIdAsync(
+        int id,
+        CancellationToken cancellationToken = default
+        );
+
+
+    /// <summary>
     /// This method updates an existing <see cref="SettingFile"/> object in the 
     /// underlying storage.
     /// </summary>
-    /// <param name="attachment">The model to update in the underlying storage.</param>
+    /// <param name="settingFile">The model to update in the underlying storage.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns the newly updated
@@ -135,7 +151,7 @@ public interface ISettingFileRepository
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
     Task<SettingFile> UpdateAsync(
-        SettingFile attachment,
+        SettingFile settingFile,
         CancellationToken cancellationToken = default
         );
 }

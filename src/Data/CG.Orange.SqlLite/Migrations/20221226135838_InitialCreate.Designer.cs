@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CG.Orange.SqlLite.Migrations
 {
     [DbContext(typeof(OrangeDbContext))]
-    [Migration("20221225183554_InitialCreate")]
+    [Migration("20221226135838_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -52,15 +52,6 @@ namespace CG.Orange.SqlLite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("LastUpdatedOnUtc")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Length")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("OriginalFileName")
-                        .IsRequired()
-                        .HasMaxLength(260)
-                        .IsUnicode(false)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

@@ -58,7 +58,7 @@ public interface ISettingFileManager
     /// This method creates a new <see cref="SettingFile"/> object in the 
     /// underlying storage.
     /// </summary>
-    /// <param name="configuration">The model to create in the underlying storage.</param>
+    /// <param name="settingFile">The model to create in the underlying storage.</param>
     /// <param name="userName">The user name of the person performing the 
     /// operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
@@ -70,7 +70,7 @@ public interface ISettingFileManager
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
     Task<SettingFile> CreateAsync(
-        SettingFile configuration,
+        SettingFile settingFile,
         string userName,
         CancellationToken cancellationToken = default
         );
@@ -79,7 +79,7 @@ public interface ISettingFileManager
     /// This method deletes an existing <see cref="SettingFile"/> object from the 
     /// underlying storage.
     /// </summary>
-    /// <param name="configuration">The model to delete from the underlying storage.</param>
+    /// <param name="settingFile">The model to delete from the underlying storage.</param>
     /// <param name="userName">The user name of the person performing the 
     /// operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
@@ -90,13 +90,13 @@ public interface ISettingFileManager
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
     Task DeleteAsync(
-        SettingFile configuration,
+        SettingFile settingFile,
         string userName,
         CancellationToken cancellationToken = default
         );
 
     /// <summary>
-    /// This method searches for all the <ee cref="SettingFile"/> objects.
+    /// This method searches for all the <see cref="SettingFile"/> objects.
     /// </summary>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
@@ -109,20 +109,36 @@ public interface ISettingFileManager
         );
 
     /// <summary>
-    /// This method searches for <ee cref="SettingFile"/> objects with matching
-    /// application and environment names.
+    /// This method searches for a matching <see cref="SettingFile"/> object using the
+    /// given application and environment names.
     /// </summary>
     /// <param name="applicationName">The application name to use for the operation.</param>
     /// <param name="environmentName">The environment name to use for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
-    /// <returns>A task to perform the operation that returns a sequence of 
-    /// <see cref="SettingFile"/> objects.</returns>
+    /// <returns>A task to perform the operation that returns a <see cref="SettingFile"/> 
+    /// objects, if a match was found, of <c>NULL</c> otherwise.</returns>
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
-    Task<IEnumerable<SettingFile>> FindByApplicationAndEnvironmentAsync(
+    Task<SettingFile?> FindByApplicationAndEnvironmentAsync(
         string applicationName,
         string? environmentName,
+        CancellationToken cancellationToken = default
+        );
+
+    /// <summary>
+    /// This method searches for a matching <see cref="SettingFile"/> object using the
+    /// given identifier.
+    /// </summary>
+    /// <param name="id">The identifier to use for the operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation that returns a <see cref="SettingFile"/> 
+    /// objects, if a match was found, of <c>NULL</c> otherwise.</returns>
+    /// <exception cref="ManagerException">This exception is thrown whenever the
+    /// manager fails to complete the operation.</exception>
+    Task<SettingFile?> FindByIdAsync(
+        int id,
         CancellationToken cancellationToken = default
         );
 
@@ -130,7 +146,7 @@ public interface ISettingFileManager
     /// This method updates an existing <see cref="SettingFile"/> object in the 
     /// underlying storage.
     /// </summary>
-    /// <param name="configuration">The model to update in the underlying storage.</param>
+    /// <param name="settingFile">The model to update in the underlying storage.</param>
     /// <param name="userName">The user name of the person performing the 
     /// operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
@@ -142,7 +158,7 @@ public interface ISettingFileManager
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
     Task<SettingFile> UpdateAsync(
-        SettingFile configuration,
+        SettingFile settingFile,
         string userName,
         CancellationToken cancellationToken = default
         );

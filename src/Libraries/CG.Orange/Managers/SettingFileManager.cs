@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Models;
-
 namespace CG.Orange.Managers;
 
 internal class SettingFileManager : ISettingFileManager
@@ -60,7 +58,7 @@ internal class SettingFileManager : ISettingFileManager
 
     #region Public methods
 
-    /// <inheritdoc cref="ISettingFileManager.AnyAsync(CancellationToken)" />
+    /// <inheritdoc />
     public virtual async Task<bool> AnyAsync(
         CancellationToken cancellationToken = default
         )
@@ -96,7 +94,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.AnyAsync(string, string?, CancellationToken)" />
+    /// <inheritdoc />
     public virtual async Task<bool> AnyAsync(
         string applicationName,
         string? environmentName,
@@ -141,7 +139,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.CountAsync(CancellationToken)"/>
+    /// <inheritdoc />
     public virtual async Task<long> CountAsync(
         CancellationToken cancellationToken = default
         )
@@ -177,7 +175,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.CreateAsync(SettingFile, string, CancellationToken)"/>
+    /// <inheritdoc />
     public virtual async Task<SettingFile> CreateAsync(
         SettingFile settingFile,
         string userName,
@@ -232,7 +230,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.DeleteAsync(SettingFile, string, CancellationToken)"/>
+    /// <inheritdoc />
     public virtual async Task DeleteAsync(
         SettingFile settingFile,
         string userName,
@@ -285,7 +283,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.FindAllAsync(CancellationToken)"/>
+    /// <inheritdoc />
     public virtual async Task<IEnumerable<SettingFile>> FindAllAsync(
         CancellationToken cancellationToken = default
         )
@@ -324,8 +322,8 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.FindByApplicationAndEnvironmentAsync(string, string, CancellationToken)"/>
-    public virtual async Task<IEnumerable<SettingFile>> FindByApplicationAndEnvironmentAsync(
+    /// <inheritdoc />
+    public virtual async Task<SettingFile?> FindByApplicationAndEnvironmentAsync(
         string applicationName,
         string? environmentName,
         CancellationToken cancellationToken = default
@@ -371,7 +369,52 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc cref="ISettingFileManager.UpdateAsync(SettingFile, string, CancellationToken)"/>
+    /// <inheritdoc />
+    public virtual async Task<SettingFile?> FindByIdAsync(
+        int id,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfZero(id, nameof(id));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(ISettingFileRepository.FindByIdAsync)
+                );
+
+            // Perform the operation.
+            var result = await _settingFileRepository.FindByIdAsync(
+                id,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for setting files by id!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for setting files by " +
+                "id!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
     public virtual async Task<SettingFile> UpdateAsync(
         SettingFile settingFile,
         string userName,

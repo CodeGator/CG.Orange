@@ -51,15 +51,6 @@ namespace CG.Orange.SqlLite.Migrations
                     b.Property<DateTime?>("LastUpdatedOnUtc")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Length")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("OriginalFileName")
-                        .IsRequired()
-                        .HasMaxLength(260)
-                        .IsUnicode(false)
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
 
                     b.HasIndex(new[] { "IsDisabled" }, "IX_FileSettings");
