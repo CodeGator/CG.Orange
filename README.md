@@ -6,6 +6,9 @@
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.Orange/index.html)
 [![GitHub last commit](https://img.shields.io/github/last-commit/CodeGator/CG.Orange?color=594ae2&style=flat-square&logo=github)](https://github.com/CodeGator/CG.Orange)
 
+#### GitHub Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/7691ab3e13795551e146c7203987f95588918bf4.svg "Repobeats analytics image")
 
 ### What does it do?
 Orange is an idea for a self contained configuration microservice. The scenario is: You upload a JSON configuration file, with placeholders for any secrets. Then, later, you connect to the microservice and get that same configuration back, with secrets pulled from external sources, like Azure, or AWS.
