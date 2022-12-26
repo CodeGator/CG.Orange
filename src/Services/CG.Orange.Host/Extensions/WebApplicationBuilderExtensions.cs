@@ -1,4 +1,7 @@
 ﻿
+using CG.Orange.Host.Options;
+using CG.Orange.SqlLite.Options;
+
 namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>
@@ -35,8 +38,22 @@ internal static class WebApplicationBuilderExtensions
         Guard.Instance().ThrowIfNull(webApplicationBuilder, nameof(webApplicationBuilder))
             .ThrowIfNullOrEmpty(sectionName, nameof(sectionName));
 
-        // Unmap incoming claims, which are mapped, by default, by ASP.NET.
-        JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Configuring Identity options from the {section} section",
+            sectionName
+            );
+
+        // Configure the identity options.
+        webApplicationBuilder.Services.ConfigureOptions<IdentityOptions>(
+            webApplicationBuilder.Configuration.GetSection(sectionName),
+            out var identityOptions
+            );
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Adding authentication and authorization services."
+            );
 
         // Wire up the authentication and authorization services.
         webApplicationBuilder.Services.AddAuthentication(options =>
@@ -49,18 +66,35 @@ internal static class WebApplicationBuilderExtensions
             options.Cookie.SameSite = SameSiteMode.Lax;
         }).AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
         {
-            options.Authority = "https://localhost:7129";
-            options.RequireHttpsMetadata = false;
+            // Where our identity server is.
+            options.Authority = identityOptions.Authority; 
 
-            options.ClientId = "cg.orange.host";
-            options.ClientSecret = "secret";
+            // Are we in a development environment?
+            if (webApplicationBuilder.Environment.IsDevelopment())
+            {
+                // Don't require HTTPS for meta-data
+                options.RequireHttpsMetadata = false;
+            }
 
+            // This is who we are.
+            options.ClientId = identityOptions.ClientId; 
+
+            // This is what we know.
+            options.ClientSecret = identityOptions.ClientSecret;
+
+            // We want an authentication code response.
             options.ResponseType = "code";
-
+            
+            // Map the name claim so ASP.NET will understand it.
             options.MapInboundClaims = false;
+
+            // Access and Refresh token stored in the authentication properties.
             options.SaveTokens = true;
+
+            // Go to the user info endpoint for additional claims.
             options.GetClaimsFromUserInfoEndpoint = true;
 
+            // We want these scopes, by default.
             options.Scope.Clear();
             options.Scope.Add("openid");
             options.Scope.Add("profile");
@@ -78,18 +112,14 @@ internal static class WebApplicationBuilderExtensions
             // Tap into the ODIC events.
             options.Events = new OpenIdConnectEvents
             {
+                // On access denied, we want to go back to our
+                //   own home page.
                 OnAccessDenied = context =>
                 {
                     context.HandleResponse();
                     context.Response.Redirect("/");
                     return Task.CompletedTask;
-                },
-                // Uncomment to peek at the token.
-                //OnTokenValidated = context =>
-                //{
-                //    var token = context.SecurityToken.RawData;
-                //    return Task.CompletedTask;
-                //}
+                }
             };
         });
 
