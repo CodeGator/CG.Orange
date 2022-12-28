@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Description>The SQLite data-access layer for the CG.Orange microservice.</Description>
+        <UserSecretsId>5c361aad-31eb-49e1-8c32-44d7edd03062</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>

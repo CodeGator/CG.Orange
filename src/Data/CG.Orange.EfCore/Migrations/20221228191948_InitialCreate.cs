@@ -19,16 +19,16 @@ namespace CG.Orange.EfCore.Migrations
                 schema: "Orange",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ApplicationName = table.Column<string>(type: "TEXT", nullable: false),
-                    EnvironmentName = table.Column<string>(type: "TEXT", nullable: false),
-                    Json = table.Column<string>(type: "TEXT", nullable: false),
-                    IsDisabled = table.Column<bool>(type: "INTEGER", nullable: false),
-                    CreatedBy = table.Column<string>(type: "TEXT", nullable: false),
-                    CreatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    LastUpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
-                    LastUpdatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ApplicationName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
+                    EnvironmentName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
+                    Json = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsDisabled = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastUpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastUpdatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -46,7 +46,8 @@ namespace CG.Orange.EfCore.Migrations
                 schema: "Orange",
                 table: "SettingFiles",
                 columns: new[] { "ApplicationName", "EnvironmentName" },
-                unique: true);
+                unique: true,
+                filter: "[EnvironmentName] IS NOT NULL");
         }
 
         /// <inheritdoc />

@@ -61,11 +61,12 @@ internal class SettingFileMap : EntityMapBase<Entities.SettingFile>
 
         // Setup the column.
         builder.Property(e => e.ApplicationName)
+            .HasMaxLength(32)
             .IsRequired();
 
         // Setup the column.
         builder.Property(e => e.EnvironmentName)
-            .IsRequired();
+            .HasMaxLength(32);
 
         // Setup the column.
         builder.Property(e => e.IsDisabled)
