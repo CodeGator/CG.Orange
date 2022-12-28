@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class OrangeDalOptions
+    <title>Class OrangeDbContext
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class OrangeDalOptions
+    <meta name="title" content="Class OrangeDbContext
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,60 +78,66 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.EfCore.OrangeDbContext">
   
   
-  <h1 id="CG_Orange_SqlLite_Options_OrangeDalOptions" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions" class="text-break">Class OrangeDalOptions
+  <h1 id="CG_Orange_EfCore_OrangeDbContext" data-uid="CG.Orange.EfCore.OrangeDbContext" class="text-break">Class OrangeDbContext
   </h1>
-  <div class="markdown level0 summary"><p>This class contains configuration settings for the data access layer.</p>
+  <div class="markdown level0 summary"><p>This class is a data-context for the <a class="xref" href="CG.Orange.html">CG.Orange</a>
+microservice.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OrangeDalOptions</span></div>
+    <div class="level1"><span class="xref">OrangeDbContext</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.SqlLite.Options.html">CG.Orange.SqlLite.Options</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.SqlLite.dll</h6>
-  <h5 id="CG_Orange_SqlLite_Options_OrangeDalOptions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.EfCore.html">CG.Orange.EfCore</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.EfCore.dll</h6>
+  <h5 id="CG_Orange_EfCore_OrangeDbContext_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OrangeDalOptions</code></pre>
+    <pre><code class="lang-csharp hljs">class OrangeDbContext : DbContext</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="CG_Orange_EfCore_OrangeDbContext__ctor_" data-uid="CG.Orange.EfCore.OrangeDbContext.#ctor*"></a>
+  <h4 id="CG_Orange_EfCore_OrangeDbContext__ctor_DbContextOptions_CG_Orange_EfCore_OrangeDbContext__" data-uid="CG.Orange.EfCore.OrangeDbContext.#ctor(DbContextOptions{CG.Orange.EfCore.OrangeDbContext})">OrangeDbContext(DbContextOptions&lt;OrangeDbContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.EfCore.OrangeDbContext.html">OrangeDbContext</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrangeDbContext(DbContextOptions&lt;OrangeDbContext&gt; options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbContextOptions</span>&lt;<a class="xref" href="CG.Orange.EfCore.OrangeDbContext.html">OrangeDbContext</a>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to use with this data-context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="CG_Orange_SqlLite_Options_OrangeDalOptions_ConnectionString_" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString*"></a>
-  <h4 id="CG_Orange_SqlLite_Options_OrangeDalOptions_ConnectionString" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString">ConnectionString</h4>
-  <div class="markdown level1 summary"><p>This property contains the connection string for the DAL.</p>
+  <a id="CG_Orange_EfCore_OrangeDbContext_SettingFiles_" data-uid="CG.Orange.EfCore.OrangeDbContext.SettingFiles*"></a>
+  <h4 id="CG_Orange_EfCore_OrangeDbContext_SettingFiles" data-uid="CG.Orange.EfCore.OrangeDbContext.SettingFiles">SettingFiles</h4>
+  <div class="markdown level1 summary"><p>This property contains the list of setting files.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-public string ConnectionString { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;SettingFile&gt; SettingFiles { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,77 +149,40 @@ public string ConnectionString { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="CG.Orange.EfCore.Entities.SettingFile.html">SettingFile</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_SqlLite_Options_OrangeDalOptions_DropDatabaseOnStartup_" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup*"></a>
-  <h4 id="CG_Orange_SqlLite_Options_OrangeDalOptions_DropDatabaseOnStartup" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup">DropDatabaseOnStartup</h4>
-  <div class="markdown level1 summary"><p>This property directs the DAL to drop the underlying database on
-startup.</p>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Orange_EfCore_OrangeDbContext_OnModelCreating_" data-uid="CG.Orange.EfCore.OrangeDbContext.OnModelCreating*"></a>
+  <h4 id="CG_Orange_EfCore_OrangeDbContext_OnModelCreating_ModelBuilder_" data-uid="CG.Orange.EfCore.OrangeDbContext.OnModelCreating(ModelBuilder)">OnModelCreating(ModelBuilder)</h4>
+  <div class="markdown level1 summary"><p>This method is called to create the data model.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DropDatabaseOnStartup { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnModelCreating(ModelBuilder modelBuilder)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><span class="xref">ModelBuilder</span></td>
+        <td><span class="parametername">modelBuilder</span></td>
+        <td><p>The builder to use for the operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 id="CG_Orange_SqlLite_Options_OrangeDalOptions_DropDatabaseOnStartup_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This property is ignored in production.
-</p>
-</div>
-  <a id="CG_Orange_SqlLite_Options_OrangeDalOptions_MigrateDatabaseOnStartup_" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup*"></a>
-  <h4 id="CG_Orange_SqlLite_Options_OrangeDalOptions_MigrateDatabaseOnStartup" data-uid="CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup">MigrateDatabaseOnStartup</h4>
-  <div class="markdown level1 summary"><p>This property directs the DAL to migrate the underlying database
-on startup.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool MigrateDatabaseOnStartup { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="CG_Orange_SqlLite_Options_OrangeDalOptions_MigrateDatabaseOnStartup_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This property is ignored in production.
-</p>
-<p>
-If the <a class="xref" href="CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_DropDatabaseOnStartup">DropDatabaseOnStartup</a> property is set to 
-true then migrations are always applied, since the database is 
-then dropped and re-created. This property allows migrations to 
-be applied without dropping and re-creating the database.
-</p>
-</div>
 </article>
           </div>
           

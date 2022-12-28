@@ -14,6 +14,222 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Entities.EntityBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Entities.EntityBase.html",
+          "hash": "1csous2OtuOGhtI6wxitgAjciIWnD1StpF4X3pAh40w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Entities.SettingFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Entities.SettingFile.html",
+          "hash": "dP4MFT4BBwsGhOgGhCsbwSEToEaQkzfadfkW32181VY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Entities.html",
+          "hash": "p1Lt3muZR8JZJ5akavhqYW9Lex9kidO5137/JLNTnTg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Maps.EntityMapBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Maps.EntityMapBase-1.html",
+          "hash": "WzQedQxEqPaM8ug7+Bne0qUxj3oSGux1Qf/sJqfe3xw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Maps.SettingFileMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Maps.SettingFileMap.html",
+          "hash": "s/DTdN72Qnx0NO2rZf7YwXwL8Up5B2DC7llqzB74lgw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Maps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Maps.html",
+          "hash": "MRWKfE59OH/p3iABzI+wfND2rjl7BmQtJDp+nXHGmJs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Migrations.InitialCreate.html",
+          "hash": "y0fvYfyoX1r7e4K0/lqGpxfo4WQG28OTd6jCmx0PmHI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.html",
+          "hash": "26/8l8qVlat+NqvWhARzr6fEt7zxsdoB7LPjZcodzOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Migrations.html",
+          "hash": "ocH97mpSH+Q5QIDyrgS8/3Fe8YKOQU7p0yUYLTXQIIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Options.InMemoryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Options.InMemoryOptions.html",
+          "hash": "CcE2FwrROyJGERY2VmqJJ42bg9keH7GkQmTrrh9IwOU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Options.OrangeDalOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Options.OrangeDalOptions.html",
+          "hash": "nIQLRO+HulA1Z6RlS3V/v/WLSgoN692VlqgIlB6U2p0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Options.SQLServerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Options.SQLServerOptions.html",
+          "hash": "6XidDZMv9Xc/uoRi3Xzi25PJVyKSKr2kCBXBLkylD80="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Options.SQLiteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Options.SQLiteOptions.html",
+          "hash": "VRa3KKveaIhRiigmvdRoxh8gokM7UzDwl6He5wgx3fs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Options.html",
+          "hash": "vNOECjEFqcRmj38JwWnUWAHtVVojkV9m1gcqj9g+eeE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.OrangeDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.OrangeDbContext.html",
+          "hash": "zY9HvWii/HpQr3KCAFHvWKpsA3gQRrVp6fmeJx8TC5Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Repositories.SettingFileRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Repositories.SettingFileRepository.html",
+          "hash": "qP2Qso/NAHki0AKH90NpPitFJW5TlugLvY8OEnEVIWs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.Repositories.html",
+          "hash": "v2+1hCCFa2127B2xwuY4zvSUcZw9AVTwECpx2+9iY2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.EfCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.EfCore.html",
+          "hash": "jAxOSh0YrDd3ovzvw73IJj+RURRFU4TK+DfahlfJLWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.GlobalUsings.yml",
       "output": {
         ".html": {
@@ -410,191 +626,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Entities.EntityBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Entities.EntityBase.html",
-          "hash": "hCbIqcNe+SwKQ4p/a+f8O1wi8B9uTSVJ4N0icT/zNIU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Entities.SettingFile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Entities.SettingFile.html",
-          "hash": "yEmTT/ojqugoxssB0q12DyC72aeVfggPgRiHOS45HF8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Entities.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Entities.html",
-          "hash": "9UfhfEbneV1et5ahLSLW2/88Ith/xSa23P5/TY5hwWk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Maps.EntityMapBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Maps.EntityMapBase-1.html",
-          "hash": "WTFFtc+NuAyQV9f6PSFyr5MryjfGnau4Guci4RDYyo0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Maps.SettingFileMap.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Maps.SettingFileMap.html",
-          "hash": "wksZB3ZXbufr2PXvMeLDSKs2Dmtb6FuhAi+kFASaXaE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Maps.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Maps.html",
-          "hash": "Hj0BGxGlxgFV10l7PYxt+l0707k2gpuYQ9ugylBjr3U="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Migrations.InitialCreate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Migrations.InitialCreate.html",
-          "hash": "HGnXGah3ArfQroqsiA268c58JZYodO6eZS0S4WL0mEA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Migrations.OrangeDbContextModelSnapshot.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Migrations.OrangeDbContextModelSnapshot.html",
-          "hash": "NnQFvdlmaFkARcoz8oV8J1I4OQHWyCnl8eZopY8mI5w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Migrations.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Migrations.html",
-          "hash": "TKuXz2zxeDZueribPBHMazOOXK3a6Cc1LguQnF+qHLo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Options.OrangeDalOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Options.OrangeDalOptions.html",
-          "hash": "h96GlnAB7OOKQdv3Kl0ch2QNsM18fWlINRzrt+asy5E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Options.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Options.html",
-          "hash": "dYKsMJXnZI3M24higKZ0G7nD6AtcX2gbeKANr7m3qro="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.OrangeDbContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.OrangeDbContext.html",
-          "hash": "cd830EZODZBgvh9iNHyjmKDjCI90ebHrJwfygsbFqVE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Repositories.SettingFileRepository.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Repositories.SettingFileRepository.html",
-          "hash": "Q49YHke+E6TwaOlIXL9D16uJmMCThvhpuINwjQTTp7w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Repositories.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Repositories.html",
-          "hash": "T2CedVE8dJFWVcYlk8rPie5UZBwT0K6VAhKMQqR8tM4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.html",
-          "hash": "VJNK0Pz6ZMTRCL5ui/uPVE/6itjpKdHd6gF6ObO0xFM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.yml",
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.html",
-          "hash": "K2Bhw6ZHVPDOHdNm4wqFtK9c9R+zZnvgXwrtBwGBDHI="
+          "hash": "jE8TAldq7ayWQf5ELCbjOGAmz24kd2YEdoKqhNFmEOo="
         }
       },
       "is_incremental": false,
@@ -654,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html",
-          "hash": "fxnIqfSta2oa25uOT5LBof2T9M2ly5y6+d0dY+37GZQ="
+          "hash": "kbLiDyFJZ17FnmUdcf5D6LARBUSQmJJwvJ3U4b+bJFA="
         }
       },
       "is_incremental": false,
@@ -678,7 +714,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html",
-          "hash": "33vwJsSAQbiWpQjwNvAG7y+tEY3+vZh3lJSPhGDEBtw="
+          "hash": "K2bgK21TQyjbCdBjg+qrh9NZJ2uryoX2NkUTMpTAxg4="
         }
       },
       "is_incremental": false,
@@ -702,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "QpK24GuxTtG11d9F9aUuFUbTvywfo9kptaI2YYl5ZLo="
+          "hash": "3aUckM5uhbmlxYlQvMAOo25lf1jfExI9D/6Jyaz0oss="
         }
       },
       "is_incremental": false,
@@ -821,7 +857,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
+          "total_file_count": 60,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

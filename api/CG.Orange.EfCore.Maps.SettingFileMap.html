@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class OrangeDbContextDesignTimeFactory
+    <title>Class SettingFileMap
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class OrangeDbContextDesignTimeFactory
+    <meta name="title" content="Class SettingFileMap
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,36 +78,44 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.EfCore.Maps.SettingFileMap">
   
   
-  <h1 id="CG_Orange_SqlServer_Factories_OrangeDbContextDesignTimeFactory" data-uid="CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory" class="text-break">Class OrangeDbContextDesignTimeFactory
+  <h1 id="CG_Orange_EfCore_Maps_SettingFileMap" data-uid="CG.Orange.EfCore.Maps.SettingFileMap" class="text-break">Class SettingFileMap
   </h1>
-  <div class="markdown level0 summary"><p>This class is a default implementation of the <see cref="!:IDesignTimeDbContextFactory&lt;TContext>"></see>
-interface.</p>
+  <div class="markdown level0 summary"><p>This class is an EFCore configuration map for the <a class="xref" href="CG.Orange.EfCore.Entities.SettingFile.html">SettingFile</a>
+entity type.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OrangeDbContextDesignTimeFactory</span></div>
+    <div class="level1"><a class="xref" href="CG.Orange.EfCore.Maps.EntityMapBase-1.html">EntityMapBase</a>&lt;<a class="xref" href="CG.Orange.EfCore.Entities.SettingFile.html">SettingFile</a>&gt;</div>
+    <div class="level2"><span class="xref">SettingFileMap</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.SqlServer.Factories.html">CG.Orange.SqlServer.Factories</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Orange.EfCore.Maps.EntityMapBase-1.html#CG_Orange_EfCore_Maps_EntityMapBase_1__modelBuilder">EntityMapBase&lt;SettingFile&gt;._modelBuilder</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.EfCore.Maps.html">CG.Orange.EfCore.Maps</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.EfCore.dll</h6>
-  <h5 id="CG_Orange_SqlServer_Factories_OrangeDbContextDesignTimeFactory_syntax">Syntax</h5>
+  <h5 id="CG_Orange_EfCore_Maps_SettingFileMap_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">class OrangeDbContextDesignTimeFactory : IDesignTimeDbContextFactory&lt;OrangeDbContext&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">class SettingFileMap : EntityMapBase&lt;SettingFile&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_SqlServer_Factories_OrangeDbContextDesignTimeFactory_CreateDbContext_" data-uid="CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext*"></a>
-  <h4 id="CG_Orange_SqlServer_Factories_OrangeDbContextDesignTimeFactory_CreateDbContext_System_String___" data-uid="CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext(System.String[])">CreateDbContext(String[])</h4>
-  <div class="markdown level1 summary"><p>This method creates a new <see cref="!:OrangeDbContext"></see> instance.</p>
+  <a id="CG_Orange_EfCore_Maps_SettingFileMap__ctor_" data-uid="CG.Orange.EfCore.Maps.SettingFileMap.#ctor*"></a>
+  <h4 id="CG_Orange_EfCore_Maps_SettingFileMap__ctor_ModelBuilder_" data-uid="CG.Orange.EfCore.Maps.SettingFileMap.#ctor(ModelBuilder)">SettingFileMap(ModelBuilder)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.EfCore.Maps.SettingFileMap.html">SettingFileMap</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OrangeDbContext CreateDbContext(string[] args)</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingFileMap(ModelBuilder modelBuilder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,29 +128,44 @@ interface.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Optional arguments.</p>
+        <td><span class="xref">ModelBuilder</span></td>
+        <td><span class="parametername">modelBuilder</span></td>
+        <td><p>The model builder to use with this map.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Orange_EfCore_Maps_SettingFileMap_Configure_" data-uid="CG.Orange.EfCore.Maps.SettingFileMap.Configure*"></a>
+  <h4 id="CG_Orange_EfCore_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_EfCore_Entities_SettingFile__" data-uid="CG.Orange.EfCore.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.EfCore.Entities.SettingFile})">Configure(EntityTypeBuilder&lt;SettingFile&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method configures the <a class="xref" href="CG.Orange.EfCore.Entities.SettingFile.html">SettingFile</a> entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Configure(EntityTypeBuilder&lt;SettingFile&gt; builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">OrangeDbContext</span></td>
-        <td><p>A <see cref="!:OrangeDbContext"></see> instance.</p>
+        <td><span class="xref">EntityTypeBuilder</span>&lt;<a class="xref" href="CG.Orange.EfCore.Entities.SettingFile.html">SettingFile</a>&gt;</td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The builder to use for the operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CG.Orange.EfCore.Maps.EntityMapBase&lt;CG.Orange.EfCore.Entities.SettingFile&gt;.Configure(EntityTypeBuilder&lt;CG.Orange.EfCore.Entities.SettingFile&gt;)</span></div>
 </article>
           </div>
           
