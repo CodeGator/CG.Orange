@@ -34,7 +34,7 @@ public class OrangeIdentityOptions
     /// This property contains the cookie name.
     /// </summary>
     [Required]
-    public string CookieName { get; set; } = "Orange";
+    public string CookieName { get; set; } = "Orange.Identity";
 
     #endregion
 }
