@@ -45,7 +45,7 @@ public static class WebApplicationExtensions002
 
             // Get the DAL startup options.
             var dalStartOptions = webApplication.Services.GetRequiredService<
-                IOptions<DalOptions>
+                IOptions<OrangeDalOptions>
                 >();
 
             // Should we drop the underlying database?

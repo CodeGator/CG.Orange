@@ -1,6 +1,4 @@
 ﻿@page
-@using Microsoft.AspNetCore.Identity
-@using Microsoft.AspNetCore.Authentication
 @attribute [IgnoreAntiforgeryToken]
 
 @functions {
@@ -8,9 +6,17 @@
     {
         await HttpContext.SignOutAsync();
 
+        await HttpContext.SignOutAsync(
+            CookieAuthenticationDefaults.AuthenticationScheme
+            );
+
+        await HttpContext.SignOutAsync(
+            OpenIdConnectDefaults.AuthenticationScheme
+            );
+
         HttpContext.Response.Cookies.Delete(
             ".AspNetCore.Identity.Application"
-        );
+            );
 
         return Redirect("/");
     }

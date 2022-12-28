@@ -6,7 +6,7 @@ namespace CG.Orange.SqlLite.Options;
 /// <summary>
 /// This class contains configuration settings for the data access layer.
 /// </summary>
-public class DalOptions
+public class OrangeDalOptions
 {
     // *******************************************************************
     // Properties.
@@ -40,7 +40,7 @@ public class DalOptions
     /// This property is ignored in production.
     /// </para>
     /// <para>
-    /// If the <see cref="DalOptions.DropDatabaseOnStartup"/> property is set to 
+    /// If the <see cref="OrangeDalOptions.DropDatabaseOnStartup"/> property is set to 
     /// true then migrations are always applied, since the database is 
     /// then dropped and re-created. This property allows migrations to 
     /// be applied without dropping and re-creating the database.

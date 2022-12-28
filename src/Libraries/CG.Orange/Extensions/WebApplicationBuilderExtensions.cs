@@ -43,7 +43,7 @@ public static class WebApplicationBuilderExtensions001
             );
 
         // Configure the BLL options.
-        webApplicationBuilder.Services.ConfigureOptions<BllOptions>(
+        webApplicationBuilder.Services.ConfigureOptions<OrangeBllOptions>(
             webApplicationBuilder.Configuration.GetSection(sectionName),
             out var options
             );

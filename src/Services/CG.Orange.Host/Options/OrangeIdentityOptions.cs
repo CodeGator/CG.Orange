@@ -4,7 +4,7 @@ namespace CG.Orange.Host.Options;
 /// <summary>
 /// This class contains configuration settings for identity operations.
 /// </summary>
-public class IdentityOptions
+public class OrangeIdentityOptions
 {
     // *******************************************************************
     // Properties.
@@ -29,6 +29,12 @@ public class IdentityOptions
     /// </summary>
     [Required]
     public string ClientSecret { get; set; } = null!;
+
+    /// <summary>
+    /// This property contains the cookie name.
+    /// </summary>
+    [Required]
+    public string CookieName { get; set; } = "Orange";
 
     #endregion
 }

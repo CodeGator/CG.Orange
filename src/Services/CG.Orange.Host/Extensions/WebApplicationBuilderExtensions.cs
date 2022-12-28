@@ -1,7 +1,4 @@
 ﻿
-using CG.Orange.Host.Options;
-using CG.Orange.SqlLite.Options;
-
 namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>
@@ -45,10 +42,18 @@ internal static class WebApplicationBuilderExtensions
             );
 
         // Configure the identity options.
-        webApplicationBuilder.Services.ConfigureOptions<IdentityOptions>(
+        webApplicationBuilder.Services.ConfigureOptions<OrangeIdentityOptions>(
             webApplicationBuilder.Configuration.GetSection(sectionName),
             out var identityOptions
             );
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Clearing default inbound claims mapping."
+            );
+
+        // Clear default inbound claim mapping.
+        JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
@@ -63,7 +68,8 @@ internal static class WebApplicationBuilderExtensions
             options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
         }).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
         {
-            options.Cookie.SameSite = SameSiteMode.Lax;
+            options.Cookie.Name = identityOptions.CookieName;
+            options.Cookie.SameSite = SameSiteMode.Strict;
         }).AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
         {
             // Where our identity server is.
@@ -84,8 +90,10 @@ internal static class WebApplicationBuilderExtensions
 
             // We want an authentication code response.
             options.ResponseType = "code";
-            
-            // Map the name claim so ASP.NET will understand it.
+
+            options.ResponseMode = "query";
+
+            // Don't map claims.
             options.MapInboundClaims = false;
 
             // Access and Refresh token stored in the authentication properties.
@@ -116,12 +124,79 @@ internal static class WebApplicationBuilderExtensions
                 //   own home page.
                 OnAccessDenied = context =>
                 {
+                    bootstrapLogger?.LogInformation("OnAccessDenied");
                     context.HandleResponse();
                     context.Response.Redirect("/");
                     return Task.CompletedTask;
-                }
+                },
+                OnSignedOutCallbackRedirect = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnSignedOutCallbackRedirect");
+                    return Task.CompletedTask;
+                },
+                OnUserInformationReceived = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnUserInformationReceived");
+                    return Task.CompletedTask;
+                },
+                OnTokenValidated = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnTokenValidated");
+                    return Task.CompletedTask;
+                },
+                OnAuthenticationFailed = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnAuthenticationFailed");
+                    return Task.CompletedTask;
+                },
+                OnAuthorizationCodeReceived = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnAuthorizationCodeReceived");
+                    return Task.CompletedTask;
+                },
+                OnMessageReceived = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnMessageReceived");
+                    return Task.CompletedTask;
+                },
+                OnRedirectToIdentityProvider = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnRedirectToIdentityProvider");
+                    return Task.CompletedTask;
+                },
+                OnRedirectToIdentityProviderForSignOut = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnRedirectToIdentityProviderForSignOut");
+                    return Task.CompletedTask;
+                },
+                OnRemoteFailure = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnRemoteFailure");
+                    return Task.CompletedTask;
+                },
+                OnRemoteSignOut = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnRemoteSignOut");
+                    return Task.CompletedTask;
+                },
+                OnTicketReceived = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnTicketReceived");
+                    return Task.CompletedTask;
+                },
+                OnTokenResponseReceived = context =>
+                {
+                    bootstrapLogger?.LogInformation("OnTokenResponseReceived");
+                    return Task.CompletedTask;
+                },
             };
         });
+
+        // Add the token cache.
+        webApplicationBuilder.Services.AddScoped<TokenCache>();
+
+        // Add the HTTP client.
+        webApplicationBuilder.Services.AddHttpClient();
 
         // Return the application builder.
         return webApplicationBuilder;

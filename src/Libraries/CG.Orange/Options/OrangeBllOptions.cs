@@ -5,7 +5,7 @@ namespace CG.Orange.Options;
 /// This class contains configuration settings for the Orange business 
 /// logic layer.
 /// </summary>
-public class BllOptions
+public class OrangeBllOptions
 {
     // *******************************************************************
     // Properties.

@@ -27,9 +27,9 @@ try
     builder.Services.AddMudServices();
 
     // Add Orange stuff.
-    builder.AddDataAccessLayer()
-        .AddBusinessLayer()
-        .AddOrangeIdentity();
+    builder.AddDataAccessLayer(bootstrapLogger: BootstrapLogger.Instance())
+        .AddBusinessLayer(bootstrapLogger: BootstrapLogger.Instance())
+        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance());
 
     // Build the application.
     var app = builder.Build();

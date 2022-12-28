@@ -44,7 +44,7 @@ public static class WebApplicationBuilderExtensions003
             );
 
         // Configure the DAL options.
-        webApplicationBuilder.Services.ConfigureOptions<DalOptions>(
+        webApplicationBuilder.Services.ConfigureOptions<OrangeDalOptions>(
             webApplicationBuilder.Configuration.GetSection(sectionName),
             out var dalOptions
             );
