@@ -40,8 +40,43 @@ internal class OrangeDbContextDesignTimeFactory
         // Create the options builder.
         var optionsBuilder = new DbContextOptionsBuilder<OrangeDbContext>();
 
-        // Set the connection string.
-        optionsBuilder.UseSqlite(connectionString);
+        // Get the storage strategy name.
+        var safeStrategyName = dalOptions.Strategy.ToLower().Trim();
+
+        // Wire up the correct data storage strategy.
+        switch (safeStrategyName)
+        {
+            case "sqlserver":
+                optionsBuilder.UseSqlServer(
+                    webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
+                        ?? "Server=localhost;Database=CG.Green;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
+                    sqlServerOptionsAction: sqlOptions =>
+                    {
+                        sqlOptions.MigrationsAssembly(migrationAssembly);
+                        sqlOptions.UseQuerySplittingBehavior(
+                            QuerySplittingBehavior.SplitQuery
+                            );
+                    });
+                break;
+            case "sqlite":
+                optionsBuilder.UseSqlite(
+                    webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
+                        ?? "Data Source=orange.db",
+                    sqliteOptionsAction: sqlOptions =>
+                    {
+                        sqlOptions.MigrationsAssembly(migrationAssembly);
+                        sqlOptions.UseQuerySplittingBehavior(
+                            QuerySplittingBehavior.SplitQuery
+                            );
+                    });
+                break;
+            default:
+                optionsBuilder.UseInMemoryDatabase(
+                    webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["DatabaseName"]
+                        ?? "orange"
+                    );
+                break;
+        }        
 
         // Create the and return the data-context.
         var dataContext = new OrangeDbContext(optionsBuilder.Options);
