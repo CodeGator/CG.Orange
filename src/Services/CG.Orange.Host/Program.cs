@@ -29,7 +29,8 @@ try
     // Add Orange stuff.
     builder.AddDataAccessLayer(bootstrapLogger: BootstrapLogger.Instance())
         .AddBusinessLayer(bootstrapLogger: BootstrapLogger.Instance())
-        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance());
+        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance())
+        .AddSeedingLayer(bootstrapLogger: BootstrapLogger.Instance());
 
     // Build the application.
     var app = builder.Build();
@@ -50,7 +51,8 @@ try
 
     // Use Orange stuff.
     app.UseDalStartup()
-        .UseOrangeIdentity();
+        .UseOrangeIdentity()
+        .UseStartupSeeding();
 
     // Run the application.
     app.Run();

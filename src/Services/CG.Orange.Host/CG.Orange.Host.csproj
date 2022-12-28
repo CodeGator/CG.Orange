@@ -23,6 +23,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\Data\CG.Orange.EfCore\CG.Orange.EfCore.csproj" />
+        <ProjectReference Include="..\..\Libraries\CG.Orange.Seeding\CG.Orange.Seeding.csproj" />
         <ProjectReference Include="..\..\Libraries\CG.Orange\CG.Orange.csproj" />
         <ProjectReference Include="..\..\Providers\CG.Orange.Providers.Azure\CG.Orange.Providers.Azure.csproj" />
         <ProjectReference Include="..\CG.Orange.Host.Controllers\CG.Orange.Host.Controllers.csproj" />

@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNetCore.Builder;
+
 namespace CG.Orange.SqlServer.Factories;
 
 /// <summary>
@@ -26,30 +28,79 @@ internal class OrangeDbContextDesignTimeFactory
         configBuilder.AddJsonFile("appSettings.json");
         var configuration = configBuilder.Build();
 
-        var connectionString = configuration["DAL:ConnectionString"];
-        if (string.IsNullOrEmpty(connectionString))
+        // Bind the DAL options.
+        var dalOptions = new OrangeDalOptions();
+        configuration.GetSection("DAL").Bind(dalOptions);
+
+        // Get the storage strategy name.
+        var safeStrategyName = dalOptions.Strategy.ToLower().Trim();
+
+        // Sanity check the strategy name.
+        if (string.IsNullOrEmpty(safeStrategyName))
         {
             // Panic!!
             throw new ArgumentException(
-                message: "The connection string at DAL:ConnectionString, " +
-                "in the appSettings, json file is required for migrations, " +
+                message: "The strategy name at DAL:Strategy, in the " +
+                "appSettings, json file is required for migrations, " +
                 "but is currently missing, or empty!"
                 );
+        }
+
+        // Sanity check the strategy parameters.
+        switch (safeStrategyName)
+        {
+            case "sqlserver":
+                var connectionString = configuration.GetSection($"DAL:{safeStrategyName}")["ConnectionString"];
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    // Panic!!
+                    throw new ArgumentException(
+                        message: $"The connection string at DAL:{safeStrategyName}:ConnectionString, " +
+                        "in the appSettings, json file is required for migrations, " +
+                        "but is currently missing, or empty!"
+                        );
+                }
+                break;
+            case "sqlite":
+                connectionString = configuration.GetSection($"DAL:{safeStrategyName}")["ConnectionString"];
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    // Panic!!
+                    throw new ArgumentException(
+                        message: $"The connection string at DAL:{safeStrategyName}:ConnectionString, " +
+                        "in the appSettings, json file is required for migrations, " +
+                        "but is currently missing, or empty!"
+                        );
+                }
+                break;
+            default:
+                var databaseName = configuration.GetSection($"DAL:{safeStrategyName}")["DatabaseName"];
+                if (string.IsNullOrEmpty(databaseName))
+                {
+                    // Panic!!
+                    throw new ArgumentException(
+                        message: $"The database name at DAL:{safeStrategyName}:DatabaseName, " +
+                        "in the appSettings, json file is required for migrations, " +
+                        "but is currently missing, or empty!"
+                        );
+                }
+                break;
         }
 
         // Create the options builder.
         var optionsBuilder = new DbContextOptionsBuilder<OrangeDbContext>();
 
-        // Get the storage strategy name.
-        var safeStrategyName = dalOptions.Strategy.ToLower().Trim();
+        // We include migrations in this assembly.
+        var migrationAssembly = Assembly.GetExecutingAssembly()
+            .GetName().Name;
 
         // Wire up the correct data storage strategy.
         switch (safeStrategyName)
         {
             case "sqlserver":
                 optionsBuilder.UseSqlServer(
-                    webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
-                        ?? "Server=localhost;Database=CG.Green;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
+                    configuration.GetSection($"DAL:{safeStrategyName}")["ConnectionString"]
+                        ?? "Server=localhost;Database=CG.Orange;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
                     sqlServerOptionsAction: sqlOptions =>
                     {
                         sqlOptions.MigrationsAssembly(migrationAssembly);
@@ -60,7 +111,7 @@ internal class OrangeDbContextDesignTimeFactory
                 break;
             case "sqlite":
                 optionsBuilder.UseSqlite(
-                    webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
+                    configuration.GetSection($"DAL:{safeStrategyName}")["ConnectionString"]
                         ?? "Data Source=orange.db",
                     sqliteOptionsAction: sqlOptions =>
                     {
@@ -72,7 +123,7 @@ internal class OrangeDbContextDesignTimeFactory
                 break;
             default:
                 optionsBuilder.UseInMemoryDatabase(
-                    webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["DatabaseName"]
+                    configuration.GetSection($"DAL:{safeStrategyName}")["DatabaseName"]
                         ?? "orange"
                     );
                 break;

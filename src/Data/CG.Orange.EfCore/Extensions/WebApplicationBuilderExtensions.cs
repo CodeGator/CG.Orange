@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.Extensions.Configuration;
+
 namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>
@@ -66,6 +68,47 @@ public static class WebApplicationBuilderExtensions003
         // Get the storage strategy name.
         var safeStrategyName = dalOptions.Strategy.ToLower().Trim();
 
+        // Sanity check the strategy parameters.
+        switch (safeStrategyName)
+        {
+            case "sqlserver":
+                var connectionString = webApplicationBuilder.Configuration.GetSection($"DAL:{safeStrategyName}")["ConnectionString"];
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    // Panic!!
+                    throw new ArgumentException(
+                        message: $"The connection string at {sectionName}:{safeStrategyName}:ConnectionString, " +
+                        "in the appSettings, json file is required for migrations, " +
+                        "but is currently missing, or empty!"
+                        );
+                }
+                break;
+            case "sqlite":
+                connectionString = webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"];
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    // Panic!!
+                    throw new ArgumentException(
+                        message: $"The connection string at {sectionName}:{safeStrategyName}:ConnectionString, " +
+                        "in the appSettings, json file is required for migrations, " +
+                        "but is currently missing, or empty!"
+                        );
+                }
+                break;
+            default:
+                var databaseName = webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["DatabaseName"];
+                if (string.IsNullOrEmpty(databaseName))
+                {
+                    // Panic!!
+                    throw new ArgumentException(
+                        message: $"The database name at {sectionName}:{safeStrategyName}:DatabaseName, " +
+                        "in the appSettings, json file is required for migrations, " +
+                        "but is currently missing, or empty!"
+                        );
+                }
+                break;
+        }
+
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
             "Wiring up the DAL {ctx} data-context using strategy: {name}",
@@ -82,7 +125,7 @@ public static class WebApplicationBuilderExtensions003
                 case "sqlserver":
                     options.UseSqlServer(
                         webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
-                            ?? "Server=localhost;Database=CG.Green;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
+                            ?? "Server=localhost;Database=CG.Orange;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
                         sqlServerOptionsAction: sqlOptions =>
                         {
                             sqlOptions.MigrationsAssembly(migrationAssembly);
