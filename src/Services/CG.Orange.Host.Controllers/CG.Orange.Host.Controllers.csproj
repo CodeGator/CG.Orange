@@ -1,24 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <RootNamespace>CG.Orange.Host</RootNamespace>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>CG.Orange.Host</RootNamespace>
+        <Description>The REST controllers for the CG.Orange microservice.</Description>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CG.Validations" Version="2023.1.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CG.Validations" Version="2023.1.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+        <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\CG.Orange.Abstractions\CG.Orange.Abstractions.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Libraries\CG.Orange.Abstractions\CG.Orange.Abstractions.csproj" />
+    </ItemGroup>
 
 </Project>

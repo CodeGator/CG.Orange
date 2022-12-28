@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.SqlLite.Maps;
+namespace CG.Orange.EfCore.Maps;
 
 /// <summary>
 /// This class represents a base map for entity types derived from <see cref="Entities.EntityBase"/>

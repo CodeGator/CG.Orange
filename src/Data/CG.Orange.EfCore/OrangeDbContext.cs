@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.SqlLite;
+namespace CG.Orange.EfCore;
 
 /// <summary>
 /// This class is a data-context for the <see cref="CG.Orange"/>

@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.SqlLite.Entities;
+namespace CG.Orange.EfCore.Entities;
 
 /// <summary>
 /// This class represents a JSON setting file entity.

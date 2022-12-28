@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.SqlLite.Maps;
+namespace CG.Orange.EfCore.Maps;
 
 /// <summary>
 /// This class is an EFCore configuration map for the <see cref="Entities.SettingFile"/>

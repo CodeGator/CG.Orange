@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CG.Orange.SqlLite.Migrations
+namespace CG.Orange.EfCore.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

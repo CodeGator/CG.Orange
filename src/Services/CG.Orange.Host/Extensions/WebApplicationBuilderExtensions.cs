@@ -120,75 +120,13 @@ internal static class WebApplicationBuilderExtensions
             // Tap into the ODIC events.
             options.Events = new OpenIdConnectEvents
             {
-                // On access denied, we want to go back to our
-                //   own home page.
+                // On access denied, we want to go back to our home page.
                 OnAccessDenied = context =>
                 {
-                    bootstrapLogger?.LogInformation("OnAccessDenied");
                     context.HandleResponse();
                     context.Response.Redirect("/");
                     return Task.CompletedTask;
-                },
-                OnSignedOutCallbackRedirect = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnSignedOutCallbackRedirect");
-                    return Task.CompletedTask;
-                },
-                OnUserInformationReceived = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnUserInformationReceived");
-                    return Task.CompletedTask;
-                },
-                OnTokenValidated = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnTokenValidated");
-                    return Task.CompletedTask;
-                },
-                OnAuthenticationFailed = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnAuthenticationFailed");
-                    return Task.CompletedTask;
-                },
-                OnAuthorizationCodeReceived = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnAuthorizationCodeReceived");
-                    return Task.CompletedTask;
-                },
-                OnMessageReceived = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnMessageReceived");
-                    return Task.CompletedTask;
-                },
-                OnRedirectToIdentityProvider = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnRedirectToIdentityProvider");
-                    return Task.CompletedTask;
-                },
-                OnRedirectToIdentityProviderForSignOut = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnRedirectToIdentityProviderForSignOut");
-                    return Task.CompletedTask;
-                },
-                OnRemoteFailure = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnRemoteFailure");
-                    return Task.CompletedTask;
-                },
-                OnRemoteSignOut = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnRemoteSignOut");
-                    return Task.CompletedTask;
-                },
-                OnTicketReceived = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnTicketReceived");
-                    return Task.CompletedTask;
-                },
-                OnTokenResponseReceived = context =>
-                {
-                    bootstrapLogger?.LogInformation("OnTokenResponseReceived");
-                    return Task.CompletedTask;
-                },
+                }
             };
         });
 

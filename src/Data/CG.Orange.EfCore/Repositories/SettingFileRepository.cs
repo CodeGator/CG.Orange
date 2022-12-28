@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.SqlLite.Repositories;
+namespace CG.Orange.EfCore.Repositories;
 
 /// <summary>
 /// This class is an EFCORE implementation of the <see cref="ISettingFileRepository"/>

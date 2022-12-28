@@ -48,7 +48,7 @@ public static class WebApplicationBuilderExtensions003
             webApplicationBuilder.Configuration.GetSection(sectionName),
             out var dalOptions
             );
-
+                
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
             "Fetching the EFCORE migration assembly name"
@@ -60,23 +60,56 @@ public static class WebApplicationBuilderExtensions003
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the DAL {ctx} data-context",
-            nameof(OrangeDbContext)
+            "Building a safe strategy name"
+            );
+
+        // Get the storage strategy name.
+        var safeStrategyName = dalOptions.Strategy.ToLower().Trim();
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Wiring up the DAL {ctx} data-context using strategy: {name}",
+            nameof(OrangeDbContext),
+            safeStrategyName
             );
 
         // Wire up the EFCORE data context factory.
         webApplicationBuilder.Services.AddDbContextFactory<OrangeDbContext>(options => 
         {
-            // Use SQL-Lite with our migrations and other options.
-            options.UseSqlite(
-                dalOptions.ConnectionString,
-                sqliteOptionsAction: sqlOptions =>
-                {
-                    sqlOptions.MigrationsAssembly(migrationAssembly);
-                    sqlOptions.UseQuerySplittingBehavior(
-                        QuerySplittingBehavior.SplitQuery
+            // Wire up the correct data storage strategy.
+            switch (safeStrategyName)
+            {
+                case "sqlserver":
+                    options.UseSqlServer(
+                        webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
+                            ?? "Server=localhost;Database=CG.Green;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
+                        sqlServerOptionsAction: sqlOptions =>
+                        {
+                            sqlOptions.MigrationsAssembly(migrationAssembly);
+                            sqlOptions.UseQuerySplittingBehavior(
+                                QuerySplittingBehavior.SplitQuery
+                                );
+                        });
+                    break;
+                case "sqlite":
+                    options.UseSqlite(
+                        webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["ConnectionString"]
+                            ?? "Data Source=orange.db",
+                        sqliteOptionsAction: sqlOptions =>
+                        {
+                            sqlOptions.MigrationsAssembly(migrationAssembly);
+                            sqlOptions.UseQuerySplittingBehavior(
+                                QuerySplittingBehavior.SplitQuery
+                                );
+                        });
+                    break;
+                default:
+                    options.UseInMemoryDatabase(
+                        webApplicationBuilder.Configuration.GetSection($"{sectionName}:{safeStrategyName}")["DatabaseName"] 
+                            ?? "orange" 
                         );
-                });
+                    break;
+            }
 
             // Are we running in a development environment?
             if (webApplicationBuilder.Environment.IsDevelopment())
@@ -101,8 +134,7 @@ public static class WebApplicationBuilderExtensions003
         webApplicationBuilder.Services.AddAutoMapper(cfg =>
         {
             // Wire up the conversion maps.
-
-            cfg.CreateMap<CG.Orange.SqlLite.Entities.SettingFile, SettingFile>().ReverseMap();
+            cfg.CreateMap<CG.Orange.EfCore.Entities.SettingFile, SettingFile>().ReverseMap();
         });
 
         // Tell the world what we are about to do.

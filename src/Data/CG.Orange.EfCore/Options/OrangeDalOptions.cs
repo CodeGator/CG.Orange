@@ -1,7 +1,5 @@
 ﻿
-using System.ComponentModel.DataAnnotations;
-
-namespace CG.Orange.SqlLite.Options;
+namespace CG.Orange.EfCore.Options;
 
 /// <summary>
 /// This class contains configuration settings for the data access layer.
@@ -15,10 +13,10 @@ public class OrangeDalOptions
     #region Properties
 
     /// <summary>
-    /// This property contains the connection string for the DAL.
+    /// This property contains the name of the storage strategy for the DAL.
     /// </summary>
     [Required]
-    public string ConnectionString { get; set; } = null!;
+    public string Strategy { get; set; } = null!;
 
     /// <summary>
     /// This property directs the DAL to drop the underlying database on 

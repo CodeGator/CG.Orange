@@ -1,7 +1,7 @@
 ﻿<MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
 
-    <AuthorizeView Roles="Admin">
+    <AuthorizeView Roles="SuperAdmin">
         <Authorized>
             <MudNavGroup Icon="@Icons.Material.Filled.AdminPanelSettings" Title="Admin">
                 <MudNavLink Href="admin/settings" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Settings">Settings</MudNavLink>
