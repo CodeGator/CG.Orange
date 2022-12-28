@@ -17,12 +17,12 @@
   "api/CG.Orange.Host.Options.html": {
     "href": "api/CG.Orange.Host.Options.html",
     "title": "Namespace CG.Orange.Host.Options",
-    "keywords": "Namespace CG.Orange.Host.Options Classes IdentityOptions This class contains configuration settings for identity operations."
+    "keywords": "Namespace CG.Orange.Host.Options Classes OrangeIdentityOptions This class contains configuration settings for identity operations."
   },
-  "api/CG.Orange.Host.Options.IdentityOptions.html": {
-    "href": "api/CG.Orange.Host.Options.IdentityOptions.html",
-    "title": "Class IdentityOptions",
-    "keywords": "Class IdentityOptions This class contains configuration settings for identity operations. Inheritance System.Object IdentityOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Host.Options Assembly : CG.Orange.Host.dll Syntax public class IdentityOptions Properties Authority This property contains the URL for the identity authority. Declaration public string Authority { get; set; } Property Value Type Description System.String ClientId This property contains the client identifier. Declaration public string ClientId { get; set; } Property Value Type Description System.String ClientSecret This property contains the client secret. Declaration public string ClientSecret { get; set; } Property Value Type Description System.String"
+  "api/CG.Orange.Host.Options.OrangeIdentityOptions.html": {
+    "href": "api/CG.Orange.Host.Options.OrangeIdentityOptions.html",
+    "title": "Class OrangeIdentityOptions",
+    "keywords": "Class OrangeIdentityOptions This class contains configuration settings for identity operations. Inheritance System.Object OrangeIdentityOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Host.Options Assembly : CG.Orange.Host.dll Syntax public class OrangeIdentityOptions Properties Authority This property contains the URL for the identity authority. Declaration public string Authority { get; set; } Property Value Type Description System.String ClientId This property contains the client identifier. Declaration public string ClientId { get; set; } Property Value Type Description System.String ClientSecret This property contains the client secret. Declaration public string ClientSecret { get; set; } Property Value Type Description System.String CookieName This property contains the cookie name. Declaration public string CookieName { get; set; } Property Value Type Description System.String"
   },
   "api/CG.Orange.Host.Pages.Account.html": {
     "href": "api/CG.Orange.Host.Pages.Account.html",
@@ -68,6 +68,16 @@
     "href": "api/CG.Orange.Host.Pages.html",
     "title": "Namespace CG.Orange.Host.Pages",
     "keywords": "Namespace CG.Orange.Host.Pages Classes ErrorModel This class is the code-behind for the Error page."
+  },
+  "api/CG.Orange.Host.Services.html": {
+    "href": "api/CG.Orange.Host.Services.html",
+    "title": "Namespace CG.Orange.Host.Services",
+    "keywords": "Namespace CG.Orange.Host.Services Classes TokenCache This class is an object that caches tokens."
+  },
+  "api/CG.Orange.Host.Services.TokenCache.html": {
+    "href": "api/CG.Orange.Host.Services.TokenCache.html",
+    "title": "Class TokenCache",
+    "keywords": "Class TokenCache This class is an object that caches tokens. Inheritance System.Object TokenCache Namespace : CG.Orange.Host.Services Assembly : CG.Orange.Host.dll Syntax public class TokenCache : Dictionary<string, string>"
   },
   "api/CG.Orange.Host.Themes.DefaultTheme.html": {
     "href": "api/CG.Orange.Host.Themes.DefaultTheme.html",
@@ -134,15 +144,15 @@
     "title": "Class SettingFileExtensions",
     "keywords": "Class SettingFileExtensions This class contains extension methods related to the SettingFile type. Inheritance System.Object SettingFileExtensions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Models Assembly : CG.Orange.Host.dll Syntax public static class SettingFileExtensions Methods SafeEnvironmentName(SettingFile) This method returns an environment name that is safe to use from Blazor pages. Declaration public static string SafeEnvironmentName(this SettingFile settingFile) Parameters Type Name Description SettingFile settingFile The setting file to use for the operation. Returns Type Description System.String A safe string."
   },
-  "api/CG.Orange.Options.BllOptions.html": {
-    "href": "api/CG.Orange.Options.BllOptions.html",
-    "title": "Class BllOptions",
-    "keywords": "Class BllOptions This class contains configuration settings for the Orange business logic layer. Inheritance System.Object BllOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Options Assembly : CG.Orange.dll Syntax public class BllOptions"
-  },
   "api/CG.Orange.Options.html": {
     "href": "api/CG.Orange.Options.html",
     "title": "Namespace CG.Orange.Options",
-    "keywords": "Namespace CG.Orange.Options Classes BllOptions This class contains configuration settings for the Orange business logic layer."
+    "keywords": "Namespace CG.Orange.Options Classes OrangeBllOptions This class contains configuration settings for the Orange business logic layer."
+  },
+  "api/CG.Orange.Options.OrangeBllOptions.html": {
+    "href": "api/CG.Orange.Options.OrangeBllOptions.html",
+    "title": "Class OrangeBllOptions",
+    "keywords": "Class OrangeBllOptions This class contains configuration settings for the Orange business logic layer. Inheritance System.Object OrangeBllOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Options Assembly : CG.Orange.dll Syntax public class OrangeBllOptions"
   },
   "api/CG.Orange.Repositories.html": {
     "href": "api/CG.Orange.Repositories.html",
@@ -209,15 +219,15 @@
     "title": "Class OrangeDbContextModelSnapshot",
     "keywords": "Class OrangeDbContextModelSnapshot Inheritance System.Object Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot OrangeDbContextModelSnapshot Inherited Members Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot.Model System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.SqlLite.Migrations Assembly : CG.Orange.SqlLite.dll Syntax [DbContext(typeof(OrangeDbContext))] class OrangeDbContextModelSnapshot : ModelSnapshot Methods BuildModel(ModelBuilder) Declaration protected override void BuildModel(ModelBuilder modelBuilder) Parameters Type Name Description Microsoft.EntityFrameworkCore.ModelBuilder modelBuilder Overrides Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)"
   },
-  "api/CG.Orange.SqlLite.Options.DalOptions.html": {
-    "href": "api/CG.Orange.SqlLite.Options.DalOptions.html",
-    "title": "Class DalOptions",
-    "keywords": "Class DalOptions This class contains configuration settings for the data access layer. Inheritance System.Object DalOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.SqlLite.Options Assembly : CG.Orange.SqlLite.dll Syntax public class DalOptions Properties ConnectionString This property contains the connection string for the DAL. Declaration [Required] public string ConnectionString { get; set; } Property Value Type Description System.String DropDatabaseOnStartup This property directs the DAL to drop the underlying database on startup. Declaration public bool DropDatabaseOnStartup { get; set; } Property Value Type Description System.Boolean Remarks This property is ignored in production. MigrateDatabaseOnStartup This property directs the DAL to migrate the underlying database on startup. Declaration public bool MigrateDatabaseOnStartup { get; set; } Property Value Type Description System.Boolean Remarks This property is ignored in production. If the DropDatabaseOnStartup property is set to true then migrations are always applied, since the database is then dropped and re-created. This property allows migrations to be applied without dropping and re-creating the database."
-  },
   "api/CG.Orange.SqlLite.Options.html": {
     "href": "api/CG.Orange.SqlLite.Options.html",
     "title": "Namespace CG.Orange.SqlLite.Options",
-    "keywords": "Namespace CG.Orange.SqlLite.Options Classes DalOptions This class contains configuration settings for the data access layer."
+    "keywords": "Namespace CG.Orange.SqlLite.Options Classes OrangeDalOptions This class contains configuration settings for the data access layer."
+  },
+  "api/CG.Orange.SqlLite.Options.OrangeDalOptions.html": {
+    "href": "api/CG.Orange.SqlLite.Options.OrangeDalOptions.html",
+    "title": "Class OrangeDalOptions",
+    "keywords": "Class OrangeDalOptions This class contains configuration settings for the data access layer. Inheritance System.Object OrangeDalOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.SqlLite.Options Assembly : CG.Orange.SqlLite.dll Syntax public class OrangeDalOptions Properties ConnectionString This property contains the connection string for the DAL. Declaration [Required] public string ConnectionString { get; set; } Property Value Type Description System.String DropDatabaseOnStartup This property directs the DAL to drop the underlying database on startup. Declaration public bool DropDatabaseOnStartup { get; set; } Property Value Type Description System.Boolean Remarks This property is ignored in production. MigrateDatabaseOnStartup This property directs the DAL to migrate the underlying database on startup. Declaration public bool MigrateDatabaseOnStartup { get; set; } Property Value Type Description System.Boolean Remarks This property is ignored in production. If the DropDatabaseOnStartup property is set to true then migrations are always applied, since the database is then dropped and re-created. This property allows migrations to be applied without dropping and re-creating the database."
   },
   "api/CG.Orange.SqlLite.OrangeDbContext.html": {
     "href": "api/CG.Orange.SqlLite.OrangeDbContext.html",

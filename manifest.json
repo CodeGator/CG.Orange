@@ -50,11 +50,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Host.Options.IdentityOptions.yml",
+      "source_relative_path": "api/CG.Orange.Host.Options.OrangeIdentityOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Host.Options.IdentityOptions.html",
-          "hash": "jMsJ6G2KrZJ7/bEY/hj7ixgkwUXSwnGhA0AClQG5bkA="
+          "relative_path": "api/CG.Orange.Host.Options.OrangeIdentityOptions.html",
+          "hash": "csvlThSUrrdYzaacYnKhuzIenX21jO21WwMRRnEXrSM="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Options.html",
-          "hash": "1eS289UhS3kx4Fum2WPxqj6RDm4j/HCJgcY37pvoRFM="
+          "hash": "9n3yoAJuwoMXwnLxZR2Fs53HRegZOhGrOLvhcjtQkwM="
         }
       },
       "is_incremental": false,
@@ -175,6 +175,30 @@
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.html",
           "hash": "MLUQqehPukBLTRFq+kVsxkWsv/6Zjk9ZZ1tF1zJg+rg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.Services.TokenCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.Services.TokenCache.html",
+          "hash": "AWYe8+y96Hzh1040hMVyK024neicsEQBgGq1GPY/t2U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.Services.html",
+          "hash": "IY3K/nOvfBjUWei+NV2Bg2bnZSsbbsMVDUW+kdD71Uc="
         }
       },
       "is_incremental": false,
@@ -326,11 +350,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Options.BllOptions.yml",
+      "source_relative_path": "api/CG.Orange.Options.OrangeBllOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Options.BllOptions.html",
-          "hash": "mZ/kV9zKJZSpir9/8QpSrnlDA7FbFNDH67bIglfZF1s="
+          "relative_path": "api/CG.Orange.Options.OrangeBllOptions.html",
+          "hash": "ZqMtGlrB3zsegJ5CY7U3YN/YXY8sswYXjP8iNVwq6L0="
         }
       },
       "is_incremental": false,
@@ -342,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Options.html",
-          "hash": "Jjt6d0cTS+6UIRR7HTzsmOr+8GjQpiFmDYUKr5jjrWY="
+          "hash": "AJuLrFufpsqWG0Gtx0N+NO3Ek4AEPcIHnSRxNOXX7EQ="
         }
       },
       "is_incremental": false,
@@ -494,11 +518,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.SqlLite.Options.DalOptions.yml",
+      "source_relative_path": "api/CG.Orange.SqlLite.Options.OrangeDalOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.SqlLite.Options.DalOptions.html",
-          "hash": "PSpdyZ0MPahYKr39SsKjVjYRCKl8rzyth+numPpIK6k="
+          "relative_path": "api/CG.Orange.SqlLite.Options.OrangeDalOptions.html",
+          "hash": "h96GlnAB7OOKQdv3Kl0ch2QNsM18fWlINRzrt+asy5E="
         }
       },
       "is_incremental": false,
@@ -510,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.SqlLite.Options.html",
-          "hash": "rTaWN/WY4uf1OEBoSc+Hai18Tfoo1mWjhtLdxP4nZvA="
+          "hash": "dYKsMJXnZI3M24higKZ0G7nD6AtcX2gbeKANr7m3qro="
         }
       },
       "is_incremental": false,
@@ -678,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "kb94x87iGzY8Fv7+qT63GMtHKbsBCaHk0LRRIgL4t5w="
+          "hash": "QpK24GuxTtG11d9F9aUuFUbTvywfo9kptaI2YYl5ZLo="
         }
       },
       "is_incremental": false,
@@ -797,7 +821,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 55,
+          "total_file_count": 57,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

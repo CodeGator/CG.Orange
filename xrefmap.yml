@@ -66,51 +66,64 @@ references:
   commentId: N:CG.Orange.Host.Options
   fullName: CG.Orange.Host.Options
   nameWithType: CG.Orange.Host.Options
-- uid: CG.Orange.Host.Options.IdentityOptions
-  name: IdentityOptions
-  href: api/CG.Orange.Host.Options.IdentityOptions.html
-  commentId: T:CG.Orange.Host.Options.IdentityOptions
-  fullName: CG.Orange.Host.Options.IdentityOptions
-  nameWithType: IdentityOptions
-- uid: CG.Orange.Host.Options.IdentityOptions.Authority
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions
+  name: OrangeIdentityOptions
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html
+  commentId: T:CG.Orange.Host.Options.OrangeIdentityOptions
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions
+  nameWithType: OrangeIdentityOptions
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.Authority
   name: Authority
-  href: api/CG.Orange.Host.Options.IdentityOptions.html#CG_Orange_Host_Options_IdentityOptions_Authority
-  commentId: P:CG.Orange.Host.Options.IdentityOptions.Authority
-  fullName: CG.Orange.Host.Options.IdentityOptions.Authority
-  nameWithType: IdentityOptions.Authority
-- uid: CG.Orange.Host.Options.IdentityOptions.Authority*
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_Authority
+  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.Authority
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.Authority
+  nameWithType: OrangeIdentityOptions.Authority
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.Authority*
   name: Authority
-  href: api/CG.Orange.Host.Options.IdentityOptions.html#CG_Orange_Host_Options_IdentityOptions_Authority_
-  commentId: Overload:CG.Orange.Host.Options.IdentityOptions.Authority
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_Authority_
+  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.Authority
   isSpec: "True"
-  fullName: CG.Orange.Host.Options.IdentityOptions.Authority
-  nameWithType: IdentityOptions.Authority
-- uid: CG.Orange.Host.Options.IdentityOptions.ClientId
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.Authority
+  nameWithType: OrangeIdentityOptions.Authority
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
   name: ClientId
-  href: api/CG.Orange.Host.Options.IdentityOptions.html#CG_Orange_Host_Options_IdentityOptions_ClientId
-  commentId: P:CG.Orange.Host.Options.IdentityOptions.ClientId
-  fullName: CG.Orange.Host.Options.IdentityOptions.ClientId
-  nameWithType: IdentityOptions.ClientId
-- uid: CG.Orange.Host.Options.IdentityOptions.ClientId*
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientId
+  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
+  nameWithType: OrangeIdentityOptions.ClientId
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId*
   name: ClientId
-  href: api/CG.Orange.Host.Options.IdentityOptions.html#CG_Orange_Host_Options_IdentityOptions_ClientId_
-  commentId: Overload:CG.Orange.Host.Options.IdentityOptions.ClientId
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientId_
+  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
   isSpec: "True"
-  fullName: CG.Orange.Host.Options.IdentityOptions.ClientId
-  nameWithType: IdentityOptions.ClientId
-- uid: CG.Orange.Host.Options.IdentityOptions.ClientSecret
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
+  nameWithType: OrangeIdentityOptions.ClientId
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
   name: ClientSecret
-  href: api/CG.Orange.Host.Options.IdentityOptions.html#CG_Orange_Host_Options_IdentityOptions_ClientSecret
-  commentId: P:CG.Orange.Host.Options.IdentityOptions.ClientSecret
-  fullName: CG.Orange.Host.Options.IdentityOptions.ClientSecret
-  nameWithType: IdentityOptions.ClientSecret
-- uid: CG.Orange.Host.Options.IdentityOptions.ClientSecret*
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientSecret
+  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
+  nameWithType: OrangeIdentityOptions.ClientSecret
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret*
   name: ClientSecret
-  href: api/CG.Orange.Host.Options.IdentityOptions.html#CG_Orange_Host_Options_IdentityOptions_ClientSecret_
-  commentId: Overload:CG.Orange.Host.Options.IdentityOptions.ClientSecret
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientSecret_
+  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
   isSpec: "True"
-  fullName: CG.Orange.Host.Options.IdentityOptions.ClientSecret
-  nameWithType: IdentityOptions.ClientSecret
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
+  nameWithType: OrangeIdentityOptions.ClientSecret
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
+  name: CookieName
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_CookieName
+  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
+  nameWithType: OrangeIdentityOptions.CookieName
+- uid: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName*
+  name: CookieName
+  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_CookieName_
+  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
+  nameWithType: OrangeIdentityOptions.CookieName
 - uid: CG.Orange.Host.Pages
   name: CG.Orange.Host.Pages
   href: api/CG.Orange.Host.Pages.html
@@ -562,6 +575,18 @@ references:
   commentId: T:CG.Orange.Host.Pages.Home.Index
   fullName: CG.Orange.Host.Pages.Home.Index
   nameWithType: Index
+- uid: CG.Orange.Host.Services
+  name: CG.Orange.Host.Services
+  href: api/CG.Orange.Host.Services.html
+  commentId: N:CG.Orange.Host.Services
+  fullName: CG.Orange.Host.Services
+  nameWithType: CG.Orange.Host.Services
+- uid: CG.Orange.Host.Services.TokenCache
+  name: TokenCache
+  href: api/CG.Orange.Host.Services.TokenCache.html
+  commentId: T:CG.Orange.Host.Services.TokenCache
+  fullName: CG.Orange.Host.Services.TokenCache
+  nameWithType: TokenCache
 - uid: CG.Orange.Host.Themes
   name: CG.Orange.Host.Themes
   href: api/CG.Orange.Host.Themes.html
@@ -1107,12 +1132,12 @@ references:
   commentId: N:CG.Orange.Options
   fullName: CG.Orange.Options
   nameWithType: CG.Orange.Options
-- uid: CG.Orange.Options.BllOptions
-  name: BllOptions
-  href: api/CG.Orange.Options.BllOptions.html
-  commentId: T:CG.Orange.Options.BllOptions
-  fullName: CG.Orange.Options.BllOptions
-  nameWithType: BllOptions
+- uid: CG.Orange.Options.OrangeBllOptions
+  name: OrangeBllOptions
+  href: api/CG.Orange.Options.OrangeBllOptions.html
+  commentId: T:CG.Orange.Options.OrangeBllOptions
+  fullName: CG.Orange.Options.OrangeBllOptions
+  nameWithType: OrangeBllOptions
 - uid: CG.Orange.Repositories
   name: CG.Orange.Repositories
   href: api/CG.Orange.Repositories.html
@@ -1582,51 +1607,51 @@ references:
   commentId: N:CG.Orange.SqlLite.Options
   fullName: CG.Orange.SqlLite.Options
   nameWithType: CG.Orange.SqlLite.Options
-- uid: CG.Orange.SqlLite.Options.DalOptions
-  name: DalOptions
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html
-  commentId: T:CG.Orange.SqlLite.Options.DalOptions
-  fullName: CG.Orange.SqlLite.Options.DalOptions
-  nameWithType: DalOptions
-- uid: CG.Orange.SqlLite.Options.DalOptions.ConnectionString
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions
+  name: OrangeDalOptions
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html
+  commentId: T:CG.Orange.SqlLite.Options.OrangeDalOptions
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions
+  nameWithType: OrangeDalOptions
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString
   name: ConnectionString
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html#CG_Orange_SqlLite_Options_DalOptions_ConnectionString
-  commentId: P:CG.Orange.SqlLite.Options.DalOptions.ConnectionString
-  fullName: CG.Orange.SqlLite.Options.DalOptions.ConnectionString
-  nameWithType: DalOptions.ConnectionString
-- uid: CG.Orange.SqlLite.Options.DalOptions.ConnectionString*
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_ConnectionString
+  commentId: P:CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString
+  nameWithType: OrangeDalOptions.ConnectionString
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString*
   name: ConnectionString
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html#CG_Orange_SqlLite_Options_DalOptions_ConnectionString_
-  commentId: Overload:CG.Orange.SqlLite.Options.DalOptions.ConnectionString
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_ConnectionString_
+  commentId: Overload:CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString
   isSpec: "True"
-  fullName: CG.Orange.SqlLite.Options.DalOptions.ConnectionString
-  nameWithType: DalOptions.ConnectionString
-- uid: CG.Orange.SqlLite.Options.DalOptions.DropDatabaseOnStartup
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions.ConnectionString
+  nameWithType: OrangeDalOptions.ConnectionString
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup
   name: DropDatabaseOnStartup
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html#CG_Orange_SqlLite_Options_DalOptions_DropDatabaseOnStartup
-  commentId: P:CG.Orange.SqlLite.Options.DalOptions.DropDatabaseOnStartup
-  fullName: CG.Orange.SqlLite.Options.DalOptions.DropDatabaseOnStartup
-  nameWithType: DalOptions.DropDatabaseOnStartup
-- uid: CG.Orange.SqlLite.Options.DalOptions.DropDatabaseOnStartup*
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_DropDatabaseOnStartup
+  commentId: P:CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup
+  nameWithType: OrangeDalOptions.DropDatabaseOnStartup
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup*
   name: DropDatabaseOnStartup
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html#CG_Orange_SqlLite_Options_DalOptions_DropDatabaseOnStartup_
-  commentId: Overload:CG.Orange.SqlLite.Options.DalOptions.DropDatabaseOnStartup
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_DropDatabaseOnStartup_
+  commentId: Overload:CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup
   isSpec: "True"
-  fullName: CG.Orange.SqlLite.Options.DalOptions.DropDatabaseOnStartup
-  nameWithType: DalOptions.DropDatabaseOnStartup
-- uid: CG.Orange.SqlLite.Options.DalOptions.MigrateDatabaseOnStartup
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions.DropDatabaseOnStartup
+  nameWithType: OrangeDalOptions.DropDatabaseOnStartup
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup
   name: MigrateDatabaseOnStartup
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html#CG_Orange_SqlLite_Options_DalOptions_MigrateDatabaseOnStartup
-  commentId: P:CG.Orange.SqlLite.Options.DalOptions.MigrateDatabaseOnStartup
-  fullName: CG.Orange.SqlLite.Options.DalOptions.MigrateDatabaseOnStartup
-  nameWithType: DalOptions.MigrateDatabaseOnStartup
-- uid: CG.Orange.SqlLite.Options.DalOptions.MigrateDatabaseOnStartup*
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_MigrateDatabaseOnStartup
+  commentId: P:CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup
+  nameWithType: OrangeDalOptions.MigrateDatabaseOnStartup
+- uid: CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup*
   name: MigrateDatabaseOnStartup
-  href: api/CG.Orange.SqlLite.Options.DalOptions.html#CG_Orange_SqlLite_Options_DalOptions_MigrateDatabaseOnStartup_
-  commentId: Overload:CG.Orange.SqlLite.Options.DalOptions.MigrateDatabaseOnStartup
+  href: api/CG.Orange.SqlLite.Options.OrangeDalOptions.html#CG_Orange_SqlLite_Options_OrangeDalOptions_MigrateDatabaseOnStartup_
+  commentId: Overload:CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup
   isSpec: "True"
-  fullName: CG.Orange.SqlLite.Options.DalOptions.MigrateDatabaseOnStartup
-  nameWithType: DalOptions.MigrateDatabaseOnStartup
+  fullName: CG.Orange.SqlLite.Options.OrangeDalOptions.MigrateDatabaseOnStartup
+  nameWithType: OrangeDalOptions.MigrateDatabaseOnStartup
 - uid: CG.Orange.SqlLite.OrangeDbContext
   name: OrangeDbContext
   href: api/CG.Orange.SqlLite.OrangeDbContext.html
