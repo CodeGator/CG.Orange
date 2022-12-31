@@ -16,7 +16,7 @@ public class OrangeDbContext : DbContext
     /// <summary>
     /// This property contains the list of setting files.
     /// </summary>
-    public virtual DbSet<Entities.SettingFile> SettingFiles { get; set; } = null!;
+    public virtual DbSet<Entities.SettingFileEntity> SettingFiles { get; set; } = null!;
 
     #endregion
 

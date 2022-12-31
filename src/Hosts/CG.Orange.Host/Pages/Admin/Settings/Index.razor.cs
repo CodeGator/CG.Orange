@@ -25,7 +25,7 @@ public partial class Index
     /// <summary>
     /// This field contains the list of settings.
     /// </summary>
-    internal protected IEnumerable<SettingFile> _settings = null!;
+    internal protected IEnumerable<SettingFileModel> _settings = null!;
 
     #endregion
 
@@ -128,7 +128,7 @@ public partial class Index
     /// </summary>
     /// <param name="file"></param>
     /// <returns>A task to perform the operation.</returns>
-    protected async Task OnDeleteAsync(SettingFile file)
+    protected async Task OnDeleteAsync(SettingFileModel file)
     {
         try
         {
@@ -237,7 +237,7 @@ public partial class Index
 
             // Save the change.
             _ = await SettingFileManager.CreateAsync(
-                new SettingFile()
+                new SettingFileModel()
                 {
                     Json = json,
                     ApplicationName = names.Item1,
@@ -293,7 +293,7 @@ public partial class Index
 
         // Step 3: Create the model.
         _ = await SettingFileManager.CreateAsync(
-            new SettingFile()
+            new SettingFileModel()
             {
                 Json = "{ }",
                 ApplicationName = names.Item1,

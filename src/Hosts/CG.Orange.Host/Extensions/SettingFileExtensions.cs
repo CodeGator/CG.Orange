@@ -1,7 +1,7 @@
 ﻿namespace CG.Orange.Models;
 
 /// <summary>
-/// This class contains extension methods related to the <see cref="SettingFile"/>
+/// This class contains extension methods related to the <see cref="SettingFileModel"/>
 /// type.
 /// </summary>
 public static class SettingFileExtensions
@@ -19,7 +19,7 @@ public static class SettingFileExtensions
     /// <param name="settingFile">The setting file to use for the operation.</param>
     /// <returns>A safe string.</returns>
     public static string SafeEnvironmentName(
-        this SettingFile settingFile
+        this SettingFileModel settingFile
         )
     {
         // Return a safe string.

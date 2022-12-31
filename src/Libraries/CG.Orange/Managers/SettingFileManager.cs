@@ -176,8 +176,8 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<SettingFile> CreateAsync(
-        SettingFile settingFile,
+    public virtual async Task<SettingFileModel> CreateAsync(
+        SettingFileModel settingFile,
         string userName,
         CancellationToken cancellationToken = default
         )
@@ -191,7 +191,7 @@ internal class SettingFileManager : ISettingFileManager
             // Log what we are about to do.
             _logger.LogDebug(
                 "Updating the {name} model stats",
-                nameof(SettingFile)
+                nameof(SettingFileModel)
                 );
 
             // Ensure the stats are correct.
@@ -232,7 +232,7 @@ internal class SettingFileManager : ISettingFileManager
 
     /// <inheritdoc />
     public virtual async Task DeleteAsync(
-        SettingFile settingFile,
+        SettingFileModel settingFile,
         string userName,
         CancellationToken cancellationToken = default
         )
@@ -246,7 +246,7 @@ internal class SettingFileManager : ISettingFileManager
             // Log what we are about to do.
             _logger.LogDebug(
                 "Updating the {name} model stats",
-                nameof(SettingFile)
+                nameof(SettingFileModel)
                 );
 
             // Ensure the stats are correct.
@@ -284,7 +284,7 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<IEnumerable<SettingFile>> FindAllAsync(
+    public virtual async Task<IEnumerable<SettingFileModel>> FindAllAsync(
         CancellationToken cancellationToken = default
         )
     {
@@ -323,7 +323,7 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<SettingFile?> FindByApplicationAndEnvironmentAsync(
+    public virtual async Task<SettingFileModel?> FindByApplicationAndEnvironmentAsync(
         string applicationName,
         string? environmentName,
         CancellationToken cancellationToken = default
@@ -370,7 +370,7 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<SettingFile?> FindByIdAsync(
+    public virtual async Task<SettingFileModel?> FindByIdAsync(
         int id,
         CancellationToken cancellationToken = default
         )
@@ -415,8 +415,8 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<SettingFile> UpdateAsync(
-        SettingFile settingFile,
+    public virtual async Task<SettingFileModel> UpdateAsync(
+        SettingFileModel settingFile,
         string userName,
         CancellationToken cancellationToken = default
         )
@@ -430,7 +430,7 @@ internal class SettingFileManager : ISettingFileManager
             // Log what we are about to do.
             _logger.LogDebug(
                 "Updating the {name} model stats",
-                nameof(SettingFile)
+                nameof(SettingFileModel)
                 );
 
             // Ensure the stats are correct.

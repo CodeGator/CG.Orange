@@ -54,7 +54,7 @@ public static class WebApplicationBuilderExtensions003
         webApplicationBuilder.Services.AddAutoMapper(cfg =>
         {
             // Wire up the conversion maps.
-            cfg.CreateMap<CG.Orange.Data.Entities.SettingFile, CG.Orange.Models.SettingFile>().ReverseMap();
+            cfg.CreateMap<SettingFileEntity, SettingFileModel>().ReverseMap();
         });
 
         // Return the application builder.

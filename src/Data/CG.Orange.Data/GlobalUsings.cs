@@ -2,6 +2,7 @@
 global using CG.Orange.Data.Maps;
 global using CG.Orange.Data.Repositories;
 global using CG.Orange.Models;
+global using CG.Orange.Data.Entities;
 global using CG.Orange.Repositories;
 global using CG.Validations;
 global using Microsoft.EntityFrameworkCore;

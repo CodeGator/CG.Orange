@@ -2,10 +2,10 @@
 namespace CG.Orange.Data.Maps;
 
 /// <summary>
-/// This class is an EFCore configuration map for the <see cref="Entities.SettingFile"/>
+/// This class is an EFCore configuration map for the <see cref="Entities.SettingFileEntity"/>
 /// entity type.
 /// </summary>
-internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFile>
+internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFileEntity>
 {
     // *******************************************************************
     // Constructors.
@@ -34,11 +34,11 @@ internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFile>
     #region Public methods
 
     /// <summary>
-    /// This method configures the <see cref="Entities.SettingFile"/> entity.
+    /// This method configures the <see cref="Entities.SettingFileEntity"/> entity.
     /// </summary>
     /// <param name="builder">The builder to use for the operation.</param>
     public override void Configure(
-        EntityTypeBuilder<Entities.SettingFile> builder
+        EntityTypeBuilder<Entities.SettingFileEntity> builder
         )
     {
         // Setup the table.

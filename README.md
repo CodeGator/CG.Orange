@@ -16,6 +16,14 @@ Orange is an idea for a self contained configuration microservice. The scenario 
 ### What platform(s) does it support?
 * [.NET 7.x](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or higher
 
+### What database(s) does it support?
+
+* [SqlServer 2019](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
+* [SQLite](https://www.sqlite.org/index.html)
+* [In-memory (for demo purposes)](https://learn.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli)
+
+Note this project uses the [CG.EntityFrameworkCore](https://github.com/CodeGator/CG.EntityFrameworkCore) nuget package, which makes adding additional databases easy.
+
 ### How do I contact you?
 If you've spotted a bug in the code please use the project Issues [HERE](https://github.com/CodeGator/CG.Orange/issues)
 
@@ -23,8 +31,6 @@ We also have a discussion group [HERE](https://github.com/CodeGator/CG.Orange/di
 
 ### Is there any documentation?
 There is developer documentation [HERE](https://codegator.github.io/CG.Orange/)  (when the blasted CI/CD pipeline works and it gets updated).
-
-We have a WIKI for the project, [HERE](https://github.com/CodeGator/CG.Orange/wiki)
 
 We also write about projects like this one on our website, [HERE](http://www.codegator.com)
 

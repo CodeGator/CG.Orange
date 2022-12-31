@@ -2,7 +2,7 @@
 namespace CG.Orange.Host.Controllers;
 
 /// <summary>
-/// This class is a REST controller for <see cref="SettingFile"/> resources.
+/// This class is a REST controller for <see cref="SettingFileModel"/> resources.
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]

@@ -89,7 +89,7 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>
     #region Private methods
 
     /// <summary>
-    /// This method performs a seeding operation for <see cref="SettingFile"/>
+    /// This method performs a seeding operation for <see cref="SettingFileModel"/>
     /// objects.
     /// </summary>
     /// <param name="dataSection">The data to use for the operation.</param>

@@ -13,11 +13,11 @@ internal class SeedingOptions
     #region Properties
 
     /// <summary>
-    /// This property contains a list of <see cref="SettingFile"/> objects 
+    /// This property contains a list of <see cref="SettingFileModel"/> objects 
     /// to seed.
     /// </summary>
     [Required]
-    public List<SettingFile> SettingFiles { get; set; } = null!;
+    public List<SettingFileModel> SettingFiles { get; set; } = null!;
 
     #endregion
 }

@@ -39,9 +39,9 @@
         <MudSpacer />
     </ToolBarContent>
     <HeaderContent>
-        <MudTh><MudTableSortLabel SortBy="new Func<SettingFile, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
-        <MudTh><MudTableSortLabel SortBy="new Func<SettingFile, object>(x=>x.ApplicationName)">Application</MudTableSortLabel></MudTh>
-        <MudTh><MudTableSortLabel SortBy="new Func<SettingFile, object>(x=>x.SafeEnvironmentName())">Environment</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<SettingFileModel, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<SettingFileModel, object>(x=>x.ApplicationName)">Application</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<SettingFileModel, object>(x=>x.SafeEnvironmentName())">Environment</MudTableSortLabel></MudTh>
         <MudTh></MudTh>
     </HeaderContent>
     <RowTemplate>

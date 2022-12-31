@@ -20,7 +20,7 @@ public partial class Setting
     /// <summary>
     /// This field contains the model for the page.
     /// </summary>
-    internal protected SettingFile? _model;
+    internal protected SettingFileModel? _model;
 
     #endregion
 
