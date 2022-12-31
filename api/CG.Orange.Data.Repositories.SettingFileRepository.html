@@ -78,10 +78,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.Repositories.SettingFileRepository">
   
   
-  <h1 id="CG_Orange_EfCore_Repositories_SettingFileRepository" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository" class="text-break">Class SettingFileRepository
+  <h1 id="CG_Orange_Data_Repositories_SettingFileRepository" data-uid="CG.Orange.Data.Repositories.SettingFileRepository" class="text-break">Class SettingFileRepository
   </h1>
   <div class="markdown level0 summary"><p>This class is an EFCORE implementation of the <see cref="!:ISettingFileRepository"></see>
 interface.</p>
@@ -92,23 +92,23 @@ interface.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SettingFileRepository</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.EfCore.Repositories.html">CG.Orange.EfCore.Repositories</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.EfCore.dll</h6>
-  <h5 id="CG_Orange_EfCore_Repositories_SettingFileRepository_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Data.Repositories.html">CG.Orange.Data.Repositories</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Data.dll</h6>
+  <h5 id="CG_Orange_Data_Repositories_SettingFileRepository_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">class SettingFileRepository : ISettingFileRepository</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository__ctor_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.#ctor*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository__ctor_IDbContextFactory_CG_Orange_EfCore_OrangeDbContext__IMapper_ILogger_ISettingFileRepository__" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.#ctor(IDbContextFactory{CG.Orange.EfCore.OrangeDbContext},IMapper,ILogger{ISettingFileRepository})">SettingFileRepository(IDbContextFactory&lt;OrangeDbContext&gt;, IMapper, ILogger&lt;ISettingFileRepository&gt;)</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.EfCore.Repositories.SettingFileRepository.html">SettingFileRepository</a>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository__ctor_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.#ctor*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository__ctor_CG_Orange_Data_OrangeDbContext_IMapper_ILogger_ISettingFileRepository__" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{ISettingFileRepository})">SettingFileRepository(OrangeDbContext, IMapper, ILogger&lt;ISettingFileRepository&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Data.Repositories.SettingFileRepository.html">SettingFileRepository</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingFileRepository(IDbContextFactory&lt;OrangeDbContext&gt; dbContextFactory, IMapper mapper, ILogger&lt;ISettingFileRepository&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingFileRepository(OrangeDbContext dbContext, IMapper mapper, ILogger&lt;ISettingFileRepository&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,10 +121,10 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDbContextFactory</span>&lt;<a class="xref" href="CG.Orange.EfCore.OrangeDbContext.html">OrangeDbContext</a>&gt;</td>
-        <td><span class="parametername">dbContextFactory</span></td>
-        <td><p>The EFCORE data-context factory
-to use with this repository.</p>
+        <td><a class="xref" href="CG.Orange.Data.OrangeDbContext.html">OrangeDbContext</a></td>
+        <td><span class="parametername">dbContext</span></td>
+        <td><p>The EFCORE data-context to use with this
+repository.</p>
 </td>
       </tr>
       <tr>
@@ -143,13 +143,13 @@ to use with this repository.</p>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository__dbContextFactory" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository._dbContextFactory">_dbContextFactory</h4>
-  <div class="markdown level1 summary"><p>This field contains the EFCORE data-context factory for this repository.</p>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository__dbContext" data-uid="CG.Orange.Data.Repositories.SettingFileRepository._dbContext">_dbContext</h4>
+  <div class="markdown level1 summary"><p>This field contains the EFCORE data-context for this repository.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IDbContextFactory&lt;OrangeDbContext&gt; _dbContextFactory</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly OrangeDbContext _dbContext</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,12 +161,12 @@ to use with this repository.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDbContextFactory</span>&lt;<a class="xref" href="CG.Orange.EfCore.OrangeDbContext.html">OrangeDbContext</a>&gt;</td>
+        <td><a class="xref" href="CG.Orange.Data.OrangeDbContext.html">OrangeDbContext</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository__logger" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository._logger">_logger</h4>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository__logger" data-uid="CG.Orange.Data.Repositories.SettingFileRepository._logger">_logger</h4>
   <div class="markdown level1 summary"><p>This field contains the logger for this repository.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -189,7 +189,7 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository__mapper" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository._mapper">_mapper</h4>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository__mapper" data-uid="CG.Orange.Data.Repositories.SettingFileRepository._mapper">_mapper</h4>
   <div class="markdown level1 summary"><p>This field contains the auto-mapper for this repository.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -214,8 +214,8 @@ to use with this repository.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -254,8 +254,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(System.String,System.String,CancellationToken)">AnyAsync(String, String, CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(System.String,System.String,CancellationToken)">AnyAsync(String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -304,8 +304,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_CountAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_CountAsync_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_CountAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.CountAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_CountAsync_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -344,8 +344,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_CreateAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_CreateAsync_SettingFile_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)">CreateAsync(SettingFile, CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_SettingFile_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)">CreateAsync(SettingFile, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -389,8 +389,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_DeleteAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_DeleteAsync_SettingFile_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)">DeleteAsync(SettingFile, CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_SettingFile_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)">DeleteAsync(SettingFile, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -434,8 +434,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_FindAllAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_FindAllAsync_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_FindAllAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -474,8 +474,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)">FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)">FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -524,8 +524,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_FindByIdAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_FindByIdAsync_System_Int32_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync(System.Int32,CancellationToken)">FindByIdAsync(Int32, CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_FindByIdAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_FindByIdAsync_System_Int32_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync(System.Int32,CancellationToken)">FindByIdAsync(Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -569,8 +569,8 @@ to use with this repository.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Repositories_SettingFileRepository_UpdateAsync_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync*"></a>
-  <h4 id="CG_Orange_EfCore_Repositories_SettingFileRepository_UpdateAsync_SettingFile_CancellationToken_" data-uid="CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)">UpdateAsync(SettingFile, CancellationToken)</h4>
+  <a id="CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync*"></a>
+  <h4 id="CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_SettingFile_CancellationToken_" data-uid="CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)">UpdateAsync(SettingFile, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

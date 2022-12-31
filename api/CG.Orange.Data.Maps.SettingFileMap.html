@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class EntityBase
+    <title>Class SettingFileMap
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class EntityBase
+    <meta name="title" content="Class SettingFileMap
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,148 +78,94 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.EfCore.Entities.EntityBase">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.Maps.SettingFileMap">
   
   
-  <h1 id="CG_Orange_EfCore_Entities_EntityBase" data-uid="CG.Orange.EfCore.Entities.EntityBase" class="text-break">Class EntityBase
+  <h1 id="CG_Orange_Data_Maps_SettingFileMap" data-uid="CG.Orange.Data.Maps.SettingFileMap" class="text-break">Class SettingFileMap
   </h1>
-  <div class="markdown level0 summary"><p>This class represents a base entity.</p>
+  <div class="markdown level0 summary"><p>This class is an EFCore configuration map for the <a class="xref" href="CG.Orange.Data.Entities.SettingFile.html">SettingFile</a>
+entity type.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EntityBase</span></div>
-      <div class="level2"><a class="xref" href="CG.Orange.EfCore.Entities.SettingFile.html">SettingFile</a></div>
+    <div class="level1"><a class="xref" href="CG.Orange.Data.Maps.AuditedEntityMapBase-1.html">AuditedEntityMapBase</a>&lt;<a class="xref" href="CG.Orange.Data.Entities.SettingFile.html">SettingFile</a>&gt;</div>
+    <div class="level2"><span class="xref">SettingFileMap</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1__modelBuilder">AuditedEntityMapBase&lt;SettingFile&gt;._modelBuilder</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.EfCore.Entities.html">CG.Orange.EfCore.Entities</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.EfCore.dll</h6>
-  <h5 id="CG_Orange_EfCore_Entities_EntityBase_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Data.Maps.html">CG.Orange.Data.Maps</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Data.dll</h6>
+  <h5 id="CG_Orange_Data_Maps_SettingFileMap_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">class EntityBase</code></pre>
+    <pre><code class="lang-csharp hljs">class SettingFileMap : AuditedEntityMapBase&lt;SettingFile&gt;</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_EfCore_Entities_EntityBase_CreatedBy_" data-uid="CG.Orange.EfCore.Entities.EntityBase.CreatedBy*"></a>
-  <h4 id="CG_Orange_EfCore_Entities_EntityBase_CreatedBy" data-uid="CG.Orange.EfCore.Entities.EntityBase.CreatedBy">CreatedBy</h4>
-  <div class="markdown level1 summary"><p>This property contains the name of the person who created the entity.</p>
+  <a id="CG_Orange_Data_Maps_SettingFileMap__ctor_" data-uid="CG.Orange.Data.Maps.SettingFileMap.#ctor*"></a>
+  <h4 id="CG_Orange_Data_Maps_SettingFileMap__ctor_ModelBuilder_" data-uid="CG.Orange.Data.Maps.SettingFileMap.#ctor(ModelBuilder)">SettingFileMap(ModelBuilder)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Data.Maps.SettingFileMap.html">SettingFileMap</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CreatedBy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingFileMap(ModelBuilder modelBuilder)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><span class="xref">ModelBuilder</span></td>
+        <td><span class="parametername">modelBuilder</span></td>
+        <td><p>The model builder to use with this map.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Entities_EntityBase_CreatedOnUtc_" data-uid="CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc*"></a>
-  <h4 id="CG_Orange_EfCore_Entities_EntityBase_CreatedOnUtc" data-uid="CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc">CreatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>This property contains the date/time when the entity was created.</p>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Orange_Data_Maps_SettingFileMap_Configure_" data-uid="CG.Orange.Data.Maps.SettingFileMap.Configure*"></a>
+  <h4 id="CG_Orange_Data_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_SettingFile__" data-uid="CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFile})">Configure(EntityTypeBuilder&lt;SettingFile&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method configures the <a class="xref" href="CG.Orange.Data.Entities.SettingFile.html">SettingFile</a> entity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime CreatedOnUtc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Configure(EntityTypeBuilder&lt;SettingFile&gt; builder)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
-        <td></td>
+        <td><span class="xref">EntityTypeBuilder</span>&lt;<a class="xref" href="CG.Orange.Data.Entities.SettingFile.html">SettingFile</a>&gt;</td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The builder to use for the operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_EfCore_Entities_EntityBase_LastUpdatedBy_" data-uid="CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy*"></a>
-  <h4 id="CG_Orange_EfCore_Entities_EntityBase_LastUpdatedBy" data-uid="CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy">LastUpdatedBy</h4>
-  <div class="markdown level1 summary"><p>This property contains the name of the last person to update the entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string LastUpdatedBy { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_EfCore_Entities_EntityBase_LastUpdatedOnUtc_" data-uid="CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc*"></a>
-  <h4 id="CG_Orange_EfCore_Entities_EntityBase_LastUpdatedOnUtc" data-uid="CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc">LastUpdatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>This property contains the date/time when the entity was last updated.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime? LastUpdatedOnUtc { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CG.Orange.Data.Maps.AuditedEntityMapBase&lt;CG.Orange.Data.Entities.SettingFile&gt;.Configure(EntityTypeBuilder&lt;CG.Orange.Data.Entities.SettingFile&gt;)</span></div>
 </article>
           </div>
           

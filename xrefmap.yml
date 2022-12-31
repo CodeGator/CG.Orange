@@ -7,622 +7,784 @@ references:
   commentId: N:CG.Orange
   fullName: CG.Orange
   nameWithType: CG.Orange
-- uid: CG.Orange.EfCore
-  name: CG.Orange.EfCore
-  href: api/CG.Orange.EfCore.html
-  commentId: N:CG.Orange.EfCore
-  fullName: CG.Orange.EfCore
-  nameWithType: CG.Orange.EfCore
-- uid: CG.Orange.EfCore.Entities
-  name: CG.Orange.EfCore.Entities
-  href: api/CG.Orange.EfCore.Entities.html
-  commentId: N:CG.Orange.EfCore.Entities
-  fullName: CG.Orange.EfCore.Entities
-  nameWithType: CG.Orange.EfCore.Entities
-- uid: CG.Orange.EfCore.Entities.EntityBase
-  name: EntityBase
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html
-  commentId: T:CG.Orange.EfCore.Entities.EntityBase
-  fullName: CG.Orange.EfCore.Entities.EntityBase
-  nameWithType: EntityBase
-- uid: CG.Orange.EfCore.Entities.EntityBase.CreatedBy
+- uid: CG.Orange.Data
+  name: CG.Orange.Data
+  href: api/CG.Orange.Data.html
+  commentId: N:CG.Orange.Data
+  fullName: CG.Orange.Data
+  nameWithType: CG.Orange.Data
+- uid: CG.Orange.Data.Entities
+  name: CG.Orange.Data.Entities
+  href: api/CG.Orange.Data.Entities.html
+  commentId: N:CG.Orange.Data.Entities
+  fullName: CG.Orange.Data.Entities
+  nameWithType: CG.Orange.Data.Entities
+- uid: CG.Orange.Data.Entities.AuditedEntityBase
+  name: AuditedEntityBase
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html
+  commentId: T:CG.Orange.Data.Entities.AuditedEntityBase
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase
+  nameWithType: AuditedEntityBase
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.CreatedBy
   name: CreatedBy
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_CreatedBy
-  commentId: P:CG.Orange.EfCore.Entities.EntityBase.CreatedBy
-  fullName: CG.Orange.EfCore.Entities.EntityBase.CreatedBy
-  nameWithType: EntityBase.CreatedBy
-- uid: CG.Orange.EfCore.Entities.EntityBase.CreatedBy*
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_CreatedBy
+  commentId: P:CG.Orange.Data.Entities.AuditedEntityBase.CreatedBy
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.CreatedBy
+  nameWithType: AuditedEntityBase.CreatedBy
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.CreatedBy*
   name: CreatedBy
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_CreatedBy_
-  commentId: Overload:CG.Orange.EfCore.Entities.EntityBase.CreatedBy
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_CreatedBy_
+  commentId: Overload:CG.Orange.Data.Entities.AuditedEntityBase.CreatedBy
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.EntityBase.CreatedBy
-  nameWithType: EntityBase.CreatedBy
-- uid: CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.CreatedBy
+  nameWithType: AuditedEntityBase.CreatedBy
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.CreatedOnUtc
   name: CreatedOnUtc
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_CreatedOnUtc
-  commentId: P:CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc
-  fullName: CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc
-  nameWithType: EntityBase.CreatedOnUtc
-- uid: CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc*
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_CreatedOnUtc
+  commentId: P:CG.Orange.Data.Entities.AuditedEntityBase.CreatedOnUtc
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.CreatedOnUtc
+  nameWithType: AuditedEntityBase.CreatedOnUtc
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.CreatedOnUtc*
   name: CreatedOnUtc
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_CreatedOnUtc_
-  commentId: Overload:CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_CreatedOnUtc_
+  commentId: Overload:CG.Orange.Data.Entities.AuditedEntityBase.CreatedOnUtc
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.EntityBase.CreatedOnUtc
-  nameWithType: EntityBase.CreatedOnUtc
-- uid: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.CreatedOnUtc
+  nameWithType: AuditedEntityBase.CreatedOnUtc
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedBy
   name: LastUpdatedBy
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_LastUpdatedBy
-  commentId: P:CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy
-  fullName: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy
-  nameWithType: EntityBase.LastUpdatedBy
-- uid: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy*
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_LastUpdatedBy
+  commentId: P:CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedBy
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedBy
+  nameWithType: AuditedEntityBase.LastUpdatedBy
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedBy*
   name: LastUpdatedBy
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_LastUpdatedBy_
-  commentId: Overload:CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_LastUpdatedBy_
+  commentId: Overload:CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedBy
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedBy
-  nameWithType: EntityBase.LastUpdatedBy
-- uid: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedBy
+  nameWithType: AuditedEntityBase.LastUpdatedBy
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
   name: LastUpdatedOnUtc
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_LastUpdatedOnUtc
-  commentId: P:CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc
-  fullName: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc
-  nameWithType: EntityBase.LastUpdatedOnUtc
-- uid: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc*
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_LastUpdatedOnUtc
+  commentId: P:CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
+  nameWithType: AuditedEntityBase.LastUpdatedOnUtc
+- uid: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc*
   name: LastUpdatedOnUtc
-  href: api/CG.Orange.EfCore.Entities.EntityBase.html#CG_Orange_EfCore_Entities_EntityBase_LastUpdatedOnUtc_
-  commentId: Overload:CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc
+  href: api/CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_LastUpdatedOnUtc_
+  commentId: Overload:CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.EntityBase.LastUpdatedOnUtc
-  nameWithType: EntityBase.LastUpdatedOnUtc
-- uid: CG.Orange.EfCore.Entities.SettingFile
+  fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
+  nameWithType: AuditedEntityBase.LastUpdatedOnUtc
+- uid: CG.Orange.Data.Entities.SettingFile
   name: SettingFile
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html
-  commentId: T:CG.Orange.EfCore.Entities.SettingFile
-  fullName: CG.Orange.EfCore.Entities.SettingFile
+  href: api/CG.Orange.Data.Entities.SettingFile.html
+  commentId: T:CG.Orange.Data.Entities.SettingFile
+  fullName: CG.Orange.Data.Entities.SettingFile
   nameWithType: SettingFile
-- uid: CG.Orange.EfCore.Entities.SettingFile.ApplicationName
+- uid: CG.Orange.Data.Entities.SettingFile.ApplicationName
   name: ApplicationName
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_ApplicationName
-  commentId: P:CG.Orange.EfCore.Entities.SettingFile.ApplicationName
-  fullName: CG.Orange.EfCore.Entities.SettingFile.ApplicationName
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_ApplicationName
+  commentId: P:CG.Orange.Data.Entities.SettingFile.ApplicationName
+  fullName: CG.Orange.Data.Entities.SettingFile.ApplicationName
   nameWithType: SettingFile.ApplicationName
-- uid: CG.Orange.EfCore.Entities.SettingFile.ApplicationName*
+- uid: CG.Orange.Data.Entities.SettingFile.ApplicationName*
   name: ApplicationName
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_ApplicationName_
-  commentId: Overload:CG.Orange.EfCore.Entities.SettingFile.ApplicationName
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_ApplicationName_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFile.ApplicationName
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.SettingFile.ApplicationName
+  fullName: CG.Orange.Data.Entities.SettingFile.ApplicationName
   nameWithType: SettingFile.ApplicationName
-- uid: CG.Orange.EfCore.Entities.SettingFile.EnvironmentName
+- uid: CG.Orange.Data.Entities.SettingFile.EnvironmentName
   name: EnvironmentName
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_EnvironmentName
-  commentId: P:CG.Orange.EfCore.Entities.SettingFile.EnvironmentName
-  fullName: CG.Orange.EfCore.Entities.SettingFile.EnvironmentName
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_EnvironmentName
+  commentId: P:CG.Orange.Data.Entities.SettingFile.EnvironmentName
+  fullName: CG.Orange.Data.Entities.SettingFile.EnvironmentName
   nameWithType: SettingFile.EnvironmentName
-- uid: CG.Orange.EfCore.Entities.SettingFile.EnvironmentName*
+- uid: CG.Orange.Data.Entities.SettingFile.EnvironmentName*
   name: EnvironmentName
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_EnvironmentName_
-  commentId: Overload:CG.Orange.EfCore.Entities.SettingFile.EnvironmentName
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_EnvironmentName_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFile.EnvironmentName
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.SettingFile.EnvironmentName
+  fullName: CG.Orange.Data.Entities.SettingFile.EnvironmentName
   nameWithType: SettingFile.EnvironmentName
-- uid: CG.Orange.EfCore.Entities.SettingFile.Id
+- uid: CG.Orange.Data.Entities.SettingFile.Id
   name: Id
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_Id
-  commentId: P:CG.Orange.EfCore.Entities.SettingFile.Id
-  fullName: CG.Orange.EfCore.Entities.SettingFile.Id
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Id
+  commentId: P:CG.Orange.Data.Entities.SettingFile.Id
+  fullName: CG.Orange.Data.Entities.SettingFile.Id
   nameWithType: SettingFile.Id
-- uid: CG.Orange.EfCore.Entities.SettingFile.Id*
+- uid: CG.Orange.Data.Entities.SettingFile.Id*
   name: Id
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_Id_
-  commentId: Overload:CG.Orange.EfCore.Entities.SettingFile.Id
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Id_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFile.Id
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.SettingFile.Id
+  fullName: CG.Orange.Data.Entities.SettingFile.Id
   nameWithType: SettingFile.Id
-- uid: CG.Orange.EfCore.Entities.SettingFile.IsDisabled
+- uid: CG.Orange.Data.Entities.SettingFile.IsDisabled
   name: IsDisabled
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_IsDisabled
-  commentId: P:CG.Orange.EfCore.Entities.SettingFile.IsDisabled
-  fullName: CG.Orange.EfCore.Entities.SettingFile.IsDisabled
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_IsDisabled
+  commentId: P:CG.Orange.Data.Entities.SettingFile.IsDisabled
+  fullName: CG.Orange.Data.Entities.SettingFile.IsDisabled
   nameWithType: SettingFile.IsDisabled
-- uid: CG.Orange.EfCore.Entities.SettingFile.IsDisabled*
+- uid: CG.Orange.Data.Entities.SettingFile.IsDisabled*
   name: IsDisabled
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_IsDisabled_
-  commentId: Overload:CG.Orange.EfCore.Entities.SettingFile.IsDisabled
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_IsDisabled_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFile.IsDisabled
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.SettingFile.IsDisabled
+  fullName: CG.Orange.Data.Entities.SettingFile.IsDisabled
   nameWithType: SettingFile.IsDisabled
-- uid: CG.Orange.EfCore.Entities.SettingFile.Json
+- uid: CG.Orange.Data.Entities.SettingFile.Json
   name: Json
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_Json
-  commentId: P:CG.Orange.EfCore.Entities.SettingFile.Json
-  fullName: CG.Orange.EfCore.Entities.SettingFile.Json
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Json
+  commentId: P:CG.Orange.Data.Entities.SettingFile.Json
+  fullName: CG.Orange.Data.Entities.SettingFile.Json
   nameWithType: SettingFile.Json
-- uid: CG.Orange.EfCore.Entities.SettingFile.Json*
+- uid: CG.Orange.Data.Entities.SettingFile.Json*
   name: Json
-  href: api/CG.Orange.EfCore.Entities.SettingFile.html#CG_Orange_EfCore_Entities_SettingFile_Json_
-  commentId: Overload:CG.Orange.EfCore.Entities.SettingFile.Json
+  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Json_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFile.Json
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Entities.SettingFile.Json
+  fullName: CG.Orange.Data.Entities.SettingFile.Json
   nameWithType: SettingFile.Json
-- uid: CG.Orange.EfCore.Maps
-  name: CG.Orange.EfCore.Maps
-  href: api/CG.Orange.EfCore.Maps.html
-  commentId: N:CG.Orange.EfCore.Maps
-  fullName: CG.Orange.EfCore.Maps
-  nameWithType: CG.Orange.EfCore.Maps
-- uid: CG.Orange.EfCore.Maps.EntityMapBase`1
-  name: EntityMapBase<TEntity>
-  href: api/CG.Orange.EfCore.Maps.EntityMapBase-1.html
-  commentId: T:CG.Orange.EfCore.Maps.EntityMapBase`1
-  name.vb: EntityMapBase(Of TEntity)
-  fullName: CG.Orange.EfCore.Maps.EntityMapBase<TEntity>
-  fullName.vb: CG.Orange.EfCore.Maps.EntityMapBase(Of TEntity)
-  nameWithType: EntityMapBase<TEntity>
-  nameWithType.vb: EntityMapBase(Of TEntity)
-- uid: CG.Orange.EfCore.Maps.EntityMapBase`1.#ctor(ModelBuilder)
-  name: EntityMapBase(ModelBuilder)
-  href: api/CG.Orange.EfCore.Maps.EntityMapBase-1.html#CG_Orange_EfCore_Maps_EntityMapBase_1__ctor_ModelBuilder_
-  commentId: M:CG.Orange.EfCore.Maps.EntityMapBase`1.#ctor(ModelBuilder)
-  fullName: CG.Orange.EfCore.Maps.EntityMapBase<TEntity>.EntityMapBase(ModelBuilder)
-  fullName.vb: CG.Orange.EfCore.Maps.EntityMapBase(Of TEntity).EntityMapBase(ModelBuilder)
-  nameWithType: EntityMapBase<TEntity>.EntityMapBase(ModelBuilder)
-  nameWithType.vb: EntityMapBase(Of TEntity).EntityMapBase(ModelBuilder)
-- uid: CG.Orange.EfCore.Maps.EntityMapBase`1.#ctor*
-  name: EntityMapBase
-  href: api/CG.Orange.EfCore.Maps.EntityMapBase-1.html#CG_Orange_EfCore_Maps_EntityMapBase_1__ctor_
-  commentId: Overload:CG.Orange.EfCore.Maps.EntityMapBase`1.#ctor
+- uid: CG.Orange.Data.Maps
+  name: CG.Orange.Data.Maps
+  href: api/CG.Orange.Data.Maps.html
+  commentId: N:CG.Orange.Data.Maps
+  fullName: CG.Orange.Data.Maps
+  nameWithType: CG.Orange.Data.Maps
+- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1
+  name: AuditedEntityMapBase<TEntity>
+  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html
+  commentId: T:CG.Orange.Data.Maps.AuditedEntityMapBase`1
+  name.vb: AuditedEntityMapBase(Of TEntity)
+  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>
+  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity)
+  nameWithType: AuditedEntityMapBase<TEntity>
+  nameWithType.vb: AuditedEntityMapBase(Of TEntity)
+- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1.#ctor(ModelBuilder)
+  name: AuditedEntityMapBase(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.AuditedEntityMapBase`1.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>.AuditedEntityMapBase(ModelBuilder)
+  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).AuditedEntityMapBase(ModelBuilder)
+  nameWithType: AuditedEntityMapBase<TEntity>.AuditedEntityMapBase(ModelBuilder)
+  nameWithType.vb: AuditedEntityMapBase(Of TEntity).AuditedEntityMapBase(ModelBuilder)
+- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1.#ctor*
+  name: AuditedEntityMapBase
+  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.AuditedEntityMapBase`1.#ctor
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Maps.EntityMapBase<TEntity>.EntityMapBase
-  fullName.vb: CG.Orange.EfCore.Maps.EntityMapBase(Of TEntity).EntityMapBase
-  nameWithType: EntityMapBase<TEntity>.EntityMapBase
-  nameWithType.vb: EntityMapBase(Of TEntity).EntityMapBase
-- uid: CG.Orange.EfCore.Maps.EntityMapBase`1._modelBuilder
+  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>.AuditedEntityMapBase
+  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).AuditedEntityMapBase
+  nameWithType: AuditedEntityMapBase<TEntity>.AuditedEntityMapBase
+  nameWithType.vb: AuditedEntityMapBase(Of TEntity).AuditedEntityMapBase
+- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1._modelBuilder
   name: _modelBuilder
-  href: api/CG.Orange.EfCore.Maps.EntityMapBase-1.html#CG_Orange_EfCore_Maps_EntityMapBase_1__modelBuilder
-  commentId: F:CG.Orange.EfCore.Maps.EntityMapBase`1._modelBuilder
-  fullName: CG.Orange.EfCore.Maps.EntityMapBase<TEntity>._modelBuilder
-  fullName.vb: CG.Orange.EfCore.Maps.EntityMapBase(Of TEntity)._modelBuilder
-  nameWithType: EntityMapBase<TEntity>._modelBuilder
-  nameWithType.vb: EntityMapBase(Of TEntity)._modelBuilder
-- uid: CG.Orange.EfCore.Maps.EntityMapBase`1.Configure(EntityTypeBuilder{`0})
+  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1__modelBuilder
+  commentId: F:CG.Orange.Data.Maps.AuditedEntityMapBase`1._modelBuilder
+  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>._modelBuilder
+  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity)._modelBuilder
+  nameWithType: AuditedEntityMapBase<TEntity>._modelBuilder
+  nameWithType.vb: AuditedEntityMapBase(Of TEntity)._modelBuilder
+- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure(EntityTypeBuilder{`0})
   name: Configure(EntityTypeBuilder<TEntity>)
-  href: api/CG.Orange.EfCore.Maps.EntityMapBase-1.html#CG_Orange_EfCore_Maps_EntityMapBase_1_Configure_EntityTypeBuilder__0__
-  commentId: M:CG.Orange.EfCore.Maps.EntityMapBase`1.Configure(EntityTypeBuilder{`0})
+  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1_Configure_EntityTypeBuilder__0__
+  commentId: M:CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure(EntityTypeBuilder{`0})
   name.vb: Configure(EntityTypeBuilder(Of TEntity))
-  fullName: CG.Orange.EfCore.Maps.EntityMapBase<TEntity>.Configure(EntityTypeBuilder<TEntity>)
-  fullName.vb: CG.Orange.EfCore.Maps.EntityMapBase(Of TEntity).Configure(EntityTypeBuilder(Of TEntity))
-  nameWithType: EntityMapBase<TEntity>.Configure(EntityTypeBuilder<TEntity>)
-  nameWithType.vb: EntityMapBase(Of TEntity).Configure(EntityTypeBuilder(Of TEntity))
-- uid: CG.Orange.EfCore.Maps.EntityMapBase`1.Configure*
+  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>.Configure(EntityTypeBuilder<TEntity>)
+  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).Configure(EntityTypeBuilder(Of TEntity))
+  nameWithType: AuditedEntityMapBase<TEntity>.Configure(EntityTypeBuilder<TEntity>)
+  nameWithType.vb: AuditedEntityMapBase(Of TEntity).Configure(EntityTypeBuilder(Of TEntity))
+- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure*
   name: Configure
-  href: api/CG.Orange.EfCore.Maps.EntityMapBase-1.html#CG_Orange_EfCore_Maps_EntityMapBase_1_Configure_
-  commentId: Overload:CG.Orange.EfCore.Maps.EntityMapBase`1.Configure
+  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Maps.EntityMapBase<TEntity>.Configure
-  fullName.vb: CG.Orange.EfCore.Maps.EntityMapBase(Of TEntity).Configure
-  nameWithType: EntityMapBase<TEntity>.Configure
-  nameWithType.vb: EntityMapBase(Of TEntity).Configure
-- uid: CG.Orange.EfCore.Maps.SettingFileMap
+  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>.Configure
+  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).Configure
+  nameWithType: AuditedEntityMapBase<TEntity>.Configure
+  nameWithType.vb: AuditedEntityMapBase(Of TEntity).Configure
+- uid: CG.Orange.Data.Maps.SettingFileMap
   name: SettingFileMap
-  href: api/CG.Orange.EfCore.Maps.SettingFileMap.html
-  commentId: T:CG.Orange.EfCore.Maps.SettingFileMap
-  fullName: CG.Orange.EfCore.Maps.SettingFileMap
+  href: api/CG.Orange.Data.Maps.SettingFileMap.html
+  commentId: T:CG.Orange.Data.Maps.SettingFileMap
+  fullName: CG.Orange.Data.Maps.SettingFileMap
   nameWithType: SettingFileMap
-- uid: CG.Orange.EfCore.Maps.SettingFileMap.#ctor(ModelBuilder)
+- uid: CG.Orange.Data.Maps.SettingFileMap.#ctor(ModelBuilder)
   name: SettingFileMap(ModelBuilder)
-  href: api/CG.Orange.EfCore.Maps.SettingFileMap.html#CG_Orange_EfCore_Maps_SettingFileMap__ctor_ModelBuilder_
-  commentId: M:CG.Orange.EfCore.Maps.SettingFileMap.#ctor(ModelBuilder)
-  fullName: CG.Orange.EfCore.Maps.SettingFileMap.SettingFileMap(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.SettingFileMap.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.SettingFileMap.SettingFileMap(ModelBuilder)
   nameWithType: SettingFileMap.SettingFileMap(ModelBuilder)
-- uid: CG.Orange.EfCore.Maps.SettingFileMap.#ctor*
+- uid: CG.Orange.Data.Maps.SettingFileMap.#ctor*
   name: SettingFileMap
-  href: api/CG.Orange.EfCore.Maps.SettingFileMap.html#CG_Orange_EfCore_Maps_SettingFileMap__ctor_
-  commentId: Overload:CG.Orange.EfCore.Maps.SettingFileMap.#ctor
+  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.SettingFileMap.#ctor
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Maps.SettingFileMap.SettingFileMap
+  fullName: CG.Orange.Data.Maps.SettingFileMap.SettingFileMap
   nameWithType: SettingFileMap.SettingFileMap
-- uid: CG.Orange.EfCore.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.EfCore.Entities.SettingFile})
+- uid: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFile})
   name: Configure(EntityTypeBuilder<SettingFile>)
-  href: api/CG.Orange.EfCore.Maps.SettingFileMap.html#CG_Orange_EfCore_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_EfCore_Entities_SettingFile__
-  commentId: M:CG.Orange.EfCore.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.EfCore.Entities.SettingFile})
+  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_SettingFile__
+  commentId: M:CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFile})
   name.vb: Configure(EntityTypeBuilder(Of SettingFile))
-  fullName: CG.Orange.EfCore.Maps.SettingFileMap.Configure(EntityTypeBuilder<CG.Orange.EfCore.Entities.SettingFile>)
-  fullName.vb: CG.Orange.EfCore.Maps.SettingFileMap.Configure(EntityTypeBuilder(Of CG.Orange.EfCore.Entities.SettingFile))
+  fullName: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder<CG.Orange.Data.Entities.SettingFile>)
+  fullName.vb: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder(Of CG.Orange.Data.Entities.SettingFile))
   nameWithType: SettingFileMap.Configure(EntityTypeBuilder<SettingFile>)
   nameWithType.vb: SettingFileMap.Configure(EntityTypeBuilder(Of SettingFile))
-- uid: CG.Orange.EfCore.Maps.SettingFileMap.Configure*
+- uid: CG.Orange.Data.Maps.SettingFileMap.Configure*
   name: Configure
-  href: api/CG.Orange.EfCore.Maps.SettingFileMap.html#CG_Orange_EfCore_Maps_SettingFileMap_Configure_
-  commentId: Overload:CG.Orange.EfCore.Maps.SettingFileMap.Configure
+  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.SettingFileMap.Configure
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Maps.SettingFileMap.Configure
+  fullName: CG.Orange.Data.Maps.SettingFileMap.Configure
   nameWithType: SettingFileMap.Configure
-- uid: CG.Orange.EfCore.Migrations
-  name: CG.Orange.EfCore.Migrations
-  href: api/CG.Orange.EfCore.Migrations.html
-  commentId: N:CG.Orange.EfCore.Migrations
-  fullName: CG.Orange.EfCore.Migrations
-  nameWithType: CG.Orange.EfCore.Migrations
-- uid: CG.Orange.EfCore.Migrations.InitialCreate
-  name: InitialCreate
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html
-  commentId: T:CG.Orange.EfCore.Migrations.InitialCreate
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate
-  nameWithType: InitialCreate
-- uid: CG.Orange.EfCore.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  name: BuildTargetModel(ModelBuilder)
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html#CG_Orange_EfCore_Migrations_InitialCreate_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
-  commentId: M:CG.Orange.EfCore.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  nameWithType: InitialCreate.BuildTargetModel(ModelBuilder)
-- uid: CG.Orange.EfCore.Migrations.InitialCreate.BuildTargetModel*
-  name: BuildTargetModel
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html#CG_Orange_EfCore_Migrations_InitialCreate_BuildTargetModel_
-  commentId: Overload:CG.Orange.EfCore.Migrations.InitialCreate.BuildTargetModel
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate.BuildTargetModel
-  nameWithType: InitialCreate.BuildTargetModel
-- uid: CG.Orange.EfCore.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  name: Down(MigrationBuilder)
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html#CG_Orange_EfCore_Migrations_InitialCreate_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
-  commentId: M:CG.Orange.EfCore.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  nameWithType: InitialCreate.Down(MigrationBuilder)
-- uid: CG.Orange.EfCore.Migrations.InitialCreate.Down*
-  name: Down
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html#CG_Orange_EfCore_Migrations_InitialCreate_Down_
-  commentId: Overload:CG.Orange.EfCore.Migrations.InitialCreate.Down
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate.Down
-  nameWithType: InitialCreate.Down
-- uid: CG.Orange.EfCore.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  name: Up(MigrationBuilder)
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html#CG_Orange_EfCore_Migrations_InitialCreate_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
-  commentId: M:CG.Orange.EfCore.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  nameWithType: InitialCreate.Up(MigrationBuilder)
-- uid: CG.Orange.EfCore.Migrations.InitialCreate.Up*
-  name: Up
-  href: api/CG.Orange.EfCore.Migrations.InitialCreate.html#CG_Orange_EfCore_Migrations_InitialCreate_Up_
-  commentId: Overload:CG.Orange.EfCore.Migrations.InitialCreate.Up
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Migrations.InitialCreate.Up
-  nameWithType: InitialCreate.Up
-- uid: CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot
-  name: OrangeDbContextModelSnapshot
-  href: api/CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.html
-  commentId: T:CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot
-  fullName: CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot
-  nameWithType: OrangeDbContextModelSnapshot
-- uid: CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  name: BuildModel(ModelBuilder)
-  href: api/CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.html#CG_Orange_EfCore_Migrations_OrangeDbContextModelSnapshot_BuildModel_Microsoft_EntityFrameworkCore_ModelBuilder_
-  commentId: M:CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  fullName: CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  nameWithType: OrangeDbContextModelSnapshot.BuildModel(ModelBuilder)
-- uid: CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.BuildModel*
-  name: BuildModel
-  href: api/CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.html#CG_Orange_EfCore_Migrations_OrangeDbContextModelSnapshot_BuildModel_
-  commentId: Overload:CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.BuildModel
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Migrations.OrangeDbContextModelSnapshot.BuildModel
-  nameWithType: OrangeDbContextModelSnapshot.BuildModel
-- uid: CG.Orange.EfCore.Options
-  name: CG.Orange.EfCore.Options
-  href: api/CG.Orange.EfCore.Options.html
-  commentId: N:CG.Orange.EfCore.Options
-  fullName: CG.Orange.EfCore.Options
-  nameWithType: CG.Orange.EfCore.Options
-- uid: CG.Orange.EfCore.Options.InMemoryOptions
-  name: InMemoryOptions
-  href: api/CG.Orange.EfCore.Options.InMemoryOptions.html
-  commentId: T:CG.Orange.EfCore.Options.InMemoryOptions
-  fullName: CG.Orange.EfCore.Options.InMemoryOptions
-  nameWithType: InMemoryOptions
-- uid: CG.Orange.EfCore.Options.InMemoryOptions.ConnectionString
-  name: ConnectionString
-  href: api/CG.Orange.EfCore.Options.InMemoryOptions.html#CG_Orange_EfCore_Options_InMemoryOptions_ConnectionString
-  commentId: P:CG.Orange.EfCore.Options.InMemoryOptions.ConnectionString
-  fullName: CG.Orange.EfCore.Options.InMemoryOptions.ConnectionString
-  nameWithType: InMemoryOptions.ConnectionString
-- uid: CG.Orange.EfCore.Options.InMemoryOptions.ConnectionString*
-  name: ConnectionString
-  href: api/CG.Orange.EfCore.Options.InMemoryOptions.html#CG_Orange_EfCore_Options_InMemoryOptions_ConnectionString_
-  commentId: Overload:CG.Orange.EfCore.Options.InMemoryOptions.ConnectionString
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Options.InMemoryOptions.ConnectionString
-  nameWithType: InMemoryOptions.ConnectionString
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions
-  name: OrangeDalOptions
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html
-  commentId: T:CG.Orange.EfCore.Options.OrangeDalOptions
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions
-  nameWithType: OrangeDalOptions
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions.DropDatabaseOnStartup
-  name: DropDatabaseOnStartup
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html#CG_Orange_EfCore_Options_OrangeDalOptions_DropDatabaseOnStartup
-  commentId: P:CG.Orange.EfCore.Options.OrangeDalOptions.DropDatabaseOnStartup
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions.DropDatabaseOnStartup
-  nameWithType: OrangeDalOptions.DropDatabaseOnStartup
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions.DropDatabaseOnStartup*
-  name: DropDatabaseOnStartup
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html#CG_Orange_EfCore_Options_OrangeDalOptions_DropDatabaseOnStartup_
-  commentId: Overload:CG.Orange.EfCore.Options.OrangeDalOptions.DropDatabaseOnStartup
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions.DropDatabaseOnStartup
-  nameWithType: OrangeDalOptions.DropDatabaseOnStartup
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions.MigrateDatabaseOnStartup
-  name: MigrateDatabaseOnStartup
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html#CG_Orange_EfCore_Options_OrangeDalOptions_MigrateDatabaseOnStartup
-  commentId: P:CG.Orange.EfCore.Options.OrangeDalOptions.MigrateDatabaseOnStartup
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions.MigrateDatabaseOnStartup
-  nameWithType: OrangeDalOptions.MigrateDatabaseOnStartup
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions.MigrateDatabaseOnStartup*
-  name: MigrateDatabaseOnStartup
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html#CG_Orange_EfCore_Options_OrangeDalOptions_MigrateDatabaseOnStartup_
-  commentId: Overload:CG.Orange.EfCore.Options.OrangeDalOptions.MigrateDatabaseOnStartup
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions.MigrateDatabaseOnStartup
-  nameWithType: OrangeDalOptions.MigrateDatabaseOnStartup
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions.Strategy
-  name: Strategy
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html#CG_Orange_EfCore_Options_OrangeDalOptions_Strategy
-  commentId: P:CG.Orange.EfCore.Options.OrangeDalOptions.Strategy
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions.Strategy
-  nameWithType: OrangeDalOptions.Strategy
-- uid: CG.Orange.EfCore.Options.OrangeDalOptions.Strategy*
-  name: Strategy
-  href: api/CG.Orange.EfCore.Options.OrangeDalOptions.html#CG_Orange_EfCore_Options_OrangeDalOptions_Strategy_
-  commentId: Overload:CG.Orange.EfCore.Options.OrangeDalOptions.Strategy
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Options.OrangeDalOptions.Strategy
-  nameWithType: OrangeDalOptions.Strategy
-- uid: CG.Orange.EfCore.Options.SQLiteOptions
-  name: SQLiteOptions
-  href: api/CG.Orange.EfCore.Options.SQLiteOptions.html
-  commentId: T:CG.Orange.EfCore.Options.SQLiteOptions
-  fullName: CG.Orange.EfCore.Options.SQLiteOptions
-  nameWithType: SQLiteOptions
-- uid: CG.Orange.EfCore.Options.SQLiteOptions.ConnectionString
-  name: ConnectionString
-  href: api/CG.Orange.EfCore.Options.SQLiteOptions.html#CG_Orange_EfCore_Options_SQLiteOptions_ConnectionString
-  commentId: P:CG.Orange.EfCore.Options.SQLiteOptions.ConnectionString
-  fullName: CG.Orange.EfCore.Options.SQLiteOptions.ConnectionString
-  nameWithType: SQLiteOptions.ConnectionString
-- uid: CG.Orange.EfCore.Options.SQLiteOptions.ConnectionString*
-  name: ConnectionString
-  href: api/CG.Orange.EfCore.Options.SQLiteOptions.html#CG_Orange_EfCore_Options_SQLiteOptions_ConnectionString_
-  commentId: Overload:CG.Orange.EfCore.Options.SQLiteOptions.ConnectionString
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Options.SQLiteOptions.ConnectionString
-  nameWithType: SQLiteOptions.ConnectionString
-- uid: CG.Orange.EfCore.Options.SQLServerOptions
-  name: SQLServerOptions
-  href: api/CG.Orange.EfCore.Options.SQLServerOptions.html
-  commentId: T:CG.Orange.EfCore.Options.SQLServerOptions
-  fullName: CG.Orange.EfCore.Options.SQLServerOptions
-  nameWithType: SQLServerOptions
-- uid: CG.Orange.EfCore.Options.SQLServerOptions.ConnectionString
-  name: ConnectionString
-  href: api/CG.Orange.EfCore.Options.SQLServerOptions.html#CG_Orange_EfCore_Options_SQLServerOptions_ConnectionString
-  commentId: P:CG.Orange.EfCore.Options.SQLServerOptions.ConnectionString
-  fullName: CG.Orange.EfCore.Options.SQLServerOptions.ConnectionString
-  nameWithType: SQLServerOptions.ConnectionString
-- uid: CG.Orange.EfCore.Options.SQLServerOptions.ConnectionString*
-  name: ConnectionString
-  href: api/CG.Orange.EfCore.Options.SQLServerOptions.html#CG_Orange_EfCore_Options_SQLServerOptions_ConnectionString_
-  commentId: Overload:CG.Orange.EfCore.Options.SQLServerOptions.ConnectionString
-  isSpec: "True"
-  fullName: CG.Orange.EfCore.Options.SQLServerOptions.ConnectionString
-  nameWithType: SQLServerOptions.ConnectionString
-- uid: CG.Orange.EfCore.OrangeDbContext
+- uid: CG.Orange.Data.OrangeDbContext
   name: OrangeDbContext
-  href: api/CG.Orange.EfCore.OrangeDbContext.html
-  commentId: T:CG.Orange.EfCore.OrangeDbContext
-  fullName: CG.Orange.EfCore.OrangeDbContext
+  href: api/CG.Orange.Data.OrangeDbContext.html
+  commentId: T:CG.Orange.Data.OrangeDbContext
+  fullName: CG.Orange.Data.OrangeDbContext
   nameWithType: OrangeDbContext
-- uid: CG.Orange.EfCore.OrangeDbContext.#ctor(DbContextOptions{CG.Orange.EfCore.OrangeDbContext})
+- uid: CG.Orange.Data.OrangeDbContext.#ctor(DbContextOptions{CG.Orange.Data.OrangeDbContext})
   name: OrangeDbContext(DbContextOptions<OrangeDbContext>)
-  href: api/CG.Orange.EfCore.OrangeDbContext.html#CG_Orange_EfCore_OrangeDbContext__ctor_DbContextOptions_CG_Orange_EfCore_OrangeDbContext__
-  commentId: M:CG.Orange.EfCore.OrangeDbContext.#ctor(DbContextOptions{CG.Orange.EfCore.OrangeDbContext})
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext__ctor_DbContextOptions_CG_Orange_Data_OrangeDbContext__
+  commentId: M:CG.Orange.Data.OrangeDbContext.#ctor(DbContextOptions{CG.Orange.Data.OrangeDbContext})
   name.vb: OrangeDbContext(DbContextOptions(Of OrangeDbContext))
-  fullName: CG.Orange.EfCore.OrangeDbContext.OrangeDbContext(DbContextOptions<CG.Orange.EfCore.OrangeDbContext>)
-  fullName.vb: CG.Orange.EfCore.OrangeDbContext.OrangeDbContext(DbContextOptions(Of CG.Orange.EfCore.OrangeDbContext))
+  fullName: CG.Orange.Data.OrangeDbContext.OrangeDbContext(DbContextOptions<CG.Orange.Data.OrangeDbContext>)
+  fullName.vb: CG.Orange.Data.OrangeDbContext.OrangeDbContext(DbContextOptions(Of CG.Orange.Data.OrangeDbContext))
   nameWithType: OrangeDbContext.OrangeDbContext(DbContextOptions<OrangeDbContext>)
   nameWithType.vb: OrangeDbContext.OrangeDbContext(DbContextOptions(Of OrangeDbContext))
-- uid: CG.Orange.EfCore.OrangeDbContext.#ctor*
+- uid: CG.Orange.Data.OrangeDbContext.#ctor*
   name: OrangeDbContext
-  href: api/CG.Orange.EfCore.OrangeDbContext.html#CG_Orange_EfCore_OrangeDbContext__ctor_
-  commentId: Overload:CG.Orange.EfCore.OrangeDbContext.#ctor
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext__ctor_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.#ctor
   isSpec: "True"
-  fullName: CG.Orange.EfCore.OrangeDbContext.OrangeDbContext
+  fullName: CG.Orange.Data.OrangeDbContext.OrangeDbContext
   nameWithType: OrangeDbContext.OrangeDbContext
-- uid: CG.Orange.EfCore.OrangeDbContext.OnModelCreating(ModelBuilder)
+- uid: CG.Orange.Data.OrangeDbContext.OnModelCreating(ModelBuilder)
   name: OnModelCreating(ModelBuilder)
-  href: api/CG.Orange.EfCore.OrangeDbContext.html#CG_Orange_EfCore_OrangeDbContext_OnModelCreating_ModelBuilder_
-  commentId: M:CG.Orange.EfCore.OrangeDbContext.OnModelCreating(ModelBuilder)
-  fullName: CG.Orange.EfCore.OrangeDbContext.OnModelCreating(ModelBuilder)
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_OnModelCreating_ModelBuilder_
+  commentId: M:CG.Orange.Data.OrangeDbContext.OnModelCreating(ModelBuilder)
+  fullName: CG.Orange.Data.OrangeDbContext.OnModelCreating(ModelBuilder)
   nameWithType: OrangeDbContext.OnModelCreating(ModelBuilder)
-- uid: CG.Orange.EfCore.OrangeDbContext.OnModelCreating*
+- uid: CG.Orange.Data.OrangeDbContext.OnModelCreating*
   name: OnModelCreating
-  href: api/CG.Orange.EfCore.OrangeDbContext.html#CG_Orange_EfCore_OrangeDbContext_OnModelCreating_
-  commentId: Overload:CG.Orange.EfCore.OrangeDbContext.OnModelCreating
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_OnModelCreating_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.OnModelCreating
   isSpec: "True"
-  fullName: CG.Orange.EfCore.OrangeDbContext.OnModelCreating
+  fullName: CG.Orange.Data.OrangeDbContext.OnModelCreating
   nameWithType: OrangeDbContext.OnModelCreating
-- uid: CG.Orange.EfCore.OrangeDbContext.SettingFiles
+- uid: CG.Orange.Data.OrangeDbContext.SettingFiles
   name: SettingFiles
-  href: api/CG.Orange.EfCore.OrangeDbContext.html#CG_Orange_EfCore_OrangeDbContext_SettingFiles
-  commentId: P:CG.Orange.EfCore.OrangeDbContext.SettingFiles
-  fullName: CG.Orange.EfCore.OrangeDbContext.SettingFiles
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_SettingFiles
+  commentId: P:CG.Orange.Data.OrangeDbContext.SettingFiles
+  fullName: CG.Orange.Data.OrangeDbContext.SettingFiles
   nameWithType: OrangeDbContext.SettingFiles
-- uid: CG.Orange.EfCore.OrangeDbContext.SettingFiles*
+- uid: CG.Orange.Data.OrangeDbContext.SettingFiles*
   name: SettingFiles
-  href: api/CG.Orange.EfCore.OrangeDbContext.html#CG_Orange_EfCore_OrangeDbContext_SettingFiles_
-  commentId: Overload:CG.Orange.EfCore.OrangeDbContext.SettingFiles
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_SettingFiles_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.SettingFiles
   isSpec: "True"
-  fullName: CG.Orange.EfCore.OrangeDbContext.SettingFiles
+  fullName: CG.Orange.Data.OrangeDbContext.SettingFiles
   nameWithType: OrangeDbContext.SettingFiles
-- uid: CG.Orange.EfCore.Repositories
-  name: CG.Orange.EfCore.Repositories
-  href: api/CG.Orange.EfCore.Repositories.html
-  commentId: N:CG.Orange.EfCore.Repositories
-  fullName: CG.Orange.EfCore.Repositories
-  nameWithType: CG.Orange.EfCore.Repositories
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository
+- uid: CG.Orange.Data.Repositories
+  name: CG.Orange.Data.Repositories
+  href: api/CG.Orange.Data.Repositories.html
+  commentId: N:CG.Orange.Data.Repositories
+  fullName: CG.Orange.Data.Repositories
+  nameWithType: CG.Orange.Data.Repositories
+- uid: CG.Orange.Data.Repositories.SettingFileRepository
   name: SettingFileRepository
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html
-  commentId: T:CG.Orange.EfCore.Repositories.SettingFileRepository
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html
+  commentId: T:CG.Orange.Data.Repositories.SettingFileRepository
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository
   nameWithType: SettingFileRepository
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.#ctor(IDbContextFactory{CG.Orange.EfCore.OrangeDbContext},IMapper,ILogger{ISettingFileRepository})
-  name: SettingFileRepository(IDbContextFactory<OrangeDbContext>, IMapper, ILogger<ISettingFileRepository>)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository__ctor_IDbContextFactory_CG_Orange_EfCore_OrangeDbContext__IMapper_ILogger_ISettingFileRepository__
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.#ctor(IDbContextFactory{CG.Orange.EfCore.OrangeDbContext},IMapper,ILogger{ISettingFileRepository})
-  name.vb: SettingFileRepository(IDbContextFactory(Of OrangeDbContext), IMapper, ILogger(Of ISettingFileRepository))
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.SettingFileRepository(IDbContextFactory<CG.Orange.EfCore.OrangeDbContext>, IMapper, ILogger<ISettingFileRepository>)
-  fullName.vb: CG.Orange.EfCore.Repositories.SettingFileRepository.SettingFileRepository(IDbContextFactory(Of CG.Orange.EfCore.OrangeDbContext), IMapper, ILogger(Of ISettingFileRepository))
-  nameWithType: SettingFileRepository.SettingFileRepository(IDbContextFactory<OrangeDbContext>, IMapper, ILogger<ISettingFileRepository>)
-  nameWithType.vb: SettingFileRepository.SettingFileRepository(IDbContextFactory(Of OrangeDbContext), IMapper, ILogger(Of ISettingFileRepository))
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.#ctor*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{ISettingFileRepository})
+  name: SettingFileRepository(OrangeDbContext, IMapper, ILogger<ISettingFileRepository>)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository__ctor_CG_Orange_Data_OrangeDbContext_IMapper_ILogger_ISettingFileRepository__
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{ISettingFileRepository})
+  name.vb: SettingFileRepository(OrangeDbContext, IMapper, ILogger(Of ISettingFileRepository))
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.SettingFileRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger<ISettingFileRepository>)
+  fullName.vb: CG.Orange.Data.Repositories.SettingFileRepository.SettingFileRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger(Of ISettingFileRepository))
+  nameWithType: SettingFileRepository.SettingFileRepository(OrangeDbContext, IMapper, ILogger<ISettingFileRepository>)
+  nameWithType.vb: SettingFileRepository.SettingFileRepository(OrangeDbContext, IMapper, ILogger(Of ISettingFileRepository))
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.#ctor*
   name: SettingFileRepository
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository__ctor_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.#ctor
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository__ctor_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.#ctor
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.SettingFileRepository
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.SettingFileRepository
   nameWithType: SettingFileRepository.SettingFileRepository
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository._dbContextFactory
-  name: _dbContextFactory
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository__dbContextFactory
-  commentId: F:CG.Orange.EfCore.Repositories.SettingFileRepository._dbContextFactory
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository._dbContextFactory
-  nameWithType: SettingFileRepository._dbContextFactory
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository._logger
+- uid: CG.Orange.Data.Repositories.SettingFileRepository._dbContext
+  name: _dbContext
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository__dbContext
+  commentId: F:CG.Orange.Data.Repositories.SettingFileRepository._dbContext
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository._dbContext
+  nameWithType: SettingFileRepository._dbContext
+- uid: CG.Orange.Data.Repositories.SettingFileRepository._logger
   name: _logger
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository__logger
-  commentId: F:CG.Orange.EfCore.Repositories.SettingFileRepository._logger
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository._logger
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository__logger
+  commentId: F:CG.Orange.Data.Repositories.SettingFileRepository._logger
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository._logger
   nameWithType: SettingFileRepository._logger
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository._mapper
+- uid: CG.Orange.Data.Repositories.SettingFileRepository._mapper
   name: _mapper
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository__mapper
-  commentId: F:CG.Orange.EfCore.Repositories.SettingFileRepository._mapper
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository._mapper
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository__mapper
+  commentId: F:CG.Orange.Data.Repositories.SettingFileRepository._mapper
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository._mapper
   nameWithType: SettingFileRepository._mapper
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(CancellationToken)
   name: AnyAsync(CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(CancellationToken)
   nameWithType: SettingFileRepository.AnyAsync(CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(System.String,System.String,CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(System.String,System.String,CancellationToken)
   name: AnyAsync(String, String, CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_System_String_System_String_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(System.String,System.String,CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync(System.String, System.String, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync(System.String, System.String, CancellationToken)
   nameWithType: SettingFileRepository.AnyAsync(String, String, CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync*
   name: AnyAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_AnyAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.AnyAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.AnyAsync
   nameWithType: SettingFileRepository.AnyAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.CountAsync(CancellationToken)
   name: CountAsync(CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_CountAsync_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync(CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.CountAsync(CancellationToken)
   nameWithType: SettingFileRepository.CountAsync(CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.CountAsync*
   name: CountAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_CountAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CountAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.CountAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.CountAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.CountAsync
   nameWithType: SettingFileRepository.CountAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)
   name: CreateAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_CreateAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync(SettingFile, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_SettingFile_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile, CancellationToken)
   nameWithType: SettingFileRepository.CreateAsync(SettingFile, CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync*
   name: CreateAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_CreateAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.CreateAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync
   nameWithType: SettingFileRepository.CreateAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
   name: DeleteAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_DeleteAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_SettingFile_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
   nameWithType: SettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync*
   name: DeleteAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_DeleteAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.DeleteAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync
   nameWithType: SettingFileRepository.DeleteAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)
   name: FindAllAsync(CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_FindAllAsync_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync(CancellationToken)
   nameWithType: SettingFileRepository.FindAllAsync(CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync*
   name: FindAllAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_FindAllAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.FindAllAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindAllAsync
   nameWithType: SettingFileRepository.FindAllAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
   name: FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String, System.String, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync(System.String, System.String, CancellationToken)
   nameWithType: SettingFileRepository.FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync*
   name: FindByApplicationAndEnvironmentAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_FindByApplicationAndEnvironmentAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindByApplicationAndEnvironmentAsync
   nameWithType: SettingFileRepository.FindByApplicationAndEnvironmentAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync(System.Int32,CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync(System.Int32,CancellationToken)
   name: FindByIdAsync(Int32, CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_FindByIdAsync_System_Int32_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync(System.Int32,CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync(System.Int32, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync(System.Int32, CancellationToken)
   nameWithType: SettingFileRepository.FindByIdAsync(Int32, CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync*
   name: FindByIdAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_FindByIdAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_FindByIdAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.FindByIdAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync
   nameWithType: SettingFileRepository.FindByIdAsync
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
   name: UpdateAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_UpdateAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_SettingFile_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
   nameWithType: SettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
-- uid: CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync*
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync*
   name: UpdateAsync
-  href: api/CG.Orange.EfCore.Repositories.SettingFileRepository.html#CG_Orange_EfCore_Repositories_SettingFileRepository_UpdateAsync_
-  commentId: Overload:CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync
   isSpec: "True"
-  fullName: CG.Orange.EfCore.Repositories.SettingFileRepository.UpdateAsync
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync
   nameWithType: SettingFileRepository.UpdateAsync
+- uid: CG.Orange.Data.Sqlite
+  name: CG.Orange.Data.Sqlite
+  href: api/CG.Orange.Data.Sqlite.html
+  commentId: N:CG.Orange.Data.Sqlite
+  fullName: CG.Orange.Data.Sqlite
+  nameWithType: CG.Orange.Data.Sqlite
+- uid: CG.Orange.Data.Sqlite.Migrations
+  name: CG.Orange.Data.Sqlite.Migrations
+  href: api/CG.Orange.Data.Sqlite.Migrations.html
+  commentId: N:CG.Orange.Data.Sqlite.Migrations
+  fullName: CG.Orange.Data.Sqlite.Migrations
+  nameWithType: CG.Orange.Data.Sqlite.Migrations
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate
+  name: InitialCreate
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html
+  commentId: T:CG.Orange.Data.Sqlite.Migrations.InitialCreate
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate
+  nameWithType: InitialCreate
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildTargetModel(ModelBuilder)
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html#CG_Orange_Data_Sqlite_Migrations_InitialCreate_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:CG.Orange.Data.Sqlite.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: InitialCreate.BuildTargetModel(ModelBuilder)
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate.BuildTargetModel*
+  name: BuildTargetModel
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html#CG_Orange_Data_Sqlite_Migrations_InitialCreate_BuildTargetModel_
+  commentId: Overload:CG.Orange.Data.Sqlite.Migrations.InitialCreate.BuildTargetModel
+  isSpec: "True"
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate.BuildTargetModel
+  nameWithType: InitialCreate.BuildTargetModel
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Down(MigrationBuilder)
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html#CG_Orange_Data_Sqlite_Migrations_InitialCreate_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:CG.Orange.Data.Sqlite.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: InitialCreate.Down(MigrationBuilder)
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Down*
+  name: Down
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html#CG_Orange_Data_Sqlite_Migrations_InitialCreate_Down_
+  commentId: Overload:CG.Orange.Data.Sqlite.Migrations.InitialCreate.Down
+  isSpec: "True"
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Down
+  nameWithType: InitialCreate.Down
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Up(MigrationBuilder)
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html#CG_Orange_Data_Sqlite_Migrations_InitialCreate_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:CG.Orange.Data.Sqlite.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: InitialCreate.Up(MigrationBuilder)
+- uid: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Up*
+  name: Up
+  href: api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html#CG_Orange_Data_Sqlite_Migrations_InitialCreate_Up_
+  commentId: Overload:CG.Orange.Data.Sqlite.Migrations.InitialCreate.Up
+  isSpec: "True"
+  fullName: CG.Orange.Data.Sqlite.Migrations.InitialCreate.Up
+  nameWithType: InitialCreate.Up
+- uid: CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot
+  name: OrangeDbContextModelSnapshot
+  href: api/CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.html
+  commentId: T:CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot
+  fullName: CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot
+  nameWithType: OrangeDbContextModelSnapshot
+- uid: CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildModel(ModelBuilder)
+  href: api/CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.html#CG_Orange_Data_Sqlite_Migrations_OrangeDbContextModelSnapshot_BuildModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: OrangeDbContextModelSnapshot.BuildModel(ModelBuilder)
+- uid: CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.BuildModel*
+  name: BuildModel
+  href: api/CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.html#CG_Orange_Data_Sqlite_Migrations_OrangeDbContextModelSnapshot_BuildModel_
+  commentId: Overload:CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.BuildModel
+  isSpec: "True"
+  fullName: CG.Orange.Data.Sqlite.Migrations.OrangeDbContextModelSnapshot.BuildModel
+  nameWithType: OrangeDbContextModelSnapshot.BuildModel
+- uid: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory
+  name: OrangeDbContextDesignTimeFactory
+  href: api/CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.html
+  commentId: T:CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory
+  fullName: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory
+  nameWithType: OrangeDbContextDesignTimeFactory
+- uid: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder{CG.Orange.Data.OrangeDbContext},IConfiguration)
+  name: OnConfigureDataContextOptions(DbContextOptionsBuilder<OrangeDbContext>, IConfiguration)
+  href: api/CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.html#CG_Orange_Data_Sqlite_OrangeDbContextDesignTimeFactory_OnConfigureDataContextOptions_DbContextOptionsBuilder_CG_Orange_Data_OrangeDbContext__IConfiguration_
+  commentId: M:CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder{CG.Orange.Data.OrangeDbContext},IConfiguration)
+  name.vb: OnConfigureDataContextOptions(DbContextOptionsBuilder(Of OrangeDbContext), IConfiguration)
+  fullName: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder<CG.Orange.Data.OrangeDbContext>, IConfiguration)
+  fullName.vb: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder(Of CG.Orange.Data.OrangeDbContext), IConfiguration)
+  nameWithType: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder<OrangeDbContext>, IConfiguration)
+  nameWithType.vb: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder(Of OrangeDbContext), IConfiguration)
+- uid: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions*
+  name: OnConfigureDataContextOptions
+  href: api/CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.html#CG_Orange_Data_Sqlite_OrangeDbContextDesignTimeFactory_OnConfigureDataContextOptions_
+  commentId: Overload:CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+  isSpec: "True"
+  fullName: CG.Orange.Data.Sqlite.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+  nameWithType: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+- uid: CG.Orange.Data.SqlServer
+  name: CG.Orange.Data.SqlServer
+  href: api/CG.Orange.Data.SqlServer.html
+  commentId: N:CG.Orange.Data.SqlServer
+  fullName: CG.Orange.Data.SqlServer
+  nameWithType: CG.Orange.Data.SqlServer
+- uid: CG.Orange.Data.SqlServer.InMemory
+  name: CG.Orange.Data.SqlServer.InMemory
+  href: api/CG.Orange.Data.SqlServer.InMemory.html
+  commentId: N:CG.Orange.Data.SqlServer.InMemory
+  fullName: CG.Orange.Data.SqlServer.InMemory
+  nameWithType: CG.Orange.Data.SqlServer.InMemory
+- uid: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory
+  name: OrangeDbContextDesignTimeFactory
+  href: api/CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.html
+  commentId: T:CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory
+  fullName: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory
+  nameWithType: OrangeDbContextDesignTimeFactory
+- uid: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder{CG.Orange.Data.OrangeDbContext},IConfiguration)
+  name: OnConfigureDataContextOptions(DbContextOptionsBuilder<OrangeDbContext>, IConfiguration)
+  href: api/CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.html#CG_Orange_Data_SqlServer_InMemory_OrangeDbContextDesignTimeFactory_OnConfigureDataContextOptions_DbContextOptionsBuilder_CG_Orange_Data_OrangeDbContext__IConfiguration_
+  commentId: M:CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder{CG.Orange.Data.OrangeDbContext},IConfiguration)
+  name.vb: OnConfigureDataContextOptions(DbContextOptionsBuilder(Of OrangeDbContext), IConfiguration)
+  fullName: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder<CG.Orange.Data.OrangeDbContext>, IConfiguration)
+  fullName.vb: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder(Of CG.Orange.Data.OrangeDbContext), IConfiguration)
+  nameWithType: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder<OrangeDbContext>, IConfiguration)
+  nameWithType.vb: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder(Of OrangeDbContext), IConfiguration)
+- uid: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions*
+  name: OnConfigureDataContextOptions
+  href: api/CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.html#CG_Orange_Data_SqlServer_InMemory_OrangeDbContextDesignTimeFactory_OnConfigureDataContextOptions_
+  commentId: Overload:CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+  isSpec: "True"
+  fullName: CG.Orange.Data.SqlServer.InMemory.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+  nameWithType: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+- uid: CG.Orange.Data.SqlServer.Migrations
+  name: CG.Orange.Data.SqlServer.Migrations
+  href: api/CG.Orange.Data.SqlServer.Migrations.html
+  commentId: N:CG.Orange.Data.SqlServer.Migrations
+  fullName: CG.Orange.Data.SqlServer.Migrations
+  nameWithType: CG.Orange.Data.SqlServer.Migrations
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate
+  name: InitialCreate
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html
+  commentId: T:CG.Orange.Data.SqlServer.Migrations.InitialCreate
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate
+  nameWithType: InitialCreate
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildTargetModel(ModelBuilder)
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html#CG_Orange_Data_SqlServer_Migrations_InitialCreate_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:CG.Orange.Data.SqlServer.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: InitialCreate.BuildTargetModel(ModelBuilder)
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate.BuildTargetModel*
+  name: BuildTargetModel
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html#CG_Orange_Data_SqlServer_Migrations_InitialCreate_BuildTargetModel_
+  commentId: Overload:CG.Orange.Data.SqlServer.Migrations.InitialCreate.BuildTargetModel
+  isSpec: "True"
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate.BuildTargetModel
+  nameWithType: InitialCreate.BuildTargetModel
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Down(MigrationBuilder)
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html#CG_Orange_Data_SqlServer_Migrations_InitialCreate_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:CG.Orange.Data.SqlServer.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: InitialCreate.Down(MigrationBuilder)
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Down*
+  name: Down
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html#CG_Orange_Data_SqlServer_Migrations_InitialCreate_Down_
+  commentId: Overload:CG.Orange.Data.SqlServer.Migrations.InitialCreate.Down
+  isSpec: "True"
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Down
+  nameWithType: InitialCreate.Down
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Up(MigrationBuilder)
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html#CG_Orange_Data_SqlServer_Migrations_InitialCreate_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:CG.Orange.Data.SqlServer.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: InitialCreate.Up(MigrationBuilder)
+- uid: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Up*
+  name: Up
+  href: api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html#CG_Orange_Data_SqlServer_Migrations_InitialCreate_Up_
+  commentId: Overload:CG.Orange.Data.SqlServer.Migrations.InitialCreate.Up
+  isSpec: "True"
+  fullName: CG.Orange.Data.SqlServer.Migrations.InitialCreate.Up
+  nameWithType: InitialCreate.Up
+- uid: CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot
+  name: OrangeDbContextModelSnapshot
+  href: api/CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.html
+  commentId: T:CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot
+  fullName: CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot
+  nameWithType: OrangeDbContextModelSnapshot
+- uid: CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildModel(ModelBuilder)
+  href: api/CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.html#CG_Orange_Data_SqlServer_Migrations_OrangeDbContextModelSnapshot_BuildModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: OrangeDbContextModelSnapshot.BuildModel(ModelBuilder)
+- uid: CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.BuildModel*
+  name: BuildModel
+  href: api/CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.html#CG_Orange_Data_SqlServer_Migrations_OrangeDbContextModelSnapshot_BuildModel_
+  commentId: Overload:CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.BuildModel
+  isSpec: "True"
+  fullName: CG.Orange.Data.SqlServer.Migrations.OrangeDbContextModelSnapshot.BuildModel
+  nameWithType: OrangeDbContextModelSnapshot.BuildModel
+- uid: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory
+  name: OrangeDbContextDesignTimeFactory
+  href: api/CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.html
+  commentId: T:CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory
+  fullName: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory
+  nameWithType: OrangeDbContextDesignTimeFactory
+- uid: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder{CG.Orange.Data.OrangeDbContext},IConfiguration)
+  name: OnConfigureDataContextOptions(DbContextOptionsBuilder<OrangeDbContext>, IConfiguration)
+  href: api/CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.html#CG_Orange_Data_SqlServer_OrangeDbContextDesignTimeFactory_OnConfigureDataContextOptions_DbContextOptionsBuilder_CG_Orange_Data_OrangeDbContext__IConfiguration_
+  commentId: M:CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder{CG.Orange.Data.OrangeDbContext},IConfiguration)
+  name.vb: OnConfigureDataContextOptions(DbContextOptionsBuilder(Of OrangeDbContext), IConfiguration)
+  fullName: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder<CG.Orange.Data.OrangeDbContext>, IConfiguration)
+  fullName.vb: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder(Of CG.Orange.Data.OrangeDbContext), IConfiguration)
+  nameWithType: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder<OrangeDbContext>, IConfiguration)
+  nameWithType.vb: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions(DbContextOptionsBuilder(Of OrangeDbContext), IConfiguration)
+- uid: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions*
+  name: OnConfigureDataContextOptions
+  href: api/CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.html#CG_Orange_Data_SqlServer_OrangeDbContextDesignTimeFactory_OnConfigureDataContextOptions_
+  commentId: Overload:CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+  isSpec: "True"
+  fullName: CG.Orange.Data.SqlServer.OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+  nameWithType: OrangeDbContextDesignTimeFactory.OnConfigureDataContextOptions
+- uid: CG.Orange.Directors
+  name: CG.Orange.Directors
+  href: api/CG.Orange.Directors.html
+  commentId: N:CG.Orange.Directors
+  fullName: CG.Orange.Directors
+  nameWithType: CG.Orange.Directors
+- uid: CG.Orange.Directors.DirectorException
+  name: DirectorException
+  href: api/CG.Orange.Directors.DirectorException.html
+  commentId: T:CG.Orange.Directors.DirectorException
+  fullName: CG.Orange.Directors.DirectorException
+  nameWithType: DirectorException
+- uid: CG.Orange.Directors.DirectorException.#ctor
+  name: DirectorException()
+  href: api/CG.Orange.Directors.DirectorException.html#CG_Orange_Directors_DirectorException__ctor
+  commentId: M:CG.Orange.Directors.DirectorException.#ctor
+  fullName: CG.Orange.Directors.DirectorException.DirectorException()
+  nameWithType: DirectorException.DirectorException()
+- uid: CG.Orange.Directors.DirectorException.#ctor(SerializationInfo,StreamingContext)
+  name: DirectorException(SerializationInfo, StreamingContext)
+  href: api/CG.Orange.Directors.DirectorException.html#CG_Orange_Directors_DirectorException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:CG.Orange.Directors.DirectorException.#ctor(SerializationInfo,StreamingContext)
+  fullName: CG.Orange.Directors.DirectorException.DirectorException(SerializationInfo, StreamingContext)
+  nameWithType: DirectorException.DirectorException(SerializationInfo, StreamingContext)
+- uid: CG.Orange.Directors.DirectorException.#ctor(System.String)
+  name: DirectorException(String)
+  href: api/CG.Orange.Directors.DirectorException.html#CG_Orange_Directors_DirectorException__ctor_System_String_
+  commentId: M:CG.Orange.Directors.DirectorException.#ctor(System.String)
+  fullName: CG.Orange.Directors.DirectorException.DirectorException(System.String)
+  nameWithType: DirectorException.DirectorException(String)
+- uid: CG.Orange.Directors.DirectorException.#ctor(System.String,Exception)
+  name: DirectorException(String, Exception)
+  href: api/CG.Orange.Directors.DirectorException.html#CG_Orange_Directors_DirectorException__ctor_System_String_Exception_
+  commentId: M:CG.Orange.Directors.DirectorException.#ctor(System.String,Exception)
+  fullName: CG.Orange.Directors.DirectorException.DirectorException(System.String, Exception)
+  nameWithType: DirectorException.DirectorException(String, Exception)
+- uid: CG.Orange.Directors.DirectorException.#ctor*
+  name: DirectorException
+  href: api/CG.Orange.Directors.DirectorException.html#CG_Orange_Directors_DirectorException__ctor_
+  commentId: Overload:CG.Orange.Directors.DirectorException.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.DirectorException.DirectorException
+  nameWithType: DirectorException.DirectorException
+- uid: CG.Orange.Directors.ISeedDirector
+  name: ISeedDirector
+  href: api/CG.Orange.Directors.ISeedDirector.html
+  commentId: T:CG.Orange.Directors.ISeedDirector
+  fullName: CG.Orange.Directors.ISeedDirector
+  nameWithType: ISeedDirector
+- uid: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IConfiguration,System.String,System.Boolean,CancellationToken)
+  name: SeedSettingFilesAsync(IConfiguration, String, Boolean, CancellationToken)
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_IConfiguration_System_String_System_Boolean_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IConfiguration,System.String,System.Boolean,CancellationToken)
+  fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IConfiguration, System.String, System.Boolean, CancellationToken)
+  nameWithType: ISeedDirector.SeedSettingFilesAsync(IConfiguration, String, Boolean, CancellationToken)
+- uid: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync*
+  name: SeedSettingFilesAsync
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_
+  commentId: Overload:CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync
+  nameWithType: ISeedDirector.SeedSettingFilesAsync
+- uid: CG.Orange.Directors.SeedDirector
+  name: SeedDirector
+  href: api/CG.Orange.Directors.SeedDirector.html
+  commentId: T:CG.Orange.Directors.SeedDirector
+  fullName: CG.Orange.Directors.SeedDirector
+  nameWithType: SeedDirector
+- uid: CG.Orange.Directors.SeedDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name: SeedDirector(ISettingFileManager, ILogger<SeedDirector>)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_ISettingFileManager_ILogger_CG_Orange_Directors_SeedDirector__
+  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name.vb: SeedDirector(ISettingFileManager, ILogger(Of SeedDirector))
+  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(ISettingFileManager, ILogger<CG.Orange.Directors.SeedDirector>)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(ISettingFileManager, ILogger(Of CG.Orange.Directors.SeedDirector))
+  nameWithType: SeedDirector.SeedDirector(ISettingFileManager, ILogger<SeedDirector>)
+  nameWithType.vb: SeedDirector.SeedDirector(ISettingFileManager, ILogger(Of SeedDirector))
+- uid: CG.Orange.Directors.SeedDirector.#ctor*
+  name: SeedDirector
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SeedDirector.SeedDirector
+  nameWithType: SeedDirector.SeedDirector
+- uid: CG.Orange.Directors.SeedDirector._settingFileManager
+  name: _settingFileManager
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__settingFileManager
+  commentId: F:CG.Orange.Directors.SeedDirector._settingFileManager
+  fullName: CG.Orange.Directors.SeedDirector._settingFileManager
+  nameWithType: SeedDirector._settingFileManager
+- uid: CG.Orange.Directors.SeedDirector.SeedFromConfiguration(System.String,IConfiguration,System.Boolean,System.String,CancellationToken)
+  name: SeedFromConfiguration(String, IConfiguration, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedFromConfiguration_System_String_IConfiguration_System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedFromConfiguration(System.String,IConfiguration,System.Boolean,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedFromConfiguration(System.String, IConfiguration, System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedFromConfiguration(String, IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedFromConfiguration*
+  name: SeedFromConfiguration
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedFromConfiguration_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedFromConfiguration
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SeedDirector.SeedFromConfiguration
+  nameWithType: SeedDirector.SeedFromConfiguration
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFiles(IConfiguration,System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFiles(IConfiguration, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFiles_IConfiguration_System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFiles(IConfiguration,System.Boolean,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFiles(IConfiguration, System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedSettingFiles(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFiles*
+  name: SeedSettingFiles
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFiles_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedSettingFiles
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFiles
+  nameWithType: SeedDirector.SeedSettingFiles
 - uid: CG.Orange.GlobalUsings
   name: GlobalUsings
   href: api/CG.Orange.GlobalUsings.html
@@ -1754,6 +1916,25 @@ references:
   commentId: T:CG.Orange.Options.OrangeBllOptions
   fullName: CG.Orange.Options.OrangeBllOptions
   nameWithType: OrangeBllOptions
+- uid: CG.Orange.Options.SeedingOptions
+  name: SeedingOptions
+  href: api/CG.Orange.Options.SeedingOptions.html
+  commentId: T:CG.Orange.Options.SeedingOptions
+  fullName: CG.Orange.Options.SeedingOptions
+  nameWithType: SeedingOptions
+- uid: CG.Orange.Options.SeedingOptions.SettingFiles
+  name: SettingFiles
+  href: api/CG.Orange.Options.SeedingOptions.html#CG_Orange_Options_SeedingOptions_SettingFiles
+  commentId: P:CG.Orange.Options.SeedingOptions.SettingFiles
+  fullName: CG.Orange.Options.SeedingOptions.SettingFiles
+  nameWithType: SeedingOptions.SettingFiles
+- uid: CG.Orange.Options.SeedingOptions.SettingFiles*
+  name: SettingFiles
+  href: api/CG.Orange.Options.SeedingOptions.html#CG_Orange_Options_SeedingOptions_SettingFiles_
+  commentId: Overload:CG.Orange.Options.SeedingOptions.SettingFiles
+  isSpec: "True"
+  fullName: CG.Orange.Options.SeedingOptions.SettingFiles
+  nameWithType: SeedingOptions.SettingFiles
 - uid: CG.Orange.Repositories
   name: CG.Orange.Repositories
   href: api/CG.Orange.Repositories.html
@@ -1913,34 +2094,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.RepositoryException.RepositoryException
   nameWithType: RepositoryException.RepositoryException
-- uid: CG.Orange.SqlServer.Factories
-  name: CG.Orange.SqlServer.Factories
-  href: api/CG.Orange.SqlServer.Factories.html
-  commentId: N:CG.Orange.SqlServer.Factories
-  fullName: CG.Orange.SqlServer.Factories
-  nameWithType: CG.Orange.SqlServer.Factories
-- uid: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory
-  name: OrangeDbContextDesignTimeFactory
-  href: api/CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.html
-  commentId: T:CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory
-  fullName: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory
-  nameWithType: OrangeDbContextDesignTimeFactory
-- uid: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext(System.String[])
-  name: CreateDbContext(String[])
-  href: api/CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.html#CG_Orange_SqlServer_Factories_OrangeDbContextDesignTimeFactory_CreateDbContext_System_String___
-  commentId: M:CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext(System.String[])
-  name.vb: CreateDbContext(String())
-  fullName: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext(System.String[])
-  fullName.vb: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext(System.String())
-  nameWithType: OrangeDbContextDesignTimeFactory.CreateDbContext(String[])
-  nameWithType.vb: OrangeDbContextDesignTimeFactory.CreateDbContext(String())
-- uid: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext*
-  name: CreateDbContext
-  href: api/CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.html#CG_Orange_SqlServer_Factories_OrangeDbContextDesignTimeFactory_CreateDbContext_
-  commentId: Overload:CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext
-  isSpec: "True"
-  fullName: CG.Orange.SqlServer.Factories.OrangeDbContextDesignTimeFactory.CreateDbContext
-  nameWithType: OrangeDbContextDesignTimeFactory.CreateDbContext
 - uid: Microsoft.AspNetCore.Builder
   name: Microsoft.AspNetCore.Builder
   href: api/Microsoft.AspNetCore.Builder.html
@@ -1953,127 +2106,82 @@ references:
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions
   fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions
   nameWithType: WebApplicationBuilderExtensions
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddOrangeIdentity(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions_AddOrangeIdentity_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddOrangeIdentity(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions.AddOrangeIdentity(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions.AddOrangeIdentity(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity*
-  name: AddOrangeIdentity
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions_AddOrangeIdentity_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions_AddInMemoryDataAccess_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions.AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions.AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess*
+  name: AddInMemoryDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions_AddInMemoryDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddOrangeIdentity
-  nameWithType: WebApplicationBuilderExtensions.AddOrangeIdentity
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess
+  nameWithType: WebApplicationBuilderExtensions.AddInMemoryDataAccess
 - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001
   name: WebApplicationBuilderExtensions001
   href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001
   fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001
   nameWithType: WebApplicationBuilderExtensions001
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddBusinessLayer(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddBusinessLayer_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddBusinessLayer(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions001.AddBusinessLayer(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions001.AddBusinessLayer(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer*
-  name: AddBusinessLayer
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddBusinessLayer_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddManagers(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddManagers_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddManagers(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions001.AddManagers(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions001.AddManagers(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers*
+  name: AddManagers
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddManagers_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddBusinessLayer
-  nameWithType: WebApplicationBuilderExtensions001.AddBusinessLayer
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers
+  nameWithType: WebApplicationBuilderExtensions001.AddManagers
 - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003
   name: WebApplicationBuilderExtensions003
   href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003
   fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003
   nameWithType: WebApplicationBuilderExtensions003
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddDataAccessLayer(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddDataAccessLayer_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddDataAccessLayer(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions003.AddDataAccessLayer(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions003.AddDataAccessLayer(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer*
-  name: AddDataAccessLayer
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddDataAccessLayer_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddRepositories(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddRepositories_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddRepositories(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions003.AddRepositories(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions003.AddRepositories(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories*
+  name: AddRepositories
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddRepositories_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddDataAccessLayer
-  nameWithType: WebApplicationBuilderExtensions003.AddDataAccessLayer
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories
+  nameWithType: WebApplicationBuilderExtensions003.AddRepositories
 - uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions
   name: WebApplicationExtensions
   href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions
   fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions
   nameWithType: WebApplicationExtensions
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplication)
-  name: UseOrangeIdentity(WebApplication)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions_UseOrangeIdentity_Microsoft_AspNetCore_Builder_WebApplication_
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplication)
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplication)
-  nameWithType: WebApplicationExtensions.UseOrangeIdentity(WebApplication)
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseOrangeIdentity*
-  name: UseOrangeIdentity
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions_UseOrangeIdentity_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseOrangeIdentity
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  name: UseInMemoryDataAccess(WebApplication)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions_UseInMemoryDataAccess_Microsoft_AspNetCore_Builder_WebApplication_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  nameWithType: WebApplicationExtensions.UseInMemoryDataAccess(WebApplication)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess*
+  name: UseInMemoryDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions_UseInMemoryDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseOrangeIdentity
-  nameWithType: WebApplicationExtensions.UseOrangeIdentity
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002
-  name: WebApplicationExtensions002
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html
-  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions002
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002
-  nameWithType: WebApplicationExtensions002
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
-  name: DropAndRecreateDatabaseAsync(WebApplication, CancellationToken)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_DropAndRecreateDatabaseAsync_Microsoft_AspNetCore_Builder_WebApplication_CancellationToken_
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication, CancellationToken)
-  nameWithType: WebApplicationExtensions002.DropAndRecreateDatabaseAsync(WebApplication, CancellationToken)
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync*
-  name: DropAndRecreateDatabaseAsync
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_DropAndRecreateDatabaseAsync_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync
-  isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync
-  nameWithType: WebApplicationExtensions002.DropAndRecreateDatabaseAsync
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
-  name: MigrateDatabaseAsync(WebApplication, CancellationToken)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_MigrateDatabaseAsync_Microsoft_AspNetCore_Builder_WebApplication_CancellationToken_
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication, CancellationToken)
-  nameWithType: WebApplicationExtensions002.MigrateDatabaseAsync(WebApplication, CancellationToken)
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync*
-  name: MigrateDatabaseAsync
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_MigrateDatabaseAsync_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync
-  isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync
-  nameWithType: WebApplicationExtensions002.MigrateDatabaseAsync
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseDalStartup(Microsoft.AspNetCore.Builder.WebApplication)
-  name: UseDalStartup(WebApplication)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_UseDalStartup_Microsoft_AspNetCore_Builder_WebApplication_
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseDalStartup(Microsoft.AspNetCore.Builder.WebApplication)
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseDalStartup(Microsoft.AspNetCore.Builder.WebApplication)
-  nameWithType: WebApplicationExtensions002.UseDalStartup(WebApplication)
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseDalStartup*
-  name: UseDalStartup
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_UseDalStartup_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseDalStartup
-  isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseDalStartup
-  nameWithType: WebApplicationExtensions002.UseDalStartup
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess
+  nameWithType: WebApplicationExtensions.UseInMemoryDataAccess
