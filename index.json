@@ -129,11 +129,6 @@
     "title": "Class SeedDirector",
     "keywords": "Class SeedDirector This class is a default implementation of the ISeedDirector interface. Inheritance System.Object SeedDirector Namespace : CG.Orange.Directors Assembly : CG.Orange.dll Syntax public class SeedDirector : SeedDirectorBase<SeedDirector> Constructors SeedDirector(ISettingFileManager, ILogger<SeedDirector>) This constructor creates a new instance of the SeedDirector class. Declaration public SeedDirector(ISettingFileManager settingFileManager, ILogger<SeedDirector> logger) Parameters Type Name Description ISettingFileManager settingFileManager The setting file manager to use with this director. ILogger < SeedDirector > logger The logger to use with this director. Fields _settingFileManager This field contains the setting file manager for this director. Declaration protected readonly ISettingFileManager _settingFileManager Field Value Type Description ISettingFileManager Methods SeedFromConfiguration(String, IConfiguration, Boolean, String, CancellationToken) Declaration protected override async Task SeedFromConfiguration(string objectName, IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null) Parameters Type Name Description System.String objectName IConfiguration dataSection System.Boolean force System.String userName CancellationToken cancellationToken Returns Type Description Task SeedSettingFiles(IConfiguration, Boolean, String, CancellationToken) This method performs a seeding operation for objects. Declaration async Task SeedSettingFiles(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null) Parameters Type Name Description IConfiguration dataSection The data to use for the operation. System.Boolean force true to force the seeding operation when data already exists in the associated table(s), false to stop the operation whenever data is detected in the associated table(s). System.String userName The user name of the person performing the operation. CancellationToken cancellationToken A cancellation token that is monitored for the lifetime of the method. Returns Type Description Task A task to perform the operation."
   },
-  "api/CG.Orange.GlobalUsings.html": {
-    "href": "api/CG.Orange.GlobalUsings.html",
-    "title": "Class GlobalUsings",
-    "keywords": "Class GlobalUsings Inheritance System.Object GlobalUsings Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange Assembly : CG.Orange.Providers.Azure.dll Syntax class GlobalUsings"
-  },
   "api/CG.Orange.Host.Controllers.html": {
     "href": "api/CG.Orange.Host.Controllers.html",
     "title": "Namespace CG.Orange.Host.Controllers",
@@ -229,11 +224,6 @@
     "title": "Class SettingsRequestVM",
     "keywords": "Class SettingsRequestVM This class represents a request for configuration settings from a client provider. Inheritance System.Object SettingsRequestVM Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Host.ViewModels Assembly : CG.Orange.Controllers.dll Syntax public class SettingsRequestVM Properties Application This property contains the application for the settings. Declaration public string Application { get; set; } Property Value Type Description System.String Environment This property contains the optional environment for the settings. Declaration public string Environment { get; set; } Property Value Type Description System.String"
   },
-  "api/CG.Orange.html": {
-    "href": "api/CG.Orange.html",
-    "title": "Namespace CG.Orange",
-    "keywords": "Namespace CG.Orange Classes GlobalUsings"
-  },
   "api/CG.Orange.Managers.html": {
     "href": "api/CG.Orange.Managers.html",
     "title": "Namespace CG.Orange.Managers",
@@ -288,6 +278,16 @@
     "href": "api/CG.Orange.Options.SeedingOptions.html",
     "title": "Class SeedingOptions",
     "keywords": "Class SeedingOptions This class contains configuration settings related to data seeding. Inheritance System.Object SeedingOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Options Assembly : CG.Orange.dll Syntax class SeedingOptions Properties SettingFiles This property contains a list of objects to seed. Declaration public List<SettingFileModel> SettingFiles { get; set; } Property Value Type Description List < SettingFileModel >"
+  },
+  "api/CG.Orange.Plugins.Azure.html": {
+    "href": "api/CG.Orange.Plugins.Azure.html",
+    "title": "Namespace CG.Orange.Plugins.Azure",
+    "keywords": "Namespace CG.Orange.Plugins.Azure Classes Module This class represents the plugin module's startup logic."
+  },
+  "api/CG.Orange.Plugins.Azure.Module.html": {
+    "href": "api/CG.Orange.Plugins.Azure.Module.html",
+    "title": "Class Module",
+    "keywords": "Class Module This class represents the plugin module's startup logic. Inheritance System.Object Module Namespace : CG.Orange.Plugins.Azure Assembly : CG.Orange.Plugins.Azure.dll Syntax public class Module : ModuleBase Methods Configure(WebApplication) Declaration public override void Configure(WebApplication webApplication) Parameters Type Name Description WebApplication webApplication ConfigureServices(WebApplicationBuilder, IConfiguration, Nullable<ILogger>) Declaration public override void ConfigureServices(WebApplicationBuilder webApplicationBuilder, IConfiguration configuration, ILogger? bootstrapLogger) Parameters Type Name Description WebApplicationBuilder webApplicationBuilder IConfiguration configuration System.Nullable < ILogger > bootstrapLogger"
   },
   "api/CG.Orange.Repositories.html": {
     "href": "api/CG.Orange.Repositories.html",

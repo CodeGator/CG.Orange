@@ -1,12 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: CG.Orange
-  name: CG.Orange
-  href: api/CG.Orange.html
-  commentId: N:CG.Orange
-  fullName: CG.Orange
-  nameWithType: CG.Orange
 - uid: CG.Orange.Data
   name: CG.Orange.Data
   href: api/CG.Orange.Data.html
@@ -811,12 +805,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedSettingFiles
   nameWithType: SeedDirector.SeedSettingFiles
-- uid: CG.Orange.GlobalUsings
-  name: GlobalUsings
-  href: api/CG.Orange.GlobalUsings.html
-  commentId: T:CG.Orange.GlobalUsings
-  fullName: CG.Orange.GlobalUsings
-  nameWithType: GlobalUsings
 - uid: CG.Orange.Host.Controllers
   name: CG.Orange.Host.Controllers
   href: api/CG.Orange.Host.Controllers.html
@@ -1987,6 +1975,47 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Options.SeedingOptions.SettingFiles
   nameWithType: SeedingOptions.SettingFiles
+- uid: CG.Orange.Plugins.Azure
+  name: CG.Orange.Plugins.Azure
+  href: api/CG.Orange.Plugins.Azure.html
+  commentId: N:CG.Orange.Plugins.Azure
+  fullName: CG.Orange.Plugins.Azure
+  nameWithType: CG.Orange.Plugins.Azure
+- uid: CG.Orange.Plugins.Azure.Module
+  name: Module
+  href: api/CG.Orange.Plugins.Azure.Module.html
+  commentId: T:CG.Orange.Plugins.Azure.Module
+  fullName: CG.Orange.Plugins.Azure.Module
+  nameWithType: Module
+- uid: CG.Orange.Plugins.Azure.Module.Configure(WebApplication)
+  name: Configure(WebApplication)
+  href: api/CG.Orange.Plugins.Azure.Module.html#CG_Orange_Plugins_Azure_Module_Configure_WebApplication_
+  commentId: M:CG.Orange.Plugins.Azure.Module.Configure(WebApplication)
+  fullName: CG.Orange.Plugins.Azure.Module.Configure(WebApplication)
+  nameWithType: Module.Configure(WebApplication)
+- uid: CG.Orange.Plugins.Azure.Module.Configure*
+  name: Configure
+  href: api/CG.Orange.Plugins.Azure.Module.html#CG_Orange_Plugins_Azure_Module_Configure_
+  commentId: Overload:CG.Orange.Plugins.Azure.Module.Configure
+  isSpec: "True"
+  fullName: CG.Orange.Plugins.Azure.Module.Configure
+  nameWithType: Module.Configure
+- uid: CG.Orange.Plugins.Azure.Module.ConfigureServices(WebApplicationBuilder,IConfiguration,System.Nullable{ILogger})
+  name: ConfigureServices(WebApplicationBuilder, IConfiguration, Nullable<ILogger>)
+  href: api/CG.Orange.Plugins.Azure.Module.html#CG_Orange_Plugins_Azure_Module_ConfigureServices_WebApplicationBuilder_IConfiguration_System_Nullable_ILogger__
+  commentId: M:CG.Orange.Plugins.Azure.Module.ConfigureServices(WebApplicationBuilder,IConfiguration,System.Nullable{ILogger})
+  name.vb: ConfigureServices(WebApplicationBuilder, IConfiguration, Nullable(Of ILogger))
+  fullName: CG.Orange.Plugins.Azure.Module.ConfigureServices(WebApplicationBuilder, IConfiguration, System.Nullable<ILogger>)
+  fullName.vb: CG.Orange.Plugins.Azure.Module.ConfigureServices(WebApplicationBuilder, IConfiguration, System.Nullable(Of ILogger))
+  nameWithType: Module.ConfigureServices(WebApplicationBuilder, IConfiguration, Nullable<ILogger>)
+  nameWithType.vb: Module.ConfigureServices(WebApplicationBuilder, IConfiguration, Nullable(Of ILogger))
+- uid: CG.Orange.Plugins.Azure.Module.ConfigureServices*
+  name: ConfigureServices
+  href: api/CG.Orange.Plugins.Azure.Module.html#CG_Orange_Plugins_Azure_Module_ConfigureServices_
+  commentId: Overload:CG.Orange.Plugins.Azure.Module.ConfigureServices
+  isSpec: "True"
+  fullName: CG.Orange.Plugins.Azure.Module.ConfigureServices
+  nameWithType: Module.ConfigureServices
 - uid: CG.Orange.Repositories
   name: CG.Orange.Repositories
   href: api/CG.Orange.Repositories.html
