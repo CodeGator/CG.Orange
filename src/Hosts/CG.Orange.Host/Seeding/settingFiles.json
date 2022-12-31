@@ -3,17 +3,17 @@
     {
       "ApplicationName": "test1",
       "EnvironmentName": "",
-      "Json": "{ \"Test\":\"Value 1\"}"
+      "Json": "{ \"Test 1\":\"##Azure:Daily##\"}"
     },
     {
       "ApplicationName": "test1",
       "EnvironmentName": "development",
-      "Json": "{ \"Test\":\"Value 2\"}"
+      "Json": "{ \"Test 1\":\"##Azure:Hourly##\"}"
     },
     {
       "ApplicationName": "test2",
       "EnvironmentName": "",
-      "Json": "{ \"Test\":\"Value 3\"}"
+      "Json": "{ \"Test 1\":\"##Azure:None##\"}"
     }
   ]
 }

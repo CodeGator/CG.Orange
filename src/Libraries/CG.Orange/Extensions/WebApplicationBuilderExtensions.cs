@@ -14,8 +14,8 @@ public static class WebApplicationBuilderExtensions001
     #region Public methods
 
     /// <summary>
-    /// This method adds managers and related services, for the <see cref="CG.Orange"/>
-    /// business logic layer.
+    /// This method adds managers, directors, and related services, for 
+    /// the <see cref="CG.Orange"/> business logic layer.
     /// </summary>
     /// <param name="webApplicationBuilder">The web application builder to
     /// use for the operation.</param>
@@ -43,7 +43,15 @@ public static class WebApplicationBuilderExtensions001
 
         // Add the managers.
         webApplicationBuilder.Services.AddScoped<ISettingFileManager, SettingFileManager>();
-                
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Wiring up the directors"
+            );
+
+        // Add the directors.
+        webApplicationBuilder.Services.AddScoped<IConfigurationDirector, ConfigurationDirector>();
+
         // Return the application builder.
         return webApplicationBuilder;
     }

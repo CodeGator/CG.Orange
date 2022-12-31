@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Directors;
+
 namespace CG.Orange.Host.Controllers;
 
 /// <summary>
@@ -16,9 +18,14 @@ public class SettingsController : ControllerBase
     #region Fields
 
     /// <summary>
-    /// This field contains the logger for the controller.
+    /// This field contains the configuration director for this controller.
     /// </summary>
-    private readonly ILogger<SettingsController> _logger = null!;
+    internal protected readonly IConfigurationDirector _configurationDirector = null!;
+
+    /// <summary>
+    /// This field contains the logger for this controller.
+    /// </summary>
+    internal protected readonly ILogger<SettingsController> _logger = null!;
 
     #endregion
 
@@ -31,15 +38,20 @@ public class SettingsController : ControllerBase
     /// <summary>
     /// This constructor creates a new instance of the <see cref="SettingsController"/>
     /// </summary>
+    /// <param name="configurationDirector">The configuration director to
+    /// use with this controller.</param>
     /// <param name="logger">The logger to use with this controller.</param>
     public SettingsController(
+        IConfigurationDirector configurationDirector,
         ILogger<SettingsController> logger
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(logger, nameof(logger));
+        Guard.Instance().ThrowIfNull(configurationDirector, nameof(configurationDirector))
+            .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s).
+        _configurationDirector = configurationDirector;
         _logger = logger;
     }
 
@@ -70,22 +82,33 @@ public class SettingsController : ControllerBase
     {
         try
         {
-            // TODO : write the code for this.
+            // Sanity check the model state.
+            if (!ModelState.IsValid) 
+            {
+                return BadRequest(); // Nope!
+            }
 
-            return Ok();
+            // Read the complete configuration (with secrets).
+            var result = await _configurationDirector.ReadConfigurationAsync(
+                model.Application,
+                model.Environment
+                ).ConfigureAwait(false);
+
+            // Return the results.
+            return Ok(result);
         }
         catch (Exception ex)
         {
             // Log the error in detail.
             _logger.LogError(
                 ex,
-                "Failed to render settings as key-value-pairs!"
+                "Failed to render a configuration!"
                 );
 
             // Return an overview of the problem.
             return Problem(
                 statusCode: StatusCodes.Status500InternalServerError,
-                detail: "The controller failed to render settings as key-value-pairs!"
+                detail: "The controller failed to render a configuration!"
                 );
         }
     }
