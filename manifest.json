@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Entities.AuditedEntityBase.html",
-          "hash": "QzdGHNumPlfPjOlh4+x6Vyyk+KHTQVHI0ffHPLHmtWw="
+          "hash": "KHSOAuBkIKCPBbskNihbz817ieY1xlFhNGuUhRSci7Y="
         }
       },
       "is_incremental": false,
@@ -26,11 +26,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Data.Entities.SettingFile.yml",
+      "source_relative_path": "api/CG.Orange.Data.Entities.SettingFileEntity.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Data.Entities.SettingFile.html",
-          "hash": "Cky+RBz5Lxk5SiRqSfG30y9jhvz7GJryR/VWxAK5nOs="
+          "relative_path": "api/CG.Orange.Data.Entities.SettingFileEntity.html",
+          "hash": "M7rMsHjnwqdBKx4c1iOwT269n4oU31UGWR98lxDeGzo="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Entities.html",
-          "hash": "M0qWhD+u8SfON6Rs3hv2RphPLiV/ZfjpJ+XBP2m9o/U="
+          "hash": "6QJgEa8SDFktc8HEh+hyOlE8tkUaGpyQB1C9wI/OHPs="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Maps.SettingFileMap.html",
-          "hash": "wOdTFbFO3NCyaGQf3F0BFTwCkm+qFNHeb8PAO584HfQ="
+          "hash": "8qQG9EY2E8I4Y+0z45PoPSXNfdD5t0m/iJvdYF7zagg="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Maps.html",
-          "hash": "maSHVVBgHzZ9P9bS1J692cbUR9u4aAIFht6KXfxUWes="
+          "hash": "stZh6WxtxHDUziuvMFMDtTFtuM4fYlhiAdgc7U1RweE="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.OrangeDbContext.html",
-          "hash": "XlzXRv9QVTjA35xsdVeMYA8qfHLfAKq0H4cYhcl9CK0="
+          "hash": "8R5Zo2YlIwbjXC8THd62lT7zRqXyWApKnBD1WNCwT4Q="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Repositories.SettingFileRepository.html",
-          "hash": "kLZM9p4ohLIUovY4iaDPZIGEwKPErL6NNDsdwzhXPIU="
+          "hash": "UrCv2NNGNhrrWYeoq2IOiXyfZWdxsdand2rxHVjaUW0="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.ISeedDirector.html",
-          "hash": "BzTRUnanJGy2deF7AUhcPOYbq8BHgx0Mp1wOn35kHOc="
+          "hash": "rLLyNpUdf3GIEevLSkhlwSclkOFRZJprnbhY2Zpg2nE="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.SeedDirector.html",
-          "hash": "xy/U+9yBobEKCZCTnBPG3DqSdLazJydLWCHwaFGy2tE="
+          "hash": "z/eJF3pKqfuTLfXy4S109o3Dm9zN8FiyMPCw0cn3sNM="
         }
       },
       "is_incremental": false,
@@ -342,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Controllers.SettingsController.html",
-          "hash": "jH249Q5V5GslpcjH6+AVPp+j3zF7V8mmA/S/juBwB9I="
+          "hash": "2GSP/2Chb5EUYNLfeJRgIFU3YyiGf9nOxmqEGGvAqe0="
         }
       },
       "is_incremental": false,
@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Controllers.html",
-          "hash": "1PC9VrilxNuGrXiQ4XX6haT3rV+vEs0B1fC2UV40CFE="
+          "hash": "4PsdXheWAZ8RQI/luOaKZXXxbhslH9QBwP6J4/Knefw="
         }
       },
       "is_incremental": false,
@@ -414,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.Admin.Settings.Index.html",
-          "hash": "8c+ZsbWqe4Q+lHJhAY04XeVE/ktnywIj1zK/BXzQ5M0="
+          "hash": "YccYCn2+Myo6JEKqkPhTRcdJQ6KFPCVfLBXKSNP1hIU="
         }
       },
       "is_incremental": false,
@@ -426,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.Admin.Settings.Setting.html",
-          "hash": "FpIeuvA1XA12kyjCxsjv5RDlCV2iSKXPKozzSTueyUU="
+          "hash": "mTiv4h7GGznfE6zyP1hl7p58HaY6pgJKHC1SftewH7k="
         }
       },
       "is_incremental": false,
@@ -570,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Managers.ISettingFileManager.html",
-          "hash": "CI2FISLZPRmVtfLFyCbPnTaY6z3Hbqleld7W1p1G3WQ="
+          "hash": "8/8EnC0pMKFBs/UqpVbHBVBTCVf6gafrWob6DRsqtZQ="
         }
       },
       "is_incremental": false,
@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Managers.SettingFileManager.html",
-          "hash": "qpb06+IMdDOt80wNtbI+N2yjmPjk0QR4G5zjKp/RPP8="
+          "hash": "WGdNmun3cbr0K8IbrMXK98p4FNVVUL50kUPfKJqEHGA="
         }
       },
       "is_incremental": false,
@@ -606,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Managers.html",
-          "hash": "vm57YEmtuZbHGURIcZVichgSaqYeUMJAC5pI3axi/NU="
+          "hash": "ME4sGoxiyTF6/jZvCAPaQq2KYekHv+4FwRAgnge7mtQ="
         }
       },
       "is_incremental": false,
@@ -618,19 +618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Models.ModelBase.html",
-          "hash": "6NTk8U4gCXOepxmj5WUZkIE75K7rfXpqVkcik1gWerM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Models.SettingFile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.Models.SettingFile.html",
-          "hash": "b0Bg8qq58uMJvruyYt991Qty46T0Gt67gH6eAeyioqo="
+          "hash": "VNw9J8xEmr1ctI94PIgTgkBFATm9OveW91dJFZPOePc="
         }
       },
       "is_incremental": false,
@@ -642,7 +630,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Models.SettingFileExtensions.html",
-          "hash": "RNvFpmfXuJ1wKc/Oo8lf+INaLNrBYuDIK1bOGSd/YOw="
+          "hash": "srBzGqQIyOBT6kEjYIpX80zAR+jVnhb8Ogb3cjI0zAY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Models.SettingFileModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Models.SettingFileModel.html",
+          "hash": "R0cMxZDU5zt7baEpjo3ekZMCSItWNB66U1Fx+dV1M6k="
         }
       },
       "is_incremental": false,
@@ -654,7 +654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Models.html",
-          "hash": "KnFJYG4wneXZAr9DlJT6AdbHn+VRCJSFXyj58fmZBIg="
+          "hash": "gWW+0szPUo5zlMvutl0PexEtno8KagjRqtjaXnWzrqE="
         }
       },
       "is_incremental": false,
@@ -678,7 +678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Options.SeedingOptions.html",
-          "hash": "O0mvYFEzChOgxsiDP5lAZBbUW3vhBHddpJcp90Ecl7I="
+          "hash": "dwGIo/Ltk4yhBOVOkhXfOFl0ivS8uM/TSEhn/DBHbUw="
         }
       },
       "is_incremental": false,
@@ -702,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Repositories.ISettingFileRepository.html",
-          "hash": "AbxvlmTkXv4a6Kx8yOt4x3weHLln/kuwQ/DcoqeU7jE="
+          "hash": "BtxZ5Mz1+EntxlSNOoWJP4aABrTZplc1f8JYYh9R8j0="
         }
       },
       "is_incremental": false,
@@ -726,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Repositories.html",
-          "hash": "1c2khUPOMYO/QRgqED0RYpoXf+uPSw0f/Y68WDqzbas="
+          "hash": "9muoZ9xYmrntKbS8U1JXTedUy/vQvstWIQ9Ep65FbEw="
         }
       },
       "is_incremental": false,
@@ -810,7 +810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "x6ngqcZJRcUmMNWVB4CB5mZ1h1jpDfJh5XZ5tvh7YyM="
+          "hash": "cLk8NdSSw3WmwKUsYQYP+B7m/JVS6/caUc7nufUmono="
         }
       },
       "is_incremental": false,

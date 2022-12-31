@@ -77,77 +77,103 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
   nameWithType: AuditedEntityBase.LastUpdatedOnUtc
-- uid: CG.Orange.Data.Entities.SettingFile
-  name: SettingFile
-  href: api/CG.Orange.Data.Entities.SettingFile.html
-  commentId: T:CG.Orange.Data.Entities.SettingFile
-  fullName: CG.Orange.Data.Entities.SettingFile
-  nameWithType: SettingFile
-- uid: CG.Orange.Data.Entities.SettingFile.ApplicationName
+- uid: CG.Orange.Data.Entities.SettingFileEntity
+  name: SettingFileEntity
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html
+  commentId: T:CG.Orange.Data.Entities.SettingFileEntity
+  fullName: CG.Orange.Data.Entities.SettingFileEntity
+  nameWithType: SettingFileEntity
+- uid: CG.Orange.Data.Entities.SettingFileEntity.ApplicationName
   name: ApplicationName
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_ApplicationName
-  commentId: P:CG.Orange.Data.Entities.SettingFile.ApplicationName
-  fullName: CG.Orange.Data.Entities.SettingFile.ApplicationName
-  nameWithType: SettingFile.ApplicationName
-- uid: CG.Orange.Data.Entities.SettingFile.ApplicationName*
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_ApplicationName
+  commentId: P:CG.Orange.Data.Entities.SettingFileEntity.ApplicationName
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.ApplicationName
+  nameWithType: SettingFileEntity.ApplicationName
+- uid: CG.Orange.Data.Entities.SettingFileEntity.ApplicationName*
   name: ApplicationName
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_ApplicationName_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFile.ApplicationName
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_ApplicationName_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.ApplicationName
   isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFile.ApplicationName
-  nameWithType: SettingFile.ApplicationName
-- uid: CG.Orange.Data.Entities.SettingFile.EnvironmentName
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.ApplicationName
+  nameWithType: SettingFileEntity.ApplicationName
+- uid: CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName
   name: EnvironmentName
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_EnvironmentName
-  commentId: P:CG.Orange.Data.Entities.SettingFile.EnvironmentName
-  fullName: CG.Orange.Data.Entities.SettingFile.EnvironmentName
-  nameWithType: SettingFile.EnvironmentName
-- uid: CG.Orange.Data.Entities.SettingFile.EnvironmentName*
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_EnvironmentName
+  commentId: P:CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName
+  nameWithType: SettingFileEntity.EnvironmentName
+- uid: CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName*
   name: EnvironmentName
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_EnvironmentName_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFile.EnvironmentName
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_EnvironmentName_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName
   isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFile.EnvironmentName
-  nameWithType: SettingFile.EnvironmentName
-- uid: CG.Orange.Data.Entities.SettingFile.Id
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName
+  nameWithType: SettingFileEntity.EnvironmentName
+- uid: CG.Orange.Data.Entities.SettingFileEntity.Equals(System.Object)
+  name: Equals(Object)
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Equals_System_Object_
+  commentId: M:CG.Orange.Data.Entities.SettingFileEntity.Equals(System.Object)
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.Equals(System.Object)
+  nameWithType: SettingFileEntity.Equals(Object)
+- uid: CG.Orange.Data.Entities.SettingFileEntity.Equals*
+  name: Equals
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Equals_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.Equals
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.Equals
+  nameWithType: SettingFileEntity.Equals
+- uid: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
+  name: GetHashCode()
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_GetHashCode
+  commentId: M:CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode()
+  nameWithType: SettingFileEntity.GetHashCode()
+- uid: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode*
+  name: GetHashCode
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_GetHashCode_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
+  nameWithType: SettingFileEntity.GetHashCode
+- uid: CG.Orange.Data.Entities.SettingFileEntity.Id
   name: Id
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Id
-  commentId: P:CG.Orange.Data.Entities.SettingFile.Id
-  fullName: CG.Orange.Data.Entities.SettingFile.Id
-  nameWithType: SettingFile.Id
-- uid: CG.Orange.Data.Entities.SettingFile.Id*
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Id
+  commentId: P:CG.Orange.Data.Entities.SettingFileEntity.Id
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.Id
+  nameWithType: SettingFileEntity.Id
+- uid: CG.Orange.Data.Entities.SettingFileEntity.Id*
   name: Id
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Id_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFile.Id
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Id_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.Id
   isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFile.Id
-  nameWithType: SettingFile.Id
-- uid: CG.Orange.Data.Entities.SettingFile.IsDisabled
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.Id
+  nameWithType: SettingFileEntity.Id
+- uid: CG.Orange.Data.Entities.SettingFileEntity.IsDisabled
   name: IsDisabled
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_IsDisabled
-  commentId: P:CG.Orange.Data.Entities.SettingFile.IsDisabled
-  fullName: CG.Orange.Data.Entities.SettingFile.IsDisabled
-  nameWithType: SettingFile.IsDisabled
-- uid: CG.Orange.Data.Entities.SettingFile.IsDisabled*
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_IsDisabled
+  commentId: P:CG.Orange.Data.Entities.SettingFileEntity.IsDisabled
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.IsDisabled
+  nameWithType: SettingFileEntity.IsDisabled
+- uid: CG.Orange.Data.Entities.SettingFileEntity.IsDisabled*
   name: IsDisabled
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_IsDisabled_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFile.IsDisabled
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_IsDisabled_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.IsDisabled
   isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFile.IsDisabled
-  nameWithType: SettingFile.IsDisabled
-- uid: CG.Orange.Data.Entities.SettingFile.Json
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.IsDisabled
+  nameWithType: SettingFileEntity.IsDisabled
+- uid: CG.Orange.Data.Entities.SettingFileEntity.Json
   name: Json
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Json
-  commentId: P:CG.Orange.Data.Entities.SettingFile.Json
-  fullName: CG.Orange.Data.Entities.SettingFile.Json
-  nameWithType: SettingFile.Json
-- uid: CG.Orange.Data.Entities.SettingFile.Json*
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Json
+  commentId: P:CG.Orange.Data.Entities.SettingFileEntity.Json
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.Json
+  nameWithType: SettingFileEntity.Json
+- uid: CG.Orange.Data.Entities.SettingFileEntity.Json*
   name: Json
-  href: api/CG.Orange.Data.Entities.SettingFile.html#CG_Orange_Data_Entities_SettingFile_Json_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFile.Json
+  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Json_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.Json
   isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFile.Json
-  nameWithType: SettingFile.Json
+  fullName: CG.Orange.Data.Entities.SettingFileEntity.Json
+  nameWithType: SettingFileEntity.Json
 - uid: CG.Orange.Data.Maps
   name: CG.Orange.Data.Maps
   href: api/CG.Orange.Data.Maps.html
@@ -225,15 +251,15 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Maps.SettingFileMap.SettingFileMap
   nameWithType: SettingFileMap.SettingFileMap
-- uid: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFile})
-  name: Configure(EntityTypeBuilder<SettingFile>)
-  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_SettingFile__
-  commentId: M:CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFile})
-  name.vb: Configure(EntityTypeBuilder(Of SettingFile))
-  fullName: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder<CG.Orange.Data.Entities.SettingFile>)
-  fullName.vb: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder(Of CG.Orange.Data.Entities.SettingFile))
-  nameWithType: SettingFileMap.Configure(EntityTypeBuilder<SettingFile>)
-  nameWithType.vb: SettingFileMap.Configure(EntityTypeBuilder(Of SettingFile))
+- uid: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFileEntity})
+  name: Configure(EntityTypeBuilder<SettingFileEntity>)
+  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_SettingFileEntity__
+  commentId: M:CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFileEntity})
+  name.vb: Configure(EntityTypeBuilder(Of SettingFileEntity))
+  fullName: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder<CG.Orange.Data.Entities.SettingFileEntity>)
+  fullName.vb: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder(Of CG.Orange.Data.Entities.SettingFileEntity))
+  nameWithType: SettingFileMap.Configure(EntityTypeBuilder<SettingFileEntity>)
+  nameWithType.vb: SettingFileMap.Configure(EntityTypeBuilder(Of SettingFileEntity))
 - uid: CG.Orange.Data.Maps.SettingFileMap.Configure*
   name: Configure
   href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_
@@ -367,12 +393,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.SettingFileRepository.CountAsync
   nameWithType: SettingFileRepository.CountAsync
-- uid: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)
-  name: CreateAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFile, CancellationToken)
-  nameWithType: SettingFileRepository.CreateAsync(SettingFile, CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFileModel,CancellationToken)
+  name: CreateAsync(SettingFileModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_SettingFileModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFileModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync(SettingFileModel, CancellationToken)
+  nameWithType: SettingFileRepository.CreateAsync(SettingFileModel, CancellationToken)
 - uid: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_CreateAsync_
@@ -380,12 +406,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.SettingFileRepository.CreateAsync
   nameWithType: SettingFileRepository.CreateAsync
-- uid: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
-  name: DeleteAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
-  nameWithType: SettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFileModel,CancellationToken)
+  name: DeleteAsync(SettingFileModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_SettingFileModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFileModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync(SettingFileModel, CancellationToken)
+  nameWithType: SettingFileRepository.DeleteAsync(SettingFileModel, CancellationToken)
 - uid: CG.Orange.Data.Repositories.SettingFileRepository.DeleteAsync*
   name: DeleteAsync
   href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_DeleteAsync_
@@ -432,12 +458,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.SettingFileRepository.FindByIdAsync
   nameWithType: SettingFileRepository.FindByIdAsync
-- uid: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
-  name: UpdateAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
-  nameWithType: SettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFileModel,CancellationToken)
+  name: UpdateAsync(SettingFileModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_SettingFileModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFileModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync(SettingFileModel, CancellationToken)
+  nameWithType: SettingFileRepository.UpdateAsync(SettingFileModel, CancellationToken)
 - uid: CG.Orange.Data.Repositories.SettingFileRepository.UpdateAsync*
   name: UpdateAsync
   href: api/CG.Orange.Data.Repositories.SettingFileRepository.html#CG_Orange_Data_Repositories_SettingFileRepository_UpdateAsync_
@@ -1035,12 +1061,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Index.OnCreateAsync
   nameWithType: Index.OnCreateAsync
-- uid: CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync(SettingFile)
-  name: OnDeleteAsync(SettingFile)
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_OnDeleteAsync_SettingFile_
-  commentId: M:CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync(SettingFile)
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync(SettingFile)
-  nameWithType: Index.OnDeleteAsync(SettingFile)
+- uid: CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync(SettingFileModel)
+  name: OnDeleteAsync(SettingFileModel)
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_OnDeleteAsync_SettingFileModel_
+  commentId: M:CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync(SettingFileModel)
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync(SettingFileModel)
+  nameWithType: Index.OnDeleteAsync(SettingFileModel)
 - uid: CG.Orange.Host.Pages.Admin.Settings.Index.OnDeleteAsync*
   name: OnDeleteAsync
   href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_OnDeleteAsync_
@@ -1491,12 +1517,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ISettingFileManager.CountAsync
   nameWithType: ISettingFileManager.CountAsync
-- uid: CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFile,System.String,CancellationToken)
-  name: CreateAsync(SettingFile, String, CancellationToken)
-  href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_CreateAsync_SettingFile_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFile,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFile, System.String, CancellationToken)
-  nameWithType: ISettingFileManager.CreateAsync(SettingFile, String, CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_CreateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingFileManager.CreateAsync(SettingFileModel, String, CancellationToken)
 - uid: CG.Orange.Managers.ISettingFileManager.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_CreateAsync_
@@ -1504,12 +1530,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ISettingFileManager.CreateAsync
   nameWithType: ISettingFileManager.CreateAsync
-- uid: CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFile,System.String,CancellationToken)
-  name: DeleteAsync(SettingFile, String, CancellationToken)
-  href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_DeleteAsync_SettingFile_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFile,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFile, System.String, CancellationToken)
-  nameWithType: ISettingFileManager.DeleteAsync(SettingFile, String, CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  name: DeleteAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_DeleteAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingFileManager.DeleteAsync(SettingFileModel, String, CancellationToken)
 - uid: CG.Orange.Managers.ISettingFileManager.DeleteAsync*
   name: DeleteAsync
   href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_DeleteAsync_
@@ -1556,12 +1582,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ISettingFileManager.FindByIdAsync
   nameWithType: ISettingFileManager.FindByIdAsync
-- uid: CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFile,System.String,CancellationToken)
-  name: UpdateAsync(SettingFile, String, CancellationToken)
-  href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_UpdateAsync_SettingFile_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFile,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFile, System.String, CancellationToken)
-  nameWithType: ISettingFileManager.UpdateAsync(SettingFile, String, CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  name: UpdateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_UpdateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingFileManager.UpdateAsync(SettingFileModel, String, CancellationToken)
 - uid: CG.Orange.Managers.ISettingFileManager.UpdateAsync*
   name: UpdateAsync
   href: api/CG.Orange.Managers.ISettingFileManager.html#CG_Orange_Managers_ISettingFileManager_UpdateAsync_
@@ -1672,12 +1698,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileManager.CountAsync
   nameWithType: SettingFileManager.CountAsync
-- uid: CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFile,System.String,CancellationToken)
-  name: CreateAsync(SettingFile, String, CancellationToken)
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_CreateAsync_SettingFile_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFile,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFile, System.String, CancellationToken)
-  nameWithType: SettingFileManager.CreateAsync(SettingFile, String, CancellationToken)
+- uid: CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_CreateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingFileManager.CreateAsync(SettingFileModel, String, CancellationToken)
 - uid: CG.Orange.Managers.SettingFileManager.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_CreateAsync_
@@ -1685,12 +1711,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileManager.CreateAsync
   nameWithType: SettingFileManager.CreateAsync
-- uid: CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFile,System.String,CancellationToken)
-  name: DeleteAsync(SettingFile, String, CancellationToken)
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_DeleteAsync_SettingFile_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFile,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFile, System.String, CancellationToken)
-  nameWithType: SettingFileManager.DeleteAsync(SettingFile, String, CancellationToken)
+- uid: CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  name: DeleteAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_DeleteAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingFileManager.DeleteAsync(SettingFileModel, String, CancellationToken)
 - uid: CG.Orange.Managers.SettingFileManager.DeleteAsync*
   name: DeleteAsync
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_DeleteAsync_
@@ -1737,12 +1763,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileManager.FindByIdAsync
   nameWithType: SettingFileManager.FindByIdAsync
-- uid: CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFile,System.String,CancellationToken)
-  name: UpdateAsync(SettingFile, String, CancellationToken)
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_UpdateAsync_SettingFile_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFile,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFile, System.String, CancellationToken)
-  nameWithType: SettingFileManager.UpdateAsync(SettingFile, String, CancellationToken)
+- uid: CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  name: UpdateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_UpdateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingFileManager.UpdateAsync(SettingFileModel, String, CancellationToken)
 - uid: CG.Orange.Managers.SettingFileManager.UpdateAsync*
   name: UpdateAsync
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_UpdateAsync_
@@ -1814,89 +1840,18 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.ModelBase.LastUpdatedOnUtc
   nameWithType: ModelBase.LastUpdatedOnUtc
-- uid: CG.Orange.Models.SettingFile
-  name: SettingFile
-  href: api/CG.Orange.Models.SettingFile.html
-  commentId: T:CG.Orange.Models.SettingFile
-  fullName: CG.Orange.Models.SettingFile
-  nameWithType: SettingFile
-- uid: CG.Orange.Models.SettingFile.ApplicationName
-  name: ApplicationName
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_ApplicationName
-  commentId: P:CG.Orange.Models.SettingFile.ApplicationName
-  fullName: CG.Orange.Models.SettingFile.ApplicationName
-  nameWithType: SettingFile.ApplicationName
-- uid: CG.Orange.Models.SettingFile.ApplicationName*
-  name: ApplicationName
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_ApplicationName_
-  commentId: Overload:CG.Orange.Models.SettingFile.ApplicationName
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFile.ApplicationName
-  nameWithType: SettingFile.ApplicationName
-- uid: CG.Orange.Models.SettingFile.EnvironmentName
-  name: EnvironmentName
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_EnvironmentName
-  commentId: P:CG.Orange.Models.SettingFile.EnvironmentName
-  fullName: CG.Orange.Models.SettingFile.EnvironmentName
-  nameWithType: SettingFile.EnvironmentName
-- uid: CG.Orange.Models.SettingFile.EnvironmentName*
-  name: EnvironmentName
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_EnvironmentName_
-  commentId: Overload:CG.Orange.Models.SettingFile.EnvironmentName
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFile.EnvironmentName
-  nameWithType: SettingFile.EnvironmentName
-- uid: CG.Orange.Models.SettingFile.Id
-  name: Id
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_Id
-  commentId: P:CG.Orange.Models.SettingFile.Id
-  fullName: CG.Orange.Models.SettingFile.Id
-  nameWithType: SettingFile.Id
-- uid: CG.Orange.Models.SettingFile.Id*
-  name: Id
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_Id_
-  commentId: Overload:CG.Orange.Models.SettingFile.Id
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFile.Id
-  nameWithType: SettingFile.Id
-- uid: CG.Orange.Models.SettingFile.IsDisabled
-  name: IsDisabled
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_IsDisabled
-  commentId: P:CG.Orange.Models.SettingFile.IsDisabled
-  fullName: CG.Orange.Models.SettingFile.IsDisabled
-  nameWithType: SettingFile.IsDisabled
-- uid: CG.Orange.Models.SettingFile.IsDisabled*
-  name: IsDisabled
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_IsDisabled_
-  commentId: Overload:CG.Orange.Models.SettingFile.IsDisabled
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFile.IsDisabled
-  nameWithType: SettingFile.IsDisabled
-- uid: CG.Orange.Models.SettingFile.Json
-  name: Json
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_Json
-  commentId: P:CG.Orange.Models.SettingFile.Json
-  fullName: CG.Orange.Models.SettingFile.Json
-  nameWithType: SettingFile.Json
-- uid: CG.Orange.Models.SettingFile.Json*
-  name: Json
-  href: api/CG.Orange.Models.SettingFile.html#CG_Orange_Models_SettingFile_Json_
-  commentId: Overload:CG.Orange.Models.SettingFile.Json
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFile.Json
-  nameWithType: SettingFile.Json
 - uid: CG.Orange.Models.SettingFileExtensions
   name: SettingFileExtensions
   href: api/CG.Orange.Models.SettingFileExtensions.html
   commentId: T:CG.Orange.Models.SettingFileExtensions
   fullName: CG.Orange.Models.SettingFileExtensions
   nameWithType: SettingFileExtensions
-- uid: CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName(CG.Orange.Models.SettingFile)
-  name: SafeEnvironmentName(SettingFile)
-  href: api/CG.Orange.Models.SettingFileExtensions.html#CG_Orange_Models_SettingFileExtensions_SafeEnvironmentName_CG_Orange_Models_SettingFile_
-  commentId: M:CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName(CG.Orange.Models.SettingFile)
-  fullName: CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName(CG.Orange.Models.SettingFile)
-  nameWithType: SettingFileExtensions.SafeEnvironmentName(SettingFile)
+- uid: CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName(CG.Orange.Models.SettingFileModel)
+  name: SafeEnvironmentName(SettingFileModel)
+  href: api/CG.Orange.Models.SettingFileExtensions.html#CG_Orange_Models_SettingFileExtensions_SafeEnvironmentName_CG_Orange_Models_SettingFileModel_
+  commentId: M:CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName(CG.Orange.Models.SettingFileModel)
+  fullName: CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName(CG.Orange.Models.SettingFileModel)
+  nameWithType: SettingFileExtensions.SafeEnvironmentName(SettingFileModel)
 - uid: CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName*
   name: SafeEnvironmentName
   href: api/CG.Orange.Models.SettingFileExtensions.html#CG_Orange_Models_SettingFileExtensions_SafeEnvironmentName_
@@ -1904,6 +1859,103 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.SettingFileExtensions.SafeEnvironmentName
   nameWithType: SettingFileExtensions.SafeEnvironmentName
+- uid: CG.Orange.Models.SettingFileModel
+  name: SettingFileModel
+  href: api/CG.Orange.Models.SettingFileModel.html
+  commentId: T:CG.Orange.Models.SettingFileModel
+  fullName: CG.Orange.Models.SettingFileModel
+  nameWithType: SettingFileModel
+- uid: CG.Orange.Models.SettingFileModel.ApplicationName
+  name: ApplicationName
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_ApplicationName
+  commentId: P:CG.Orange.Models.SettingFileModel.ApplicationName
+  fullName: CG.Orange.Models.SettingFileModel.ApplicationName
+  nameWithType: SettingFileModel.ApplicationName
+- uid: CG.Orange.Models.SettingFileModel.ApplicationName*
+  name: ApplicationName
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_ApplicationName_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.ApplicationName
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.ApplicationName
+  nameWithType: SettingFileModel.ApplicationName
+- uid: CG.Orange.Models.SettingFileModel.EnvironmentName
+  name: EnvironmentName
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_EnvironmentName
+  commentId: P:CG.Orange.Models.SettingFileModel.EnvironmentName
+  fullName: CG.Orange.Models.SettingFileModel.EnvironmentName
+  nameWithType: SettingFileModel.EnvironmentName
+- uid: CG.Orange.Models.SettingFileModel.EnvironmentName*
+  name: EnvironmentName
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_EnvironmentName_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.EnvironmentName
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.EnvironmentName
+  nameWithType: SettingFileModel.EnvironmentName
+- uid: CG.Orange.Models.SettingFileModel.Equals(System.Object)
+  name: Equals(Object)
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Equals_System_Object_
+  commentId: M:CG.Orange.Models.SettingFileModel.Equals(System.Object)
+  fullName: CG.Orange.Models.SettingFileModel.Equals(System.Object)
+  nameWithType: SettingFileModel.Equals(Object)
+- uid: CG.Orange.Models.SettingFileModel.Equals*
+  name: Equals
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Equals_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.Equals
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.Equals
+  nameWithType: SettingFileModel.Equals
+- uid: CG.Orange.Models.SettingFileModel.GetHashCode
+  name: GetHashCode()
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_GetHashCode
+  commentId: M:CG.Orange.Models.SettingFileModel.GetHashCode
+  fullName: CG.Orange.Models.SettingFileModel.GetHashCode()
+  nameWithType: SettingFileModel.GetHashCode()
+- uid: CG.Orange.Models.SettingFileModel.GetHashCode*
+  name: GetHashCode
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_GetHashCode_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.GetHashCode
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.GetHashCode
+  nameWithType: SettingFileModel.GetHashCode
+- uid: CG.Orange.Models.SettingFileModel.Id
+  name: Id
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Id
+  commentId: P:CG.Orange.Models.SettingFileModel.Id
+  fullName: CG.Orange.Models.SettingFileModel.Id
+  nameWithType: SettingFileModel.Id
+- uid: CG.Orange.Models.SettingFileModel.Id*
+  name: Id
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Id_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.Id
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.Id
+  nameWithType: SettingFileModel.Id
+- uid: CG.Orange.Models.SettingFileModel.IsDisabled
+  name: IsDisabled
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_IsDisabled
+  commentId: P:CG.Orange.Models.SettingFileModel.IsDisabled
+  fullName: CG.Orange.Models.SettingFileModel.IsDisabled
+  nameWithType: SettingFileModel.IsDisabled
+- uid: CG.Orange.Models.SettingFileModel.IsDisabled*
+  name: IsDisabled
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_IsDisabled_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.IsDisabled
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.IsDisabled
+  nameWithType: SettingFileModel.IsDisabled
+- uid: CG.Orange.Models.SettingFileModel.Json
+  name: Json
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Json
+  commentId: P:CG.Orange.Models.SettingFileModel.Json
+  fullName: CG.Orange.Models.SettingFileModel.Json
+  nameWithType: SettingFileModel.Json
+- uid: CG.Orange.Models.SettingFileModel.Json*
+  name: Json
+  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Json_
+  commentId: Overload:CG.Orange.Models.SettingFileModel.Json
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileModel.Json
+  nameWithType: SettingFileModel.Json
 - uid: CG.Orange.Options
   name: CG.Orange.Options
   href: api/CG.Orange.Options.html
@@ -1979,12 +2031,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.ISettingFileRepository.CountAsync
   nameWithType: ISettingFileRepository.CountAsync
-- uid: CG.Orange.Repositories.ISettingFileRepository.CreateAsync(SettingFile,CancellationToken)
-  name: CreateAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_CreateAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.Repositories.ISettingFileRepository.CreateAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.Repositories.ISettingFileRepository.CreateAsync(SettingFile, CancellationToken)
-  nameWithType: ISettingFileRepository.CreateAsync(SettingFile, CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileRepository.CreateAsync(SettingFileModel,CancellationToken)
+  name: CreateAsync(SettingFileModel, CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_CreateAsync_SettingFileModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileRepository.CreateAsync(SettingFileModel,CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileRepository.CreateAsync(SettingFileModel, CancellationToken)
+  nameWithType: ISettingFileRepository.CreateAsync(SettingFileModel, CancellationToken)
 - uid: CG.Orange.Repositories.ISettingFileRepository.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_CreateAsync_
@@ -1992,12 +2044,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.ISettingFileRepository.CreateAsync
   nameWithType: ISettingFileRepository.CreateAsync
-- uid: CG.Orange.Repositories.ISettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
-  name: DeleteAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_DeleteAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.Repositories.ISettingFileRepository.DeleteAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.Repositories.ISettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
-  nameWithType: ISettingFileRepository.DeleteAsync(SettingFile, CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileRepository.DeleteAsync(SettingFileModel,CancellationToken)
+  name: DeleteAsync(SettingFileModel, CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_DeleteAsync_SettingFileModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileRepository.DeleteAsync(SettingFileModel,CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileRepository.DeleteAsync(SettingFileModel, CancellationToken)
+  nameWithType: ISettingFileRepository.DeleteAsync(SettingFileModel, CancellationToken)
 - uid: CG.Orange.Repositories.ISettingFileRepository.DeleteAsync*
   name: DeleteAsync
   href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_DeleteAsync_
@@ -2044,12 +2096,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.ISettingFileRepository.FindByIdAsync
   nameWithType: ISettingFileRepository.FindByIdAsync
-- uid: CG.Orange.Repositories.ISettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
-  name: UpdateAsync(SettingFile, CancellationToken)
-  href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_UpdateAsync_SettingFile_CancellationToken_
-  commentId: M:CG.Orange.Repositories.ISettingFileRepository.UpdateAsync(SettingFile,CancellationToken)
-  fullName: CG.Orange.Repositories.ISettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
-  nameWithType: ISettingFileRepository.UpdateAsync(SettingFile, CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileRepository.UpdateAsync(SettingFileModel,CancellationToken)
+  name: UpdateAsync(SettingFileModel, CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_UpdateAsync_SettingFileModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileRepository.UpdateAsync(SettingFileModel,CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileRepository.UpdateAsync(SettingFileModel, CancellationToken)
+  nameWithType: ISettingFileRepository.UpdateAsync(SettingFileModel, CancellationToken)
 - uid: CG.Orange.Repositories.ISettingFileRepository.UpdateAsync*
   name: UpdateAsync
   href: api/CG.Orange.Repositories.ISettingFileRepository.html#CG_Orange_Repositories_ISettingFileRepository_UpdateAsync_

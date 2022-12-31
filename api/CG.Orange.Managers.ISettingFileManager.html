@@ -84,7 +84,7 @@
   <h1 id="CG_Orange_Managers_ISettingFileManager" data-uid="CG.Orange.Managers.ISettingFileManager" class="text-break">Interface ISettingFileManager
   </h1>
   <div class="markdown level0 summary"><p>This interface represents an object that manages operations related to
-<see cref="!:SettingFile"></see> objects.</p>
+<see cref="!:SettingFileModel"></see> objects.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Managers.html">CG.Orange.Managers</a></h6>
@@ -97,7 +97,7 @@
   </h3>
   <a id="CG_Orange_Managers_ISettingFileManager_AnyAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.AnyAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_AnyAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:SettingFile"></see> objects
+  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:SettingFileModel"></see> objects
 in the underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -136,7 +136,7 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>A task to perform the operation that returns <code>true</code> if there
-are any <see cref="!:SettingFile"></see> objects; <code>false</code> otherwise.</p>
+are any <see cref="!:SettingFileModel"></see> objects; <code>false</code> otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -160,7 +160,7 @@ manager fails to complete the operation.</p>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_AnyAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.AnyAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_AnyAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.AnyAsync(System.String,System.String,CancellationToken)">AnyAsync(String, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:SettingFile"></see> objects
+  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:SettingFileModel"></see> objects
 in the underlying storage that match the given application and environment
 names.</p>
 </div>
@@ -212,7 +212,7 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>A task to perform the operation that returns <code>true</code> if there
-are any <see cref="!:SettingFile"></see> objects; <code>false</code> otherwise.</p>
+are any <see cref="!:SettingFileModel"></see> objects; <code>false</code> otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -236,7 +236,7 @@ manager fails to complete the operation.</p>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_CountAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.CountAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_CountAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:SettingFile"></see> objects in the
+  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:SettingFileModel"></see> objects in the
 underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -275,7 +275,7 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
         <td><p>A task to perform the operation that returns a count of the
-number of <see cref="!:SettingFile"></see> objects in the underlying storage.</p>
+number of <see cref="!:SettingFileModel"></see> objects in the underlying storage.</p>
 </td>
       </tr>
     </tbody>
@@ -298,14 +298,14 @@ manager fails to complete the operation.</p>
     </tbody>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_CreateAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.CreateAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileManager_CreateAsync_SettingFile_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFile,System.String,CancellationToken)">CreateAsync(SettingFile, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method creates a new <see cref="!:SettingFile"></see> object in the
+  <h4 id="CG_Orange_Managers_ISettingFileManager_CreateAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.CreateAsync(SettingFileModel,System.String,CancellationToken)">CreateAsync(SettingFileModel, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method creates a new <see cref="!:SettingFileModel"></see> object in the
 underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SettingFile&gt; CreateAsync(SettingFile settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;SettingFileModel&gt; CreateAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,7 +318,7 @@ underlying storage.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFile</span></td>
+        <td><span class="xref">SettingFileModel</span></td>
         <td><span class="parametername">settingFile</span></td>
         <td><p>The model to create in the underlying storage.</p>
 </td>
@@ -349,9 +349,9 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFile</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
         <td><p>A task to perform the operation that returns the newly created
-<see cref="!:SettingFile"></see> object.</p>
+<see cref="!:SettingFileModel"></see> object.</p>
 </td>
       </tr>
     </tbody>
@@ -374,14 +374,14 @@ manager fails to complete the operation.</p>
     </tbody>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_DeleteAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.DeleteAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileManager_DeleteAsync_SettingFile_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFile,System.String,CancellationToken)">DeleteAsync(SettingFile, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method deletes an existing <see cref="!:SettingFile"></see> object from the
+  <h4 id="CG_Orange_Managers_ISettingFileManager_DeleteAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.DeleteAsync(SettingFileModel,System.String,CancellationToken)">DeleteAsync(SettingFileModel, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method deletes an existing <see cref="!:SettingFileModel"></see> object from the
 underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task DeleteAsync(SettingFile settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task DeleteAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,7 +394,7 @@ underlying storage.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFile</span></td>
+        <td><span class="xref">SettingFileModel</span></td>
         <td><span class="parametername">settingFile</span></td>
         <td><p>The model to delete from the underlying storage.</p>
 </td>
@@ -450,12 +450,12 @@ manager fails to complete the operation.</p>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_FindAllAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.FindAllAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:SettingFile"></see> objects.</p>
+  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:SettingFileModel"></see> objects.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;SettingFile&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;SettingFileModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -486,9 +486,9 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFile</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileModel</span>&gt;&gt;</td>
         <td><p>A task to perform the operation that returns a sequence of
-<see cref="!:SettingFile"></see> objects.</p>
+<see cref="!:SettingFileModel"></see> objects.</p>
 </td>
       </tr>
     </tbody>
@@ -512,13 +512,13 @@ manager fails to complete the operation.</p>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_FindByApplicationAndEnvironmentAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.FindByApplicationAndEnvironmentAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)">FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method searches for a matching <see cref="!:SettingFile"></see> object using the
+  <div class="markdown level1 summary"><p>This method searches for a matching <see cref="!:SettingFileModel"></see> object using the
 given application and environment names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SettingFile?&gt; FindByApplicationAndEnvironmentAsync(string applicationName, string environmentName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;SettingFileModel?&gt; FindByApplicationAndEnvironmentAsync(string applicationName, string environmentName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -561,8 +561,8 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">SettingFile</span>&gt;&gt;</td>
-        <td><p>A task to perform the operation that returns a <see cref="!:SettingFile"></see>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">SettingFileModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a <see cref="!:SettingFileModel"></see>
 objects, if a match was found, of <code>NULL</code> otherwise.</p>
 </td>
       </tr>
@@ -587,13 +587,13 @@ manager fails to complete the operation.</p>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_FindByIdAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.FindByIdAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_FindByIdAsync_System_Int32_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.FindByIdAsync(System.Int32,CancellationToken)">FindByIdAsync(Int32, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method searches for a matching <see cref="!:SettingFile"></see> object using the
+  <div class="markdown level1 summary"><p>This method searches for a matching <see cref="!:SettingFileModel"></see> object using the
 given identifier.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SettingFile?&gt; FindByIdAsync(int id, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;SettingFileModel?&gt; FindByIdAsync(int id, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -630,8 +630,8 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">SettingFile</span>&gt;&gt;</td>
-        <td><p>A task to perform the operation that returns a <see cref="!:SettingFile"></see>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">SettingFileModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a <see cref="!:SettingFileModel"></see>
 objects, if a match was found, of <code>NULL</code> otherwise.</p>
 </td>
       </tr>
@@ -655,14 +655,14 @@ manager fails to complete the operation.</p>
     </tbody>
   </table>
   <a id="CG_Orange_Managers_ISettingFileManager_UpdateAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.UpdateAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileManager_UpdateAsync_SettingFile_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFile,System.String,CancellationToken)">UpdateAsync(SettingFile, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method updates an existing <see cref="!:SettingFile"></see> object in the
+  <h4 id="CG_Orange_Managers_ISettingFileManager_UpdateAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.UpdateAsync(SettingFileModel,System.String,CancellationToken)">UpdateAsync(SettingFileModel, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method updates an existing <see cref="!:SettingFileModel"></see> object in the
 underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SettingFile&gt; UpdateAsync(SettingFile settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;SettingFileModel&gt; UpdateAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -675,7 +675,7 @@ underlying storage.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFile</span></td>
+        <td><span class="xref">SettingFileModel</span></td>
         <td><span class="parametername">settingFile</span></td>
         <td><p>The model to update in the underlying storage.</p>
 </td>
@@ -706,9 +706,9 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFile</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
         <td><p>A task to perform the operation that returns the newly updated
-<see cref="!:SettingFile"></see> object.</p>
+<see cref="!:SettingFileModel"></see> object.</p>
 </td>
       </tr>
     </tbody>
