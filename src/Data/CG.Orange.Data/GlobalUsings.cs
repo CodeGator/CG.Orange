@@ -1,0 +1,11 @@
+﻿global using AutoMapper;
+global using CG.Orange.Data.Maps;
+global using CG.Orange.Data.Repositories;
+global using CG.Orange.Models;
+global using CG.Orange.Repositories;
+global using CG.Validations;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;

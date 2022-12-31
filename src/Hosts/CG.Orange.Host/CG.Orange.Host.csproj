@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>0b223c51-d3dd-4c1b-bcd3-44b839eeefac</UserSecretsId>
+        <Description>The Blazor host for the CG.Orange microservice.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CG.Logging" Version="2023.1.2" />
+        <PackageReference Include="CG.Reflection" Version="2023.1.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="MudBlazor" Version="6.1.6" />
+        <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Data\CG.Orange.Data.InMemory\CG.Orange.Data.InMemory.csproj" />
+        <ProjectReference Include="..\..\Data\CG.Orange.Data.Sqlite\CG.Orange.Data.Sqlite.csproj" />
+        <ProjectReference Include="..\..\Data\CG.Orange.Data.SqlServer\CG.Orange.Data.SqlServer.csproj" />
+        <ProjectReference Include="..\..\Libraries\CG.Orange.Controllers\CG.Orange.Controllers.csproj" />
+        <ProjectReference Include="..\..\Libraries\CG.Orange\CG.Orange.csproj" />
+        <ProjectReference Include="..\..\Providers\CG.Orange.Providers.Azure\CG.Orange.Providers.Azure.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+{
+  "SettingFiles": [
+    {
+      "ApplicationName": "test1",
+      "EnvironmentName": "",
+      "Json": "{ \"Test\":\"Value 1\"}"
+    },
+    {
+      "ApplicationName": "test1",
+      "EnvironmentName": "development",
+      "Json": "{ \"Test\":\"Value 2\"}"
+    },
+    {
+      "ApplicationName": "test2",
+      "EnvironmentName": "",
+      "Json": "{ \"Test\":\"Value 3\"}"
+    }
+  ]
+}
