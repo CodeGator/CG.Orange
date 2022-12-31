@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SettingsController
+    <title>Class ConfigurationDirector
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SettingsController
+    <meta name="title" content="Class ConfigurationDirector
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,35 +78,65 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Host.Controllers.SettingsController">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Directors.ConfigurationDirector">
   
   
-  <h1 id="CG_Orange_Host_Controllers_SettingsController" data-uid="CG.Orange.Host.Controllers.SettingsController" class="text-break">Class SettingsController
+  <h1 id="CG_Orange_Directors_ConfigurationDirector" data-uid="CG.Orange.Directors.ConfigurationDirector" class="text-break">Class ConfigurationDirector
   </h1>
-  <div class="markdown level0 summary"><p>This class is a REST controller for <see cref="!:SettingFileModel"></see> resources.</p>
+  <div class="markdown level0 summary"><p>This class is a default implementation of the <a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a>
+interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SettingsController</span></div>
+    <div class="level1"><span class="xref">ConfigurationDirector</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Host.Controllers.html">CG.Orange.Host.Controllers</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Controllers.dll</h6>
-  <h5 id="CG_Orange_Host_Controllers_SettingsController_syntax">Syntax</h5>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Directors.html">CG.Orange.Directors</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.dll</h6>
+  <h5 id="CG_Orange_Directors_ConfigurationDirector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SettingsController : ControllerBase</code></pre>
+    <pre><code class="lang-csharp hljs">class ConfigurationDirector : IConfigurationDirector</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Host_Controllers_SettingsController__ctor_" data-uid="CG.Orange.Host.Controllers.SettingsController.#ctor*"></a>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController__ctor_CG_Orange_Directors_IConfigurationDirector_ILogger_CG_Orange_Host_Controllers_SettingsController__" data-uid="CG.Orange.Host.Controllers.SettingsController.#ctor(CG.Orange.Directors.IConfigurationDirector,ILogger{CG.Orange.Host.Controllers.SettingsController})">SettingsController(IConfigurationDirector, ILogger&lt;SettingsController&gt;)</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Host.Controllers.SettingsController.html">SettingsController</a></p>
+  <a id="CG_Orange_Directors_ConfigurationDirector__ctor_" data-uid="CG.Orange.Directors.ConfigurationDirector.#ctor*"></a>
+  <h4 id="CG_Orange_Directors_ConfigurationDirector__ctor_ISettingFileManager_ILogger_CG_Orange_Directors_IConfigurationDirector__" data-uid="CG.Orange.Directors.ConfigurationDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.IConfigurationDirector})">ConfigurationDirector(ISettingFileManager, ILogger&lt;IConfigurationDirector&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Directors.ConfigurationDirector.html">ConfigurationDirector</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingsController(IConfigurationDirector configurationDirector, ILogger&lt;SettingsController&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConfigurationDirector(ISettingFileManager settingFileManager, ILogger&lt;IConfigurationDirector&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,29 +149,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a></td>
-        <td><span class="parametername">configurationDirector</span></td>
-        <td><p>The configuration director to
-use with this controller.</p>
+        <td><span class="xref">ISettingFileManager</span></td>
+        <td><span class="parametername">settingFileManager</span></td>
+        <td><p>The setting file manager to use
+with this director.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Host.Controllers.SettingsController.html">SettingsController</a>&gt;</td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td><p>The logger to use with this controller.</p>
+        <td><p>The logger to use with this director.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController__configurationDirector" data-uid="CG.Orange.Host.Controllers.SettingsController._configurationDirector">_configurationDirector</h4>
-  <div class="markdown level1 summary"><p>This field contains the configuration director for this controller.</p>
+  <h4 id="CG_Orange_Directors_ConfigurationDirector__logger" data-uid="CG.Orange.Directors.ConfigurationDirector._logger">_logger</h4>
+  <div class="markdown level1 summary"><p>This field contains the logger for this director.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IConfigurationDirector _configurationDirector</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;IConfigurationDirector&gt; _logger</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,18 +183,18 @@ use with this controller.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController__logger" data-uid="CG.Orange.Host.Controllers.SettingsController._logger">_logger</h4>
-  <div class="markdown level1 summary"><p>This field contains the logger for this controller.</p>
+  <h4 id="CG_Orange_Directors_ConfigurationDirector__settingFileManager" data-uid="CG.Orange.Directors.ConfigurationDirector._settingFileManager">_settingFileManager</h4>
+  <div class="markdown level1 summary"><p>This field contains the setting file manager for this director.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;SettingsController&gt; _logger</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ISettingFileManager _settingFileManager</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,22 +206,20 @@ use with this controller.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Host.Controllers.SettingsController.html">SettingsController</a>&gt;</td>
+        <td><span class="xref">ISettingFileManager</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Host_Controllers_SettingsController_PostAsync_" data-uid="CG.Orange.Host.Controllers.SettingsController.PostAsync*"></a>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController_PostAsync_SettingsRequestVM_" data-uid="CG.Orange.Host.Controllers.SettingsController.PostAsync(SettingsRequestVM)">PostAsync(SettingsRequestVM)</h4>
-  <div class="markdown level1 summary"><p>This method returns a collection of configuration settings for the
-given application and environment.</p>
-</div>
+  <a id="CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_" data-uid="CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync*"></a>
+  <h4 id="CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)">ReadConfigurationAsync(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IActionResult&gt; PostAsync(SettingsRequestVM model)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;Dictionary&lt;string, string&gt;&gt; ReadConfigurationAsync(string applicationName, string enviornmentName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,10 +232,19 @@ given application and environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingsRequestVM</span></td>
-        <td><span class="parametername">model</span></td>
-        <td><p>The request parameters to use for the operation.</p>
-</td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">applicationName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">enviornmentName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -221,13 +258,15 @@ given application and environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
-        <td><p>A task to perform the operation that returns the results
-of the action.</p>
-</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a>
+  </div>
 </article>
           </div>
           

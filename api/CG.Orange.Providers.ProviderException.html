@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SettingsController
+    <title>Class ProviderException
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SettingsController
+    <meta name="title" content="Class ProviderException
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,35 +78,46 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Host.Controllers.SettingsController">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Providers.ProviderException">
   
   
-  <h1 id="CG_Orange_Host_Controllers_SettingsController" data-uid="CG.Orange.Host.Controllers.SettingsController" class="text-break">Class SettingsController
+  <h1 id="CG_Orange_Providers_ProviderException" data-uid="CG.Orange.Providers.ProviderException" class="text-break">Class ProviderException
   </h1>
-  <div class="markdown level0 summary"><p>This class is a REST controller for <see cref="!:SettingFileModel"></see> resources.</p>
+  <div class="markdown level0 summary"><p>This class represents a provider related exception.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SettingsController</span></div>
+    <div class="level1"><span class="xref">ProviderException</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Host.Controllers.html">CG.Orange.Host.Controllers</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Controllers.dll</h6>
-  <h5 id="CG_Orange_Host_Controllers_SettingsController_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Providers.html">CG.Orange.Providers</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Primitives.dll</h6>
+  <h5 id="CG_Orange_Providers_ProviderException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SettingsController : ControllerBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProviderException : Exception</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Host_Controllers_SettingsController__ctor_" data-uid="CG.Orange.Host.Controllers.SettingsController.#ctor*"></a>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController__ctor_CG_Orange_Directors_IConfigurationDirector_ILogger_CG_Orange_Host_Controllers_SettingsController__" data-uid="CG.Orange.Host.Controllers.SettingsController.#ctor(CG.Orange.Directors.IConfigurationDirector,ILogger{CG.Orange.Host.Controllers.SettingsController})">SettingsController(IConfigurationDirector, ILogger&lt;SettingsController&gt;)</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Host.Controllers.SettingsController.html">SettingsController</a></p>
+  <a id="CG_Orange_Providers_ProviderException__ctor_" data-uid="CG.Orange.Providers.ProviderException.#ctor*"></a>
+  <h4 id="CG_Orange_Providers_ProviderException__ctor" data-uid="CG.Orange.Providers.ProviderException.#ctor">ProviderException()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Providers.ProviderException.html">ProviderException</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingsController(IConfigurationDirector configurationDirector, ILogger&lt;SettingsController&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProviderException()</code></pre>
+  </div>
+  <a id="CG_Orange_Providers_ProviderException__ctor_" data-uid="CG.Orange.Providers.ProviderException.#ctor*"></a>
+  <h4 id="CG_Orange_Providers_ProviderException__ctor_SerializationInfo_StreamingContext_" data-uid="CG.Orange.Providers.ProviderException.#ctor(SerializationInfo,StreamingContext)">ProviderException(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Providers.ProviderException.html">ProviderException</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderException(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,79 +130,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a></td>
-        <td><span class="parametername">configurationDirector</span></td>
-        <td><p>The configuration director to
-use with this controller.</p>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The serialization info to use for the exception.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Host.Controllers.SettingsController.html">SettingsController</a>&gt;</td>
-        <td><span class="parametername">logger</span></td>
-        <td><p>The logger to use with this controller.</p>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The streaming context to use for the exception.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController__configurationDirector" data-uid="CG.Orange.Host.Controllers.SettingsController._configurationDirector">_configurationDirector</h4>
-  <div class="markdown level1 summary"><p>This field contains the configuration director for this controller.</p>
+  <a id="CG_Orange_Providers_ProviderException__ctor_" data-uid="CG.Orange.Providers.ProviderException.#ctor*"></a>
+  <h4 id="CG_Orange_Providers_ProviderException__ctor_System_String_" data-uid="CG.Orange.Providers.ProviderException.#ctor(System.String)">ProviderException(String)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Providers.ProviderException.html">ProviderException</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IConfigurationDirector _configurationDirector</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CG.Orange.Directors.IConfigurationDirector.html">IConfigurationDirector</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController__logger" data-uid="CG.Orange.Host.Controllers.SettingsController._logger">_logger</h4>
-  <div class="markdown level1 summary"><p>This field contains the logger for this controller.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;SettingsController&gt; _logger</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Host.Controllers.SettingsController.html">SettingsController</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="CG_Orange_Host_Controllers_SettingsController_PostAsync_" data-uid="CG.Orange.Host.Controllers.SettingsController.PostAsync*"></a>
-  <h4 id="CG_Orange_Host_Controllers_SettingsController_PostAsync_SettingsRequestVM_" data-uid="CG.Orange.Host.Controllers.SettingsController.PostAsync(SettingsRequestVM)">PostAsync(SettingsRequestVM)</h4>
-  <div class="markdown level1 summary"><p>This method returns a collection of configuration settings for the
-given application and environment.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IActionResult&gt; PostAsync(SettingsRequestVM model)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProviderException(string message)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,26 +164,43 @@ given application and environment.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingsRequestVM</span></td>
-        <td><span class="parametername">model</span></td>
-        <td><p>The request parameters to use for the operation.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to use for the exception.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <a id="CG_Orange_Providers_ProviderException__ctor_" data-uid="CG.Orange.Providers.ProviderException.#ctor*"></a>
+  <h4 id="CG_Orange_Providers_ProviderException__ctor_System_String_Exception_" data-uid="CG.Orange.Providers.ProviderException.#ctor(System.String,Exception)">ProviderException(String, Exception)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Providers.ProviderException.html">ProviderException</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderException(string message, Exception innerException)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
-        <td><p>A task to perform the operation that returns the results
-of the action.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to use for the exception.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Exception</span></td>
+        <td><span class="parametername">innerException</span></td>
+        <td><p>An optional inner exception reference.</p>
 </td>
       </tr>
     </tbody>

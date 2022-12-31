@@ -278,11 +278,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Directors.ConfigurationDirector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Directors.ConfigurationDirector.html",
+          "hash": "595DcaagPIJW/i5gE3TLzUg0sJdGpM8CJa8CU47Aa8o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Directors.DirectorException.yml",
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.DirectorException.html",
           "hash": "UZzy9WjOycTOfh99bU8fOwi88bMA9HG9UVObOgQz2DA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Directors.IConfigurationDirector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Directors.IConfigurationDirector.html",
+          "hash": "V3TY0/DPDSSUFd0Dw3KBnkenWteTfQgz94Xu2LHKLec="
         }
       },
       "is_incremental": false,
@@ -318,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.html",
-          "hash": "TfpJmQVKGFDsiYpTl8wPN/wvPI2jZ8btpa/bKkpe9ts="
+          "hash": "iMQ3k0vCjvknkUPcwsEqqvJwzmEef9PuQ0dhEcMJx+U="
         }
       },
       "is_incremental": false,
@@ -330,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Controllers.SettingsController.html",
-          "hash": "2GSP/2Chb5EUYNLfeJRgIFU3YyiGf9nOxmqEGGvAqe0="
+          "hash": "Ml6BlzxEjLKo53tUrEurDkxjl+kODlcOUdgX2LSMiiM="
         }
       },
       "is_incremental": false,
@@ -686,6 +710,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretProvider.html",
+          "hash": "PBkUOc8vBIF/UpgANsn35tfreqdkJ5JLFjXenwPChq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Plugins.Azure.Module.yml",
       "output": {
         ".html": {
@@ -698,11 +734,71 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Plugins.Azure.Options.AzureProviderOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Plugins.Azure.Options.AzureProviderOptions.html",
+          "hash": "upJIpPgurEabvlFQwhN0q74mJNjncfqZilDcK37y6do="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Plugins.Azure.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Plugins.Azure.Options.html",
+          "hash": "IksIc5ULnpZoHQT91wob0c55q0hT5NdebDkNK/JsGiY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Plugins.Azure.yml",
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Plugins.Azure.html",
-          "hash": "0VqVwhFIi1e1BJ2uJaBklDuu5kGAeW6rhCeddpxiGMc="
+          "hash": "lfaXujl7NzBI825dNp2fbNe1pEqaWahM0jx/Srqnras="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Providers.ISecretProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Providers.ISecretProvider.html",
+          "hash": "7k2B5hJyC9U7TPwxvec5mqAzcJirA3UmbcW4bdUbNTM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Providers.ProviderException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Providers.ProviderException.html",
+          "hash": "2Mrk8lVqFOevmU+eHBkgTbINZ402VcJsBGj2PFYYEkk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Providers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Providers.html",
+          "hash": "9tbn3QEP+zHmGGJQPSlSyseAXrkhFOfL+nR90LvNwVo="
         }
       },
       "is_incremental": false,
@@ -762,7 +858,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html",
-          "hash": "Yq7iszFCArIAfend1GpDMKgxIN7+3GD5NxO90jj7ono="
+          "hash": "9kOKfZEjJxPaMLygKHmJZXRPPXgCxz2nbxR7u4NojKk="
         }
       },
       "is_incremental": false,
@@ -810,7 +906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Zx5B96UBLvRT6dN9rKMPShqB6KpXxEXw5wDKlXHqQJc="
+          "hash": "3jeB7A+6+cCVmB4CmC/BW3Pj2eh38HLheru3rBMESDk="
         }
       },
       "is_incremental": false,
@@ -929,7 +1025,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 66,
+          "total_file_count": 74,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

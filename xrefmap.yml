@@ -695,6 +695,53 @@ references:
   commentId: N:CG.Orange.Directors
   fullName: CG.Orange.Directors
   nameWithType: CG.Orange.Directors
+- uid: CG.Orange.Directors.ConfigurationDirector
+  name: ConfigurationDirector
+  href: api/CG.Orange.Directors.ConfigurationDirector.html
+  commentId: T:CG.Orange.Directors.ConfigurationDirector
+  fullName: CG.Orange.Directors.ConfigurationDirector
+  nameWithType: ConfigurationDirector
+- uid: CG.Orange.Directors.ConfigurationDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.IConfigurationDirector})
+  name: ConfigurationDirector(ISettingFileManager, ILogger<IConfigurationDirector>)
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__ctor_ISettingFileManager_ILogger_CG_Orange_Directors_IConfigurationDirector__
+  commentId: M:CG.Orange.Directors.ConfigurationDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.IConfigurationDirector})
+  name.vb: ConfigurationDirector(ISettingFileManager, ILogger(Of IConfigurationDirector))
+  fullName: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector(ISettingFileManager, ILogger<CG.Orange.Directors.IConfigurationDirector>)
+  fullName.vb: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector(ISettingFileManager, ILogger(Of CG.Orange.Directors.IConfigurationDirector))
+  nameWithType: ConfigurationDirector.ConfigurationDirector(ISettingFileManager, ILogger<IConfigurationDirector>)
+  nameWithType.vb: ConfigurationDirector.ConfigurationDirector(ISettingFileManager, ILogger(Of IConfigurationDirector))
+- uid: CG.Orange.Directors.ConfigurationDirector.#ctor*
+  name: ConfigurationDirector
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.ConfigurationDirector.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector
+  nameWithType: ConfigurationDirector.ConfigurationDirector
+- uid: CG.Orange.Directors.ConfigurationDirector._logger
+  name: _logger
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__logger
+  commentId: F:CG.Orange.Directors.ConfigurationDirector._logger
+  fullName: CG.Orange.Directors.ConfigurationDirector._logger
+  nameWithType: ConfigurationDirector._logger
+- uid: CG.Orange.Directors.ConfigurationDirector._settingFileManager
+  name: _settingFileManager
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__settingFileManager
+  commentId: F:CG.Orange.Directors.ConfigurationDirector._settingFileManager
+  fullName: CG.Orange.Directors.ConfigurationDirector._settingFileManager
+  nameWithType: ConfigurationDirector._settingFileManager
+- uid: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
+  name: ReadConfigurationAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String, System.String, CancellationToken)
+  nameWithType: ConfigurationDirector.ReadConfigurationAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync*
+  name: ReadConfigurationAsync
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_
+  commentId: Overload:CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync
+  nameWithType: ConfigurationDirector.ReadConfigurationAsync
 - uid: CG.Orange.Directors.DirectorException
   name: DirectorException
   href: api/CG.Orange.Directors.DirectorException.html
@@ -732,6 +779,25 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.DirectorException.DirectorException
   nameWithType: DirectorException.DirectorException
+- uid: CG.Orange.Directors.IConfigurationDirector
+  name: IConfigurationDirector
+  href: api/CG.Orange.Directors.IConfigurationDirector.html
+  commentId: T:CG.Orange.Directors.IConfigurationDirector
+  fullName: CG.Orange.Directors.IConfigurationDirector
+  nameWithType: IConfigurationDirector
+- uid: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
+  name: ReadConfigurationAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Directors.IConfigurationDirector.html#CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String, System.String, CancellationToken)
+  nameWithType: IConfigurationDirector.ReadConfigurationAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync*
+  name: ReadConfigurationAsync
+  href: api/CG.Orange.Directors.IConfigurationDirector.html#CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_
+  commentId: Overload:CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync
+  nameWithType: IConfigurationDirector.ReadConfigurationAsync
 - uid: CG.Orange.Directors.ISeedDirector
   name: ISeedDirector
   href: api/CG.Orange.Directors.ISeedDirector.html
@@ -817,15 +883,15 @@ references:
   commentId: T:CG.Orange.Host.Controllers.SettingsController
   fullName: CG.Orange.Host.Controllers.SettingsController
   nameWithType: SettingsController
-- uid: CG.Orange.Host.Controllers.SettingsController.#ctor(ILogger{CG.Orange.Host.Controllers.SettingsController})
-  name: SettingsController(ILogger<SettingsController>)
-  href: api/CG.Orange.Host.Controllers.SettingsController.html#CG_Orange_Host_Controllers_SettingsController__ctor_ILogger_CG_Orange_Host_Controllers_SettingsController__
-  commentId: M:CG.Orange.Host.Controllers.SettingsController.#ctor(ILogger{CG.Orange.Host.Controllers.SettingsController})
-  name.vb: SettingsController(ILogger(Of SettingsController))
-  fullName: CG.Orange.Host.Controllers.SettingsController.SettingsController(ILogger<CG.Orange.Host.Controllers.SettingsController>)
-  fullName.vb: CG.Orange.Host.Controllers.SettingsController.SettingsController(ILogger(Of CG.Orange.Host.Controllers.SettingsController))
-  nameWithType: SettingsController.SettingsController(ILogger<SettingsController>)
-  nameWithType.vb: SettingsController.SettingsController(ILogger(Of SettingsController))
+- uid: CG.Orange.Host.Controllers.SettingsController.#ctor(CG.Orange.Directors.IConfigurationDirector,ILogger{CG.Orange.Host.Controllers.SettingsController})
+  name: SettingsController(IConfigurationDirector, ILogger<SettingsController>)
+  href: api/CG.Orange.Host.Controllers.SettingsController.html#CG_Orange_Host_Controllers_SettingsController__ctor_CG_Orange_Directors_IConfigurationDirector_ILogger_CG_Orange_Host_Controllers_SettingsController__
+  commentId: M:CG.Orange.Host.Controllers.SettingsController.#ctor(CG.Orange.Directors.IConfigurationDirector,ILogger{CG.Orange.Host.Controllers.SettingsController})
+  name.vb: SettingsController(IConfigurationDirector, ILogger(Of SettingsController))
+  fullName: CG.Orange.Host.Controllers.SettingsController.SettingsController(CG.Orange.Directors.IConfigurationDirector, ILogger<CG.Orange.Host.Controllers.SettingsController>)
+  fullName.vb: CG.Orange.Host.Controllers.SettingsController.SettingsController(CG.Orange.Directors.IConfigurationDirector, ILogger(Of CG.Orange.Host.Controllers.SettingsController))
+  nameWithType: SettingsController.SettingsController(IConfigurationDirector, ILogger<SettingsController>)
+  nameWithType.vb: SettingsController.SettingsController(IConfigurationDirector, ILogger(Of SettingsController))
 - uid: CG.Orange.Host.Controllers.SettingsController.#ctor*
   name: SettingsController
   href: api/CG.Orange.Host.Controllers.SettingsController.html#CG_Orange_Host_Controllers_SettingsController__ctor_
@@ -833,6 +899,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Controllers.SettingsController.SettingsController
   nameWithType: SettingsController.SettingsController
+- uid: CG.Orange.Host.Controllers.SettingsController._configurationDirector
+  name: _configurationDirector
+  href: api/CG.Orange.Host.Controllers.SettingsController.html#CG_Orange_Host_Controllers_SettingsController__configurationDirector
+  commentId: F:CG.Orange.Host.Controllers.SettingsController._configurationDirector
+  fullName: CG.Orange.Host.Controllers.SettingsController._configurationDirector
+  nameWithType: SettingsController._configurationDirector
 - uid: CG.Orange.Host.Controllers.SettingsController._logger
   name: _logger
   href: api/CG.Orange.Host.Controllers.SettingsController.html#CG_Orange_Host_Controllers_SettingsController__logger
@@ -1981,6 +2053,53 @@ references:
   commentId: N:CG.Orange.Plugins.Azure
   fullName: CG.Orange.Plugins.Azure
   nameWithType: CG.Orange.Plugins.Azure
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider
+  name: AzureSecretProvider
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html
+  commentId: T:CG.Orange.Plugins.Azure.AzureSecretProvider
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider
+  nameWithType: AzureSecretProvider
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor(SecretClient,ILogger{CG.Orange.Plugins.Azure.AzureSecretProvider})
+  name: AzureSecretProvider(SecretClient, ILogger<AzureSecretProvider>)
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__ctor_SecretClient_ILogger_CG_Orange_Plugins_Azure_AzureSecretProvider__
+  commentId: M:CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor(SecretClient,ILogger{CG.Orange.Plugins.Azure.AzureSecretProvider})
+  name.vb: AzureSecretProvider(SecretClient, ILogger(Of AzureSecretProvider))
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger<CG.Orange.Plugins.Azure.AzureSecretProvider>)
+  fullName.vb: CG.Orange.Plugins.Azure.AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger(Of CG.Orange.Plugins.Azure.AzureSecretProvider))
+  nameWithType: AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger<AzureSecretProvider>)
+  nameWithType.vb: AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger(Of AzureSecretProvider))
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor*
+  name: AzureSecretProvider
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__ctor_
+  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.AzureSecretProvider
+  nameWithType: AzureSecretProvider.AzureSecretProvider
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider._logger
+  name: _logger
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__logger
+  commentId: F:CG.Orange.Plugins.Azure.AzureSecretProvider._logger
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider._logger
+  nameWithType: AzureSecretProvider._logger
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider._secretClient
+  name: _secretClient
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__secretClient
+  commentId: F:CG.Orange.Plugins.Azure.AzureSecretProvider._secretClient
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider._secretClient
+  nameWithType: AzureSecretProvider._secretClient
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync(System.String,CancellationToken)
+  name: GetSecretAsync(String, CancellationToken)
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider_GetSecretAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync(System.String, CancellationToken)
+  nameWithType: AzureSecretProvider.GetSecretAsync(String, CancellationToken)
+- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync*
+  name: GetSecretAsync
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider_GetSecretAsync_
+  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync
+  isSpec: "True"
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync
+  nameWithType: AzureSecretProvider.GetSecretAsync
 - uid: CG.Orange.Plugins.Azure.Module
   name: Module
   href: api/CG.Orange.Plugins.Azure.Module.html
@@ -2016,6 +2135,93 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Plugins.Azure.Module.ConfigureServices
   nameWithType: Module.ConfigureServices
+- uid: CG.Orange.Plugins.Azure.Options
+  name: CG.Orange.Plugins.Azure.Options
+  href: api/CG.Orange.Plugins.Azure.Options.html
+  commentId: N:CG.Orange.Plugins.Azure.Options
+  fullName: CG.Orange.Plugins.Azure.Options
+  nameWithType: CG.Orange.Plugins.Azure.Options
+- uid: CG.Orange.Plugins.Azure.Options.AzureProviderOptions
+  name: AzureProviderOptions
+  href: api/CG.Orange.Plugins.Azure.Options.AzureProviderOptions.html
+  commentId: T:CG.Orange.Plugins.Azure.Options.AzureProviderOptions
+  fullName: CG.Orange.Plugins.Azure.Options.AzureProviderOptions
+  nameWithType: AzureProviderOptions
+- uid: CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri
+  name: KeyVaultUri
+  href: api/CG.Orange.Plugins.Azure.Options.AzureProviderOptions.html#CG_Orange_Plugins_Azure_Options_AzureProviderOptions_KeyVaultUri
+  commentId: P:CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri
+  fullName: CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri
+  nameWithType: AzureProviderOptions.KeyVaultUri
+- uid: CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri*
+  name: KeyVaultUri
+  href: api/CG.Orange.Plugins.Azure.Options.AzureProviderOptions.html#CG_Orange_Plugins_Azure_Options_AzureProviderOptions_KeyVaultUri_
+  commentId: Overload:CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri
+  isSpec: "True"
+  fullName: CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri
+  nameWithType: AzureProviderOptions.KeyVaultUri
+- uid: CG.Orange.Providers
+  name: CG.Orange.Providers
+  href: api/CG.Orange.Providers.html
+  commentId: N:CG.Orange.Providers
+  fullName: CG.Orange.Providers
+  nameWithType: CG.Orange.Providers
+- uid: CG.Orange.Providers.ISecretProvider
+  name: ISecretProvider
+  href: api/CG.Orange.Providers.ISecretProvider.html
+  commentId: T:CG.Orange.Providers.ISecretProvider
+  fullName: CG.Orange.Providers.ISecretProvider
+  nameWithType: ISecretProvider
+- uid: CG.Orange.Providers.ISecretProvider.GetSecretAsync(System.String,CancellationToken)
+  name: GetSecretAsync(String, CancellationToken)
+  href: api/CG.Orange.Providers.ISecretProvider.html#CG_Orange_Providers_ISecretProvider_GetSecretAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Providers.ISecretProvider.GetSecretAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Providers.ISecretProvider.GetSecretAsync(System.String, CancellationToken)
+  nameWithType: ISecretProvider.GetSecretAsync(String, CancellationToken)
+- uid: CG.Orange.Providers.ISecretProvider.GetSecretAsync*
+  name: GetSecretAsync
+  href: api/CG.Orange.Providers.ISecretProvider.html#CG_Orange_Providers_ISecretProvider_GetSecretAsync_
+  commentId: Overload:CG.Orange.Providers.ISecretProvider.GetSecretAsync
+  isSpec: "True"
+  fullName: CG.Orange.Providers.ISecretProvider.GetSecretAsync
+  nameWithType: ISecretProvider.GetSecretAsync
+- uid: CG.Orange.Providers.ProviderException
+  name: ProviderException
+  href: api/CG.Orange.Providers.ProviderException.html
+  commentId: T:CG.Orange.Providers.ProviderException
+  fullName: CG.Orange.Providers.ProviderException
+  nameWithType: ProviderException
+- uid: CG.Orange.Providers.ProviderException.#ctor
+  name: ProviderException()
+  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor
+  commentId: M:CG.Orange.Providers.ProviderException.#ctor
+  fullName: CG.Orange.Providers.ProviderException.ProviderException()
+  nameWithType: ProviderException.ProviderException()
+- uid: CG.Orange.Providers.ProviderException.#ctor(SerializationInfo,StreamingContext)
+  name: ProviderException(SerializationInfo, StreamingContext)
+  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:CG.Orange.Providers.ProviderException.#ctor(SerializationInfo,StreamingContext)
+  fullName: CG.Orange.Providers.ProviderException.ProviderException(SerializationInfo, StreamingContext)
+  nameWithType: ProviderException.ProviderException(SerializationInfo, StreamingContext)
+- uid: CG.Orange.Providers.ProviderException.#ctor(System.String)
+  name: ProviderException(String)
+  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_System_String_
+  commentId: M:CG.Orange.Providers.ProviderException.#ctor(System.String)
+  fullName: CG.Orange.Providers.ProviderException.ProviderException(System.String)
+  nameWithType: ProviderException.ProviderException(String)
+- uid: CG.Orange.Providers.ProviderException.#ctor(System.String,Exception)
+  name: ProviderException(String, Exception)
+  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_System_String_Exception_
+  commentId: M:CG.Orange.Providers.ProviderException.#ctor(System.String,Exception)
+  fullName: CG.Orange.Providers.ProviderException.ProviderException(System.String, Exception)
+  nameWithType: ProviderException.ProviderException(String, Exception)
+- uid: CG.Orange.Providers.ProviderException.#ctor*
+  name: ProviderException
+  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_
+  commentId: Overload:CG.Orange.Providers.ProviderException.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Providers.ProviderException.ProviderException
+  nameWithType: ProviderException.ProviderException
 - uid: CG.Orange.Repositories
   name: CG.Orange.Repositories
   href: api/CG.Orange.Repositories.html

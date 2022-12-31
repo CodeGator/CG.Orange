@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace CG.Orange.Plugins.Azure
+    <title>Interface IConfigurationDirector
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace CG.Orange.Plugins.Azure
+    <meta name="title" content="Interface IConfigurationDirector
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,22 +78,101 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Plugins.Azure">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Directors.IConfigurationDirector">
   
-  <h1 id="CG_Orange_Plugins_Azure" data-uid="CG.Orange.Plugins.Azure" class="text-break">Namespace CG.Orange.Plugins.Azure
+  
+  <h1 id="CG_Orange_Directors_IConfigurationDirector" data-uid="CG.Orange.Directors.IConfigurationDirector" class="text-break">Interface IConfigurationDirector
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This interface represent an object that reads complete configurations
+by combining data in the database with data in the cache, and data in
+remote secret locations we can't tell anyone about ... shhh!!</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Directors.html">CG.Orange.Directors</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Abstractions.dll</h6>
+  <h5 id="CG_Orange_Directors_IConfigurationDirector_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IConfigurationDirector</code></pre>
+  </div>
+  <h3 id="methods">Methods
   </h3>
-      <h4><a class="xref" href="CG.Orange.Plugins.Azure.AzureSecretProvider.html">AzureSecretProvider</a></h4>
-      <section><p>This class is an Azure implementation of the <see cref="!:ISecretProvider"></see>
-interface.</p>
-</section>
-      <h4><a class="xref" href="CG.Orange.Plugins.Azure.Module.html">Module</a></h4>
-      <section><p>This class represents the plugin module's startup logic.</p>
-</section>
+  <a id="CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_" data-uid="CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync*"></a>
+  <h4 id="CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)">ReadConfigurationAsync(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method returns a configuration for the given application and/or
+environment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Dictionary&lt;string, string&gt;&gt; ReadConfigurationAsync(string applicationName, string enviornmentName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">applicationName</span></td>
+        <td><p>The application name to use for the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">enviornmentName</span></td>
+        <td><p>The optional environment name to use
+for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a dictionary
+of key-value pairs, that comprise the configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Directors.DirectorException.html">DirectorException</a></td>
+        <td><p>This exception is thrown whenever the
+director fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
