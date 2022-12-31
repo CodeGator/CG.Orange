@@ -30,8 +30,9 @@ try
     builder.AddDataAccess(bootstrapLogger: BootstrapLogger.Instance())
         .AddRepositories(bootstrapLogger: BootstrapLogger.Instance())
         .AddManagers(bootstrapLogger: BootstrapLogger.Instance())
-        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance())
-        .AddSeeding<SeedDirector>(bootstrapLogger: BootstrapLogger.Instance());
+        .AddSeeding<SeedDirector>(bootstrapLogger: BootstrapLogger.Instance())
+        .AddBlazorPlugins(bootstrapLogger: BootstrapLogger.Instance())
+        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance());
 
     // Build the application.
     var app = builder.Build();
@@ -53,7 +54,8 @@ try
     // Use Orange stuff.
     app.UseDataAccess()
         .UseOrangeIdentity()
-        .UseSeeding();
+        .UseSeeding()
+        .UseBlazorPlugins();
 
     // Run the application.
     app.Run();
