@@ -391,6 +391,7 @@ internal class ProviderRepository : IProviderRepository
 
             // Perform the provider search.
             var providers = await _dbContext.Providers
+                .Include(x => x.Properties)
                 .AsNoTracking()
                 .ToListAsync(
                 cancellationToken
@@ -442,7 +443,8 @@ internal class ProviderRepository : IProviderRepository
             // Perform the provider search.
             var provider = await _dbContext.Providers.Where(x =>
                 x.Name == name
-                ).AsNoTracking()
+                ).Include(x => x.Properties)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(
                     cancellationToken
                     ).ConfigureAwait(false);
@@ -497,7 +499,8 @@ internal class ProviderRepository : IProviderRepository
             // Perform the provider search.
             var provider = await _dbContext.Providers.Where(x =>
                 x.Id == id
-                ).AsNoTracking()
+                ).Include(x => x.Properties)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(
                     cancellationToken
                     ).ConfigureAwait(false);
@@ -544,38 +547,24 @@ internal class ProviderRepository : IProviderRepository
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Converting a {entity} model to an entity",
-                nameof(ProviderModel)
-                );
-
-            // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.ProviderEntity>(
-                provider
-                );
+            // Look for the given provider.
+            var entity = await _dbContext.Providers.FirstOrDefaultAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
 
             // Did we fail?
             if (entity is null)
             {
                 // Panic!!
-                throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderModel)} model to an entity."
+                throw new KeyNotFoundException(
+                    $"The provider: {provider.Id} was not found!"
                     );
             }
 
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Updating a {entity} entity in the {ctx} data-context.",
-                nameof(ProviderModel),
-                nameof(OrangeDbContext)
-                );
-
-            // Start tracking the entity.
-            _dbContext.Providers.Attach(entity);
-
-            // Mark the entity as modified so EFCORE will update it.
-            _dbContext.Entry(entity).State = EntityState.Modified;
+            // Update the editable properties.
+            entity.Name = provider.Name;
+            entity.Description = provider.Description;
+            entity.IsDisabled = provider.IsDisabled;
 
             // We never change these 'read only' properties.
             _dbContext.Entry(entity).Property(x => x.Id).IsModified = false;

@@ -222,7 +222,7 @@ internal class ProviderManager : IProviderManager
                 {
                     // Encrypt the value, at rest.
                     property.Value = await _cryptographer.AesEncryptAsync(
-                        property.Key,
+                        property.Value,
                         cancellationToken
                         ).ConfigureAwait(false);
                 }
@@ -312,6 +312,172 @@ internal class ProviderManager : IProviderManager
     // *******************************************************************
 
     /// <inheritdoc />
+    public virtual async Task<ProviderModel> DisableAsync(
+        ProviderModel provider,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Can we take a shortcut?
+            if (provider.IsDisabled)
+            {
+                return provider; // Nothing to do.
+            }
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(ProviderModel)
+                );
+
+            // Ensure the stats are correct.
+            provider.LastUpdatedOnUtc = DateTime.UtcNow;
+            provider.LastUpdatedBy = userName;
+
+            // Are there any properties?
+            if (provider.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting {count} properties for provider: {name}",
+                    provider.Properties.Count(),
+                    provider.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in provider.Properties)
+                {
+                    // Encrypt the value, at rest.
+                    property.Value = await _cryptographer.AesEncryptAsync(
+                        property.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Disable the provider.
+            provider.IsDisabled = true;
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.UpdateAsync)
+                );
+
+            // Perform the operation.
+            return await _providerRepository.UpdateAsync(
+                provider,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to disable a provider!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to disable a provider!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<ProviderModel> EnableAsync(
+        ProviderModel provider,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Can we take a shortcut?
+            if (!provider.IsDisabled)
+            {
+                return provider; // Nothing to do.
+            }
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(ProviderModel)
+                );
+
+            // Ensure the stats are correct.
+            provider.LastUpdatedOnUtc = DateTime.UtcNow;
+            provider.LastUpdatedBy = userName;
+
+            // Are there any properties?
+            if (provider.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting {count} properties for provider: {name}",
+                    provider.Properties.Count(),
+                    provider.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in provider.Properties)
+                {
+                    // Encrypt the value, at rest.
+                    property.Value = await _cryptographer.AesEncryptAsync(
+                        property.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Enable the provider.
+            provider.IsDisabled = false;
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.UpdateAsync)
+                );
+
+            // Perform the operation.
+            return await _providerRepository.UpdateAsync(
+                provider,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to enable a provider!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to enable a provider!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
     public virtual async Task<IEnumerable<ProviderModel>> FindAllAsync(
         CancellationToken cancellationToken = default
         )
@@ -325,13 +491,25 @@ internal class ProviderManager : IProviderManager
                 );
 
             // Perform the operation.
-            var result = await _providerRepository.FindAllAsync(
+            var data = await _providerRepository.FindAllAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
+            // We must create the secondary list here because the loop(s)
+            //   below create temporary objects inside the enumeration
+            //   process, so, the work we do to decrypt the property values
+            //   gets lost unless we manually copy the results to another list.
+            var result = new List<ProviderModel>(); 
+
             // Loop through providers with properties.
-            foreach (var provider in result.Where(x => x.Properties.Any()))
+            foreach(var provider in data)
             {
+                // Ignore providers without properties.
+                if (!provider.Properties.Any())
+                {
+                    continue;
+                }
+
                 // Log what we are about to do.
                 _logger.LogDebug(
                     "Decrypting {count} properties for provider: {name}",
@@ -344,10 +522,13 @@ internal class ProviderManager : IProviderManager
                 {
                     // Decrypt the value.
                     property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Key,
+                        property.Value,
                         cancellationToken
                         ).ConfigureAwait(false);
                 }
+
+                // Add to the list.
+                result.Add( provider );
             }
 
             // Return the results.
@@ -415,7 +596,7 @@ internal class ProviderManager : IProviderManager
                 {
                     // Decrypt the value.
                     property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Key,
+                        property.Value,
                         cancellationToken
                         ).ConfigureAwait(false);
                 }
@@ -487,7 +668,7 @@ internal class ProviderManager : IProviderManager
                 {
                     // Decrypt the value.
                     property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Key,
+                        property.Value,
                         cancellationToken
                         ).ConfigureAwait(false);
                 }
@@ -553,7 +734,7 @@ internal class ProviderManager : IProviderManager
                 {
                     // Encrypt the value, at rest.
                     property.Value = await _cryptographer.AesEncryptAsync(
-                        property.Key,
+                        property.Value,
                         cancellationToken
                         ).ConfigureAwait(false);
                 }

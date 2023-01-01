@@ -76,6 +76,10 @@ internal class ProviderEntityMap : AuditedEntityMapBase<ProviderEntity>
             .IsUnicode(false)
             .IsRequired();
 
+        // Setup the property.
+        builder.Property(e => e.IsDisabled)
+            .IsRequired();
+
         // Setup the conversion.
         _modelBuilder.Entity<ProviderEntity>()
             .Property(e => e.ProviderType)

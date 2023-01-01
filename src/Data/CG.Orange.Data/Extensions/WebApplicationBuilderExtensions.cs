@@ -56,9 +56,9 @@ public static class WebApplicationBuilderExtensions003
         webApplicationBuilder.Services.AddAutoMapper(cfg =>
         {
             // Wire up the conversion maps.
-            cfg.CreateMap<SettingFileEntity, SettingFileModel>().ReverseMap();
-            cfg.CreateMap<ProviderEntity, ProviderModel>().ReverseMap();
-            cfg.CreateMap<ProviderPropertyEntity, ProviderPropertyModel>().ReverseMap();
+            cfg.CreateMap<SettingFileModel, SettingFileEntity>().ReverseMap();
+            cfg.CreateMap<ProviderModel, ProviderEntity>().ReverseMap();
+            cfg.CreateMap<ProviderPropertyModel, ProviderPropertyEntity>().ReverseMap();
         });
 
         // Return the application builder.

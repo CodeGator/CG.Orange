@@ -34,6 +34,9 @@ namespace CG.Orange.Data.Sqlite.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsDisabled")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("LastUpdatedBy")
                         .HasColumnType("TEXT");
 

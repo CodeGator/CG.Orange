@@ -1,0 +1,59 @@
+﻿@page "/admin/providers"
+@attribute [Authorize(Roles = "SuperAdmin")]
+
+<PageTitle>Providers</PageTitle>
+
+<MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
+
+<MudText Typo="Typo.h6">Providers</MudText>
+<MudText Typo="Typo.body1" Class="pb-5">Use this page to browse providers.</MudText>
+
+<MudTable Items="_providers"
+          Dense
+          Striped
+          Hover>
+    <ColGroup>
+        <col />
+        <col />
+        <col />
+        <col />
+    </ColGroup>
+    <ToolBarContent>
+        <MudSpacer />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Name)">Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.ProviderType)">Type</MudTableSortLabel></MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Disabled">
+            @if (context.IsDisabled)
+            {
+                <MudIconButton Color="Color.Warning" Icon="@Icons.Material.Rounded.CheckBox" OnClick="@(() => EnableProviderAsync(@context))" />
+            }
+            else
+            {
+                <MudIconButton Icon="@Icons.Material.Rounded.CheckBoxOutlineBlank" OnClick="@(() => DisableProviderAsync(@context))" />
+            }
+            </MudTd>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Type">@context.ProviderType</MudTd>
+        <MudTd>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+    <NoRecordsContent>
+        No providers were found.
+    </NoRecordsContent>
+    <LoadingContent>
+        Loading providers ...
+    </LoadingContent>
+</MudTable>
+
+
+
+

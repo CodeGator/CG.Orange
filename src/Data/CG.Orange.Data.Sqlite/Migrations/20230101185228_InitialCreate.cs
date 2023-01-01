@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CG.Orange.Data.SqlServer.Migrations
+namespace CG.Orange.Data.Sqlite.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -19,16 +19,17 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 schema: "Orange",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProviderType = table.Column<string>(type: "varchar(32)", unicode: false, maxLength: 32, nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    ProcessorType = table.Column<string>(type: "varchar(2048)", unicode: false, maxLength: 2048, nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastUpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastUpdatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ProviderType = table.Column<string>(type: "TEXT", unicode: false, maxLength: 32, nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 32, nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 255, nullable: true),
+                    ProcessorType = table.Column<string>(type: "TEXT", unicode: false, maxLength: 2048, nullable: false),
+                    IsDisabled = table.Column<bool>(type: "INTEGER", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    LastUpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    LastUpdatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -40,16 +41,16 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 schema: "Orange",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ApplicationName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    EnvironmentName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
-                    Json = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsDisabled = table.Column<bool>(type: "bit", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastUpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastUpdatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ApplicationName = table.Column<string>(type: "TEXT", maxLength: 32, nullable: false),
+                    EnvironmentName = table.Column<string>(type: "TEXT", maxLength: 32, nullable: true),
+                    Json = table.Column<string>(type: "TEXT", nullable: false),
+                    IsDisabled = table.Column<bool>(type: "INTEGER", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    LastUpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    LastUpdatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -61,15 +62,15 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 schema: "Orange",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProviderId = table.Column<int>(type: "int", nullable: false),
-                    Key = table.Column<string>(type: "varchar(900)", unicode: false, nullable: false),
-                    Value = table.Column<string>(type: "varchar(max)", unicode: false, nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    LastUpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastUpdatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ProviderId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Key = table.Column<string>(type: "TEXT", unicode: false, nullable: false),
+                    Value = table.Column<string>(type: "TEXT", unicode: false, nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    LastUpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    LastUpdatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -114,8 +115,7 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 schema: "Orange",
                 table: "SettingFiles",
                 columns: new[] { "ApplicationName", "EnvironmentName" },
-                unique: true,
-                filter: "[EnvironmentName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SettingsFiles",

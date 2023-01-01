@@ -359,12 +359,18 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 );
 
             // Perform the operation.
-            var result = await _providerPropertyRepository.FindAllAsync(
+            var data = await _providerPropertyRepository.FindAllAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
+            // We must create the secondary list here because the loop
+            //   below creates temporary objects inside the enumeration
+            //   process, so, the work we do to decrypt the property values
+            //   gets lost unless we manually copy the results to another list.
+            var result = new List<ProviderPropertyModel>();
+
             // Loop through the properties.
-            foreach (var providerProperty in result)
+            foreach (var providerProperty in data)
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -377,6 +383,9 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                     providerProperty.Key,
                     cancellationToken
                     ).ConfigureAwait(false);
+
+                // Add to the list.
+                result.Add(providerProperty);
             }
             
             // Return the results.

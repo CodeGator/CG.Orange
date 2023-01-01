@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Abstractions", "L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange", "Libraries\CG.Orange\CG.Orange.csproj", "{E76BB11A-52AD-436F-8697-1C8DCDF99FFF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50. Plugins", "50. Plugins", "{344ACA6F-897D-49CD-86D3-15D77E0B6EED}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "40. Plugins", "40. Plugins", "{344ACA6F-897D-49CD-86D3-15D77E0B6EED}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Clients", "Framework\CG.Orange.Clients\CG.Orange.Clients.csproj", "{9978E732-96C0-4BCB-B30D-2FC45F27BCAD}"
 EndProject
@@ -38,7 +38,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Data.Sqlite", "Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Controllers", "Libraries\CG.Orange.Controllers\CG.Orange.Controllers.csproj", "{703AADF0-AF3D-45C4-9154-37BA838B2300}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "40. Hosts", "40. Hosts", "{865B0A40-BDF4-4DF5-BBE1-157D0C6FC20E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50. Hosts", "50. Hosts", "{865B0A40-BDF4-4DF5-BBE1-157D0C6FC20E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Host", "Hosts\CG.Orange.Host\CG.Orange.Host.csproj", "{34E2993D-40C3-490A-A2F1-3093F1EA325D}"
 EndProject

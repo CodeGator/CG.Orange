@@ -43,53 +43,15 @@ public class ProviderModel : AuditedModelBase
     public string ProcessorType { get; set; } = null!;
 
     /// <summary>
+    /// This property indicates whether the provider is disabled, or not.
+    /// </summary>
+    public bool IsDisabled { get; set; }
+
+    /// <summary>
     /// This property contains the associated properties for the provider.
     /// </summary>
     [Required]
     public List<ProviderPropertyModel> Properties { get; set; } = new();
-
-    #endregion
-
-    // *******************************************************************
-    // Protected methods.
-    // *******************************************************************
-
-    #region Protected methods
-
-    /// <summary>
-    /// This method returns a hashcode for the object.
-    /// </summary>
-    /// <returns>A hashcode for the object.</returns>
-    public override int GetHashCode()
-    {
-        return Id.GetHashCode();
-    }
-
-    // *******************************************************************
-
-    /// <summary>
-    /// This method determines equality for the object.
-    /// </summary>
-    /// <param name="obj">The object to use for the operation.</param>
-    /// <returns><c>true</c> if the given object is equal to the current
-    /// instance, <c>false</c> otherwise.</returns>
-    public override bool Equals(object? obj)
-    {
-        // If the object is NULL they aren't equal.
-        if (obj is null)
-        {
-            return false;
-        }
-
-        // If the types don't match they aren't equal.
-        if (obj is not ProviderModel)
-        {
-            return false;
-        }
-
-        // Identity is determined by the Id property.
-        return (obj as ProviderModel)?.Id == Id;
-    }
 
     #endregion
 }
