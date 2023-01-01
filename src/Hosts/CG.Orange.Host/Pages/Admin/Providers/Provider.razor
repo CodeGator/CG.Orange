@@ -1,0 +1,120 @@
+﻿@page "/admin/providers/provider/{ProviderId:int}"
+@attribute [Authorize(Roles = "SuperAdmin")]
+
+<PageTitle>Provider</PageTitle>
+
+<MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
+
+<MudText Typo="Typo.h6">Provider</MudText>
+<MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the provider.</MudText>
+
+@if (_model is null)
+{
+    <MudText Class="py-5" Typo="Typo.h6" Color="Color.Warning">Ooops! we couldn't find that provider!</MudText>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(() => NavigationManager.NavigateTo("/admin/providers"))">Back to Providers</MudButton>
+}
+else
+{
+    <EditForm Model="_model" OnValidSubmit="OnValidSubmit">
+        <DataAnnotationsValidator />
+        <MudGrid>
+            <MudItem xs="12">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Save Changes</MudButton>
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField AutoFocus
+                              Variant="Variant.Outlined"
+                              Label="Name"
+                              For="@(() => _model.Name)"
+                @bind-Value="@_model.Name" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField Variant="Variant.Outlined"
+                              Label="Description"
+                              For="@(() => _model.Description)"
+                              Lines="4"
+                @bind-Value="@_model.Description" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudSwitch Label="Disabled"
+                           Color="Color.Warning"
+                           For="@(() => _model.IsDisabled)"
+                @bind-Value="@_model.IsDisabled" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudTable Items="_model.Properties"
+                          Dense
+                          Striped
+                          Hover>
+                    <ToolBarContent>
+                        <MudText Typo="Typo.h6">Properties</MudText>
+                        <MudButton StartIcon="@Icons.Material.Filled.Create"
+                                   Class="mt-1 ml-10"
+                                   Color="Color.Secondary"
+                                   Variant="Variant.Filled"
+                                   OnClick="OnCreateAsync">Create</MudButton>
+                        <MudSpacer />
+                    </ToolBarContent>
+                    <HeaderContent>
+                        <MudTh><MudTableSortLabel SortBy="new Func<ProviderPropertyModel, object>(x=>x.Key)">Key</MudTableSortLabel></MudTh>
+                        <MudTh><MudTableSortLabel SortBy="new Func<ProviderPropertyModel, object>(x=>x.Value)">Value</MudTableSortLabel></MudTh>
+                        <MudTh></MudTh>
+                    </HeaderContent>
+                    <RowTemplate Context="context2">
+                        <MudTd DataLabel="Key">@context2.Key</MudTd>
+                        <MudTd DataLabel="Value"><MudTextField T="string" InputType="InputType.Password" ReadOnly Text="@context2.Value" /></MudTd>
+                        <MudTd>
+                            <MudTooltip Text="Edit property">
+                                <MudIconButton Icon="@Icons.Material.Rounded.Edit" OnClick="@(() => OnEditAsync(@context2))" />
+                            </MudTooltip>
+                            <MudTooltip Text="Delete property">
+                                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeleteAsync(@context2))" />
+                            </MudTooltip>
+                        </MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager />
+                    </PagerContent>
+                    <NoRecordsContent>
+                        No properties were found.
+                    </NoRecordsContent>
+                    <LoadingContent>
+                        Loading properties ...
+                    </LoadingContent>
+                </MudTable>
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string"
+                              Variant="Variant.Outlined"
+                              Label="Created On"
+                              ReadOnly
+                              Text="@_model.CreatedOnUtc.ToLocalTime().ToString()" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField Variant="Variant.Outlined"
+                              Label="Created By"
+                              ReadOnly
+                              For="@(() => _model.CreatedBy)"
+                @bind-Value="@_model.CreatedBy" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField T="string"
+                              Variant="Variant.Outlined"
+                              Label="Last Updated On"
+                              ReadOnly
+                              Text="@(_model.LastUpdatedOnUtc == null ? "" : _model.LastUpdatedOnUtc.Value.ToLocalTime().ToString())" />
+            </MudItem>
+            <MudItem xs="6">
+                <MudTextField Variant="Variant.Outlined"
+                              Label="Last Updated By"
+                              ReadOnly
+                              For="@(() => _model.LastUpdatedBy)"
+                @bind-Value="@_model.LastUpdatedBy" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Save Changes</MudButton>
+            </MudItem>
+        </MudGrid>
+    </EditForm>
+
+}

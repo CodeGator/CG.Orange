@@ -233,5 +233,92 @@ public partial class Index
         }
     }
 
+    // *******************************************************************
+
+    /// <summary>
+    /// This method deletes the given provider.
+    /// </summary>
+    /// <param name="provider">The provider to use for the operation.</param>
+    /// <returns>A task to perform the operation.</returns>
+    protected async Task OnDeleteAsync(
+        ProviderModel provider
+        )
+    {
+        try
+        {
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Prompting the caller."
+                );
+
+            // Prompt the user.
+            var result = await DialogService.ShowMessageBox(
+                title: "Purple",
+                markupMessage: new MarkupString("This will delete " +
+                $"the provider <b>'{provider.Name}'</b> <br /><br /> " +
+                "Are you <i>sure</i> you want to do that?"),
+                noText: "Cancel"
+                );
+
+            // Did the user cancel?
+            if (result.HasValue && !result.Value)
+            {
+                return; // Nothing more to do.
+            }
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Saving the change to the database."
+                );
+
+            // Remove the provider.
+            await ProviderManager.DeleteAsync(
+                provider,
+                UserName
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Showing the snackbar message."
+                );
+
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"Provider was deleted",
+                Severity.Success,
+                options => options.CloseAfterNavigation = true
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Refreshing the page data."
+                );
+
+            // Get the list of providers.
+            _providers = await ProviderManager.FindAllAsync();
+        }
+        catch (Exception ex)
+        {
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"<b>Something broke!</b> " +
+                $"<ul><li>{ex.GetBaseException().Message}</li></ul>",
+                Severity.Error,
+                options => options.CloseAfterNavigation = true
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <summary>
+    /// This method creates a new provider.
+    /// </summary>
+    /// <returns>A task to perform the operation.</returns>
+    protected async Task OnCreateAsync()
+    {
+
+    }
+
     #endregion
 }

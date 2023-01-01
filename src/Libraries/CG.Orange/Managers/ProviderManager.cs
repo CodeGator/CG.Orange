@@ -340,26 +340,8 @@ internal class ProviderManager : IProviderManager
             provider.LastUpdatedOnUtc = DateTime.UtcNow;
             provider.LastUpdatedBy = userName;
 
-            // Are there any properties?
-            if (provider.Properties.Any())
-            {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Encrypting {count} properties for provider: {name}",
-                    provider.Properties.Count(),
-                    provider.Name
-                    );
-
-                // Loop through the properties.
-                foreach (var property in provider.Properties)
-                {
-                    // Encrypt the value, at rest.
-                    property.Value = await _cryptographer.AesEncryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
-            }
+            // The repository doesn't update the associated properties, so
+            //   we don't need to encrypt them here.
 
             // Disable the provider.
             provider.IsDisabled = true;
@@ -423,26 +405,8 @@ internal class ProviderManager : IProviderManager
             provider.LastUpdatedOnUtc = DateTime.UtcNow;
             provider.LastUpdatedBy = userName;
 
-            // Are there any properties?
-            if (provider.Properties.Any())
-            {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Encrypting {count} properties for provider: {name}",
-                    provider.Properties.Count(),
-                    provider.Name
-                    );
-
-                // Loop through the properties.
-                foreach (var property in provider.Properties)
-                {
-                    // Encrypt the value, at rest.
-                    property.Value = await _cryptographer.AesEncryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
-            }
+            // The repository doesn't update the associated properties, so
+            //   we don't need to encrypt them here.
 
             // Enable the provider.
             provider.IsDisabled = false;
@@ -719,26 +683,8 @@ internal class ProviderManager : IProviderManager
             provider.LastUpdatedOnUtc = DateTime.UtcNow;
             provider.LastUpdatedBy = userName;
 
-            // Are there any properties?
-            if (provider.Properties.Any())
-            {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Encrypting {count} properties for provider: {name}",
-                    provider.Properties.Count(),
-                    provider.Name
-                    );
-
-                // Loop through the properties.
-                foreach (var property in provider.Properties)
-                {
-                    // Encrypt the value, at rest.
-                    property.Value = await _cryptographer.AesEncryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
-            }
+            // The repository doesn't update the associated properties, so
+            //   we don't need to encrypt them here.
 
             // Log what we are about to do.
             _logger.LogTrace(

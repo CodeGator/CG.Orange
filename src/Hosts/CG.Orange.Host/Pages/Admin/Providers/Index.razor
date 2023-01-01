@@ -19,6 +19,10 @@
         <col />
     </ColGroup>
     <ToolBarContent>
+        <MudButton StartIcon="@Icons.Material.Filled.Create"
+                   Class="mt-1 mr-2"
+                   Variant="Variant.Filled"
+                   OnClick="OnCreateAsync">Create</MudButton>
         <MudSpacer />
     </ToolBarContent>
     <HeaderContent>
@@ -41,6 +45,12 @@
         <MudTd DataLabel="Name">@context.Name</MudTd>
         <MudTd DataLabel="Type">@context.ProviderType</MudTd>
         <MudTd>
+            <MudTooltip Text="Edit provider">
+                <MudIconButton Icon="@Icons.Material.Rounded.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/providers/provider/{context.Id}"))" />
+            </MudTooltip>
+            <MudTooltip Text="Delete provider">
+                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />
+            </MudTooltip>
         </MudTd>
     </RowTemplate>
     <PagerContent>

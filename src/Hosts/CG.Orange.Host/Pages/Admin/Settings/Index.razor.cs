@@ -171,7 +171,7 @@ public partial class Index
 
             // Tell the world what happened.
             SnackbarService.Add(
-                $"setting file was deleted",
+                $"Setting file was deleted",
                 Severity.Success,
                 options => options.CloseAfterNavigation = true
                 );
