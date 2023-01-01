@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ModelBase
+    <title>Class ProviderModel
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ModelBase
+    <meta name="title" content="Class ProviderModel
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,22 +78,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Models.ModelBase">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Models.ProviderModel">
   
   
-  <h1 id="CG_Orange_Models_ModelBase" data-uid="CG.Orange.Models.ModelBase" class="text-break">Class ModelBase
+  <h1 id="CG_Orange_Models_ProviderModel" data-uid="CG.Orange.Models.ProviderModel" class="text-break">Class ProviderModel
   </h1>
-  <div class="markdown level0 summary"><p>This class represents a base model.</p>
+  <div class="markdown level0 summary"><p>This class represents a provider.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ModelBase</span></div>
-      <div class="level2"><a class="xref" href="CG.Orange.Models.SettingFileModel.html">SettingFileModel</a></div>
+    <div class="level1"><a class="xref" href="CG.Orange.Models.AuditedModelBase.html">AuditedModelBase</a></div>
+    <div class="level2"><span class="xref">ProviderModel</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedBy">AuditedModelBase.CreatedBy</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedOnUtc">AuditedModelBase.CreatedOnUtc</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedBy">AuditedModelBase.LastUpdatedBy</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedOnUtc">AuditedModelBase.LastUpdatedOnUtc</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -118,20 +130,20 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Models.html">CG.Orange.Models</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.Primitives.dll</h6>
-  <h5 id="CG_Orange_Models_ModelBase_syntax">Syntax</h5>
+  <h5 id="CG_Orange_Models_ProviderModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ModelBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProviderModel : AuditedModelBase</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="CG_Orange_Models_ModelBase_CreatedBy_" data-uid="CG.Orange.Models.ModelBase.CreatedBy*"></a>
-  <h4 id="CG_Orange_Models_ModelBase_CreatedBy" data-uid="CG.Orange.Models.ModelBase.CreatedBy">CreatedBy</h4>
-  <div class="markdown level1 summary"><p>This property contains the name of the person who created the model.</p>
+  <a id="CG_Orange_Models_ProviderModel_Description_" data-uid="CG.Orange.Models.ProviderModel.Description*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_Description" data-uid="CG.Orange.Models.ProviderModel.Description">Description</h4>
+  <div class="markdown level1 summary"><p>This property contains the optional description for the provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CreatedBy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,14 +160,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ModelBase_CreatedOnUtc_" data-uid="CG.Orange.Models.ModelBase.CreatedOnUtc*"></a>
-  <h4 id="CG_Orange_Models_ModelBase_CreatedOnUtc" data-uid="CG.Orange.Models.ModelBase.CreatedOnUtc">CreatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>This property contains the date/time when the model was created.</p>
+  <a id="CG_Orange_Models_ProviderModel_Id_" data-uid="CG.Orange.Models.ProviderModel.Id*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_Id" data-uid="CG.Orange.Models.ProviderModel.Id">Id</h4>
+  <div class="markdown level1 summary"><p>This property contains the identifier for the provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime CreatedOnUtc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,19 +179,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ModelBase_LastUpdatedBy_" data-uid="CG.Orange.Models.ModelBase.LastUpdatedBy*"></a>
-  <h4 id="CG_Orange_Models_ModelBase_LastUpdatedBy" data-uid="CG.Orange.Models.ModelBase.LastUpdatedBy">LastUpdatedBy</h4>
-  <div class="markdown level1 summary"><p>This property contains the name of the last person to update the model.</p>
+  <a id="CG_Orange_Models_ProviderModel_IsDisabled_" data-uid="CG.Orange.Models.ProviderModel.IsDisabled*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_IsDisabled" data-uid="CG.Orange.Models.ProviderModel.IsDisabled">IsDisabled</h4>
+  <div class="markdown level1 summary"><p>This property indicates whether the provider is disabled, or not.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string LastUpdatedBy { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsDisabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Models_ProviderModel_Name_" data-uid="CG.Orange.Models.ProviderModel.Name*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_Name" data-uid="CG.Orange.Models.ProviderModel.Name">Name</h4>
+  <div class="markdown level1 summary"><p>This property contains the name for the provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,14 +232,14 @@
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ModelBase_LastUpdatedOnUtc_" data-uid="CG.Orange.Models.ModelBase.LastUpdatedOnUtc*"></a>
-  <h4 id="CG_Orange_Models_ModelBase_LastUpdatedOnUtc" data-uid="CG.Orange.Models.ModelBase.LastUpdatedOnUtc">LastUpdatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>This property contains the date/time when the model was last updated.</p>
+  <a id="CG_Orange_Models_ProviderModel_ProcessorType_" data-uid="CG.Orange.Models.ProviderModel.ProcessorType*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_ProcessorType" data-uid="CG.Orange.Models.ProviderModel.ProcessorType">ProcessorType</h4>
+  <div class="markdown level1 summary"><p>This property contains the .NET type for the associated processor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime? LastUpdatedOnUtc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ProcessorType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,7 +251,55 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Models_ProviderModel_Properties_" data-uid="CG.Orange.Models.ProviderModel.Properties*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_Properties" data-uid="CG.Orange.Models.ProviderModel.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>This property contains the associated properties for the provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ProviderPropertyModel&gt; Properties { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="CG.Orange.Models.ProviderPropertyModel.html">ProviderPropertyModel</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Models_ProviderModel_ProviderType_" data-uid="CG.Orange.Models.ProviderModel.ProviderType*"></a>
+  <h4 id="CG_Orange_Models_ProviderModel_ProviderType" data-uid="CG.Orange.Models.ProviderModel.ProviderType">ProviderType</h4>
+  <div class="markdown level1 summary"><p>This property contains the provider type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProviderType ProviderType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Models.ProviderType.html">ProviderType</a></td>
         <td></td>
       </tr>
     </tbody>

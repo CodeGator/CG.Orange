@@ -18,7 +18,31 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Entities.AuditedEntityBase.html",
-          "hash": "KHSOAuBkIKCPBbskNihbz817ieY1xlFhNGuUhRSci7Y="
+          "hash": "eHGU/JEBD2z6QJy6FWghgGTBOxKtYViD/90oGzjaxwM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Data.Entities.ProviderEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Data.Entities.ProviderEntity.html",
+          "hash": "Secy5jdOAA2iKXTGTDNKAESgtW6RdkErY3WeXkNI2mo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Data.Entities.ProviderPropertyEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Data.Entities.ProviderPropertyEntity.html",
+          "hash": "QV8SVCwanPgHy9ykZm2fcmhm9U4jWEN0qWEGcZXUnQU="
         }
       },
       "is_incremental": false,
@@ -30,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Entities.SettingFileEntity.html",
-          "hash": "M7rMsHjnwqdBKx4c1iOwT269n4oU31UGWR98lxDeGzo="
+          "hash": "6EZWPBuU05jNT4gntl4P9O/GlHm0G2Oljvuh5Svexiw="
         }
       },
       "is_incremental": false,
@@ -42,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Entities.html",
-          "hash": "6QJgEa8SDFktc8HEh+hyOlE8tkUaGpyQB1C9wI/OHPs="
+          "hash": "+WMrz8GpKVJfNReD+/q62TLA98hmcbvI2D2YqbPkq0o="
         }
       },
       "is_incremental": false,
@@ -54,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html",
-          "hash": "KV7X2mSVezpa7EqeUgJpB/4EDEgHxNyhwCLhF9l6KTc="
+          "hash": "MT0FxkambpdSzVhQ7hBLMLNTaTY+h9bWEVMLQjsCWE4="
         }
       },
       "is_incremental": false,
@@ -62,11 +86,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Data.Maps.SettingFileMap.yml",
+      "source_relative_path": "api/CG.Orange.Data.Maps.ProviderEntityMap.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Data.Maps.SettingFileMap.html",
-          "hash": "8qQG9EY2E8I4Y+0z45PoPSXNfdD5t0m/iJvdYF7zagg="
+          "relative_path": "api/CG.Orange.Data.Maps.ProviderEntityMap.html",
+          "hash": "kAT3saK06KcuYb1DvWLLwh0LQKGXI/BIH3r7/B/ibE8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.html",
+          "hash": "nh28qtk/uhM1Nv9ZWZmP65dTlqG+xPyo9yTVX7OTAxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Data.Maps.SettingFileEntityMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Data.Maps.SettingFileEntityMap.html",
+          "hash": "Aq2+buLNEGF315kdCWUuRT9ETeYM2rDNHpMUFzD0BnM="
         }
       },
       "is_incremental": false,
@@ -78,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Maps.html",
-          "hash": "stZh6WxtxHDUziuvMFMDtTFtuM4fYlhiAdgc7U1RweE="
+          "hash": "dmLT04StfA/N18QfSTEsIBYS3TQVpdOVrcRzYQpTiww="
         }
       },
       "is_incremental": false,
@@ -90,7 +138,31 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.OrangeDbContext.html",
-          "hash": "r+NO68WRUC8d/CClMdSgIqVglOFMiYb+iXAzZ2HhJpA="
+          "hash": "WPejcKHE/4UTzG/9Po4CYKqt7/Nu1eqjVCLkuG3iv4g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Data.Repositories.ProviderPropertyRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html",
+          "hash": "T0dVrn/Vx0y154/Dh09qO622w9V5aOwDE3ver2Li48s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Data.Repositories.ProviderRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Data.Repositories.ProviderRepository.html",
+          "hash": "iHYLKIQqxXCpMIFMCv+j5wVmpeoN3FBXpESfkh66wkI="
         }
       },
       "is_incremental": false,
@@ -114,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Repositories.html",
-          "hash": "rvR+UZI/4ViK6GmZDRQ55SOCVxyJohFg63asDLWrjrE="
+          "hash": "K7CPrSOtUVnWYZpulxoDsoWzRxkszgyzEFv4e56BO4Y="
         }
       },
       "is_incremental": false,
@@ -150,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.SqlServer.Migrations.InitialCreate.html",
-          "hash": "+7qDMry1l3A5Xm5LGyOc8iWioU9IF1nJ0oofW6h89M4="
+          "hash": "2SOaKRLOtpQBilXa5WQXuk173RF86bQhn0Pj38uDZD4="
         }
       },
       "is_incremental": false,
@@ -210,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.Sqlite.Migrations.InitialCreate.html",
-          "hash": "OH4ca6UwJabLkeRVdWMWG/YnjpFEIkfJZh5yu6+YVcM="
+          "hash": "GPe+1eEtGdBVuxX0nGNAIxs5D5SP+r8dBBuWlcL1lpM="
         }
       },
       "is_incremental": false,
@@ -270,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Data.html",
-          "hash": "EnFB7F1KDK0jVLnk6+HHfFqP6EZOTkGxR17u3iw2ph4="
+          "hash": "iVCBpB6YvOm5bE+cZUDrd9ZncIvv4OvQKdvfTWBvngc="
         }
       },
       "is_incremental": false,
@@ -330,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.SeedDirector.html",
-          "hash": "z/eJF3pKqfuTLfXy4S109o3Dm9zN8FiyMPCw0cn3sNM="
+          "hash": "DyTREbw7zzVbLNPRrihSb5z0s23MkfgHx7ePr0CC17g="
         }
       },
       "is_incremental": false,
@@ -343,6 +415,66 @@
         ".html": {
           "relative_path": "api/CG.Orange.Directors.html",
           "hash": "iMQ3k0vCjvknkUPcwsEqqvJwzmEef9PuQ0dhEcMJx+U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Globals.Models.AuditedModelBases.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Globals.Models.AuditedModelBases.html",
+          "hash": "QHpbtmRGLrNRJ/+YpZWslDmFiD2CLtN8VvfG2O5AWO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Globals.Models.Providers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Globals.Models.Providers.html",
+          "hash": "Cnx+88pfyAQdtm+DB1Vs5q3BMMEHE64Swr80a6z/KdI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Globals.Models.SettingFiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Globals.Models.SettingFiles.html",
+          "hash": "0J0RDpeY42E3GSWKiPfukHnS696JHPHGLAtxO7BBW3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Globals.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Globals.Models.html",
+          "hash": "oQLrK3BlSx/FKPyR2PwNfld0+n3R1g+D0DAv1Ktnweg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Globals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Globals.html",
+          "hash": "jEWHX/vygDyDYL6DM37P44t51LOeDVz3SdcPpoqGTEg="
         }
       },
       "is_incremental": false,
@@ -415,6 +547,54 @@
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.Account.html",
           "hash": "6UPtpdXhmNwfH2sp/c7ITrAVHUdHi2odFqLLKjm6nS0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.Index.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.Index.html",
+          "hash": "JPutZa9z4JTp216yvFCDgWmw2W1afuuh7XViUbkZJW4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.PropertyDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.PropertyDialog.html",
+          "hash": "rNy5SSSMtyhbA+7sHI55ihUc4qG79uQ7AB3Q8K6Oz98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.Provider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.Provider.html",
+          "hash": "CHu6+HyWyadAtU/hnaWsk1DhI2k9hR0FvCMzAWszdvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.Pages.Admin.Providers.html",
+          "hash": "PMElLAzQdBtX332zHh3wweXk5x0pozsVTPuqpLrElBw="
         }
       },
       "is_incremental": false,
@@ -578,6 +758,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Managers.IProviderManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Managers.IProviderManager.html",
+          "hash": "PYdKc/BHF0rKpiE3YH88loYzdrp+6vwA+PYJvDB0FE0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Managers.IProviderPropertyManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Managers.IProviderPropertyManager.html",
+          "hash": "KbPCqDGCEgz8fakhOHeS1DDfjx53HEKGU9T1BzLFX6A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Managers.ISettingFileManager.yml",
       "output": {
         ".html": {
@@ -602,6 +806,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Managers.ProviderManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Managers.ProviderManager.html",
+          "hash": "1llDWs92j/5wVyHwltRLSLRdJrl17IbYFEoLeCtEkyY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Managers.ProviderPropertyManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Managers.ProviderPropertyManager.html",
+          "hash": "noj7UlxEhFEnjyDzh22DzXP0wT4ZE6wcFWkCqxHDbLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Managers.SettingFileManager.yml",
       "output": {
         ".html": {
@@ -618,7 +846,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Managers.html",
-          "hash": "ME4sGoxiyTF6/jZvCAPaQq2KYekHv+4FwRAgnge7mtQ="
+          "hash": "t59eezWh2mALHIbk8VD+zF7y+/DEov2+n1NNUSzQgmM="
         }
       },
       "is_incremental": false,
@@ -626,11 +854,47 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Models.ModelBase.yml",
+      "source_relative_path": "api/CG.Orange.Models.AuditedModelBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Models.ModelBase.html",
-          "hash": "VNw9J8xEmr1ctI94PIgTgkBFATm9OveW91dJFZPOePc="
+          "relative_path": "api/CG.Orange.Models.AuditedModelBase.html",
+          "hash": "xyTLyIJwZVhWSnMMvH593AlAMofTPY6NlcSKnKj0zFs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Models.ProviderModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Models.ProviderModel.html",
+          "hash": "YtKjNqU8NQar8iapSxAJHG967H0QcI79IQ/bPl1J7js="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Models.ProviderPropertyModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Models.ProviderPropertyModel.html",
+          "hash": "4kls/GQRH3wGXY136FLi06rJUrNBeF3iDUW81z8/zsM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Models.ProviderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Models.ProviderType.html",
+          "hash": "GJ1c66pPLVsXRNUIcAXG7DmjuHyTTbmbDJiwG9I6D3c="
         }
       },
       "is_incremental": false,
@@ -654,7 +918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Models.SettingFileModel.html",
-          "hash": "R0cMxZDU5zt7baEpjo3ekZMCSItWNB66U1Fx+dV1M6k="
+          "hash": "8cFvipt6mVJKvM5fB2iNErK9/ggW7MPEJ/OgVeGjBns="
         }
       },
       "is_incremental": false,
@@ -666,7 +930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Models.html",
-          "hash": "gWW+0szPUo5zlMvutl0PexEtno8KagjRqtjaXnWzrqE="
+          "hash": "3H0fPLMJRIJUHeJPKHl3VedXwGQMod+YMWyUpB4oPK8="
         }
       },
       "is_incremental": false,
@@ -686,11 +950,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Options.SeedingOptions.yml",
+      "source_relative_path": "api/CG.Orange.Options.ProviderOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Options.SeedingOptions.html",
-          "hash": "dwGIo/Ltk4yhBOVOkhXfOFl0ivS8uM/TSEhn/DBHbUw="
+          "relative_path": "api/CG.Orange.Options.ProviderOptions.html",
+          "hash": "xUsuUvfc4LcMUHHfcOGxdbqd9uHWpP2oNY1TyY/fKRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Options.SettingFileOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Options.SettingFileOptions.html",
+          "hash": "2pgnXsbaBIsjWF/Ef2N7AvBCixTUPFIkIAlsTCvHKGY="
         }
       },
       "is_incremental": false,
@@ -702,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Options.html",
-          "hash": "bWmBDqI7AUmjsdisJ2kAV474CxcB6zrVEJfws1UY4lY="
+          "hash": "L9Qze/YCFZxjoLvbJIFBviJT6aoyk0bGIqiKTs5b4fM="
         }
       },
       "is_incremental": false,
@@ -710,11 +986,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretProvider.yml",
+      "source_relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretClientFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretProvider.html",
-          "hash": "PBkUOc8vBIF/UpgANsn35tfreqdkJ5JLFjXenwPChq8="
+          "relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretClientFactory.html",
+          "hash": "Y1EF+TurtNNT3JNhMQBgjOpB2NgbjO52FiwzZKQ4+4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html",
+          "hash": "Ge9q6UNunrG6MOHoVBEDhpeRMY/euAV1urIMfqyM9oI="
         }
       },
       "is_incremental": false,
@@ -762,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Plugins.Azure.html",
-          "hash": "lfaXujl7NzBI825dNp2fbNe1pEqaWahM0jx/Srqnras="
+          "hash": "YMiqJNcDxL67zJ2MuZ0XTeLR33otVcFaSMK5E2KkgMc="
         }
       },
       "is_incremental": false,
@@ -770,11 +1058,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Providers.ISecretProvider.yml",
+      "source_relative_path": "api/CG.Orange.Processors.ISecretProcessor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Providers.ISecretProvider.html",
-          "hash": "7k2B5hJyC9U7TPwxvec5mqAzcJirA3UmbcW4bdUbNTM="
+          "relative_path": "api/CG.Orange.Processors.ISecretProcessor.html",
+          "hash": "O3QTMi0c0pOpdh8BBNe+ltw5nQNSOQmHJd6ae+e0Xuc="
         }
       },
       "is_incremental": false,
@@ -782,11 +1070,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Providers.ProviderException.yml",
+      "source_relative_path": "api/CG.Orange.Processors.ProcessorException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Providers.ProviderException.html",
-          "hash": "2Mrk8lVqFOevmU+eHBkgTbINZ402VcJsBGj2PFYYEkk="
+          "relative_path": "api/CG.Orange.Processors.ProcessorException.html",
+          "hash": "dUPd1ET5VccHd8NHVyZxueQmNHg1UnJFTMrchSFXmZs="
         }
       },
       "is_incremental": false,
@@ -794,11 +1082,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Providers.yml",
+      "source_relative_path": "api/CG.Orange.Processors.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Orange.Providers.html",
-          "hash": "9tbn3QEP+zHmGGJQPSlSyseAXrkhFOfL+nR90LvNwVo="
+          "relative_path": "api/CG.Orange.Processors.html",
+          "hash": "SJFskq+k89p54GBRZmQFz78TGtZW0vrawAm3nYO+oB0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Repositories.IProviderPropertyRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Repositories.IProviderPropertyRepository.html",
+          "hash": "qEDkjHVgxMvgqit/SdbV6u/Hti1YDQRcosSPv9LnjfQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Repositories.IProviderRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Repositories.IProviderRepository.html",
+          "hash": "0LVU/btGxNBdoIQ+HYGxdtt/OioTG27ayRHI4dnvOIo="
         }
       },
       "is_incremental": false,
@@ -834,7 +1146,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Repositories.html",
-          "hash": "9muoZ9xYmrntKbS8U1JXTedUy/vQvstWIQ9Ep65FbEw="
+          "hash": "AoyT+JogDeaUGDXAd3A587pqtM40ZAxynZeAFCzbviw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.html",
+          "hash": "iqtWjIA5WZpw8RVGWplQe4puo5a5jrE7OlKr7/9nEpc="
         }
       },
       "is_incremental": false,
@@ -858,7 +1182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html",
-          "hash": "9kOKfZEjJxPaMLygKHmJZXRPPXgCxz2nbxR7u4NojKk="
+          "hash": "2hY/CQ8h1AdnWi6knEkyxuUH0ktTM/4K+/a8uQ+hUq4="
         }
       },
       "is_incremental": false,
@@ -870,7 +1194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html",
-          "hash": "e/zKaUWJ8uL1ePFGBuo10AU4LRcDh+qkX8a4oG0o/sc="
+          "hash": "5mK06it23MMZCs/h4t2KL85nY1eF9HnG9M5BJbTTiSI="
         }
       },
       "is_incremental": false,
@@ -906,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "3jeB7A+6+cCVmB4CmC/BW3Pj2eh38HLheru3rBMESDk="
+          "hash": "P/38kHFM+ct/SKoXie+clGnjMexEBYO3ze8amEWXoXc="
         }
       },
       "is_incremental": false,
@@ -998,7 +1322,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "dUVWX6ZI08C3Z1DOLBIq/gslc/gU6WoIapA3PZ9zAqA="
+          "hash": "mYl7oQzFVIQ7AxqLyTjkCnIfzkVWy7ZpHgk/FfxrHXU="
         }
       },
       "is_incremental": false,
@@ -1025,7 +1349,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 74,
+          "total_file_count": 101,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -1,0 +1,800 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IProviderPropertyRepository
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IProviderPropertyRepository
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Repositories.IProviderPropertyRepository">
+  
+  
+  <h1 id="CG_Orange_Repositories_IProviderPropertyRepository" data-uid="CG.Orange.Repositories.IProviderPropertyRepository" class="text-break">Interface IProviderPropertyRepository
+  </h1>
+  <div class="markdown level0 summary"><p>This interface represents an object that manages the storage and retrieval of
+<see cref="!:ProviderPropertyModel"></see> objects.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Repositories.html">CG.Orange.Repositories</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Abstractions.dll</h6>
+  <h5 id="CG_Orange_Repositories_IProviderPropertyRepository_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IProviderPropertyRepository</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_AnyAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_AnyAsync_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:ProviderPropertyModel"></see> objects
+in the underlying storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; AnyAsync(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>A task to perform the operation that returns <code>true</code> if there
+are any <see cref="!:ProviderPropertyModel"></see> objects; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_AnyByProviderAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_AnyByProviderAsync_ProviderModel_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync(ProviderModel,CancellationToken)">AnyByProviderAsync(ProviderModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:ProviderPropertyModel"></see> objects
+in the underlying storage that are associated with the given provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; AnyByProviderAsync(ProviderModel provider, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The provider to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>A task to perform the operation that returns <code>true</code> if there
+are any <see cref="!:ProviderPropertyModel"></see> objects; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_CountAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.CountAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_CountAsync_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:ProviderPropertyModel"></see> objects in the
+underlying storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;long&gt; CountAsync(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><p>A task to perform the operation that returns a count of the
+number of <see cref="!:ProviderPropertyModel"></see> objects in the underlying storage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_CountByProviderAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_CountByProviderAsync_ProviderModel_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync(ProviderModel,CancellationToken)">CountByProviderAsync(ProviderModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:ProviderPropertyModel"></see> objects in the
+underlying storage that are associated with the given provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; CountByProviderAsync(ProviderModel provider, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The provider to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>A task to perform the operation that returns a count of the
+number of <see cref="!:ProviderPropertyModel"></see> objects in the underlying storage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_CreateAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_CreateAsync_ProviderPropertyModel_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync(ProviderPropertyModel,CancellationToken)">CreateAsync(ProviderPropertyModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method creates a new <see cref="!:ProviderPropertyModel"></see> object in the
+underlying storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ProviderPropertyModel&gt; CreateAsync(ProviderPropertyModel providerProperty, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderPropertyModel</span></td>
+        <td><span class="parametername">providerProperty</span></td>
+        <td><p>The model to create in the underlying storage.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ProviderPropertyModel</span>&gt;</td>
+        <td><p>A task to perform the operation that returns the newly created
+<see cref="!:ProviderPropertyModel"></see> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_DeleteAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_DeleteAsync_ProviderPropertyModel_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync(ProviderPropertyModel,CancellationToken)">DeleteAsync(ProviderPropertyModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method deletes an existing <see cref="!:ProviderPropertyModel"></see> object from the
+underlying storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteAsync(ProviderPropertyModel providerProperty, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderPropertyModel</span></td>
+        <td><span class="parametername">providerProperty</span></td>
+        <td><p>The model to delete from the underlying storage.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task to perform the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_FindAllAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:ProviderPropertyModel"></see> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;ProviderPropertyModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">ProviderPropertyModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a sequence of
+<see cref="!:ProviderPropertyModel"></see> objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_FindByIdAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_FindByIdAsync_System_Int32_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync(System.Int32,CancellationToken)">FindByIdAsync(Int32, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method searches for a matching <see cref="!:ProviderPropertyModel"></see> object using the
+given identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ProviderPropertyModel?&gt; FindByIdAsync(int id, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The identifier to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderPropertyModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a <see cref="!:ProviderPropertyModel"></see>
+objects, if a match was found, of <code>NULL</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_FindByProviderAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_FindByProviderAsync_ProviderModel_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync(ProviderModel,CancellationToken)">FindByProviderAsync(ProviderModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:ProviderPropertyModel"></see> objects
+that belong to the given provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;ProviderPropertyModel&gt;&gt; FindByProviderAsync(ProviderModel provider, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The provider to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">ProviderPropertyModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a sequence of
+<see cref="!:ProviderPropertyModel"></see> objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IProviderPropertyRepository_UpdateAsync_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IProviderPropertyRepository_UpdateAsync_ProviderPropertyModel_CancellationToken_" data-uid="CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync(ProviderPropertyModel,CancellationToken)">UpdateAsync(ProviderPropertyModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method updates an existing <see cref="!:ProviderPropertyModel"></see> object in the
+underlying storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ProviderPropertyModel&gt; UpdateAsync(ProviderPropertyModel providerProperty, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderPropertyModel</span></td>
+        <td><span class="parametername">providerProperty</span></td>
+        <td><p>The model to update in the underlying storage.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ProviderPropertyModel</span>&gt;</td>
+        <td><p>A task to perform the operation that returns the newly updated
+<see cref="!:ProviderPropertyModel"></see> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

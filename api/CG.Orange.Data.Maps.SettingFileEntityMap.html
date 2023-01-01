@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AuditedEntityMapBase&lt;TEntity&gt;
+    <title>Class SettingFileEntityMap
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AuditedEntityMapBase&lt;TEntity&gt;
+    <meta name="title" content="Class SettingFileEntityMap
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,54 +78,44 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.Maps.SettingFileEntityMap">
   
   
-  <h1 id="CG_Orange_Data_Maps_AuditedEntityMapBase_1" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1" class="text-break">Class AuditedEntityMapBase&lt;TEntity&gt;
+  <h1 id="CG_Orange_Data_Maps_SettingFileEntityMap" data-uid="CG.Orange.Data.Maps.SettingFileEntityMap" class="text-break">Class SettingFileEntityMap
   </h1>
-  <div class="markdown level0 summary"><p>This class represents a base map for entity types derived from <see cref="!:AuditedEntityBase"></see></p>
+  <div class="markdown level0 summary"><p>This class maps properties for the <see cref="!:SettingFileEntity"></see>
+entity type.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AuditedEntityMapBase&lt;TEntity&gt;</span></div>
-      <div class="level2"><a class="xref" href="CG.Orange.Data.Maps.ProviderEntityMap.html">ProviderEntityMap</a></div>
-      <div class="level2"><a class="xref" href="CG.Orange.Data.Maps.ProviderPropertyEntityMap.html">ProviderPropertyEntityMap</a></div>
-      <div class="level2"><a class="xref" href="CG.Orange.Data.Maps.SettingFileEntityMap.html">SettingFileEntityMap</a></div>
+    <div class="level1"><a class="xref" href="CG.Orange.Data.Maps.AuditedEntityMapBase-1.html">AuditedEntityMapBase</a>&lt;<span class="xref">SettingFileEntity</span>&gt;</div>
+    <div class="level2"><span class="xref">SettingFileEntityMap</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1__modelBuilder">AuditedEntityMapBase&lt;SettingFileEntity&gt;._modelBuilder</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Data.Maps.html">CG.Orange.Data.Maps</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.Data.dll</h6>
-  <h5 id="CG_Orange_Data_Maps_AuditedEntityMapBase_1_syntax">Syntax</h5>
+  <h5 id="CG_Orange_Data_Maps_SettingFileEntityMap_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">abstract class AuditedEntityMapBase&lt;TEntity&gt; : IEntityTypeConfiguration&lt;TEntity&gt; where TEntity : AuditedEntityBase</code></pre>
+    <pre><code class="lang-csharp hljs">class SettingFileEntityMap : AuditedEntityMapBase&lt;SettingFileEntity&gt;</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TEntity</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Data_Maps_AuditedEntityMapBase_1__ctor_" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1.#ctor*"></a>
-  <h4 id="CG_Orange_Data_Maps_AuditedEntityMapBase_1__ctor_ModelBuilder_" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1.#ctor(ModelBuilder)">AuditedEntityMapBase(ModelBuilder)</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Data.Maps.AuditedEntityMapBase-1.html">AuditedEntityMapBase&lt;TEntity&gt;</a>
+  <a id="CG_Orange_Data_Maps_SettingFileEntityMap__ctor_" data-uid="CG.Orange.Data.Maps.SettingFileEntityMap.#ctor*"></a>
+  <h4 id="CG_Orange_Data_Maps_SettingFileEntityMap__ctor_ModelBuilder_" data-uid="CG.Orange.Data.Maps.SettingFileEntityMap.#ctor(ModelBuilder)">SettingFileEntityMap(ModelBuilder)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Data.Maps.SettingFileEntityMap.html">SettingFileEntityMap</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AuditedEntityMapBase(ModelBuilder modelBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingFileEntityMap(ModelBuilder modelBuilder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,41 +135,16 @@ class.</p>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <h4 id="CG_Orange_Data_Maps_AuditedEntityMapBase_1__modelBuilder" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1._modelBuilder">_modelBuilder</h4>
-  <div class="markdown level1 summary"><p>This field contains the model builder for this map.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ModelBuilder _modelBuilder</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ModelBuilder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Data_Maps_AuditedEntityMapBase_1_Configure_" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure*"></a>
-  <h4 id="CG_Orange_Data_Maps_AuditedEntityMapBase_1_Configure_EntityTypeBuilder__0__" data-uid="CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure(EntityTypeBuilder{`0})">Configure(EntityTypeBuilder&lt;TEntity&gt;)</h4>
-  <div class="markdown level1 summary"><p>This method configures the <code data-dev-comment-type="typeparamref" class="typeparamref">TEntity</code> entity.</p>
+  <a id="CG_Orange_Data_Maps_SettingFileEntityMap_Configure_" data-uid="CG.Orange.Data.Maps.SettingFileEntityMap.Configure*"></a>
+  <h4 id="CG_Orange_Data_Maps_SettingFileEntityMap_Configure_EntityTypeBuilder_SettingFileEntity__" data-uid="CG.Orange.Data.Maps.SettingFileEntityMap.Configure(EntityTypeBuilder{SettingFileEntity})">Configure(EntityTypeBuilder&lt;SettingFileEntity&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method configures the <see cref="!:SettingFileEntity"></see> entity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Configure(EntityTypeBuilder&lt;TEntity&gt; builder)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Configure(EntityTypeBuilder&lt;SettingFileEntity&gt; builder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,13 +157,15 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EntityTypeBuilder</span>&lt;TEntity&gt;</td>
+        <td><span class="xref">EntityTypeBuilder</span>&lt;<span class="xref">SettingFileEntity</span>&gt;</td>
         <td><span class="parametername">builder</span></td>
         <td><p>The builder to use for the operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">CG.Orange.Data.Maps.AuditedEntityMapBase&lt;SettingFileEntity&gt;.Configure(EntityTypeBuilder&lt;SettingFileEntity&gt;)</span></div>
 </article>
           </div>
           

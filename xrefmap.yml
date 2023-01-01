@@ -1,6 +1,12 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: CG.Orange
+  name: CG.Orange
+  href: api/CG.Orange.html
+  commentId: N:CG.Orange
+  fullName: CG.Orange
+  nameWithType: CG.Orange
 - uid: CG.Orange.Data
   name: CG.Orange.Data
   href: api/CG.Orange.Data.html
@@ -71,6 +77,174 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
   nameWithType: AuditedEntityBase.LastUpdatedOnUtc
+- uid: CG.Orange.Data.Entities.ProviderEntity
+  name: ProviderEntity
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html
+  commentId: T:CG.Orange.Data.Entities.ProviderEntity
+  fullName: CG.Orange.Data.Entities.ProviderEntity
+  nameWithType: ProviderEntity
+- uid: CG.Orange.Data.Entities.ProviderEntity.Description
+  name: Description
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Description
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.Description
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Description
+  nameWithType: ProviderEntity.Description
+- uid: CG.Orange.Data.Entities.ProviderEntity.Description*
+  name: Description
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Description_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.Description
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Description
+  nameWithType: ProviderEntity.Description
+- uid: CG.Orange.Data.Entities.ProviderEntity.Id
+  name: Id
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Id
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.Id
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Id
+  nameWithType: ProviderEntity.Id
+- uid: CG.Orange.Data.Entities.ProviderEntity.Id*
+  name: Id
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Id_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.Id
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Id
+  nameWithType: ProviderEntity.Id
+- uid: CG.Orange.Data.Entities.ProviderEntity.IsDisabled
+  name: IsDisabled
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_IsDisabled
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.IsDisabled
+  fullName: CG.Orange.Data.Entities.ProviderEntity.IsDisabled
+  nameWithType: ProviderEntity.IsDisabled
+- uid: CG.Orange.Data.Entities.ProviderEntity.IsDisabled*
+  name: IsDisabled
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_IsDisabled_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.IsDisabled
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.IsDisabled
+  nameWithType: ProviderEntity.IsDisabled
+- uid: CG.Orange.Data.Entities.ProviderEntity.Name
+  name: Name
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Name
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.Name
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Name
+  nameWithType: ProviderEntity.Name
+- uid: CG.Orange.Data.Entities.ProviderEntity.Name*
+  name: Name
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Name_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.Name
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Name
+  nameWithType: ProviderEntity.Name
+- uid: CG.Orange.Data.Entities.ProviderEntity.ProcessorType
+  name: ProcessorType
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_ProcessorType
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.ProcessorType
+  fullName: CG.Orange.Data.Entities.ProviderEntity.ProcessorType
+  nameWithType: ProviderEntity.ProcessorType
+- uid: CG.Orange.Data.Entities.ProviderEntity.ProcessorType*
+  name: ProcessorType
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_ProcessorType_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.ProcessorType
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.ProcessorType
+  nameWithType: ProviderEntity.ProcessorType
+- uid: CG.Orange.Data.Entities.ProviderEntity.Properties
+  name: Properties
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Properties
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.Properties
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Properties
+  nameWithType: ProviderEntity.Properties
+- uid: CG.Orange.Data.Entities.ProviderEntity.Properties*
+  name: Properties
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_Properties_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.Properties
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.Properties
+  nameWithType: ProviderEntity.Properties
+- uid: CG.Orange.Data.Entities.ProviderEntity.ProviderType
+  name: ProviderType
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_ProviderType
+  commentId: P:CG.Orange.Data.Entities.ProviderEntity.ProviderType
+  fullName: CG.Orange.Data.Entities.ProviderEntity.ProviderType
+  nameWithType: ProviderEntity.ProviderType
+- uid: CG.Orange.Data.Entities.ProviderEntity.ProviderType*
+  name: ProviderType
+  href: api/CG.Orange.Data.Entities.ProviderEntity.html#CG_Orange_Data_Entities_ProviderEntity_ProviderType_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderEntity.ProviderType
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderEntity.ProviderType
+  nameWithType: ProviderEntity.ProviderType
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity
+  name: ProviderPropertyEntity
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html
+  commentId: T:CG.Orange.Data.Entities.ProviderPropertyEntity
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity
+  nameWithType: ProviderPropertyEntity
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Id
+  name: Id
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Id
+  commentId: P:CG.Orange.Data.Entities.ProviderPropertyEntity.Id
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Id
+  nameWithType: ProviderPropertyEntity.Id
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Id*
+  name: Id
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Id_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderPropertyEntity.Id
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Id
+  nameWithType: ProviderPropertyEntity.Id
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Key
+  name: Key
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Key
+  commentId: P:CG.Orange.Data.Entities.ProviderPropertyEntity.Key
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Key
+  nameWithType: ProviderPropertyEntity.Key
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Key*
+  name: Key
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Key_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderPropertyEntity.Key
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Key
+  nameWithType: ProviderPropertyEntity.Key
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Provider
+  name: Provider
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Provider
+  commentId: P:CG.Orange.Data.Entities.ProviderPropertyEntity.Provider
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Provider
+  nameWithType: ProviderPropertyEntity.Provider
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Provider*
+  name: Provider
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Provider_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderPropertyEntity.Provider
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Provider
+  nameWithType: ProviderPropertyEntity.Provider
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.ProviderId
+  name: ProviderId
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_ProviderId
+  commentId: P:CG.Orange.Data.Entities.ProviderPropertyEntity.ProviderId
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.ProviderId
+  nameWithType: ProviderPropertyEntity.ProviderId
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.ProviderId*
+  name: ProviderId
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_ProviderId_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderPropertyEntity.ProviderId
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.ProviderId
+  nameWithType: ProviderPropertyEntity.ProviderId
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Value
+  name: Value
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Value
+  commentId: P:CG.Orange.Data.Entities.ProviderPropertyEntity.Value
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Value
+  nameWithType: ProviderPropertyEntity.Value
+- uid: CG.Orange.Data.Entities.ProviderPropertyEntity.Value*
+  name: Value
+  href: api/CG.Orange.Data.Entities.ProviderPropertyEntity.html#CG_Orange_Data_Entities_ProviderPropertyEntity_Value_
+  commentId: Overload:CG.Orange.Data.Entities.ProviderPropertyEntity.Value
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Value
+  nameWithType: ProviderPropertyEntity.Value
 - uid: CG.Orange.Data.Entities.SettingFileEntity
   name: SettingFileEntity
   href: api/CG.Orange.Data.Entities.SettingFileEntity.html
@@ -103,32 +277,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Entities.SettingFileEntity.EnvironmentName
   nameWithType: SettingFileEntity.EnvironmentName
-- uid: CG.Orange.Data.Entities.SettingFileEntity.Equals(System.Object)
-  name: Equals(Object)
-  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Equals_System_Object_
-  commentId: M:CG.Orange.Data.Entities.SettingFileEntity.Equals(System.Object)
-  fullName: CG.Orange.Data.Entities.SettingFileEntity.Equals(System.Object)
-  nameWithType: SettingFileEntity.Equals(Object)
-- uid: CG.Orange.Data.Entities.SettingFileEntity.Equals*
-  name: Equals
-  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Equals_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.Equals
-  isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFileEntity.Equals
-  nameWithType: SettingFileEntity.Equals
-- uid: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
-  name: GetHashCode()
-  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_GetHashCode
-  commentId: M:CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
-  fullName: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode()
-  nameWithType: SettingFileEntity.GetHashCode()
-- uid: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode*
-  name: GetHashCode
-  href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_GetHashCode_
-  commentId: Overload:CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
-  isSpec: "True"
-  fullName: CG.Orange.Data.Entities.SettingFileEntity.GetHashCode
-  nameWithType: SettingFileEntity.GetHashCode
 - uid: CG.Orange.Data.Entities.SettingFileEntity.Id
   name: Id
   href: api/CG.Orange.Data.Entities.SettingFileEntity.html#CG_Orange_Data_Entities_SettingFileEntity_Id
@@ -226,41 +374,111 @@ references:
   fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).Configure
   nameWithType: AuditedEntityMapBase<TEntity>.Configure
   nameWithType.vb: AuditedEntityMapBase(Of TEntity).Configure
-- uid: CG.Orange.Data.Maps.SettingFileMap
-  name: SettingFileMap
-  href: api/CG.Orange.Data.Maps.SettingFileMap.html
-  commentId: T:CG.Orange.Data.Maps.SettingFileMap
-  fullName: CG.Orange.Data.Maps.SettingFileMap
-  nameWithType: SettingFileMap
-- uid: CG.Orange.Data.Maps.SettingFileMap.#ctor(ModelBuilder)
-  name: SettingFileMap(ModelBuilder)
-  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap__ctor_ModelBuilder_
-  commentId: M:CG.Orange.Data.Maps.SettingFileMap.#ctor(ModelBuilder)
-  fullName: CG.Orange.Data.Maps.SettingFileMap.SettingFileMap(ModelBuilder)
-  nameWithType: SettingFileMap.SettingFileMap(ModelBuilder)
-- uid: CG.Orange.Data.Maps.SettingFileMap.#ctor*
-  name: SettingFileMap
-  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap__ctor_
-  commentId: Overload:CG.Orange.Data.Maps.SettingFileMap.#ctor
+- uid: CG.Orange.Data.Maps.ProviderEntityMap
+  name: ProviderEntityMap
+  href: api/CG.Orange.Data.Maps.ProviderEntityMap.html
+  commentId: T:CG.Orange.Data.Maps.ProviderEntityMap
+  fullName: CG.Orange.Data.Maps.ProviderEntityMap
+  nameWithType: ProviderEntityMap
+- uid: CG.Orange.Data.Maps.ProviderEntityMap.#ctor(ModelBuilder)
+  name: ProviderEntityMap(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.ProviderEntityMap.html#CG_Orange_Data_Maps_ProviderEntityMap__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.ProviderEntityMap.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.ProviderEntityMap.ProviderEntityMap(ModelBuilder)
+  nameWithType: ProviderEntityMap.ProviderEntityMap(ModelBuilder)
+- uid: CG.Orange.Data.Maps.ProviderEntityMap.#ctor*
+  name: ProviderEntityMap
+  href: api/CG.Orange.Data.Maps.ProviderEntityMap.html#CG_Orange_Data_Maps_ProviderEntityMap__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.ProviderEntityMap.#ctor
   isSpec: "True"
-  fullName: CG.Orange.Data.Maps.SettingFileMap.SettingFileMap
-  nameWithType: SettingFileMap.SettingFileMap
-- uid: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFileEntity})
-  name: Configure(EntityTypeBuilder<SettingFileEntity>)
-  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_SettingFileEntity__
-  commentId: M:CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.SettingFileEntity})
-  name.vb: Configure(EntityTypeBuilder(Of SettingFileEntity))
-  fullName: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder<CG.Orange.Data.Entities.SettingFileEntity>)
-  fullName.vb: CG.Orange.Data.Maps.SettingFileMap.Configure(EntityTypeBuilder(Of CG.Orange.Data.Entities.SettingFileEntity))
-  nameWithType: SettingFileMap.Configure(EntityTypeBuilder<SettingFileEntity>)
-  nameWithType.vb: SettingFileMap.Configure(EntityTypeBuilder(Of SettingFileEntity))
-- uid: CG.Orange.Data.Maps.SettingFileMap.Configure*
+  fullName: CG.Orange.Data.Maps.ProviderEntityMap.ProviderEntityMap
+  nameWithType: ProviderEntityMap.ProviderEntityMap
+- uid: CG.Orange.Data.Maps.ProviderEntityMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.ProviderEntity})
+  name: Configure(EntityTypeBuilder<ProviderEntity>)
+  href: api/CG.Orange.Data.Maps.ProviderEntityMap.html#CG_Orange_Data_Maps_ProviderEntityMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_ProviderEntity__
+  commentId: M:CG.Orange.Data.Maps.ProviderEntityMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.ProviderEntity})
+  name.vb: Configure(EntityTypeBuilder(Of ProviderEntity))
+  fullName: CG.Orange.Data.Maps.ProviderEntityMap.Configure(EntityTypeBuilder<CG.Orange.Data.Entities.ProviderEntity>)
+  fullName.vb: CG.Orange.Data.Maps.ProviderEntityMap.Configure(EntityTypeBuilder(Of CG.Orange.Data.Entities.ProviderEntity))
+  nameWithType: ProviderEntityMap.Configure(EntityTypeBuilder<ProviderEntity>)
+  nameWithType.vb: ProviderEntityMap.Configure(EntityTypeBuilder(Of ProviderEntity))
+- uid: CG.Orange.Data.Maps.ProviderEntityMap.Configure*
   name: Configure
-  href: api/CG.Orange.Data.Maps.SettingFileMap.html#CG_Orange_Data_Maps_SettingFileMap_Configure_
-  commentId: Overload:CG.Orange.Data.Maps.SettingFileMap.Configure
+  href: api/CG.Orange.Data.Maps.ProviderEntityMap.html#CG_Orange_Data_Maps_ProviderEntityMap_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.ProviderEntityMap.Configure
   isSpec: "True"
-  fullName: CG.Orange.Data.Maps.SettingFileMap.Configure
-  nameWithType: SettingFileMap.Configure
+  fullName: CG.Orange.Data.Maps.ProviderEntityMap.Configure
+  nameWithType: ProviderEntityMap.Configure
+- uid: CG.Orange.Data.Maps.ProviderPropertyEntityMap
+  name: ProviderPropertyEntityMap
+  href: api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.html
+  commentId: T:CG.Orange.Data.Maps.ProviderPropertyEntityMap
+  fullName: CG.Orange.Data.Maps.ProviderPropertyEntityMap
+  nameWithType: ProviderPropertyEntityMap
+- uid: CG.Orange.Data.Maps.ProviderPropertyEntityMap.#ctor(ModelBuilder)
+  name: ProviderPropertyEntityMap(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.html#CG_Orange_Data_Maps_ProviderPropertyEntityMap__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.ProviderPropertyEntityMap.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.ProviderPropertyEntityMap.ProviderPropertyEntityMap(ModelBuilder)
+  nameWithType: ProviderPropertyEntityMap.ProviderPropertyEntityMap(ModelBuilder)
+- uid: CG.Orange.Data.Maps.ProviderPropertyEntityMap.#ctor*
+  name: ProviderPropertyEntityMap
+  href: api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.html#CG_Orange_Data_Maps_ProviderPropertyEntityMap__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.ProviderPropertyEntityMap.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.ProviderPropertyEntityMap.ProviderPropertyEntityMap
+  nameWithType: ProviderPropertyEntityMap.ProviderPropertyEntityMap
+- uid: CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.ProviderPropertyEntity})
+  name: Configure(EntityTypeBuilder<ProviderPropertyEntity>)
+  href: api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.html#CG_Orange_Data_Maps_ProviderPropertyEntityMap_Configure_EntityTypeBuilder_CG_Orange_Data_Entities_ProviderPropertyEntity__
+  commentId: M:CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure(EntityTypeBuilder{CG.Orange.Data.Entities.ProviderPropertyEntity})
+  name.vb: Configure(EntityTypeBuilder(Of ProviderPropertyEntity))
+  fullName: CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure(EntityTypeBuilder<CG.Orange.Data.Entities.ProviderPropertyEntity>)
+  fullName.vb: CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure(EntityTypeBuilder(Of CG.Orange.Data.Entities.ProviderPropertyEntity))
+  nameWithType: ProviderPropertyEntityMap.Configure(EntityTypeBuilder<ProviderPropertyEntity>)
+  nameWithType.vb: ProviderPropertyEntityMap.Configure(EntityTypeBuilder(Of ProviderPropertyEntity))
+- uid: CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure*
+  name: Configure
+  href: api/CG.Orange.Data.Maps.ProviderPropertyEntityMap.html#CG_Orange_Data_Maps_ProviderPropertyEntityMap_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure
+  nameWithType: ProviderPropertyEntityMap.Configure
+- uid: CG.Orange.Data.Maps.SettingFileEntityMap
+  name: SettingFileEntityMap
+  href: api/CG.Orange.Data.Maps.SettingFileEntityMap.html
+  commentId: T:CG.Orange.Data.Maps.SettingFileEntityMap
+  fullName: CG.Orange.Data.Maps.SettingFileEntityMap
+  nameWithType: SettingFileEntityMap
+- uid: CG.Orange.Data.Maps.SettingFileEntityMap.#ctor(ModelBuilder)
+  name: SettingFileEntityMap(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.SettingFileEntityMap.html#CG_Orange_Data_Maps_SettingFileEntityMap__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.SettingFileEntityMap.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.SettingFileEntityMap.SettingFileEntityMap(ModelBuilder)
+  nameWithType: SettingFileEntityMap.SettingFileEntityMap(ModelBuilder)
+- uid: CG.Orange.Data.Maps.SettingFileEntityMap.#ctor*
+  name: SettingFileEntityMap
+  href: api/CG.Orange.Data.Maps.SettingFileEntityMap.html#CG_Orange_Data_Maps_SettingFileEntityMap__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.SettingFileEntityMap.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.SettingFileEntityMap.SettingFileEntityMap
+  nameWithType: SettingFileEntityMap.SettingFileEntityMap
+- uid: CG.Orange.Data.Maps.SettingFileEntityMap.Configure(EntityTypeBuilder{SettingFileEntity})
+  name: Configure(EntityTypeBuilder<SettingFileEntity>)
+  href: api/CG.Orange.Data.Maps.SettingFileEntityMap.html#CG_Orange_Data_Maps_SettingFileEntityMap_Configure_EntityTypeBuilder_SettingFileEntity__
+  commentId: M:CG.Orange.Data.Maps.SettingFileEntityMap.Configure(EntityTypeBuilder{SettingFileEntity})
+  name.vb: Configure(EntityTypeBuilder(Of SettingFileEntity))
+  fullName: CG.Orange.Data.Maps.SettingFileEntityMap.Configure(EntityTypeBuilder<SettingFileEntity>)
+  fullName.vb: CG.Orange.Data.Maps.SettingFileEntityMap.Configure(EntityTypeBuilder(Of SettingFileEntity))
+  nameWithType: SettingFileEntityMap.Configure(EntityTypeBuilder<SettingFileEntity>)
+  nameWithType.vb: SettingFileEntityMap.Configure(EntityTypeBuilder(Of SettingFileEntity))
+- uid: CG.Orange.Data.Maps.SettingFileEntityMap.Configure*
+  name: Configure
+  href: api/CG.Orange.Data.Maps.SettingFileEntityMap.html#CG_Orange_Data_Maps_SettingFileEntityMap_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.SettingFileEntityMap.Configure
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.SettingFileEntityMap.Configure
+  nameWithType: SettingFileEntityMap.Configure
 - uid: CG.Orange.Data.OrangeDbContext
   name: OrangeDbContext
   href: api/CG.Orange.Data.OrangeDbContext.html
@@ -296,6 +514,32 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.OrangeDbContext.OnModelCreating
   nameWithType: OrangeDbContext.OnModelCreating
+- uid: CG.Orange.Data.OrangeDbContext.ProviderProperties
+  name: ProviderProperties
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_ProviderProperties
+  commentId: P:CG.Orange.Data.OrangeDbContext.ProviderProperties
+  fullName: CG.Orange.Data.OrangeDbContext.ProviderProperties
+  nameWithType: OrangeDbContext.ProviderProperties
+- uid: CG.Orange.Data.OrangeDbContext.ProviderProperties*
+  name: ProviderProperties
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_ProviderProperties_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.ProviderProperties
+  isSpec: "True"
+  fullName: CG.Orange.Data.OrangeDbContext.ProviderProperties
+  nameWithType: OrangeDbContext.ProviderProperties
+- uid: CG.Orange.Data.OrangeDbContext.Providers
+  name: Providers
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_Providers
+  commentId: P:CG.Orange.Data.OrangeDbContext.Providers
+  fullName: CG.Orange.Data.OrangeDbContext.Providers
+  nameWithType: OrangeDbContext.Providers
+- uid: CG.Orange.Data.OrangeDbContext.Providers*
+  name: Providers
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_Providers_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.Providers
+  isSpec: "True"
+  fullName: CG.Orange.Data.OrangeDbContext.Providers
+  nameWithType: OrangeDbContext.Providers
 - uid: CG.Orange.Data.OrangeDbContext.SettingFiles
   name: SettingFiles
   href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_SettingFiles
@@ -315,6 +559,326 @@ references:
   commentId: N:CG.Orange.Data.Repositories
   fullName: CG.Orange.Data.Repositories
   nameWithType: CG.Orange.Data.Repositories
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository
+  name: ProviderPropertyRepository
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html
+  commentId: T:CG.Orange.Data.Repositories.ProviderPropertyRepository
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository
+  nameWithType: ProviderPropertyRepository
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{IProviderPropertyRepository})
+  name: ProviderPropertyRepository(OrangeDbContext, IMapper, ILogger<IProviderPropertyRepository>)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository__ctor_CG_Orange_Data_OrangeDbContext_IMapper_ILogger_IProviderPropertyRepository__
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{IProviderPropertyRepository})
+  name.vb: ProviderPropertyRepository(OrangeDbContext, IMapper, ILogger(Of IProviderPropertyRepository))
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.ProviderPropertyRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger<IProviderPropertyRepository>)
+  fullName.vb: CG.Orange.Data.Repositories.ProviderPropertyRepository.ProviderPropertyRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger(Of IProviderPropertyRepository))
+  nameWithType: ProviderPropertyRepository.ProviderPropertyRepository(OrangeDbContext, IMapper, ILogger<IProviderPropertyRepository>)
+  nameWithType.vb: ProviderPropertyRepository.ProviderPropertyRepository(OrangeDbContext, IMapper, ILogger(Of IProviderPropertyRepository))
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.#ctor*
+  name: ProviderPropertyRepository
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository__ctor_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.ProviderPropertyRepository
+  nameWithType: ProviderPropertyRepository.ProviderPropertyRepository
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository._dbContext
+  name: _dbContext
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository__dbContext
+  commentId: F:CG.Orange.Data.Repositories.ProviderPropertyRepository._dbContext
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository._dbContext
+  nameWithType: ProviderPropertyRepository._dbContext
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository._logger
+  name: _logger
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository__logger
+  commentId: F:CG.Orange.Data.Repositories.ProviderPropertyRepository._logger
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository._logger
+  nameWithType: ProviderPropertyRepository._logger
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository._mapper
+  name: _mapper
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository__mapper
+  commentId: F:CG.Orange.Data.Repositories.ProviderPropertyRepository._mapper
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository._mapper
+  nameWithType: ProviderPropertyRepository._mapper
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyAsync(CancellationToken)
+  nameWithType: ProviderPropertyRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyAsync
+  nameWithType: ProviderPropertyRepository.AnyAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyByProviderAsync(ProviderModel,CancellationToken)
+  name: AnyByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_AnyByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderPropertyRepository.AnyByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyByProviderAsync*
+  name: AnyByProviderAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_AnyByProviderAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.AnyByProviderAsync
+  nameWithType: ProviderPropertyRepository.AnyByProviderAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountAsync(CancellationToken)
+  nameWithType: ProviderPropertyRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_CountAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountAsync
+  nameWithType: ProviderPropertyRepository.CountAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountByProviderAsync(ProviderModel,CancellationToken)
+  name: CountByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_CountByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.CountByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderPropertyRepository.CountByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountByProviderAsync*
+  name: CountByProviderAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_CountByProviderAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.CountByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.CountByProviderAsync
+  nameWithType: ProviderPropertyRepository.CountByProviderAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.CreateAsync(ProviderPropertyModel,CancellationToken)
+  name: CreateAsync(ProviderPropertyModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_CreateAsync_ProviderPropertyModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.CreateAsync(ProviderPropertyModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.CreateAsync(ProviderPropertyModel, CancellationToken)
+  nameWithType: ProviderPropertyRepository.CreateAsync(ProviderPropertyModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.CreateAsync
+  nameWithType: ProviderPropertyRepository.CreateAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.DeleteAsync(ProviderPropertyModel,CancellationToken)
+  name: DeleteAsync(ProviderPropertyModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_DeleteAsync_ProviderPropertyModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.DeleteAsync(ProviderPropertyModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.DeleteAsync(ProviderPropertyModel, CancellationToken)
+  nameWithType: ProviderPropertyRepository.DeleteAsync(ProviderPropertyModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_DeleteAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.DeleteAsync
+  nameWithType: ProviderPropertyRepository.DeleteAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindAllAsync(CancellationToken)
+  nameWithType: ProviderPropertyRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindAllAsync
+  nameWithType: ProviderPropertyRepository.FindAllAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: ProviderPropertyRepository.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_FindByIdAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByIdAsync
+  nameWithType: ProviderPropertyRepository.FindByIdAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByProviderAsync(ProviderModel,CancellationToken)
+  name: FindByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_FindByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderPropertyRepository.FindByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByProviderAsync*
+  name: FindByProviderAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_FindByProviderAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.FindByProviderAsync
+  nameWithType: ProviderPropertyRepository.FindByProviderAsync
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.UpdateAsync(ProviderPropertyModel,CancellationToken)
+  name: UpdateAsync(ProviderPropertyModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_UpdateAsync_ProviderPropertyModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderPropertyRepository.UpdateAsync(ProviderPropertyModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.UpdateAsync(ProviderPropertyModel, CancellationToken)
+  nameWithType: ProviderPropertyRepository.UpdateAsync(ProviderPropertyModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderPropertyRepository.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html#CG_Orange_Data_Repositories_ProviderPropertyRepository_UpdateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderPropertyRepository.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderPropertyRepository.UpdateAsync
+  nameWithType: ProviderPropertyRepository.UpdateAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository
+  name: ProviderRepository
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html
+  commentId: T:CG.Orange.Data.Repositories.ProviderRepository
+  fullName: CG.Orange.Data.Repositories.ProviderRepository
+  nameWithType: ProviderRepository
+- uid: CG.Orange.Data.Repositories.ProviderRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{IProviderRepository})
+  name: ProviderRepository(OrangeDbContext, IMapper, ILogger<IProviderRepository>)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository__ctor_CG_Orange_Data_OrangeDbContext_IMapper_ILogger_IProviderRepository__
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{IProviderRepository})
+  name.vb: ProviderRepository(OrangeDbContext, IMapper, ILogger(Of IProviderRepository))
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.ProviderRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger<IProviderRepository>)
+  fullName.vb: CG.Orange.Data.Repositories.ProviderRepository.ProviderRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger(Of IProviderRepository))
+  nameWithType: ProviderRepository.ProviderRepository(OrangeDbContext, IMapper, ILogger<IProviderRepository>)
+  nameWithType.vb: ProviderRepository.ProviderRepository(OrangeDbContext, IMapper, ILogger(Of IProviderRepository))
+- uid: CG.Orange.Data.Repositories.ProviderRepository.#ctor*
+  name: ProviderRepository
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository__ctor_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.ProviderRepository
+  nameWithType: ProviderRepository.ProviderRepository
+- uid: CG.Orange.Data.Repositories.ProviderRepository._dbContext
+  name: _dbContext
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository__dbContext
+  commentId: F:CG.Orange.Data.Repositories.ProviderRepository._dbContext
+  fullName: CG.Orange.Data.Repositories.ProviderRepository._dbContext
+  nameWithType: ProviderRepository._dbContext
+- uid: CG.Orange.Data.Repositories.ProviderRepository._logger
+  name: _logger
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository__logger
+  commentId: F:CG.Orange.Data.Repositories.ProviderRepository._logger
+  fullName: CG.Orange.Data.Repositories.ProviderRepository._logger
+  nameWithType: ProviderRepository._logger
+- uid: CG.Orange.Data.Repositories.ProviderRepository._mapper
+  name: _mapper
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository__mapper
+  commentId: F:CG.Orange.Data.Repositories.ProviderRepository._mapper
+  fullName: CG.Orange.Data.Repositories.ProviderRepository._mapper
+  nameWithType: ProviderRepository._mapper
+- uid: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(CancellationToken)
+  nameWithType: ProviderRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(System.String,CancellationToken)
+  name: AnyAsync(String, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_AnyAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(System.String, CancellationToken)
+  nameWithType: ProviderRepository.AnyAsync(String, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync
+  nameWithType: ProviderRepository.AnyAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.CountAsync(CancellationToken)
+  nameWithType: ProviderRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_CountAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.CountAsync
+  nameWithType: ProviderRepository.CountAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.CreateAsync(ProviderModel,CancellationToken)
+  name: CreateAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_CreateAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.CreateAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.CreateAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderRepository.CreateAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.CreateAsync
+  nameWithType: ProviderRepository.CreateAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.DeleteAsync(ProviderModel,CancellationToken)
+  name: DeleteAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_DeleteAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.DeleteAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.DeleteAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderRepository.DeleteAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_DeleteAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.DeleteAsync
+  nameWithType: ProviderRepository.DeleteAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindAllAsync(CancellationToken)
+  nameWithType: ProviderRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindAllAsync
+  nameWithType: ProviderRepository.FindAllAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: ProviderRepository.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByIdAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync
+  nameWithType: ProviderRepository.FindByIdAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync(System.String,CancellationToken)
+  name: FindByNameAsync(String, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByNameAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync(System.String, CancellationToken)
+  nameWithType: ProviderRepository.FindByNameAsync(String, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByNameAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync
+  nameWithType: ProviderRepository.FindByNameAsync
+- uid: CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync(ProviderModel,CancellationToken)
+  name: UpdateAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_UpdateAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderRepository.UpdateAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_UpdateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync
+  nameWithType: ProviderRepository.UpdateAsync
 - uid: CG.Orange.Data.Repositories.SettingFileRepository
   name: SettingFileRepository
   href: api/CG.Orange.Data.Repositories.SettingFileRepository.html
@@ -823,15 +1387,15 @@ references:
   commentId: T:CG.Orange.Directors.SeedDirector
   fullName: CG.Orange.Directors.SeedDirector
   nameWithType: SeedDirector
-- uid: CG.Orange.Directors.SeedDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
-  name: SeedDirector(ISettingFileManager, ILogger<SeedDirector>)
-  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_ISettingFileManager_ILogger_CG_Orange_Directors_SeedDirector__
-  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
-  name.vb: SeedDirector(ISettingFileManager, ILogger(Of SeedDirector))
-  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(ISettingFileManager, ILogger<CG.Orange.Directors.SeedDirector>)
-  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(ISettingFileManager, ILogger(Of CG.Orange.Directors.SeedDirector))
-  nameWithType: SeedDirector.SeedDirector(ISettingFileManager, ILogger<SeedDirector>)
-  nameWithType.vb: SeedDirector.SeedDirector(ISettingFileManager, ILogger(Of SeedDirector))
+- uid: CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger<SeedDirector>)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ILogger_CG_Orange_Directors_SeedDirector__
+  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name.vb: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger(Of SeedDirector))
+  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger<CG.Orange.Directors.SeedDirector>)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger(Of CG.Orange.Directors.SeedDirector))
+  nameWithType: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger<SeedDirector>)
+  nameWithType.vb: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger(Of SeedDirector))
 - uid: CG.Orange.Directors.SeedDirector.#ctor*
   name: SeedDirector
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_
@@ -839,6 +1403,18 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedDirector
   nameWithType: SeedDirector.SeedDirector
+- uid: CG.Orange.Directors.SeedDirector._providerManager
+  name: _providerManager
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__providerManager
+  commentId: F:CG.Orange.Directors.SeedDirector._providerManager
+  fullName: CG.Orange.Directors.SeedDirector._providerManager
+  nameWithType: SeedDirector._providerManager
+- uid: CG.Orange.Directors.SeedDirector._providerPropertyManager
+  name: _providerPropertyManager
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__providerPropertyManager
+  commentId: F:CG.Orange.Directors.SeedDirector._providerPropertyManager
+  fullName: CG.Orange.Directors.SeedDirector._providerPropertyManager
+  nameWithType: SeedDirector._providerPropertyManager
 - uid: CG.Orange.Directors.SeedDirector._settingFileManager
   name: _settingFileManager
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__settingFileManager
@@ -858,19 +1434,110 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedFromConfiguration
   nameWithType: SeedDirector.SeedFromConfiguration
-- uid: CG.Orange.Directors.SeedDirector.SeedSettingFiles(IConfiguration,System.Boolean,System.String,CancellationToken)
-  name: SeedSettingFiles(IConfiguration, Boolean, String, CancellationToken)
-  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFiles_IConfiguration_System_Boolean_System_String_CancellationToken_
-  commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFiles(IConfiguration,System.Boolean,System.String,CancellationToken)
-  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFiles(IConfiguration, System.Boolean, System.String, CancellationToken)
-  nameWithType: SeedDirector.SeedSettingFiles(IConfiguration, Boolean, String, CancellationToken)
-- uid: CG.Orange.Directors.SeedDirector.SeedSettingFiles*
-  name: SeedSettingFiles
-  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFiles_
-  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedSettingFiles
+- uid: CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  name: SeedProvidersAsync(IConfiguration, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedProvidersAsync_IConfiguration_System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IConfiguration, System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedProvidersAsync(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedProvidersAsync*
+  name: SeedProvidersAsync
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedProvidersAsync_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedProvidersAsync
   isSpec: "True"
-  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFiles
-  nameWithType: SeedDirector.SeedSettingFiles
+  fullName: CG.Orange.Directors.SeedDirector.SeedProvidersAsync
+  nameWithType: SeedDirector.SeedProvidersAsync
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFilesAsync(IConfiguration, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_IConfiguration_System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration, System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedSettingFilesAsync(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync*
+  name: SeedSettingFilesAsync
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync
+  nameWithType: SeedDirector.SeedSettingFilesAsync
+- uid: CG.Orange.Globals
+  name: Globals
+  href: api/CG.Orange.Globals.html
+  commentId: T:CG.Orange.Globals
+  fullName: CG.Orange.Globals
+  nameWithType: Globals
+- uid: CG.Orange.Globals.Models
+  name: Globals.Models
+  href: api/CG.Orange.Globals.Models.html
+  commentId: T:CG.Orange.Globals.Models
+  fullName: CG.Orange.Globals.Models
+  nameWithType: Globals.Models
+- uid: CG.Orange.Globals.Models.AuditedModelBases
+  name: Globals.Models.AuditedModelBases
+  href: api/CG.Orange.Globals.Models.AuditedModelBases.html
+  commentId: T:CG.Orange.Globals.Models.AuditedModelBases
+  fullName: CG.Orange.Globals.Models.AuditedModelBases
+  nameWithType: Globals.Models.AuditedModelBases
+- uid: CG.Orange.Globals.Models.AuditedModelBases.CreatedByLength
+  name: CreatedByLength
+  href: api/CG.Orange.Globals.Models.AuditedModelBases.html#CG_Orange_Globals_Models_AuditedModelBases_CreatedByLength
+  commentId: F:CG.Orange.Globals.Models.AuditedModelBases.CreatedByLength
+  fullName: CG.Orange.Globals.Models.AuditedModelBases.CreatedByLength
+  nameWithType: Globals.Models.AuditedModelBases.CreatedByLength
+- uid: CG.Orange.Globals.Models.AuditedModelBases.LastUpdatedByLength
+  name: LastUpdatedByLength
+  href: api/CG.Orange.Globals.Models.AuditedModelBases.html#CG_Orange_Globals_Models_AuditedModelBases_LastUpdatedByLength
+  commentId: F:CG.Orange.Globals.Models.AuditedModelBases.LastUpdatedByLength
+  fullName: CG.Orange.Globals.Models.AuditedModelBases.LastUpdatedByLength
+  nameWithType: Globals.Models.AuditedModelBases.LastUpdatedByLength
+- uid: CG.Orange.Globals.Models.Providers
+  name: Globals.Models.Providers
+  href: api/CG.Orange.Globals.Models.Providers.html
+  commentId: T:CG.Orange.Globals.Models.Providers
+  fullName: CG.Orange.Globals.Models.Providers
+  nameWithType: Globals.Models.Providers
+- uid: CG.Orange.Globals.Models.Providers.DescriptionLength
+  name: DescriptionLength
+  href: api/CG.Orange.Globals.Models.Providers.html#CG_Orange_Globals_Models_Providers_DescriptionLength
+  commentId: F:CG.Orange.Globals.Models.Providers.DescriptionLength
+  fullName: CG.Orange.Globals.Models.Providers.DescriptionLength
+  nameWithType: Globals.Models.Providers.DescriptionLength
+- uid: CG.Orange.Globals.Models.Providers.NameLength
+  name: NameLength
+  href: api/CG.Orange.Globals.Models.Providers.html#CG_Orange_Globals_Models_Providers_NameLength
+  commentId: F:CG.Orange.Globals.Models.Providers.NameLength
+  fullName: CG.Orange.Globals.Models.Providers.NameLength
+  nameWithType: Globals.Models.Providers.NameLength
+- uid: CG.Orange.Globals.Models.Providers.ProcessorTypeLength
+  name: ProcessorTypeLength
+  href: api/CG.Orange.Globals.Models.Providers.html#CG_Orange_Globals_Models_Providers_ProcessorTypeLength
+  commentId: F:CG.Orange.Globals.Models.Providers.ProcessorTypeLength
+  fullName: CG.Orange.Globals.Models.Providers.ProcessorTypeLength
+  nameWithType: Globals.Models.Providers.ProcessorTypeLength
+- uid: CG.Orange.Globals.Models.Providers.ProviderTypeLength
+  name: ProviderTypeLength
+  href: api/CG.Orange.Globals.Models.Providers.html#CG_Orange_Globals_Models_Providers_ProviderTypeLength
+  commentId: F:CG.Orange.Globals.Models.Providers.ProviderTypeLength
+  fullName: CG.Orange.Globals.Models.Providers.ProviderTypeLength
+  nameWithType: Globals.Models.Providers.ProviderTypeLength
+- uid: CG.Orange.Globals.Models.SettingFiles
+  name: Globals.Models.SettingFiles
+  href: api/CG.Orange.Globals.Models.SettingFiles.html
+  commentId: T:CG.Orange.Globals.Models.SettingFiles
+  fullName: CG.Orange.Globals.Models.SettingFiles
+  nameWithType: Globals.Models.SettingFiles
+- uid: CG.Orange.Globals.Models.SettingFiles.ApplicationNameLength
+  name: ApplicationNameLength
+  href: api/CG.Orange.Globals.Models.SettingFiles.html#CG_Orange_Globals_Models_SettingFiles_ApplicationNameLength
+  commentId: F:CG.Orange.Globals.Models.SettingFiles.ApplicationNameLength
+  fullName: CG.Orange.Globals.Models.SettingFiles.ApplicationNameLength
+  nameWithType: Globals.Models.SettingFiles.ApplicationNameLength
+- uid: CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
+  name: EnvironmentNameLength
+  href: api/CG.Orange.Globals.Models.SettingFiles.html#CG_Orange_Globals_Models_SettingFiles_EnvironmentNameLength
+  commentId: F:CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
+  fullName: CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
+  nameWithType: Globals.Models.SettingFiles.EnvironmentNameLength
 - uid: CG.Orange.Host.Controllers
   name: CG.Orange.Host.Controllers
   href: api/CG.Orange.Host.Controllers.html
@@ -1019,6 +1686,379 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Account.LoginModel.OnGet
   nameWithType: LoginModel.OnGet
+- uid: CG.Orange.Host.Pages.Admin.Providers
+  name: CG.Orange.Host.Pages.Admin.Providers
+  href: api/CG.Orange.Host.Pages.Admin.Providers.html
+  commentId: N:CG.Orange.Host.Pages.Admin.Providers
+  fullName: CG.Orange.Host.Pages.Admin.Providers
+  nameWithType: CG.Orange.Host.Pages.Admin.Providers
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index
+  name: Index
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html
+  commentId: T:CG.Orange.Host.Pages.Admin.Providers.Index
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index
+  nameWithType: Index
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index._crumbs
+  name: _crumbs
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index__crumbs
+  commentId: F:CG.Orange.Host.Pages.Admin.Providers.Index._crumbs
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index._crumbs
+  nameWithType: Index._crumbs
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index._providers
+  name: _providers
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index__providers
+  commentId: F:CG.Orange.Host.Pages.Admin.Providers.Index._providers
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index._providers
+  nameWithType: Index._providers
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.DialogService
+  name: DialogService
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_DialogService
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.DialogService
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.DialogService
+  nameWithType: Index.DialogService
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.DialogService*
+  name: DialogService
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_DialogService_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.DialogService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.DialogService
+  nameWithType: Index.DialogService
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.DisableProviderAsync(ProviderModel)
+  name: DisableProviderAsync(ProviderModel)
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_DisableProviderAsync_ProviderModel_
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.DisableProviderAsync(ProviderModel)
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.DisableProviderAsync(ProviderModel)
+  nameWithType: Index.DisableProviderAsync(ProviderModel)
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.DisableProviderAsync*
+  name: DisableProviderAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_DisableProviderAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.DisableProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.DisableProviderAsync
+  nameWithType: Index.DisableProviderAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.EnableProviderAsync(ProviderModel)
+  name: EnableProviderAsync(ProviderModel)
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_EnableProviderAsync_ProviderModel_
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.EnableProviderAsync(ProviderModel)
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.EnableProviderAsync(ProviderModel)
+  nameWithType: Index.EnableProviderAsync(ProviderModel)
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.EnableProviderAsync*
+  name: EnableProviderAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_EnableProviderAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.EnableProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.EnableProviderAsync
+  nameWithType: Index.EnableProviderAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.HttpContextAccessor
+  name: HttpContextAccessor
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_HttpContextAccessor
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.HttpContextAccessor
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.HttpContextAccessor
+  nameWithType: Index.HttpContextAccessor
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.HttpContextAccessor*
+  name: HttpContextAccessor
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_HttpContextAccessor_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.HttpContextAccessor
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.HttpContextAccessor
+  nameWithType: Index.HttpContextAccessor
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.Logger
+  name: Logger
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_Logger
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.Logger
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.Logger
+  nameWithType: Index.Logger
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.Logger*
+  name: Logger
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_Logger_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.Logger
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.Logger
+  nameWithType: Index.Logger
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager
+  name: NavigationManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_NavigationManager
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager
+  nameWithType: Index.NavigationManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager*
+  name: NavigationManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_NavigationManager_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager
+  nameWithType: Index.NavigationManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync
+  name: OnCreateAsync()
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnCreateAsync
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync()
+  nameWithType: Index.OnCreateAsync()
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync*
+  name: OnCreateAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnCreateAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync
+  nameWithType: Index.OnCreateAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnDeleteAsync(ProviderModel)
+  name: OnDeleteAsync(ProviderModel)
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnDeleteAsync_ProviderModel_
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.OnDeleteAsync(ProviderModel)
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnDeleteAsync(ProviderModel)
+  nameWithType: Index.OnDeleteAsync(ProviderModel)
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnDeleteAsync*
+  name: OnDeleteAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnDeleteAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.OnDeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnDeleteAsync
+  nameWithType: Index.OnDeleteAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnInitializedAsync
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync()
+  nameWithType: Index.OnInitializedAsync()
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnInitializedAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync
+  nameWithType: Index.OnInitializedAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
+  name: ProviderManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_ProviderManager
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
+  nameWithType: Index.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager*
+  name: ProviderManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_ProviderManager_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
+  nameWithType: Index.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService
+  name: SnackbarService
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_SnackbarService
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService
+  nameWithType: Index.SnackbarService
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService*
+  name: SnackbarService
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_SnackbarService_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService
+  nameWithType: Index.SnackbarService
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.UserName
+  name: UserName
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_UserName
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.UserName
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.UserName
+  nameWithType: Index.UserName
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.UserName*
+  name: UserName
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_UserName_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.UserName
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.UserName
+  nameWithType: Index.UserName
+- uid: CG.Orange.Host.Pages.Admin.Providers.PropertyDialog
+  name: PropertyDialog
+  href: api/CG.Orange.Host.Pages.Admin.Providers.PropertyDialog.html
+  commentId: T:CG.Orange.Host.Pages.Admin.Providers.PropertyDialog
+  fullName: CG.Orange.Host.Pages.Admin.Providers.PropertyDialog
+  nameWithType: PropertyDialog
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider
+  name: Provider
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html
+  commentId: T:CG.Orange.Host.Pages.Admin.Providers.Provider
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider
+  nameWithType: Provider
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider._crumbs
+  name: _crumbs
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider__crumbs
+  commentId: F:CG.Orange.Host.Pages.Admin.Providers.Provider._crumbs
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider._crumbs
+  nameWithType: Provider._crumbs
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider._model
+  name: _model
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider__model
+  commentId: F:CG.Orange.Host.Pages.Admin.Providers.Provider._model
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider._model
+  nameWithType: Provider._model
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor
+  name: HttpContextAccessor
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_HttpContextAccessor
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor
+  nameWithType: Provider.HttpContextAccessor
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor*
+  name: HttpContextAccessor
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_HttpContextAccessor_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor
+  nameWithType: Provider.HttpContextAccessor
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.Logger
+  name: Logger
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_Logger
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.Logger
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.Logger
+  nameWithType: Provider.Logger
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.Logger*
+  name: Logger
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_Logger_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.Logger
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.Logger
+  nameWithType: Provider.Logger
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.NavigationManager
+  name: NavigationManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_NavigationManager
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.NavigationManager
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.NavigationManager
+  nameWithType: Provider.NavigationManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.NavigationManager*
+  name: NavigationManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_NavigationManager_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.NavigationManager
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.NavigationManager
+  nameWithType: Provider.NavigationManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync
+  name: OnCreateAsync()
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnCreateAsync
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync()
+  nameWithType: Provider.OnCreateAsync()
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync*
+  name: OnCreateAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnCreateAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync
+  nameWithType: Provider.OnCreateAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync(ProviderPropertyModel)
+  name: OnDeleteAsync(ProviderPropertyModel)
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnDeleteAsync_ProviderPropertyModel_
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync(ProviderPropertyModel)
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync(ProviderPropertyModel)
+  nameWithType: Provider.OnDeleteAsync(ProviderPropertyModel)
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync*
+  name: OnDeleteAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnDeleteAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync
+  nameWithType: Provider.OnDeleteAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync(ProviderPropertyModel)
+  name: OnEditAsync(ProviderPropertyModel)
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnEditAsync_ProviderPropertyModel_
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync(ProviderPropertyModel)
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync(ProviderPropertyModel)
+  nameWithType: Provider.OnEditAsync(ProviderPropertyModel)
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync*
+  name: OnEditAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnEditAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync
+  nameWithType: Provider.OnEditAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnInitializedAsync
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Provider.OnInitializedAsync
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnInitializedAsync()
+  nameWithType: Provider.OnInitializedAsync()
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnInitializedAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.OnInitializedAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnInitializedAsync
+  nameWithType: Provider.OnInitializedAsync
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit
+  name: OnValidSubmit()
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnValidSubmit
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit()
+  nameWithType: Provider.OnValidSubmit()
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit*
+  name: OnValidSubmit
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OnValidSubmit_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit
+  nameWithType: Provider.OnValidSubmit
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
+  name: ProviderId
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderId
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
+  nameWithType: Provider.ProviderId
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId*
+  name: ProviderId
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderId_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
+  nameWithType: Provider.ProviderId
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
+  name: ProviderManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderManager
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
+  nameWithType: Provider.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager*
+  name: ProviderManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderManager_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
+  nameWithType: Provider.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
+  name: ProviderPropertyManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderPropertyManager
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
+  nameWithType: Provider.ProviderPropertyManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager*
+  name: ProviderPropertyManager
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderPropertyManager_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
+  nameWithType: Provider.ProviderPropertyManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService
+  name: SnackbarService
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_SnackbarService
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService
+  nameWithType: Provider.SnackbarService
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService*
+  name: SnackbarService
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_SnackbarService_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService
+  nameWithType: Provider.SnackbarService
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.UserName
+  name: UserName
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_UserName
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.UserName
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.UserName
+  nameWithType: Provider.UserName
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.UserName*
+  name: UserName
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_UserName_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.UserName
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.UserName
+  nameWithType: Provider.UserName
 - uid: CG.Orange.Host.Pages.Admin.Settings
   name: CG.Orange.Host.Pages.Admin.Settings
   href: api/CG.Orange.Host.Pages.Admin.Settings.html
@@ -1539,6 +2579,284 @@ references:
   commentId: N:CG.Orange.Managers
   fullName: CG.Orange.Managers
   nameWithType: CG.Orange.Managers
+- uid: CG.Orange.Managers.IProviderManager
+  name: IProviderManager
+  href: api/CG.Orange.Managers.IProviderManager.html
+  commentId: T:CG.Orange.Managers.IProviderManager
+  fullName: CG.Orange.Managers.IProviderManager
+  nameWithType: IProviderManager
+- uid: CG.Orange.Managers.IProviderManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.AnyAsync(CancellationToken)
+  nameWithType: IProviderManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.AnyAsync(System.String,CancellationToken)
+  name: AnyAsync(String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_AnyAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.AnyAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.AnyAsync(System.String, CancellationToken)
+  nameWithType: IProviderManager.AnyAsync(String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.AnyAsync
+  nameWithType: IProviderManager.AnyAsync
+- uid: CG.Orange.Managers.IProviderManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.CountAsync(CancellationToken)
+  nameWithType: IProviderManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.CountAsync
+  nameWithType: IProviderManager.CountAsync
+- uid: CG.Orange.Managers.IProviderManager.CreateAsync(ProviderModel,System.String,CancellationToken)
+  name: CreateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_CreateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.CreateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.CreateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderManager.CreateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.CreateAsync
+  nameWithType: IProviderManager.CreateAsync
+- uid: CG.Orange.Managers.IProviderManager.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  name: DeleteAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_DeleteAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.DeleteAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderManager.DeleteAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_DeleteAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.DeleteAsync
+  nameWithType: IProviderManager.DeleteAsync
+- uid: CG.Orange.Managers.IProviderManager.DisableAsync(ProviderModel,System.String,CancellationToken)
+  name: DisableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_DisableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.DisableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.DisableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderManager.DisableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.DisableAsync*
+  name: DisableAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_DisableAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.DisableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.DisableAsync
+  nameWithType: IProviderManager.DisableAsync
+- uid: CG.Orange.Managers.IProviderManager.EnableAsync(ProviderModel,System.String,CancellationToken)
+  name: EnableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_EnableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.EnableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.EnableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderManager.EnableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.EnableAsync*
+  name: EnableAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_EnableAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.EnableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.EnableAsync
+  nameWithType: IProviderManager.EnableAsync
+- uid: CG.Orange.Managers.IProviderManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.FindAllAsync(CancellationToken)
+  nameWithType: IProviderManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.FindAllAsync
+  nameWithType: IProviderManager.FindAllAsync
+- uid: CG.Orange.Managers.IProviderManager.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: IProviderManager.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByIdAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.FindByIdAsync
+  nameWithType: IProviderManager.FindByIdAsync
+- uid: CG.Orange.Managers.IProviderManager.FindByNameAsync(System.String,CancellationToken)
+  name: FindByNameAsync(String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByNameAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.FindByNameAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.FindByNameAsync(System.String, CancellationToken)
+  nameWithType: IProviderManager.FindByNameAsync(String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByNameAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.FindByNameAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.FindByNameAsync
+  nameWithType: IProviderManager.FindByNameAsync
+- uid: CG.Orange.Managers.IProviderManager.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  name: UpdateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_UpdateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderManager.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderManager.UpdateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderManager.UpdateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderManager.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_UpdateAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderManager.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderManager.UpdateAsync
+  nameWithType: IProviderManager.UpdateAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager
+  name: IProviderPropertyManager
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html
+  commentId: T:CG.Orange.Managers.IProviderPropertyManager
+  fullName: CG.Orange.Managers.IProviderPropertyManager
+  nameWithType: IProviderPropertyManager
+- uid: CG.Orange.Managers.IProviderPropertyManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.AnyAsync(CancellationToken)
+  nameWithType: IProviderPropertyManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.AnyAsync
+  nameWithType: IProviderPropertyManager.AnyAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.AnyByProviderAsync(ProviderModel,CancellationToken)
+  name: AnyByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_AnyByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.AnyByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.AnyByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderPropertyManager.AnyByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.AnyByProviderAsync*
+  name: AnyByProviderAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_AnyByProviderAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.AnyByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.AnyByProviderAsync
+  nameWithType: IProviderPropertyManager.AnyByProviderAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.CountAsync(CancellationToken)
+  nameWithType: IProviderPropertyManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.CountAsync
+  nameWithType: IProviderPropertyManager.CountAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.CountByProviderAsync(ProviderModel,CancellationToken)
+  name: CountByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_CountByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.CountByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.CountByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderPropertyManager.CountByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.CountByProviderAsync*
+  name: CountByProviderAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_CountByProviderAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.CountByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.CountByProviderAsync
+  nameWithType: IProviderPropertyManager.CountByProviderAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.CreateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  name: CreateAsync(ProviderPropertyModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_CreateAsync_ProviderPropertyModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.CreateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.CreateAsync(ProviderPropertyModel, System.String, CancellationToken)
+  nameWithType: IProviderPropertyManager.CreateAsync(ProviderPropertyModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.CreateAsync
+  nameWithType: IProviderPropertyManager.CreateAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.DeleteAsync(ProviderPropertyModel,System.String,CancellationToken)
+  name: DeleteAsync(ProviderPropertyModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_DeleteAsync_ProviderPropertyModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.DeleteAsync(ProviderPropertyModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.DeleteAsync(ProviderPropertyModel, System.String, CancellationToken)
+  nameWithType: IProviderPropertyManager.DeleteAsync(ProviderPropertyModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_DeleteAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.DeleteAsync
+  nameWithType: IProviderPropertyManager.DeleteAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.FindAllAsync(CancellationToken)
+  nameWithType: IProviderPropertyManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.FindAllAsync
+  nameWithType: IProviderPropertyManager.FindAllAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: IProviderPropertyManager.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_FindByIdAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.FindByIdAsync
+  nameWithType: IProviderPropertyManager.FindByIdAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.FindByProviderAsync(ProviderModel,CancellationToken)
+  name: FindByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_FindByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.FindByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.FindByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderPropertyManager.FindByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.FindByProviderAsync*
+  name: FindByProviderAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_FindByProviderAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.FindByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.FindByProviderAsync
+  nameWithType: IProviderPropertyManager.FindByProviderAsync
+- uid: CG.Orange.Managers.IProviderPropertyManager.UpdateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  name: UpdateAsync(ProviderPropertyModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_UpdateAsync_ProviderPropertyModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.IProviderPropertyManager.UpdateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.IProviderPropertyManager.UpdateAsync(ProviderPropertyModel, System.String, CancellationToken)
+  nameWithType: IProviderPropertyManager.UpdateAsync(ProviderPropertyModel, String, CancellationToken)
+- uid: CG.Orange.Managers.IProviderPropertyManager.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_UpdateAsync_
+  commentId: Overload:CG.Orange.Managers.IProviderPropertyManager.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IProviderPropertyManager.UpdateAsync
+  nameWithType: IProviderPropertyManager.UpdateAsync
 - uid: CG.Orange.Managers.ISettingFileManager
   name: ISettingFileManager
   href: api/CG.Orange.Managers.ISettingFileManager.html
@@ -1692,6 +3010,352 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ManagerException.ManagerException
   nameWithType: ManagerException.ManagerException
+- uid: CG.Orange.Managers.ProviderManager
+  name: ProviderManager
+  href: api/CG.Orange.Managers.ProviderManager.html
+  commentId: T:CG.Orange.Managers.ProviderManager
+  fullName: CG.Orange.Managers.ProviderManager
+  nameWithType: ProviderManager
+- uid: CG.Orange.Managers.ProviderManager.#ctor(ICryptographer,IProviderRepository,ILogger{CG.Orange.Managers.IProviderManager})
+  name: ProviderManager(ICryptographer, IProviderRepository, ILogger<IProviderManager>)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager__ctor_ICryptographer_IProviderRepository_ILogger_CG_Orange_Managers_IProviderManager__
+  commentId: M:CG.Orange.Managers.ProviderManager.#ctor(ICryptographer,IProviderRepository,ILogger{CG.Orange.Managers.IProviderManager})
+  name.vb: ProviderManager(ICryptographer, IProviderRepository, ILogger(Of IProviderManager))
+  fullName: CG.Orange.Managers.ProviderManager.ProviderManager(ICryptographer, IProviderRepository, ILogger<CG.Orange.Managers.IProviderManager>)
+  fullName.vb: CG.Orange.Managers.ProviderManager.ProviderManager(ICryptographer, IProviderRepository, ILogger(Of CG.Orange.Managers.IProviderManager))
+  nameWithType: ProviderManager.ProviderManager(ICryptographer, IProviderRepository, ILogger<IProviderManager>)
+  nameWithType.vb: ProviderManager.ProviderManager(ICryptographer, IProviderRepository, ILogger(Of IProviderManager))
+- uid: CG.Orange.Managers.ProviderManager.#ctor*
+  name: ProviderManager
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager__ctor_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.ProviderManager
+  nameWithType: ProviderManager.ProviderManager
+- uid: CG.Orange.Managers.ProviderManager._cryptographer
+  name: _cryptographer
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager__cryptographer
+  commentId: F:CG.Orange.Managers.ProviderManager._cryptographer
+  fullName: CG.Orange.Managers.ProviderManager._cryptographer
+  nameWithType: ProviderManager._cryptographer
+- uid: CG.Orange.Managers.ProviderManager._logger
+  name: _logger
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager__logger
+  commentId: F:CG.Orange.Managers.ProviderManager._logger
+  fullName: CG.Orange.Managers.ProviderManager._logger
+  nameWithType: ProviderManager._logger
+- uid: CG.Orange.Managers.ProviderManager._providerRepository
+  name: _providerRepository
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager__providerRepository
+  commentId: F:CG.Orange.Managers.ProviderManager._providerRepository
+  fullName: CG.Orange.Managers.ProviderManager._providerRepository
+  nameWithType: ProviderManager._providerRepository
+- uid: CG.Orange.Managers.ProviderManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.AnyAsync(CancellationToken)
+  nameWithType: ProviderManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.AnyAsync(System.String,CancellationToken)
+  name: AnyAsync(String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_AnyAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.AnyAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.AnyAsync(System.String, CancellationToken)
+  nameWithType: ProviderManager.AnyAsync(String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.AnyAsync
+  nameWithType: ProviderManager.AnyAsync
+- uid: CG.Orange.Managers.ProviderManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.CountAsync(CancellationToken)
+  nameWithType: ProviderManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.CountAsync
+  nameWithType: ProviderManager.CountAsync
+- uid: CG.Orange.Managers.ProviderManager.CreateAsync(ProviderModel,System.String,CancellationToken)
+  name: CreateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_CreateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.CreateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.CreateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderManager.CreateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.CreateAsync
+  nameWithType: ProviderManager.CreateAsync
+- uid: CG.Orange.Managers.ProviderManager.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  name: DeleteAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_DeleteAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.DeleteAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderManager.DeleteAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_DeleteAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.DeleteAsync
+  nameWithType: ProviderManager.DeleteAsync
+- uid: CG.Orange.Managers.ProviderManager.DisableAsync(ProviderModel,System.String,CancellationToken)
+  name: DisableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_DisableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.DisableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.DisableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderManager.DisableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.DisableAsync*
+  name: DisableAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_DisableAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.DisableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.DisableAsync
+  nameWithType: ProviderManager.DisableAsync
+- uid: CG.Orange.Managers.ProviderManager.EnableAsync(ProviderModel,System.String,CancellationToken)
+  name: EnableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_EnableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.EnableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.EnableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderManager.EnableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.EnableAsync*
+  name: EnableAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_EnableAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.EnableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.EnableAsync
+  nameWithType: ProviderManager.EnableAsync
+- uid: CG.Orange.Managers.ProviderManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.FindAllAsync(CancellationToken)
+  nameWithType: ProviderManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.FindAllAsync
+  nameWithType: ProviderManager.FindAllAsync
+- uid: CG.Orange.Managers.ProviderManager.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: ProviderManager.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByIdAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.FindByIdAsync
+  nameWithType: ProviderManager.FindByIdAsync
+- uid: CG.Orange.Managers.ProviderManager.FindByNameAsync(System.String,CancellationToken)
+  name: FindByNameAsync(String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByNameAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.FindByNameAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.FindByNameAsync(System.String, CancellationToken)
+  nameWithType: ProviderManager.FindByNameAsync(String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByNameAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.FindByNameAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.FindByNameAsync
+  nameWithType: ProviderManager.FindByNameAsync
+- uid: CG.Orange.Managers.ProviderManager.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  name: UpdateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_UpdateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderManager.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderManager.UpdateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderManager.UpdateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderManager.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_UpdateAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderManager.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderManager.UpdateAsync
+  nameWithType: ProviderManager.UpdateAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager
+  name: ProviderPropertyManager
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html
+  commentId: T:CG.Orange.Managers.ProviderPropertyManager
+  fullName: CG.Orange.Managers.ProviderPropertyManager
+  nameWithType: ProviderPropertyManager
+- uid: CG.Orange.Managers.ProviderPropertyManager.#ctor(ICryptographer,IProviderPropertyRepository,ILogger{CG.Orange.Managers.IProviderPropertyManager})
+  name: ProviderPropertyManager(ICryptographer, IProviderPropertyRepository, ILogger<IProviderPropertyManager>)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager__ctor_ICryptographer_IProviderPropertyRepository_ILogger_CG_Orange_Managers_IProviderPropertyManager__
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.#ctor(ICryptographer,IProviderPropertyRepository,ILogger{CG.Orange.Managers.IProviderPropertyManager})
+  name.vb: ProviderPropertyManager(ICryptographer, IProviderPropertyRepository, ILogger(Of IProviderPropertyManager))
+  fullName: CG.Orange.Managers.ProviderPropertyManager.ProviderPropertyManager(ICryptographer, IProviderPropertyRepository, ILogger<CG.Orange.Managers.IProviderPropertyManager>)
+  fullName.vb: CG.Orange.Managers.ProviderPropertyManager.ProviderPropertyManager(ICryptographer, IProviderPropertyRepository, ILogger(Of CG.Orange.Managers.IProviderPropertyManager))
+  nameWithType: ProviderPropertyManager.ProviderPropertyManager(ICryptographer, IProviderPropertyRepository, ILogger<IProviderPropertyManager>)
+  nameWithType.vb: ProviderPropertyManager.ProviderPropertyManager(ICryptographer, IProviderPropertyRepository, ILogger(Of IProviderPropertyManager))
+- uid: CG.Orange.Managers.ProviderPropertyManager.#ctor*
+  name: ProviderPropertyManager
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager__ctor_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.ProviderPropertyManager
+  nameWithType: ProviderPropertyManager.ProviderPropertyManager
+- uid: CG.Orange.Managers.ProviderPropertyManager._cryptographer
+  name: _cryptographer
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager__cryptographer
+  commentId: F:CG.Orange.Managers.ProviderPropertyManager._cryptographer
+  fullName: CG.Orange.Managers.ProviderPropertyManager._cryptographer
+  nameWithType: ProviderPropertyManager._cryptographer
+- uid: CG.Orange.Managers.ProviderPropertyManager._logger
+  name: _logger
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager__logger
+  commentId: F:CG.Orange.Managers.ProviderPropertyManager._logger
+  fullName: CG.Orange.Managers.ProviderPropertyManager._logger
+  nameWithType: ProviderPropertyManager._logger
+- uid: CG.Orange.Managers.ProviderPropertyManager._providerPropertyRepository
+  name: _providerPropertyRepository
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager__providerPropertyRepository
+  commentId: F:CG.Orange.Managers.ProviderPropertyManager._providerPropertyRepository
+  fullName: CG.Orange.Managers.ProviderPropertyManager._providerPropertyRepository
+  nameWithType: ProviderPropertyManager._providerPropertyRepository
+- uid: CG.Orange.Managers.ProviderPropertyManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.AnyAsync(CancellationToken)
+  nameWithType: ProviderPropertyManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.AnyAsync
+  nameWithType: ProviderPropertyManager.AnyAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.AnyByProviderAsync(ProviderModel,CancellationToken)
+  name: AnyByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_AnyByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.AnyByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.AnyByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderPropertyManager.AnyByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.AnyByProviderAsync*
+  name: AnyByProviderAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_AnyByProviderAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.AnyByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.AnyByProviderAsync
+  nameWithType: ProviderPropertyManager.AnyByProviderAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.CountAsync(CancellationToken)
+  nameWithType: ProviderPropertyManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.CountAsync
+  nameWithType: ProviderPropertyManager.CountAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.CountByProviderAsync(ProviderModel,CancellationToken)
+  name: CountByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_CountByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.CountByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.CountByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderPropertyManager.CountByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.CountByProviderAsync*
+  name: CountByProviderAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_CountByProviderAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.CountByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.CountByProviderAsync
+  nameWithType: ProviderPropertyManager.CountByProviderAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.CreateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  name: CreateAsync(ProviderPropertyModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_CreateAsync_ProviderPropertyModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.CreateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.CreateAsync(ProviderPropertyModel, System.String, CancellationToken)
+  nameWithType: ProviderPropertyManager.CreateAsync(ProviderPropertyModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.CreateAsync
+  nameWithType: ProviderPropertyManager.CreateAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.DeleteAsync(ProviderPropertyModel,System.String,CancellationToken)
+  name: DeleteAsync(ProviderPropertyModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_DeleteAsync_ProviderPropertyModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.DeleteAsync(ProviderPropertyModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.DeleteAsync(ProviderPropertyModel, System.String, CancellationToken)
+  nameWithType: ProviderPropertyManager.DeleteAsync(ProviderPropertyModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_DeleteAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.DeleteAsync
+  nameWithType: ProviderPropertyManager.DeleteAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.FindAllAsync(CancellationToken)
+  nameWithType: ProviderPropertyManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.FindAllAsync
+  nameWithType: ProviderPropertyManager.FindAllAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: ProviderPropertyManager.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_FindByIdAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.FindByIdAsync
+  nameWithType: ProviderPropertyManager.FindByIdAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.FindByProviderAsync(ProviderModel,CancellationToken)
+  name: FindByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_FindByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.FindByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.FindByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: ProviderPropertyManager.FindByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.FindByProviderAsync*
+  name: FindByProviderAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_FindByProviderAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.FindByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.FindByProviderAsync
+  nameWithType: ProviderPropertyManager.FindByProviderAsync
+- uid: CG.Orange.Managers.ProviderPropertyManager.UpdateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  name: UpdateAsync(ProviderPropertyModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_UpdateAsync_ProviderPropertyModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ProviderPropertyManager.UpdateAsync(ProviderPropertyModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ProviderPropertyManager.UpdateAsync(ProviderPropertyModel, System.String, CancellationToken)
+  nameWithType: ProviderPropertyManager.UpdateAsync(ProviderPropertyModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ProviderPropertyManager.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Managers.ProviderPropertyManager.html#CG_Orange_Managers_ProviderPropertyManager_UpdateAsync_
+  commentId: Overload:CG.Orange.Managers.ProviderPropertyManager.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ProviderPropertyManager.UpdateAsync
+  nameWithType: ProviderPropertyManager.UpdateAsync
 - uid: CG.Orange.Managers.SettingFileManager
   name: SettingFileManager
   href: api/CG.Orange.Managers.SettingFileManager.html
@@ -1842,64 +3506,250 @@ references:
   commentId: N:CG.Orange.Models
   fullName: CG.Orange.Models
   nameWithType: CG.Orange.Models
-- uid: CG.Orange.Models.ModelBase
-  name: ModelBase
-  href: api/CG.Orange.Models.ModelBase.html
-  commentId: T:CG.Orange.Models.ModelBase
-  fullName: CG.Orange.Models.ModelBase
-  nameWithType: ModelBase
-- uid: CG.Orange.Models.ModelBase.CreatedBy
+- uid: CG.Orange.Models.AuditedModelBase
+  name: AuditedModelBase
+  href: api/CG.Orange.Models.AuditedModelBase.html
+  commentId: T:CG.Orange.Models.AuditedModelBase
+  fullName: CG.Orange.Models.AuditedModelBase
+  nameWithType: AuditedModelBase
+- uid: CG.Orange.Models.AuditedModelBase.CreatedBy
   name: CreatedBy
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_CreatedBy
-  commentId: P:CG.Orange.Models.ModelBase.CreatedBy
-  fullName: CG.Orange.Models.ModelBase.CreatedBy
-  nameWithType: ModelBase.CreatedBy
-- uid: CG.Orange.Models.ModelBase.CreatedBy*
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedBy
+  commentId: P:CG.Orange.Models.AuditedModelBase.CreatedBy
+  fullName: CG.Orange.Models.AuditedModelBase.CreatedBy
+  nameWithType: AuditedModelBase.CreatedBy
+- uid: CG.Orange.Models.AuditedModelBase.CreatedBy*
   name: CreatedBy
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_CreatedBy_
-  commentId: Overload:CG.Orange.Models.ModelBase.CreatedBy
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedBy_
+  commentId: Overload:CG.Orange.Models.AuditedModelBase.CreatedBy
   isSpec: "True"
-  fullName: CG.Orange.Models.ModelBase.CreatedBy
-  nameWithType: ModelBase.CreatedBy
-- uid: CG.Orange.Models.ModelBase.CreatedOnUtc
+  fullName: CG.Orange.Models.AuditedModelBase.CreatedBy
+  nameWithType: AuditedModelBase.CreatedBy
+- uid: CG.Orange.Models.AuditedModelBase.CreatedOnUtc
   name: CreatedOnUtc
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_CreatedOnUtc
-  commentId: P:CG.Orange.Models.ModelBase.CreatedOnUtc
-  fullName: CG.Orange.Models.ModelBase.CreatedOnUtc
-  nameWithType: ModelBase.CreatedOnUtc
-- uid: CG.Orange.Models.ModelBase.CreatedOnUtc*
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedOnUtc
+  commentId: P:CG.Orange.Models.AuditedModelBase.CreatedOnUtc
+  fullName: CG.Orange.Models.AuditedModelBase.CreatedOnUtc
+  nameWithType: AuditedModelBase.CreatedOnUtc
+- uid: CG.Orange.Models.AuditedModelBase.CreatedOnUtc*
   name: CreatedOnUtc
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_CreatedOnUtc_
-  commentId: Overload:CG.Orange.Models.ModelBase.CreatedOnUtc
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedOnUtc_
+  commentId: Overload:CG.Orange.Models.AuditedModelBase.CreatedOnUtc
   isSpec: "True"
-  fullName: CG.Orange.Models.ModelBase.CreatedOnUtc
-  nameWithType: ModelBase.CreatedOnUtc
-- uid: CG.Orange.Models.ModelBase.LastUpdatedBy
+  fullName: CG.Orange.Models.AuditedModelBase.CreatedOnUtc
+  nameWithType: AuditedModelBase.CreatedOnUtc
+- uid: CG.Orange.Models.AuditedModelBase.LastUpdatedBy
   name: LastUpdatedBy
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_LastUpdatedBy
-  commentId: P:CG.Orange.Models.ModelBase.LastUpdatedBy
-  fullName: CG.Orange.Models.ModelBase.LastUpdatedBy
-  nameWithType: ModelBase.LastUpdatedBy
-- uid: CG.Orange.Models.ModelBase.LastUpdatedBy*
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedBy
+  commentId: P:CG.Orange.Models.AuditedModelBase.LastUpdatedBy
+  fullName: CG.Orange.Models.AuditedModelBase.LastUpdatedBy
+  nameWithType: AuditedModelBase.LastUpdatedBy
+- uid: CG.Orange.Models.AuditedModelBase.LastUpdatedBy*
   name: LastUpdatedBy
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_LastUpdatedBy_
-  commentId: Overload:CG.Orange.Models.ModelBase.LastUpdatedBy
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedBy_
+  commentId: Overload:CG.Orange.Models.AuditedModelBase.LastUpdatedBy
   isSpec: "True"
-  fullName: CG.Orange.Models.ModelBase.LastUpdatedBy
-  nameWithType: ModelBase.LastUpdatedBy
-- uid: CG.Orange.Models.ModelBase.LastUpdatedOnUtc
+  fullName: CG.Orange.Models.AuditedModelBase.LastUpdatedBy
+  nameWithType: AuditedModelBase.LastUpdatedBy
+- uid: CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
   name: LastUpdatedOnUtc
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_LastUpdatedOnUtc
-  commentId: P:CG.Orange.Models.ModelBase.LastUpdatedOnUtc
-  fullName: CG.Orange.Models.ModelBase.LastUpdatedOnUtc
-  nameWithType: ModelBase.LastUpdatedOnUtc
-- uid: CG.Orange.Models.ModelBase.LastUpdatedOnUtc*
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedOnUtc
+  commentId: P:CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
+  fullName: CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
+  nameWithType: AuditedModelBase.LastUpdatedOnUtc
+- uid: CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc*
   name: LastUpdatedOnUtc
-  href: api/CG.Orange.Models.ModelBase.html#CG_Orange_Models_ModelBase_LastUpdatedOnUtc_
-  commentId: Overload:CG.Orange.Models.ModelBase.LastUpdatedOnUtc
+  href: api/CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedOnUtc_
+  commentId: Overload:CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
   isSpec: "True"
-  fullName: CG.Orange.Models.ModelBase.LastUpdatedOnUtc
-  nameWithType: ModelBase.LastUpdatedOnUtc
+  fullName: CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
+  nameWithType: AuditedModelBase.LastUpdatedOnUtc
+- uid: CG.Orange.Models.ProviderModel
+  name: ProviderModel
+  href: api/CG.Orange.Models.ProviderModel.html
+  commentId: T:CG.Orange.Models.ProviderModel
+  fullName: CG.Orange.Models.ProviderModel
+  nameWithType: ProviderModel
+- uid: CG.Orange.Models.ProviderModel.Description
+  name: Description
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Description
+  commentId: P:CG.Orange.Models.ProviderModel.Description
+  fullName: CG.Orange.Models.ProviderModel.Description
+  nameWithType: ProviderModel.Description
+- uid: CG.Orange.Models.ProviderModel.Description*
+  name: Description
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Description_
+  commentId: Overload:CG.Orange.Models.ProviderModel.Description
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.Description
+  nameWithType: ProviderModel.Description
+- uid: CG.Orange.Models.ProviderModel.Id
+  name: Id
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Id
+  commentId: P:CG.Orange.Models.ProviderModel.Id
+  fullName: CG.Orange.Models.ProviderModel.Id
+  nameWithType: ProviderModel.Id
+- uid: CG.Orange.Models.ProviderModel.Id*
+  name: Id
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Id_
+  commentId: Overload:CG.Orange.Models.ProviderModel.Id
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.Id
+  nameWithType: ProviderModel.Id
+- uid: CG.Orange.Models.ProviderModel.IsDisabled
+  name: IsDisabled
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_IsDisabled
+  commentId: P:CG.Orange.Models.ProviderModel.IsDisabled
+  fullName: CG.Orange.Models.ProviderModel.IsDisabled
+  nameWithType: ProviderModel.IsDisabled
+- uid: CG.Orange.Models.ProviderModel.IsDisabled*
+  name: IsDisabled
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_IsDisabled_
+  commentId: Overload:CG.Orange.Models.ProviderModel.IsDisabled
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.IsDisabled
+  nameWithType: ProviderModel.IsDisabled
+- uid: CG.Orange.Models.ProviderModel.Name
+  name: Name
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Name
+  commentId: P:CG.Orange.Models.ProviderModel.Name
+  fullName: CG.Orange.Models.ProviderModel.Name
+  nameWithType: ProviderModel.Name
+- uid: CG.Orange.Models.ProviderModel.Name*
+  name: Name
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Name_
+  commentId: Overload:CG.Orange.Models.ProviderModel.Name
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.Name
+  nameWithType: ProviderModel.Name
+- uid: CG.Orange.Models.ProviderModel.ProcessorType
+  name: ProcessorType
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_ProcessorType
+  commentId: P:CG.Orange.Models.ProviderModel.ProcessorType
+  fullName: CG.Orange.Models.ProviderModel.ProcessorType
+  nameWithType: ProviderModel.ProcessorType
+- uid: CG.Orange.Models.ProviderModel.ProcessorType*
+  name: ProcessorType
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_ProcessorType_
+  commentId: Overload:CG.Orange.Models.ProviderModel.ProcessorType
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.ProcessorType
+  nameWithType: ProviderModel.ProcessorType
+- uid: CG.Orange.Models.ProviderModel.Properties
+  name: Properties
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Properties
+  commentId: P:CG.Orange.Models.ProviderModel.Properties
+  fullName: CG.Orange.Models.ProviderModel.Properties
+  nameWithType: ProviderModel.Properties
+- uid: CG.Orange.Models.ProviderModel.Properties*
+  name: Properties
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_Properties_
+  commentId: Overload:CG.Orange.Models.ProviderModel.Properties
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.Properties
+  nameWithType: ProviderModel.Properties
+- uid: CG.Orange.Models.ProviderModel.ProviderType
+  name: ProviderType
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_ProviderType
+  commentId: P:CG.Orange.Models.ProviderModel.ProviderType
+  fullName: CG.Orange.Models.ProviderModel.ProviderType
+  nameWithType: ProviderModel.ProviderType
+- uid: CG.Orange.Models.ProviderModel.ProviderType*
+  name: ProviderType
+  href: api/CG.Orange.Models.ProviderModel.html#CG_Orange_Models_ProviderModel_ProviderType_
+  commentId: Overload:CG.Orange.Models.ProviderModel.ProviderType
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderModel.ProviderType
+  nameWithType: ProviderModel.ProviderType
+- uid: CG.Orange.Models.ProviderPropertyModel
+  name: ProviderPropertyModel
+  href: api/CG.Orange.Models.ProviderPropertyModel.html
+  commentId: T:CG.Orange.Models.ProviderPropertyModel
+  fullName: CG.Orange.Models.ProviderPropertyModel
+  nameWithType: ProviderPropertyModel
+- uid: CG.Orange.Models.ProviderPropertyModel.Id
+  name: Id
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Id
+  commentId: P:CG.Orange.Models.ProviderPropertyModel.Id
+  fullName: CG.Orange.Models.ProviderPropertyModel.Id
+  nameWithType: ProviderPropertyModel.Id
+- uid: CG.Orange.Models.ProviderPropertyModel.Id*
+  name: Id
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Id_
+  commentId: Overload:CG.Orange.Models.ProviderPropertyModel.Id
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderPropertyModel.Id
+  nameWithType: ProviderPropertyModel.Id
+- uid: CG.Orange.Models.ProviderPropertyModel.Key
+  name: Key
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Key
+  commentId: P:CG.Orange.Models.ProviderPropertyModel.Key
+  fullName: CG.Orange.Models.ProviderPropertyModel.Key
+  nameWithType: ProviderPropertyModel.Key
+- uid: CG.Orange.Models.ProviderPropertyModel.Key*
+  name: Key
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Key_
+  commentId: Overload:CG.Orange.Models.ProviderPropertyModel.Key
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderPropertyModel.Key
+  nameWithType: ProviderPropertyModel.Key
+- uid: CG.Orange.Models.ProviderPropertyModel.Provider
+  name: Provider
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Provider
+  commentId: P:CG.Orange.Models.ProviderPropertyModel.Provider
+  fullName: CG.Orange.Models.ProviderPropertyModel.Provider
+  nameWithType: ProviderPropertyModel.Provider
+- uid: CG.Orange.Models.ProviderPropertyModel.Provider*
+  name: Provider
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Provider_
+  commentId: Overload:CG.Orange.Models.ProviderPropertyModel.Provider
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderPropertyModel.Provider
+  nameWithType: ProviderPropertyModel.Provider
+- uid: CG.Orange.Models.ProviderPropertyModel.ProviderId
+  name: ProviderId
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_ProviderId
+  commentId: P:CG.Orange.Models.ProviderPropertyModel.ProviderId
+  fullName: CG.Orange.Models.ProviderPropertyModel.ProviderId
+  nameWithType: ProviderPropertyModel.ProviderId
+- uid: CG.Orange.Models.ProviderPropertyModel.ProviderId*
+  name: ProviderId
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_ProviderId_
+  commentId: Overload:CG.Orange.Models.ProviderPropertyModel.ProviderId
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderPropertyModel.ProviderId
+  nameWithType: ProviderPropertyModel.ProviderId
+- uid: CG.Orange.Models.ProviderPropertyModel.Value
+  name: Value
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Value
+  commentId: P:CG.Orange.Models.ProviderPropertyModel.Value
+  fullName: CG.Orange.Models.ProviderPropertyModel.Value
+  nameWithType: ProviderPropertyModel.Value
+- uid: CG.Orange.Models.ProviderPropertyModel.Value*
+  name: Value
+  href: api/CG.Orange.Models.ProviderPropertyModel.html#CG_Orange_Models_ProviderPropertyModel_Value_
+  commentId: Overload:CG.Orange.Models.ProviderPropertyModel.Value
+  isSpec: "True"
+  fullName: CG.Orange.Models.ProviderPropertyModel.Value
+  nameWithType: ProviderPropertyModel.Value
+- uid: CG.Orange.Models.ProviderType
+  name: ProviderType
+  href: api/CG.Orange.Models.ProviderType.html
+  commentId: T:CG.Orange.Models.ProviderType
+  fullName: CG.Orange.Models.ProviderType
+  nameWithType: ProviderType
+- uid: CG.Orange.Models.ProviderType.Cache
+  name: Cache
+  href: api/CG.Orange.Models.ProviderType.html#CG_Orange_Models_ProviderType_Cache
+  commentId: F:CG.Orange.Models.ProviderType.Cache
+  fullName: CG.Orange.Models.ProviderType.Cache
+  nameWithType: ProviderType.Cache
+- uid: CG.Orange.Models.ProviderType.Secret
+  name: Secret
+  href: api/CG.Orange.Models.ProviderType.html#CG_Orange_Models_ProviderType_Secret
+  commentId: F:CG.Orange.Models.ProviderType.Secret
+  fullName: CG.Orange.Models.ProviderType.Secret
+  nameWithType: ProviderType.Secret
 - uid: CG.Orange.Models.SettingFileExtensions
   name: SettingFileExtensions
   href: api/CG.Orange.Models.SettingFileExtensions.html
@@ -1951,32 +3801,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.SettingFileModel.EnvironmentName
   nameWithType: SettingFileModel.EnvironmentName
-- uid: CG.Orange.Models.SettingFileModel.Equals(System.Object)
-  name: Equals(Object)
-  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Equals_System_Object_
-  commentId: M:CG.Orange.Models.SettingFileModel.Equals(System.Object)
-  fullName: CG.Orange.Models.SettingFileModel.Equals(System.Object)
-  nameWithType: SettingFileModel.Equals(Object)
-- uid: CG.Orange.Models.SettingFileModel.Equals*
-  name: Equals
-  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Equals_
-  commentId: Overload:CG.Orange.Models.SettingFileModel.Equals
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFileModel.Equals
-  nameWithType: SettingFileModel.Equals
-- uid: CG.Orange.Models.SettingFileModel.GetHashCode
-  name: GetHashCode()
-  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_GetHashCode
-  commentId: M:CG.Orange.Models.SettingFileModel.GetHashCode
-  fullName: CG.Orange.Models.SettingFileModel.GetHashCode()
-  nameWithType: SettingFileModel.GetHashCode()
-- uid: CG.Orange.Models.SettingFileModel.GetHashCode*
-  name: GetHashCode
-  href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_GetHashCode_
-  commentId: Overload:CG.Orange.Models.SettingFileModel.GetHashCode
-  isSpec: "True"
-  fullName: CG.Orange.Models.SettingFileModel.GetHashCode
-  nameWithType: SettingFileModel.GetHashCode
 - uid: CG.Orange.Models.SettingFileModel.Id
   name: Id
   href: api/CG.Orange.Models.SettingFileModel.html#CG_Orange_Models_SettingFileModel_Id
@@ -2028,78 +3852,116 @@ references:
   commentId: T:CG.Orange.Options.OrangeBllOptions
   fullName: CG.Orange.Options.OrangeBllOptions
   nameWithType: OrangeBllOptions
-- uid: CG.Orange.Options.SeedingOptions
-  name: SeedingOptions
-  href: api/CG.Orange.Options.SeedingOptions.html
-  commentId: T:CG.Orange.Options.SeedingOptions
-  fullName: CG.Orange.Options.SeedingOptions
-  nameWithType: SeedingOptions
-- uid: CG.Orange.Options.SeedingOptions.SettingFiles
-  name: SettingFiles
-  href: api/CG.Orange.Options.SeedingOptions.html#CG_Orange_Options_SeedingOptions_SettingFiles
-  commentId: P:CG.Orange.Options.SeedingOptions.SettingFiles
-  fullName: CG.Orange.Options.SeedingOptions.SettingFiles
-  nameWithType: SeedingOptions.SettingFiles
-- uid: CG.Orange.Options.SeedingOptions.SettingFiles*
-  name: SettingFiles
-  href: api/CG.Orange.Options.SeedingOptions.html#CG_Orange_Options_SeedingOptions_SettingFiles_
-  commentId: Overload:CG.Orange.Options.SeedingOptions.SettingFiles
+- uid: CG.Orange.Options.ProviderOptions
+  name: ProviderOptions
+  href: api/CG.Orange.Options.ProviderOptions.html
+  commentId: T:CG.Orange.Options.ProviderOptions
+  fullName: CG.Orange.Options.ProviderOptions
+  nameWithType: ProviderOptions
+- uid: CG.Orange.Options.ProviderOptions.Providers
+  name: Providers
+  href: api/CG.Orange.Options.ProviderOptions.html#CG_Orange_Options_ProviderOptions_Providers
+  commentId: P:CG.Orange.Options.ProviderOptions.Providers
+  fullName: CG.Orange.Options.ProviderOptions.Providers
+  nameWithType: ProviderOptions.Providers
+- uid: CG.Orange.Options.ProviderOptions.Providers*
+  name: Providers
+  href: api/CG.Orange.Options.ProviderOptions.html#CG_Orange_Options_ProviderOptions_Providers_
+  commentId: Overload:CG.Orange.Options.ProviderOptions.Providers
   isSpec: "True"
-  fullName: CG.Orange.Options.SeedingOptions.SettingFiles
-  nameWithType: SeedingOptions.SettingFiles
+  fullName: CG.Orange.Options.ProviderOptions.Providers
+  nameWithType: ProviderOptions.Providers
+- uid: CG.Orange.Options.SettingFileOptions
+  name: SettingFileOptions
+  href: api/CG.Orange.Options.SettingFileOptions.html
+  commentId: T:CG.Orange.Options.SettingFileOptions
+  fullName: CG.Orange.Options.SettingFileOptions
+  nameWithType: SettingFileOptions
+- uid: CG.Orange.Options.SettingFileOptions.SettingFiles
+  name: SettingFiles
+  href: api/CG.Orange.Options.SettingFileOptions.html#CG_Orange_Options_SettingFileOptions_SettingFiles
+  commentId: P:CG.Orange.Options.SettingFileOptions.SettingFiles
+  fullName: CG.Orange.Options.SettingFileOptions.SettingFiles
+  nameWithType: SettingFileOptions.SettingFiles
+- uid: CG.Orange.Options.SettingFileOptions.SettingFiles*
+  name: SettingFiles
+  href: api/CG.Orange.Options.SettingFileOptions.html#CG_Orange_Options_SettingFileOptions_SettingFiles_
+  commentId: Overload:CG.Orange.Options.SettingFileOptions.SettingFiles
+  isSpec: "True"
+  fullName: CG.Orange.Options.SettingFileOptions.SettingFiles
+  nameWithType: SettingFileOptions.SettingFiles
 - uid: CG.Orange.Plugins.Azure
   name: CG.Orange.Plugins.Azure
   href: api/CG.Orange.Plugins.Azure.html
   commentId: N:CG.Orange.Plugins.Azure
   fullName: CG.Orange.Plugins.Azure
   nameWithType: CG.Orange.Plugins.Azure
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider
-  name: AzureSecretProvider
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html
-  commentId: T:CG.Orange.Plugins.Azure.AzureSecretProvider
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider
-  nameWithType: AzureSecretProvider
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor(SecretClient,ILogger{CG.Orange.Plugins.Azure.AzureSecretProvider})
-  name: AzureSecretProvider(SecretClient, ILogger<AzureSecretProvider>)
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__ctor_SecretClient_ILogger_CG_Orange_Plugins_Azure_AzureSecretProvider__
-  commentId: M:CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor(SecretClient,ILogger{CG.Orange.Plugins.Azure.AzureSecretProvider})
-  name.vb: AzureSecretProvider(SecretClient, ILogger(Of AzureSecretProvider))
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger<CG.Orange.Plugins.Azure.AzureSecretProvider>)
-  fullName.vb: CG.Orange.Plugins.Azure.AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger(Of CG.Orange.Plugins.Azure.AzureSecretProvider))
-  nameWithType: AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger<AzureSecretProvider>)
-  nameWithType.vb: AzureSecretProvider.AzureSecretProvider(SecretClient, ILogger(Of AzureSecretProvider))
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor*
-  name: AzureSecretProvider
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__ctor_
-  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretProvider.#ctor
+- uid: CG.Orange.Plugins.Azure.AzureSecretClientFactory
+  name: AzureSecretClientFactory
+  href: api/CG.Orange.Plugins.Azure.AzureSecretClientFactory.html
+  commentId: T:CG.Orange.Plugins.Azure.AzureSecretClientFactory
+  fullName: CG.Orange.Plugins.Azure.AzureSecretClientFactory
+  nameWithType: AzureSecretClientFactory
+- uid: CG.Orange.Plugins.Azure.AzureSecretClientFactory.CreateAsync(System.String,CancellationToken)
+  name: CreateAsync(String, CancellationToken)
+  href: api/CG.Orange.Plugins.Azure.AzureSecretClientFactory.html#CG_Orange_Plugins_Azure_AzureSecretClientFactory_CreateAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Plugins.Azure.AzureSecretClientFactory.CreateAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Plugins.Azure.AzureSecretClientFactory.CreateAsync(System.String, CancellationToken)
+  nameWithType: AzureSecretClientFactory.CreateAsync(String, CancellationToken)
+- uid: CG.Orange.Plugins.Azure.AzureSecretClientFactory.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Plugins.Azure.AzureSecretClientFactory.html#CG_Orange_Plugins_Azure_AzureSecretClientFactory_CreateAsync_
+  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretClientFactory.CreateAsync
   isSpec: "True"
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.AzureSecretProvider
-  nameWithType: AzureSecretProvider.AzureSecretProvider
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider._logger
+  fullName: CG.Orange.Plugins.Azure.AzureSecretClientFactory.CreateAsync
+  nameWithType: AzureSecretClientFactory.CreateAsync
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor
+  name: AzureSecretProcessor
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html
+  commentId: T:CG.Orange.Plugins.Azure.AzureSecretProcessor
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor
+  nameWithType: AzureSecretProcessor
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor.#ctor(CG.Orange.Plugins.Azure.AzureSecretClientFactory,ILogger{CG.Orange.Plugins.Azure.AzureSecretProcessor})
+  name: AzureSecretProcessor(AzureSecretClientFactory, ILogger<AzureSecretProcessor>)
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html#CG_Orange_Plugins_Azure_AzureSecretProcessor__ctor_CG_Orange_Plugins_Azure_AzureSecretClientFactory_ILogger_CG_Orange_Plugins_Azure_AzureSecretProcessor__
+  commentId: M:CG.Orange.Plugins.Azure.AzureSecretProcessor.#ctor(CG.Orange.Plugins.Azure.AzureSecretClientFactory,ILogger{CG.Orange.Plugins.Azure.AzureSecretProcessor})
+  name.vb: AzureSecretProcessor(AzureSecretClientFactory, ILogger(Of AzureSecretProcessor))
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor.AzureSecretProcessor(CG.Orange.Plugins.Azure.AzureSecretClientFactory, ILogger<CG.Orange.Plugins.Azure.AzureSecretProcessor>)
+  fullName.vb: CG.Orange.Plugins.Azure.AzureSecretProcessor.AzureSecretProcessor(CG.Orange.Plugins.Azure.AzureSecretClientFactory, ILogger(Of CG.Orange.Plugins.Azure.AzureSecretProcessor))
+  nameWithType: AzureSecretProcessor.AzureSecretProcessor(AzureSecretClientFactory, ILogger<AzureSecretProcessor>)
+  nameWithType.vb: AzureSecretProcessor.AzureSecretProcessor(AzureSecretClientFactory, ILogger(Of AzureSecretProcessor))
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor.#ctor*
+  name: AzureSecretProcessor
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html#CG_Orange_Plugins_Azure_AzureSecretProcessor__ctor_
+  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretProcessor.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor.AzureSecretProcessor
+  nameWithType: AzureSecretProcessor.AzureSecretProcessor
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor._logger
   name: _logger
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__logger
-  commentId: F:CG.Orange.Plugins.Azure.AzureSecretProvider._logger
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider._logger
-  nameWithType: AzureSecretProvider._logger
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider._secretClient
-  name: _secretClient
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider__secretClient
-  commentId: F:CG.Orange.Plugins.Azure.AzureSecretProvider._secretClient
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider._secretClient
-  nameWithType: AzureSecretProvider._secretClient
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync(System.String,CancellationToken)
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html#CG_Orange_Plugins_Azure_AzureSecretProcessor__logger
+  commentId: F:CG.Orange.Plugins.Azure.AzureSecretProcessor._logger
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor._logger
+  nameWithType: AzureSecretProcessor._logger
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor._secretClientFactory
+  name: _secretClientFactory
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html#CG_Orange_Plugins_Azure_AzureSecretProcessor__secretClientFactory
+  commentId: F:CG.Orange.Plugins.Azure.AzureSecretProcessor._secretClientFactory
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor._secretClientFactory
+  nameWithType: AzureSecretProcessor._secretClientFactory
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor.GetSecretAsync(System.String,CancellationToken)
   name: GetSecretAsync(String, CancellationToken)
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider_GetSecretAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync(System.String, CancellationToken)
-  nameWithType: AzureSecretProvider.GetSecretAsync(String, CancellationToken)
-- uid: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync*
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html#CG_Orange_Plugins_Azure_AzureSecretProcessor_GetSecretAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Plugins.Azure.AzureSecretProcessor.GetSecretAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor.GetSecretAsync(System.String, CancellationToken)
+  nameWithType: AzureSecretProcessor.GetSecretAsync(String, CancellationToken)
+- uid: CG.Orange.Plugins.Azure.AzureSecretProcessor.GetSecretAsync*
   name: GetSecretAsync
-  href: api/CG.Orange.Plugins.Azure.AzureSecretProvider.html#CG_Orange_Plugins_Azure_AzureSecretProvider_GetSecretAsync_
-  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync
+  href: api/CG.Orange.Plugins.Azure.AzureSecretProcessor.html#CG_Orange_Plugins_Azure_AzureSecretProcessor_GetSecretAsync_
+  commentId: Overload:CG.Orange.Plugins.Azure.AzureSecretProcessor.GetSecretAsync
   isSpec: "True"
-  fullName: CG.Orange.Plugins.Azure.AzureSecretProvider.GetSecretAsync
-  nameWithType: AzureSecretProvider.GetSecretAsync
+  fullName: CG.Orange.Plugins.Azure.AzureSecretProcessor.GetSecretAsync
+  nameWithType: AzureSecretProcessor.GetSecretAsync
 - uid: CG.Orange.Plugins.Azure.Module
   name: Module
   href: api/CG.Orange.Plugins.Azure.Module.html
@@ -2160,74 +4022,326 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Plugins.Azure.Options.AzureProviderOptions.KeyVaultUri
   nameWithType: AzureProviderOptions.KeyVaultUri
-- uid: CG.Orange.Providers
-  name: CG.Orange.Providers
-  href: api/CG.Orange.Providers.html
-  commentId: N:CG.Orange.Providers
-  fullName: CG.Orange.Providers
-  nameWithType: CG.Orange.Providers
-- uid: CG.Orange.Providers.ISecretProvider
-  name: ISecretProvider
-  href: api/CG.Orange.Providers.ISecretProvider.html
-  commentId: T:CG.Orange.Providers.ISecretProvider
-  fullName: CG.Orange.Providers.ISecretProvider
-  nameWithType: ISecretProvider
-- uid: CG.Orange.Providers.ISecretProvider.GetSecretAsync(System.String,CancellationToken)
+- uid: CG.Orange.Processors
+  name: CG.Orange.Processors
+  href: api/CG.Orange.Processors.html
+  commentId: N:CG.Orange.Processors
+  fullName: CG.Orange.Processors
+  nameWithType: CG.Orange.Processors
+- uid: CG.Orange.Processors.ISecretProcessor
+  name: ISecretProcessor
+  href: api/CG.Orange.Processors.ISecretProcessor.html
+  commentId: T:CG.Orange.Processors.ISecretProcessor
+  fullName: CG.Orange.Processors.ISecretProcessor
+  nameWithType: ISecretProcessor
+- uid: CG.Orange.Processors.ISecretProcessor.GetSecretAsync(System.String,CancellationToken)
   name: GetSecretAsync(String, CancellationToken)
-  href: api/CG.Orange.Providers.ISecretProvider.html#CG_Orange_Providers_ISecretProvider_GetSecretAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Providers.ISecretProvider.GetSecretAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Providers.ISecretProvider.GetSecretAsync(System.String, CancellationToken)
-  nameWithType: ISecretProvider.GetSecretAsync(String, CancellationToken)
-- uid: CG.Orange.Providers.ISecretProvider.GetSecretAsync*
+  href: api/CG.Orange.Processors.ISecretProcessor.html#CG_Orange_Processors_ISecretProcessor_GetSecretAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Processors.ISecretProcessor.GetSecretAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Processors.ISecretProcessor.GetSecretAsync(System.String, CancellationToken)
+  nameWithType: ISecretProcessor.GetSecretAsync(String, CancellationToken)
+- uid: CG.Orange.Processors.ISecretProcessor.GetSecretAsync*
   name: GetSecretAsync
-  href: api/CG.Orange.Providers.ISecretProvider.html#CG_Orange_Providers_ISecretProvider_GetSecretAsync_
-  commentId: Overload:CG.Orange.Providers.ISecretProvider.GetSecretAsync
+  href: api/CG.Orange.Processors.ISecretProcessor.html#CG_Orange_Processors_ISecretProcessor_GetSecretAsync_
+  commentId: Overload:CG.Orange.Processors.ISecretProcessor.GetSecretAsync
   isSpec: "True"
-  fullName: CG.Orange.Providers.ISecretProvider.GetSecretAsync
-  nameWithType: ISecretProvider.GetSecretAsync
-- uid: CG.Orange.Providers.ProviderException
-  name: ProviderException
-  href: api/CG.Orange.Providers.ProviderException.html
-  commentId: T:CG.Orange.Providers.ProviderException
-  fullName: CG.Orange.Providers.ProviderException
-  nameWithType: ProviderException
-- uid: CG.Orange.Providers.ProviderException.#ctor
-  name: ProviderException()
-  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor
-  commentId: M:CG.Orange.Providers.ProviderException.#ctor
-  fullName: CG.Orange.Providers.ProviderException.ProviderException()
-  nameWithType: ProviderException.ProviderException()
-- uid: CG.Orange.Providers.ProviderException.#ctor(SerializationInfo,StreamingContext)
-  name: ProviderException(SerializationInfo, StreamingContext)
-  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_SerializationInfo_StreamingContext_
-  commentId: M:CG.Orange.Providers.ProviderException.#ctor(SerializationInfo,StreamingContext)
-  fullName: CG.Orange.Providers.ProviderException.ProviderException(SerializationInfo, StreamingContext)
-  nameWithType: ProviderException.ProviderException(SerializationInfo, StreamingContext)
-- uid: CG.Orange.Providers.ProviderException.#ctor(System.String)
-  name: ProviderException(String)
-  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_System_String_
-  commentId: M:CG.Orange.Providers.ProviderException.#ctor(System.String)
-  fullName: CG.Orange.Providers.ProviderException.ProviderException(System.String)
-  nameWithType: ProviderException.ProviderException(String)
-- uid: CG.Orange.Providers.ProviderException.#ctor(System.String,Exception)
-  name: ProviderException(String, Exception)
-  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_System_String_Exception_
-  commentId: M:CG.Orange.Providers.ProviderException.#ctor(System.String,Exception)
-  fullName: CG.Orange.Providers.ProviderException.ProviderException(System.String, Exception)
-  nameWithType: ProviderException.ProviderException(String, Exception)
-- uid: CG.Orange.Providers.ProviderException.#ctor*
-  name: ProviderException
-  href: api/CG.Orange.Providers.ProviderException.html#CG_Orange_Providers_ProviderException__ctor_
-  commentId: Overload:CG.Orange.Providers.ProviderException.#ctor
+  fullName: CG.Orange.Processors.ISecretProcessor.GetSecretAsync
+  nameWithType: ISecretProcessor.GetSecretAsync
+- uid: CG.Orange.Processors.ProcessorException
+  name: ProcessorException
+  href: api/CG.Orange.Processors.ProcessorException.html
+  commentId: T:CG.Orange.Processors.ProcessorException
+  fullName: CG.Orange.Processors.ProcessorException
+  nameWithType: ProcessorException
+- uid: CG.Orange.Processors.ProcessorException.#ctor
+  name: ProcessorException()
+  href: api/CG.Orange.Processors.ProcessorException.html#CG_Orange_Processors_ProcessorException__ctor
+  commentId: M:CG.Orange.Processors.ProcessorException.#ctor
+  fullName: CG.Orange.Processors.ProcessorException.ProcessorException()
+  nameWithType: ProcessorException.ProcessorException()
+- uid: CG.Orange.Processors.ProcessorException.#ctor(SerializationInfo,StreamingContext)
+  name: ProcessorException(SerializationInfo, StreamingContext)
+  href: api/CG.Orange.Processors.ProcessorException.html#CG_Orange_Processors_ProcessorException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:CG.Orange.Processors.ProcessorException.#ctor(SerializationInfo,StreamingContext)
+  fullName: CG.Orange.Processors.ProcessorException.ProcessorException(SerializationInfo, StreamingContext)
+  nameWithType: ProcessorException.ProcessorException(SerializationInfo, StreamingContext)
+- uid: CG.Orange.Processors.ProcessorException.#ctor(System.String)
+  name: ProcessorException(String)
+  href: api/CG.Orange.Processors.ProcessorException.html#CG_Orange_Processors_ProcessorException__ctor_System_String_
+  commentId: M:CG.Orange.Processors.ProcessorException.#ctor(System.String)
+  fullName: CG.Orange.Processors.ProcessorException.ProcessorException(System.String)
+  nameWithType: ProcessorException.ProcessorException(String)
+- uid: CG.Orange.Processors.ProcessorException.#ctor(System.String,Exception)
+  name: ProcessorException(String, Exception)
+  href: api/CG.Orange.Processors.ProcessorException.html#CG_Orange_Processors_ProcessorException__ctor_System_String_Exception_
+  commentId: M:CG.Orange.Processors.ProcessorException.#ctor(System.String,Exception)
+  fullName: CG.Orange.Processors.ProcessorException.ProcessorException(System.String, Exception)
+  nameWithType: ProcessorException.ProcessorException(String, Exception)
+- uid: CG.Orange.Processors.ProcessorException.#ctor*
+  name: ProcessorException
+  href: api/CG.Orange.Processors.ProcessorException.html#CG_Orange_Processors_ProcessorException__ctor_
+  commentId: Overload:CG.Orange.Processors.ProcessorException.#ctor
   isSpec: "True"
-  fullName: CG.Orange.Providers.ProviderException.ProviderException
-  nameWithType: ProviderException.ProviderException
+  fullName: CG.Orange.Processors.ProcessorException.ProcessorException
+  nameWithType: ProcessorException.ProcessorException
 - uid: CG.Orange.Repositories
   name: CG.Orange.Repositories
   href: api/CG.Orange.Repositories.html
   commentId: N:CG.Orange.Repositories
   fullName: CG.Orange.Repositories
   nameWithType: CG.Orange.Repositories
+- uid: CG.Orange.Repositories.IProviderPropertyRepository
+  name: IProviderPropertyRepository
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html
+  commentId: T:CG.Orange.Repositories.IProviderPropertyRepository
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository
+  nameWithType: IProviderPropertyRepository
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync(CancellationToken)
+  nameWithType: IProviderPropertyRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.AnyAsync
+  nameWithType: IProviderPropertyRepository.AnyAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync(ProviderModel,CancellationToken)
+  name: AnyByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_AnyByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderPropertyRepository.AnyByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync*
+  name: AnyByProviderAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_AnyByProviderAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.AnyByProviderAsync
+  nameWithType: IProviderPropertyRepository.AnyByProviderAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.CountAsync(CancellationToken)
+  nameWithType: IProviderPropertyRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_CountAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.CountAsync
+  nameWithType: IProviderPropertyRepository.CountAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync(ProviderModel,CancellationToken)
+  name: CountByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_CountByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderPropertyRepository.CountByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync*
+  name: CountByProviderAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_CountByProviderAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.CountByProviderAsync
+  nameWithType: IProviderPropertyRepository.CountByProviderAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync(ProviderPropertyModel,CancellationToken)
+  name: CreateAsync(ProviderPropertyModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_CreateAsync_ProviderPropertyModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync(ProviderPropertyModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync(ProviderPropertyModel, CancellationToken)
+  nameWithType: IProviderPropertyRepository.CreateAsync(ProviderPropertyModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.CreateAsync
+  nameWithType: IProviderPropertyRepository.CreateAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync(ProviderPropertyModel,CancellationToken)
+  name: DeleteAsync(ProviderPropertyModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_DeleteAsync_ProviderPropertyModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync(ProviderPropertyModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync(ProviderPropertyModel, CancellationToken)
+  nameWithType: IProviderPropertyRepository.DeleteAsync(ProviderPropertyModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_DeleteAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.DeleteAsync
+  nameWithType: IProviderPropertyRepository.DeleteAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync(CancellationToken)
+  nameWithType: IProviderPropertyRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.FindAllAsync
+  nameWithType: IProviderPropertyRepository.FindAllAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: IProviderPropertyRepository.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_FindByIdAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.FindByIdAsync
+  nameWithType: IProviderPropertyRepository.FindByIdAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync(ProviderModel,CancellationToken)
+  name: FindByProviderAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_FindByProviderAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderPropertyRepository.FindByProviderAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync*
+  name: FindByProviderAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_FindByProviderAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.FindByProviderAsync
+  nameWithType: IProviderPropertyRepository.FindByProviderAsync
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync(ProviderPropertyModel,CancellationToken)
+  name: UpdateAsync(ProviderPropertyModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_UpdateAsync_ProviderPropertyModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync(ProviderPropertyModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync(ProviderPropertyModel, CancellationToken)
+  nameWithType: IProviderPropertyRepository.UpdateAsync(ProviderPropertyModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Repositories.IProviderPropertyRepository.html#CG_Orange_Repositories_IProviderPropertyRepository_UpdateAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderPropertyRepository.UpdateAsync
+  nameWithType: IProviderPropertyRepository.UpdateAsync
+- uid: CG.Orange.Repositories.IProviderRepository
+  name: IProviderRepository
+  href: api/CG.Orange.Repositories.IProviderRepository.html
+  commentId: T:CG.Orange.Repositories.IProviderRepository
+  fullName: CG.Orange.Repositories.IProviderRepository
+  nameWithType: IProviderRepository
+- uid: CG.Orange.Repositories.IProviderRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.AnyAsync(CancellationToken)
+  nameWithType: IProviderRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.AnyAsync(System.String,CancellationToken)
+  name: AnyAsync(String, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_AnyAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.AnyAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.AnyAsync(System.String, CancellationToken)
+  nameWithType: IProviderRepository.AnyAsync(String, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.AnyAsync
+  nameWithType: IProviderRepository.AnyAsync
+- uid: CG.Orange.Repositories.IProviderRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.CountAsync(CancellationToken)
+  nameWithType: IProviderRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_CountAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.CountAsync
+  nameWithType: IProviderRepository.CountAsync
+- uid: CG.Orange.Repositories.IProviderRepository.CreateAsync(ProviderModel,CancellationToken)
+  name: CreateAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_CreateAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.CreateAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.CreateAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderRepository.CreateAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.CreateAsync
+  nameWithType: IProviderRepository.CreateAsync
+- uid: CG.Orange.Repositories.IProviderRepository.DeleteAsync(ProviderModel,CancellationToken)
+  name: DeleteAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_DeleteAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.DeleteAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.DeleteAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderRepository.DeleteAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_DeleteAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.DeleteAsync
+  nameWithType: IProviderRepository.DeleteAsync
+- uid: CG.Orange.Repositories.IProviderRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.FindAllAsync(CancellationToken)
+  nameWithType: IProviderRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.FindAllAsync
+  nameWithType: IProviderRepository.FindAllAsync
+- uid: CG.Orange.Repositories.IProviderRepository.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: IProviderRepository.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByIdAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.FindByIdAsync
+  nameWithType: IProviderRepository.FindByIdAsync
+- uid: CG.Orange.Repositories.IProviderRepository.FindByNameAsync(System.String,CancellationToken)
+  name: FindByNameAsync(String, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByNameAsync_System_String_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.FindByNameAsync(System.String,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.FindByNameAsync(System.String, CancellationToken)
+  nameWithType: IProviderRepository.FindByNameAsync(String, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByNameAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.FindByNameAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.FindByNameAsync
+  nameWithType: IProviderRepository.FindByNameAsync
+- uid: CG.Orange.Repositories.IProviderRepository.UpdateAsync(ProviderModel,CancellationToken)
+  name: UpdateAsync(ProviderModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_UpdateAsync_ProviderModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IProviderRepository.UpdateAsync(ProviderModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IProviderRepository.UpdateAsync(ProviderModel, CancellationToken)
+  nameWithType: IProviderRepository.UpdateAsync(ProviderModel, CancellationToken)
+- uid: CG.Orange.Repositories.IProviderRepository.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_UpdateAsync_
+  commentId: Overload:CG.Orange.Repositories.IProviderRepository.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IProviderRepository.UpdateAsync
+  nameWithType: IProviderRepository.UpdateAsync
 - uid: CG.Orange.Repositories.ISettingFileRepository
   name: ISettingFileRepository
   href: api/CG.Orange.Repositories.ISettingFileRepository.html
