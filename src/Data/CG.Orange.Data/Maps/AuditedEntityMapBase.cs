@@ -2,11 +2,11 @@
 namespace CG.Orange.Data.Maps;
 
 /// <summary>
-/// This class represents a base map for entity types derived from <see cref="Entities.AuditedEntityBase"/>
+/// This class represents a base map for entity types derived from <see cref="AuditedEntityBase"/>
 /// </summary>
 /// <typeparam name="TEntity"></typeparam>
 internal abstract class AuditedEntityMapBase<TEntity> : IEntityTypeConfiguration<TEntity>
-    where TEntity : Entities.AuditedEntityBase
+    where TEntity : AuditedEntityBase
 {
     // *******************************************************************
     // Fields.
@@ -66,12 +66,14 @@ internal abstract class AuditedEntityMapBase<TEntity> : IEntityTypeConfiguration
 
         // Setup the property.
         builder.Property(e => e.CreatedBy)
-            .HasMaxLength(32)
+            .HasMaxLength(Globals.Models.AuditedModelBases.CreatedByLength)
+            .IsUnicode(false)
             .IsRequired();
 
         // Setup the property.
         builder.Property(e => e.LastUpdatedBy)
-            .HasMaxLength(32);
+            .HasMaxLength(Globals.Models.AuditedModelBases.LastUpdatedByLength)
+            .IsUnicode(false);
 
         // Setup the property.
         builder.Property(e => e.LastUpdatedOnUtc);

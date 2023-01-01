@@ -2,10 +2,10 @@
 namespace CG.Orange.Plugins.Azure;
 
 /// <summary>
-/// This class is an Azure implementation of the <see cref="ISecretProvider"/>
+/// This class is an Azure implementation of the <see cref="ISecretProcessor"/>
 /// interface.
 /// </summary>
-internal class AzureSecretProvider : ISecretProvider
+internal class AzureSecretProcessor : ISecretProcessor
 {
     // *******************************************************************
     // Fields.
@@ -14,14 +14,14 @@ internal class AzureSecretProvider : ISecretProvider
     #region Fields
 
     /// <summary>
-    /// This field contains the Azure client for this provider. 
+    /// This field contains the Azure secret client factory for this processor. 
     /// </summary>
-    internal protected readonly SecretClient _secretClient;
+    internal protected readonly AzureSecretClientFactory _secretClientFactory = null!;
 
     /// <summary>
-    /// This field contains the logger for this provider. 
+    /// This field contains the logger for this processor. 
     /// </summary>
-    internal protected readonly ILogger<AzureSecretProvider> _logger;
+    internal protected readonly ILogger<AzureSecretProcessor> _logger = null!;
 
     #endregion
 
@@ -32,20 +32,23 @@ internal class AzureSecretProvider : ISecretProvider
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="AzureSecretProvider"/>
+    /// This constructor creates a new instance of the <see cref="AzureSecretProcessor"/>
     /// class.
     /// </summary>
-    public AzureSecretProvider(
-        SecretClient secretClient,
-        ILogger<AzureSecretProvider> logger
+    /// <param name="secretClientFactory">The Azure secret client factory 
+    /// to use with this processor.</param>
+    /// <param name="logger">The logger to use with this processor.</param>
+    public AzureSecretProcessor(
+        AzureSecretClientFactory secretClientFactory,
+        ILogger<AzureSecretProcessor> logger
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(secretClient, nameof(secretClient))
+        Guard.Instance().ThrowIfNull(secretClientFactory, nameof(secretClientFactory))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s).
-        _secretClient = secretClient;   
+        _secretClientFactory = secretClientFactory;   
         _logger = logger;
     }
 
@@ -62,7 +65,7 @@ internal class AzureSecretProvider : ISecretProvider
         string secretKey, 
         CancellationToken cancellationToken = default
         )
-    {
+    {/*
         // Validate the arguments before attempting to use them.
         Guard.Instance().ThrowIfNullOrEmpty(secretKey, nameof(secretKey));
 
@@ -90,7 +93,9 @@ internal class AzureSecretProvider : ISecretProvider
                 innerException: ex,
                 message: $"Failed to retrieve secret {secretKey} from Azure!"
                 );
-        }
+        }*/
+
+        throw new NotImplementedException();
     }
 
     #endregion

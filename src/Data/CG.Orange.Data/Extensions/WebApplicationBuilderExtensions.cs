@@ -39,11 +39,13 @@ public static class WebApplicationBuilderExtensions003
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the repositories"
+            "Wiring up the Orange repositories"
             );
 
         // Add the repositories
         webApplicationBuilder.Services.AddScoped<ISettingFileRepository, SettingFileRepository>();
+        webApplicationBuilder.Services.AddScoped<IProviderRepository, ProviderRepository>();
+        webApplicationBuilder.Services.AddScoped<IProviderPropertyRepository, ProviderPropertyRepository>();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
@@ -55,6 +57,8 @@ public static class WebApplicationBuilderExtensions003
         {
             // Wire up the conversion maps.
             cfg.CreateMap<SettingFileEntity, SettingFileModel>().ReverseMap();
+            cfg.CreateMap<ProviderEntity, ProviderModel>().ReverseMap();
+            cfg.CreateMap<ProviderPropertyEntity, ProviderPropertyModel>().ReverseMap();
         });
 
         // Return the application builder.

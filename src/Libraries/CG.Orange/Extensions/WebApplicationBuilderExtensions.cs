@@ -38,19 +38,32 @@ public static class WebApplicationBuilderExtensions001
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the managers"
+            "Wiring up the Orange managers"
             );
 
         // Add the managers.
         webApplicationBuilder.Services.AddScoped<ISettingFileManager, SettingFileManager>();
+        webApplicationBuilder.Services.AddScoped<IProviderManager, ProviderManager>();
+        webApplicationBuilder.Services.AddScoped<IProviderPropertyManager, ProviderPropertyManager>();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the directors"
+            "Wiring up the Orange directors"
             );
 
         // Add the directors.
         webApplicationBuilder.Services.AddScoped<IConfigurationDirector, ConfigurationDirector>();
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Wiring up the shared cryptographers"
+            );
+
+        // Add the shared cryptographers
+        webApplicationBuilder.AddCryptographyWithSharedKeys(
+            sectionName: sectionName,
+            bootstrapLogger: bootstrapLogger
+            );
 
         // Return the application builder.
         return webApplicationBuilder;

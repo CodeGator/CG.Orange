@@ -1,0 +1,591 @@
+﻿
+namespace CG.Orange.Managers;
+
+internal class ProviderManager : IProviderManager
+{
+    // *******************************************************************
+    // Fields.
+    // *******************************************************************
+
+    #region Fields
+
+    /// <summary>
+    /// This field contains the cryptographer for this manager.
+    /// </summary>
+    internal protected readonly ICryptographer _cryptographer = null!;
+
+    /// <summary>
+    /// This field contains the repository for this manager.
+    /// </summary>
+    internal protected readonly IProviderRepository _providerRepository = null!;
+
+    /// <summary>
+    /// This field contains the logger for this manager.
+    /// </summary>
+    internal protected readonly ILogger<IProviderManager> _logger = null!;
+
+    #endregion
+
+    // *******************************************************************
+    // Constructors.
+    // *******************************************************************
+
+    #region Constructors
+
+    /// <summary>
+    /// This constructor creates a new instance of the <see cref="ProviderManager"/>
+    /// class.
+    /// </summary>
+    /// <param name="cryptographer">The cryptographer to use with this
+    /// manager.</param>
+    /// <param name="providerRepository">The provider repository to use
+    /// with this manager.</param>
+    /// <param name="logger">The logger to use with this manager.</param>
+    /// <exception cref="ArgumentException">This exception is thrown whenever one
+    /// or more arguments are missing, or invalid.</exception>
+    public ProviderManager(
+        ICryptographer cryptographer,
+        IProviderRepository providerRepository,
+        ILogger<IProviderManager> logger
+        )
+    {
+        // Validate the arguments before attempting to use them.
+        Guard.Instance().ThrowIfNull(cryptographer, nameof(cryptographer))
+            .ThrowIfNull(providerRepository, nameof(providerRepository))
+            .ThrowIfNull(logger, nameof(logger));
+
+        // Save the reference(s)
+        _cryptographer = cryptographer;
+        _providerRepository = providerRepository;
+        _logger = logger;
+    }
+
+    #endregion
+
+    // *******************************************************************
+    // Public methods.
+    // *******************************************************************
+
+    #region Public methods
+
+    /// <inheritdoc />
+    public virtual async Task<bool> AnyAsync(
+        CancellationToken cancellationToken = default
+        )
+    {
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.AnyAsync)
+                );
+
+            // Perform the search.
+            return await _providerRepository.AnyAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for providers!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for providers!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<bool> AnyAsync(
+        string name,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNullOrEmpty(name, nameof(name));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.AnyAsync)
+                );
+
+            // Perform the search.
+            return await _providerRepository.AnyAsync(
+                name,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for providers by name!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for providers " +
+                "by name!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<long> CountAsync(
+        CancellationToken cancellationToken = default
+        )
+    {
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.CountAsync)
+                );
+
+            // Perform the search.
+            return await _providerRepository.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to count providers!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to count providers!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<ProviderModel> CreateAsync(
+        ProviderModel provider,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(ProviderModel)
+                );
+
+            // Ensure the stats are correct.
+            provider.CreatedOnUtc = DateTime.UtcNow;
+            provider.CreatedBy = userName;
+            provider.LastUpdatedBy = null;
+            provider.LastUpdatedOnUtc = null;
+
+            // Are there any properties?
+            if (provider.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting {count} properties for provider: {name}",
+                    provider.Properties.Count(),
+                    provider.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in provider.Properties) 
+                {
+                    // Encrypt the value, at rest.
+                    property.Value = await _cryptographer.AesEncryptAsync(
+                        property.Key,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.CreateAsync)
+                );
+
+            // Perform the operation.
+            return await _providerRepository.CreateAsync(
+                provider,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to create a new provider!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to create a new provider!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task DeleteAsync(
+        ProviderModel provider,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(ProviderModel)
+                );
+
+            // Ensure the stats are correct.
+            provider.LastUpdatedOnUtc = DateTime.UtcNow;
+            provider.LastUpdatedBy = userName;
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.DeleteAsync)
+                );
+
+            // Perform the operation.
+            await _providerRepository.DeleteAsync(
+                provider,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to delete a provider!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to delete a provider!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<IEnumerable<ProviderModel>> FindAllAsync(
+        CancellationToken cancellationToken = default
+        )
+    {
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.FindAllAsync)
+                );
+
+            // Perform the operation.
+            var result = await _providerRepository.FindAllAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Loop through providers with properties.
+            foreach (var provider in result.Where(x => x.Properties.Any()))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting {count} properties for provider: {name}",
+                    provider.Properties.Count(),
+                    provider.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in provider.Properties)
+                {
+                    // Decrypt the value.
+                    property.Value = await _cryptographer.AesDecryptAsync(
+                        property.Key,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for providers!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for providers!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<ProviderModel?> FindByNameAsync(
+        string name,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNullOrEmpty(name, nameof(name));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.FindByNameAsync)
+                );
+
+            // Perform the operation.
+            var result = await _providerRepository.FindByNameAsync(
+                name,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (result is null)
+            {
+                return null;
+            }
+
+            // Are there any properties?
+            if (result.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting {count} properties for provider: {name}",
+                    result.Properties.Count(),
+                    result.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in result.Properties)
+                {
+                    // Decrypt the value.
+                    property.Value = await _cryptographer.AesDecryptAsync(
+                        property.Key,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for providers by name!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for providers by " +
+                "name!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<ProviderModel?> FindByIdAsync(
+        int id,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfZero(id, nameof(id));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.FindByIdAsync)
+                );
+
+            // Perform the operation.
+            var result = await _providerRepository.FindByIdAsync(
+                id,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (result is null)
+            {
+                return null;
+            }
+
+            // Are there any properties?
+            if (result.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting {count} properties for provider: {name}",
+                    result.Properties.Count(),
+                    result.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in result.Properties)
+                {
+                    // Decrypt the value.
+                    property.Value = await _cryptographer.AesDecryptAsync(
+                        property.Key,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+            
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for providers by id!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for providers by " +
+                "id!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<ProviderModel> UpdateAsync(
+        ProviderModel provider,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(ProviderModel)
+                );
+
+            // Ensure the stats are correct.
+            provider.LastUpdatedOnUtc = DateTime.UtcNow;
+            provider.LastUpdatedBy = userName;
+
+            // Are there any properties?
+            if (provider.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting {count} properties for provider: {name}",
+                    provider.Properties.Count(),
+                    provider.Name
+                    );
+
+                // Loop through the properties.
+                foreach (var property in provider.Properties)
+                {
+                    // Encrypt the value, at rest.
+                    property.Value = await _cryptographer.AesEncryptAsync(
+                        property.Key,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.UpdateAsync)
+                );
+
+            // Perform the operation.
+            return await _providerRepository.UpdateAsync(
+                provider,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to update a provider!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to update a provider!",
+                innerException: ex
+                );
+        }
+    }
+
+    #endregion
+}

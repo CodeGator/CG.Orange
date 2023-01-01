@@ -2,9 +2,10 @@
 namespace CG.Orange.Options;
 
 /// <summary>
-/// This class contains configuration settings related to data seeding.
+/// This class contains configuration settings related to seeding <see cref="ProviderModel"/>
+/// objects.
 /// </summary>
-internal class SeedingOptions
+internal class ProviderOptions
 {
     // *******************************************************************
     // Properties.
@@ -13,11 +14,11 @@ internal class SeedingOptions
     #region Properties
 
     /// <summary>
-    /// This property contains a list of <see cref="SettingFileModel"/> objects 
+    /// This property contains a list of <see cref="ProviderModel"/> objects 
     /// to seed.
     /// </summary>
     [Required]
-    public List<SettingFileModel> SettingFiles { get; set; } = null!;
+    public List<ProviderModel> Providers { get; set; } = null!;
 
     #endregion
 }

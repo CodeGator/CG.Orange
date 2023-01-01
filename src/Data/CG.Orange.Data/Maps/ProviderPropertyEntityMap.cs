@@ -2,10 +2,10 @@
 namespace CG.Orange.Data.Maps;
 
 /// <summary>
-/// This class is an EFCore configuration map for the <see cref="Entities.SettingFileEntity"/>
+/// This class maps properties for the <see cref="ProviderPropertyEntity"/>
 /// entity type.
 /// </summary>
-internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFileEntity>
+internal class ProviderPropertyEntityMap : AuditedEntityMapBase<ProviderPropertyEntity>
 {
     // *******************************************************************
     // Constructors.
@@ -14,11 +14,11 @@ internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFileEntity>
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="SettingFileMap"/>
+    /// This constructor creates a new instance of the <see cref="ProviderPropertyEntityMap"/>
     /// class.
     /// </summary>
     /// <param name="modelBuilder">The model builder to use with this map.</param>
-    public SettingFileMap(
+    public ProviderPropertyEntityMap(
         ModelBuilder modelBuilder
         ) : base(modelBuilder)
     {
@@ -34,16 +34,16 @@ internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFileEntity>
     #region Public methods
 
     /// <summary>
-    /// This method configures the <see cref="Entities.SettingFileEntity"/> entity.
+    /// This method configures the <see cref="Entities.ProviderPropertyEntity"/> entity.
     /// </summary>
     /// <param name="builder">The builder to use for the operation.</param>
     public override void Configure(
-        EntityTypeBuilder<Entities.SettingFileEntity> builder
+        EntityTypeBuilder<Entities.ProviderPropertyEntity> builder
         )
     {
         // Setup the table.
         builder.ToTable(
-            "SettingFiles",
+            "ProviderProperties",
             "Orange"
             );
 
@@ -56,37 +56,21 @@ internal class SettingFileMap : AuditedEntityMapBase<Entities.SettingFileEntity>
         builder.HasKey(e => new { e.Id });
 
         // Setup the column.
-        builder.Property(e => e.Json)
+        builder.Property(e => e.Key)
+            .IsUnicode(false)
             .IsRequired();
 
         // Setup the column.
-        builder.Property(e => e.ApplicationName)
-            .HasMaxLength(32)
-            .IsRequired();
-
-        // Setup the column.
-        builder.Property(e => e.EnvironmentName)
-            .HasMaxLength(32);
-
-        // Setup the column.
-        builder.Property(e => e.IsDisabled)
+        builder.Property(e => e.Value)
+            .IsUnicode(false)
             .IsRequired();
 
         // Setup the index.
         builder.HasIndex(e => new
         {
-            e.IsDisabled
+            e.Key
         },
-        $"IX_SettingsFiles"
-        );
-
-        // Setup the index.
-        builder.HasIndex(e => new
-        {
-            e.ApplicationName,
-            e.EnvironmentName
-        },
-        $"IX_SettingFile1"
+        $"IX_ProviderProperties"
         ).IsUnique();
     }
 

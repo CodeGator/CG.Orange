@@ -1,14 +1,14 @@
 ﻿
-namespace CG.Orange.Providers;
+namespace CG.Orange.Processors;
 
 /// <summary>
-/// This interface represents a secret provider for the <see cref="CG.Orange"/>
-/// microservice.
+/// This interface represents an object that fetches secrets from a remote 
+/// service.
 /// </summary>
-public interface ISecretProvider
+public interface ISecretProcessor
 {
     /// <summary>
-    /// This method fetches the given remote secret.
+    /// This method fetches a secret from a remote service.
     /// </summary>
     /// <param name="secretKey">The secret key to use for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored

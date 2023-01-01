@@ -1,9 +1,4 @@
 ﻿
-using Azure.Core;
-using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
-using CG.Orange.Plugins.Azure.Options;
-
 namespace CG.Orange.Plugins.Azure;
 
 /// <summary>
@@ -30,7 +25,7 @@ public class Module : ModuleBase
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Configuring Azure provider from the {section} section",
+            "Configuring Azure plugin from the {section} section",
             $"{(configuration as IConfigurationSection)?.Path}:Options"
             ); 
 
@@ -42,42 +37,19 @@ public class Module : ModuleBase
 
         // Log what we're about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the Azure secret client"
+            "Wiring up the Azure secret client factory"
             );
 
-        // Wire up the Azure secret client.
-        webApplicationBuilder.Services.AddScoped<SecretClient>(serviceProvider =>
-        {
-            // Create retry options, in case the key vault is throttled.
-            var options = new SecretClientOptions()
-            {
-                Retry =
-                {
-                    Delay = TimeSpan.FromSeconds(2),
-                    MaxDelay = TimeSpan.FromSeconds(9),
-                    MaxRetries = 3,
-                    Mode = RetryMode.Exponential
-                }
-            };
-
-            // Create the Azure client.
-            var client = new SecretClient(
-                new Uri(azureProviderOptions.KeyVaultUri),
-                new DefaultAzureCredential(),
-                options
-                );
-
-            // Return the results.
-            return client;
-        });
+        // Wire up the Azure secret client factory.
+        webApplicationBuilder.Services.AddScoped<AzureSecretClientFactory>();
 
         // Log what we're about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the Azure providers"
+            "Wiring up the Azure secret processor"
             );
 
         // Wire up the Azure provider.
-        webApplicationBuilder.Services.AddScoped<ISecretProvider, AzureSecretProvider>();
+        webApplicationBuilder.Services.AddScoped<ISecretProcessor, AzureSecretProcessor>();
     }
 
     // *******************************************************************
@@ -89,6 +61,11 @@ public class Module : ModuleBase
     {
         // Validate the parameters before attempting to use them.
         Guard.Instance().ThrowIfNull(webApplication, nameof(webApplication));
+
+        // Log what we're about to do.
+        webApplication.Logger.LogDebug(
+            "Adding middleware for the Azure secret processor"
+            );
 
         // TODO : add your plugin's startup / pipeline logic here.
     }

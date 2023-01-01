@@ -2,9 +2,9 @@
 namespace CG.Orange.Data.Entities;
 
 /// <summary>
-/// This class represents a JSON setting file entity.
+/// This class represents a provider entity.
 /// </summary>
-public class SettingFileEntity : AuditedEntityBase
+public class ProviderEntity : AuditedEntityBase
 {
     // *******************************************************************
     // Properties.
@@ -13,30 +13,34 @@ public class SettingFileEntity : AuditedEntityBase
     #region Properties
 
     /// <summary>
-    /// This property contains the identifier for the model.
+    /// This property contains the identifier for the provider.
     /// </summary>
     public int Id { get; set; }
 
     /// <summary>
-    /// This property contains the application name for the settings.
+    /// This property contains the provider type.
     /// </summary>
-    public string ApplicationName { get; set; } = null!;
+    public ProviderType ProviderType { get; set; }  
 
     /// <summary>
-    /// This property contains the optional environment name for the 
-    /// settings.
+    /// This property contains the name for the provider.
     /// </summary>
-    public string? EnvironmentName { get; set; }
+    public string Name { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the JSON for the settings.
+    /// This property contains the optional description for the provider.
     /// </summary>
-    public string Json { get; set; } = null!;
+    public string? Description { get; set; }
 
     /// <summary>
-    /// This property indicates the settings is disabled.
+    /// This property contains the .NET type for the associated processor.
     /// </summary>
-    public bool IsDisabled { get; set; }
+    public string ProcessorType { get; set; } = null!;
+
+    /// <summary>
+    /// This property contains the associated properties for the provider.
+    /// </summary>
+    public List<ProviderPropertyEntity> Properties { get; set; } = new();
 
     #endregion
 
@@ -72,13 +76,13 @@ public class SettingFileEntity : AuditedEntityBase
         }
 
         // If the types don't match they aren't equal.
-        if (obj is not SettingFileEntity)
+        if (obj is not ProviderEntity)
         {
             return false;
         }
 
         // Identity is determined by the Id property.
-        return (obj as SettingFileEntity)?.Id == Id;
+        return (obj as ProviderEntity)?.Id == Id;
     }
 
     #endregion

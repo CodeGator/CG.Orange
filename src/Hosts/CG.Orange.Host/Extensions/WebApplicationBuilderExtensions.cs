@@ -37,7 +37,7 @@ internal static class WebApplicationBuilderExtensions
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Configuring Identity options from the {section} section",
+            "Configuring identity options from the {section} section",
             sectionName
             );
 
@@ -49,7 +49,7 @@ internal static class WebApplicationBuilderExtensions
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Clearing default inbound claims mapping."
+            "Clearing default inbound claims mapping for identity."
             );
 
         // Clear default inbound claim mapping.
@@ -130,8 +130,18 @@ internal static class WebApplicationBuilderExtensions
             };
         });
 
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Adding a token cache."
+            );
+
         // Add the token cache.
         webApplicationBuilder.Services.AddScoped<TokenCache>();
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Adding an HTTP client."
+            );
 
         // Add the HTTP client.
         webApplicationBuilder.Services.AddHttpClient();

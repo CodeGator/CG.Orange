@@ -1,0 +1,20 @@
+{
+  "Providers": [
+    {
+      "Name": "Azure",
+      "Description": "",
+      "ProviderType": "Secret",
+      "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor, CG.Orange.Plugins.Azure",
+      "Properties": [
+        {
+          "Key": "KeyVaultUri",
+          "Value": "not a real uri"
+        },
+        {
+          "Key": "MaxRetry",
+          "Value": "3"
+        }
+      ]
+    }
+  ]
+}

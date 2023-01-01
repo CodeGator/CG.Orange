@@ -2,9 +2,9 @@
 namespace CG.Orange.Data.Entities;
 
 /// <summary>
-/// This class represents a JSON setting file entity.
+/// This class represents a property entity for a provider entity.
 /// </summary>
-public class SettingFileEntity : AuditedEntityBase
+public class ProviderPropertyEntity : AuditedEntityBase
 {
     // *******************************************************************
     // Properties.
@@ -13,30 +13,29 @@ public class SettingFileEntity : AuditedEntityBase
     #region Properties
 
     /// <summary>
-    /// This property contains the identifier for the model.
+    /// This property contains the unique identifier for the property.
     /// </summary>
     public int Id { get; set; }
 
     /// <summary>
-    /// This property contains the application name for the settings.
+    /// This property contains the identifier for the associated provider.
     /// </summary>
-    public string ApplicationName { get; set; } = null!;
+    public int ProviderId { get; set; }
 
     /// <summary>
-    /// This property contains the optional environment name for the 
-    /// settings.
+    /// This property contains the associated provider.
     /// </summary>
-    public string? EnvironmentName { get; set; }
+    public virtual ProviderEntity Provider { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the JSON for the settings.
+    /// This property contains the key for the property.
     /// </summary>
-    public string Json { get; set; } = null!;
+    public string Key { get; set; } = null!;
 
     /// <summary>
-    /// This property indicates the settings is disabled.
+    /// This property contains the value for the property.
     /// </summary>
-    public bool IsDisabled { get; set; }
+    public string Value { get; set; } = null!;
 
     #endregion
 
@@ -52,7 +51,7 @@ public class SettingFileEntity : AuditedEntityBase
     /// <returns>A hashcode for the object.</returns>
     public override int GetHashCode()
     {
-        return Id.GetHashCode();
+        return Id.GetHashCode() ^ ProviderId.GetHashCode();
     }
 
     // *******************************************************************
@@ -72,13 +71,14 @@ public class SettingFileEntity : AuditedEntityBase
         }
 
         // If the types don't match they aren't equal.
-        if (obj is not SettingFileEntity)
+        if (obj is not ProviderPropertyEntity)
         {
             return false;
         }
 
-        // Identity is determined by the Id property.
-        return (obj as SettingFileEntity)?.Id == Id;
+        // Identity is determined by the Id and ProviderId properties.
+        return (obj as ProviderPropertyEntity)?.Id == Id &&
+            (obj as ProviderPropertyEntity)?.ProviderId == ProviderId;
     }
 
     #endregion

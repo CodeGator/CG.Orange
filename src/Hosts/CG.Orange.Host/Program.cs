@@ -1,5 +1,7 @@
 using Serilog;
 
+BootstrapLogger.LogLevelToDebug();
+
 try
 {
 

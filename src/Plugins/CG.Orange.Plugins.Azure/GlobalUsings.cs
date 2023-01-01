@@ -1,6 +1,9 @@
-﻿global using Azure.Security.KeyVault.Secrets;
+﻿global using Azure.Core;
+global using Azure.Identity;
+global using Azure.Security.KeyVault.Secrets;
 global using CG.Blazor.Plugins;
-global using CG.Orange.Providers;
+global using CG.Orange.Plugins.Azure.Options;
+global using CG.Orange.Processors;
 global using CG.Validations;
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.Extensions.Configuration;

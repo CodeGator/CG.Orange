@@ -2,9 +2,9 @@
 namespace CG.Orange.Models;
 
 /// <summary>
-/// This class represents a JSON settings setting file.
+/// This class represents a JSON settings file.
 /// </summary>
-public class SettingFileModel : ModelBase
+public class SettingFileModel : AuditedModelBase
 {
     // *******************************************************************
     // Properties.
@@ -13,7 +13,7 @@ public class SettingFileModel : ModelBase
     #region Properties
 
     /// <summary>
-    /// This property contains the identifier for the model.
+    /// This property contains the identifier for the settings.
     /// </summary>
     public int Id { get; set; }
 
@@ -21,14 +21,14 @@ public class SettingFileModel : ModelBase
     /// This property contains the application name for the settings.
     /// </summary>
     [Required]
-    [MaxLength(32)]
+    [MaxLength(Globals.Models.SettingFiles.ApplicationNameLength)]
     public string ApplicationName { get; set; } = null!;
 
     /// <summary>
     /// This property contains the optional environment name for the 
     /// settings.
     /// </summary>
-    [MaxLength(32)]
+    [MaxLength(Globals.Models.SettingFiles.EnvironmentNameLength)]
     public string? EnvironmentName { get; set; }
 
     /// <summary>
@@ -38,7 +38,7 @@ public class SettingFileModel : ModelBase
     public string Json { get; set; } = null!;
 
     /// <summary>
-    /// This property indicates the settings is disabled.
+    /// This property indicates whether the settings are disabled, or not.
     /// </summary>
     public bool IsDisabled { get; set; }
 

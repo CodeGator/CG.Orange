@@ -14,9 +14,19 @@ public class OrangeDbContext : DbContext
     #region Properties
 
     /// <summary>
+    /// This property contains the list of providers.
+    /// </summary>
+    public virtual DbSet<ProviderEntity> Providers { get; set; } = null!;
+
+    /// <summary>
+    /// This property contains the list of provider properties.
+    /// </summary>
+    public virtual DbSet<ProviderPropertyEntity> ProviderProperties { get; set; } = null!;
+
+    /// <summary>
     /// This property contains the list of setting files.
     /// </summary>
-    public virtual DbSet<Entities.SettingFileEntity> SettingFiles { get; set; } = null!;
+    public virtual DbSet<SettingFileEntity> SettingFiles { get; set; } = null!;
 
     #endregion
 
@@ -53,7 +63,9 @@ public class OrangeDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Map the entities.
-        modelBuilder.ApplyConfiguration(new SettingFileMap(modelBuilder));
+        modelBuilder.ApplyConfiguration(new SettingFileEntityMap(modelBuilder));
+        modelBuilder.ApplyConfiguration(new ProviderEntityMap(modelBuilder));
+        modelBuilder.ApplyConfiguration(new ProviderPropertyEntityMap(modelBuilder));
 
         // Give the base class a chance.
         base.OnModelCreating(modelBuilder);

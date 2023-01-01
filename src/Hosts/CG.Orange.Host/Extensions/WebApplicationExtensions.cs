@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Host;
-
 namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>
@@ -27,7 +25,18 @@ internal static class WebApplicationExtensions
         this WebApplication webApplication
         )
     {
+        // Log what we are about to do.
+        webApplication.Logger.LogDebug(
+            "Adding authorization middleware"
+            );
+
         webApplication.UseAuthorization();
+
+        // Log what we are about to do.
+        webApplication.Logger.LogDebug(
+            "Adding authenticaion middleware"
+            );
+
         webApplication.UseAuthentication();
 
         // Return the application.
