@@ -249,7 +249,7 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>
 
             // Log what we did.
             _logger.LogInformation(
-                "Seeded a total of {count} providers and {count} properties",
+                "Seeded a total of {count1} providers and {count2} properties",
                 finalProviderCount - originalProviderCount,
                 finalPropertyCount - originalPropertyCount
                 );

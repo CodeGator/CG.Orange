@@ -1,6 +1,4 @@
 ﻿
-using static CG.Orange.Globals.Models;
-
 namespace CG.Orange.Managers;
 
 internal class ProviderPropertyManager : IProviderPropertyManager
@@ -250,16 +248,25 @@ internal class ProviderPropertyManager : IProviderPropertyManager
             providerProperty.LastUpdatedBy = null;
             providerProperty.LastUpdatedOnUtc = null;
 
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Encrypting property for provider"
-                );
+            // Is there a value?
+            if (!string.IsNullOrEmpty(providerProperty.Value))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting property for provider"
+                    );
 
-            // Encrypt the value, at rest.
-            providerProperty.Value = await _cryptographer.AesEncryptAsync(
-                providerProperty.Key,
-                cancellationToken
-                ).ConfigureAwait(false);
+                // Encrypt the value, at rest.
+                providerProperty.Value = await _cryptographer.AesEncryptAsync(
+                    providerProperty.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set a non-null value.
+                providerProperty.Value = "";
+            }
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -268,10 +275,33 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 );
 
             // Perform the operation.
-            return await _providerPropertyRepository.CreateAsync(
+            var newProviderProperty = await _providerPropertyRepository.CreateAsync(
                 providerProperty,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Is there a value?
+            if (!string.IsNullOrEmpty(newProviderProperty.Value))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting property for provider"
+                    );
+
+                // Decrypt the value.
+                newProviderProperty.Value = await _cryptographer.AesDecryptAsync(
+                    newProviderProperty.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set a non-null value.
+                newProviderProperty.Value = "";
+            }
+
+            // Return the result.
+            return newProviderProperty;
         }
         catch (Exception ex)
         {
@@ -369,8 +399,10 @@ internal class ProviderPropertyManager : IProviderPropertyManager
             //   gets lost unless we manually copy the results to another list.
             var result = new List<ProviderPropertyModel>();
 
-            // Loop through the properties.
-            foreach (var providerProperty in data)
+            // Loop through the properties with values.
+            foreach (var providerProperty in data.Where(x => 
+                !string.IsNullOrEmpty(x.Value)
+                ))
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -380,7 +412,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
                 // Decrypt the value.
                 providerProperty.Value = await _cryptographer.AesDecryptAsync(
-                    providerProperty.Key,
+                    providerProperty.Value,
                     cancellationToken
                     ).ConfigureAwait(false);
 
@@ -433,7 +465,9 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 ).ConfigureAwait(false);
 
             // Loop through the properties.
-            foreach (var providerProperty in result)
+            foreach (var providerProperty in result.Where(x => 
+                !string.IsNullOrEmpty(x.Value)
+                ))
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -443,7 +477,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
                 // Decrypt the value.
                 providerProperty.Value = await _cryptographer.AesDecryptAsync(
-                    providerProperty.Key,
+                    providerProperty.Value,
                     cancellationToken
                     ).ConfigureAwait(false);
             }
@@ -499,17 +533,21 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 return null;
             }
 
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Decrypting value for property: {key}",
-                result.Key
-                );
+            // Is there a value?
+            if (!string.IsNullOrEmpty(result.Value))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting value for property: {key}",
+                    result.Key
+                    );
 
-            // Decrypt the value.
-            result.Value = await _cryptographer.AesDecryptAsync(
-                result.Key,
-                cancellationToken
-                ).ConfigureAwait(false);
+                // Decrypt the value.
+                result.Value = await _cryptographer.AesDecryptAsync(
+                    result.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
 
             // Return the results.
             return result;
@@ -556,16 +594,24 @@ internal class ProviderPropertyManager : IProviderPropertyManager
             providerProperty.LastUpdatedOnUtc = DateTime.UtcNow;
             providerProperty.LastUpdatedBy = userName;
 
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Encrypting property for provider"
-                );
+            // Is there a value?
+            if (!string.IsNullOrEmpty(providerProperty.Value))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting property for provider"
+                    );
 
-            // Encrypt the value, at rest.
-            providerProperty.Value = await _cryptographer.AesEncryptAsync(
-                providerProperty.Key,
-                cancellationToken
-                ).ConfigureAwait(false);
+                // Encrypt the value, at rest.
+                providerProperty.Value = await _cryptographer.AesEncryptAsync(
+                    providerProperty.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                providerProperty.Value = "";
+            }
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -574,10 +620,33 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 );
 
             // Perform the operation.
-            return await _providerPropertyRepository.UpdateAsync(
+            var changedProviderProperty = await _providerPropertyRepository.UpdateAsync(
                 providerProperty,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Is there a value?
+            if (!string.IsNullOrEmpty(changedProviderProperty.Value))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting property for provider"
+                    );
+
+                // Decrypt the value.
+                changedProviderProperty.Value = await _cryptographer.AesDecryptAsync(
+                    changedProviderProperty.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set a non-null value.
+                changedProviderProperty.Value = "";
+            }
+
+            // Return the result.
+            return changedProviderProperty;
         }
         catch (Exception ex)
         {

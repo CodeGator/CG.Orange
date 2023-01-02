@@ -548,7 +548,8 @@ internal class ProviderRepository : IProviderRepository
         try
         {
             // Look for the given provider.
-            var entity = await _dbContext.Providers.FirstOrDefaultAsync(
+            var entity = await _dbContext.Providers.FirstOrDefaultAsync(x =>
+                x.Id == provider.Id,
                 cancellationToken
                 ).ConfigureAwait(false);
 

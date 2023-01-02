@@ -441,7 +441,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 "Searching for provider properties."
                 );
 
-            // Perform the provider search.
+            // Perform the providerProperty search.
             var providers = await _dbContext.ProviderProperties
                 .AsNoTracking()
                 .ToListAsync(
@@ -491,7 +491,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 "Searching for a provider."
                 );
 
-            // Perform the provider search.
+            // Perform the providerProperty search.
             var data = await _dbContext.ProviderProperties.Where(x =>
                 x.ProviderId == provider.Id
                 ).AsNoTracking()
@@ -548,7 +548,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 "Searching for a provider."
                 );
 
-            // Perform the provider search.
+            // Perform the providerProperty search.
             var provider = await _dbContext.ProviderProperties.Where(x =>
                 x.Id == id
                 ).AsNoTracking()
@@ -589,33 +589,27 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
 
     /// <inheritdoc/>
     public virtual async Task<ProviderPropertyModel> UpdateAsync(
-        ProviderPropertyModel provider,
+        ProviderPropertyModel providerProperty,
         CancellationToken cancellationToken = default
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(provider, nameof(provider));
+        Guard.Instance().ThrowIfNull(providerProperty, nameof(providerProperty));
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Converting a {entity} model to an entity",
-                nameof(ProviderPropertyModel)
-                );
-
-            // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.ProviderPropertyEntity>(
-                provider
-                );
+            // Look for the given providerProperty.
+            var entity = await _dbContext.ProviderProperties.FirstOrDefaultAsync(x =>
+                x.Id == providerProperty.Id,
+                cancellationToken
+                ).ConfigureAwait(false);
 
             // Did we fail?
             if (entity is null)
             {
                 // Panic!!
-                throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderPropertyModel)} " +
-                    "model to an entity."
+                throw new KeyNotFoundException(
+                    $"The provider property: {providerProperty.Id} was not found!"
                     );
             }
 
@@ -626,11 +620,9 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 nameof(OrangeDbContext)
                 );
 
-            // Start tracking the entity.
-            _dbContext.ProviderProperties.Attach(entity);
-
-            // Mark the entity as modified so EFCORE will update it.
-            _dbContext.Entry(entity).State = EntityState.Modified;
+            // Update the editable properties.
+            entity.Key = providerProperty.Key;
+            entity.Value = providerProperty.Value;
 
             // We never change these 'read only' properties.
             _dbContext.Entry(entity).Property(x => x.Id).IsModified = false;

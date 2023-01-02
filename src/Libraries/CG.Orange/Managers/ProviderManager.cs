@@ -207,8 +207,10 @@ internal class ProviderManager : IProviderManager
             provider.LastUpdatedBy = null;
             provider.LastUpdatedOnUtc = null;
 
-            // Are there any properties?
-            if (provider.Properties.Any())
+            // Are there any properties with values?
+            if (provider.Properties.Any(x => 
+                !string.IsNullOrEmpty(x.Value)
+                ))
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -217,8 +219,10 @@ internal class ProviderManager : IProviderManager
                     provider.Name
                     );
 
-                // Loop through the properties.
-                foreach (var property in provider.Properties) 
+                // Loop through the properties with values.
+                foreach (var property in provider.Properties.Where(x => 
+                    !string.IsNullOrEmpty(x.Value)
+                    )) 
                 {
                     // Encrypt the value, at rest.
                     property.Value = await _cryptographer.AesEncryptAsync(
@@ -235,10 +239,36 @@ internal class ProviderManager : IProviderManager
                 );
 
             // Perform the operation.
-            return await _providerRepository.CreateAsync(
+            var newProvider = await _providerRepository.CreateAsync(
                 provider,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Are there properties with values?
+            if (newProvider.Properties.Any(x => 
+                !string.IsNullOrEmpty(x.Value)
+                ))
+            {
+                // Loop through the properties with values.
+                foreach (var property in provider.Properties.Where(x =>
+                    string.IsNullOrEmpty(x.Value)
+                    ))
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting property for provider"
+                        );
+
+                    // Decrypt the value
+                    property.Value = await _cryptographer.AesDecryptAsync(
+                        property.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Return the result.
+            return newProvider;
         }
         catch (Exception ex)
         {
@@ -466,14 +496,8 @@ internal class ProviderManager : IProviderManager
             var result = new List<ProviderModel>(); 
 
             // Loop through providers with properties.
-            foreach(var provider in data)
+            foreach(var provider in data.Where(x => x.Properties.Any()))
             {
-                // Ignore providers without properties.
-                if (!provider.Properties.Any())
-                {
-                    continue;
-                }
-
                 // Log what we are about to do.
                 _logger.LogDebug(
                     "Decrypting {count} properties for provider: {name}",
@@ -481,9 +505,16 @@ internal class ProviderManager : IProviderManager
                     provider.Name
                     );
 
-                // Loop through the properties.
-                foreach (var property in provider.Properties)
+                // Loop through the properties with values.
+                foreach (var property in provider.Properties.Where(x =>
+                    !string.IsNullOrEmpty(x.Value)
+                    ))
                 {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting property for provider"
+                        );
+
                     // Decrypt the value.
                     property.Value = await _cryptographer.AesDecryptAsync(
                         property.Value,
@@ -555,9 +586,16 @@ internal class ProviderManager : IProviderManager
                     result.Name
                     );
 
-                // Loop through the properties.
-                foreach (var property in result.Properties)
+                // Loop through the properties with values.
+                foreach (var property in result.Properties.Where(x =>
+                    !string.IsNullOrEmpty(x.Value)
+                    ))
                 {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting property for provider"
+                        );
+
                     // Decrypt the value.
                     property.Value = await _cryptographer.AesDecryptAsync(
                         property.Value,
@@ -627,9 +665,16 @@ internal class ProviderManager : IProviderManager
                     result.Name
                     );
 
-                // Loop through the properties.
-                foreach (var property in result.Properties)
+                // Loop through the properties with values.
+                foreach (var property in result.Properties.Where(x => 
+                    !string.IsNullOrEmpty(x.Value)
+                    ))
                 {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting property for provider"
+                        );
+
                     // Decrypt the value.
                     property.Value = await _cryptographer.AesDecryptAsync(
                         property.Value,
@@ -693,10 +738,34 @@ internal class ProviderManager : IProviderManager
                 );
 
             // Perform the operation.
-            return await _providerRepository.UpdateAsync(
+            var changedProviderProperty = await _providerRepository.UpdateAsync(
                 provider,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Are there properties?
+            if (changedProviderProperty.Properties.Any())
+            {
+                // Loop through the properties with values.
+                foreach (var property in provider.Properties.Where(x => 
+                    !string.IsNullOrEmpty(x.Value)
+                    ))
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting property for provider"
+                        );
+
+                    // Decrypt the value
+                    property.Value = await _cryptographer.AesDecryptAsync(
+                        property.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Return the result.
+            return changedProviderProperty;
         }
         catch (Exception ex)
         {

@@ -5,9 +5,6 @@
 
 <MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
 
-<MudText Typo="Typo.h6">Provider</MudText>
-<MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the provider.</MudText>
-
 @if (_model is null)
 {
     <MudText Class="py-5" Typo="Typo.h6" Color="Color.Warning">Ooops! we couldn't find that provider!</MudText>
@@ -15,6 +12,9 @@
 }
 else
 {
+    <MudText Typo="Typo.h6">Provider</MudText>
+    <MudText Typo="Typo.body1" Class="pb-5">Use this page to edit this <b>@(Enum.GetName(_model.ProviderType).ToLower())</b> provider.</MudText>
+
     <EditForm Model="_model" OnValidSubmit="OnValidSubmit">
         <DataAnnotationsValidator />
         <MudGrid>
@@ -45,14 +45,21 @@ else
                 <MudTable Items="_model.Properties"
                           Dense
                           Striped
-                          Hover>
+                          Hover
+                          CanCancelEdit
+                          ApplyButtonPosition="TableApplyButtonPosition.Start"
+                          EditButtonPosition="TableEditButtonPosition.Start"
+                          EditTrigger="TableEditTrigger.EditButton"
+                          RowEditPreview="OnBackupProperty"
+                          RowEditCommit="OnCommitProperty"
+                          RowEditCancel="OnRollbackProperty">
                     <ToolBarContent>
                         <MudText Typo="Typo.h6">Properties</MudText>
                         <MudButton StartIcon="@Icons.Material.Filled.Create"
                                    Class="mt-1 ml-10"
                                    Color="Color.Secondary"
                                    Variant="Variant.Filled"
-                                   OnClick="OnCreateAsync">Create</MudButton>
+                                   OnClick="OnCreatePropertyAsync">Create</MudButton>
                         <MudSpacer />
                     </ToolBarContent>
                     <HeaderContent>
@@ -62,16 +69,21 @@ else
                     </HeaderContent>
                     <RowTemplate Context="context2">
                         <MudTd DataLabel="Key">@context2.Key</MudTd>
-                        <MudTd DataLabel="Value"><MudTextField T="string" InputType="InputType.Password" ReadOnly Text="@context2.Value" /></MudTd>
+                        <MudTd DataLabel="Value"><MudTextField T="string" DisableUnderLine InputType="InputType.Password" ReadOnly Text="@context2.Value" /></MudTd>
                         <MudTd>
-                            <MudTooltip Text="Edit property">
-                                <MudIconButton Icon="@Icons.Material.Rounded.Edit" OnClick="@(() => OnEditAsync(@context2))" />
-                            </MudTooltip>
                             <MudTooltip Text="Delete property">
-                                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeleteAsync(@context2))" />
+                                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeletePropertyAsync(@context2))" />
                             </MudTooltip>
                         </MudTd>
                     </RowTemplate>
+                    <RowEditingTemplate Context="context2">
+                        <MudTd DataLabel="Key">
+                            <MudTextField @bind-Value="@context2.Key" Required />
+                        </MudTd>
+                        <MudTd DataLabel="Value">
+                            <MudTextField @bind-Value="@context2.Value" />
+                        </MudTd>
+                    </RowEditingTemplate>
                     <PagerContent>
                         <MudTablePager />
                     </PagerContent>
