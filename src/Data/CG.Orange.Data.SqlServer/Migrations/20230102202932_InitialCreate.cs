@@ -24,6 +24,7 @@ namespace CG.Orange.Data.SqlServer.Migrations
                     ProviderType = table.Column<string>(type: "varchar(32)", unicode: false, maxLength: 32, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    Tag = table.Column<string>(type: "varchar(12)", unicode: false, maxLength: 12, nullable: false),
                     ProcessorType = table.Column<string>(type: "varchar(2048)", unicode: false, maxLength: 2048, nullable: false),
                     IsDisabled = table.Column<bool>(type: "bit", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -88,14 +89,8 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 name: "IX_ProviderProperties",
                 schema: "Orange",
                 table: "ProviderProperties",
-                column: "Key",
+                columns: new[] { "ProviderId", "Key" },
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProviderProperties_ProviderId",
-                schema: "Orange",
-                table: "ProviderProperties",
-                column: "ProviderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Provider_Names",
@@ -105,10 +100,17 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Provider_Tags",
+                schema: "Orange",
+                table: "Providers",
+                column: "Tag",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Providers",
                 schema: "Orange",
                 table: "Providers",
-                columns: new[] { "ProviderType", "ProcessorType" });
+                columns: new[] { "IsDisabled", "ProviderType", "ProcessorType" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_SettingFiles1",

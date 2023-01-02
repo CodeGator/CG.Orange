@@ -12,12 +12,6 @@
           Dense
           Striped
           Hover>
-    <ColGroup>
-        <col />
-        <col />
-        <col />
-        <col />
-    </ColGroup>
     <ToolBarContent>
         <MudButton StartIcon="@Icons.Material.Filled.Create"
                    Class="mt-1 mr-2"
@@ -28,6 +22,7 @@
     <HeaderContent>
         <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Name)">Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Tag)">Tag</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.ProviderType)">Type</MudTableSortLabel></MudTh>
         <MudTh></MudTh>
     </HeaderContent>
@@ -43,6 +38,7 @@
             }
             </MudTd>
         <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Tag">@context.Tag</MudTd>
         <MudTd DataLabel="Type">@context.ProviderType</MudTd>
         <MudTd>
             <MudIconButton Class="pr-6" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />

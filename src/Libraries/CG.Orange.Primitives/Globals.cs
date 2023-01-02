@@ -38,6 +38,12 @@ public static class Globals
         public static class Providers
         {
             /// <summary>
+            /// This constant represents the length of the <see cref="ProviderModel.Tag"/> 
+            /// property.
+            /// </summary>
+            public const int TagLength = 12;
+
+            /// <summary>
             /// This constant represents the length of the <see cref="ProviderModel.Name"/> 
             /// property.
             /// </summary>

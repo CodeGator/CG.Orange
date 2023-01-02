@@ -36,6 +36,13 @@ public class ProviderModel : AuditedModelBase
     public string? Description { get; set; }
 
     /// <summary>
+    /// This property contains the tag for the provider.
+    /// </summary>
+    [Required]
+    [MaxLength(Globals.Models.Providers.TagLength)]
+    public string Tag { get; set; } = null!;
+
+    /// <summary>
     /// This property contains the .NET type for the associated processor.
     /// </summary>
     [Required]

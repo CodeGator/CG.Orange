@@ -68,6 +68,7 @@ internal class ProviderPropertyEntityMap : AuditedEntityMapBase<ProviderProperty
         // Setup the index.
         builder.HasIndex(e => new
         {
+            e.ProviderId,
             e.Key
         },
         $"IX_ProviderProperties"

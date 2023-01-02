@@ -1,6 +1,4 @@
 ﻿
-using System.Collections;
-
 namespace CG.Orange.Host.Pages.Admin.Providers;
 
 /// <summary>

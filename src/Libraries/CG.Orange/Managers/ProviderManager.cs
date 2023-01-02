@@ -313,13 +313,23 @@ internal class ProviderManager : IProviderManager
         {
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy it here.
+            var copy = provider.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderModel)
                 );
 
             // Ensure the stats are correct.
-            provider.LastUpdatedOnUtc = DateTime.UtcNow;
-            provider.LastUpdatedBy = userName;
+            copy.LastUpdatedOnUtc = DateTime.UtcNow;
+            copy.LastUpdatedBy = userName;
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -329,7 +339,7 @@ internal class ProviderManager : IProviderManager
 
             // Perform the operation.
             await _providerRepository.DeleteAsync(
-                provider,
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -735,7 +745,8 @@ internal class ProviderManager : IProviderManager
 
             // If we modify the properties of the incoming model then,
             //   from the caller's perspective, we're creating unwanted
-            //   side-affects. For that reason, we'll copy it here.
+            //   side-affects. For that reason, we'll copy the model
+            //   before we manipulate it.
             var copy = provider.QuickClone();
 
             // Log what we are about to do.

@@ -299,41 +299,24 @@ internal class ProviderRepository : IProviderRepository
         {
             // Log what we are about to do.
             _logger.LogDebug(
-                "Converting a {entity} model to an entity",
-                nameof(ProviderModel)
-                );
-
-            // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.ProviderEntity>(
-                provider
-                );
-
-            // Did we fail?
-            if (entity is null)
-            {
-                // Panic!!
-                throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderModel)} model to an entity."
-                    );
-            }
-
-            // Log what we are about to do.
-            _logger.LogDebug(
                 "looking for the tracked {entity} instance from the {ctx} data-context",
                 nameof(ProviderModel),
                 nameof(OrangeDbContext)
                 );
 
             // Find the tracked entity (if any).
-            var trackedEntry = await _dbContext.Providers.FindAsync(
-                entity.Id,
+            var entity = await _dbContext.Providers.FindAsync(
+                provider.Id,
                 cancellationToken
                 );
 
             // Did we fail?
-            if (trackedEntry is null)
+            if (entity is null)
             {
-                return; // Nothing to do!
+                // Panic!!
+                throw new KeyNotFoundException(
+                    $"The provider {provider.Id} was not found!"
+                    );
             }
 
             // Log what we are about to do.
@@ -345,7 +328,7 @@ internal class ProviderRepository : IProviderRepository
 
             // Delete from the data-store.
             _dbContext.Providers.Remove(
-                trackedEntry
+                entity
                 );
 
             // Log what we are about to do.
@@ -548,8 +531,10 @@ internal class ProviderRepository : IProviderRepository
         try
         {
             // Look for the given provider.
-            var entity = await _dbContext.Providers.FirstOrDefaultAsync(x =>
-                x.Id == provider.Id,
+            var entity = await _dbContext.Providers.Where(x =>
+                x.Id == provider.Id
+                ).Include(x => x.Properties)
+                .FirstOrDefaultAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
@@ -566,6 +551,8 @@ internal class ProviderRepository : IProviderRepository
             entity.Name = provider.Name;
             entity.Description = provider.Description;
             entity.IsDisabled = provider.IsDisabled;
+            entity.LastUpdatedBy = provider.LastUpdatedBy;  
+            entity.LastUpdatedOnUtc = provider.LastUpdatedOnUtc;    
 
             // We never change these 'read only' properties.
             _dbContext.Entry(entity).Property(x => x.Id).IsModified = false;

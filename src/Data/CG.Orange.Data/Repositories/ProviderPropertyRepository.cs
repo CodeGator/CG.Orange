@@ -338,12 +338,12 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
 
     /// <inheritdoc/>
     public virtual async Task DeleteAsync(
-        ProviderPropertyModel provider,
+        ProviderPropertyModel providerProperty,
         CancellationToken cancellationToken = default
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(provider, nameof(provider));
+        Guard.Instance().ThrowIfNull(providerProperty, nameof(providerProperty));
 
         try
         {
@@ -353,21 +353,6 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 nameof(ProviderPropertyModel)
                 );
 
-            // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.ProviderPropertyEntity>(
-                provider
-                );
-
-            // Did we fail?
-            if (entity is null)
-            {
-                // Panic!!
-                throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderPropertyModel)} " +
-                    "model to an entity."
-                    );
-            }
-
             // Log what we are about to do.
             _logger.LogDebug(
                 "looking for the tracked {entity} instance from the {ctx} data-context",
@@ -375,16 +360,19 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 nameof(OrangeDbContext)
                 );
 
-            // Find the tracked entity (if any).
-            var trackedEntry = await _dbContext.ProviderProperties.FindAsync(
-                entity.Id,
+            // Find the entity.
+            var entity = await _dbContext.ProviderProperties.FindAsync(
+                providerProperty.Id,
                 cancellationToken
                 );
 
             // Did we fail?
-            if (trackedEntry is null)
+            if (entity is null)
             {
-                return; // Nothing to do!
+                // Panic!!
+                throw new KeyNotFoundException(
+                    $"The provider property: {providerProperty.Id} was not found!"
+                    );
             }
 
             // Log what we are about to do.
@@ -396,7 +384,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
 
             // Delete from the data-store.
             _dbContext.ProviderProperties.Remove(
-                trackedEntry
+                entity
                 );
 
             // Log what we are about to do.
@@ -623,6 +611,8 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
             // Update the editable properties.
             entity.Key = providerProperty.Key;
             entity.Value = providerProperty.Value;
+            entity.LastUpdatedBy = providerProperty.LastUpdatedBy;
+            entity.LastUpdatedOnUtc = providerProperty.LastUpdatedOnUtc;
 
             // We never change these 'read only' properties.
             _dbContext.Entry(entity).Property(x => x.Id).IsModified = false;

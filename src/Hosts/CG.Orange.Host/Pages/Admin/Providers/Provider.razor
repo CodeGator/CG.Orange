@@ -24,6 +24,8 @@ else
             <MudItem xs="12">
                 <MudTextField AutoFocus
                               Required
+                              Immediate
+                              Counter="@(Globals.Models.Providers.NameLength)"
                               Class="ml-auto"
                               Variant="Variant.Outlined"
                               Label="Name"
@@ -34,16 +36,32 @@ else
                 <MudTextField Variant="Variant.Outlined"
                               Class="ml-auto"
                               Label="Description"
+                              Immediate
+                              Counter="@(Globals.Models.Providers.DescriptionLength)"
                               For="@(() => _model.Description)"
                               Lines="4"
                 @bind-Value="@_model.Description" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudTextField Required
+                              Class="ml-auto"
+                              Variant="Variant.Outlined"
+                              Label="Tag"
+                              Immediate
+                              Counter="@(Globals.Models.Providers.TagLength)"
+                              For="@(() => _model.Tag)"
+                @bind-Value="@_model.Tag" />
             </MudItem>
             <MudItem xs="12">
                 <MudSwitch Label="Disabled"
                            Class="ml-auto"
                            Color="Color.Warning"
                            For="@(() => _model.IsDisabled)"
-                @bind-Value="@_model.IsDisabled" />
+                           @bind-Checked="@_model.IsDisabled" />
+                @if (_model.IsDisabled)
+                {
+                    <MudAlert Severity="Severity.Warning">Remember, a disabled provider won't perform any work!</MudAlert>
+                }
             </MudItem>
             <MudItem xs="12">
                 <MudSelect T="ProviderType"

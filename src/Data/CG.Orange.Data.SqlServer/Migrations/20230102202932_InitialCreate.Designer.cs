@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CG.Orange.Data.SqlServer.Migrations
 {
     [DbContext(typeof(OrangeDbContext))]
-    [Migration("20230101185245_InitialCreate")]
+    [Migration("20230102202932_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -70,12 +70,21 @@ namespace CG.Orange.Data.SqlServer.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(32)");
 
+                    b.Property<string>("Tag")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(12)");
+
                     b.HasKey("Id");
 
                     b.HasIndex(new[] { "Name" }, "IX_Provider_Names")
                         .IsUnique();
 
-                    b.HasIndex(new[] { "ProviderType", "ProcessorType" }, "IX_Providers");
+                    b.HasIndex(new[] { "Tag" }, "IX_Provider_Tags")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "IsDisabled", "ProviderType", "ProcessorType" }, "IX_Providers");
 
                     b.ToTable("Providers", "Orange");
                 });
@@ -116,9 +125,7 @@ namespace CG.Orange.Data.SqlServer.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProviderId");
-
-                    b.HasIndex(new[] { "Key" }, "IX_ProviderProperties")
+                    b.HasIndex(new[] { "ProviderId", "Key" }, "IX_ProviderProperties")
                         .IsUnique();
 
                     b.ToTable("ProviderProperties", "Orange");

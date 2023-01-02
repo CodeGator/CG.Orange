@@ -33,6 +33,11 @@ public class ProviderEntity : AuditedEntityBase
     public string? Description { get; set; }
 
     /// <summary>
+    /// This property contains the tag for the provider.
+    /// </summary>
+    public string Tag { get; set; } = null!;
+
+    /// <summary>
     /// This property contains the .NET type for the associated processor.
     /// </summary>
     public string ProcessorType { get; set; } = null!;

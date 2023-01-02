@@ -27,6 +27,11 @@ public partial class Index
     /// </summary>
     internal protected IEnumerable<ProviderModel> _providers = null!;
 
+    /// <summary>
+    /// This field contains the list of secret processor types.
+    /// </summary>
+    internal protected IEnumerable<Type> _secretProcessorTypes = null!;
+
     #endregion
 
     // *******************************************************************
@@ -100,6 +105,16 @@ public partial class Index
 
             // Get the list of providers.
             _providers = await ProviderManager.FindAllAsync();
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Refreshing the secret processor data."
+                );
+
+            // Get the list of secret processor types.
+            _secretProcessorTypes = AppDomain.CurrentDomain.FindConcreteTypes<
+                ISecretProcessor
+                >();
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -317,7 +332,94 @@ public partial class Index
     /// <returns>A task to perform the operation.</returns>
     protected async Task OnCreateAsync()
     {
+        try
+        {
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Generating a safe provider name."
+                );
 
+            // Generate a 'safe' default provider name.
+            var count = _providers.Count() + 1;
+            var safeName = $"NewProvider {count}";
+            while (_providers.Any(x => x.Name == safeName))
+            {
+                // Try another name.
+                safeName = $"NewProvider{++count}";
+            }
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Generating a safe provider tag."
+                );
+
+            // Generate a 'safe' default provider tag.
+            count = _providers.Count() + 1;
+            var safeTag = $"NewTag {count}";
+            while (_providers.Any(x => x.Tag == safeTag))
+            {
+                // Try another tag.
+                safeTag = $"NewTag{++count}";
+            }
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Saving the changes."
+                );
+
+            // Create the new property.
+            var newProperty = await ProviderManager.CreateAsync(
+                new ProviderModel()
+                {
+                    Name = safeName,
+                    Tag = safeTag,
+                    ProcessorType = _secretProcessorTypes.FirstOrDefault()?.Name ?? "",
+                    ProviderType = ProviderType.Secret
+                },
+                UserName
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Showing the snackbar message."
+                );
+
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"Changes were saved",
+                Severity.Success,
+                options => options.CloseAfterNavigation = true
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Refreshing the page data."
+                );
+
+            // Get the list of providers.
+            _providers = await ProviderManager.FindAllAsync();
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            Logger.LogError(
+                ex,
+                "Failed to create a new property"
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Showing the snackbar message."
+                );
+
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"<b>Something broke!</b> " +
+                $"<ul><li>{ex.GetBaseException().Message}</li></ul>",
+                Severity.Error,
+                options => options.CloseAfterNavigation = true
+                );
+        }
     }
 
     #endregion

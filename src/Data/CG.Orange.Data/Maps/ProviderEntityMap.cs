@@ -71,6 +71,12 @@ internal class ProviderEntityMap : AuditedEntityMapBase<ProviderEntity>
             .HasMaxLength(Globals.Models.Providers.DescriptionLength);
 
         // Setup the column.
+        builder.Property(e => e.Tag)
+            .HasMaxLength(Globals.Models.Providers.TagLength)
+            .IsUnicode(false)
+            .IsRequired();
+
+        // Setup the column.
         builder.Property(e => e.ProcessorType)
             .HasMaxLength(Globals.Models.Providers.ProcessorTypeLength)
             .IsUnicode(false)
@@ -98,7 +104,7 @@ internal class ProviderEntityMap : AuditedEntityMapBase<ProviderEntity>
         // Setup the index.
         builder.HasIndex(e => new
         {
-            e.Name,
+            e.Name
         },
         $"IX_Provider_Names"
         ).IsUnique();
@@ -106,6 +112,15 @@ internal class ProviderEntityMap : AuditedEntityMapBase<ProviderEntity>
         // Setup the index.
         builder.HasIndex(e => new
         {
+            e.Tag
+        },
+        $"IX_Provider_Tags"
+        ).IsUnique();
+
+        // Setup the index.
+        builder.HasIndex(e => new
+        {
+            e.IsDisabled,
             e.ProviderType,
             e.ProcessorType
         },

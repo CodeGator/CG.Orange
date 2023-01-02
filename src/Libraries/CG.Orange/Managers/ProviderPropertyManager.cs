@@ -247,7 +247,8 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
             // If we modify the properties of the incoming model then,
             //   from the caller's perspective, we're creating unwanted
-            //   side-affects. For that reason, we'll copy it here.
+            //   side-affects. For that reason, we'll copy the model
+            //   before we manipulate it.
             var copy = providerProperty.QuickClone();
 
             // Log what we are about to do.
@@ -338,17 +339,27 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
     /// <inheritdoc />
     public virtual async Task DeleteAsync(
-        ProviderPropertyModel provider,
+        ProviderPropertyModel providerProperty,
         string userName,
         CancellationToken cancellationToken = default
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+        Guard.Instance().ThrowIfNull(providerProperty, nameof(providerProperty))
             .ThrowIfNullOrEmpty(userName, nameof(userName));
 
         try
         {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Cloning the incoming provider property"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy it here.
+            var copy = providerProperty.QuickClone();
+
             // Log what we are about to do.
             _logger.LogDebug(
                 "Updating the {name} model stats",
@@ -356,8 +367,8 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 );
 
             // Ensure the stats are correct.
-            provider.LastUpdatedOnUtc = DateTime.UtcNow;
-            provider.LastUpdatedBy = userName;
+            copy.LastUpdatedOnUtc = DateTime.UtcNow;
+            copy.LastUpdatedBy = userName;
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -367,7 +378,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
             // Perform the operation.
             await _providerPropertyRepository.DeleteAsync(
-                provider,
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
         }

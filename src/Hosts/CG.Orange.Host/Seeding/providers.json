@@ -1,18 +1,28 @@
 {
   "Providers": [
     {
-      "Name": "Azure",
-      "Description": "",
+      "Name": "Orange Dev Secret",
+      "Description": "Secrets from the kv-orange-dev2 vault",
+      "Tag": "Dev",
       "ProviderType": "Secret",
       "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
       "Properties": [
         {
           "Key": "KeyVaultUri",
           "Value": "not a real uri"
-        },
+        }
+      ]
+    },
+    {
+      "Name": "Forever Cache",
+      "Description": "Cache values in-memory, forever",
+      "Tag": "Forever",
+      "ProviderType": "Cache",
+      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "Properties": [
         {
-          "Key": "MaxRetry",
-          "Value": "3"
+          "Key": "Duration",
+          "Value": "Forever"
         }
       ]
     }
