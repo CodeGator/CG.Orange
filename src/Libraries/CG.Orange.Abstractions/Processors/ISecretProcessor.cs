@@ -2,10 +2,9 @@
 namespace CG.Orange.Processors;
 
 /// <summary>
-/// This interface represents an object that fetches secrets from a remote 
-/// service.
+/// This interface represents a secret processor.
 /// </summary>
-public interface ISecretProcessor
+public interface ISecretProcessor 
 {
     /// <summary>
     /// This method fetches a secret from a remote service.

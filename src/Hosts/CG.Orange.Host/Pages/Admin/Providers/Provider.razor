@@ -23,6 +23,8 @@ else
             </MudItem>
             <MudItem xs="12">
                 <MudTextField AutoFocus
+                              Required
+                              Class="ml-auto"
                               Variant="Variant.Outlined"
                               Label="Name"
                               For="@(() => _model.Name)"
@@ -30,6 +32,7 @@ else
             </MudItem>
             <MudItem xs="12">
                 <MudTextField Variant="Variant.Outlined"
+                              Class="ml-auto"
                               Label="Description"
                               For="@(() => _model.Description)"
                               Lines="4"
@@ -37,9 +40,47 @@ else
             </MudItem>
             <MudItem xs="12">
                 <MudSwitch Label="Disabled"
+                           Class="ml-auto"
                            Color="Color.Warning"
                            For="@(() => _model.IsDisabled)"
                 @bind-Value="@_model.IsDisabled" />
+            </MudItem>
+            <MudItem xs="12">
+                <MudSelect T="ProviderType"
+                           Required
+                @bind-Value="_model.ProviderType"
+                           SelectedValuesChanged="OnProviderTypeChanged"
+                           Class="ml-auto"
+                           Label="Provider Type" Placeholder="Select a provider type.">
+                    @foreach (var providerType in Enum.GetNames<ProviderType>())
+                    {
+                        <MudSelectItem Value="@(Enum.Parse<ProviderType>(providerType))">@providerType</MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="12">
+                <MudSelect T="string"
+                           Required
+                @bind-Value="_model.ProcessorType"
+                           Class="ml-auto"
+                           Label="Processor Type"
+                           Placeholder="Select a processor type."
+                           ToStringFunc="@(x => x is null ? "" : Type.GetType(x)?.FullName ?? "")">
+                    @if (_model.ProviderType == ProviderType.Secret)
+                    {
+                        @foreach (var processorType in _secretProcessorTypes)
+                        {
+                            <MudSelectItem Value="@processorType.FullName">@processorType.FullName</MudSelectItem>
+                        }
+                    }
+                    else
+                    {
+                        @foreach (var processorType in _cacheProcessorTypes)
+                        {
+                            <MudSelectItem Value="@processorType.FullName">@processorType.FullName</MudSelectItem>
+                        }
+                    }
+                </MudSelect>
             </MudItem>
             <MudItem xs="12">
                 <MudTable Items="_model.Properties"
@@ -47,8 +88,8 @@ else
                           Striped
                           Hover
                           CanCancelEdit
-                          ApplyButtonPosition="TableApplyButtonPosition.Start"
-                          EditButtonPosition="TableEditButtonPosition.Start"
+                          ApplyButtonPosition="TableApplyButtonPosition.End"
+                          EditButtonPosition="TableEditButtonPosition.End"
                           EditTrigger="TableEditTrigger.EditButton"
                           RowEditPreview="OnBackupProperty"
                           RowEditCommit="OnCommitProperty"
@@ -62,6 +103,11 @@ else
                                    OnClick="OnCreatePropertyAsync">Create</MudButton>
                         <MudSpacer />
                     </ToolBarContent>
+                    <ColGroup>
+                        <col />
+                        <col />
+                        <col style="width:1px" />
+                    </ColGroup>
                     <HeaderContent>
                         <MudTh><MudTableSortLabel SortBy="new Func<ProviderPropertyModel, object>(x=>x.Key)">Key</MudTableSortLabel></MudTh>
                         <MudTh><MudTableSortLabel SortBy="new Func<ProviderPropertyModel, object>(x=>x.Value)">Value</MudTableSortLabel></MudTh>
@@ -71,9 +117,7 @@ else
                         <MudTd DataLabel="Key">@context2.Key</MudTd>
                         <MudTd DataLabel="Value"><MudTextField T="string" DisableUnderLine InputType="InputType.Password" ReadOnly Text="@context2.Value" /></MudTd>
                         <MudTd>
-                            <MudTooltip Text="Delete property">
-                                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeletePropertyAsync(@context2))" />
-                            </MudTooltip>
+                            <MudIconButton Class="p-0 m-0" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeletePropertyAsync(@context2))" />
                         </MudTd>
                     </RowTemplate>
                     <RowEditingTemplate Context="context2">
@@ -98,12 +142,16 @@ else
             <MudItem xs="6">
                 <MudTextField T="string"
                               Variant="Variant.Outlined"
+                              Required
+                              Class="ml-auto"
                               Label="Created On"
                               ReadOnly
                               Text="@_model.CreatedOnUtc.ToLocalTime().ToString()" />
             </MudItem>
             <MudItem xs="6">
                 <MudTextField Variant="Variant.Outlined"
+                              Required
+                              Class="ml-auto"
                               Label="Created By"
                               ReadOnly
                               For="@(() => _model.CreatedBy)"
@@ -112,12 +160,14 @@ else
             <MudItem xs="6">
                 <MudTextField T="string"
                               Variant="Variant.Outlined"
+                              Class="ml-auto"
                               Label="Last Updated On"
                               ReadOnly
                               Text="@(_model.LastUpdatedOnUtc == null ? "" : _model.LastUpdatedOnUtc.Value.ToLocalTime().ToString())" />
             </MudItem>
             <MudItem xs="6">
                 <MudTextField Variant="Variant.Outlined"
+                              Class="ml-auto"
                               Label="Last Updated By"
                               ReadOnly
                               For="@(() => _model.LastUpdatedBy)"

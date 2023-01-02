@@ -1,6 +1,6 @@
 using Serilog;
 
-BootstrapLogger.LogLevelToDebug();
+//BootstrapLogger.LogLevelToDebug();
 
 try
 {

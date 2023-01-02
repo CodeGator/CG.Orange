@@ -17,3 +17,4 @@ global using CG.Validations;
 global using CG.Orange.Directors;
 global using System.IdentityModel.Tokens.Jwt;
 global using System.ComponentModel.DataAnnotations;
+global using CG.Orange.Processors;

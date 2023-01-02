@@ -5,9 +5,6 @@
 
 <MudBreadcrumbs Items="_crumbs"></MudBreadcrumbs>
 
-<MudText Typo="Typo.h6">Setting</MudText>
-<MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the properties of this configuration.</MudText>
-
 @if (_model is null)
 {
     <MudText Class="py-5" Typo="Typo.h6" Color="Color.Warning">Ooops! we couldn't find that setting file!</MudText>
@@ -15,6 +12,9 @@
 }
 else
 {
+    <MudText Typo="Typo.h6">Setting</MudText>
+    <MudText Typo="Typo.body1" Class="pb-5">Use this page to edit the properties of this configuration.</MudText>
+
     <EditForm Model="_model" OnValidSubmit="OnValidSubmit">
         <DataAnnotationsValidator />
         <MudGrid>

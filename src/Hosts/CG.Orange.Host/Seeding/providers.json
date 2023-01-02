@@ -4,7 +4,7 @@
       "Name": "Azure",
       "Description": "",
       "ProviderType": "Secret",
-      "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor, CG.Orange.Plugins.Azure",
+      "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
       "Properties": [
         {
           "Key": "KeyVaultUri",

@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.Plugins.Azure;
+namespace CG.Orange.Plugins.InMemory;
 
 /// <summary>
 /// This class represents the plugin module's startup logic.
@@ -25,31 +25,23 @@ public class Module : ModuleBase
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
-            "Configuring Azure plugin from the {section} section",
+            "Configuring in-memory cache plugin from the {section} section",
             $"{(configuration as IConfigurationSection)?.Path}:Options"
-            ); 
+            );
 
         // Configure the processor options.
-        webApplicationBuilder.Services.ConfigureOptions<AzureSecretProcessorOptions>(
+        webApplicationBuilder.Services.ConfigureOptions<InMemoryCacheProcessorOptions>(
             configuration.GetSection("Options"),
-            out var azureSecretProcessorOptions
+            out var inMemoryCacheProcessorOptions
             );
 
         // Log what we're about to do.
         bootstrapLogger?.LogDebug(
-            "Wiring up the Azure secret client factory"
+            "Wiring up the in-memory cache processor"
             );
 
-        // Wire up the Azure secret client factory.
-        webApplicationBuilder.Services.AddScoped<AzureSecretClientFactory>();
-
-        // Log what we're about to do.
-        bootstrapLogger?.LogDebug(
-            "Wiring up the Azure secret processor"
-            );
-
-        // Wire up the Azure secret processor.
-        webApplicationBuilder.Services.AddScoped<ISecretProcessor, AzureSecretProcessor>();
+        // Wire up the in-memory cache processor.
+        webApplicationBuilder.Services.AddScoped<ICacheProcessor, InMemoryCacheProcessor>();
     }
 
     // *******************************************************************
@@ -64,7 +56,7 @@ public class Module : ModuleBase
 
         // Log what we're about to do.
         webApplication.Logger.LogDebug(
-            "Adding middleware for the Azure secret processor"
+            "Adding middleware for the in-memory cache processor"
             );
 
         // TODO : add your plugin's startup / pipeline logic here.

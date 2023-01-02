@@ -2,21 +2,16 @@
 namespace CG.Orange.Plugins.Azure.Options;
 
 /// <summary>
-/// This class contains configuration settings for the azure provider.
+/// This class contains configuration settings for the Azure secret processor.
 /// </summary>
-internal class AzureProviderOptions
+internal class AzureSecretProcessorOptions
 {
     // *******************************************************************
     // Properties.
     // *******************************************************************
 
     #region Properties
-
-    /// <summary>
-    /// This property contains the URI to the azure secret key vault.
-    /// </summary>
-    [Required]
-    public string KeyVaultUri { get; set; } = null!;
+        
 
     #endregion
 }

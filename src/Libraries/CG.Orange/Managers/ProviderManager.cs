@@ -197,30 +197,40 @@ internal class ProviderManager : IProviderManager
         {
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy it here.
+            var copy = provider.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderModel)
                 );
 
             // Ensure the stats are correct.
-            provider.CreatedOnUtc = DateTime.UtcNow;
-            provider.CreatedBy = userName;
-            provider.LastUpdatedBy = null;
-            provider.LastUpdatedOnUtc = null;
+            copy.CreatedOnUtc = DateTime.UtcNow;
+            copy.CreatedBy = userName;
+            copy.LastUpdatedBy = null;
+            copy.LastUpdatedOnUtc = null;
 
             // Are there any properties with values?
-            if (provider.Properties.Any(x => 
+            if (copy.Properties.Any(x => 
                 !string.IsNullOrEmpty(x.Value)
                 ))
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
                     "Encrypting {count} properties for provider: {name}",
-                    provider.Properties.Count(),
-                    provider.Name
+                    copy.Properties.Count(),
+                    copy.Name
                     );
 
                 // Loop through the properties with values.
-                foreach (var property in provider.Properties.Where(x => 
+                foreach (var property in copy.Properties.Where(x => 
                     !string.IsNullOrEmpty(x.Value)
                     )) 
                 {
@@ -240,7 +250,7 @@ internal class ProviderManager : IProviderManager
 
             // Perform the operation.
             var newProvider = await _providerRepository.CreateAsync(
-                provider,
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
 
@@ -720,13 +730,23 @@ internal class ProviderManager : IProviderManager
         {
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy it here.
+            var copy = provider.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderModel)
                 );
 
             // Ensure the stats are correct.
-            provider.LastUpdatedOnUtc = DateTime.UtcNow;
-            provider.LastUpdatedBy = userName;
+            copy.LastUpdatedOnUtc = DateTime.UtcNow;
+            copy.LastUpdatedBy = userName;
 
             // The repository doesn't update the associated properties, so
             //   we don't need to encrypt them here.
@@ -738,16 +758,18 @@ internal class ProviderManager : IProviderManager
                 );
 
             // Perform the operation.
-            var changedProviderProperty = await _providerRepository.UpdateAsync(
-                provider,
+            var changedProvider = await _providerRepository.UpdateAsync(
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Are there properties?
-            if (changedProviderProperty.Properties.Any())
+            // Are there properties with values?
+            if (changedProvider.Properties.Any(x => 
+                string.IsNullOrEmpty(x.Value)
+                ))
             {
                 // Loop through the properties with values.
-                foreach (var property in provider.Properties.Where(x => 
+                foreach (var property in changedProvider.Properties.Where(x => 
                     !string.IsNullOrEmpty(x.Value)
                     ))
                 {
@@ -765,7 +787,7 @@ internal class ProviderManager : IProviderManager
             }
 
             // Return the result.
-            return changedProviderProperty;
+            return changedProvider;
         }
         catch (Exception ex)
         {

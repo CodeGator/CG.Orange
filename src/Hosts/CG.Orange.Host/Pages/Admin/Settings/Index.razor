@@ -19,8 +19,9 @@
         <col />
     </ColGroup>
     <ToolBarContent>
-        <MudButton StartIcon="@Icons.Material.Filled.Create"
+        <MudButton StartIcon="@Icons.Material.Outlined.Create"
                    Class="mt-1 mr-2"
+                   Color="Color.Secondary"
                    Variant="Variant.Filled"
                    OnClick="OnCreateAsync">Create</MudButton>
         <MudFileUpload T="IBrowserFile"
@@ -29,8 +30,8 @@
             <ButtonTemplate>
                 <MudButton HtmlTag="label"
                            Variant="Variant.Filled"
-                           Color="Color.Secondary"
-                           StartIcon="@Icons.Filled.CloudUpload"
+                           Color="Color.Tertiary"
+                           StartIcon="@Icons.Outlined.CloudUpload"
                            for="@context">
                     Import
                 </MudButton>
@@ -49,12 +50,8 @@
         <MudTd DataLabel="Application">@context.ApplicationName</MudTd>
         <MudTd DataLabel="Environment">@context.SafeEnvironmentName()</MudTd>
         <MudTd>
-            <MudTooltip Text="Edit file">
-                <MudIconButton Icon="@Icons.Material.Rounded.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/settings/setting/{context.Id}"))" />
-            </MudTooltip>
-            <MudTooltip Text="Delete file">
-                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeleteAsync(@context))" />
-            </MudTooltip>
+            <MudIconButton Class="pr-6" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeleteAsync(@context))" />
+            <MudIconButton Icon="@Icons.Material.Outlined.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/settings/setting/{context.Id}"))" />
         </MudTd>
     </RowTemplate>
     <PagerContent>

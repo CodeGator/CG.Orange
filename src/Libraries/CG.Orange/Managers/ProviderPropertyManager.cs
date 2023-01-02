@@ -1,6 +1,10 @@
 ﻿
 namespace CG.Orange.Managers;
 
+/// <summary>
+/// This class is a default implementation of the <see cref="IProviderPropertyManager"/>
+/// interface.
+/// </summary>
 internal class ProviderPropertyManager : IProviderPropertyManager
 {
     // *******************************************************************
@@ -238,18 +242,28 @@ internal class ProviderPropertyManager : IProviderPropertyManager
         {
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider property"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy it here.
+            var copy = providerProperty.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderPropertyModel)
                 );
 
             // Ensure the stats are correct.
-            providerProperty.CreatedOnUtc = DateTime.UtcNow;
-            providerProperty.CreatedBy = userName;
-            providerProperty.LastUpdatedBy = null;
-            providerProperty.LastUpdatedOnUtc = null;
+            copy.CreatedOnUtc = DateTime.UtcNow;
+            copy.CreatedBy = userName;
+            copy.LastUpdatedBy = null;
+            copy.LastUpdatedOnUtc = null;
 
             // Is there a value?
-            if (!string.IsNullOrEmpty(providerProperty.Value))
+            if (!string.IsNullOrEmpty(copy.Value))
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -257,15 +271,15 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                     );
 
                 // Encrypt the value, at rest.
-                providerProperty.Value = await _cryptographer.AesEncryptAsync(
-                    providerProperty.Value,
+                copy.Value = await _cryptographer.AesEncryptAsync(
+                    copy.Value,
                     cancellationToken
                     ).ConfigureAwait(false);
             }
             else
             {
                 // Set a non-null value.
-                providerProperty.Value = "";
+                copy.Value = "";
             }
 
             // Log what we are about to do.
@@ -276,7 +290,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
             // Perform the operation.
             var newProviderProperty = await _providerPropertyRepository.CreateAsync(
-                providerProperty,
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
 
@@ -586,16 +600,26 @@ internal class ProviderPropertyManager : IProviderPropertyManager
         {
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider property"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy it here.
+            var copy = providerProperty.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderPropertyModel)
                 );
 
             // Ensure the stats are correct.
-            providerProperty.LastUpdatedOnUtc = DateTime.UtcNow;
-            providerProperty.LastUpdatedBy = userName;
+            copy.LastUpdatedOnUtc = DateTime.UtcNow;
+            copy.LastUpdatedBy = userName;
 
             // Is there a value?
-            if (!string.IsNullOrEmpty(providerProperty.Value))
+            if (!string.IsNullOrEmpty(copy.Value))
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -603,14 +627,14 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                     );
 
                 // Encrypt the value, at rest.
-                providerProperty.Value = await _cryptographer.AesEncryptAsync(
-                    providerProperty.Value,
+                copy.Value = await _cryptographer.AesEncryptAsync(
+                    copy.Value,
                     cancellationToken
                     ).ConfigureAwait(false);
             }
             else
             {
-                providerProperty.Value = "";
+                copy.Value = "";
             }
 
             // Log what we are about to do.
@@ -621,7 +645,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
             // Perform the operation.
             var changedProviderProperty = await _providerPropertyRepository.UpdateAsync(
-                providerProperty,
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
 

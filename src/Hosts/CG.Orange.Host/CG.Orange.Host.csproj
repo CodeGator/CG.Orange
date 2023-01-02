@@ -9,12 +9,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CG.Blazor.Plugins" Version="2023.1.10" />
+        <PackageReference Include="CG.Blazor.Plugins" Version="2023.1.11" />
         <PackageReference Include="CG.Logging" Version="2023.1.2" />
         <PackageReference Include="CG.Reflection" Version="2023.1.4" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.1" />
         <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
-        <PackageReference Include="MudBlazor" Version="6.1.6" />
+        <PackageReference Include="MudBlazor" Version="6.1.7" />
         <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,6 +29,7 @@
         <ProjectReference Include="..\..\Libraries\CG.Orange.Controllers\CG.Orange.Controllers.csproj" />
         <ProjectReference Include="..\..\Libraries\CG.Orange\CG.Orange.csproj" />
         <ProjectReference Include="..\..\Plugins\CG.Orange.Plugins.Azure\CG.Orange.Plugins.Azure.csproj" />
+        <ProjectReference Include="..\..\Plugins\CG.Orange.Plugins.InMemory\CG.Orange.Plugins.InMemory.csproj" />
     </ItemGroup>
 
     <ItemGroup>

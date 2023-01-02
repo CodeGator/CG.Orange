@@ -45,12 +45,8 @@
         <MudTd DataLabel="Name">@context.Name</MudTd>
         <MudTd DataLabel="Type">@context.ProviderType</MudTd>
         <MudTd>
-            <MudTooltip Text="Edit provider">
-                <MudIconButton Icon="@Icons.Material.Rounded.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/providers/provider/{context.Id}"))" />
-            </MudTooltip>
-            <MudTooltip Text="Delete provider">
-                <MudIconButton Icon="@Icons.Material.Rounded.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />
-            </MudTooltip>
+            <MudIconButton Class="pr-6" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />
+            <MudIconButton Icon="@Icons.Material.Outlined.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/providers/provider/{context.Id}"))" />
         </MudTd>
     </RowTemplate>
     <PagerContent>

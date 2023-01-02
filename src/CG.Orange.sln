@@ -44,6 +44,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Host", "Hosts\CG.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Orange.Plugins.Azure", "Plugins\CG.Orange.Plugins.Azure\CG.Orange.Plugins.Azure.csproj", "{AFC80431-7A73-4EFA-B81C-D433D2D445C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CG.Orange.Plugins.InMemory", "Plugins\CG.Orange.Plugins.InMemory\CG.Orange.Plugins.InMemory.csproj", "{34415E23-BB6C-4754-8067-BE32977D166D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{AFC80431-7A73-4EFA-B81C-D433D2D445C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC80431-7A73-4EFA-B81C-D433D2D445C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFC80431-7A73-4EFA-B81C-D433D2D445C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34415E23-BB6C-4754-8067-BE32977D166D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34415E23-BB6C-4754-8067-BE32977D166D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34415E23-BB6C-4754-8067-BE32977D166D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34415E23-BB6C-4754-8067-BE32977D166D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +116,7 @@ Global
 		{703AADF0-AF3D-45C4-9154-37BA838B2300} = {275154D3-2B21-4002-8563-23273AB85DB5}
 		{34E2993D-40C3-490A-A2F1-3093F1EA325D} = {865B0A40-BDF4-4DF5-BBE1-157D0C6FC20E}
 		{AFC80431-7A73-4EFA-B81C-D433D2D445C0} = {344ACA6F-897D-49CD-86D3-15D77E0B6EED}
+		{34415E23-BB6C-4754-8067-BE32977D166D} = {344ACA6F-897D-49CD-86D3-15D77E0B6EED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEC32BA8-889C-4B43-9C02-A0A4AA7DFE38}
