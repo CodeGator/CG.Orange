@@ -38,7 +38,8 @@ try
         .AddManagers(bootstrapLogger: BootstrapLogger.Instance())
         .AddSeeding<SeedDirector>(bootstrapLogger: BootstrapLogger.Instance())
         .AddBlazorPlugins(bootstrapLogger: BootstrapLogger.Instance())
-        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance());
+        .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance())
+        .AddOrangeServices(bootstrapLogger: BootstrapLogger.Instance());
 
     // Build the application.
     var app = builder.Build();
