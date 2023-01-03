@@ -50,6 +50,7 @@ public class Module : ModuleBase
 
         // Wire up the Azure secret processor.
         webApplicationBuilder.Services.AddScoped<ISecretProcessor, AzureSecretProcessor>();
+        webApplicationBuilder.Services.AddScoped<AzureSecretProcessor>();
     }
 
     // *******************************************************************

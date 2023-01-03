@@ -3,17 +3,12 @@
     {
       "ApplicationName": "test1",
       "EnvironmentName": "",
-      "Json": "{ \"Test 1\":\"##Azure:Daily##\"}"
+      "Json": "{ \"TestKey\":\"default value\"}"
     },
     {
       "ApplicationName": "test1",
       "EnvironmentName": "development",
-      "Json": "{ \"Test 1\":\"##Azure:Hourly##\"}"
-    },
-    {
-      "ApplicationName": "test2",
-      "EnvironmentName": "",
-      "Json": "{ \"Test 1\":\"##Azure:None##\"}"
+      "Json": "{ \"TestKey\":\"##OPS:OHC##\"}"
     }
   ]
 }

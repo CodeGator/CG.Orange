@@ -3,7 +3,7 @@
     {
       "Name": "Orange Dev Secrets",
       "Description": "kv-orange-dev Azure vault",
-      "Tag": "DS",
+      "Tag": "ODS",
       "ProviderType": "Secret",
       "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
       "Properties": [
@@ -16,7 +16,7 @@
     {
       "Name": "Orange Prod Secrets",
       "Description": "kv-orange-prod Azure vault",
-      "Tag": "PS",
+      "Tag": "OPS",
       "ProviderType": "Secret",
       "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
       "Properties": [
@@ -29,7 +29,7 @@
     {
       "Name": "Yearly Cache",
       "Description": "1 year cache duration",
-      "Tag": "YC",
+      "Tag": "OYC",
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
       "Properties": [
@@ -42,7 +42,7 @@
     {
       "Name": "Monthly Cache",
       "Description": "Monthly duration",
-      "Tag": "MC",
+      "Tag": "OMC",
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
       "Properties": [
@@ -55,7 +55,7 @@
     {
       "Name": "Weekly Cache",
       "Description": "Weekly duration",
-      "Tag": "WC",
+      "Tag": "OWC",
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
       "Properties": [
@@ -68,7 +68,7 @@
     {
       "Name": "Hourly Cache",
       "Description": "Weekly duration",
-      "Tag": "HC",
+      "Tag": "OHC",
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
       "Properties": [

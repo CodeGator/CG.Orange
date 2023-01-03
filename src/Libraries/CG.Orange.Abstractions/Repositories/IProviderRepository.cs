@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Managers;
+
 namespace CG.Orange.Repositories;
 
 /// <summary>
@@ -113,6 +115,25 @@ public interface IProviderRepository
     /// repository fails to complete the operation.</exception>
     Task<ProviderModel?> FindByNameAsync(
         string name,
+        CancellationToken cancellationToken = default
+        );
+
+    /// <summary>
+    /// This method searches for a matching <see cref="ProviderModel"/> object using the
+    /// given provider tag and an optional <see cref="ProviderType"/> value.
+    /// </summary>
+    /// <param name="tag">The provider tag to use for the operation.</param>
+    /// <param name="providerType">The optional provider type to use for the 
+    /// operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation that returns a <see cref="ProviderModel"/> 
+    /// objects, if a match was found, of <c>NULL</c> otherwise.</returns>
+    /// <exception cref="RepositoryException">This exception is thrown whenever the
+    /// repository fails to complete the operation.</exception>
+    Task<ProviderModel?> FindByTagAndTypeAsync(
+        string tag,
+        ProviderType? providerType,
         CancellationToken cancellationToken = default
         );
 

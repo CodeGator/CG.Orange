@@ -1,14 +1,12 @@
 ﻿
-using CG.Orange.Directors;
-
-namespace CG.Orange.Host.Controllers;
+namespace CG.Orange.Controllers;
 
 /// <summary>
 /// This class is a REST controller for <see cref="SettingFileModel"/> resources.
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
-[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+//[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 public class SettingsController : ControllerBase
 {
     // *******************************************************************

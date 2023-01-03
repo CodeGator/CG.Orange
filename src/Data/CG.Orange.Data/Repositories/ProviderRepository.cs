@@ -464,6 +464,64 @@ internal class ProviderRepository : IProviderRepository
     // *******************************************************************
 
     /// <inheritdoc/>
+    public virtual async Task<ProviderModel?> FindByTagAndTypeAsync(
+        string tag,
+        ProviderType? providerType,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(tag, nameof(tag));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Searching for a provider."
+                );
+
+            // Perform the provider search.
+            var provider = await _dbContext.Providers.Where(x =>
+                x.Tag == tag && 
+                (providerType != null ? x.ProviderType == providerType : true)
+                ).Include(x => x.Properties)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(
+                    cancellationToken
+                    ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (provider is null)
+            {
+                return null;
+            }
+
+            // Convert the entities to a models.
+            var result = _mapper.Map<ProviderModel>(provider);
+
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for a providers by tag and type!"
+                );
+
+            // Provider better context.
+            throw new RepositoryException(
+                message: $"The repository failed to search for providers " +
+                "by tag and type!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc/>
     public virtual async Task<ProviderModel?> FindByIdAsync(
         int id,
         CancellationToken cancellationToken = default

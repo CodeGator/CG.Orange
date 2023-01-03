@@ -25,6 +25,10 @@ try
     builder.Services.AddServerSideBlazor();
     builder.Services.AddHttpContextAccessor();
 
+    builder.Services.AddControllers().AddApplicationPart(
+        typeof(CG.Orange.Controllers.SettingsController).Assembly
+        );
+
     // Add MudBlazor stuff
     builder.Services.AddMudServices();
 
@@ -45,6 +49,10 @@ try
         app.UseExceptionHandler("/Error");
         app.UseHsts();
     }
+    else
+    {
+        app.UseSerilogRequestLogging();
+    }
 
     // Use Blazor stuff.
     app.UseHttpsRedirection();
@@ -52,7 +60,8 @@ try
     app.UseRouting();
     app.MapBlazorHub();
     app.MapFallbackToPage("/_Host");
-
+    app.MapControllers();
+    
     // Use Orange stuff.
     app.UseDataAccess()
         .UseOrangeIdentity()

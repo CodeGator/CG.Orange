@@ -21,7 +21,7 @@ internal class InMemoryCacheProcessor : ICacheProcessor
     /// <summary>
     /// This field contains the logger for this processor. 
     /// </summary>
-    internal protected readonly ILogger<InMemoryCacheProcessor> _logger = null!;
+    internal protected readonly ILogger<ICacheProcessor> _logger = null!;
 
     #endregion
 
@@ -39,7 +39,7 @@ internal class InMemoryCacheProcessor : ICacheProcessor
     /// <param name="logger">The logger to use with this processor.</param>
     public InMemoryCacheProcessor(
         IDistributedCache cache,
-        ILogger<InMemoryCacheProcessor> logger
+        ILogger<ICacheProcessor> logger
         )
     {
         // Validate the parameters before attempting to use them.
@@ -78,11 +78,18 @@ internal class InMemoryCacheProcessor : ICacheProcessor
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Covert the bytes to a string.
-            var value = Encoding.UTF8.GetString(bytes);
+            // Did we find a value?
+            if (bytes is not null)
+            {
+                // Covert the bytes to a string.
+                var value = Encoding.UTF8.GetString(bytes);
 
-            // Return the value.
-            return value;
+                // Return the value.
+                return value;
+            }
+
+            // Return no value.
+            return null;
         }
         catch (Exception ex)
         {
@@ -118,38 +125,50 @@ internal class InMemoryCacheProcessor : ICacheProcessor
 
         try
         {
-            // Look for the provider property.
-            var duration = provider.Properties.FirstOrDefault(x =>
-                string.Compare(x.Key, "duration", StringComparison.InvariantCultureIgnoreCase) == 0
-                );
-
-            // Did we fail?
-            if (duration is null)
+            // Is there a value to set?
+            if (!string.IsNullOrEmpty(value))
             {
-                // Panic!!
-                throw new KeyNotFoundException(
-                    $"The provider property 'Duration' was not found for provider: {provider.Id}"
+                // Look for the provider property.
+                var duration = provider.Properties.FirstOrDefault(x =>
+                    string.Compare(x.Key, "duration", StringComparison.InvariantCultureIgnoreCase) == 0
                     );
-            }
 
-            // Calculate the expiration date/time.
-            var expiration = !string.IsNullOrEmpty(duration.Value)
-                ? TimeSpan.Parse(duration.Value)
-                : TimeSpan.Zero;  
-
-            // Convert the value to bytes.
-            var bytes = Encoding.UTF8.GetBytes(value);
-
-            // Set the bytes in the cache.
-            await _cache.SetAsync(
-                key,
-                bytes,
-                new DistributedCacheEntryOptions()
+                // Did we fail?
+                if (duration is null)
                 {
-                    SlidingExpiration = expiration
-                },
-                cancellationToken
-                ).ConfigureAwait(false);
+                    // Panic!!
+                    throw new KeyNotFoundException(
+                        $"The provider property 'Duration' was not found for provider: {provider.Id}"
+                        );
+                }
+
+                // Calculate the expiration date/time.
+                var expiration = !string.IsNullOrEmpty(duration.Value)
+                    ? TimeSpan.Parse(duration.Value)
+                    : TimeSpan.Zero;
+
+                // Convert the value to bytes.
+                var bytes = Encoding.UTF8.GetBytes(value);
+
+                // Set the bytes in the cache.
+                await _cache.SetAsync(
+                    key,
+                    bytes,
+                    new DistributedCacheEntryOptions()
+                    {
+                        SlidingExpiration = expiration
+                    },
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Remove any previous value.
+                await _cache.RemoveAsync(
+                    key,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
         }
         catch (Exception ex)
         {

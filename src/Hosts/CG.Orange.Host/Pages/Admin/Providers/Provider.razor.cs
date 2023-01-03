@@ -510,7 +510,7 @@ public partial class Provider
                 "Rolling back changes to a property."
                 );
 
-            /// Roll back the editable properties.
+            // Roll back the editable properties.
             ((ProviderPropertyModel)element).Key = _tempProperty.Key;
             ((ProviderPropertyModel)element).Value = _tempProperty.Value;
 

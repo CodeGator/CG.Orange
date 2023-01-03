@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>CG.Orange.Host</RootNamespace>
+        <RootNamespace>CG.Orange</RootNamespace>
         <Description>The REST controllers for the CG.Orange microservice.</Description>
     </PropertyGroup>
 
@@ -20,6 +20,10 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\Libraries\CG.Orange.Abstractions\CG.Orange.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Extensions\" />
     </ItemGroup>
 
 </Project>

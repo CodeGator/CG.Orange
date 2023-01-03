@@ -56,6 +56,14 @@ public static class WebApplicationBuilderExtensions001
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
+            "Wiring up the Orange factories"
+            );
+
+        // Add the factories.
+        webApplicationBuilder.Services.AddScoped<IProcessorFactory, ProcessorFactory>();
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
             "Wiring up the shared cryptographers"
             );
 

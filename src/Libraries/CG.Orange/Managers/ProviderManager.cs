@@ -651,6 +651,87 @@ internal class ProviderManager : IProviderManager
     // *******************************************************************
 
     /// <inheritdoc />
+    public virtual async Task<ProviderModel?> FindByTagAndTypeAsync(
+        string tag,
+        ProviderType? providerType,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNullOrEmpty(tag, nameof(tag));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.FindByTagAndTypeAsync)
+                );
+
+            // Perform the operation.
+            var result = await _providerRepository.FindByTagAndTypeAsync(
+                tag,
+                providerType,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (result is null)
+            {
+                return null;
+            }
+
+            // Are there any properties?
+            if (result.Properties.Any())
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting {count} properties for provider: {name}",
+                    result.Properties.Count(),
+                    result.Name
+                    );
+
+                // Loop through the properties with values.
+                foreach (var property in result.Properties.Where(x =>
+                    !string.IsNullOrEmpty(x.Value)
+                    ))
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting property for provider"
+                        );
+
+                    // Decrypt the value.
+                    property.Value = await _cryptographer.AesDecryptAsync(
+                        property.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }
+
+            // Return the results.
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to search for providers by tag and type!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for providers by " +
+                "tag and type!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
     public virtual async Task<ProviderModel?> FindByIdAsync(
         int id,
         CancellationToken cancellationToken = default

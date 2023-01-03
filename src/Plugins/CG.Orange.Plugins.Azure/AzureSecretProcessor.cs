@@ -61,7 +61,7 @@ internal class AzureSecretProcessor : ISecretProcessor
     #region Public methods
 
     /// <inheritdoc/>
-    public virtual async Task<string?> GetSecretAsync(
+    public virtual async Task<string?> GetValueAsync(
         ProviderModel provider,
         string secretKey, 
         CancellationToken cancellationToken = default
@@ -90,7 +90,7 @@ internal class AzureSecretProcessor : ISecretProcessor
 
             // Get the secret from Azure.
             var secret = await secretClient.GetSecretAsync(
-                name: secretKey,
+                name: Uri.EscapeDataString(secretKey),
                 cancellationToken: cancellationToken
                 ).ConfigureAwait(false);
 

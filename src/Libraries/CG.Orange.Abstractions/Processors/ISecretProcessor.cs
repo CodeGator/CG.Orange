@@ -15,7 +15,7 @@ public interface ISecretProcessor
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns the plain-text 
     /// value of the given secret, or NULL if no secret was found.</returns>
-    Task<string?> GetSecretAsync(
+    Task<string?> GetValueAsync(
         ProviderModel provider,
         string secretKey,
         CancellationToken cancellationToken = default
