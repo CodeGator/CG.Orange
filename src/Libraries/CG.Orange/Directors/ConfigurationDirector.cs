@@ -92,7 +92,8 @@ internal class ConfigurationDirector : IConfigurationDirector
 
         // Here we're building a complete configuration for the given
         //   application and/or environment - with associated secret
-        //   values.
+        //   values. This is the only place we'll ever combine the
+        //   settings with their associated secrets.
 
         try
         {
@@ -237,6 +238,7 @@ internal class ConfigurationDirector : IConfigurationDirector
             {
                 var secretTag = "";
                 var cacheTag = "";
+                string? altKey = null;
 
                 // Sanity check the value.
                 if (!string.IsNullOrEmpty(value))
@@ -254,10 +256,17 @@ internal class ConfigurationDirector : IConfigurationDirector
                         secretTag = parts[0];
 
                         // Is there a cache tag?
-                        if (parts.Length > 1)
+                        if (parts.Length == 2)
                         {
                             // Save the cache tag.
                             cacheTag = parts[1];    
+                        }
+
+                        // Is there an alternate key?
+                        if (parts.Length == 3)
+                        {
+                            // Save the alt key.
+                            altKey = parts[2];
                         }
 
                         // We'll supply this from a secret, or the cache, later.
@@ -289,6 +298,15 @@ internal class ConfigurationDirector : IConfigurationDirector
                     ICacheProcessor? cacheProcessor = null;
                     if (cacheProvider is not null)
                     {
+                        // Is the cache provider disabled?
+                        if (cacheProvider.IsDisabled)
+                        {
+                            // Panic!!
+                            throw new NotSupportedException(
+                                $"The cache provider {cacheProvider.Name} was disabled!"
+                                );
+                        }
+
                         // Get the cache processor.
                         cacheProcessor = await _processorFactory.CreateCacheProcessorAsync(
                             cacheProvider,
@@ -298,10 +316,10 @@ internal class ConfigurationDirector : IConfigurationDirector
                         // Did we succeed?
                         if (cacheProcessor is not null)
                         {
-                            // Try to find the value.
+                            // Try to find a previously cached value.
                             value = await cacheProcessor.GetValueAsync(
                                 cacheProvider,
-                                key,
+                                $"{applicationName}:{environmentName ?? "none"}:{altKey ?? key}",
                                 cancellationToken
                                 ).ConfigureAwait(false);
                         }
@@ -329,6 +347,15 @@ internal class ConfigurationDirector : IConfigurationDirector
                         // Is there a secret provider?
                         if (secretProvider is not null)
                         {
+                            // Is the secret provider disabled?
+                            if (secretProvider.IsDisabled)
+                            {
+                                // Panic!!
+                                throw new NotSupportedException(
+                                    $"The secret provider {secretProvider.Name} was disabled!"
+                                    );
+                            }
+
                             // Get the secret processor.
                             var secretProcessor = await _processorFactory.CreateSecretProcessorAsync(
                                 secretProvider,
@@ -341,7 +368,7 @@ internal class ConfigurationDirector : IConfigurationDirector
                                 // Try to find the value.
                                 value = await secretProcessor.GetValueAsync(
                                     secretProvider,
-                                    key,
+                                    altKey ?? key,
                                     cancellationToken
                                     ).ConfigureAwait(false);
                             }
@@ -353,10 +380,10 @@ internal class ConfigurationDirector : IConfigurationDirector
                             // Is there a cache processor?
                             if (cacheProcessor is not null)
                             {
-                                // Try to cache the value.
+                                // Try to cache the value for next time.
                                 await cacheProcessor.SetValueAsync(
                                     cacheProvider,
-                                    key,
+                                    $"{applicationName}:{environmentName ?? "none"}:{altKey ?? key}",
                                     value ?? "",
                                     cancellationToken
                                     ).ConfigureAwait(false);

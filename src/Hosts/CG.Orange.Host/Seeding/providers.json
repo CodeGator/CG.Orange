@@ -31,7 +31,7 @@
       "Description": "1 year cache duration",
       "Tag": "OYC",
       "ProviderType": "Cache",
-      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
         {
           "Key": "Duration",
@@ -44,7 +44,7 @@
       "Description": "Monthly duration",
       "Tag": "OMC",
       "ProviderType": "Cache",
-      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
         {
           "Key": "Duration",
@@ -57,7 +57,7 @@
       "Description": "Weekly duration",
       "Tag": "OWC",
       "ProviderType": "Cache",
-      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
         {
           "Key": "Duration",
@@ -70,7 +70,7 @@
       "Description": "Weekly duration",
       "Tag": "OHC",
       "ProviderType": "Cache",
-      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
         {
           "Key": "Duration",
@@ -83,7 +83,7 @@
       "Description": "No duration",
       "Tag": "NC",
       "ProviderType": "Cache",
-      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
         {
           "Key": "Duration",

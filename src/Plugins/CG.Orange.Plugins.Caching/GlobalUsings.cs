@@ -1,0 +1,11 @@
+﻿global using CG.Blazor.Plugins;
+global using CG.Orange.Models;
+global using CG.Orange.Plugins.Caching.Options;
+global using CG.Orange.Processors;
+global using CG.Validations;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.Extensions.Caching.Distributed;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using System.Text;

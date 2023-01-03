@@ -29,7 +29,7 @@
         <ProjectReference Include="..\..\Libraries\CG.Orange.Controllers\CG.Orange.Controllers.csproj" />
         <ProjectReference Include="..\..\Libraries\CG.Orange\CG.Orange.csproj" />
         <ProjectReference Include="..\..\Plugins\CG.Orange.Plugins.Azure\CG.Orange.Plugins.Azure.csproj" />
-        <ProjectReference Include="..\..\Plugins\CG.Orange.Plugins.InMemory\CG.Orange.Plugins.InMemory.csproj" />
+        <ProjectReference Include="..\..\Plugins\CG.Orange.Plugins.Caching\CG.Orange.Plugins.Caching.csproj" />
     </ItemGroup>
 
     <ItemGroup>

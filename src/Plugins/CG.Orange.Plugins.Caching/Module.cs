@@ -1,5 +1,5 @@
 ﻿
-namespace CG.Orange.Plugins.InMemory;
+namespace CG.Orange.Plugins.Caching;
 
 /// <summary>
 /// This class represents the plugin module's startup logic.
@@ -30,7 +30,7 @@ public class Module : ModuleBase
             );
 
         // Configure the processor options.
-        webApplicationBuilder.Services.ConfigureOptions<InMemoryCacheProcessorOptions>(
+        webApplicationBuilder.Services.ConfigureOptions<ProcessorOptions>(
             configuration.GetSection("Options"),
             out var inMemoryCacheProcessorOptions
             );
@@ -41,13 +41,16 @@ public class Module : ModuleBase
             );
 
         // Wire up the in-memory cache processor.
-        webApplicationBuilder.Services.AddScoped<ICacheProcessor, InMemoryCacheProcessor>();
-        webApplicationBuilder.Services.AddScoped<InMemoryCacheProcessor>();
+        webApplicationBuilder.Services.AddScoped<ICacheProcessor, CacheProcessor>();
+        webApplicationBuilder.Services.AddScoped<CacheProcessor>();
 
         // Log what we're about to do.
         bootstrapLogger?.LogDebug(
             "Wiring up the in-memory distributed cache"
             );
+
+        // NOTE: this could become an issue if the host ever registers
+        //   another type of distributed cache.  
 
         // Wire up the in-memory cache service.
         webApplicationBuilder.Services.AddDistributedMemoryCache();

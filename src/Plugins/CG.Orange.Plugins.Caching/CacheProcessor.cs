@@ -1,11 +1,11 @@
 ﻿
-namespace CG.Orange.Plugins.InMemory;
+namespace CG.Orange.Plugins.Caching;
 
 /// <summary>
 /// This class is an in-memory implementation of the <see cref="ICacheProcessor"/>
 /// interface.
 /// </summary>
-internal class InMemoryCacheProcessor : ICacheProcessor
+internal class CacheProcessor : ICacheProcessor
 {
     // *******************************************************************
     // Fields.
@@ -32,12 +32,12 @@ internal class InMemoryCacheProcessor : ICacheProcessor
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="InMemoryCacheProcessor"/>
+    /// This constructor creates a new instance of the <see cref="CacheProcessor"/>
     /// class.
     /// </summary>
     /// <param name="cache">The cache to use with this processor.</param>
     /// <param name="logger">The logger to use with this processor.</param>
-    public InMemoryCacheProcessor(
+    public CacheProcessor(
         IDistributedCache cache,
         ILogger<ICacheProcessor> logger
         )

@@ -1,11 +1,11 @@
 ﻿
-namespace CG.Orange.Plugins.InMemory.Options;
+namespace CG.Orange.Plugins.Caching.Options;
 
 /// <summary>
 /// This class contains configuration settings for the in-memory cache 
 /// processor.
 /// </summary>
-internal class InMemoryCacheProcessorOptions
+internal class ProcessorOptions
 {
     // *******************************************************************
     // Properties.
