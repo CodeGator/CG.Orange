@@ -7,3 +7,6 @@ global using Microsoft.Extensions.Logging;
 global using CG.Orange.Plugins.InMemory.Options;
 global using Microsoft.Extensions.DependencyInjection;
 global using System.Collections.Concurrent;
+global using CG.Orange.Models;
+global using Microsoft.Extensions.Caching.Distributed;
+global using System.Text;

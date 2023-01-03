@@ -63,12 +63,16 @@ internal class ConfigurationDirector : IConfigurationDirector
     /// <inheritdoc/>
     public virtual async Task<Dictionary<string, string>> ReadConfigurationAsync(
         string applicationName, 
-        string? enviornmentName, 
+        string? environmentName, 
         CancellationToken cancellationToken = default
         )
     {
         // Validate the parameters before attempting to use them.
         Guard.Instance().ThrowIfNullOrEmpty(applicationName, nameof(applicationName));
+
+        // Here we're building a complete configuration for the given
+        //   application and/or environment - with associated secret
+        //   values.
 
         try
         {

@@ -42,6 +42,14 @@ public class Module : ModuleBase
 
         // Wire up the in-memory cache processor.
         webApplicationBuilder.Services.AddScoped<ICacheProcessor, InMemoryCacheProcessor>();
+
+        // Log what we're about to do.
+        bootstrapLogger?.LogDebug(
+            "Wiring up the in-memory distributed cache"
+            );
+
+        // Wire up the in-memory cache service.
+        webApplicationBuilder.Services.AddDistributedMemoryCache();
     }
 
     // *******************************************************************

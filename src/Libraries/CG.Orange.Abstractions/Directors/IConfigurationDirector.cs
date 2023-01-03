@@ -9,12 +9,12 @@ namespace CG.Orange.Directors;
 public interface IConfigurationDirector
 {
     /// <summary>
-    /// This method returns a configuration for the given application and/or
-    /// environment.
+    /// This method returns a complete configuration for the given application 
+    /// and/or environment - complete with associated secret values.
     /// </summary>
     /// <param name="applicationName">The application name to use for the
     /// operation.</param>
-    /// <param name="enviornmentName">The optional environment name to use
+    /// <param name="environmentName">The optional environment name to use
     /// for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
@@ -26,7 +26,7 @@ public interface IConfigurationDirector
     /// director fails to complete the operation.</exception>
     Task<Dictionary<string, string>> ReadConfigurationAsync(
         string applicationName,
-        string? enviornmentName,
+        string? environmentName,
         CancellationToken cancellationToken = default
         );
 }
