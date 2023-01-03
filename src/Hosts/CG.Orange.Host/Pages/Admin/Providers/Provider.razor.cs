@@ -330,7 +330,7 @@ public partial class Provider
 
             // Prompt the user.
             var result = await DialogService.ShowMessageBox(
-                title: "Purple",
+                title: "Orange",
                 markupMessage: new MarkupString("This will delete the provider " +
                 $"property <b>{providerProperty.Key}</b> <br /> <br /> Are " +
                 "you <i>sure</i> you want to do that?"),

@@ -16,17 +16,17 @@ internal class SettingFileRepository : ISettingFileRepository
     /// <summary>
     /// This field contains the EFCORE data-context for this repository.
     /// </summary>
-    internal protected readonly OrangeDbContext _dbContext;
+    internal protected readonly OrangeDbContext _dbContext = null!;
 
     /// <summary>
     /// This field contains the auto-mapper for this repository.
     /// </summary>
-    internal protected readonly IMapper _mapper;
+    internal protected readonly IMapper _mapper = null!;
 
     /// <summary>
     /// This field contains the logger for this repository.
     /// </summary>
-    internal protected readonly ILogger<ISettingFileRepository> _logger;
+    internal protected readonly ILogger<ISettingFileRepository> _logger = null!;
 
     #endregion
 
@@ -150,7 +150,6 @@ internal class SettingFileRepository : ISettingFileRepository
                 innerException: ex
                 );
         }
-
     }
 
     // *******************************************************************
@@ -276,12 +275,12 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to create an settingFile!"
+                "Failed to create an setting file!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
-                message: $"The repository failed to create an settingFile!",
+                message: $"The repository failed to create an setting file!",
                 innerException: ex
                 );
         }
@@ -367,12 +366,12 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to delete an settingFile!"
+                "Failed to delete an setting file!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
-                message: $"The repository failed to delete an settingFile!",
+                message: $"The repository failed to delete an setting file!",
                 innerException: ex
                 );
         }
@@ -550,23 +549,19 @@ internal class SettingFileRepository : ISettingFileRepository
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Converting a {entity} model to an entity",
-                nameof(SettingFileModel)
-                );
-
-            // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.SettingFileEntity>(
-                settingFile
-                );
+            // Look for the given provider.
+            var entity = await _dbContext.SettingFiles.Where(x =>
+                x.Id == settingFile.Id
+                ).FirstOrDefaultAsync(
+                    cancellationToken
+                    ).ConfigureAwait(false);
 
             // Did we fail?
             if (entity is null)
             {
                 // Panic!!
-                throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(SettingFileModel)} model to an entity."
+                throw new KeyNotFoundException(
+                    $"The setting file: {settingFile.Id} was not found!"
                     );
             }
 
@@ -577,11 +572,13 @@ internal class SettingFileRepository : ISettingFileRepository
                 nameof(OrangeDbContext)
                 );
 
-            // Start tracking the entity.
-            _dbContext.SettingFiles.Attach(entity);
-
-            // Mark the entity as modified so EFCORE will update it.
-            _dbContext.Entry(entity).State = EntityState.Modified;
+            // Update the editable properties.
+            entity.IsDisabled = settingFile.IsDisabled;
+            entity.Json = settingFile.Json;
+            entity.EnvironmentName = settingFile.EnvironmentName;
+            entity.ApplicationName = settingFile.ApplicationName;
+            entity.LastUpdatedOnUtc = settingFile.LastUpdatedOnUtc;
+            entity.LastUpdatedBy = settingFile.LastUpdatedBy;
 
             // We never change these 'read only' properties.
             _dbContext.Entry(entity).Property(x => x.Id).IsModified = false;
@@ -627,12 +624,12 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to update an settingFile!"
+                "Failed to update an setting file!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
-                message: $"The repository failed to update an settingFile!",
+                message: $"The repository failed to update an setting file!",
                 innerException: ex
                 );
         }

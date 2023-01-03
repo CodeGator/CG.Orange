@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Managers;
+
 namespace CG.Orange.Host.Pages.Admin.Settings;
 
 /// <summary>
@@ -139,7 +141,7 @@ public partial class Index
 
             // Prompt the user.
             var result = await DialogService.ShowMessageBox(
-                title: "Purple",
+                title: "Orange",
                 markupMessage: new MarkupString("This will delete " +
                 $"the setting file for application <b>'{file.ApplicationName}'" +
                 $"</b> and environment <b>'{file.SafeEnvironmentName()}' " +
@@ -323,6 +325,139 @@ public partial class Index
         _settings = await SettingFileManager.FindAllAsync();
     }
 
+    // *******************************************************************
+
+    /// <summary>
+    /// This method disables the given setting file.
+    /// </summary>
+    /// <param name="settingFile">The settingFile to use for the operation.</param>
+    /// <returns>A task to perform the operation.</returns>
+    protected async Task DisableSettingAsync(
+        SettingFileModel settingFile
+        )
+    {
+        try
+        {
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Prompting the caller."
+                );
+
+            // Prompt the user.
+            var result = await DialogService.ShowMessageBox(
+                title: "Orange",
+                markupMessage: new MarkupString("This will disable " +
+                $"the setting file for application <b>'{settingFile.ApplicationName}'" +
+                $"</b> and environment <b>'{settingFile.SafeEnvironmentName()}' " +
+                "<br /><br /> Are you <i>sure</i> you want to do that?"),
+                noText: "Cancel"
+                );
+
+            // Did the user cancel?
+            if (result.HasValue && !result.Value)
+            {
+                return; // Nothing more to do.
+            }
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Disabling the setting file."
+                );
+
+            // Defer to the manager for the operation.
+            await SettingFileManager.DisableAsync(
+                settingFile,
+                UserName
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Showing the snackbar message."
+                );
+
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"Changes were saved",
+                Severity.Success,
+                options => options.CloseAfterNavigation = true
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Refreshing the page data."
+                );
+
+            // Get the list of setting files.
+            _settings = await SettingFileManager.FindAllAsync();
+        }
+        catch (Exception ex)
+        {
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"<b>Something broke!</b> " +
+                $"<ul><li>{ex.GetBaseException().Message}</li></ul>",
+                Severity.Error,
+                options => options.CloseAfterNavigation = true
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <summary>
+    /// This method enables the given setting file.
+    /// </summary>
+    /// <param name="settingFile">The setting file to use for the operation.</param>
+    /// <returns>A task to perform the operation.</returns>
+    protected async Task EnableSettingAsync(
+        SettingFileModel settingFile
+        )
+    {
+        try
+        {
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Enabling the setting file."
+                );
+
+            // Defer to the manager for the operation.
+            await SettingFileManager.EnableAsync(
+                settingFile,
+                UserName
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Showing the snackbar message."
+                );
+
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"Changes were saved",
+                Severity.Success,
+                options => options.CloseAfterNavigation = true
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Refreshing the page data."
+                );
+
+            // Get the list of setting files.
+            _settings = await SettingFileManager.FindAllAsync();
+        }
+        catch (Exception ex)
+        {
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"<b>Something broke!</b> " +
+                $"<ul><li>{ex.GetBaseException().Message}</li></ul>",
+                Severity.Error,
+                options => options.CloseAfterNavigation = true
+                );
+        }
+    }
+
     #endregion
 
     // *******************************************************************
@@ -440,5 +575,4 @@ public partial class Index
     }
 
     #endregion
-
 }

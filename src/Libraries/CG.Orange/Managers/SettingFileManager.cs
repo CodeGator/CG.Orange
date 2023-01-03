@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Repositories;
+
 namespace CG.Orange.Managers;
 
 internal class SettingFileManager : ISettingFileManager
@@ -276,6 +278,130 @@ internal class SettingFileManager : ISettingFileManager
             // Provider better context.
             throw new ManagerException(
                 message: $"The manager failed to delete a setting file!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<SettingFileModel> DisableAsync(
+        SettingFileModel settingFile,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(settingFile, nameof(settingFile))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Can we take a shortcut?
+            if (settingFile.IsDisabled)
+            {
+                return settingFile; // Nothing to do.
+            }
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(SettingFileModel)
+                );
+
+            // Ensure the stats are correct.
+            settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
+            settingFile.LastUpdatedBy = userName;
+
+            // Disable the settingFile.
+            settingFile.IsDisabled = true;
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.UpdateAsync)
+                );
+
+            // Perform the operation.
+            return await _settingFileRepository.UpdateAsync(
+                settingFile,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to disable a setting file!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to disable a setting file!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
+    public virtual async Task<SettingFileModel> EnableAsync(
+        SettingFileModel settingFile,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(settingFile, nameof(settingFile))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Can we take a shortcut?
+            if (!settingFile.IsDisabled)
+            {
+                return settingFile; // Nothing to do.
+            }
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(SettingFileModel)
+                );
+
+            // Ensure the stats are correct.
+            settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
+            settingFile.LastUpdatedBy = userName;
+
+            // Enable the settingFile.
+            settingFile.IsDisabled = false;
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(IProviderRepository.UpdateAsync)
+                );
+
+            // Perform the operation.
+            return await _settingFileRepository.UpdateAsync(
+                settingFile,
+                cancellationToken
+                ).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to enable a setting file!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to enable a setting file!",
                 innerException: ex
                 );
         }

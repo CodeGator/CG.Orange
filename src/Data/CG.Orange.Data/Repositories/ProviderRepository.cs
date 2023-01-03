@@ -16,17 +16,17 @@ internal class ProviderRepository : IProviderRepository
     /// <summary>
     /// This field contains the EFCORE data-context for this repository.
     /// </summary>
-    internal protected readonly OrangeDbContext _dbContext;
+    internal protected readonly OrangeDbContext _dbContext = null!;
 
     /// <summary>
     /// This field contains the auto-mapper for this repository.
     /// </summary>
-    internal protected readonly IMapper _mapper;
+    internal protected readonly IMapper _mapper = null!;
 
     /// <summary>
     /// This field contains the logger for this repository.
     /// </summary>
-    internal protected readonly ILogger<IProviderRepository> _logger;
+    internal protected readonly ILogger<IProviderRepository> _logger = null!;
 
     #endregion
 

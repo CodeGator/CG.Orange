@@ -1,4 +1,6 @@
 ﻿
+using static CG.Orange.Globals.Models;
+
 namespace CG.Orange.Host.Pages.Admin.Providers;
 
 /// <summary>
@@ -151,6 +153,26 @@ public partial class Index
         {
             // Log what we are about to do.
             Logger.LogDebug(
+                "Prompting the caller."
+                );
+
+            // Prompt the user.
+            var result = await DialogService.ShowMessageBox(
+                title: "Orange",
+                markupMessage: new MarkupString("This will disable " +
+                $"the provider <b>'{provider.Name}' <br /><br /> " +
+                "Are you <i>sure</i> you want to do that?"),
+                noText: "Cancel"
+                );
+
+            // Did the user cancel?
+            if (result.HasValue && !result.Value)
+            {
+                return; // Nothing more to do.
+            }
+
+            // Log what we are about to do.
+            Logger.LogDebug(
                 "Disabling the provider."
                 );
 
@@ -268,7 +290,7 @@ public partial class Index
 
             // Prompt the user.
             var result = await DialogService.ShowMessageBox(
-                title: "Purple",
+                title: "Orange",
                 markupMessage: new MarkupString("This will delete " +
                 $"the provider <b>'{provider.Name}'</b> <br /><br /> " +
                 "Are you <i>sure</i> you want to do that?"),

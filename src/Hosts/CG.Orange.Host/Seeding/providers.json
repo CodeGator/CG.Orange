@@ -1,9 +1,9 @@
 {
   "Providers": [
     {
-      "Name": "Orange Dev Secret",
-      "Description": "Secrets from the kv-orange-dev2 vault",
-      "Tag": "Dev",
+      "Name": "Orange Dev Secrets",
+      "Description": "kv-orange-dev Azure vault",
+      "Tag": "DS",
       "ProviderType": "Secret",
       "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
       "Properties": [
@@ -14,15 +14,80 @@
       ]
     },
     {
-      "Name": "Forever Cache",
-      "Description": "Cache values in-memory, forever",
-      "Tag": "Forever",
+      "Name": "Orange Prod Secrets",
+      "Description": "kv-orange-prod Azure vault",
+      "Tag": "PS",
+      "ProviderType": "Secret",
+      "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
+      "Properties": [
+        {
+          "Key": "KeyVaultUri",
+          "Value": "not a real uri"
+        }
+      ]
+    },
+    {
+      "Name": "Yearly Cache",
+      "Description": "1 year cache duration",
+      "Tag": "YC",
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
       "Properties": [
         {
           "Key": "Duration",
-          "Value": "Forever"
+          "Value": "365.00:00:00"
+        }
+      ]
+    },
+    {
+      "Name": "Monthly Cache",
+      "Description": "Monthly duration",
+      "Tag": "MC",
+      "ProviderType": "Cache",
+      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "Properties": [
+        {
+          "Key": "Duration",
+          "Value": "30.00:00:00"
+        }
+      ]
+    },
+    {
+      "Name": "Weekly Cache",
+      "Description": "Weekly duration",
+      "Tag": "WC",
+      "ProviderType": "Cache",
+      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "Properties": [
+        {
+          "Key": "Duration",
+          "Value": "07.00:00:00"
+        }
+      ]
+    },
+    {
+      "Name": "Hourly Cache",
+      "Description": "Weekly duration",
+      "Tag": "HC",
+      "ProviderType": "Cache",
+      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "Properties": [
+        {
+          "Key": "Duration",
+          "Value": "00.01:00:00"
+        }
+      ]
+    },
+    {
+      "Name": "No Cache",
+      "Description": "No duration",
+      "Tag": "NC",
+      "ProviderType": "Cache",
+      "ProcessorType": "CG.Orange.Plugins.InMemory.InMemoryCacheProcessor",
+      "Properties": [
+        {
+          "Key": "Duration",
+          "Value": "00.00:00:00"
         }
       ]
     }

@@ -46,7 +46,16 @@
         <MudTh></MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="Disabled"><MudCheckBox Checked="@context.IsDisabled" DisableRipple ReadOnly /></MudTd>
+        <MudTd DataLabel="Disabled">
+            @if (context.IsDisabled)
+            {
+                <MudIconButton Color="Color.Warning" Icon="@Icons.Material.Outlined.CheckBox" OnClick="@(() => EnableSettingAsync(@context))" />
+            }
+            else
+            {
+                <MudIconButton Icon="@Icons.Material.Outlined.CheckBoxOutlineBlank" OnClick="@(() => DisableSettingAsync(@context))" />
+            }
+            </MudTd>
         <MudTd DataLabel="Application">@context.ApplicationName</MudTd>
         <MudTd DataLabel="Environment">@context.SafeEnvironmentName()</MudTd>
         <MudTd>

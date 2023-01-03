@@ -510,41 +510,45 @@ internal class ProviderManager : IProviderManager
                 ).ConfigureAwait(false);
 
             // We must create the secondary list here because the loop(s)
-            //   below create temporary objects inside the enumeration
-            //   process, so, the work we do to decrypt the property values
-            //   gets lost unless we manually copy the results to another list.
+            //   below create temporary objects inside the enumeration, so,
+            //   the work we do to decrypt the property values gets lost
+            //   unless we manually copy the modified objects to another list.
             var result = new List<ProviderModel>(); 
 
-            // Loop through providers with properties.
-            foreach(var provider in data.Where(x => x.Properties.Any()))
+            // Loop through ALL the providers.
+            foreach(var provider in data)
             {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Decrypting {count} properties for provider: {name}",
-                    provider.Properties.Count(),
-                    provider.Name
-                    );
-
-                // Loop through the properties with values.
-                foreach (var property in provider.Properties.Where(x =>
-                    !string.IsNullOrEmpty(x.Value)
-                    ))
+                // Does this provider have properties?
+                if (provider.Properties.Any())
                 {
                     // Log what we are about to do.
                     _logger.LogDebug(
-                        "Decrypting property for provider"
+                        "Decrypting {count} properties for provider: {name}",
+                        provider.Properties.Count(),
+                        provider.Name
                         );
 
-                    // Decrypt the value.
-                    property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
+                    // Loop through the properties with values.
+                    foreach (var property in provider.Properties.Where(x =>
+                        !string.IsNullOrEmpty(x.Value)
+                        ))
+                    {
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Decrypting property for provider"
+                            );
+
+                        // Decrypt the value.
+                        property.Value = await _cryptographer.AesDecryptAsync(
+                            property.Value,
+                            cancellationToken
+                            ).ConfigureAwait(false);
+                    }
                 }
 
-                // Add to the list.
-                result.Add( provider );
-            }
+                // Add to the list - with or without properties.
+                result.Add(provider);
+            }            
 
             // Return the results.
             return result;
