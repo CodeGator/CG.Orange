@@ -15,28 +15,59 @@ internal class AzureSecretClientFactory
     /// <summary>
     /// This method creates a new <see cref="SecretClient"/> instance.
     /// </summary>
-    /// <param name="keyVaultUri">The Azure key vault URI to use for the 
-    /// operation.</param>
+    /// <param name="provider">The provider to use for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns a new <see cref="SecretClient"/>
     /// instance.</returns>
     public virtual Task<SecretClient> CreateAsync(
-        string keyVaultUri,
+        ProviderModel provider,
         CancellationToken cancellationToken = default
         )
     {
+        // Validate the arguments before attempting to use them.
+        Guard.Instance().ThrowIfNull(provider, nameof(provider));
+
+        // Look for the provider property.
+        var keyVaultUriProperty = provider.Properties.FirstOrDefault(x => 
+            string.Compare(x.Key, "keyvaulturi", StringComparison.InvariantCultureIgnoreCase) == 0
+            );
+        
+        // Did we fail?
+        if (keyVaultUriProperty is null)
+        {
+            // Panic!!
+            throw new KeyNotFoundException(
+                $"The provider property 'KeyVaultUri; was not found for provider: {provider.Id}!"
+                );
+        }
+
+        // Look for the optional provider property.
+        var retryDelayProperty = provider.Properties.FirstOrDefault(x =>
+            string.Compare(x.Key, "retrydelay", StringComparison.InvariantCultureIgnoreCase) == 0
+            );
+
+        // Look for the optional provider property.
+        var maxDelayProperty = provider.Properties.FirstOrDefault(x =>
+            string.Compare(x.Key, "maxdelay", StringComparison.InvariantCultureIgnoreCase) == 0
+            );
+
+        // Look for the optional provider property.
+        var maxRetriesProperty = provider.Properties.FirstOrDefault(x =>
+            string.Compare(x.Key, "maxretries", StringComparison.InvariantCultureIgnoreCase) == 0
+            );
+
         // Create the Azure client.
         var client = new SecretClient(
-            new Uri(keyVaultUri),
+            new Uri(keyVaultUriProperty.Value),
             new DefaultAzureCredential(),
             new SecretClientOptions()
             {
                 Retry =
                 {
-                    Delay = TimeSpan.FromSeconds(2),
-                    MaxDelay = TimeSpan.FromSeconds(9),
-                    MaxRetries = 3,
+                    Delay = retryDelayProperty is not null ? TimeSpan.Parse(retryDelayProperty.Value) : TimeSpan.FromSeconds(2),
+                    MaxDelay = maxDelayProperty is not null ? TimeSpan.Parse(maxDelayProperty.Value) : TimeSpan.FromSeconds(9),
+                    MaxRetries = maxRetriesProperty is not null ? int.Parse(maxRetriesProperty.Value) : 3,
                     Mode = RetryMode.Exponential
                 }
             });

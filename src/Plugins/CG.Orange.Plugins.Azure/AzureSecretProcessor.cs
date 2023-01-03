@@ -61,41 +61,59 @@ internal class AzureSecretProcessor : ISecretProcessor
     #region Public methods
 
     /// <inheritdoc/>
-    public virtual async Task<string> GetSecretAsync(
+    public virtual async Task<string?> GetSecretAsync(
+        ProviderModel provider,
         string secretKey, 
         CancellationToken cancellationToken = default
         )
-    {/*
+    {
         // Validate the arguments before attempting to use them.
-        Guard.Instance().ThrowIfNullOrEmpty(secretKey, nameof(secretKey));
+        Guard.Instance().ThrowIfNull(provider, nameof(provider))
+            .ThrowIfNullOrEmpty(secretKey, nameof(secretKey));
 
         try
         {
-            // Get the plain-text value of the secret.
-            var secretResponse = await _secretClient.GetSecretAsync(
-                secretKey
-                );
+            // Create an Azure secret client.
+            var secretClient = await _secretClientFactory.CreateAsync(
+                provider,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Did we fail?
+            if (secretClient is null)
+            {
+                // Panic!!
+                throw new ProcessorException(
+                    $"Failed to create a secret client for provider: {provider.Id}"
+                    );
+            }
+
+            // Get the secret from Azure.
+            var secret = await secretClient.GetSecretAsync(
+                name: secretKey,
+                cancellationToken: cancellationToken
+                ).ConfigureAwait(false);
 
             // Return the results.
-            return secretResponse.Value.Value;
+            return secret.Value.Value;
         }
         catch (Exception ex)
         {
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to retrieve secret: {key} from Azure!",
-                secretKey
+                "Failed to retrieve secret: {key} using provider: {id}!",
+                secretKey,
+                provider.Id
                 );
 
             // Provider better context for the error.
-            throw new ProviderException(
+            throw new ProcessorException(
                 innerException: ex,
-                message: $"Failed to retrieve secret {secretKey} from Azure!"
+                message: $"Failed to retrieve secret: {secretKey} using " +
+                $"provider: {provider.Id}!"
                 );
-        }*/
-
-        throw new NotImplementedException();
+        }
     }
 
     #endregion
