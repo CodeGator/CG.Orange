@@ -4,7 +4,6 @@
 [![Build Status](https://dev.azure.com/codegator/CG.Orange/_apis/build/status/CodeGator.CG.Orange?branchName=main)](https://dev.azure.com/codegator/CG.Orange/_build/latest?definitionId=95&branchName=main)
 ![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Orange/95?logo=codecov&logoColor=white&style=flat-square&token=4BBNQPPATD)
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.Orange/index.html)
-[![GitHub last commit](https://img.shields.io/github/last-commit/CodeGator/CG.Orange?color=594ae2&style=flat-square&logo=github)](https://github.com/CodeGator/CG.Orange)
 
 #### GitHub Stats
 
@@ -21,8 +20,6 @@ Orange is an idea for a self contained configuration microservice. The scenario 
 * [SqlServer 2019](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
 * [SQLite](https://www.sqlite.org/index.html)
 * [In-memory (for demo purposes)](https://learn.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli)
-
-Note this project uses the [CG.EntityFrameworkCore](https://github.com/CodeGator/CG.EntityFrameworkCore) nuget package, which makes adding additional databases easy.
 
 ### How do I contact you?
 If you've spotted a bug in the code please use the project Issues [HERE](https://github.com/CodeGator/CG.Orange/issues)
