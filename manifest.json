@@ -14,6 +14,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Controllers.AccountController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Controllers.AccountController.html",
+          "hash": "aaofb8BdCCZD2O6Pb2HNdaVXLOFlKd9zCmb3PgUgZwM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Controllers.SettingsController.yml",
       "output": {
         ".html": {
@@ -30,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Controllers.html",
-          "hash": "VdOyNzIH7dDK4ksOp2bXSTKS+OFplGK0c2ub0X6Hjpw="
+          "hash": "W1pNh1WUslc27vC5wLA4bu/KzTQJjjA5KkWoJmPZpVU="
         }
       },
       "is_incremental": false,
@@ -506,30 +518,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Host.Options.OrangeIdentityOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.Host.Options.OrangeIdentityOptions.html",
-          "hash": "csvlThSUrrdYzaacYnKhuzIenX21jO21WwMRRnEXrSM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Orange.Host.Options.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Orange.Host.Options.html",
-          "hash": "9n3yoAJuwoMXwnLxZR2Fs53HRegZOhGrOLvhcjtQkwM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Host.Pages.Account.LoginModel.yml",
       "output": {
         ".html": {
@@ -722,6 +710,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Host.ViewModels.ClientLoginRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Host.ViewModels.ClientLoginRequest.html",
+          "hash": "vg7iIBj9rWfJ7arAJe9MBIslflau6RgTMmI+DTVNCdI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Host.ViewModels.SettingsRequestVM.yml",
       "output": {
         ".html": {
@@ -738,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.ViewModels.html",
-          "hash": "Bi9M1om9utKvHkRfPJLOnuU6mdQwq1E4djlneBmJTeE="
+          "hash": "NH+BfUVMj4wNnejVwRkLjBGHVQDCIe6y+dqP2RrwO4s="
         }
       },
       "is_incremental": false,
@@ -950,6 +950,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Options.OrangeIdentityOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Options.OrangeIdentityOptions.html",
+          "hash": "9sDlEi3r/u0SN3vcsXqDvFraSxLhMtNy03Qun6PWAec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Options.ProviderOptions.yml",
       "output": {
         ".html": {
@@ -978,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Options.html",
-          "hash": "L9Qze/YCFZxjoLvbJIFBviJT6aoyk0bGIqiKTs5b4fM="
+          "hash": "4eMtzAIwEvzC+LBIdBiI9eCgGNoS3k19AAqXbeJCtto="
         }
       },
       "is_incremental": false,
@@ -1326,7 +1338,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "fBondwwlwZbWrVPa5y9TYXnRIAQbRAdis7/3TxPrf5A="
+          "hash": "eBoOHv47lcXpHfhbX7+5NFC2hf2B40WJfYINoNmUsZ8="
         }
       },
       "is_incremental": false,
@@ -1445,7 +1457,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 109,
+          "total_file_count": 110,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

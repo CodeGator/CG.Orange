@@ -1,8 +1,13 @@
 {
+  "api/CG.Orange.Controllers.AccountController.html": {
+    "href": "api/CG.Orange.Controllers.AccountController.html",
+    "title": "Class AccountController",
+    "keywords": "Class AccountController This class is a REST controller for account operations. Inheritance System.Object AccountController Namespace : CG.Orange.Controllers Assembly : CG.Orange.Controllers.dll Syntax public class AccountController : ControllerBase Constructors AccountController(HttpClient, IOptions<OrangeIdentityOptions>, ILogger<AccountController>) This constructor creates a new instance of the AccountController Declaration public AccountController(HttpClient httpClient, IOptions<OrangeIdentityOptions> identityOptions, ILogger<AccountController> logger) Parameters Type Name Description HttpClient httpClient The HTTP client to use with this controller. IOptions < OrangeIdentityOptions > identityOptions The identity options to use with this controller. ILogger < AccountController > logger The logger to use with this controller. Fields _httpClient This field contains the HTTP client for this controller. Declaration protected readonly HttpClient _httpClient Field Value Type Description HttpClient _identityOptions This field contains the identity options for this controller. Declaration protected readonly OrangeIdentityOptions _identityOptions Field Value Type Description OrangeIdentityOptions _logger This field contains the logger for this controller. Declaration protected readonly ILogger<AccountController> _logger Field Value Type Description ILogger < AccountController > Methods ClientLoginAsync(ClientLoginRequest) This method performs a client credentials grant login operation. Declaration public virtual async Task<IActionResult> ClientLoginAsync(ClientLoginRequest model) Parameters Type Name Description ClientLoginRequest model The request parameters to use for the operation. Returns Type Description Task < IActionResult > A task to perform the operation that returns the results of the action."
+  },
   "api/CG.Orange.Controllers.html": {
     "href": "api/CG.Orange.Controllers.html",
     "title": "Namespace CG.Orange.Controllers",
-    "keywords": "Namespace CG.Orange.Controllers Classes SettingsController This class is a REST controller for resources."
+    "keywords": "Namespace CG.Orange.Controllers Classes AccountController This class is a REST controller for account operations. SettingsController This class is a REST controller for resources."
   },
   "api/CG.Orange.Controllers.SettingsController.html": {
     "href": "api/CG.Orange.Controllers.SettingsController.html",
@@ -204,16 +209,6 @@
     "title": "Class Globals.Models.SettingFiles",
     "keywords": "Class Globals.Models.SettingFiles This class contains sizes for properties. Inheritance System.Object Globals.Models.SettingFiles Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange Assembly : CG.Orange.Primitives.dll Syntax public static class SettingFiles Fields ApplicationNameLength This constant represents the length of the property. Declaration public const int ApplicationNameLength = 32 Field Value Type Description System.Int32 EnvironmentNameLength This constant represents the length of the property. Declaration public const int EnvironmentNameLength = 32 Field Value Type Description System.Int32"
   },
-  "api/CG.Orange.Host.Options.html": {
-    "href": "api/CG.Orange.Host.Options.html",
-    "title": "Namespace CG.Orange.Host.Options",
-    "keywords": "Namespace CG.Orange.Host.Options Classes OrangeIdentityOptions This class contains configuration settings for identity operations."
-  },
-  "api/CG.Orange.Host.Options.OrangeIdentityOptions.html": {
-    "href": "api/CG.Orange.Host.Options.OrangeIdentityOptions.html",
-    "title": "Class OrangeIdentityOptions",
-    "keywords": "Class OrangeIdentityOptions This class contains configuration settings for identity operations. Inheritance System.Object OrangeIdentityOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Host.Options Assembly : CG.Orange.Host.dll Syntax public class OrangeIdentityOptions Properties Authority This property contains the URL for the identity authority. Declaration public string Authority { get; set; } Property Value Type Description System.String ClientId This property contains the client identifier. Declaration public string ClientId { get; set; } Property Value Type Description System.String ClientSecret This property contains the client secret. Declaration public string ClientSecret { get; set; } Property Value Type Description System.String CookieName This property contains the cookie name. Declaration public string CookieName { get; set; } Property Value Type Description System.String"
-  },
   "api/CG.Orange.Host.Pages.Account.html": {
     "href": "api/CG.Orange.Host.Pages.Account.html",
     "title": "Namespace CG.Orange.Host.Pages.Account",
@@ -294,10 +289,15 @@
     "title": "Namespace CG.Orange.Host.Themes",
     "keywords": "Namespace CG.Orange.Host.Themes Classes DefaultTheme This class represents the default MudBlazor UI theme."
   },
+  "api/CG.Orange.Host.ViewModels.ClientLoginRequest.html": {
+    "href": "api/CG.Orange.Host.ViewModels.ClientLoginRequest.html",
+    "title": "Class ClientLoginRequest",
+    "keywords": "Class ClientLoginRequest This class represents a client login request. Inheritance System.Object ClientLoginRequest Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Host.ViewModels Assembly : CG.Orange.Controllers.dll Syntax public class ClientLoginRequest Properties ClientId This property contains the client identifier for the request. Declaration public string ClientId { get; set; } Property Value Type Description System.String ClientSecret This property contains the client secret for the request. Declaration public string ClientSecret { get; set; } Property Value Type Description System.String"
+  },
   "api/CG.Orange.Host.ViewModels.html": {
     "href": "api/CG.Orange.Host.ViewModels.html",
     "title": "Namespace CG.Orange.Host.ViewModels",
-    "keywords": "Namespace CG.Orange.Host.ViewModels Classes SettingsRequestVM This class represents a request for configuration settings from a client provider."
+    "keywords": "Namespace CG.Orange.Host.ViewModels Classes ClientLoginRequest This class represents a client login request. SettingsRequestVM This class represents a request for configuration settings from a client provider."
   },
   "api/CG.Orange.Host.ViewModels.SettingsRequestVM.html": {
     "href": "api/CG.Orange.Host.ViewModels.SettingsRequestVM.html",
@@ -392,12 +392,17 @@
   "api/CG.Orange.Options.html": {
     "href": "api/CG.Orange.Options.html",
     "title": "Namespace CG.Orange.Options",
-    "keywords": "Namespace CG.Orange.Options Classes OrangeBllOptions This class contains configuration settings for the Orange business logic layer. ProviderOptions This class contains configuration settings related to seeding objects. SettingFileOptions This class contains configuration settings related to seeding objects."
+    "keywords": "Namespace CG.Orange.Options Classes OrangeBllOptions This class contains configuration settings for the Orange business logic layer. OrangeIdentityOptions This class contains configuration settings for identity operations. ProviderOptions This class contains configuration settings related to seeding objects. SettingFileOptions This class contains configuration settings related to seeding objects."
   },
   "api/CG.Orange.Options.OrangeBllOptions.html": {
     "href": "api/CG.Orange.Options.OrangeBllOptions.html",
     "title": "Class OrangeBllOptions",
     "keywords": "Class OrangeBllOptions This class contains configuration settings for the Orange business logic layer. Inheritance System.Object OrangeBllOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Options Assembly : CG.Orange.dll Syntax public class OrangeBllOptions"
+  },
+  "api/CG.Orange.Options.OrangeIdentityOptions.html": {
+    "href": "api/CG.Orange.Options.OrangeIdentityOptions.html",
+    "title": "Class OrangeIdentityOptions",
+    "keywords": "Class OrangeIdentityOptions This class contains configuration settings for identity operations. Inheritance System.Object OrangeIdentityOptions Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Orange.Options Assembly : CG.Orange.Primitives.dll Syntax public class OrangeIdentityOptions Properties Authority This property contains the URL for the identity authority. Declaration public string Authority { get; set; } Property Value Type Description System.String ClientId This property contains the client identifier. Declaration public string ClientId { get; set; } Property Value Type Description System.String ClientSecret This property contains the client secret. Declaration public string ClientSecret { get; set; } Property Value Type Description System.String CookieName This property contains the cookie name. Declaration public string CookieName { get; set; } Property Value Type Description System.String"
   },
   "api/CG.Orange.Options.ProviderOptions.html": {
     "href": "api/CG.Orange.Options.ProviderOptions.html",

@@ -13,6 +13,59 @@ references:
   commentId: N:CG.Orange.Controllers
   fullName: CG.Orange.Controllers
   nameWithType: CG.Orange.Controllers
+- uid: CG.Orange.Controllers.AccountController
+  name: AccountController
+  href: api/CG.Orange.Controllers.AccountController.html
+  commentId: T:CG.Orange.Controllers.AccountController
+  fullName: CG.Orange.Controllers.AccountController
+  nameWithType: AccountController
+- uid: CG.Orange.Controllers.AccountController.#ctor(HttpClient,IOptions{OrangeIdentityOptions},ILogger{CG.Orange.Controllers.AccountController})
+  name: AccountController(HttpClient, IOptions<OrangeIdentityOptions>, ILogger<AccountController>)
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController__ctor_HttpClient_IOptions_OrangeIdentityOptions__ILogger_CG_Orange_Controllers_AccountController__
+  commentId: M:CG.Orange.Controllers.AccountController.#ctor(HttpClient,IOptions{OrangeIdentityOptions},ILogger{CG.Orange.Controllers.AccountController})
+  name.vb: AccountController(HttpClient, IOptions(Of OrangeIdentityOptions), ILogger(Of AccountController))
+  fullName: CG.Orange.Controllers.AccountController.AccountController(HttpClient, IOptions<OrangeIdentityOptions>, ILogger<CG.Orange.Controllers.AccountController>)
+  fullName.vb: CG.Orange.Controllers.AccountController.AccountController(HttpClient, IOptions(Of OrangeIdentityOptions), ILogger(Of CG.Orange.Controllers.AccountController))
+  nameWithType: AccountController.AccountController(HttpClient, IOptions<OrangeIdentityOptions>, ILogger<AccountController>)
+  nameWithType.vb: AccountController.AccountController(HttpClient, IOptions(Of OrangeIdentityOptions), ILogger(Of AccountController))
+- uid: CG.Orange.Controllers.AccountController.#ctor*
+  name: AccountController
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController__ctor_
+  commentId: Overload:CG.Orange.Controllers.AccountController.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Controllers.AccountController.AccountController
+  nameWithType: AccountController.AccountController
+- uid: CG.Orange.Controllers.AccountController._httpClient
+  name: _httpClient
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController__httpClient
+  commentId: F:CG.Orange.Controllers.AccountController._httpClient
+  fullName: CG.Orange.Controllers.AccountController._httpClient
+  nameWithType: AccountController._httpClient
+- uid: CG.Orange.Controllers.AccountController._identityOptions
+  name: _identityOptions
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController__identityOptions
+  commentId: F:CG.Orange.Controllers.AccountController._identityOptions
+  fullName: CG.Orange.Controllers.AccountController._identityOptions
+  nameWithType: AccountController._identityOptions
+- uid: CG.Orange.Controllers.AccountController._logger
+  name: _logger
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController__logger
+  commentId: F:CG.Orange.Controllers.AccountController._logger
+  fullName: CG.Orange.Controllers.AccountController._logger
+  nameWithType: AccountController._logger
+- uid: CG.Orange.Controllers.AccountController.ClientLoginAsync(ClientLoginRequest)
+  name: ClientLoginAsync(ClientLoginRequest)
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController_ClientLoginAsync_ClientLoginRequest_
+  commentId: M:CG.Orange.Controllers.AccountController.ClientLoginAsync(ClientLoginRequest)
+  fullName: CG.Orange.Controllers.AccountController.ClientLoginAsync(ClientLoginRequest)
+  nameWithType: AccountController.ClientLoginAsync(ClientLoginRequest)
+- uid: CG.Orange.Controllers.AccountController.ClientLoginAsync*
+  name: ClientLoginAsync
+  href: api/CG.Orange.Controllers.AccountController.html#CG_Orange_Controllers_AccountController_ClientLoginAsync_
+  commentId: Overload:CG.Orange.Controllers.AccountController.ClientLoginAsync
+  isSpec: "True"
+  fullName: CG.Orange.Controllers.AccountController.ClientLoginAsync
+  nameWithType: AccountController.ClientLoginAsync
 - uid: CG.Orange.Controllers.SettingsController
   name: SettingsController
   href: api/CG.Orange.Controllers.SettingsController.html
@@ -1632,70 +1685,6 @@ references:
   commentId: F:CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
   fullName: CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
   nameWithType: Globals.Models.SettingFiles.EnvironmentNameLength
-- uid: CG.Orange.Host.Options
-  name: CG.Orange.Host.Options
-  href: api/CG.Orange.Host.Options.html
-  commentId: N:CG.Orange.Host.Options
-  fullName: CG.Orange.Host.Options
-  nameWithType: CG.Orange.Host.Options
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions
-  name: OrangeIdentityOptions
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html
-  commentId: T:CG.Orange.Host.Options.OrangeIdentityOptions
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions
-  nameWithType: OrangeIdentityOptions
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.Authority
-  name: Authority
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_Authority
-  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.Authority
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.Authority
-  nameWithType: OrangeIdentityOptions.Authority
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.Authority*
-  name: Authority
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_Authority_
-  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.Authority
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.Authority
-  nameWithType: OrangeIdentityOptions.Authority
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
-  name: ClientId
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientId
-  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
-  nameWithType: OrangeIdentityOptions.ClientId
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId*
-  name: ClientId
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientId_
-  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientId
-  nameWithType: OrangeIdentityOptions.ClientId
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
-  name: ClientSecret
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientSecret
-  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
-  nameWithType: OrangeIdentityOptions.ClientSecret
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret*
-  name: ClientSecret
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_ClientSecret_
-  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.ClientSecret
-  nameWithType: OrangeIdentityOptions.ClientSecret
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
-  name: CookieName
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_CookieName
-  commentId: P:CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
-  nameWithType: OrangeIdentityOptions.CookieName
-- uid: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName*
-  name: CookieName
-  href: api/CG.Orange.Host.Options.OrangeIdentityOptions.html#CG_Orange_Host_Options_OrangeIdentityOptions_CookieName_
-  commentId: Overload:CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.OrangeIdentityOptions.CookieName
-  nameWithType: OrangeIdentityOptions.CookieName
 - uid: CG.Orange.Host.Pages
   name: CG.Orange.Host.Pages
   href: api/CG.Orange.Host.Pages.html
@@ -2776,6 +2765,38 @@ references:
   commentId: N:CG.Orange.Host.ViewModels
   fullName: CG.Orange.Host.ViewModels
   nameWithType: CG.Orange.Host.ViewModels
+- uid: CG.Orange.Host.ViewModels.ClientLoginRequest
+  name: ClientLoginRequest
+  href: api/CG.Orange.Host.ViewModels.ClientLoginRequest.html
+  commentId: T:CG.Orange.Host.ViewModels.ClientLoginRequest
+  fullName: CG.Orange.Host.ViewModels.ClientLoginRequest
+  nameWithType: ClientLoginRequest
+- uid: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientId
+  name: ClientId
+  href: api/CG.Orange.Host.ViewModels.ClientLoginRequest.html#CG_Orange_Host_ViewModels_ClientLoginRequest_ClientId
+  commentId: P:CG.Orange.Host.ViewModels.ClientLoginRequest.ClientId
+  fullName: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientId
+  nameWithType: ClientLoginRequest.ClientId
+- uid: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientId*
+  name: ClientId
+  href: api/CG.Orange.Host.ViewModels.ClientLoginRequest.html#CG_Orange_Host_ViewModels_ClientLoginRequest_ClientId_
+  commentId: Overload:CG.Orange.Host.ViewModels.ClientLoginRequest.ClientId
+  isSpec: "True"
+  fullName: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientId
+  nameWithType: ClientLoginRequest.ClientId
+- uid: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientSecret
+  name: ClientSecret
+  href: api/CG.Orange.Host.ViewModels.ClientLoginRequest.html#CG_Orange_Host_ViewModels_ClientLoginRequest_ClientSecret
+  commentId: P:CG.Orange.Host.ViewModels.ClientLoginRequest.ClientSecret
+  fullName: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientSecret
+  nameWithType: ClientLoginRequest.ClientSecret
+- uid: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientSecret*
+  name: ClientSecret
+  href: api/CG.Orange.Host.ViewModels.ClientLoginRequest.html#CG_Orange_Host_ViewModels_ClientLoginRequest_ClientSecret_
+  commentId: Overload:CG.Orange.Host.ViewModels.ClientLoginRequest.ClientSecret
+  isSpec: "True"
+  fullName: CG.Orange.Host.ViewModels.ClientLoginRequest.ClientSecret
+  nameWithType: ClientLoginRequest.ClientSecret
 - uid: CG.Orange.Host.ViewModels.SettingsRequestVM
   name: SettingsRequestVM
   href: api/CG.Orange.Host.ViewModels.SettingsRequestVM.html
@@ -4165,6 +4186,64 @@ references:
   commentId: T:CG.Orange.Options.OrangeBllOptions
   fullName: CG.Orange.Options.OrangeBllOptions
   nameWithType: OrangeBllOptions
+- uid: CG.Orange.Options.OrangeIdentityOptions
+  name: OrangeIdentityOptions
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html
+  commentId: T:CG.Orange.Options.OrangeIdentityOptions
+  fullName: CG.Orange.Options.OrangeIdentityOptions
+  nameWithType: OrangeIdentityOptions
+- uid: CG.Orange.Options.OrangeIdentityOptions.Authority
+  name: Authority
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_Authority
+  commentId: P:CG.Orange.Options.OrangeIdentityOptions.Authority
+  fullName: CG.Orange.Options.OrangeIdentityOptions.Authority
+  nameWithType: OrangeIdentityOptions.Authority
+- uid: CG.Orange.Options.OrangeIdentityOptions.Authority*
+  name: Authority
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_Authority_
+  commentId: Overload:CG.Orange.Options.OrangeIdentityOptions.Authority
+  isSpec: "True"
+  fullName: CG.Orange.Options.OrangeIdentityOptions.Authority
+  nameWithType: OrangeIdentityOptions.Authority
+- uid: CG.Orange.Options.OrangeIdentityOptions.ClientId
+  name: ClientId
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_ClientId
+  commentId: P:CG.Orange.Options.OrangeIdentityOptions.ClientId
+  fullName: CG.Orange.Options.OrangeIdentityOptions.ClientId
+  nameWithType: OrangeIdentityOptions.ClientId
+- uid: CG.Orange.Options.OrangeIdentityOptions.ClientId*
+  name: ClientId
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_ClientId_
+  commentId: Overload:CG.Orange.Options.OrangeIdentityOptions.ClientId
+  isSpec: "True"
+  fullName: CG.Orange.Options.OrangeIdentityOptions.ClientId
+  nameWithType: OrangeIdentityOptions.ClientId
+- uid: CG.Orange.Options.OrangeIdentityOptions.ClientSecret
+  name: ClientSecret
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_ClientSecret
+  commentId: P:CG.Orange.Options.OrangeIdentityOptions.ClientSecret
+  fullName: CG.Orange.Options.OrangeIdentityOptions.ClientSecret
+  nameWithType: OrangeIdentityOptions.ClientSecret
+- uid: CG.Orange.Options.OrangeIdentityOptions.ClientSecret*
+  name: ClientSecret
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_ClientSecret_
+  commentId: Overload:CG.Orange.Options.OrangeIdentityOptions.ClientSecret
+  isSpec: "True"
+  fullName: CG.Orange.Options.OrangeIdentityOptions.ClientSecret
+  nameWithType: OrangeIdentityOptions.ClientSecret
+- uid: CG.Orange.Options.OrangeIdentityOptions.CookieName
+  name: CookieName
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_CookieName
+  commentId: P:CG.Orange.Options.OrangeIdentityOptions.CookieName
+  fullName: CG.Orange.Options.OrangeIdentityOptions.CookieName
+  nameWithType: OrangeIdentityOptions.CookieName
+- uid: CG.Orange.Options.OrangeIdentityOptions.CookieName*
+  name: CookieName
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_CookieName_
+  commentId: Overload:CG.Orange.Options.OrangeIdentityOptions.CookieName
+  isSpec: "True"
+  fullName: CG.Orange.Options.OrangeIdentityOptions.CookieName
+  nameWithType: OrangeIdentityOptions.CookieName
 - uid: CG.Orange.Options.ProviderOptions
   name: ProviderOptions
   href: api/CG.Orange.Options.ProviderOptions.html
