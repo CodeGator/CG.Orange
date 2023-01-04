@@ -123,6 +123,29 @@
   </div>
   <h3 id="fields">Fields
   </h3>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider__cacheProcessorTypes" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider._cacheProcessorTypes">_cacheProcessorTypes</h4>
+  <div class="markdown level1 summary"><p>This field contains all cache processor types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;Type&gt; _cacheProcessorTypes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider__crumbs" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider._crumbs">_crumbs</h4>
   <div class="markdown level1 summary"><p>This field contains a reference to breadcrumbs for the view.</p>
 </div>
@@ -169,8 +192,79 @@
       </tr>
     </tbody>
   </table>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider__secretProcessorTypes" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider._secretProcessorTypes">_secretProcessorTypes</h4>
+  <div class="markdown level1 summary"><p>This field contains all secret processor types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;Type&gt; _secretProcessorTypes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider__tempProperty" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider._tempProperty">_tempProperty</h4>
+  <div class="markdown level1 summary"><p>This field contains a temporary property model, used to restore
+a property when an edit is canceled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ProviderPropertyModel? _tempProperty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderPropertyModel</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_DialogService_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.DialogService*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_DialogService" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.DialogService">DialogService</h4>
+  <div class="markdown level1 summary"><p>This property contains the dialog service for this page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDialogService DialogService { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDialogService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_HttpContextAccessor_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor*"></a>
   <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_HttpContextAccessor" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.HttpContextAccessor">HttpContextAccessor</h4>
   <div class="markdown level1 summary"><p>This property contains the HTTP context accessor.</p>
@@ -366,39 +460,14 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnCreateAsync_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync*"></a>
-  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnCreateAsync" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreateAsync">OnCreateAsync()</h4>
-  <div class="markdown level1 summary"><p>This method creates a new property.</p>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnBackupProperty_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnBackupProperty*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnBackupProperty_System_Object_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnBackupProperty(System.Object)">OnBackupProperty(Object)</h4>
+  <div class="markdown level1 summary"><p>This method is before a property is edited.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected async Task OnCreateAsync()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task to perform the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnDeleteAsync_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync*"></a>
-  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnDeleteAsync_ProviderPropertyModel_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeleteAsync(ProviderPropertyModel)">OnDeleteAsync(ProviderPropertyModel)</h4>
-  <div class="markdown level1 summary"><p>This method deletes the given property.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected async Task OnDeleteAsync(ProviderPropertyModel providerProperty)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void OnBackupProperty(object element)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,14 +480,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ProviderPropertyModel</span></td>
-        <td><span class="parametername">providerProperty</span></td>
-        <td><p>The provider property to use for
-the operation.</p>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The property to use for the operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnCommitProperty_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnCommitProperty*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnCommitProperty_System_Object_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnCommitProperty(System.Object)">OnCommitProperty(Object)</h4>
+  <div class="markdown level1 summary"><p>This method is called when changes to a property are committed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnCommitProperty(object element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The property to use for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnCreatePropertyAsync_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreatePropertyAsync*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnCreatePropertyAsync" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnCreatePropertyAsync">OnCreatePropertyAsync()</h4>
+  <div class="markdown level1 summary"><p>This method creates a new property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async Task OnCreatePropertyAsync()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -435,14 +539,14 @@ the operation.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnEditAsync_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync*"></a>
-  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnEditAsync_ProviderPropertyModel_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnEditAsync(ProviderPropertyModel)">OnEditAsync(ProviderPropertyModel)</h4>
-  <div class="markdown level1 summary"><p>This method edits the given property.</p>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnDeletePropertyAsync_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeletePropertyAsync*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnDeletePropertyAsync_ProviderPropertyModel_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnDeletePropertyAsync(ProviderPropertyModel)">OnDeletePropertyAsync(ProviderPropertyModel)</h4>
+  <div class="markdown level1 summary"><p>This method deletes the given property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected async Task OnEditAsync(ProviderPropertyModel providerProperty)</code></pre>
+    <pre><code class="lang-csharp hljs">protected async Task OnDeletePropertyAsync(ProviderPropertyModel providerProperty)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,6 +604,60 @@ the operation.</p>
       <tr>
         <td><span class="xref">Task</span></td>
         <td><p>A task to perform the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnProviderTypeChanged_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnProviderTypeChanged*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnProviderTypeChanged_System_Object_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnProviderTypeChanged(System.Object)">OnProviderTypeChanged(Object)</h4>
+  <div class="markdown level1 summary"><p>This method is called when the provider type changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnProviderTypeChanged(object elements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>The elements from MudBlazor</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnRollbackProperty_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnRollbackProperty*"></a>
+  <h4 id="CG_Orange_Host_Pages_Admin_Providers_Provider_OnRollbackProperty_System_Object_" data-uid="CG.Orange.Host.Pages.Admin.Providers.Provider.OnRollbackProperty(System.Object)">OnRollbackProperty(Object)</h4>
+  <div class="markdown level1 summary"><p>This method is called when a property edit is rolled back.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnRollbackProperty(object element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The property to use for the operation.</p>
 </td>
       </tr>
     </tbody>

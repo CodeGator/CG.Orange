@@ -792,6 +792,82 @@ manager fails to complete the operation.</p>
       </tr>
     </tbody>
   </table>
+  <a id="CG_Orange_Managers_IProviderManager_FindByTagAndTypeAsync_" data-uid="CG.Orange.Managers.IProviderManager.FindByTagAndTypeAsync*"></a>
+  <h4 id="CG_Orange_Managers_IProviderManager_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_" data-uid="CG.Orange.Managers.IProviderManager.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)">FindByTagAndTypeAsync(String, Nullable&lt;ProviderType&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method searches for a matching <see cref="!:ProviderModel"></see> object using the
+given provider tag and an optional <see cref="!:ProviderType"></see> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ProviderModel?&gt; FindByTagAndTypeAsync(string tag, ProviderType? providerType, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The provider tag to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderType</span>&gt;</td>
+        <td><span class="parametername">providerType</span></td>
+        <td><p>The optional provider type to use for the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a <see cref="!:ProviderModel"></see>
+objects, if a match was found, of <code>NULL</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><p>This exception is thrown whenever the
+manager fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="CG_Orange_Managers_IProviderManager_UpdateAsync_" data-uid="CG.Orange.Managers.IProviderManager.UpdateAsync*"></a>
   <h4 id="CG_Orange_Managers_IProviderManager_UpdateAsync_ProviderModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.IProviderManager.UpdateAsync(ProviderModel,System.String,CancellationToken)">UpdateAsync(ProviderModel, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>This method updates an existing <see cref="!:ProviderModel"></see> object in the

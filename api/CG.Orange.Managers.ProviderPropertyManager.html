@@ -83,7 +83,9 @@
   
   <h1 id="CG_Orange_Managers_ProviderPropertyManager" data-uid="CG.Orange.Managers.ProviderPropertyManager" class="text-break">Class ProviderPropertyManager
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class is a default implementation of the <a class="xref" href="CG.Orange.Managers.IProviderPropertyManager.html">IProviderPropertyManager</a>
+interface.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -467,7 +469,7 @@ repository to use with this manager.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task DeleteAsync(ProviderPropertyModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task DeleteAsync(ProviderPropertyModel providerProperty, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -481,7 +483,7 @@ repository to use with this manager.</p>
     <tbody>
       <tr>
         <td><span class="xref">ProviderPropertyModel</span></td>
-        <td><span class="parametername">provider</span></td>
+        <td><span class="parametername">providerProperty</span></td>
         <td></td>
       </tr>
       <tr>

@@ -448,6 +448,156 @@ manager fails to complete the operation.</p>
       </tr>
     </tbody>
   </table>
+  <a id="CG_Orange_Managers_ISettingFileManager_DisableAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.DisableAsync*"></a>
+  <h4 id="CG_Orange_Managers_ISettingFileManager_DisableAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.DisableAsync(SettingFileModel,System.String,CancellationToken)">DisableAsync(SettingFileModel, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method disabled the setting file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;SettingFileModel&gt; DisableAsync(SettingFileModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SettingFileModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The model to disable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>The user name of the person performing the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><p>A task to perform the operation that returns the modified <see cref="!:ProviderModel"></see>
+object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><p>This exception is thrown whenever the
+manager fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Managers_ISettingFileManager_EnableAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.EnableAsync*"></a>
+  <h4 id="CG_Orange_Managers_ISettingFileManager_EnableAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.EnableAsync(SettingFileModel,System.String,CancellationToken)">EnableAsync(SettingFileModel, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method enables the setting file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;SettingFileModel&gt; EnableAsync(SettingFileModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SettingFileModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The model to enable.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>The user name of the person performing the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><p>A task to perform the operation that returns the modified <see cref="!:SettingFileModel"></see>
+object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><p>This exception is thrown whenever the
+manager fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="CG_Orange_Managers_ISettingFileManager_FindAllAsync_" data-uid="CG.Orange.Managers.ISettingFileManager.FindAllAsync*"></a>
   <h4 id="CG_Orange_Managers_ISettingFileManager_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileManager.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:SettingFileModel"></see> objects.</p>

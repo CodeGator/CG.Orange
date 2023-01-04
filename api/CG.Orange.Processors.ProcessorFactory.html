@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ProviderModel
+    <title>Class ProcessorFactory
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ProviderModel
+    <meta name="title" content="Class ProcessorFactory
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,34 +78,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Models.ProviderModel">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Processors.ProcessorFactory">
   
   
-  <h1 id="CG_Orange_Models_ProviderModel" data-uid="CG.Orange.Models.ProviderModel" class="text-break">Class ProviderModel
+  <h1 id="CG_Orange_Processors_ProcessorFactory" data-uid="CG.Orange.Processors.ProcessorFactory" class="text-break">Class ProcessorFactory
   </h1>
-  <div class="markdown level0 summary"><p>This class represents a provider.</p>
+  <div class="markdown level0 summary"><p>This class is a default implementation of the <a class="xref" href="CG.Orange.Processors.IProcessorFactory.html">IProcessorFactory</a>
+interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="CG.Orange.Models.AuditedModelBase.html">AuditedModelBase</a></div>
-    <div class="level2"><span class="xref">ProviderModel</span></div>
+    <div class="level1"><span class="xref">ProcessorFactory</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CG.Orange.Processors.IProcessorFactory.html">IProcessorFactory</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedBy">AuditedModelBase.CreatedBy</a>
-    </div>
-    <div>
-      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_CreatedOnUtc">AuditedModelBase.CreatedOnUtc</a>
-    </div>
-    <div>
-      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedBy">AuditedModelBase.LastUpdatedBy</a>
-    </div>
-    <div>
-      <a class="xref" href="CG.Orange.Models.AuditedModelBase.html#CG_Orange_Models_AuditedModelBase_LastUpdatedOnUtc">AuditedModelBase.LastUpdatedOnUtc</a>
-    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -128,24 +120,67 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Models.html">CG.Orange.Models</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Primitives.dll</h6>
-  <h5 id="CG_Orange_Models_ProviderModel_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Processors.html">CG.Orange.Processors</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.dll</h6>
+  <h5 id="CG_Orange_Processors_ProcessorFactory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProviderModel : AuditedModelBase</code></pre>
+    <pre><code class="lang-csharp hljs">class ProcessorFactory : IProcessorFactory</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Models_ProviderModel_Description_" data-uid="CG.Orange.Models.ProviderModel.Description*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_Description" data-uid="CG.Orange.Models.ProviderModel.Description">Description</h4>
-  <div class="markdown level1 summary"><p>This property contains the optional description for the provider.</p>
+  <a id="CG_Orange_Processors_ProcessorFactory__ctor_" data-uid="CG.Orange.Processors.ProcessorFactory.#ctor*"></a>
+  <h4 id="CG_Orange_Processors_ProcessorFactory__ctor_IServiceProvider_IProviderManager_ILogger_CG_Orange_Processors_IProcessorFactory__" data-uid="CG.Orange.Processors.ProcessorFactory.#ctor(IServiceProvider,IProviderManager,ILogger{CG.Orange.Processors.IProcessorFactory})">ProcessorFactory(IServiceProvider, IProviderManager, ILogger&lt;IProcessorFactory&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Processors.ProcessorFactory.html">ProcessorFactory</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ProcessorFactory(IServiceProvider serviceProvider, IProviderManager providerManager, ILogger&lt;IProcessorFactory&gt; logger)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceProvider</span></td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>The service provider to use with
+this factory.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IProviderManager</span></td>
+        <td><span class="parametername">providerManager</span></td>
+        <td><p>The provider manager to use with
+this factory.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Processors.IProcessorFactory.html">IProcessorFactory</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use with this factory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="CG_Orange_Processors_ProcessorFactory__logger" data-uid="CG.Orange.Processors.ProcessorFactory._logger">_logger</h4>
+  <div class="markdown level1 summary"><p>This field contains the logger for this factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;IProcessorFactory&gt; _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -155,21 +190,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Processors.IProcessorFactory.html">IProcessorFactory</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ProviderModel_Id_" data-uid="CG.Orange.Models.ProviderModel.Id*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_Id" data-uid="CG.Orange.Models.ProviderModel.Id">Id</h4>
-  <div class="markdown level1 summary"><p>This property contains the identifier for the provider.</p>
+  <h4 id="CG_Orange_Processors_ProcessorFactory__providerManager" data-uid="CG.Orange.Processors.ProcessorFactory._providerManager">_providerManager</h4>
+  <div class="markdown level1 summary"><p>This field contains the provider manager for this factory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly IProviderManager _providerManager</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -179,21 +213,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">IProviderManager</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ProviderModel_IsDisabled_" data-uid="CG.Orange.Models.ProviderModel.IsDisabled*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_IsDisabled" data-uid="CG.Orange.Models.ProviderModel.IsDisabled">IsDisabled</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the provider is disabled, or not.</p>
+  <h4 id="CG_Orange_Processors_ProcessorFactory__serviceProvider" data-uid="CG.Orange.Processors.ProcessorFactory._serviceProvider">_serviceProvider</h4>
+  <div class="markdown level1 summary"><p>This field contains the service provider for this factory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDisabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly IServiceProvider _serviceProvider</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -203,21 +236,44 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">IServiceProvider</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ProviderModel_Name_" data-uid="CG.Orange.Models.ProviderModel.Name*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_Name" data-uid="CG.Orange.Models.ProviderModel.Name">Name</h4>
-  <div class="markdown level1 summary"><p>This property contains the name for the provider.</p>
-</div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Orange_Processors_ProcessorFactory_CreateCacheProcessorAsync_" data-uid="CG.Orange.Processors.ProcessorFactory.CreateCacheProcessorAsync*"></a>
+  <h4 id="CG_Orange_Processors_ProcessorFactory_CreateCacheProcessorAsync_ProviderModel_CancellationToken_" data-uid="CG.Orange.Processors.ProcessorFactory.CreateCacheProcessorAsync(ProviderModel,CancellationToken)">CreateCacheProcessorAsync(ProviderModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ICacheProcessor&gt; CreateCacheProcessorAsync(ProviderModel provider, CancellationToken cancellationToken = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -227,21 +283,42 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="CG.Orange.Processors.ICacheProcessor.html">ICacheProcessor</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ProviderModel_ProcessorType_" data-uid="CG.Orange.Models.ProviderModel.ProcessorType*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_ProcessorType" data-uid="CG.Orange.Models.ProviderModel.ProcessorType">ProcessorType</h4>
-  <div class="markdown level1 summary"><p>This property contains the .NET type for the associated processor.</p>
-</div>
+  <a id="CG_Orange_Processors_ProcessorFactory_CreateSecretProcessorAsync_" data-uid="CG.Orange.Processors.ProcessorFactory.CreateSecretProcessorAsync*"></a>
+  <h4 id="CG_Orange_Processors_ProcessorFactory_CreateSecretProcessorAsync_ProviderModel_CancellationToken_" data-uid="CG.Orange.Processors.ProcessorFactory.CreateSecretProcessorAsync(ProviderModel,CancellationToken)">CreateSecretProcessorAsync(ProviderModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ProcessorType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;ISecretProcessor&gt; CreateSecretProcessorAsync(ProviderModel provider, CancellationToken cancellationToken = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -251,86 +328,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="CG.Orange.Processors.ISecretProcessor.html">ISecretProcessor</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Models_ProviderModel_Properties_" data-uid="CG.Orange.Models.ProviderModel.Properties*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_Properties" data-uid="CG.Orange.Models.ProviderModel.Properties">Properties</h4>
-  <div class="markdown level1 summary"><p>This property contains the associated properties for the provider.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ProviderPropertyModel&gt; Properties { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="CG.Orange.Models.ProviderPropertyModel.html">ProviderPropertyModel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Models_ProviderModel_ProviderType_" data-uid="CG.Orange.Models.ProviderModel.ProviderType*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_ProviderType" data-uid="CG.Orange.Models.ProviderModel.ProviderType">ProviderType</h4>
-  <div class="markdown level1 summary"><p>This property contains the provider type.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProviderType ProviderType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CG.Orange.Models.ProviderType.html">ProviderType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Models_ProviderModel_Tag_" data-uid="CG.Orange.Models.ProviderModel.Tag*"></a>
-  <h4 id="CG_Orange_Models_ProviderModel_Tag" data-uid="CG.Orange.Models.ProviderModel.Tag">Tag</h4>
-  <div class="markdown level1 summary"><p>This property contains the tag for the provider.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Tag { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
+  <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="CG.Orange.Models.ProviderModelExtensions.html#CG_Orange_Models_ProviderModelExtensions_UniqueKeyName_CG_Orange_Models_ProviderModel_">ProviderModelExtensions.UniqueKeyName(ProviderModel)</a>
+      <a class="xref" href="CG.Orange.Processors.IProcessorFactory.html">IProcessorFactory</a>
   </div>
 </article>
           </div>
