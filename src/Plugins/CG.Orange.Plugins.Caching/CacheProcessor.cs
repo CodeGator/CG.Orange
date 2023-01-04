@@ -145,7 +145,7 @@ internal class CacheProcessor : ICacheProcessor
                 // Calculate the expiration date/time.
                 var expiration = !string.IsNullOrEmpty(duration.Value)
                     ? TimeSpan.Parse(duration.Value)
-                    : TimeSpan.Zero;
+                    : TimeSpan.FromSeconds(1);
 
                 // Convert the value to bytes.
                 var bytes = Encoding.UTF8.GetBytes(value);

@@ -97,12 +97,22 @@ internal class ConfigurationDirector : IConfigurationDirector
 
         try
         {
-            // Step 1: get the configuration settings for the application and environment.
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Checking for an environment argument"
+                );
 
             // Was an environment specified?
             SettingFileModel? envFile = null;
             if (!string.IsNullOrEmpty(environmentName))
             {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Checking for setting file for application: {app}, environment: {env}",
+                    applicationName,
+                    environmentName
+                    );
+
                 // Look for the environment file.
                 envFile = await _settingFileManager.FindByApplicationAndEnvironmentAsync(
                     applicationName,
@@ -111,15 +121,28 @@ internal class ConfigurationDirector : IConfigurationDirector
                     ).ConfigureAwait(false);
             }
 
-            // Step 2: convert the JSON to a configuration.
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Checking for an environment setting file"
+                );
 
             // Do we have an environment file?
             IConfiguration? envConfiguration = null;
             if (envFile is not null)
             {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Reading JSON into a stream"
+                    );
+
                 // Wrap the JSON for the configuration builder.
                 using var stream = new MemoryStream(
                     Encoding.UTF8.GetBytes(envFile.Json)
+                    );
+
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Reading JSON into a configuration builder"
                     );
 
                 // Read the JSON as a configuration.
@@ -128,7 +151,10 @@ internal class ConfigurationDirector : IConfigurationDirector
                     .Build();
             }
 
-            // Step 3: get the base configuration settings for the application.
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Reading base setting file"
+                );
 
             // Look for the base file (no environment).
             var baseFile = await _settingFileManager.FindByApplicationAndEnvironmentAsync(
@@ -137,15 +163,28 @@ internal class ConfigurationDirector : IConfigurationDirector
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Step 4: convert the JSON to a configuration.
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Checking for a base setting file"
+                );
 
             // Do we have a base file?
             IConfiguration? baseConfiguration = null;
             if (baseFile is not null)
             {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Reading JSON into a stream"
+                    );
+
                 // Wrap the JSON for the configuration builder.
                 using var stream = new MemoryStream(
                     Encoding.UTF8.GetBytes(baseFile.Json)
+                    );
+
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Reading JSON into a configuration builder"
                     );
 
                 // Read the JSON as a configuration.
@@ -154,13 +193,21 @@ internal class ConfigurationDirector : IConfigurationDirector
                     .Build();
             }
 
-            // Step 5: merge the configurations together.
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Creating a unified configuration"
+                );
 
             var builder = new ConfigurationBuilder();
 
             // Do we have a base configuration?
             if (baseConfiguration is not null)
             {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Merging base configurations"
+                    );
+
                 // Add in the settings.
                 builder.AddInMemoryCollection(
                         baseConfiguration.AsEnumerable().Select(x =>
@@ -172,6 +219,11 @@ internal class ConfigurationDirector : IConfigurationDirector
             // Do we have an environment configuration?
             if (envConfiguration is not null)
             {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Merging environment configurations"
+                    );
+
                 // Add in the settings.
                 builder.AddInMemoryCollection(
                         envConfiguration.AsEnumerable().Select(x =>
@@ -180,10 +232,20 @@ internal class ConfigurationDirector : IConfigurationDirector
                         );
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Building the merged configuration"
+                );
+
             // Merge the configuration(s).
             var mergedConfiguration = builder.Build();
 
-            // Step 6: replace any tokens.
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Replacing tokens with secrets"
+                );
+
+            // Replace any tokens with secrets.
             var kvpCollection = await ReplaceTokensAsync(
                 applicationName,
                 environmentName,
@@ -218,6 +280,19 @@ internal class ConfigurationDirector : IConfigurationDirector
 
     #region Private methods
 
+    /// <summary>
+    /// This method scans through the given configuration replacing tokens
+    /// with their associated secrets.
+    /// </summary>
+    /// <param name="applicationName">The name of the application to use 
+    /// for the operation.</param>
+    /// <param name="environmentName">The name of the environment to use 
+    /// for the operation.</param>
+    /// <param name="source">The source configuration to use for the operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation that returns a dictionary
+    /// of key-value-pairs.</returns>
     private async Task<Dictionary<string, string>> ReplaceTokensAsync(
         string applicationName,
         string? environmentName,
@@ -225,11 +300,23 @@ internal class ConfigurationDirector : IConfigurationDirector
         CancellationToken cancellationToken = default
         )
     {
+        // Create a place to put the results.
         var dest = new Dictionary<string, string>();
+
+        // Log what we are about to do.
+        _logger.LogDebug(
+            "Looping through (count) settings.",
+            source.AsEnumerable().Count()
+            );
 
         // Loop through the settings.
         foreach (var setting in source.AsEnumerable())
         {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Getting the key and value for a setting"
+                );
+
             // Get the key and value.
             var key = setting.Key;
             var value = setting.Value ?? "";  
@@ -243,9 +330,19 @@ internal class ConfigurationDirector : IConfigurationDirector
                 // Sanity check the value.
                 if (!string.IsNullOrEmpty(value))
                 {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Looking for a replacement token in the setting value"
+                        );
+
                     // Look for a replacement token.
                     if (value.StartsWith("##") && value.EndsWith("##"))
                     {
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Parsing the replacement token"
+                            );
+
                         // Trim the token delimiters.
                         value = value.TrimStart('#').TrimEnd('#');
                         
@@ -273,10 +370,21 @@ internal class ConfigurationDirector : IConfigurationDirector
                         value = "";
                     }
 
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Checking for a cache tag"
+                        );
+
                     // Is there a cache tag?
                     ProviderModel? cacheProvider = null;
                     if (!string.IsNullOrEmpty(cacheTag))
                     {
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Looking for provider with tag: {tag}",
+                            cacheTag
+                            );
+
                         // Look for a matching provider.
                         cacheProvider = await _providerManager.FindByTagAndTypeAsync(
                             cacheTag,
@@ -294,40 +402,66 @@ internal class ConfigurationDirector : IConfigurationDirector
                         }
                     }
 
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Checking for a cache provider"
+                        );
+
                     // Is there a cache provider?
                     ICacheProcessor? cacheProcessor = null;
                     if (cacheProvider is not null)
                     {
-                        // Is the cache provider disabled?
-                        if (cacheProvider.IsDisabled)
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Checking provider enabled state"
+                            );
+
+                        // Is the cache provider enabled?
+                        if (!cacheProvider.IsDisabled)
                         {
-                            // Panic!!
-                            throw new NotSupportedException(
-                                $"The cache provider {cacheProvider.Name} was disabled!"
+                            // Log what we are about to do.
+                            _logger.LogDebug(
+                                "Creating a processor from the factory"
                                 );
-                        }
 
-                        // Get the cache processor.
-                        cacheProcessor = await _processorFactory.CreateCacheProcessorAsync(
-                            cacheProvider,
-                            cancellationToken
-                            ).ConfigureAwait(false);
-
-                        // Did we succeed?
-                        if (cacheProcessor is not null)
-                        {
-                            // Try to find a previously cached value.
-                            value = await cacheProcessor.GetValueAsync(
+                            // Get the cache processor.
+                            cacheProcessor = await _processorFactory.CreateCacheProcessorAsync(
                                 cacheProvider,
-                                $"{applicationName}:{environmentName ?? "none"}:{altKey ?? key}",
                                 cancellationToken
                                 ).ConfigureAwait(false);
+
+                            // Did we succeed?
+                            if (cacheProcessor is not null)
+                            {
+                                // Log what we are about to do.
+                                _logger.LogDebug(
+                                    "Checking for a value in the cache"
+                                    );
+
+                                // Try to find a previously cached value.
+                                value = await cacheProcessor.GetValueAsync(
+                                    cacheProvider,
+                                    $"{applicationName}:{environmentName ?? "none"}:{altKey ?? key}",
+                                    cancellationToken
+                                    ).ConfigureAwait(false);
+                            }
                         }
                     }
+
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Checking for a value"
+                        );
 
                     // Do we still need the secret value?
                     if (string.IsNullOrEmpty(value))
                     {
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Looking for provider with tag: {tag}",
+                            secretTag
+                            );
+
                         // Look for a matching provider.
                         var secretProvider = await _providerManager.FindByTagAndTypeAsync(
                             secretTag,
@@ -344,49 +478,98 @@ internal class ConfigurationDirector : IConfigurationDirector
                                 );
                         }
 
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Checking for a secret provider"
+                            );
+
                         // Is there a secret provider?
                         if (secretProvider is not null)
                         {
-                            // Is the secret provider disabled?
-                            if (secretProvider.IsDisabled)
+                            // Log what we are about to do.
+                            _logger.LogDebug(
+                                "Checking provider enabled state"
+                                );
+
+                            // Is the secret provider enabled?
+                            if (!secretProvider.IsDisabled)
                             {
-                                // Panic!!
-                                throw new NotSupportedException(
-                                    $"The secret provider {secretProvider.Name} was disabled!"
+                                // Log what we are about to do.
+                                _logger.LogDebug(
+                                    "Creating a processor from the factory"
                                     );
-                            }
 
-                            // Get the secret processor.
-                            var secretProcessor = await _processorFactory.CreateSecretProcessorAsync(
-                                secretProvider,
-                                cancellationToken
-                                ).ConfigureAwait(false);
-
-                            // Did we succeed?
-                            if (secretProcessor is not null)
-                            {
-                                // Try to find the value.
-                                value = await secretProcessor.GetValueAsync(
+                                // Get the secret processor.
+                                var secretProcessor = await _processorFactory.CreateSecretProcessorAsync(
                                     secretProvider,
-                                    altKey ?? key,
                                     cancellationToken
                                     ).ConfigureAwait(false);
+
+                                // Did we succeed?
+                                if (secretProcessor is not null)
+                                {
+                                    // Log what we are about to do.
+                                    _logger.LogDebug(
+                                        "Fetching a secret value from a remote service"
+                                        );
+
+                                    // Try to find the value.
+                                    value = await secretProcessor.GetValueAsync(
+                                        secretProvider,
+                                        altKey ?? key,
+                                        cancellationToken
+                                        ).ConfigureAwait(false);
+                                }
+                            }
+                            else
+                            {
+                                // Log what we are about to do.
+                                _logger.LogDebug(
+                                    "Clearing value because the secret provider was disabled"
+                                    );
+
+                                // No value if the provider is disabled.
+                                value = "";
                             }
                         }
+
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Checking for a cache provider"
+                            );
 
                         // Is there a cache provider?
                         if (cacheProvider is not null)
                         {
-                            // Is there a cache processor?
-                            if (cacheProcessor is not null)
+                            // Log what we are about to do.
+                            _logger.LogDebug(
+                                "Checking provider enabled state"
+                                );
+
+                            // Is the cache provider enabled?
+                            if (!cacheProvider.IsDisabled)
                             {
-                                // Try to cache the value for next time.
-                                await cacheProcessor.SetValueAsync(
-                                    cacheProvider,
-                                    $"{applicationName}:{environmentName ?? "none"}:{altKey ?? key}",
-                                    value ?? "",
-                                    cancellationToken
-                                    ).ConfigureAwait(false);
+                                // Log what we are about to do.
+                                _logger.LogDebug(
+                                    "Checking for a cache processor"
+                                    );
+
+                                // Is there a cache processor?
+                                if (cacheProcessor is not null)
+                                {
+                                    // Log what we are about to do.
+                                    _logger.LogDebug(
+                                        "Caching a value"
+                                        );
+
+                                    // Try to cache the value for next time.
+                                    await cacheProcessor.SetValueAsync(
+                                        cacheProvider,
+                                        $"{applicationName}:{environmentName ?? "none"}:{altKey ?? key}",
+                                        value ?? "",
+                                        cancellationToken
+                                        ).ConfigureAwait(false);
+                                }
                             }
                         }
                     }                    
@@ -404,8 +587,8 @@ internal class ConfigurationDirector : IConfigurationDirector
                     key
                     );
 
-                // Replace the token, since we failed to fetch the secret.
-                value = setting.Value ?? "";
+                // No value if we fail processing.
+                value = "";
             }
             
             // Add the setting.

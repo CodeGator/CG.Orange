@@ -3,6 +3,7 @@
     {
       "Name": "Orange Dev Secrets",
       "Description": "kv-orange-dev Azure vault",
+      "IsDisabled": true,
       "Tag": "ODS",
       "ProviderType": "Secret",
       "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
@@ -17,6 +18,7 @@
       "Name": "Orange Prod Secrets",
       "Description": "kv-orange-prod Azure vault",
       "Tag": "OPS",
+      "IsDisabled": true,
       "ProviderType": "Secret",
       "ProcessorType": "CG.Orange.Plugins.Azure.AzureSecretProcessor",
       "Properties": [
@@ -30,6 +32,7 @@
       "Name": "Yearly Cache",
       "Description": "1 year cache duration",
       "Tag": "OYC",
+      "IsDisabled": true,
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
@@ -43,6 +46,7 @@
       "Name": "Monthly Cache",
       "Description": "Monthly duration",
       "Tag": "OMC",
+      "IsDisabled": true,
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
@@ -56,6 +60,7 @@
       "Name": "Weekly Cache",
       "Description": "Weekly duration",
       "Tag": "OWC",
+      "IsDisabled": true,
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
@@ -69,6 +74,7 @@
       "Name": "Hourly Cache",
       "Description": "Weekly duration",
       "Tag": "OHC",
+      "IsDisabled": true,
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [
@@ -82,6 +88,7 @@
       "Name": "No Cache",
       "Description": "No duration",
       "Tag": "NC",
+      "IsDisabled": true,
       "ProviderType": "Cache",
       "ProcessorType": "CG.Orange.Plugins.Caching.CacheProcessor",
       "Properties": [

@@ -8,7 +8,7 @@
     {
       "ApplicationName": "test1",
       "EnvironmentName": "development",
-      "Json": "{ \"TestKey\":\"##OPS:OHC##\"}"
+      "Json": "{ \"TestKey\":\"overridden value\"}"
     }
   ]
 }

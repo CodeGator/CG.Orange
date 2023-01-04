@@ -172,8 +172,11 @@ internal static class WebApplicationBuilderExtensions
                     return Task.CompletedTask;
                 }
             };
-        });
-
+        }).AddJwtBearer(options =>
+        {
+            options.Authority = identityOptions.Authority;
+            options.TokenValidationParameters.ValidateAudience = false;
+        }); 
         
         // Return the application builder.
         return webApplicationBuilder;

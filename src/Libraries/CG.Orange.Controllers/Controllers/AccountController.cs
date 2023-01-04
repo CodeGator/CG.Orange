@@ -7,6 +7,7 @@ namespace CG.Orange.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[AllowAnonymous]
 public class AccountController : ControllerBase
 {
     // *******************************************************************
@@ -119,7 +120,7 @@ public class AccountController : ControllerBase
                     {
                         { "grant_type", "client_credentials" },
                         { "client_id", model.ClientId },
-                        { "client_secret", model.ClientSecret }
+                        { "client_secret", model.ClientSecret ?? "" }
                     })
                 ).ConfigureAwait(false);
 

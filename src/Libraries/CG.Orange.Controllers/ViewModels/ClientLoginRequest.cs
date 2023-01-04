@@ -23,7 +23,7 @@ public class ClientLoginRequest
     /// This property contains the client secret for the request.
     /// </summary>
     [MaxLength(64)]
-    public string ClientSecret { get; set; } = null!;
+    public string? ClientSecret { get; set; }
 
     #endregion
 }
