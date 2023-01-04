@@ -6,7 +6,7 @@ namespace CG.Orange.Controllers;
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
-//[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 public class SettingsController : ControllerBase
 {
     // *******************************************************************
@@ -80,11 +80,30 @@ public class SettingsController : ControllerBase
     {
         try
         {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Starting {name} method",
+                nameof(PostAsync)
+                );
+
             // Sanity check the model state.
             if (!ModelState.IsValid) 
             {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Returning BAD REQUEST from {name} method",
+                    nameof(PostAsync)
+                    );
+
                 return BadRequest(); // Nope!
             }
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Fetching a configuration for application: {app}, environment: {env}",
+                model.Application,
+                model.Environment
+                );
 
             // Read the complete configuration (with secrets).
             var result = await _configurationDirector.ReadConfigurationAsync(

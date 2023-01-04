@@ -69,82 +69,6 @@ public class AccountController : ControllerBase
     // *******************************************************************
 
     #region Public methods
-    /*
-    /// <summary>
-    /// This method performs a password grant login operation.
-    /// </summary>
-    /// <param name="model">The request parameters to use for the operation.</param>
-    /// <returns>A task to perform the operation that returns the results 
-    /// of the action.</returns>
-    [HttpPost("Login/User")]
-    [Consumes(MediaTypeNames.Application.Json)]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public virtual async Task<IActionResult> PasswordLoginAsync(
-        [FromBody] PasswordLoginRequest model
-        )
-    {
-        try
-        {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Starting {name} method",
-                nameof(PasswordLoginAsync)
-                );
-
-            // Ensure the model is valid.
-            if (!ModelState.IsValid)
-            {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Returning BAD REQUEST from {name} method",
-                    nameof(PasswordLoginAsync)
-                    );
-
-                return BadRequest(); // Nope!
-            }
-
-            // Log the resource owner in.
-            var result = await _httpClient.PostAsync(
-                $"{_identityOptions.Authority}/connect/token",
-                new FormUrlEncodedContent(
-                    new Dictionary<string, string>()
-                    {
-                        { "grant_type", "password" },
-                        { "client_id", OrangeConstants.Clients.CFG_SERVER_CLIENT_ID },
-                        { "username", model.Account },
-                        { "password", model.Password }
-                    })
-                ).ConfigureAwait(false);
-
-            // Did we fail?
-            result.EnsureSuccessStatusCode();
-
-            // Get the access token.
-            var token = await result.Content.ReadAsStringAsync()
-                .ConfigureAwait(false);
-
-            // Return the results.
-            return Ok(token);
-        }
-        catch (Exception ex)
-        {
-            // Log the error in detail.
-            _logger.LogError(
-                ex,
-                "Failed to validate the given user credentials!"
-                );
-
-            // Return an overview of the problem.
-            return Problem(
-                statusCode: StatusCodes.Status500InternalServerError,
-                detail: "The controller failed to validate the given user credentials!"
-                );
-        }
-    }
-    */
-    // *******************************************************************
 
     /// <summary>
     /// This method performs a client credentials grant login operation.
@@ -152,7 +76,7 @@ public class AccountController : ControllerBase
     /// <param name="model">The request parameters to use for the operation.</param>
     /// <returns>A task to perform the operation that returns the results 
     /// of the action.</returns>
-    [HttpPost("Login/Client")]
+    [HttpPost("login/client")]
     [Consumes(MediaTypeNames.Application.Json)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -181,6 +105,12 @@ public class AccountController : ControllerBase
                 return BadRequest(); // Nope!
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Reaching out to the identity server for client: {id}",
+                model.ClientId
+                );
+
             // Log the client in.
             var result = await _httpClient.PostAsync(
                 $"{_identityOptions.Authority}/connect/token",
@@ -193,8 +123,20 @@ public class AccountController : ControllerBase
                     })
                 ).ConfigureAwait(false);
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Validating identity server response for client: {id}",
+                model.ClientId
+                );
+
             // Did we fail?
             result.EnsureSuccessStatusCode();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Reading the access token for client: {id}",
+                model.ClientId
+                );
 
             // Get the access token.
             var token = await result.Content.ReadAsStringAsync()
