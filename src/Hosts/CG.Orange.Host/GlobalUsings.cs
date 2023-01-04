@@ -8,7 +8,7 @@ global using Microsoft.AspNetCore.Components.Forms;
 global using Microsoft.AspNetCore.Mvc.RazorPages;
 global using Microsoft.IdentityModel.Tokens;
 global using MudBlazor;
-global using CG.Orange.Host.Options;
+global using CG.Orange.Options;
 global using CG.Orange.Host.Services;
 global using MudBlazor.Services;
 global using System.Reflection;
