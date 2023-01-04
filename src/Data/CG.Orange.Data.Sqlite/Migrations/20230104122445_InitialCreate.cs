@@ -93,13 +93,6 @@ namespace CG.Orange.Data.Sqlite.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Provider_Names",
-                schema: "Orange",
-                table: "Providers",
-                column: "Name",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Provider_Tags",
                 schema: "Orange",
                 table: "Providers",
@@ -110,7 +103,7 @@ namespace CG.Orange.Data.Sqlite.Migrations
                 name: "IX_Providers",
                 schema: "Orange",
                 table: "Providers",
-                columns: new[] { "IsDisabled", "ProviderType", "ProcessorType" });
+                columns: new[] { "Name", "IsDisabled", "ProviderType", "ProcessorType" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_SettingFiles1",

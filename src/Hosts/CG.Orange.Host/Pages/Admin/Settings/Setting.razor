@@ -23,6 +23,9 @@ else
             </MudItem>
             <MudItem xs="6">
                 <MudTextField AutoFocus
+                              Required
+                              Immediate
+                              Counter="@(Globals.Models.SettingFiles.ApplicationNameLength)"
                               Variant="Variant.Outlined"
                               Label="Application"
                               For="@(() => _model.ApplicationName)"
@@ -31,17 +34,30 @@ else
             <MudItem xs="6">
                 <MudTextField Variant="Variant.Outlined"
                               Label="Environment"
+                              Immediate
+                              Counter="@(Globals.Models.SettingFiles.EnvironmentNameLength)"
                               For="@(() => _model.EnvironmentName)"
                 @bind-Value="@_model.EnvironmentName" />
             </MudItem>
             <MudItem xs="12">
                 <MudSwitch Label="Disabled"
+                           Color="Color.Warning"
                            For="@(() => _model.IsDisabled)"
-                @bind-Value="@_model.IsDisabled" />
+                @bind-Checked="@_model.IsDisabled" />
+                @if (_model.IsDisabled)
+                {
+                    <MudAlert Severity="Severity.Warning">Remember, disabled settings can't be used by clients!</MudAlert>
+                }
             </MudItem>
             <MudItem xs="12">
-                <MudButton Class="mb-3" Variant="Variant.Outlined" StartIcon="@Icons.Material.Rounded.Wallpaper" Color="Color.Secondary" OnClick="OnValidateJsonAsync">Validate JSON</MudButton>
+                <MudButton Class="mb-3"
+                           Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Rounded.Wallpaper"
+                           Color="Color.Secondary"
+                           OnClick="OnValidateJsonAsync">Validate JSON</MudButton>
                 <MudTextField Variant="Variant.Outlined"
+                              Style="font-family: monospace;"
+                              Required
                               Label="JSON"
                               Lines="20"
                               For="@(() => _model.Json)"
@@ -51,12 +67,14 @@ else
                 <MudTextField T="string"
                               Variant="Variant.Outlined"
                               Label="Created On"
+                              Required
                               ReadOnly
                               Text="@_model.CreatedOnUtc.ToLocalTime().ToString()" />
             </MudItem>
             <MudItem xs="6">
                 <MudTextField Variant="Variant.Outlined"
                               Label="Created By"
+                              Required
                               ReadOnly
                               For="@(() => _model.CreatedBy)"
                 @bind-Value="@_model.CreatedBy" />

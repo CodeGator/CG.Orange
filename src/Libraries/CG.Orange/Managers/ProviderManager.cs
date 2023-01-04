@@ -105,48 +105,6 @@ internal class ProviderManager : IProviderManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<bool> AnyAsync(
-        string name,
-        CancellationToken cancellationToken = default
-        )
-    {
-        // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNullOrEmpty(name, nameof(name));
-
-        try
-        {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(IProviderRepository.AnyAsync)
-                );
-
-            // Perform the search.
-            return await _providerRepository.AnyAsync(
-                name,
-                cancellationToken
-                ).ConfigureAwait(false);
-        }
-        catch (Exception ex)
-        {
-            // Log what happened.
-            _logger.LogError(
-                ex,
-                "Failed to search for providers by name!"
-                );
-
-            // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for providers " +
-                "by name!",
-                innerException: ex
-                );
-        }
-    }
-
-    // *******************************************************************
-
-    /// <inheritdoc />
     public virtual async Task<long> CountAsync(
         CancellationToken cancellationToken = default
         )
@@ -564,85 +522,6 @@ internal class ProviderManager : IProviderManager
             // Provider better context.
             throw new ManagerException(
                 message: $"The manager failed to search for providers!",
-                innerException: ex
-                );
-        }
-    }
-
-    // *******************************************************************
-
-    /// <inheritdoc />
-    public virtual async Task<ProviderModel?> FindByNameAsync(
-        string name,
-        CancellationToken cancellationToken = default
-        )
-    {
-        // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNullOrEmpty(name, nameof(name));
-
-        try
-        {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(IProviderRepository.FindByNameAsync)
-                );
-
-            // Perform the operation.
-            var result = await _providerRepository.FindByNameAsync(
-                name,
-                cancellationToken
-                ).ConfigureAwait(false);
-
-            // Did we fail?
-            if (result is null)
-            {
-                return null;
-            }
-
-            // Are there any properties?
-            if (result.Properties.Any())
-            {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Decrypting {count} properties for provider: {name}",
-                    result.Properties.Count(),
-                    result.Name
-                    );
-
-                // Loop through the properties with values.
-                foreach (var property in result.Properties.Where(x =>
-                    !string.IsNullOrEmpty(x.Value)
-                    ))
-                {
-                    // Log what we are about to do.
-                    _logger.LogDebug(
-                        "Decrypting property for provider"
-                        );
-
-                    // Decrypt the value.
-                    property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
-            }
-
-            // Return the results.
-            return result;
-        }
-        catch (Exception ex)
-        {
-            // Log what happened.
-            _logger.LogError(
-                ex,
-                "Failed to search for providers by name!"
-                );
-
-            // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for providers by " +
-                "name!",
                 innerException: ex
                 );
         }

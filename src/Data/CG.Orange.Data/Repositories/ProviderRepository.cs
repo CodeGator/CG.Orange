@@ -108,51 +108,6 @@ internal class ProviderRepository : IProviderRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<bool> AnyAsync(
-        string name,
-        CancellationToken cancellationToken = default
-        )
-    {
-        // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(name, nameof(name));
-
-        try
-        {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Searching for providers"
-                );
-
-            // Search for any entities in the data-store.
-            var data = await _dbContext.Providers.AnyAsync(x =>
-                x.Name == name,
-                cancellationToken
-                ).ConfigureAwait(false);
-
-            // Return the results.
-            return data;
-        }
-        catch (Exception ex)
-        {
-            // Log what happened.
-            _logger.LogError(
-                ex,
-                "Failed to search for providers by name!"
-                );
-
-            // Provider better context.
-            throw new RepositoryException(
-                message: $"The repository failed to search for providers " +
-                "by name!",
-                innerException: ex
-                );
-        }
-
-    }
-
-    // *******************************************************************
-
-    /// <inheritdoc/>
     public virtual async Task<long> CountAsync(
        CancellationToken cancellationToken = default
        )
@@ -400,62 +355,6 @@ internal class ProviderRepository : IProviderRepository
             throw new RepositoryException(
                 message: $"The repository failed to search for " +
                 "providers!",
-                innerException: ex
-                );
-        }
-    }
-
-    // *******************************************************************
-
-    /// <inheritdoc/>
-    public virtual async Task<ProviderModel?> FindByNameAsync(
-        string name,
-        CancellationToken cancellationToken = default
-        )
-    {
-        // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(name, nameof(name));
-
-        try
-        {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Searching for a provider."
-                );
-
-            // Perform the provider search.
-            var provider = await _dbContext.Providers.Where(x =>
-                x.Name == name
-                ).Include(x => x.Properties)
-                .AsNoTracking()
-                .FirstOrDefaultAsync(
-                    cancellationToken
-                    ).ConfigureAwait(false);
-
-            // Did we fail?
-            if (provider is null)
-            {
-                return null;
-            }
-
-            // Convert the entities to a models.
-            var result = _mapper.Map<ProviderModel>(provider);
-
-            // Return the results.
-            return result;
-        }
-        catch (Exception ex)
-        {
-            // Log what happened.
-            _logger.LogError(
-                ex,
-                "Failed to search for a providers by name!"
-                );
-
-            // Provider better context.
-            throw new RepositoryException( 
-                message: $"The repository failed to search for providers " +
-                "by name!",
                 innerException: ex
                 );
         }

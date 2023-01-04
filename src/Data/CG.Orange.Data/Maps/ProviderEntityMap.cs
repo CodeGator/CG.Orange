@@ -104,14 +104,6 @@ internal class ProviderEntityMap : AuditedEntityMapBase<ProviderEntity>
         // Setup the index.
         builder.HasIndex(e => new
         {
-            e.Name
-        },
-        $"IX_Provider_Names"
-        ).IsUnique();
-
-        // Setup the index.
-        builder.HasIndex(e => new
-        {
             e.Tag
         },
         $"IX_Provider_Tags"
@@ -120,6 +112,7 @@ internal class ProviderEntityMap : AuditedEntityMapBase<ProviderEntity>
         // Setup the index.
         builder.HasIndex(e => new
         {
+            e.Name,
             e.IsDisabled,
             e.ProviderType,
             e.ProcessorType

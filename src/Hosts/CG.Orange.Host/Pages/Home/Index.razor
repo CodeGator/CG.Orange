@@ -2,26 +2,6 @@
 
 <PageTitle>Index</PageTitle>
 
-<AuthorizeView>
-    <Authorized>
-        <MudText>Claims for: @context.User.Identity.Name</MudText>
-        <MudTable Items="@context.User.Claims">
-            <HeaderContent>
-                <MudTh>Type</MudTh>
-                <MudTh>Issuer</MudTh>
-                <MudTh>Value</MudTh>
-            </HeaderContent>
-            <RowTemplate Context="context2">
-                <MudTd DataLabel="Type">@context2.Type</MudTd>
-                <MudTd DataLabel="Issuer">@context2.Issuer</MudTd>
-                <MudTd DataLabel="Value">@context2.Value</MudTd>
-            </RowTemplate>
-        </MudTable>
-        <MudCheckBox Checked="@(context.User.IsInRole("User"))" Label="Is User" ReadOnly />
-        <MudCheckBox Checked="@(context.User.IsInRole("Admin"))" Label="Is Admin" ReadOnly />
-        <MudCheckBox Checked="@(context.User.IsInRole("SuperAdmin"))" Label="Is Super Admin" ReadOnly />
-    </Authorized>
-</AuthorizeView>
 
 
 

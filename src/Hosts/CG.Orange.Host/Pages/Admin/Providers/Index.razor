@@ -8,55 +8,104 @@
 <MudText Typo="Typo.h6">Providers</MudText>
 <MudText Typo="Typo.body1" Class="pb-5">Use this page to browse providers.</MudText>
 
-<MudTable Items="_providers"
-          Dense
-          Striped
-          Hover>
-    <ToolBarContent>
-        <MudButton StartIcon="@Icons.Material.Outlined.Create"
-                   Class="mt-1 mr-2"
-                   Color="Color.Primary"
-                   Variant="Variant.Filled"
-                   OnClick="OnCreateAsync">Create</MudButton>
-        <MudSpacer />
-    </ToolBarContent>
-    <HeaderContent>
-        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
-        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Name)">Name</MudTableSortLabel></MudTh>
-        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Tag)">Tag</MudTableSortLabel></MudTh>
-        <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.ProviderType)">Type</MudTableSortLabel></MudTh>
-        <MudTh></MudTh>
-    </HeaderContent>
-    <RowTemplate>
-        <MudTd DataLabel="Disabled">
-            @if (context.IsDisabled)
-            {
-                <MudIconButton Color="Color.Warning" Icon="@Icons.Material.Outlined.CheckBox" OnClick="@(() => EnableProviderAsync(@context))" />
-            }
-            else
-            {
-                <MudIconButton Icon="@Icons.Material.Outlined.CheckBoxOutlineBlank" OnClick="@(() => DisableProviderAsync(@context))" />
-            }
-            </MudTd>
-        <MudTd DataLabel="Name">@context.Name</MudTd>
-        <MudTd DataLabel="Tag">@context.Tag</MudTd>
-        <MudTd DataLabel="Type">@context.ProviderType</MudTd>
-        <MudTd>
-            <MudIconButton Class="pr-6" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />
-            <MudIconButton Icon="@Icons.Material.Outlined.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/providers/provider/{context.Id}"))" />
-        </MudTd>
-    </RowTemplate>
-    <PagerContent>
-        <MudTablePager />
-    </PagerContent>
-    <NoRecordsContent>
-        No providers were found.
-    </NoRecordsContent>
-    <LoadingContent>
-        Loading providers ...
-    </LoadingContent>
-</MudTable>
-
-
-
-
+@if (_providers is not null)
+{
+    <MudTabs>
+        <MudTabPanel Icon="@Icons.Material.Outlined.Security" Text="Secret Providers">
+            <MudTable Items="_providers.Where(x => x.ProviderType == ProviderType.Secret)"
+                      Dense
+                      Striped
+                      Hover>
+                <ToolBarContent>
+                    <MudButton StartIcon="@Icons.Material.Outlined.Create"
+                               Class="mt-1 mr-2"
+                               Color="Color.Secondary"
+                               Variant="Variant.Filled"
+                               OnClick="@(() => OnCreateAsync(ProviderType.Secret))">Create</MudButton>
+                    <MudSpacer />
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Name)">Name</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Tag)">Tag</MudTableSortLabel></MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Disabled">
+                        @if (context.IsDisabled)
+                        {
+                            <MudIconButton Color="Color.Warning" Icon="@Icons.Material.Outlined.CheckBox" OnClick="@(() => EnableProviderAsync(@context))" />
+                        }
+                        else
+                        {
+                            <MudIconButton Icon="@Icons.Material.Outlined.CheckBoxOutlineBlank" OnClick="@(() => DisableProviderAsync(@context))" />
+                        }
+                    </MudTd>
+                    <MudTd DataLabel="Name">@context.Name</MudTd>
+                    <MudTd DataLabel="Tag">@context.Tag</MudTd>
+                    <MudTd>
+                        <MudIconButton Class="pr-6" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />
+                        <MudIconButton Icon="@Icons.Material.Outlined.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/providers/provider/{context.Id}"))" />
+                    </MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+                <NoRecordsContent>
+                    No providers were found.
+                </NoRecordsContent>
+                <LoadingContent>
+                    Loading providers ...
+                </LoadingContent>
+            </MudTable>
+        </MudTabPanel>
+        <MudTabPanel Icon="@Icons.Material.Outlined.Cached" Text="Cache Providers">
+            <MudTable Items="_providers.Where(x => x.ProviderType == ProviderType.Cache)"
+                      Dense
+                      Striped
+                      Hover>
+                <ToolBarContent>
+                    <MudButton StartIcon="@Icons.Material.Outlined.Create"
+                               Class="mt-1 mr-2"
+                               Color="Color.Primary"
+                               Variant="Variant.Filled"
+                               OnClick="@(() => OnCreateAsync(ProviderType.Cache))">Create</MudButton>
+                    <MudSpacer />
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.IsDisabled)">Disabled</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Name)">Name</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortBy="new Func<ProviderModel, object>(x=>x.Tag)">Tag</MudTableSortLabel></MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Disabled">
+                        @if (context.IsDisabled)
+                        {
+                            <MudIconButton Color="Color.Warning" Icon="@Icons.Material.Outlined.CheckBox" OnClick="@(() => EnableProviderAsync(@context))" />
+                        }
+                        else
+                        {
+                            <MudIconButton Icon="@Icons.Material.Outlined.CheckBoxOutlineBlank" OnClick="@(() => DisableProviderAsync(@context))" />
+                        }
+                    </MudTd>
+                    <MudTd DataLabel="Name">@context.Name</MudTd>
+                    <MudTd DataLabel="Tag">@context.Tag</MudTd>
+                    <MudTd>
+                        <MudIconButton Class="pr-6" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => OnDeleteAsync(@context))" Disabled="@(context.Properties.Any())" />
+                        <MudIconButton Icon="@Icons.Material.Outlined.Edit" OnClick="@(() => NavigationManager.NavigateTo($"/admin/providers/provider/{context.Id}"))" />
+                    </MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+                <NoRecordsContent>
+                    No providers were found.
+                </NoRecordsContent>
+                <LoadingContent>
+                    Loading providers ...
+                </LoadingContent>
+            </MudTable>
+        </MudTabPanel>
+    </MudTabs>
+}

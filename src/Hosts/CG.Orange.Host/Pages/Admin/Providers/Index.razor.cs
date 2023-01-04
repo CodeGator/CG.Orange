@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Extensions.Logging;
 using static CG.Orange.Globals.Models;
 
 namespace CG.Orange.Host.Pages.Admin.Providers;
@@ -33,6 +34,11 @@ public partial class Index
     /// This field contains the list of secret processor types.
     /// </summary>
     internal protected IEnumerable<Type> _secretProcessorTypes = null!;
+
+    /// <summary>
+    /// This field contains the list of cache processor types.
+    /// </summary>
+    internal protected IEnumerable<Type> _cacheProcessorTypes = null!;
 
     #endregion
 
@@ -110,12 +116,17 @@ public partial class Index
 
             // Log what we are about to do.
             Logger.LogDebug(
-                "Refreshing the secret processor data."
+                "Refreshing the processor types."
                 );
 
             // Get the list of secret processor types.
             _secretProcessorTypes = AppDomain.CurrentDomain.FindConcreteTypes<
                 ISecretProcessor
+                >();
+
+            // Get the list of cache processor types.
+            _cacheProcessorTypes = AppDomain.CurrentDomain.FindConcreteTypes<
+                ICacheProcessor
                 >();
 
             // Log what we are about to do.
@@ -351,8 +362,11 @@ public partial class Index
     /// <summary>
     /// This method creates a new provider.
     /// </summary>
+    /// <param name="providerType">The provider type to use for the operation.</param>
     /// <returns>A task to perform the operation.</returns>
-    protected async Task OnCreateAsync()
+    protected async Task OnCreateAsync(
+        ProviderType providerType
+        )
     {
         try
         {
@@ -362,12 +376,16 @@ public partial class Index
                 );
 
             // Generate a 'safe' default provider name.
-            var count = _providers.Count() + 1;
-            var safeName = $"NewProvider {count}";
+            var count = 1;
+            var safeName = providerType == ProviderType.Secret 
+                ? $"NewSecretProvider{count}" 
+                : $"NewCacheProvider{count}";
             while (_providers.Any(x => x.Name == safeName))
             {
                 // Try another name.
-                safeName = $"NewProvider{++count}";
+                safeName = providerType == ProviderType.Secret
+                ? $"NewSecretProvider{++count}"
+                : $"NewCacheProvider{++count}";
             }
 
             // Log what we are about to do.
@@ -376,50 +394,46 @@ public partial class Index
                 );
 
             // Generate a 'safe' default provider tag.
-            count = _providers.Count() + 1;
-            var safeTag = $"NewTag {count}";
+            count = 1;
+            var safeTag = $"NewTag{count}";
             while (_providers.Any(x => x.Tag == safeTag))
             {
                 // Try another tag.
                 safeTag = $"NewTag{++count}";
             }
 
+            // Create a default processor type.
+            var defaultProcessorType = (providerType == ProviderType.Secret 
+                ? _secretProcessorTypes.FirstOrDefault()?.Name 
+                : _cacheProcessorTypes.FirstOrDefault()?.Name) ?? "";
+
             // Log what we are about to do.
             Logger.LogDebug(
                 "Saving the changes."
                 );
 
-            // Create the new property.
-            var newProperty = await ProviderManager.CreateAsync(
+            // Create the new provider.
+            var newProvider = await ProviderManager.CreateAsync(
                 new ProviderModel()
                 {
                     Name = safeName,
                     Tag = safeTag,
-                    ProcessorType = _secretProcessorTypes.FirstOrDefault()?.Name ?? "",
-                    ProviderType = ProviderType.Secret
+                    ProcessorType = defaultProcessorType,
+                    ProviderType = providerType
                 },
                 UserName
                 );
 
             // Log what we are about to do.
             Logger.LogDebug(
-                "Showing the snackbar message."
+                "Navigating to the edit page."
                 );
 
-            // Tell the world what happened.
-            SnackbarService.Add(
-                $"Changes were saved",
-                Severity.Success,
-                options => options.CloseAfterNavigation = true
+            // Edit the new provider.
+            NavigationManager.NavigateTo(
+                $"/admin/providers/provider/{newProvider.Id}", 
+                true
                 );
-
-            // Log what we are about to do.
-            Logger.LogDebug(
-                "Refreshing the page data."
-                );
-
-            // Get the list of providers.
-            _providers = await ProviderManager.FindAllAsync();
         }
         catch (Exception ex)
         {

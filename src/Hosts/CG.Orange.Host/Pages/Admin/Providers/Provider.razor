@@ -30,6 +30,7 @@ else
                               Variant="Variant.Outlined"
                               Label="Name"
                               For="@(() => _model.Name)"
+                              HelperText="@(_model.Name.StartsWith("New") ? "Change the default name to something that makes sense for this provider" : "")"
                 @bind-Value="@_model.Name" />
             </MudItem>
             <MudItem xs="12">
@@ -50,6 +51,7 @@ else
                               Immediate
                               Counter="@(Globals.Models.Providers.TagLength)"
                               For="@(() => _model.Tag)"
+                              HelperText="@(_model.Tag.StartsWith("New") ? "Change the default tag to something that makes sense for this provider" : "")"
                 @bind-Value="@_model.Tag" />
             </MudItem>
             <MudItem xs="12">
@@ -62,19 +64,6 @@ else
                 {
                     <MudAlert Severity="Severity.Warning">Remember, a disabled provider won't perform any work!</MudAlert>
                 }
-            </MudItem>
-            <MudItem xs="12">
-                <MudSelect T="ProviderType"
-                           Required
-                @bind-Value="_model.ProviderType"
-                           SelectedValuesChanged="OnProviderTypeChanged"
-                           Class="ml-auto"
-                           Label="Provider Type" Placeholder="Select a provider type.">
-                    @foreach (var providerType in Enum.GetNames<ProviderType>())
-                    {
-                        <MudSelectItem Value="@(Enum.Parse<ProviderType>(providerType))">@providerType</MudSelectItem>
-                    }
-                </MudSelect>
             </MudItem>
             <MudItem xs="12">
                 <MudSelect T="string"

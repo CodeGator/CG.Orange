@@ -68,13 +68,10 @@ namespace CG.Orange.Data.Sqlite.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "Name" }, "IX_Provider_Names")
-                        .IsUnique();
-
                     b.HasIndex(new[] { "Tag" }, "IX_Provider_Tags")
                         .IsUnique();
 
-                    b.HasIndex(new[] { "IsDisabled", "ProviderType", "ProcessorType" }, "IX_Providers");
+                    b.HasIndex(new[] { "Name", "IsDisabled", "ProviderType", "ProcessorType" }, "IX_Providers");
 
                     b.ToTable("Providers", "Orange");
                 });

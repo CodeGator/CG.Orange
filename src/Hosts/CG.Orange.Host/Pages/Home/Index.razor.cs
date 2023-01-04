@@ -1,7 +1,4 @@
-﻿using CG.Orange.Host.Pages.Admin.Settings;
-using System.Security.Claims;
-using System.Security.Principal;
-
+﻿
 namespace CG.Orange.Host.Pages.Home;
 
 /// <summary>
