@@ -325,7 +325,9 @@ this director.</p>
   </table>
   <a id="CG_Orange_Directors_ConfigurationDirector_ReplaceTokensAsync_" data-uid="CG.Orange.Directors.ConfigurationDirector.ReplaceTokensAsync*"></a>
   <h4 id="CG_Orange_Directors_ConfigurationDirector_ReplaceTokensAsync_System_String_System_String_IConfigurationRoot_CancellationToken_" data-uid="CG.Orange.Directors.ConfigurationDirector.ReplaceTokensAsync(System.String,System.String,IConfigurationRoot,CancellationToken)">ReplaceTokensAsync(String, String, IConfigurationRoot, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method scans through the given configuration replacing tokens
+with their associated secrets.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,22 +346,29 @@ this director.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">applicationName</span></td>
-        <td></td>
+        <td><p>The name of the application to use
+for the operation.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">environmentName</span></td>
-        <td></td>
+        <td><p>The name of the environment to use
+for the operation.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IConfigurationRoot</span></td>
         <td><span class="parametername">source</span></td>
-        <td></td>
+        <td><p>The source configuration to use for the operation.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -374,7 +383,9 @@ this director.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
-        <td></td>
+        <td><p>A task to perform the operation that returns a dictionary
+of key-value-pairs.</p>
+</td>
       </tr>
     </tbody>
   </table>
