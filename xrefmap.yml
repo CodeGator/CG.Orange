@@ -841,12 +841,6 @@ references:
   commentId: M:CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(CancellationToken)
   fullName: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(CancellationToken)
   nameWithType: ProviderRepository.AnyAsync(CancellationToken)
-- uid: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(System.String,CancellationToken)
-  name: AnyAsync(String, CancellationToken)
-  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_AnyAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync(System.String, CancellationToken)
-  nameWithType: ProviderRepository.AnyAsync(String, CancellationToken)
 - uid: CG.Orange.Data.Repositories.ProviderRepository.AnyAsync*
   name: AnyAsync
   href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_AnyAsync_
@@ -919,19 +913,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByIdAsync
   nameWithType: ProviderRepository.FindByIdAsync
-- uid: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync(System.String,CancellationToken)
-  name: FindByNameAsync(String, CancellationToken)
-  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByNameAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync(System.String, CancellationToken)
-  nameWithType: ProviderRepository.FindByNameAsync(String, CancellationToken)
-- uid: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync*
-  name: FindByNameAsync
-  href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByNameAsync_
-  commentId: Overload:CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync
-  isSpec: "True"
-  fullName: CG.Orange.Data.Repositories.ProviderRepository.FindByNameAsync
-  nameWithType: ProviderRepository.FindByNameAsync
 - uid: CG.Orange.Data.Repositories.ProviderRepository.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
   name: FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
   href: api/CG.Orange.Data.Repositories.ProviderRepository.html#CG_Orange_Data_Repositories_ProviderRepository_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_
@@ -1758,6 +1739,12 @@ references:
   commentId: T:CG.Orange.Host.Pages.Admin.Providers.Index
   fullName: CG.Orange.Host.Pages.Admin.Providers.Index
   nameWithType: Index
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index._cacheProcessorTypes
+  name: _cacheProcessorTypes
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index__cacheProcessorTypes
+  commentId: F:CG.Orange.Host.Pages.Admin.Providers.Index._cacheProcessorTypes
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index._cacheProcessorTypes
+  nameWithType: Index._cacheProcessorTypes
 - uid: CG.Orange.Host.Pages.Admin.Providers.Index._crumbs
   name: _crumbs
   href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index__crumbs
@@ -1854,12 +1841,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Providers.Index.NavigationManager
   nameWithType: Index.NavigationManager
-- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync
-  name: OnCreateAsync()
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnCreateAsync
-  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync()
-  nameWithType: Index.OnCreateAsync()
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync(ProviderType)
+  name: OnCreateAsync(ProviderType)
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnCreateAsync_ProviderType_
+  commentId: M:CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync(ProviderType)
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync(ProviderType)
+  nameWithType: Index.OnCreateAsync(ProviderType)
 - uid: CG.Orange.Host.Pages.Admin.Providers.Index.OnCreateAsync*
   name: OnCreateAsync
   href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OnCreateAsync_
@@ -2839,12 +2826,6 @@ references:
   commentId: M:CG.Orange.Managers.IProviderManager.AnyAsync(CancellationToken)
   fullName: CG.Orange.Managers.IProviderManager.AnyAsync(CancellationToken)
   nameWithType: IProviderManager.AnyAsync(CancellationToken)
-- uid: CG.Orange.Managers.IProviderManager.AnyAsync(System.String,CancellationToken)
-  name: AnyAsync(String, CancellationToken)
-  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_AnyAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.IProviderManager.AnyAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Managers.IProviderManager.AnyAsync(System.String, CancellationToken)
-  nameWithType: IProviderManager.AnyAsync(String, CancellationToken)
 - uid: CG.Orange.Managers.IProviderManager.AnyAsync*
   name: AnyAsync
   href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_AnyAsync_
@@ -2943,19 +2924,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.IProviderManager.FindByIdAsync
   nameWithType: IProviderManager.FindByIdAsync
-- uid: CG.Orange.Managers.IProviderManager.FindByNameAsync(System.String,CancellationToken)
-  name: FindByNameAsync(String, CancellationToken)
-  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByNameAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.IProviderManager.FindByNameAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Managers.IProviderManager.FindByNameAsync(System.String, CancellationToken)
-  nameWithType: IProviderManager.FindByNameAsync(String, CancellationToken)
-- uid: CG.Orange.Managers.IProviderManager.FindByNameAsync*
-  name: FindByNameAsync
-  href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByNameAsync_
-  commentId: Overload:CG.Orange.Managers.IProviderManager.FindByNameAsync
-  isSpec: "True"
-  fullName: CG.Orange.Managers.IProviderManager.FindByNameAsync
-  nameWithType: IProviderManager.FindByNameAsync
 - uid: CG.Orange.Managers.IProviderManager.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
   name: FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
   href: api/CG.Orange.Managers.IProviderManager.html#CG_Orange_Managers_IProviderManager_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_
@@ -3346,12 +3314,6 @@ references:
   commentId: M:CG.Orange.Managers.ProviderManager.AnyAsync(CancellationToken)
   fullName: CG.Orange.Managers.ProviderManager.AnyAsync(CancellationToken)
   nameWithType: ProviderManager.AnyAsync(CancellationToken)
-- uid: CG.Orange.Managers.ProviderManager.AnyAsync(System.String,CancellationToken)
-  name: AnyAsync(String, CancellationToken)
-  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_AnyAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.ProviderManager.AnyAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Managers.ProviderManager.AnyAsync(System.String, CancellationToken)
-  nameWithType: ProviderManager.AnyAsync(String, CancellationToken)
 - uid: CG.Orange.Managers.ProviderManager.AnyAsync*
   name: AnyAsync
   href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_AnyAsync_
@@ -3450,19 +3412,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ProviderManager.FindByIdAsync
   nameWithType: ProviderManager.FindByIdAsync
-- uid: CG.Orange.Managers.ProviderManager.FindByNameAsync(System.String,CancellationToken)
-  name: FindByNameAsync(String, CancellationToken)
-  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByNameAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.ProviderManager.FindByNameAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Managers.ProviderManager.FindByNameAsync(System.String, CancellationToken)
-  nameWithType: ProviderManager.FindByNameAsync(String, CancellationToken)
-- uid: CG.Orange.Managers.ProviderManager.FindByNameAsync*
-  name: FindByNameAsync
-  href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByNameAsync_
-  commentId: Overload:CG.Orange.Managers.ProviderManager.FindByNameAsync
-  isSpec: "True"
-  fullName: CG.Orange.Managers.ProviderManager.FindByNameAsync
-  nameWithType: ProviderManager.FindByNameAsync
 - uid: CG.Orange.Managers.ProviderManager.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
   name: FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
   href: api/CG.Orange.Managers.ProviderManager.html#CG_Orange_Managers_ProviderManager_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_
@@ -4832,12 +4781,6 @@ references:
   commentId: M:CG.Orange.Repositories.IProviderRepository.AnyAsync(CancellationToken)
   fullName: CG.Orange.Repositories.IProviderRepository.AnyAsync(CancellationToken)
   nameWithType: IProviderRepository.AnyAsync(CancellationToken)
-- uid: CG.Orange.Repositories.IProviderRepository.AnyAsync(System.String,CancellationToken)
-  name: AnyAsync(String, CancellationToken)
-  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_AnyAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Repositories.IProviderRepository.AnyAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Repositories.IProviderRepository.AnyAsync(System.String, CancellationToken)
-  nameWithType: IProviderRepository.AnyAsync(String, CancellationToken)
 - uid: CG.Orange.Repositories.IProviderRepository.AnyAsync*
   name: AnyAsync
   href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_AnyAsync_
@@ -4910,19 +4853,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.IProviderRepository.FindByIdAsync
   nameWithType: IProviderRepository.FindByIdAsync
-- uid: CG.Orange.Repositories.IProviderRepository.FindByNameAsync(System.String,CancellationToken)
-  name: FindByNameAsync(String, CancellationToken)
-  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByNameAsync_System_String_CancellationToken_
-  commentId: M:CG.Orange.Repositories.IProviderRepository.FindByNameAsync(System.String,CancellationToken)
-  fullName: CG.Orange.Repositories.IProviderRepository.FindByNameAsync(System.String, CancellationToken)
-  nameWithType: IProviderRepository.FindByNameAsync(String, CancellationToken)
-- uid: CG.Orange.Repositories.IProviderRepository.FindByNameAsync*
-  name: FindByNameAsync
-  href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByNameAsync_
-  commentId: Overload:CG.Orange.Repositories.IProviderRepository.FindByNameAsync
-  isSpec: "True"
-  fullName: CG.Orange.Repositories.IProviderRepository.FindByNameAsync
-  nameWithType: IProviderRepository.FindByNameAsync
 - uid: CG.Orange.Repositories.IProviderRepository.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
   name: FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
   href: api/CG.Orange.Repositories.IProviderRepository.html#CG_Orange_Repositories_IProviderRepository_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_
