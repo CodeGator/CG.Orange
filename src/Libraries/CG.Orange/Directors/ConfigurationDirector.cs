@@ -323,10 +323,6 @@ internal class ConfigurationDirector : IConfigurationDirector
             
             try
             {
-                var secretTag = "";
-                var cacheTag = "";
-                string? altKey = null;
-
                 // Sanity check the value.
                 if (!string.IsNullOrEmpty(value))
                 {
@@ -335,39 +331,26 @@ internal class ConfigurationDirector : IConfigurationDirector
                         "Looking for a replacement token in the setting value"
                         );
 
-                    // Look for a replacement token.
-                    if (value.StartsWith("##") && value.EndsWith("##"))
+                    // Parse the token.
+                    if (!ReplacementToken.TryParse(
+                        value,
+                        out var secretTag,
+                        out var cacheTag,
+                        out var altKey
+                        ))
                     {
                         // Log what we are about to do.
-                        _logger.LogDebug(
-                            "Parsing the replacement token"
+                        _logger.LogWarning(
+                            "Found malformed replacement token for application " +
+                            "{app}, environment: {env}",
+                            applicationName,
+                            environmentName
                             );
 
-                        // Trim the token delimiters.
-                        value = value.TrimStart('#').TrimEnd('#');
-                        
-                        // Try to split the token.
-                        var parts = value.Split(':');
-
-                        // Save the secret tag.
-                        secretTag = parts[0];
-
-                        // Is there a cache tag?
-                        if (parts.Length == 2)
-                        {
-                            // Save the cache tag.
-                            cacheTag = parts[1];    
-                        }
-
-                        // Is there an alternate key?
-                        if (parts.Length == 3)
-                        {
-                            // Save the alt key.
-                            altKey = parts[2];
-                        }
-
-                        // We'll supply this from a secret, or the cache, later.
-                        value = "";
+                        // Panic!!
+                        throw new InvalidDataException(
+                            $"The replacement toke nwas invalid!"
+                            );
                     }
 
                     // Log what we are about to do.
@@ -464,7 +447,7 @@ internal class ConfigurationDirector : IConfigurationDirector
 
                         // Look for a matching provider.
                         var secretProvider = await _providerManager.FindByTagAndTypeAsync(
-                            secretTag,
+                            secretTag ?? "",
                             ProviderType.Secret,
                             cancellationToken
                             ).ConfigureAwait(false);

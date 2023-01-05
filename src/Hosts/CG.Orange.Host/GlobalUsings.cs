@@ -18,3 +18,4 @@ global using CG.Orange.Directors;
 global using System.IdentityModel.Tokens.Jwt;
 global using System.ComponentModel.DataAnnotations;
 global using CG.Orange.Processors;
+global using CG.Orange.Utilities;

@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Managers;
-
 namespace CG.Orange.Host.Pages.Admin.Settings;
 
 /// <summary>

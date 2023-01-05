@@ -37,6 +37,12 @@ public partial class Setting
     public int SettingId { get; set; }
 
     /// <summary>
+    /// This property contains the dialog service for the page.
+    /// </summary>
+    [Inject]
+    protected IDialogService DialogService { get; set; } = null!;
+
+    /// <summary>
     /// This property contains the snackbar service for the page.
     /// </summary>
     [Inject]
@@ -59,6 +65,12 @@ public partial class Setting
     /// </summary>
     [Inject]
     protected ISettingFileManager SettingFileManager { get; set; } = null!;
+
+    /// <summary>
+    /// This property contains the provider manager for the page.
+    /// </summary>
+    [Inject]
+    protected IProviderManager ProviderManager { get; set; } = null!;
 
     /// <summary>
     /// This property contains the name of the current user, or the word
@@ -204,7 +216,7 @@ public partial class Setting
     /// </summary>
     /// <returns>A task to perform the operation that returns <c>true</c>
     /// if the JSON is valid, <c>false</c> otherwise.</returns>
-    protected Task<bool> OnValidateJsonAsync()
+    protected async Task<bool> OnValidateJsonAsync()
     {
         try
         {
@@ -216,7 +228,7 @@ public partial class Setting
             // Is the model missing?
             if (_model is null)
             {
-                return Task.FromResult(false);
+                return false;
             }
 
             // Log what we are about to do.
@@ -240,7 +252,102 @@ public partial class Setting
             //   logic ourselves.
             var builder = new ConfigurationBuilder();
             builder.AddJsonStream(memStream);
-            _ = builder.Build();
+            var cfg = builder.Build();
+
+            // Get a list of all providers.
+            var providers = (await ProviderManager.FindAllAsync());
+
+            // Now that we know the JSON is well formed, let's walk
+            //   down the tree and validate any replacement tokens.
+            foreach (var kvp in cfg.AsEnumerable())
+            {
+                // Can we parse a token?
+                if (ReplacementToken.TryParse(
+                    kvp.Value ?? "",
+                    out var secretTag,
+                    out var cacheTag,
+                    out var altKey
+                    ))
+                {
+                    // The secret tag is required.
+                    if (string.IsNullOrEmpty(secretTag))
+                    {
+                        // Prompt the user.
+                        await DialogService.ShowMessageBox(
+                            title: "Orange",
+                            markupMessage: new MarkupString("The JSON contains a key: " +
+                            $"'{kvp.Key}' with replacement token where the <b>secret tag</b> is " +
+                            $"missing or empty.")
+                            );
+
+                        return false; // Json not valid.
+                    }
+
+                    // Sanity check the secret tag.
+                    if (!providers.Any(x => x.Tag == secretTag))
+                    {
+                        // Prompt the user.
+                        await DialogService.ShowMessageBox(
+                            title: "Orange",
+                            markupMessage: new MarkupString("The JSON contains a key: " +
+                            $"'{kvp.Key}' with replacement token where the <b>secret tag</b> doesn't " +
+                            $"match a current provider's tag.")
+                            );
+
+                        return false; // Json not valid.
+                    }
+
+                    // Is the provider disabled?
+                    if (providers.Any(x => x.Tag == secretTag &&
+                        x.IsDisabled
+                        ))
+                    {
+                        // Prompt the user.
+                        await DialogService.ShowMessageBox(
+                            title: "Orange",
+                            markupMessage: new MarkupString("The JSON contains a key: " +
+                            $"'{kvp.Key}' with replacement token where the <b>secret tag<b/> points " +
+                            $"to a disabled provider.")
+                            );
+
+                        return false; // Json not valid.
+                    }
+
+                    // Is there a cache tag?
+                    if (!string.IsNullOrEmpty(cacheTag))
+                    {
+                        // Sanity check the cache tag.
+                        if (!providers.Any(x => x.Tag == cacheTag))
+                        {
+                            // Prompt the user.
+                            await DialogService.ShowMessageBox(
+                                title: "Orange",
+                                markupMessage: new MarkupString("The JSON contains a key: " +
+                                $"'{kvp.Key}' with replacement token where the <b>cache tag</b> doesn't " +
+                                $"match a current provider's tag.")
+                                );
+
+                            return false; // Json not valid.
+                        }
+
+                        // Is the provider disabled?
+                        if (providers.Any(x => x.Tag == cacheTag &&
+                            x.IsDisabled
+                            ))
+                        {
+                            // Prompt the user.
+                            await DialogService.ShowMessageBox(
+                                title: "Orange",
+                                markupMessage: new MarkupString("The JSON contains a key: " +
+                                $"'{kvp.Key}' with replacement token where the <b>cache tag</b> points " +
+                                $"to a disabled provider.")
+                                );
+
+                            return false; // Json not valid.
+                        }
+                    }
+                }
+            }
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -255,7 +362,7 @@ public partial class Setting
                 );
 
             // Json is valid.
-            return Task.FromResult(true);
+            return true;
         }
         catch (Exception ex)
         {
@@ -273,7 +380,7 @@ public partial class Setting
                 );
 
             // Json is invalid.
-            return Task.FromResult(false);
+            return false;
         }
     }
 
