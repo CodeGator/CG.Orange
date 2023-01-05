@@ -280,6 +280,12 @@ for the lifetime of the method.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Orange_Managers_IProviderManager_CreateAsync_ProviderModel_System_String_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method also creates any objects in the <see cref="!:ProviderModel.Properties"></see> 
+property, in the underlying storage.
+</p>
+</div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -788,6 +794,14 @@ for the lifetime of the method.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Orange_Managers_IProviderManager_UpdateAsync_ProviderModel_System_String_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This method won&apos;t update any objects in the <see cref="!:ProviderModel.Properties"></see> 
+property, in the underlying storage. To update those properties, use the 
+<a class="xref" href="CG.Orange.Managers.IProviderPropertyManager.html#CG_Orange_Managers_IProviderPropertyManager_UpdateAsync_ProviderPropertyModel_System_String_CancellationToken_">UpdateAsync(ProviderPropertyModel, String, CancellationToken)</a>
+method on the individual properties.
+</p>
+</div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
