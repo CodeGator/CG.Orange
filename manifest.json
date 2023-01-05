@@ -582,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.Admin.Settings.Index.html",
-          "hash": "b5fwXB/msakBcSS/Fxz4om0QYWzqV6sASnkeyKlr074="
+          "hash": "DrdjMNjz3hCyXeJ7H9C8lcDt+cwItcve2LZQlMEXh64="
         }
       },
       "is_incremental": false,
@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.Admin.Settings.Setting.html",
-          "hash": "mTiv4h7GGznfE6zyP1hl7p58HaY6pgJKHC1SftewH7k="
+          "hash": "F59ycJ1kUWAIcptBDvaq8GBxw3m2fmhQR575iwcqgQM="
         }
       },
       "is_incremental": false,
@@ -1262,6 +1262,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Utilities.ReplacementToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Utilities.ReplacementToken.html",
+          "hash": "3fJbU1A7pPhbldkZT9KhW6hAfJCxQfGWrvdm4+2NP0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Utilities.html",
+          "hash": "zfT8KU5jfOsZtu5lDpkAzuFSGRiwuJ+cj+c9KhyIz6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.yml",
       "output": {
         ".html": {
@@ -1338,7 +1362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eBoOHv47lcXpHfhbX7+5NFC2hf2B40WJfYINoNmUsZ8="
+          "hash": "FHjvjA7VMVDmA64UciFj8+I0V4PZyNgH3BxWk2X/GgU="
         }
       },
       "is_incremental": false,
@@ -1457,7 +1481,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 110,
+          "total_file_count": 112,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

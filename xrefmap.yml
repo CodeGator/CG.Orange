@@ -2402,6 +2402,19 @@ references:
   commentId: F:CG.Orange.Host.Pages.Admin.Settings.Setting._model
   fullName: CG.Orange.Host.Pages.Admin.Settings.Setting._model
   nameWithType: Setting._model
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.DialogService
+  name: DialogService
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_DialogService
+  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Setting.DialogService
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.DialogService
+  nameWithType: Setting.DialogService
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.DialogService*
+  name: DialogService
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_DialogService_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.DialogService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.DialogService
+  nameWithType: Setting.DialogService
 - uid: CG.Orange.Host.Pages.Admin.Settings.Setting.HttpContextAccessor
   name: HttpContextAccessor
   href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_HttpContextAccessor
@@ -2480,6 +2493,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit
   nameWithType: Setting.OnValidSubmit
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
+  name: ProviderManager
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_ProviderManager
+  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
+  nameWithType: Setting.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager*
+  name: ProviderManager
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_ProviderManager_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
+  nameWithType: Setting.ProviderManager
 - uid: CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager
   name: SettingFileManager
   href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_SettingFileManager
@@ -5114,6 +5140,47 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.RepositoryException.RepositoryException
   nameWithType: RepositoryException.RepositoryException
+- uid: CG.Orange.Utilities
+  name: CG.Orange.Utilities
+  href: api/CG.Orange.Utilities.html
+  commentId: N:CG.Orange.Utilities
+  fullName: CG.Orange.Utilities
+  nameWithType: CG.Orange.Utilities
+- uid: CG.Orange.Utilities.ReplacementToken
+  name: ReplacementToken
+  href: api/CG.Orange.Utilities.ReplacementToken.html
+  commentId: T:CG.Orange.Utilities.ReplacementToken
+  fullName: CG.Orange.Utilities.ReplacementToken
+  nameWithType: ReplacementToken
+- uid: CG.Orange.Utilities.ReplacementToken.HasToken(System.String)
+  name: HasToken(String)
+  href: api/CG.Orange.Utilities.ReplacementToken.html#CG_Orange_Utilities_ReplacementToken_HasToken_System_String_
+  commentId: M:CG.Orange.Utilities.ReplacementToken.HasToken(System.String)
+  fullName: CG.Orange.Utilities.ReplacementToken.HasToken(System.String)
+  nameWithType: ReplacementToken.HasToken(String)
+- uid: CG.Orange.Utilities.ReplacementToken.HasToken*
+  name: HasToken
+  href: api/CG.Orange.Utilities.ReplacementToken.html#CG_Orange_Utilities_ReplacementToken_HasToken_
+  commentId: Overload:CG.Orange.Utilities.ReplacementToken.HasToken
+  isSpec: "True"
+  fullName: CG.Orange.Utilities.ReplacementToken.HasToken
+  nameWithType: ReplacementToken.HasToken
+- uid: CG.Orange.Utilities.ReplacementToken.TryParse(System.String,System.String@,System.String@,System.String@)
+  name: TryParse(String, out String, out String, out String)
+  href: api/CG.Orange.Utilities.ReplacementToken.html#CG_Orange_Utilities_ReplacementToken_TryParse_System_String_System_String__System_String__System_String__
+  commentId: M:CG.Orange.Utilities.ReplacementToken.TryParse(System.String,System.String@,System.String@,System.String@)
+  name.vb: TryParse(String, ByRef String, ByRef String, ByRef String)
+  fullName: CG.Orange.Utilities.ReplacementToken.TryParse(System.String, out System.String, out System.String, out System.String)
+  fullName.vb: CG.Orange.Utilities.ReplacementToken.TryParse(System.String, ByRef System.String, ByRef System.String, ByRef System.String)
+  nameWithType: ReplacementToken.TryParse(String, out String, out String, out String)
+  nameWithType.vb: ReplacementToken.TryParse(String, ByRef String, ByRef String, ByRef String)
+- uid: CG.Orange.Utilities.ReplacementToken.TryParse*
+  name: TryParse
+  href: api/CG.Orange.Utilities.ReplacementToken.html#CG_Orange_Utilities_ReplacementToken_TryParse_
+  commentId: Overload:CG.Orange.Utilities.ReplacementToken.TryParse
+  isSpec: "True"
+  fullName: CG.Orange.Utilities.ReplacementToken.TryParse
+  nameWithType: ReplacementToken.TryParse
 - uid: Microsoft.AspNetCore.Builder
   name: Microsoft.AspNetCore.Builder
   href: api/Microsoft.AspNetCore.Builder.html
