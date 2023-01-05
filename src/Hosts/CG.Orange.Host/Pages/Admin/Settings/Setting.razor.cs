@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Host.Hubs;
-
 namespace CG.Orange.Host.Pages.Admin.Settings;
 
 /// <summary>
@@ -140,6 +138,12 @@ public partial class Setting
         }
         catch (Exception ex)
         {
+            // Log what happened.
+            Logger.LogError(
+                ex,
+                "Failed to initialize the page"
+                );
+
             // Tell the world what happened.
             SnackbarService.Add(
                 $"<b>Something broke!</b> " +
@@ -213,6 +217,12 @@ public partial class Setting
         }
         catch (Exception ex)
         {
+            // Log what happened.
+            Logger.LogError(
+                ex,
+                "Failed to submit changes"
+                );
+
             // Log what we are about to do.
             Logger.LogDebug(
                 "Showing the snackbar message."
@@ -385,6 +395,12 @@ public partial class Setting
         }
         catch (Exception ex)
         {
+            // Log what happened.
+            Logger.LogError(
+                ex,
+                "Failed to validate JSON"
+                );
+
             // Log what we are about to do.
             Logger.LogDebug(
                 "Showing the snackbar message."

@@ -21,3 +21,4 @@ global using System.IdentityModel.Tokens.Jwt;
 global using System.Reflection;
 global using System.Text;
 global using Microsoft.AspNetCore.SignalR;
+global using CG.Orange.Host.Hubs;
