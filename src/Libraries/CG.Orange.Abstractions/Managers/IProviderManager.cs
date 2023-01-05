@@ -50,6 +50,12 @@ public interface IProviderManager
     /// or more arguments are missing, or invalid.</exception>
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
+    /// <remarks>
+    /// <para>
+    /// This method also creates any objects in the <see cref="ProviderModel.Properties"/> 
+    /// property, in the underlying storage.
+    /// </para>
+    /// </remarks>
     Task<ProviderModel> CreateAsync(
         ProviderModel provider,
         string userName,
@@ -179,6 +185,14 @@ public interface IProviderManager
     /// or more arguments are missing, or invalid.</exception>
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
+    /// <remarks>
+    /// <para>
+    /// This method won't update any objects in the <see cref="ProviderModel.Properties"/> 
+    /// property, in the underlying storage. To update those properties, use the 
+    /// <see cref="IProviderPropertyManager.UpdateAsync(ProviderPropertyModel, string, CancellationToken)"/>
+    /// method on the individual properties.
+    /// </para>
+    /// </remarks>
     Task<ProviderModel> UpdateAsync(
         ProviderModel provider,
         string userName,

@@ -247,8 +247,8 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
             // If we modify the properties of the incoming model then,
             //   from the caller's perspective, we're creating unwanted
-            //   side-affects. For that reason, we'll copy the model
-            //   before we manipulate it.
+            //   side-affects. For that reason, we'll copy the model here
+            //   and work on that, instead.
             var copy = providerProperty.QuickClone();
 
             // Log what we are about to do.
@@ -616,7 +616,8 @@ internal class ProviderPropertyManager : IProviderPropertyManager
 
             // If we modify the properties of the incoming model then,
             //   from the caller's perspective, we're creating unwanted
-            //   side-affects. For that reason, we'll copy it here.
+            //   side-affects. For that reason, we'll copy the model here
+            //   and work on that, instead.
             var copy = providerProperty.QuickClone();
 
             // Log what we are about to do.

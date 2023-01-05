@@ -160,7 +160,8 @@ internal class ProviderManager : IProviderManager
 
             // If we modify the properties of the incoming model then,
             //   from the caller's perspective, we're creating unwanted
-            //   side-affects. For that reason, we'll copy it here.
+            //   side-affects. For that reason, we'll copy the model here
+            //   and work on that, instead.
             var copy = provider.QuickClone();
 
             // Log what we are about to do.
@@ -217,9 +218,15 @@ internal class ProviderManager : IProviderManager
                 !string.IsNullOrEmpty(x.Value)
                 ))
             {
+                // Log what we are about to do.
+                _logger.LogTrace(
+                    "Looping through {count} provider properties",
+                    newProvider.Properties.Count
+                    );
+
                 // Loop through the properties with values.
                 foreach (var property in provider.Properties.Where(x =>
-                    string.IsNullOrEmpty(x.Value)
+                    !string.IsNullOrEmpty(x.Value)
                     ))
                 {
                     // Log what we are about to do.
@@ -709,8 +716,8 @@ internal class ProviderManager : IProviderManager
 
             // If we modify the properties of the incoming model then,
             //   from the caller's perspective, we're creating unwanted
-            //   side-affects. For that reason, we'll copy the model
-            //   before we manipulate it.
+            //   side-affects. For that reason, we'll copy the model here
+            //   and work on that, instead.
             var copy = provider.QuickClone();
 
             // Log what we are about to do.
@@ -740,7 +747,7 @@ internal class ProviderManager : IProviderManager
 
             // Are there properties with values?
             if (changedProvider.Properties.Any(x => 
-                string.IsNullOrEmpty(x.Value)
+                !string.IsNullOrEmpty(x.Value)
                 ))
             {
                 // Loop through the properties with values.
