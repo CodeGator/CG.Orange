@@ -1685,6 +1685,101 @@ references:
   commentId: F:CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
   fullName: CG.Orange.Globals.Models.SettingFiles.EnvironmentNameLength
   nameWithType: Globals.Models.SettingFiles.EnvironmentNameLength
+- uid: CG.Orange.Host.Hubs
+  name: CG.Orange.Host.Hubs
+  href: api/CG.Orange.Host.Hubs.html
+  commentId: N:CG.Orange.Host.Hubs
+  fullName: CG.Orange.Host.Hubs
+  nameWithType: CG.Orange.Host.Hubs
+- uid: CG.Orange.Host.Hubs.SignalRHub
+  name: SignalRHub
+  href: api/CG.Orange.Host.Hubs.SignalRHub.html
+  commentId: T:CG.Orange.Host.Hubs.SignalRHub
+  fullName: CG.Orange.Host.Hubs.SignalRHub
+  nameWithType: SignalRHub
+- uid: CG.Orange.Host.Hubs.SignalRHub.#ctor
+  name: SignalRHub()
+  href: api/CG.Orange.Host.Hubs.SignalRHub.html#CG_Orange_Host_Hubs_SignalRHub__ctor
+  commentId: M:CG.Orange.Host.Hubs.SignalRHub.#ctor
+  fullName: CG.Orange.Host.Hubs.SignalRHub.SignalRHub()
+  nameWithType: SignalRHub.SignalRHub()
+- uid: CG.Orange.Host.Hubs.SignalRHub.#ctor*
+  name: SignalRHub
+  href: api/CG.Orange.Host.Hubs.SignalRHub.html#CG_Orange_Host_Hubs_SignalRHub__ctor_
+  commentId: Overload:CG.Orange.Host.Hubs.SignalRHub.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Host.Hubs.SignalRHub.SignalRHub
+  nameWithType: SignalRHub.SignalRHub
+- uid: CG.Orange.Host.Hubs.SignalRHub.OnChangedSettingAsync(System.String,System.String,CancellationToken)
+  name: OnChangedSettingAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Host.Hubs.SignalRHub.html#CG_Orange_Host_Hubs_SignalRHub_OnChangedSettingAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Host.Hubs.SignalRHub.OnChangedSettingAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Host.Hubs.SignalRHub.OnChangedSettingAsync(System.String, System.String, CancellationToken)
+  nameWithType: SignalRHub.OnChangedSettingAsync(String, String, CancellationToken)
+- uid: CG.Orange.Host.Hubs.SignalRHub.OnChangedSettingAsync*
+  name: OnChangedSettingAsync
+  href: api/CG.Orange.Host.Hubs.SignalRHub.html#CG_Orange_Host_Hubs_SignalRHub_OnChangedSettingAsync_
+  commentId: Overload:CG.Orange.Host.Hubs.SignalRHub.OnChangedSettingAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Hubs.SignalRHub.OnChangedSettingAsync
+  nameWithType: SignalRHub.OnChangedSettingAsync
+- uid: CG.Orange.Host.Options
+  name: CG.Orange.Host.Options
+  href: api/CG.Orange.Host.Options.html
+  commentId: N:CG.Orange.Host.Options
+  fullName: CG.Orange.Host.Options
+  nameWithType: CG.Orange.Host.Options
+- uid: CG.Orange.Host.Options.HostedServicesOptions
+  name: HostedServicesOptions
+  href: api/CG.Orange.Host.Options.HostedServicesOptions.html
+  commentId: T:CG.Orange.Host.Options.HostedServicesOptions
+  fullName: CG.Orange.Host.Options.HostedServicesOptions
+  nameWithType: HostedServicesOptions
+- uid: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
+  name: WarmupService
+  href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_WarmupService
+  commentId: P:CG.Orange.Host.Options.HostedServicesOptions.WarmupService
+  fullName: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
+  nameWithType: HostedServicesOptions.WarmupService
+- uid: CG.Orange.Host.Options.HostedServicesOptions.WarmupService*
+  name: WarmupService
+  href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_WarmupService_
+  commentId: Overload:CG.Orange.Host.Options.HostedServicesOptions.WarmupService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
+  nameWithType: HostedServicesOptions.WarmupService
+- uid: CG.Orange.Host.Options.WarmupServiceOptions
+  name: WarmupServiceOptions
+  href: api/CG.Orange.Host.Options.WarmupServiceOptions.html
+  commentId: T:CG.Orange.Host.Options.WarmupServiceOptions
+  fullName: CG.Orange.Host.Options.WarmupServiceOptions
+  nameWithType: WarmupServiceOptions
+- uid: CG.Orange.Host.Options.WarmupServiceOptions.IsDisabled
+  name: IsDisabled
+  href: api/CG.Orange.Host.Options.WarmupServiceOptions.html#CG_Orange_Host_Options_WarmupServiceOptions_IsDisabled
+  commentId: P:CG.Orange.Host.Options.WarmupServiceOptions.IsDisabled
+  fullName: CG.Orange.Host.Options.WarmupServiceOptions.IsDisabled
+  nameWithType: WarmupServiceOptions.IsDisabled
+- uid: CG.Orange.Host.Options.WarmupServiceOptions.IsDisabled*
+  name: IsDisabled
+  href: api/CG.Orange.Host.Options.WarmupServiceOptions.html#CG_Orange_Host_Options_WarmupServiceOptions_IsDisabled_
+  commentId: Overload:CG.Orange.Host.Options.WarmupServiceOptions.IsDisabled
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.WarmupServiceOptions.IsDisabled
+  nameWithType: WarmupServiceOptions.IsDisabled
+- uid: CG.Orange.Host.Options.WarmupServiceOptions.StartupDelay
+  name: StartupDelay
+  href: api/CG.Orange.Host.Options.WarmupServiceOptions.html#CG_Orange_Host_Options_WarmupServiceOptions_StartupDelay
+  commentId: P:CG.Orange.Host.Options.WarmupServiceOptions.StartupDelay
+  fullName: CG.Orange.Host.Options.WarmupServiceOptions.StartupDelay
+  nameWithType: WarmupServiceOptions.StartupDelay
+- uid: CG.Orange.Host.Options.WarmupServiceOptions.StartupDelay*
+  name: StartupDelay
+  href: api/CG.Orange.Host.Options.WarmupServiceOptions.html#CG_Orange_Host_Options_WarmupServiceOptions_StartupDelay_
+  commentId: Overload:CG.Orange.Host.Options.WarmupServiceOptions.StartupDelay
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.WarmupServiceOptions.StartupDelay
+  nameWithType: WarmupServiceOptions.StartupDelay
 - uid: CG.Orange.Host.Pages
   name: CG.Orange.Host.Pages
   href: api/CG.Orange.Host.Pages.html
@@ -2254,6 +2349,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Index.HttpContextAccessor
   nameWithType: Index.HttpContextAccessor
+- uid: CG.Orange.Host.Pages.Admin.Settings.Index.Hub
+  name: Hub
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_Hub
+  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Index.Hub
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.Hub
+  nameWithType: Index.Hub
+- uid: CG.Orange.Host.Pages.Admin.Settings.Index.Hub*
+  name: Hub
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_Hub_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Index.Hub
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.Hub
+  nameWithType: Index.Hub
 - uid: CG.Orange.Host.Pages.Admin.Settings.Index.Logger
   name: Logger
   href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_Logger
@@ -2428,6 +2536,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.HttpContextAccessor
   nameWithType: Setting.HttpContextAccessor
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.Hub
+  name: Hub
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_Hub
+  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Setting.Hub
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.Hub
+  nameWithType: Setting.Hub
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.Hub*
+  name: Hub
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_Hub_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.Hub
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.Hub
+  nameWithType: Setting.Hub
 - uid: CG.Orange.Host.Pages.Admin.Settings.Setting.Logger
   name: Logger
   href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_Logger
@@ -2480,19 +2601,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidateJsonAsync
   nameWithType: Setting.OnValidateJsonAsync
-- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit
-  name: OnValidSubmit()
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_OnValidSubmit
-  commentId: M:CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit()
-  nameWithType: Setting.OnValidSubmit()
-- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit*
-  name: OnValidSubmit
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_OnValidSubmit_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync
+  name: OnValidSubmitAsync()
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_OnValidSubmitAsync
+  commentId: M:CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync()
+  nameWithType: Setting.OnValidSubmitAsync()
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync*
+  name: OnValidSubmitAsync
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_OnValidSubmitAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync
   isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmit
-  nameWithType: Setting.OnValidSubmit
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync
+  nameWithType: Setting.OnValidSubmitAsync
 - uid: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
   name: ProviderManager
   href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_ProviderManager
@@ -2643,104 +2764,110 @@ references:
   commentId: N:CG.Orange.Host.Services
   fullName: CG.Orange.Host.Services
   nameWithType: CG.Orange.Host.Services
-- uid: CG.Orange.Host.Services.StartupService
-  name: StartupService
-  href: api/CG.Orange.Host.Services.StartupService.html
-  commentId: T:CG.Orange.Host.Services.StartupService
-  fullName: CG.Orange.Host.Services.StartupService
-  nameWithType: StartupService
-- uid: CG.Orange.Host.Services.StartupService.#ctor(IServiceProvider,ILogger{CG.Orange.Host.Services.StartupService})
-  name: StartupService(IServiceProvider, ILogger<StartupService>)
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService__ctor_IServiceProvider_ILogger_CG_Orange_Host_Services_StartupService__
-  commentId: M:CG.Orange.Host.Services.StartupService.#ctor(IServiceProvider,ILogger{CG.Orange.Host.Services.StartupService})
-  name.vb: StartupService(IServiceProvider, ILogger(Of StartupService))
-  fullName: CG.Orange.Host.Services.StartupService.StartupService(IServiceProvider, ILogger<CG.Orange.Host.Services.StartupService>)
-  fullName.vb: CG.Orange.Host.Services.StartupService.StartupService(IServiceProvider, ILogger(Of CG.Orange.Host.Services.StartupService))
-  nameWithType: StartupService.StartupService(IServiceProvider, ILogger<StartupService>)
-  nameWithType.vb: StartupService.StartupService(IServiceProvider, ILogger(Of StartupService))
-- uid: CG.Orange.Host.Services.StartupService.#ctor*
-  name: StartupService
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService__ctor_
-  commentId: Overload:CG.Orange.Host.Services.StartupService.#ctor
+- uid: CG.Orange.Host.Services.WarmupService
+  name: WarmupService
+  href: api/CG.Orange.Host.Services.WarmupService.html
+  commentId: T:CG.Orange.Host.Services.WarmupService
+  fullName: CG.Orange.Host.Services.WarmupService
+  nameWithType: WarmupService
+- uid: CG.Orange.Host.Services.WarmupService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.WarmupService})
+  name: WarmupService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<WarmupService>)
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__ctor_IServiceProvider_IOptions_HostedServicesOptions__ILogger_CG_Orange_Host_Services_WarmupService__
+  commentId: M:CG.Orange.Host.Services.WarmupService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.WarmupService})
+  name.vb: WarmupService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of WarmupService))
+  fullName: CG.Orange.Host.Services.WarmupService.WarmupService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<CG.Orange.Host.Services.WarmupService>)
+  fullName.vb: CG.Orange.Host.Services.WarmupService.WarmupService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of CG.Orange.Host.Services.WarmupService))
+  nameWithType: WarmupService.WarmupService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<WarmupService>)
+  nameWithType.vb: WarmupService.WarmupService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of WarmupService))
+- uid: CG.Orange.Host.Services.WarmupService.#ctor*
+  name: WarmupService
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__ctor_
+  commentId: Overload:CG.Orange.Host.Services.WarmupService.#ctor
   isSpec: "True"
-  fullName: CG.Orange.Host.Services.StartupService.StartupService
-  nameWithType: StartupService.StartupService
-- uid: CG.Orange.Host.Services.StartupService._cts
+  fullName: CG.Orange.Host.Services.WarmupService.WarmupService
+  nameWithType: WarmupService.WarmupService
+- uid: CG.Orange.Host.Services.WarmupService._cts
   name: _cts
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService__cts
-  commentId: F:CG.Orange.Host.Services.StartupService._cts
-  fullName: CG.Orange.Host.Services.StartupService._cts
-  nameWithType: StartupService._cts
-- uid: CG.Orange.Host.Services.StartupService._executingTask
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__cts
+  commentId: F:CG.Orange.Host.Services.WarmupService._cts
+  fullName: CG.Orange.Host.Services.WarmupService._cts
+  nameWithType: WarmupService._cts
+- uid: CG.Orange.Host.Services.WarmupService._executingTask
   name: _executingTask
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService__executingTask
-  commentId: F:CG.Orange.Host.Services.StartupService._executingTask
-  fullName: CG.Orange.Host.Services.StartupService._executingTask
-  nameWithType: StartupService._executingTask
-- uid: CG.Orange.Host.Services.StartupService._logger
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__executingTask
+  commentId: F:CG.Orange.Host.Services.WarmupService._executingTask
+  fullName: CG.Orange.Host.Services.WarmupService._executingTask
+  nameWithType: WarmupService._executingTask
+- uid: CG.Orange.Host.Services.WarmupService._hostedServiceOptions
+  name: _hostedServiceOptions
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__hostedServiceOptions
+  commentId: F:CG.Orange.Host.Services.WarmupService._hostedServiceOptions
+  fullName: CG.Orange.Host.Services.WarmupService._hostedServiceOptions
+  nameWithType: WarmupService._hostedServiceOptions
+- uid: CG.Orange.Host.Services.WarmupService._logger
   name: _logger
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService__logger
-  commentId: F:CG.Orange.Host.Services.StartupService._logger
-  fullName: CG.Orange.Host.Services.StartupService._logger
-  nameWithType: StartupService._logger
-- uid: CG.Orange.Host.Services.StartupService._serviceProvider
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__logger
+  commentId: F:CG.Orange.Host.Services.WarmupService._logger
+  fullName: CG.Orange.Host.Services.WarmupService._logger
+  nameWithType: WarmupService._logger
+- uid: CG.Orange.Host.Services.WarmupService._serviceProvider
   name: _serviceProvider
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService__serviceProvider
-  commentId: F:CG.Orange.Host.Services.StartupService._serviceProvider
-  fullName: CG.Orange.Host.Services.StartupService._serviceProvider
-  nameWithType: StartupService._serviceProvider
-- uid: CG.Orange.Host.Services.StartupService.Dispose
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__serviceProvider
+  commentId: F:CG.Orange.Host.Services.WarmupService._serviceProvider
+  fullName: CG.Orange.Host.Services.WarmupService._serviceProvider
+  nameWithType: WarmupService._serviceProvider
+- uid: CG.Orange.Host.Services.WarmupService.Dispose
   name: Dispose()
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_Dispose
-  commentId: M:CG.Orange.Host.Services.StartupService.Dispose
-  fullName: CG.Orange.Host.Services.StartupService.Dispose()
-  nameWithType: StartupService.Dispose()
-- uid: CG.Orange.Host.Services.StartupService.Dispose*
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_Dispose
+  commentId: M:CG.Orange.Host.Services.WarmupService.Dispose
+  fullName: CG.Orange.Host.Services.WarmupService.Dispose()
+  nameWithType: WarmupService.Dispose()
+- uid: CG.Orange.Host.Services.WarmupService.Dispose*
   name: Dispose
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_Dispose_
-  commentId: Overload:CG.Orange.Host.Services.StartupService.Dispose
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_Dispose_
+  commentId: Overload:CG.Orange.Host.Services.WarmupService.Dispose
   isSpec: "True"
-  fullName: CG.Orange.Host.Services.StartupService.Dispose
-  nameWithType: StartupService.Dispose
-- uid: CG.Orange.Host.Services.StartupService.ExecuteAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.WarmupService.Dispose
+  nameWithType: WarmupService.Dispose
+- uid: CG.Orange.Host.Services.WarmupService.ExecuteAsync(CancellationToken)
   name: ExecuteAsync(CancellationToken)
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_ExecuteAsync_CancellationToken_
-  commentId: M:CG.Orange.Host.Services.StartupService.ExecuteAsync(CancellationToken)
-  fullName: CG.Orange.Host.Services.StartupService.ExecuteAsync(CancellationToken)
-  nameWithType: StartupService.ExecuteAsync(CancellationToken)
-- uid: CG.Orange.Host.Services.StartupService.ExecuteAsync*
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_ExecuteAsync_CancellationToken_
+  commentId: M:CG.Orange.Host.Services.WarmupService.ExecuteAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.WarmupService.ExecuteAsync(CancellationToken)
+  nameWithType: WarmupService.ExecuteAsync(CancellationToken)
+- uid: CG.Orange.Host.Services.WarmupService.ExecuteAsync*
   name: ExecuteAsync
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_ExecuteAsync_
-  commentId: Overload:CG.Orange.Host.Services.StartupService.ExecuteAsync
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_ExecuteAsync_
+  commentId: Overload:CG.Orange.Host.Services.WarmupService.ExecuteAsync
   isSpec: "True"
-  fullName: CG.Orange.Host.Services.StartupService.ExecuteAsync
-  nameWithType: StartupService.ExecuteAsync
-- uid: CG.Orange.Host.Services.StartupService.StartAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.WarmupService.ExecuteAsync
+  nameWithType: WarmupService.ExecuteAsync
+- uid: CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)
   name: StartAsync(CancellationToken)
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_StartAsync_CancellationToken_
-  commentId: M:CG.Orange.Host.Services.StartupService.StartAsync(CancellationToken)
-  fullName: CG.Orange.Host.Services.StartupService.StartAsync(CancellationToken)
-  nameWithType: StartupService.StartAsync(CancellationToken)
-- uid: CG.Orange.Host.Services.StartupService.StartAsync*
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StartAsync_CancellationToken_
+  commentId: M:CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)
+  nameWithType: WarmupService.StartAsync(CancellationToken)
+- uid: CG.Orange.Host.Services.WarmupService.StartAsync*
   name: StartAsync
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_StartAsync_
-  commentId: Overload:CG.Orange.Host.Services.StartupService.StartAsync
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StartAsync_
+  commentId: Overload:CG.Orange.Host.Services.WarmupService.StartAsync
   isSpec: "True"
-  fullName: CG.Orange.Host.Services.StartupService.StartAsync
-  nameWithType: StartupService.StartAsync
-- uid: CG.Orange.Host.Services.StartupService.StopAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.WarmupService.StartAsync
+  nameWithType: WarmupService.StartAsync
+- uid: CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)
   name: StopAsync(CancellationToken)
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_StopAsync_CancellationToken_
-  commentId: M:CG.Orange.Host.Services.StartupService.StopAsync(CancellationToken)
-  fullName: CG.Orange.Host.Services.StartupService.StopAsync(CancellationToken)
-  nameWithType: StartupService.StopAsync(CancellationToken)
-- uid: CG.Orange.Host.Services.StartupService.StopAsync*
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StopAsync_CancellationToken_
+  commentId: M:CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)
+  nameWithType: WarmupService.StopAsync(CancellationToken)
+- uid: CG.Orange.Host.Services.WarmupService.StopAsync*
   name: StopAsync
-  href: api/CG.Orange.Host.Services.StartupService.html#CG_Orange_Host_Services_StartupService_StopAsync_
-  commentId: Overload:CG.Orange.Host.Services.StartupService.StopAsync
+  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StopAsync_
+  commentId: Overload:CG.Orange.Host.Services.WarmupService.StopAsync
   isSpec: "True"
-  fullName: CG.Orange.Host.Services.StartupService.StopAsync
-  nameWithType: StartupService.StopAsync
+  fullName: CG.Orange.Host.Services.WarmupService.StopAsync
+  nameWithType: WarmupService.StopAsync
 - uid: CG.Orange.Host.Themes
   name: CG.Orange.Host.Themes
   href: api/CG.Orange.Host.Themes.html
