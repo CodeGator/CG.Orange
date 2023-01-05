@@ -38,6 +38,18 @@ public static class WebApplicationBuilderExtensions001
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
+            "Configuring BLL options from the {section} section",
+            sectionName
+            );
+
+        // Configure the BLL options.
+        webApplicationBuilder.Services.ConfigureOptions<OrangeBllOptions>(
+            webApplicationBuilder.Configuration.GetSection(sectionName),
+            out var bllOptions
+            );
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
             "Wiring up the Orange managers"
             );
 

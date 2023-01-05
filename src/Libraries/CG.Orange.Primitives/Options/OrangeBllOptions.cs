@@ -12,7 +12,6 @@ public class OrangeBllOptions
     // *******************************************************************
 
     #region Properties
-
-    
+            
     #endregion
 }

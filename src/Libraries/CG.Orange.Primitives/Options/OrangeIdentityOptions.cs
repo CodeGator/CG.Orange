@@ -2,7 +2,7 @@
 namespace CG.Orange.Options;
 
 /// <summary>
-/// This class contains configuration settings for identity operations.
+/// This class contains configuration settings for Orange identity layer.
 /// </summary>
 public class OrangeIdentityOptions
 {

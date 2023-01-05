@@ -487,6 +487,11 @@ internal class ProviderRepository : IProviderRepository
 
         try
         {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Looking for the matching entity"
+                );
+
             // Look for the given provider.
             var entity = await _dbContext.Providers.Where(x =>
                 x.Id == provider.Id
@@ -504,12 +509,76 @@ internal class ProviderRepository : IProviderRepository
                     );
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the entity"
+                );
+
             // Update the editable properties.
             entity.Name = provider.Name;
             entity.Description = provider.Description;
             entity.IsDisabled = provider.IsDisabled;
             entity.LastUpdatedBy = provider.LastUpdatedBy;  
-            entity.LastUpdatedOnUtc = provider.LastUpdatedOnUtc;    
+            entity.LastUpdatedOnUtc = provider.LastUpdatedOnUtc;
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Checking for modified properties"
+                );
+
+            // Loop through any associated properties.
+            foreach (var property in entity.Properties)
+            {
+                // Look for a match.
+                var match = provider.Properties.FirstOrDefault(x => 
+                    x.Id == property.Id
+                    );
+
+                // Did we find one?
+                if (match is not null)
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Modifying property entity: {id}",
+                        entity.Id
+                        );
+
+                    // Update the editable properties.
+                    property.Key = match.Key;
+                    property.Value = match.Value;   
+                    property.LastUpdatedBy = match.LastUpdatedBy;
+                    property.LastUpdatedOnUtc = match.LastUpdatedOnUtc; 
+                }
+                else
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Removing property entity: {id}",
+                        property.Id
+                        );
+
+                    // Remove the mismatched property.
+                    entity.Properties.Remove(property);
+                }
+            }
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Checking for added properties"
+                );
+
+            // Loop through any new properties.
+            foreach (var property in provider.Properties.Where(x => x.Id == 0))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Adding new property entity: {id}",
+                    property.Id
+                    );
+
+                // Add the new property.
+                entity.Properties.Add(_mapper.Map<ProviderPropertyEntity>(property));
+            }
 
             // We never change these 'read only' properties.
             _dbContext.Entry(entity).Property(x => x.Id).IsModified = false;

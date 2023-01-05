@@ -3,11 +3,13 @@
     {
       "ApplicationName": "test1",
       "EnvironmentName": "",
+      "IsDisabled": false,
       "Json": "{ \"TestKey\":\"default value\"}"
     },
     {
       "ApplicationName": "test1",
       "EnvironmentName": "development",
+      "IsDisabled": false,
       "Json": "{ \"TestKey\":\"overridden value\"}"
     }
   ]

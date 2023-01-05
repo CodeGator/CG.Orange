@@ -2,9 +2,9 @@
 namespace CG.Orange.Host.Services;
 
 /// <summary>
-/// The class is a hosted service that warms up the website on startup.
+/// The class is a hosted service that warms up the website, on startup.
 /// </summary>
-public class StartupService : IHostedService, IDisposable
+internal class WarmupService : IHostedService, IDisposable
 {
     // *******************************************************************
     // Fields.
@@ -28,9 +28,14 @@ public class StartupService : IHostedService, IDisposable
     internal protected readonly IServiceProvider _serviceProvider = null!;
 
     /// <summary>
+    /// This field contains the hosted service options for this service.
+    /// </summary>
+    internal protected readonly HostedServicesOptions _hostedServiceOptions = null!;
+
+    /// <summary>
     /// This field contains the logger for this service.
     /// </summary>
-    internal protected readonly ILogger<StartupService> _logger = null!;
+    internal protected readonly ILogger<WarmupService> _logger = null!;
 
     #endregion
 
@@ -41,23 +46,28 @@ public class StartupService : IHostedService, IDisposable
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="StartupService"/>
+    /// This constructor creates a new instance of the <see cref="WarmupService"/>
     /// class.
     /// </summary>
     /// <param name="serviceProvider">The service provider to use with 
     /// this service.</param>
+    /// <param name="hostedServiceOptions">The hosted service options to
+    /// use with this service.</param>
     /// <param name="logger">The logger to use with this service.</param>
-    public StartupService(
+    public WarmupService(
         IServiceProvider serviceProvider,
-        ILogger<StartupService> logger
+        IOptions<HostedServicesOptions> hostedServiceOptions,
+        ILogger<WarmupService> logger
         )
     {
         // Validate the arguments before attempting to use them.
         Guard.Instance().ThrowIfNull(serviceProvider, nameof(serviceProvider))
+            .ThrowIfNull(hostedServiceOptions, nameof(hostedServiceOptions))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s).
         _serviceProvider = serviceProvider;
+        _hostedServiceOptions = hostedServiceOptions.Value;
         _logger = logger;
     }
 
@@ -192,14 +202,28 @@ public class StartupService : IHostedService, IDisposable
             // Log what we are about to do.
             _logger.LogInformation(
                 "The {svc} is running.",
-                nameof(StartupService)
+                nameof(WarmupService)
                 );
 
-            // Wait before we do anything.
-            await Task.Delay(
-                TimeSpan.FromSeconds(30),
-                cancellationToken
-                ).ConfigureAwait(false);
+            // Were options provided?
+            if (_hostedServiceOptions.WarmupService is not null)
+            {
+                // Are we disabled?
+                if (_hostedServiceOptions.WarmupService.IsDisabled)
+                {
+                    return; // Nothing to do!
+                }
+
+                // Should we wait before we start?
+                if (_hostedServiceOptions.WarmupService.StartupDelay is not null)
+                {
+                    // Wait before we do anything.
+                    await Task.Delay(
+                        _hostedServiceOptions.WarmupService.StartupDelay ?? TimeSpan.FromMinutes(1),
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+            }            
 
             // Log what we are about to do.
             _logger.LogDebug(
@@ -297,7 +321,7 @@ public class StartupService : IHostedService, IDisposable
             // Log what we are about to do.
             _logger.LogInformation(
                 "The {svc} is stopped.",
-                nameof(StartupService)
+                nameof(WarmupService)
                 );
         }
     }

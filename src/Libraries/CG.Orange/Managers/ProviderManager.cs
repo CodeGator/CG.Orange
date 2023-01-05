@@ -176,29 +176,16 @@ internal class ProviderManager : IProviderManager
             copy.LastUpdatedBy = null;
             copy.LastUpdatedOnUtc = null;
 
-            // Are there any properties with values?
-            if (copy.Properties.Any(x => 
+            // Loop through the properties with values.
+            foreach (var property in copy.Properties.Where(x => 
                 !string.IsNullOrEmpty(x.Value)
-                ))
+                )) 
             {
-                // Log what we are about to do.
-                _logger.LogDebug(
-                    "Encrypting {count} properties for provider: {name}",
-                    copy.Properties.Count(),
-                    copy.Name
-                    );
-
-                // Loop through the properties with values.
-                foreach (var property in copy.Properties.Where(x => 
-                    !string.IsNullOrEmpty(x.Value)
-                    )) 
-                {
-                    // Encrypt the value, at rest.
-                    property.Value = await _cryptographer.AesEncryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
+                // Encrypt the value, at rest.
+                property.Value = await _cryptographer.AesEncryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
             }
 
             // Log what we are about to do.
@@ -213,33 +200,21 @@ internal class ProviderManager : IProviderManager
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Are there properties with values?
-            if (newProvider.Properties.Any(x => 
+            // Loop through the properties with values.
+            foreach (var property in newProvider.Properties.Where(x =>
                 !string.IsNullOrEmpty(x.Value)
                 ))
             {
                 // Log what we are about to do.
-                _logger.LogTrace(
-                    "Looping through {count} provider properties",
-                    newProvider.Properties.Count
+                _logger.LogDebug(
+                    "Decrypting property for provider"
                     );
 
-                // Loop through the properties with values.
-                foreach (var property in provider.Properties.Where(x =>
-                    !string.IsNullOrEmpty(x.Value)
-                    ))
-                {
-                    // Log what we are about to do.
-                    _logger.LogDebug(
-                        "Decrypting property for provider"
-                        );
-
-                    // Decrypt the value
-                    property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
+                // Decrypt the value
+                property.Value = await _cryptographer.AesDecryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
             }
 
             // Return the result.
@@ -347,19 +322,39 @@ internal class ProviderManager : IProviderManager
 
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy the model here
+            //   and work on that, instead.
+            var copy = provider.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderModel)
                 );
 
             // Ensure the stats are correct.
-            provider.LastUpdatedOnUtc = DateTime.UtcNow;
-            provider.LastUpdatedBy = userName;
+            copy.LastUpdatedOnUtc = DateTime.UtcNow;
+            copy.LastUpdatedBy = userName;
 
-            // The repository doesn't update the associated properties, so
-            //   we don't need to encrypt them here.
+            // Loop through the properties with values.
+            foreach (var property in copy.Properties.Where(x =>
+                !string.IsNullOrEmpty(x.Value)
+                ))
+            {
+                // Encrypt the value, at rest.
+                property.Value = await _cryptographer.AesEncryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
 
             // Disable the provider.
-            provider.IsDisabled = true;
+            copy.IsDisabled = true;
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -368,10 +363,30 @@ internal class ProviderManager : IProviderManager
                 );
 
             // Perform the operation.
-            return await _providerRepository.UpdateAsync(
-                provider,
+            var updatedProvider = await _providerRepository.UpdateAsync(
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Loop through the properties with values.
+            foreach (var property in updatedProvider.Properties.Where(x =>
+                !string.IsNullOrEmpty(x.Value)
+                ))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting property for provider"
+                    );
+
+                // Decrypt the value
+                property.Value = await _cryptographer.AesDecryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+
+            // Return the results.
+            return updatedProvider;
         }
         catch (Exception ex)
         {
@@ -412,19 +427,39 @@ internal class ProviderManager : IProviderManager
 
             // Log what we are about to do.
             _logger.LogDebug(
+                "Cloning the incoming provider"
+                );
+
+            // If we modify the properties of the incoming model then,
+            //   from the caller's perspective, we're creating unwanted
+            //   side-affects. For that reason, we'll copy the model here
+            //   and work on that, instead.
+            var copy = provider.QuickClone();
+
+            // Log what we are about to do.
+            _logger.LogDebug(
                 "Updating the {name} model stats",
                 nameof(ProviderModel)
                 );
 
             // Ensure the stats are correct.
-            provider.LastUpdatedOnUtc = DateTime.UtcNow;
-            provider.LastUpdatedBy = userName;
+            copy.LastUpdatedOnUtc = DateTime.UtcNow;
+            copy.LastUpdatedBy = userName;
 
-            // The repository doesn't update the associated properties, so
-            //   we don't need to encrypt them here.
+            // Loop through the properties with values.
+            foreach (var property in copy.Properties.Where(x =>
+                !string.IsNullOrEmpty(x.Value)
+                ))
+            {
+                // Encrypt the value, at rest.
+                property.Value = await _cryptographer.AesEncryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
 
             // Enable the provider.
-            provider.IsDisabled = false;
+            copy.IsDisabled = false;
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -433,10 +468,30 @@ internal class ProviderManager : IProviderManager
                 );
 
             // Perform the operation.
-            return await _providerRepository.UpdateAsync(
-                provider,
+            var updatedProvider = await _providerRepository.UpdateAsync(
+                copy,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Loop through the properties with values.
+            foreach (var property in updatedProvider.Properties.Where(x =>
+                !string.IsNullOrEmpty(x.Value)
+                ))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting property for provider"
+                    );
+
+                // Decrypt the value
+                property.Value = await _cryptographer.AesDecryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+
+            // Return the results.
+            return updatedProvider;
         }
         catch (Exception ex)
         {
@@ -730,8 +785,17 @@ internal class ProviderManager : IProviderManager
             copy.LastUpdatedOnUtc = DateTime.UtcNow;
             copy.LastUpdatedBy = userName;
 
-            // The repository doesn't update the associated properties, so
-            //   we don't need to encrypt them here.
+            // Loop through the properties with values.
+            foreach (var property in copy.Properties.Where(x =>
+                !string.IsNullOrEmpty(x.Value)
+                ))
+            {
+                // Encrypt the value, at rest.
+                property.Value = await _cryptographer.AesEncryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -745,27 +809,21 @@ internal class ProviderManager : IProviderManager
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Are there properties with values?
-            if (changedProvider.Properties.Any(x => 
+            // Loop through the properties with values.
+            foreach (var property in changedProvider.Properties.Where(x => 
                 !string.IsNullOrEmpty(x.Value)
                 ))
             {
-                // Loop through the properties with values.
-                foreach (var property in changedProvider.Properties.Where(x => 
-                    !string.IsNullOrEmpty(x.Value)
-                    ))
-                {
-                    // Log what we are about to do.
-                    _logger.LogDebug(
-                        "Decrypting property for provider"
-                        );
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting property for provider"
+                    );
 
-                    // Decrypt the value
-                    property.Value = await _cryptographer.AesDecryptAsync(
-                        property.Value,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
+                // Decrypt the value
+                property.Value = await _cryptographer.AesDecryptAsync(
+                    property.Value,
+                    cancellationToken
+                    ).ConfigureAwait(false);
             }
 
             // Return the result.

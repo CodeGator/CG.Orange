@@ -4,7 +4,7 @@ namespace CG.Orange.Host.Themes;
 /// <summary>
 /// This class represents the default MudBlazor UI theme.
 /// </summary>
-public class DefaultTheme : MudTheme
+internal class DefaultTheme : MudTheme
 {
     // *******************************************************************
     // Fields.

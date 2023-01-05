@@ -35,6 +35,21 @@ internal static class WebApplicationBuilderExtensions
         Guard.Instance().ThrowIfNull(webApplicationBuilder, nameof(webApplicationBuilder))
             .ThrowIfNullOrEmpty(sectionName, nameof(sectionName));
 
+        // Build the complete section name.
+        var completeSectionName = $"{sectionName}:HostedServices";
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Configuring hosted services options from the {section} section",
+            completeSectionName
+            );
+
+        // Configure the hosted services part of the BLL options.
+        webApplicationBuilder.Services.ConfigureOptions<HostedServicesOptions>(
+            webApplicationBuilder.Configuration.GetSection(completeSectionName),
+            out var hostedServiceOptions
+            );
+
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
             "Adding an HTTP client."
@@ -49,7 +64,7 @@ internal static class WebApplicationBuilderExtensions
             );
 
         // Add the hosted services.
-        webApplicationBuilder.Services.AddHostedService<StartupService>();
+        webApplicationBuilder.Services.AddHostedService<WarmupService>();
 
         // Return the application builder.
         return webApplicationBuilder;

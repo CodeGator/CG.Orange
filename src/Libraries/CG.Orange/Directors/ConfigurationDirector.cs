@@ -331,26 +331,34 @@ internal class ConfigurationDirector : IConfigurationDirector
                         "Looking for a replacement token in the setting value"
                         );
 
-                    // Parse the token.
-                    if (!ReplacementToken.TryParse(
-                        value,
-                        out var secretTag,
-                        out var cacheTag,
-                        out var altKey
-                        ))
-                    {
-                        // Log what we are about to do.
-                        _logger.LogWarning(
-                            "Found malformed replacement token for application " +
-                            "{app}, environment: {env}",
-                            applicationName,
-                            environmentName
-                            );
+                    var cacheTag = "";
+                    var secretTag = "";
+                    string? altKey = null;
 
-                        // Panic!!
-                        throw new InvalidDataException(
-                            $"The replacement toke nwas invalid!"
-                            );
+                    // Is there a replacement token?
+                    if (ReplacementToken.HasToken(value))
+                    {
+                        // Parse the token.
+                        if (!ReplacementToken.TryParse(
+                            value,
+                            out secretTag,
+                            out cacheTag,
+                            out altKey
+                            ))
+                        {
+                            // Log what happened.
+                            _logger.LogWarning(
+                                "Found malformed replacement token for application " +
+                                "{app}, environment: {env}",
+                                applicationName,
+                                environmentName
+                                );
+
+                            // Panic!!
+                            throw new InvalidDataException(
+                                $"The replacement token was invalid!"
+                                );
+                        }
                     }
 
                     // Log what we are about to do.
