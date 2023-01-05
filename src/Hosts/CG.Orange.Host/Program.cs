@@ -1,3 +1,4 @@
+using CG.Orange.Host.Hubs;
 using Serilog;
 
 //BootstrapLogger.LogLevelToDebug();
@@ -60,6 +61,7 @@ try
     app.UseStaticFiles();
     app.UseRouting();
     app.MapBlazorHub();
+    app.MapHub<SignalRHub>("/_backchannel");
     app.MapFallbackToPage("/_Host");
     app.MapControllers();
     

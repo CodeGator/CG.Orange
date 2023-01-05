@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Host.Hubs;
+
 namespace CG.Orange.Host.Pages.Admin.Settings;
 
 /// <summary>
@@ -34,6 +36,12 @@ public partial class Index
     // *******************************************************************
 
     #region Properties
+
+    /// <summary>
+    /// This property contains the SignalR hub for the page.
+    /// </summary>
+    [Inject]
+    protected SignalRHub Hub { get; set; } = null!;
 
     /// <summary>
     /// This property contains the dialog service for the page.
@@ -183,6 +191,17 @@ public partial class Index
 
             // Get the list of settings.
             _settings = await SettingFileManager.FindAllAsync();
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Signaling a change through SignalR."
+                );
+
+            // Notify any watchers that the configuration changed.
+            await Hub.OnChangedSettingAsync(
+                file.ApplicationName,
+                file.EnvironmentName
+                );
         }
         catch (Exception ex)
         {

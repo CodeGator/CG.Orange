@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Host.Hubs;
+
 namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>
@@ -65,6 +67,30 @@ internal static class WebApplicationBuilderExtensions
 
         // Add the hosted services.
         webApplicationBuilder.Services.AddHostedService<WarmupService>();
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Adding SignalR services."
+            );
+
+        // Add SignalR
+        webApplicationBuilder.Services.AddSignalR(options =>
+        {
+            // Is this a development environment?
+            if (webApplicationBuilder.Environment.IsDevelopment())
+            {
+                // Enable better errors.
+                options.EnableDetailedErrors = true;
+            }
+        });
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Adding the SignalR hubs."
+            );
+
+        // Add our SignalR hub.
+        webApplicationBuilder.Services.AddSingleton<SignalRHub>();
 
         // Return the application builder.
         return webApplicationBuilder;

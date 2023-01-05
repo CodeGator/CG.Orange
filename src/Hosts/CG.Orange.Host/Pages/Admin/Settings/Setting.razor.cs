@@ -1,4 +1,6 @@
 ﻿
+using CG.Orange.Host.Hubs;
+
 namespace CG.Orange.Host.Pages.Admin.Settings;
 
 /// <summary>
@@ -35,6 +37,12 @@ public partial class Setting
     /// </summary>
     [Parameter]
     public int SettingId { get; set; }
+
+    /// <summary>
+    /// This property contains the SignalR hub for the page.
+    /// </summary>
+    [Inject]
+    protected SignalRHub Hub { get; set; } = null!;
 
     /// <summary>
     /// This property contains the dialog service for the page.
@@ -148,7 +156,7 @@ public partial class Setting
     /// This method is called when the user submits the form.
     /// </summary>
     /// <returns>A task to perform the operation.</returns>
-    protected async Task OnValidSubmit()
+    protected async Task OnValidSubmitAsync()
     {
         try
         {
@@ -178,6 +186,17 @@ public partial class Setting
             _model = await SettingFileManager.UpdateAsync(
                 _model,
                 UserName
+                );
+
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Signaling a change through SignalR."
+                );
+
+            // Notify any watchers that the configuration changed.
+            await Hub.OnChangedSettingAsync(
+                _model.ApplicationName,
+                _model.EnvironmentName
                 );
 
             // Log what we are about to do.
