@@ -4,23 +4,12 @@ namespace CG.Orange.Data.Maps;
 /// <summary>
 /// This class represents a base map for entity types derived from <see cref="AuditedEntityBase"/>
 /// </summary>
-/// <typeparam name="TEntity"></typeparam>
-internal abstract class AuditedEntityMapBase<TEntity> : IEntityTypeConfiguration<TEntity>
+/// <typeparam name="TEntity">The associated concrete <see cref="AuditedEntityBase"/></typeparam>
+internal abstract class AuditedEntityMapBase<TEntity> : 
+    EntityMapBase<TEntity>, 
+    IEntityTypeConfiguration<TEntity>
     where TEntity : AuditedEntityBase
 {
-    // *******************************************************************
-    // Fields.
-    // *******************************************************************
-
-    #region Fields
-
-    /// <summary>
-    /// This field contains the model builder for this map.
-    /// </summary>
-    internal protected readonly ModelBuilder _modelBuilder;
-
-    #endregion
-
     // *******************************************************************
     // Constructors.
     // *******************************************************************
@@ -34,13 +23,9 @@ internal abstract class AuditedEntityMapBase<TEntity> : IEntityTypeConfiguration
     /// <param name="modelBuilder">The model builder to use with this map.</param>
     public AuditedEntityMapBase(
         ModelBuilder modelBuilder
-        )
+        ) : base(modelBuilder)
     {
-        // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(modelBuilder, nameof(modelBuilder));
 
-        // Save the reference(s).
-        _modelBuilder = modelBuilder;
     }
 
     #endregion
@@ -55,7 +40,7 @@ internal abstract class AuditedEntityMapBase<TEntity> : IEntityTypeConfiguration
     /// This method configures the <typeparamref name="TEntity"/> entity.
     /// </summary>
     /// <param name="builder">The builder to use for the operation.</param>
-    public virtual void Configure(
+    public override void Configure(
         EntityTypeBuilder<TEntity> builder
         )
     {

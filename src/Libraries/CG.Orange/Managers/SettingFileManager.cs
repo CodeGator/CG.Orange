@@ -12,9 +12,14 @@ internal class SettingFileManager : ISettingFileManager
     #region Fields
 
     /// <summary>
-    /// This field contains the repository for this manager.
+    /// This field contains the setting file repository for this manager.
     /// </summary>
     internal protected readonly ISettingFileRepository _settingFileRepository = null!;
+
+    /// <summary>
+    /// This field contains the setting file count repository for this manager.
+    /// </summary>
+    internal protected readonly ISettingFileCountRepository _settingFileCountRepository = null!;
 
     /// <summary>
     /// This field contains the logger for this manager.
@@ -35,20 +40,25 @@ internal class SettingFileManager : ISettingFileManager
     /// </summary>
     /// <param name="settingFileRepository">The setting file repository to use
     /// with this manager.</param>
+    /// <param name="settingFileCountRepository">The setting file count 
+    /// repository to use with this manager.</param>
     /// <param name="logger">The logger to use with this manager.</param>
     /// <exception cref="ArgumentException">This exception is thrown whenever one
     /// or more arguments are missing, or invalid.</exception>
     public SettingFileManager(
         ISettingFileRepository settingFileRepository,
+        ISettingFileCountRepository settingFileCountRepository,
         ILogger<ISettingFileManager> logger
         )
     {
         // Validate the arguments before attempting to use them.
         Guard.Instance().ThrowIfNull(settingFileRepository, nameof(settingFileRepository))
+            .ThrowIfNull(settingFileCountRepository, nameof(settingFileCountRepository))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s)
         _settingFileRepository = settingFileRepository;
+        _settingFileCountRepository = settingFileCountRepository;
         _logger = logger;
     }
 
@@ -142,7 +152,7 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<long> CountAsync(
+    public virtual async Task<int> CountAsync(
         CancellationToken cancellationToken = default
         )
     {
@@ -209,10 +219,33 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Perform the operation.
-            return await _settingFileRepository.CreateAsync(
+            var newSettingFile = await _settingFileRepository.CreateAsync(
                 settingFile,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Counting setting files"
+                );
+
+            // Get the count of setting files.
+            var newCount = await _settingFileRepository.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Recording the new count of setting files"
+                );
+
+            // Record the new count.
+            await _settingFileCountRepository.CreateAsync(
+                newCount
+                ).ConfigureAwait(false);
+
+            // Return the results.
+            return newSettingFile;
         }
         catch (Exception ex)
         {
@@ -265,6 +298,26 @@ internal class SettingFileManager : ISettingFileManager
             await _settingFileRepository.DeleteAsync(
                 settingFile,
                 cancellationToken
+                ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Counting setting files"
+                );
+
+            // Get the count of setting files.
+            var newCount = await _settingFileRepository.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Recording the new count of setting files"
+                );
+
+            // Record the new count.
+            await _settingFileCountRepository.CreateAsync(
+                newCount
                 ).ConfigureAwait(false);
         }
         catch (Exception ex)

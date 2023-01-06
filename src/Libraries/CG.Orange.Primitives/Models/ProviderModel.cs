@@ -2,7 +2,7 @@
 namespace CG.Orange.Models;
 
 /// <summary>
-/// This class represents a provider.
+/// This class is a model that represents a provider.
 /// </summary>
 public class ProviderModel : AuditedModelBase
 {

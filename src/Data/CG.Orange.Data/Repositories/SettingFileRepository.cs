@@ -155,7 +155,7 @@ internal class SettingFileRepository : ISettingFileRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<long> CountAsync(
+    public virtual async Task<int> CountAsync(
        CancellationToken cancellationToken = default
        )
     {
@@ -226,7 +226,7 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Adding the {entity} to the {ctx} data-context.",
-                nameof(SettingFileModel),
+                nameof(SettingFileEntity),
                 nameof(OrangeDbContext)
                 );
 
@@ -250,7 +250,7 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Converting a {entity} entity to a model",
-                nameof(SettingFileModel)
+                nameof(SettingFileEntity)
                 );
 
             // Convert the entity to a model.
@@ -263,7 +263,8 @@ internal class SettingFileRepository : ISettingFileRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(SettingFileModel)} entity to a model."
+                    $"Failed to map the {nameof(SettingFileEntity)} " +
+                    "entity to a model."
                     );
             }
 
@@ -301,39 +302,19 @@ internal class SettingFileRepository : ISettingFileRepository
         {
             // Log what we are about to do.
             _logger.LogDebug(
-                "Converting a {entity} model to an entity",
-                nameof(SettingFileModel)
-                );
-
-            // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.SettingFileEntity>(
-                settingFile
-                );
-
-            // Did we fail?
-            if (entity is null)
-            {
-                // Panic!!
-                throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(SettingFileModel)} model to an entity."
-                    );
-            }
-
-            // Log what we are about to do.
-            _logger.LogDebug(
                 "looking for the tracked {entity} instance from the {ctx} data-context",
                 nameof(SettingFileModel),
                 nameof(OrangeDbContext)
                 );
 
             // Find the tracked entity (if any).
-            var trackedEntry = await _dbContext.SettingFiles.FindAsync(
-                entity.Id,
+            var entity = await _dbContext.SettingFiles.FindAsync(
+                settingFile.Id,
                 cancellationToken
                 );
 
             // Did we fail?
-            if (trackedEntry is null)
+            if (entity is null)
             {
                 return; // Nothing to do!
             }
@@ -347,7 +328,7 @@ internal class SettingFileRepository : ISettingFileRepository
 
             // Delete from the data-store.
             _dbContext.SettingFiles.Remove(
-                trackedEntry
+                entity
                 );
 
             // Log what we are about to do.
@@ -513,8 +494,24 @@ internal class SettingFileRepository : ISettingFileRepository
                 return null;
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting a {entity} entity to a model",
+                nameof(SettingFileEntity)
+                );
+
             // Convert the entities to a models.
             var result = _mapper.Map<SettingFileModel>(settingFile);
+
+            // Did we fail?
+            if (result is null)
+            {
+                // Panic!!
+                throw new AutoMapperMappingException(
+                    $"Failed to map the {nameof(SettingFileEntity)} " +
+                    "entity to a model."
+                    );
+            }
 
             // Return the results.
             return result;
@@ -599,7 +596,7 @@ internal class SettingFileRepository : ISettingFileRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Converting a {entity} entity to a model",
-                nameof(SettingFileModel)
+                nameof(SettingFileEntity)
                 );
 
             // Convert the entity to a model.
@@ -612,7 +609,8 @@ internal class SettingFileRepository : ISettingFileRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(SettingFileModel)} entity to a model."
+                    $"Failed to map the {nameof(SettingFileEntity)} " +
+                    "entity to a model."
                     );
             }
 

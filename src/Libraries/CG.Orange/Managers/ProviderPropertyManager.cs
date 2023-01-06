@@ -151,7 +151,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
     // *******************************************************************
 
     /// <inheritdoc />
-    public virtual async Task<long> CountAsync(
+    public virtual async Task<int> CountAsync(
         CancellationToken cancellationToken = default
         )
     {

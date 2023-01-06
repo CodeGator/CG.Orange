@@ -44,6 +44,7 @@ public static class WebApplicationBuilderExtensions003
 
         // Add the repositories
         webApplicationBuilder.Services.AddScoped<ISettingFileRepository, SettingFileRepository>();
+        webApplicationBuilder.Services.AddScoped<ISettingFileCountRepository, SettingFileCountRepository>();
         webApplicationBuilder.Services.AddScoped<IProviderRepository, ProviderRepository>();
         webApplicationBuilder.Services.AddScoped<IProviderPropertyRepository, ProviderPropertyRepository>();
 
@@ -57,6 +58,7 @@ public static class WebApplicationBuilderExtensions003
         {
             // Wire up the conversion maps.
             cfg.CreateMap<SettingFileModel, SettingFileEntity>().ReverseMap();
+            cfg.CreateMap<SettingFileCountModel, SettingFileCountEntity>().ReverseMap();
             cfg.CreateMap<ProviderModel, ProviderEntity>().ReverseMap();
             cfg.CreateMap<ProviderPropertyModel, ProviderPropertyEntity>().ReverseMap();
         });

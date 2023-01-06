@@ -108,7 +108,7 @@ internal class ProviderRepository : IProviderRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<long> CountAsync(
+    public virtual async Task<int> CountAsync(
        CancellationToken cancellationToken = default
        )
     {
@@ -172,14 +172,15 @@ internal class ProviderRepository : IProviderRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderModel)} model to an entity."
+                    $"Failed to map the {nameof(ProviderModel)} " +
+                    "model to an entity."
                     );
             }
 
             // Log what we are about to do.
             _logger.LogDebug(
                 "Adding the {entity} to the {ctx} data-context.",
-                nameof(ProviderModel),
+                nameof(ProviderEntity),
                 nameof(OrangeDbContext)
                 );
 
@@ -216,7 +217,8 @@ internal class ProviderRepository : IProviderRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderModel)} entity to a model."
+                    $"Failed to map the {nameof(ProviderEntity)} " +
+                    "entity to a model."
                     );
             }
 
@@ -277,7 +279,7 @@ internal class ProviderRepository : IProviderRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "deleting an {entity} instance from the {ctx} data-context",
-                nameof(ProviderModel),
+                nameof(ProviderEntity),
                 nameof(OrangeDbContext)
                 );
 
@@ -334,6 +336,12 @@ internal class ProviderRepository : IProviderRepository
                 .ToListAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting a {entity} entity(s) to model(s)",
+                nameof(ProviderEntity)
+                );
 
             // Convert the entities to a models.
             var result = providers.Select(x =>
@@ -395,6 +403,12 @@ internal class ProviderRepository : IProviderRepository
                 return null;
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting a {entity} entity to a model",
+                nameof(ProviderEntity)
+                );
+
             // Convert the entities to a models.
             var result = _mapper.Map<ProviderModel>(provider);
 
@@ -451,8 +465,24 @@ internal class ProviderRepository : IProviderRepository
                 return null;
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting a {entity} entity to a model",
+                nameof(ProviderEntity)
+                );
+
             // Convert the entities to a models.
             var result = _mapper.Map<ProviderModel>(provider);
+
+            // Did we fail?
+            if (result is null)
+            {
+                // Panic!!
+                throw new AutoMapperMappingException(
+                    $"Failed to map the {nameof(ProviderEntity)} " +
+                    "entity to a model."
+                    );
+            }
 
             // Return the results.
             return result;
@@ -599,7 +629,7 @@ internal class ProviderRepository : IProviderRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Converting a {entity} entity to a model",
-                nameof(ProviderModel)
+                nameof(ProviderEntity)
                 );
 
             // Convert the entity to a model.
@@ -612,7 +642,8 @@ internal class ProviderRepository : IProviderRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderModel)} entity to a model."
+                    $"Failed to map the {nameof(ProviderEntity)} " +
+                    "entity to a model."
                     );
             }
 

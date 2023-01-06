@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Managers;
-
 namespace CG.Orange.Repositories;
 
 /// <summary>
@@ -33,7 +31,7 @@ public interface IProviderRepository
     /// number of <see cref="ProviderModel"/> objects in the underlying storage.</returns>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
-    Task<long> CountAsync(
+    Task<int> CountAsync(
         CancellationToken cancellationToken = default
         );
 

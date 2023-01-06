@@ -125,6 +125,28 @@ namespace CG.Orange.Data.SqlServer.Migrations
                     b.ToTable("ProviderProperties", "Orange");
                 });
 
+            modelBuilder.Entity("CG.Orange.Data.Entities.SettingFileCountEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedOnUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex(new[] { "CreatedOnUtc" }, "IX_SettingFileCounts")
+                        .IsUnique();
+
+                    b.ToTable("SettingFileCounts", "Orange");
+                });
+
             modelBuilder.Entity("CG.Orange.Data.Entities.SettingFileEntity", b =>
                 {
                     b.Property<int>("Id")

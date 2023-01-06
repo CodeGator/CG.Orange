@@ -50,7 +50,7 @@ public interface ISettingFileManager
     /// number of <see cref="SettingFileModel"/> objects in the underlying storage.</returns>
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
-    Task<long> CountAsync(
+    Task<int> CountAsync(
         CancellationToken cancellationToken = default
         );
 

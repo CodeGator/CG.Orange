@@ -2,7 +2,7 @@
 namespace CG.Orange.Models;
 
 /// <summary>
-/// This class represents a JSON settings file.
+/// This class is a model that represents a JSON settings file.
 /// </summary>
 public class SettingFileModel : AuditedModelBase
 {

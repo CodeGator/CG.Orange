@@ -31,7 +31,7 @@ public interface IProviderManager
     /// number of <see cref="ProviderModel"/> objects in the underlying storage.</returns>
     /// <exception cref="ManagerException">This exception is thrown whenever the
     /// manager fails to complete the operation.</exception>
-    Task<long> CountAsync(
+    Task<int> CountAsync(
         CancellationToken cancellationToken = default
         );
 

@@ -55,6 +55,7 @@ public static class WebApplicationBuilderExtensions001
 
         // Add the managers.
         webApplicationBuilder.Services.AddScoped<ISettingFileManager, SettingFileManager>();
+        webApplicationBuilder.Services.AddScoped<ISettingFileCountManager, SettingFileCountManager>();
         webApplicationBuilder.Services.AddScoped<IProviderManager, ProviderManager>();
         webApplicationBuilder.Services.AddScoped<IProviderPropertyManager, ProviderPropertyManager>();
 
@@ -65,6 +66,7 @@ public static class WebApplicationBuilderExtensions001
 
         // Add the directors.
         webApplicationBuilder.Services.AddScoped<IConfigurationDirector, ConfigurationDirector>();
+        webApplicationBuilder.Services.AddScoped<IStatisticsDirector, StatisticsDirector>();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(

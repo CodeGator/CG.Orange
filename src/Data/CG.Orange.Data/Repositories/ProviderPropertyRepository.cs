@@ -153,7 +153,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<long> CountAsync(
+    public virtual async Task<int> CountAsync(
        CancellationToken cancellationToken = default
        )
     {
@@ -270,7 +270,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Adding the {entity} to the {ctx} data-context.",
-                nameof(ProviderPropertyModel),
+                nameof(ProviderPropertyEntity),
                 nameof(OrangeDbContext)
                 );
 
@@ -294,7 +294,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Converting a {entity} entity to a model",
-                nameof(ProviderPropertyModel)
+                nameof(ProviderPropertyEntity)
                 );
 
             // Convert the entity to a model.
@@ -307,7 +307,7 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(ProviderPropertyModel)} " +
+                    $"Failed to map the {nameof(ProviderPropertyEntity)} " +
                     "entity to a model."
                     );
             }
@@ -345,12 +345,6 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Converting a {entity} model to an entity",
-                nameof(ProviderPropertyModel)
-                );
-
             // Log what we are about to do.
             _logger.LogDebug(
                 "looking for the tracked {entity} instance from the {ctx} data-context",
@@ -434,6 +428,12 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 cancellationToken
                 ).ConfigureAwait(false);
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting {entity} entity(s) to model(s)",
+                nameof(ProviderPropertyEntity)
+                );
+
             // Convert the entities to a models.
             var result = providers.Select(x =>
                 _mapper.Map<ProviderPropertyModel>(x)
@@ -491,10 +491,26 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 return new List<ProviderPropertyModel>();
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting a {entity} entity to a model",
+                nameof(ProviderPropertyEntity)
+                );
+
             // Convert the entities to a models.
             var result = data.Select(x => 
                 _mapper.Map<ProviderPropertyModel>(x)
                 );
+
+            // Did we fail?
+            if (result is null)
+            {
+                // Panic!!
+                throw new AutoMapperMappingException(
+                    $"Failed to map the {nameof(ProviderPropertyEntity)} " +
+                    "entity to a model."
+                    );
+            }
 
             // Return the results.
             return result;
@@ -548,8 +564,24 @@ internal class ProviderPropertyRepository : IProviderPropertyRepository
                 return null;
             }
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Converting a {entity} entity to a model",
+                nameof(ProviderPropertyEntity)
+                );
+
             // Convert the entities to a models.
             var result = _mapper.Map<ProviderPropertyModel>(provider);
+
+            // Did we fail?
+            if (result is null)
+            {
+                // Panic!!
+                throw new AutoMapperMappingException(
+                    $"Failed to map the {nameof(ProviderPropertyEntity)} " +
+                    "entity to a model."
+                    );
+            }
 
             // Return the results.
             return result;

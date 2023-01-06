@@ -116,6 +116,26 @@ namespace CG.Orange.Data.Sqlite.Migrations
                     b.ToTable("ProviderProperties", "Orange");
                 });
 
+            modelBuilder.Entity("CG.Orange.Data.Entities.SettingFileCountEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedOnUtc")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex(new[] { "CreatedOnUtc" }, "IX_SettingFileCounts")
+                        .IsUnique();
+
+                    b.ToTable("SettingFileCounts", "Orange");
+                });
+
             modelBuilder.Entity("CG.Orange.Data.Entities.SettingFileEntity", b =>
                 {
                     b.Property<int>("Id")

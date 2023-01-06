@@ -2,9 +2,7 @@
 namespace CG.Orange.Directors;
 
 /// <summary>
-/// This interface represent an object that reads complete configurations
-/// by combining data in the database with data in the cache, and data in
-/// remote secret locations we can't tell anyone about ... shhh!!
+/// This interface represent an object that reads configurations.
 /// </summary>
 public interface IConfigurationDirector
 {

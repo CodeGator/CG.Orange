@@ -2,7 +2,7 @@
 namespace CG.Orange.Data.Entities;
 
 /// <summary>
-/// This class represents a property entity for a provider entity.
+/// This class is an entity that represents a provider property.
 /// </summary>
 public class ProviderPropertyEntity : AuditedEntityBase
 {
@@ -13,7 +13,7 @@ public class ProviderPropertyEntity : AuditedEntityBase
     #region Properties
 
     /// <summary>
-    /// This property contains the unique identifier for the property.
+    /// This property contains the unique identifier for the entity.
     /// </summary>
     public int Id { get; set; }
 
@@ -28,12 +28,12 @@ public class ProviderPropertyEntity : AuditedEntityBase
     public virtual ProviderEntity Provider { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the key for the property.
+    /// This property contains the key for the entity.
     /// </summary>
     public string Key { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the value for the property.
+    /// This property contains the value for the entity.
     /// </summary>
     public string Value { get; set; } = null!;
 

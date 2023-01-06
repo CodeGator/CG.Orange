@@ -2,7 +2,9 @@
 namespace CG.Orange.Host.Services;
 
 /// <summary>
-/// The class is a hosted service that warms up the website, on startup.
+/// The class is a hosted service that warms up the website, on startup,
+/// by pre-fetching all the settings at least once, so the secrets are
+/// pulled from their remote services, and cached locally.
 /// </summary>
 internal class WarmupService : IHostedService, IDisposable
 {

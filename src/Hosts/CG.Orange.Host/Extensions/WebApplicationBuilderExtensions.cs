@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Host.Hubs;
-
 namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>

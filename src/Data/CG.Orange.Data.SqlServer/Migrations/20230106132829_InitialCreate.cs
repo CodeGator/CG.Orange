@@ -38,6 +38,21 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SettingFileCounts",
+                schema: "Orange",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Count = table.Column<int>(type: "int", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SettingFileCounts", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SettingFiles",
                 schema: "Orange",
                 columns: table => new
@@ -106,6 +121,13 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 columns: new[] { "Name", "IsDisabled", "ProviderType", "ProcessorType" });
 
             migrationBuilder.CreateIndex(
+                name: "IX_SettingFileCounts",
+                schema: "Orange",
+                table: "SettingFileCounts",
+                column: "CreatedOnUtc",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_SettingFiles1",
                 schema: "Orange",
                 table: "SettingFiles",
@@ -125,6 +147,10 @@ namespace CG.Orange.Data.SqlServer.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ProviderProperties",
+                schema: "Orange");
+
+            migrationBuilder.DropTable(
+                name: "SettingFileCounts",
                 schema: "Orange");
 
             migrationBuilder.DropTable(

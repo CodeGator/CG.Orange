@@ -50,7 +50,7 @@ public interface ISettingFileRepository
     /// number of <see cref="SettingFileModel"/> objects in the underlying storage.</returns>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
-    Task<long> CountAsync(
+    Task<int> CountAsync(
         CancellationToken cancellationToken = default
         );
 

@@ -28,6 +28,11 @@ public class OrangeDbContext : DbContext
     /// </summary>
     public virtual DbSet<SettingFileEntity> SettingFiles { get; set; } = null!;
 
+    /// <summary>
+    /// This property contains the list of setting files counts.
+    /// </summary>
+    public virtual DbSet<SettingFileCountEntity> SettingFileCounts { get; set; } = null!;
+
     #endregion
 
     // *******************************************************************
@@ -64,6 +69,7 @@ public class OrangeDbContext : DbContext
     {
         // Map the entities.
         modelBuilder.ApplyConfiguration(new SettingFileEntityMap(modelBuilder));
+        modelBuilder.ApplyConfiguration(new SettingFileCountEntityMap(modelBuilder));
         modelBuilder.ApplyConfiguration(new ProviderEntityMap(modelBuilder));
         modelBuilder.ApplyConfiguration(new ProviderPropertyEntityMap(modelBuilder));
 
