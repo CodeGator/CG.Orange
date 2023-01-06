@@ -1,4 +1,7 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+using static CG.Orange.Globals.Models;
+
 namespace CG.Orange.Data.Repositories;
 
 /// <summary>
@@ -149,24 +152,35 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
 
     /// <inheritdoc/>
     public virtual async Task<SettingFileCountModel> CreateAsync(
-        int count,
+        SettingFileCountModel settingFileCount,
         CancellationToken cancellationToken = default
         )
     {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(settingFileCount, nameof(settingFileCount));
+
         try
         {
             // Log what we are about to do.
             _logger.LogDebug(
-                "Creating a new {entity} entity.",
-                nameof(SettingFileCountEntity)
+                "Converting a {entity} model to an entity",
+                nameof(SettingFileCountModel)
                 );
 
-            // Create the new entity.
-            var entity = new SettingFileCountEntity()
+            // Convert the model to an entity.
+            var entity = _mapper.Map<Entities.SettingFileCountEntity>(
+                settingFileCount
+                );
+
+            // Did we fail?
+            if (entity is null)
             {
-                Count = count,
-                CreatedOnUtc = DateTime.UtcNow
-            };
+                // Panic!!
+                throw new AutoMapperMappingException(
+                    $"Failed to map the {nameof(SettingFileCountModel)} " +
+                    "model to an entity."
+                    );
+            }
 
             // Log what we are about to do.
             _logger.LogDebug(

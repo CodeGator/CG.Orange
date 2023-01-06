@@ -65,6 +65,7 @@ internal static class WebApplicationBuilderExtensions
 
         // Add the hosted services.
         webApplicationBuilder.Services.AddHostedService<WarmupService>();
+        webApplicationBuilder.Services.AddHostedService<StatisticsService>();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(

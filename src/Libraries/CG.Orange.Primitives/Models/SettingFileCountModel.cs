@@ -24,6 +24,13 @@ public class SettingFileCountModel
     public int Count { get; set; }
 
     /// <summary>
+    /// This property contains the name of the person who created the model.
+    /// </summary>
+    [Required]
+    [MaxLength(Globals.Models.SettingFileCounts.CreatedByLength)]
+    public string CreatedBy { get; set; } = "anonymous";
+
+    /// <summary>
     /// This property contains the UTC date/time when model was created.
     /// </summary>
     public DateTime CreatedOnUtc { get; set; }

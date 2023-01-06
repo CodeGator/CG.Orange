@@ -2,10 +2,10 @@
 namespace CG.Orange.Directors;
 
 /// <summary>
-/// This class is a default implementation of the <see cref="IStatisticsDirector"/>
+/// This class is a default implementation of the <see cref="IStatisticDirector"/>
 /// interface.
 /// </summary>
-internal class StatisticsDirector : IStatisticsDirector
+internal class StatisticDirector : IStatisticDirector
 {
     // *******************************************************************
     // Fields.
@@ -16,7 +16,7 @@ internal class StatisticsDirector : IStatisticsDirector
     /// <summary>
     /// This field contains the logger for this director.
     /// </summary>
-    internal protected readonly ILogger<IStatisticsDirector> _logger = null!;
+    internal protected readonly ILogger<IStatisticDirector> _logger = null!;
 
     #endregion
 
@@ -27,12 +27,12 @@ internal class StatisticsDirector : IStatisticsDirector
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="StatisticsDirector"/>
+    /// This constructor creates a new instance of the <see cref="StatisticDirector"/>
     /// class.
     /// </summary>
     /// <param name="logger">The logger to use with this director.</param>
-    public StatisticsDirector(
-        ILogger<IStatisticsDirector> logger
+    public StatisticDirector(
+        ILogger<IStatisticDirector> logger
         )
     {
         // Validate the parameters before attempting to use them.

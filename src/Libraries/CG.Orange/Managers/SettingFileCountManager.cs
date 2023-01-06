@@ -12,7 +12,7 @@ internal class SettingFileCountManager : ISettingFileCountManager
     /// <summary>
     /// This field contains the repository for this manager.
     /// </summary>
-    internal protected readonly ISettingFileCountRepository _settingFileCountRepository = null!;
+    internal protected readonly ISettingFileCountRepository _repository = null!;
 
     /// <summary>
     /// This field contains the logger for this manager.
@@ -46,7 +46,7 @@ internal class SettingFileCountManager : ISettingFileCountManager
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s)
-        _settingFileCountRepository = settingFileCountRepository;
+        _repository = settingFileCountRepository;
         _logger = logger;
     }
 
@@ -72,7 +72,7 @@ internal class SettingFileCountManager : ISettingFileCountManager
                 );
 
             // Perform the search.
-            return await _settingFileCountRepository.AnyAsync(
+            return await _repository.AnyAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -95,6 +95,62 @@ internal class SettingFileCountManager : ISettingFileCountManager
     // *******************************************************************
 
     /// <inheritdoc />
+    public virtual async Task<SettingFileCountModel> CreateAsync(
+        SettingFileCountModel settingFileCount,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(settingFileCount, nameof(settingFileCount))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(SettingFileModel)
+                );
+
+            // Ensure the stats are correct.
+            settingFileCount.CreatedOnUtc = DateTime.UtcNow;
+            settingFileCount.CreatedBy = userName;
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(ISettingFileRepository.CreateAsync)
+                );
+
+            // Perform the operation.
+            var newSettingFileCount = await _repository.CreateAsync(
+                settingFileCount,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Return the results.
+            return newSettingFileCount;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to create a setting file count!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for setting file count!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
     public virtual async Task<int> CountAsync(
         CancellationToken cancellationToken = default
         )
@@ -108,7 +164,7 @@ internal class SettingFileCountManager : ISettingFileCountManager
                 );
 
             // Perform the search.
-            return await _settingFileCountRepository.CountAsync(
+            return await _repository.CountAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -144,7 +200,7 @@ internal class SettingFileCountManager : ISettingFileCountManager
                 );
 
             // Perform the operation.
-            var result = await _settingFileCountRepository.FindAllAsync(
+            var result = await _repository.FindAllAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 

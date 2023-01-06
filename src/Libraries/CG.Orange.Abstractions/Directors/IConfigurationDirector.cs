@@ -2,7 +2,8 @@
 namespace CG.Orange.Directors;
 
 /// <summary>
-/// This interface represent an object that reads configurations.
+/// This interface represent an object that performs configuration
+/// related operations.
 /// </summary>
 public interface IConfigurationDirector
 {

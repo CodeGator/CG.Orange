@@ -24,6 +24,11 @@ public class SettingFileCountEntity
     public int Count { get; set; }
 
     /// <summary>
+    /// This property contains the name of the person who created the entity.
+    /// </summary>
+    public string CreatedBy { get; set; } = "anonymous";
+
+    /// <summary>
     /// This property contains the UTC date/time when entity was created.
     /// </summary>
     public DateTime CreatedOnUtc { get; set; }

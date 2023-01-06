@@ -1,7 +1,4 @@
 ﻿
-using Microsoft.Extensions.Logging;
-using static CG.Orange.Globals.Models;
-
 namespace CG.Orange.Host.Pages.Admin.Providers;
 
 /// <summary>
@@ -73,10 +70,10 @@ public partial class Index
     protected NavigationManager NavigationManager { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the provider manager for the page.
+    /// This property contains the API for the page.
     /// </summary>
     [Inject]
-    protected IProviderManager ProviderManager { get; set; } = null!;
+    protected IOrangeApi OrangeApi { get; set; } = null!;
 
     /// <summary>
     /// This property contains the name of the current user, or the word
@@ -112,7 +109,7 @@ public partial class Index
                 );
 
             // Get the list of providers.
-            _providers = await ProviderManager.FindAllAsync();
+            _providers = await OrangeApi.Providers.FindAllAsync();
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -188,7 +185,7 @@ public partial class Index
                 );
 
             // Defer to the manager for the operation.
-            await ProviderManager.DisableAsync(
+            await OrangeApi.Providers.DisableAsync(
                 provider,
                 UserName
                 );
@@ -211,7 +208,7 @@ public partial class Index
                 );
 
             // Get the list of providers.
-            _providers = await ProviderManager.FindAllAsync();
+            _providers = await OrangeApi.Providers.FindAllAsync();
         }
         catch (Exception ex)
         {
@@ -244,7 +241,7 @@ public partial class Index
                 );
 
             // Defer to the manager for the operation.
-            await ProviderManager.EnableAsync(
+            await OrangeApi.Providers.EnableAsync(
                 provider,
                 UserName
                 );
@@ -267,7 +264,7 @@ public partial class Index
                 );
 
             // Get the list of providers.
-            _providers = await ProviderManager.FindAllAsync();
+            _providers = await OrangeApi.Providers.FindAllAsync();
         }
         catch (Exception ex)
         {
@@ -320,7 +317,7 @@ public partial class Index
                 );
 
             // Remove the provider.
-            await ProviderManager.DeleteAsync(
+            await OrangeApi.Providers.DeleteAsync(
                 provider,
                 UserName
                 );
@@ -343,7 +340,7 @@ public partial class Index
                 );
 
             // Get the list of providers.
-            _providers = await ProviderManager.FindAllAsync();
+            _providers = await OrangeApi.Providers.FindAllAsync();
         }
         catch (Exception ex)
         {
@@ -413,7 +410,7 @@ public partial class Index
                 );
 
             // Create the new provider.
-            var newProvider = await ProviderManager.CreateAsync(
+            var newProvider = await OrangeApi.Providers.CreateAsync(
                 new ProviderModel()
                 {
                     Name = safeName,

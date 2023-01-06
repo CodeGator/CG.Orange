@@ -77,16 +77,10 @@ public partial class Provider
     protected NavigationManager NavigationManager { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the provider manager for the page.
+    /// This property contains the API for the page.
     /// </summary>
     [Inject]
-    protected IProviderManager ProviderManager { get; set; } = null!;
-
-    /// <summary>
-    /// This property contains the provider property manager for the page.
-    /// </summary>
-    [Inject]
-    protected IProviderPropertyManager ProviderPropertyManager { get; set; } = null!;
+    protected IOrangeApi OrangeApi { get; set; } = null!;
 
     /// <summary>
     /// This property contains the name of the current user, or the word
@@ -140,7 +134,7 @@ public partial class Provider
                 );
 
             // Get the provider.
-            _model = await ProviderManager.FindByIdAsync(ProviderId);
+            _model = await OrangeApi.Providers.FindByIdAsync(ProviderId);
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -195,7 +189,7 @@ public partial class Provider
                 );
 
             // Save the changes.
-            _model = await ProviderManager.UpdateAsync(
+            _model = await OrangeApi.Providers.UpdateAsync(
                 _model,
                 UserName
                 );
@@ -257,7 +251,7 @@ public partial class Provider
                 );
 
             // Create the new property.
-            var newProperty = await ProviderPropertyManager.CreateAsync(
+            var newProperty = await OrangeApi.Providers.Properties.CreateAsync(
                 new ProviderPropertyModel()
                 {
                     ProviderId = _model.Id,
@@ -284,7 +278,7 @@ public partial class Provider
                 );
 
             // Get the provider.
-            _model = await ProviderManager.FindByIdAsync(ProviderId);
+            _model = await OrangeApi.Providers.FindByIdAsync(ProviderId);
         }
         catch (Exception ex)
         {
@@ -354,7 +348,7 @@ public partial class Provider
                 );
 
             // Defer to the manager for the delete.
-            await ProviderPropertyManager.DeleteAsync(
+            await OrangeApi.Providers.Properties.DeleteAsync(
                 providerProperty,
                 UserName
                 );
@@ -377,7 +371,7 @@ public partial class Provider
                 );
 
             // Get the provider.
-            _model = await ProviderManager.FindByIdAsync(ProviderId);
+            _model = await OrangeApi.Providers.FindByIdAsync(ProviderId);
         }
         catch (Exception ex)
         {
@@ -418,7 +412,7 @@ public partial class Provider
                 );
 
             // Save the changes.
-            var changedProperty = ProviderPropertyManager.UpdateAsync(
+            var changedProperty = OrangeApi.Providers.Properties.UpdateAsync(
                 (ProviderPropertyModel)element,
                 UserName
                 ).Result;
@@ -444,7 +438,7 @@ public partial class Provider
                 );
 
             // Get the provider.
-            _model = ProviderManager.FindByIdAsync(ProviderId).Result;
+            _model = OrangeApi.Providers.FindByIdAsync(ProviderId).Result;
 
             // Log what we are about to do.
             Logger.LogDebug(

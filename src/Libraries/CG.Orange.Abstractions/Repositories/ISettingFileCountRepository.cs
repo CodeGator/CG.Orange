@@ -39,7 +39,7 @@ public interface ISettingFileCountRepository
     /// This method creates a new <see cref="SettingFileCountModel"/> object in the 
     /// underlying storage.
     /// </summary>
-    /// <param name="count">The count to use for the operation.</param>
+    /// <param name="settingFileCount">The model to use for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns the newly created
@@ -49,7 +49,7 @@ public interface ISettingFileCountRepository
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
     Task<SettingFileCountModel> CreateAsync(
-        int count,
+        SettingFileCountModel settingFileCount,
         CancellationToken cancellationToken = default
         );
 

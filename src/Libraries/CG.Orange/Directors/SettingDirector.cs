@@ -1,7 +1,11 @@
 ﻿
-namespace CG.Orange.Managers;
+namespace CG.Orange.Directors;
 
-internal class SettingFileManager : ISettingFileManager
+/// <summary>
+/// This class is a default implementation of the <see cref="ISettingDirector"/>
+/// interface.
+/// </summary>
+internal class SettingDirector : ISettingDirector
 {
     // *******************************************************************
     // Fields.
@@ -10,14 +14,19 @@ internal class SettingFileManager : ISettingFileManager
     #region Fields
 
     /// <summary>
-    /// This field contains the repository for this manager.
+    /// This field contains the setting file manager for this director.
     /// </summary>
-    internal protected readonly ISettingFileRepository _repository = null!;
+    internal protected readonly ISettingFileManager _settingFileManager = null!;
 
     /// <summary>
-    /// This field contains the logger for this manager.
+    /// This field contains the setting file count manager for this director.
     /// </summary>
-    internal protected readonly ILogger<ISettingFileManager> _logger = null!;
+    internal protected readonly ISettingFileCountManager _settingFileCountManager = null!;
+
+    /// <summary>
+    /// This field contains the logger for this director.
+    /// </summary>
+    internal protected readonly ILogger<ISettingDirector> _logger = null!;
 
     #endregion
 
@@ -28,25 +37,27 @@ internal class SettingFileManager : ISettingFileManager
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="SettingFileManager"/>
+    /// This constructor creates a new instance of the <see cref="SettingDirector"/>
     /// class.
     /// </summary>
-    /// <param name="settingFileRepository">The setting file repository to use
-    /// with this manager.</param>
-    /// <param name="logger">The logger to use with this manager.</param>
-    /// <exception cref="ArgumentException">This exception is thrown whenever one
-    /// or more arguments are missing, or invalid.</exception>
-    public SettingFileManager(
-        ISettingFileRepository settingFileRepository,
-        ILogger<ISettingFileManager> logger
+    /// <param name="settingFileManager">The setting file manager to use
+    /// with this director.</param>
+    /// <param name="settingFileCountManager">The setting file count 
+    /// manager to use with this director.</param>
+    /// <param name="logger">The logger to use with this director.</param>
+    public SettingDirector(
+        ISettingFileManager settingFileManager,
+        ISettingFileCountManager settingFileCountManager,
+        ILogger<ISettingDirector> logger
         )
     {
-        // Validate the arguments before attempting to use them.
-        Guard.Instance().ThrowIfNull(settingFileRepository, nameof(settingFileRepository))
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(settingFileManager, nameof(settingFileManager))
             .ThrowIfNull(logger, nameof(logger));
 
-        // Save the reference(s)
-        _repository = settingFileRepository;
+        // Save the reference(s).
+        _settingFileManager = settingFileManager;   
+        _settingFileCountManager = settingFileCountManager;
         _logger = logger;
     }
 
@@ -58,21 +69,15 @@ internal class SettingFileManager : ISettingFileManager
 
     #region Public methods
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<bool> AnyAsync(
         CancellationToken cancellationToken = default
         )
     {
         try
         {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.AnyAsync)
-                );
-
-            // Perform the search.
-            return await _repository.AnyAsync(
+            // Defer to the manager.
+            return await _settingFileManager.AnyAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -81,12 +86,12 @@ internal class SettingFileManager : ISettingFileManager
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting files!"
+                "Failed to find setting files!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for setting files!",
+            throw new DirectorException(
+                message: $"The director failed to find setting files!",
                 innerException: ex
                 );
         }
@@ -94,7 +99,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<bool> AnyAsync(
         string applicationName,
         string? environmentName,
@@ -106,14 +111,8 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.AnyAsync)
-                );
-
-            // Perform the search.
-            return await _repository.AnyAsync(
+            // Defer to the manager.
+            return await _settingFileManager.AnyAsync(
                 applicationName,
                 environmentName,
                 cancellationToken
@@ -124,14 +123,12 @@ internal class SettingFileManager : ISettingFileManager
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting files by application and " +
-                "environment name!"
+                "Failed to find setting files!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for setting " +
-                "files by application and environment name!",
+            throw new DirectorException(
+                message: $"The director failed to find setting files!",
                 innerException: ex
                 );
         }
@@ -139,21 +136,15 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<int> CountAsync(
         CancellationToken cancellationToken = default
         )
     {
         try
         {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.CountAsync)
-                );
-
-            // Perform the search.
-            return await _repository.CountAsync(
+            // Defer to the manager.
+            return await _settingFileManager.CountAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -166,8 +157,8 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to count setting files!",
+            throw new DirectorException(
+                message: $"The director failed to count setting files!",
                 innerException: ex
                 );
         }
@@ -175,7 +166,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<SettingFileModel> CreateAsync(
         SettingFileModel settingFile,
         string userName,
@@ -188,34 +179,24 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
-                );
-
-            // Ensure the stats are correct.
-            settingFile.CreatedOnUtc = DateTime.UtcNow;
-            settingFile.CreatedBy = userName;
-            settingFile.LastUpdatedBy = null;
-            settingFile.LastUpdatedOnUtc = null;
-
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.CreateAsync)
-                );
-
-            // Perform the operation.
-            var newSettingFile = await _repository.CreateAsync(
+            // Defer to the manager for the create.
+            var newSettingFile = await _settingFileManager.CreateAsync(
                 settingFile,
+                userName,
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Counting setting files"
-                );
+            // Get a count of the setting files.
+            var count = await _settingFileCountManager.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Defer to the manager for the event.
+            await _settingFileCountManager.CreateAsync(
+                new SettingFileCountModel() { Count = count },
+                userName,
+                cancellationToken
+                ).ConfigureAwait(false);
 
             // Return the results.
             return newSettingFile;
@@ -225,12 +206,12 @@ internal class SettingFileManager : ISettingFileManager
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to create a new setting file!"
+                "Failed to create a setting file!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to create a new setting file!",
+            throw new DirectorException(
+                message: $"The director failed to create a setting file!",
                 innerException: ex
                 );
         }
@@ -238,7 +219,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task DeleteAsync(
         SettingFileModel settingFile,
         string userName,
@@ -251,25 +232,22 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
-                );
-
-            // Ensure the stats are correct.
-            settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
-            settingFile.LastUpdatedBy = userName;
-
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.DeleteAsync)
-                );
-
-            // Perform the operation.
-            await _repository.DeleteAsync(
+            // Defer to the manager.
+            await _settingFileManager.DeleteAsync(
                 settingFile,
+                userName,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Get a count of the setting files.
+            var count = await _settingFileCountManager.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Defer to the manager for the event.
+            await _settingFileCountManager.CreateAsync(
+                new SettingFileCountModel() { Count = count },
+                userName,
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -282,8 +260,8 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to delete a setting file!",
+            throw new DirectorException(
+                message: $"The director failed to delete a setting file!",
                 innerException: ex
                 );
         }
@@ -291,7 +269,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<SettingFileModel> DisableAsync(
         SettingFileModel settingFile,
         string userName,
@@ -304,34 +282,10 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Can we take a shortcut?
-            if (settingFile.IsDisabled)
-            {
-                return settingFile; // Nothing to do.
-            }
-
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
-                );
-
-            // Ensure the stats are correct.
-            settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
-            settingFile.LastUpdatedBy = userName;
-
-            // Disable the settingFile.
-            settingFile.IsDisabled = true;
-
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(IProviderRepository.UpdateAsync)
-                );
-
-            // Perform the operation.
-            return await _repository.UpdateAsync(
+            // Defer to the manager.
+            return await _settingFileManager.DisableAsync(
                 settingFile,
+                userName,
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -344,8 +298,8 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to disable a setting file!",
+            throw new DirectorException(
+                message: $"The director failed to disable a setting file!",
                 innerException: ex
                 );
         }
@@ -353,7 +307,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<SettingFileModel> EnableAsync(
         SettingFileModel settingFile,
         string userName,
@@ -366,34 +320,10 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Can we take a shortcut?
-            if (!settingFile.IsDisabled)
-            {
-                return settingFile; // Nothing to do.
-            }
-
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
-                );
-
-            // Ensure the stats are correct.
-            settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
-            settingFile.LastUpdatedBy = userName;
-
-            // Enable the settingFile.
-            settingFile.IsDisabled = false;
-
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(IProviderRepository.UpdateAsync)
-                );
-
-            // Perform the operation.
-            return await _repository.UpdateAsync(
+            // Defer to the manager.
+            return await _settingFileManager.EnableAsync(
                 settingFile,
+                userName,
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -406,8 +336,8 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to enable a setting file!",
+            throw new DirectorException(
+                message: $"The director failed to enable a setting file!",
                 innerException: ex
                 );
         }
@@ -415,38 +345,29 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<IEnumerable<SettingFileModel>> FindAllAsync(
         CancellationToken cancellationToken = default
         )
     {
         try
         {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.FindAllAsync)
-                );
-
-            // Perform the operation.
-            var result = await _repository.FindAllAsync(
+            // Defer to the manager.
+            return await _settingFileManager.FindAllAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
-
-            // Return the results.
-            return result;
         }
         catch (Exception ex)
         {
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting files!"
+                "Failed to find setting files!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for setting files!",
+            throw new DirectorException(
+                message: $"The director failed to find setting files!",
                 innerException: ex
                 );
         }
@@ -454,7 +375,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<SettingFileModel?> FindByApplicationAndEnvironmentAsync(
         string applicationName,
         string? environmentName,
@@ -466,34 +387,25 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.FindByApplicationAndEnvironmentAsync)
-                );
-
-            // Perform the operation.
-            var result = await _repository.FindByApplicationAndEnvironmentAsync(
+            // Defer to the manager.
+            return await _settingFileManager.FindByApplicationAndEnvironmentAsync(
                 applicationName,
                 environmentName,
                 cancellationToken
                 ).ConfigureAwait(false);
-
-            // Return the results.
-            return result;
         }
         catch (Exception ex)
         {
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting files by application and environment!"
+                "Failed to find setting files by tag and type!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for setting files by " +
-                "application and environment!",
+            throw new DirectorException(
+                message: $"The director failed to find setting files " +
+                "by tag and type!",
                 innerException: ex
                 );
         }
@@ -501,7 +413,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<SettingFileModel?> FindByIdAsync(
         int id,
         CancellationToken cancellationToken = default
@@ -512,33 +424,24 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.FindByIdAsync)
-                );
-
-            // Perform the operation.
-            var result = await _repository.FindByIdAsync(
+            // Defer to the manager.
+            return await _settingFileManager.FindByIdAsync(
                 id,
                 cancellationToken
                 ).ConfigureAwait(false);
-
-            // Return the results.
-            return result;
         }
         catch (Exception ex)
         {
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting files by id!"
+                "Failed to find setting files by id!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to search for setting files by " +
-                "id!",
+            throw new DirectorException(
+                message: $"The director failed to find setting files " +
+                "by id!",
                 innerException: ex
                 );
         }
@@ -546,7 +449,7 @@ internal class SettingFileManager : ISettingFileManager
 
     // *******************************************************************
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public virtual async Task<SettingFileModel> UpdateAsync(
         SettingFileModel settingFile,
         string userName,
@@ -559,25 +462,10 @@ internal class SettingFileManager : ISettingFileManager
 
         try
         {
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
-                );
-
-            // Ensure the stats are correct.
-            settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
-            settingFile.LastUpdatedBy = userName;
-
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Deferring to {name}",
-                nameof(ISettingFileRepository.UpdateAsync)
-                );
-
-            // Perform the operation.
-            return await _repository.UpdateAsync(
+            // Defer to the manager.
+            return await _settingFileManager.UpdateAsync(
                 settingFile,
+                userName,
                 cancellationToken
                 ).ConfigureAwait(false);
         }
@@ -586,16 +474,19 @@ internal class SettingFileManager : ISettingFileManager
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to update a settingFile!"
+                "Failed to find setting files by id!"
                 );
 
             // Provider better context.
-            throw new ManagerException(
-                message: $"The manager failed to update a settingFile!",
+            throw new DirectorException(
+                message: $"The director failed to find setting files " +
+                "by id!",
                 innerException: ex
                 );
         }
     }
+
+    // *******************************************************************
 
     #endregion
 }

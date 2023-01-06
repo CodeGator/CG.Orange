@@ -1,12 +1,10 @@
-﻿
-namespace CG.Orange.Host.Services;
+﻿namespace CG.Orange.Host.Services;
 
 /// <summary>
-/// The class is a hosted service that warms up the Orange microservice, on 
-/// startup, by pre-fetching all the settings so the secrets are pulled 
-/// from their remote services, and, if applicable, cached locally.
+/// The class is a hosted service that periodically aggregates various 
+/// statistics together for the Orange microservice.
 /// </summary>
-internal class WarmupService : BackgroundService
+internal class StatisticsService : BackgroundService
 {
     // *******************************************************************
     // Fields.
@@ -27,7 +25,7 @@ internal class WarmupService : BackgroundService
     /// <summary>
     /// This field contains the logger for this service.
     /// </summary>
-    internal protected readonly ILogger<WarmupService> _logger = null!;
+    internal protected readonly ILogger<StatisticsService> _logger = null!;
 
     #endregion
 
@@ -38,7 +36,7 @@ internal class WarmupService : BackgroundService
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="WarmupService"/>
+    /// This constructor creates a new instance of the <see cref="StatisticsService"/>
     /// class.
     /// </summary>
     /// <param name="serviceProvider">The service provider to use with 
@@ -46,10 +44,10 @@ internal class WarmupService : BackgroundService
     /// <param name="hostedServiceOptions">The hosted service options to
     /// use with this service.</param>
     /// <param name="logger">The logger to use with this service.</param>
-    public WarmupService(
+    public StatisticsService(
         IServiceProvider serviceProvider,
         IOptions<HostedServicesOptions> hostedServiceOptions,
-        ILogger<WarmupService> logger
+        ILogger<StatisticsService> logger
         )
     {
         // Validate the arguments before attempting to use them.
@@ -84,21 +82,21 @@ internal class WarmupService : BackgroundService
         try
         {
             // Were options provided?
-            if (_hostedServiceOptions.WarmupService is not null)
+            if (_hostedServiceOptions.StatisticsService is not null)
             {
                 // Are we disabled?
-                if (_hostedServiceOptions.WarmupService.IsDisabled)
+                if (_hostedServiceOptions.StatisticsService.IsDisabled)
                 {
                     // Log what we are about to do.
                     _logger.LogInformation(
                         "Exiting because the {svc} service is disabled in the options",
-                        nameof(WarmupService)
+                        nameof(StatisticsService)
                         );
                     return; // Nothing to do!
                 }
 
                 // Should we wait before we start?
-                if (_hostedServiceOptions.WarmupService.StartupDelay is not null)
+                if (_hostedServiceOptions.StatisticsService.StartupDelay is not null)
                 {
                     // Log what we are about to do.
                     _logger.LogDebug(
@@ -106,7 +104,7 @@ internal class WarmupService : BackgroundService
                         );
 
                     // Calculate the delay.
-                    var delay = _hostedServiceOptions.WarmupService.StartupDelay
+                    var delay = _hostedServiceOptions.StatisticsService.StartupDelay
                         ?? TimeSpan.FromMinutes(1);
 
                     // Log what we are about to do.
@@ -126,83 +124,51 @@ internal class WarmupService : BackgroundService
             // Log what we are about to do.
             _logger.LogInformation(
                 "The {svc} is running.",
-                nameof(WarmupService)
+                nameof(StatisticsService)
                 );
 
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Creating a DI scope"
-                );
-
-            // Create a DI scope.
-            using var scope = _serviceProvider.CreateScope();
-
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Creating an Orange API"
-                );
-
-            // Create a API.
-            var orangeApi = scope.ServiceProvider.GetRequiredService<IOrangeApi>();
-
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Fetching all enabled setting files"
-                );
-
-            // Get the setting files.
-            var settingFiles = await orangeApi.Settings.FindAllAsync(
-                cancellationToken
-                ).ConfigureAwait(false);
-
-            // Log what we are about to do.
-            _logger.LogDebug(
-                "Looping through {count} setting files",
-                settingFiles.Count()
-                );
-
-            // Loop through the enabled setting files.
-            foreach ( var settingFile in settingFiles.Where(x => !x.IsDisabled)) 
+            // Run until we are stopped.
+            while (!cancellationToken.IsCancellationRequested)
             {
-                try
-                {
-                    // Log what we are about to do.
-                    _logger.LogDebug(
-                        "Fetching settings for application: {app}, environment: {env}",
-                        settingFile.ApplicationName,
-                        settingFile.EnvironmentName
-                        );
-
-                    // Read the setting, which will cache any embedded secrets.
-                    _ = await orangeApi.Configurations.ReadConfigurationAsync(
-                        settingFile.ApplicationName,
-                        settingFile.EnvironmentName,
-                        cancellationToken
-                        ).ConfigureAwait(false);
-                }
-                catch (Exception ex)
-                {
-                    // Log what happened.
-                    _logger.LogError(
-                        ex,
-                        "Failed to warmup settings for application: {app}, " +
-                        "environment: {env}.",
-                        settingFile.ApplicationName,
-                        settingFile.EnvironmentName
-                        );
-                }
-
                 // Log what we are about to do.
                 _logger.LogDebug(
-                    "Waiting before we fetch the next settings"
+                    "Creating a DI scope"
                     );
 
-                // Wait before we continue.
-                await Task.Delay(
-                    TimeSpan.FromSeconds(10),
-                    cancellationToken
-                    ).ConfigureAwait(false);
-            }
+                // Create a DI scope.
+                using var scope = _serviceProvider.CreateScope();
+
+                // TODO : write the code for this.
+
+                // Were options provided?
+                if (_hostedServiceOptions.StatisticsService is not null)
+                {
+                    // Should we wait before we start?
+                    if (_hostedServiceOptions.StatisticsService.OperatingDelay is not null)
+                    {
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Calculating the operating delay"
+                            );
+
+                        // Calculate the delay.
+                        var delay = _hostedServiceOptions.StatisticsService.OperatingDelay
+                            ?? TimeSpan.FromMinutes(5);
+
+                        // Log what we are about to do.
+                        _logger.LogDebug(
+                            "Waiting {ts} before we perform more work",
+                            delay
+                            );
+
+                        // Wait before we do anything.
+                        await Task.Delay(
+                            delay,
+                            cancellationToken
+                            ).ConfigureAwait(false);
+                    }
+                }
+            }            
         }
         catch (Exception ex)
         {
@@ -210,7 +176,7 @@ internal class WarmupService : BackgroundService
             _logger.LogError(
                 ex,
                 "Unexpected failure in the {name} service!",
-                nameof(WarmupService)
+                nameof(StatisticsService)
                 );
         }
         finally
@@ -218,7 +184,7 @@ internal class WarmupService : BackgroundService
             // Log what we are about to do.
             _logger.LogInformation(
                 "The {svc} is stopped.",
-                nameof(WarmupService)
+                nameof(StatisticsService)
                 );
         }
     }

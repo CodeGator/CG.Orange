@@ -67,16 +67,10 @@ public partial class Setting
     protected NavigationManager NavigationManager { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the setting file manager for the page.
+    /// This property contains the API for the page.
     /// </summary>
     [Inject]
-    protected ISettingFileManager SettingFileManager { get; set; } = null!;
-
-    /// <summary>
-    /// This property contains the provider manager for the page.
-    /// </summary>
-    [Inject]
-    protected IProviderManager ProviderManager { get; set; } = null!;
+    protected IOrangeApi OrangeApi { get; set; } = null!;
 
     /// <summary>
     /// This property contains the name of the current user, or the word
@@ -126,7 +120,7 @@ public partial class Setting
                 );
 
             // Get the setting file.
-            _model = await SettingFileManager.FindByIdAsync(SettingId);
+            _model = await OrangeApi.Settings.FindByIdAsync(SettingId);
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -187,7 +181,7 @@ public partial class Setting
                 );
 
             // Save the changes.
-            _model = await SettingFileManager.UpdateAsync(
+            _model = await OrangeApi.Settings.UpdateAsync(
                 _model,
                 UserName
                 );
@@ -284,7 +278,7 @@ public partial class Setting
             var cfg = builder.Build();
 
             // Get a list of all providers.
-            var providers = (await ProviderManager.FindAllAsync());
+            var providers = (await OrangeApi.Providers.FindAllAsync());
 
             // Now that we know the JSON is well formed, let's walk
             //   down the tree and validate any replacement tokens.

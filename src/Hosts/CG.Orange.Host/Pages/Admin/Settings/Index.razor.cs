@@ -1,6 +1,4 @@
 ﻿
-using CG.Orange.Host.Hubs;
-
 namespace CG.Orange.Host.Pages.Admin.Settings;
 
 /// <summary>
@@ -68,10 +66,10 @@ public partial class Index
     protected NavigationManager NavigationManager { get; set; } = null!;
 
     /// <summary>
-    /// This property contains the setting file manager for the page.
+    /// This property contains the API for the page.
     /// </summary>
     [Inject]
-    protected ISettingFileManager SettingFileManager { get; set; } = null!;
+    protected IOrangeApi OrangeApi { get; set; } = null!;
 
     /// <summary>
     /// This property contains the name of the current user, or the word
@@ -107,7 +105,7 @@ public partial class Index
                 );
 
             // Get the list of settings.
-            _settings = await SettingFileManager.FindAllAsync();
+            _settings = await OrangeApi.Settings.FindAllAsync();
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -167,7 +165,7 @@ public partial class Index
                 );
 
             // Remove the setting file.
-            await SettingFileManager.DeleteAsync(
+            await OrangeApi.Settings.DeleteAsync(
                 file,
                 UserName
                 );
@@ -190,7 +188,7 @@ public partial class Index
                 );
 
             // Get the list of settings.
-            _settings = await SettingFileManager.FindAllAsync();
+            _settings = await OrangeApi.Settings.FindAllAsync();
 
             // Log what we are about to do.
             Logger.LogDebug(
@@ -255,7 +253,7 @@ public partial class Index
                 );
 
             // Save the change.
-            _ = await SettingFileManager.CreateAsync(
+            _ = await OrangeApi.Settings.CreateAsync(
                 new SettingFileModel()
                 {
                     Json = json,
@@ -285,7 +283,7 @@ public partial class Index
                 );
 
             // Get the list of settings.
-            _settings = await SettingFileManager.FindAllAsync();
+            _settings = await OrangeApi.Settings.FindAllAsync();
         }
         catch (Exception ex)
         {
@@ -307,39 +305,52 @@ public partial class Index
     /// <returns>A task to perform the operation.</returns>
     protected async Task OnCreateAsync()
     {
-        // Make an initial guess at a new file name.
-        var names = await GuessSomeNamesAsync("application.json");
+        try
+        {
+            // Make an initial guess at a new file name.
+            var names = await GuessSomeNamesAsync("application.json");
 
-        // Step 3: Create the model.
-        _ = await SettingFileManager.CreateAsync(
-            new SettingFileModel()
-            {
-                Json = "{ }",
-                ApplicationName = names.Item1,
-                EnvironmentName = names.Item2,
-            },
-            UserName
-            );
+            // Step 3: Create the model.
+            _ = await OrangeApi.Settings.CreateAsync(
+                new SettingFileModel()
+                {
+                    Json = "{ }",
+                    ApplicationName = names.Item1,
+                    EnvironmentName = names.Item2,
+                },
+                UserName
+                );
 
-        // Log what we are about to do.
-        Logger.LogDebug(
-            "Showing the snackbar message."
-            );
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Showing the snackbar message."
+                );
 
-        // Tell the world what happened.
-        SnackbarService.Add(
-            $"File created",
-            Severity.Success,
-            options => options.CloseAfterNavigation = true
-            );
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"File created",
+                Severity.Success,
+                options => options.CloseAfterNavigation = true
+                );
 
-        // Log what we are about to do.
-        Logger.LogDebug(
-            "Refreshing the page data."
-            );
+            // Log what we are about to do.
+            Logger.LogDebug(
+                "Refreshing the page data."
+                );
 
-        // Get the list of settings.
-        _settings = await SettingFileManager.FindAllAsync();
+            // Get the list of settings.
+            _settings = await OrangeApi.Settings.FindAllAsync();
+        }
+        catch (Exception ex)
+        {
+            // Tell the world what happened.
+            SnackbarService.Add(
+                $"<b>Something broke!</b> " +
+                $"<ul><li>{ex.GetBaseException().Message}</li></ul>",
+                Severity.Error,
+                options => options.CloseAfterNavigation = true
+                );
+        }
     }
 
     // *******************************************************************
@@ -382,7 +393,7 @@ public partial class Index
                 );
 
             // Defer to the manager for the operation.
-            await SettingFileManager.DisableAsync(
+            await OrangeApi.Settings.DisableAsync(
                 settingFile,
                 UserName
                 );
@@ -405,7 +416,7 @@ public partial class Index
                 );
 
             // Get the list of setting files.
-            _settings = await SettingFileManager.FindAllAsync();
+            _settings = await OrangeApi.Settings.FindAllAsync();
         }
         catch (Exception ex)
         {
@@ -438,7 +449,7 @@ public partial class Index
                 );
 
             // Defer to the manager for the operation.
-            await SettingFileManager.EnableAsync(
+            await OrangeApi.Settings.EnableAsync(
                 settingFile,
                 UserName
                 );
@@ -461,7 +472,7 @@ public partial class Index
                 );
 
             // Get the list of setting files.
-            _settings = await SettingFileManager.FindAllAsync();
+            _settings = await OrangeApi.Settings.FindAllAsync();
         }
         catch (Exception ex)
         {
@@ -541,7 +552,7 @@ public partial class Index
         // Loop and check for conflicts.
         var safeApplicationName = applicationName;
         var counter = 1;
-        while (await SettingFileManager.AnyAsync(
+        while (await OrangeApi.Settings.AnyAsync(
             safeApplicationName,
             environmentName
             ))

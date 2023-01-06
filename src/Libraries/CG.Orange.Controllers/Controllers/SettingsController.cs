@@ -16,9 +16,9 @@ public class SettingsController : ControllerBase
     #region Fields
 
     /// <summary>
-    /// This field contains the configuration director for this controller.
+    /// This field contains the api for this controller.
     /// </summary>
-    internal protected readonly IConfigurationDirector _configurationDirector = null!;
+    internal protected readonly IOrangeApi _orangeApi = null!;
 
     /// <summary>
     /// This field contains the logger for this controller.
@@ -36,20 +36,19 @@ public class SettingsController : ControllerBase
     /// <summary>
     /// This constructor creates a new instance of the <see cref="SettingsController"/>
     /// </summary>
-    /// <param name="configurationDirector">The configuration director to
-    /// use with this controller.</param>
+    /// <param name="orangeApi">The API to use with this controller.</param>
     /// <param name="logger">The logger to use with this controller.</param>
     public SettingsController(
-        IConfigurationDirector configurationDirector,
+        IOrangeApi orangeApi,
         ILogger<SettingsController> logger
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(configurationDirector, nameof(configurationDirector))
+        Guard.Instance().ThrowIfNull(orangeApi, nameof(orangeApi))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s).
-        _configurationDirector = configurationDirector;
+        _orangeApi = orangeApi;
         _logger = logger;
     }
 
@@ -106,7 +105,7 @@ public class SettingsController : ControllerBase
                 );
 
             // Read the complete configuration (with secrets).
-            var result = await _configurationDirector.ReadConfigurationAsync(
+            var result = await _orangeApi.Configurations.ReadConfigurationAsync(
                 model.Application,
                 model.Environment
                 ).ConfigureAwait(false);

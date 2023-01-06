@@ -87,5 +87,19 @@ public static class Globals
             /// </summary>
             public const int EnvironmentNameLength = 32;
         }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This class contains sizes for <see cref="SettingFileCountModel"/> properties.
+        /// </summary>
+        public static class SettingFileCounts
+        {
+            /// <summary>
+            /// This constant represents the length of the <see cref="SettingFileCountModel.CreatedBy"/> 
+            /// property.
+            /// </summary>
+            public const int CreatedByLength = 32;
+        }
     }
 }

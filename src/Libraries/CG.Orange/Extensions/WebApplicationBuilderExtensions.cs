@@ -66,7 +66,10 @@ public static class WebApplicationBuilderExtensions001
 
         // Add the directors.
         webApplicationBuilder.Services.AddScoped<IConfigurationDirector, ConfigurationDirector>();
-        webApplicationBuilder.Services.AddScoped<IStatisticsDirector, StatisticsDirector>();
+        webApplicationBuilder.Services.AddScoped<IProviderDirector, ProviderDirector>();
+        webApplicationBuilder.Services.AddScoped<ISeedDirector, SeedDirector>();
+        webApplicationBuilder.Services.AddScoped<ISettingDirector, SettingDirector>();
+        webApplicationBuilder.Services.AddScoped<IStatisticDirector, StatisticDirector>();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
@@ -86,6 +89,14 @@ public static class WebApplicationBuilderExtensions001
             sectionName: sectionName,
             bootstrapLogger: bootstrapLogger
             );
+
+        // Tell the world what we are about to do.
+        bootstrapLogger?.LogDebug(
+            "Wiring up the Orange API"
+            );
+
+        // Add the API.
+        webApplicationBuilder.Services.AddScoped<IOrangeApi, OrangeApi>();
 
         // Return the application builder.
         return webApplicationBuilder;
