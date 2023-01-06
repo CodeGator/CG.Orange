@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ProviderEntity
+    <title>Class SettingFileCountManager
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ProviderEntity
+    <meta name="title" content="Class SettingFileCountManager
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,34 +78,24 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.Entities.ProviderEntity">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Managers.SettingFileCountManager">
   
   
-  <h1 id="CG_Orange_Data_Entities_ProviderEntity" data-uid="CG.Orange.Data.Entities.ProviderEntity" class="text-break">Class ProviderEntity
+  <h1 id="CG_Orange_Managers_SettingFileCountManager" data-uid="CG.Orange.Managers.SettingFileCountManager" class="text-break">Class SettingFileCountManager
   </h1>
-  <div class="markdown level0 summary"><p>This class is an entity that represents a provider.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="CG.Orange.Data.Entities.AuditedEntityBase.html">AuditedEntityBase</a></div>
-    <div class="level2"><span class="xref">ProviderEntity</span></div>
+    <div class="level1"><span class="xref">SettingFileCountManager</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CG.Orange.Managers.ISettingFileCountManager.html">ISettingFileCountManager</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_CreatedBy">AuditedEntityBase.CreatedBy</a>
-    </div>
-    <div>
-      <a class="xref" href="CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_CreatedOnUtc">AuditedEntityBase.CreatedOnUtc</a>
-    </div>
-    <div>
-      <a class="xref" href="CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_LastUpdatedBy">AuditedEntityBase.LastUpdatedBy</a>
-    </div>
-    <div>
-      <a class="xref" href="CG.Orange.Data.Entities.AuditedEntityBase.html#CG_Orange_Data_Entities_AuditedEntityBase_LastUpdatedOnUtc">AuditedEntityBase.LastUpdatedOnUtc</a>
-    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -128,24 +118,60 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Data.Entities.html">CG.Orange.Data.Entities</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Data.dll</h6>
-  <h5 id="CG_Orange_Data_Entities_ProviderEntity_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Managers.html">CG.Orange.Managers</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.dll</h6>
+  <h5 id="CG_Orange_Managers_SettingFileCountManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProviderEntity : AuditedEntityBase</code></pre>
+    <pre><code class="lang-csharp hljs">class SettingFileCountManager : ISettingFileCountManager</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_Description_" data-uid="CG.Orange.Data.Entities.ProviderEntity.Description*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_Description" data-uid="CG.Orange.Data.Entities.ProviderEntity.Description">Description</h4>
-  <div class="markdown level1 summary"><p>This property contains the optional description for the entity.</p>
+  <a id="CG_Orange_Managers_SettingFileCountManager__ctor_" data-uid="CG.Orange.Managers.SettingFileCountManager.#ctor*"></a>
+  <h4 id="CG_Orange_Managers_SettingFileCountManager__ctor_ISettingFileCountRepository_ILogger_CG_Orange_Managers_ISettingFileCountManager__" data-uid="CG.Orange.Managers.SettingFileCountManager.#ctor(ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileCountManager})">SettingFileCountManager(ISettingFileCountRepository, ILogger&lt;ISettingFileCountManager&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Managers.SettingFileCountManager.html">SettingFileCountManager</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingFileCountManager(ISettingFileCountRepository settingFileCountRepository, ILogger&lt;ISettingFileCountManager&gt; logger)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISettingFileCountRepository</span></td>
+        <td><span class="parametername">settingFileCountRepository</span></td>
+        <td><p>The setting file repository to use
+with this manager.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Managers.ISettingFileCountManager.html">ISettingFileCountManager</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use with this manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="CG_Orange_Managers_SettingFileCountManager__logger" data-uid="CG.Orange.Managers.SettingFileCountManager._logger">_logger</h4>
+  <div class="markdown level1 summary"><p>This field contains the logger for this manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;ISettingFileCountManager&gt; _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -155,21 +181,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Managers.ISettingFileCountManager.html">ISettingFileCountManager</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_Id_" data-uid="CG.Orange.Data.Entities.ProviderEntity.Id*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_Id" data-uid="CG.Orange.Data.Entities.ProviderEntity.Id">Id</h4>
-  <div class="markdown level1 summary"><p>This property contains the identifier for the entity.</p>
+  <h4 id="CG_Orange_Managers_SettingFileCountManager__settingFileCountRepository" data-uid="CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository">_settingFileCountRepository</h4>
+  <div class="markdown level1 summary"><p>This field contains the repository for this manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ISettingFileCountRepository _settingFileCountRepository</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -179,21 +204,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">ISettingFileCountRepository</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_IsDisabled_" data-uid="CG.Orange.Data.Entities.ProviderEntity.IsDisabled*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_IsDisabled" data-uid="CG.Orange.Data.Entities.ProviderEntity.IsDisabled">IsDisabled</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the entity is disabled, or not.</p>
-</div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Orange_Managers_SettingFileCountManager_AnyAsync_" data-uid="CG.Orange.Managers.SettingFileCountManager.AnyAsync*"></a>
+  <h4 id="CG_Orange_Managers_SettingFileCountManager_AnyAsync_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileCountManager.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDisabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;bool&gt; AnyAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -203,21 +246,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_Name_" data-uid="CG.Orange.Data.Entities.ProviderEntity.Name*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_Name" data-uid="CG.Orange.Data.Entities.ProviderEntity.Name">Name</h4>
-  <div class="markdown level1 summary"><p>This property contains the name for the entity.</p>
-</div>
+  <a id="CG_Orange_Managers_SettingFileCountManager_CountAsync_" data-uid="CG.Orange.Managers.SettingFileCountManager.CountAsync*"></a>
+  <h4 id="CG_Orange_Managers_SettingFileCountManager_CountAsync_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileCountManager.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;int&gt; CountAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -227,21 +286,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_ProcessorType_" data-uid="CG.Orange.Data.Entities.ProviderEntity.ProcessorType*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_ProcessorType" data-uid="CG.Orange.Data.Entities.ProviderEntity.ProcessorType">ProcessorType</h4>
-  <div class="markdown level1 summary"><p>This property contains the .NET type for the associated processor.</p>
-</div>
+  <a id="CG_Orange_Managers_SettingFileCountManager_FindAllAsync_" data-uid="CG.Orange.Managers.SettingFileCountManager.FindAllAsync*"></a>
+  <h4 id="CG_Orange_Managers_SettingFileCountManager_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileCountManager.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ProcessorType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IEnumerable&lt;SettingFileCountModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -251,83 +326,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileCountModel</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_Properties_" data-uid="CG.Orange.Data.Entities.ProviderEntity.Properties*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_Properties" data-uid="CG.Orange.Data.Entities.ProviderEntity.Properties">Properties</h4>
-  <div class="markdown level1 summary"><p>This property contains the associated properties for the entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ProviderPropertyEntity&gt; Properties { get; set; }</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="CG.Orange.Managers.ISettingFileCountManager.html">ISettingFileCountManager</a>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="CG.Orange.Data.Entities.ProviderPropertyEntity.html">ProviderPropertyEntity</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_ProviderType_" data-uid="CG.Orange.Data.Entities.ProviderEntity.ProviderType*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_ProviderType" data-uid="CG.Orange.Data.Entities.ProviderEntity.ProviderType">ProviderType</h4>
-  <div class="markdown level1 summary"><p>This property contains the provider type for the entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProviderType ProviderType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ProviderType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Data_Entities_ProviderEntity_Tag_" data-uid="CG.Orange.Data.Entities.ProviderEntity.Tag*"></a>
-  <h4 id="CG_Orange_Data_Entities_ProviderEntity_Tag" data-uid="CG.Orange.Data.Entities.ProviderEntity.Tag">Tag</h4>
-  <div class="markdown level1 summary"><p>This property contains the tag for the entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Tag { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

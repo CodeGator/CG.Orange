@@ -127,14 +127,14 @@
   <h3 id="constructors">Constructors
   </h3>
   <a id="CG_Orange_Managers_SettingFileManager__ctor_" data-uid="CG.Orange.Managers.SettingFileManager.#ctor*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager__ctor_CG_Orange_Repositories_ISettingFileRepository_ILogger_CG_Orange_Managers_ISettingFileManager__" data-uid="CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})">SettingFileManager(ISettingFileRepository, ILogger&lt;ISettingFileManager&gt;)</h4>
+  <h4 id="CG_Orange_Managers_SettingFileManager__ctor_CG_Orange_Repositories_ISettingFileRepository_CG_Orange_Repositories_ISettingFileCountRepository_ILogger_CG_Orange_Managers_ISettingFileManager__" data-uid="CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,CG.Orange.Repositories.ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileManager})">SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger&lt;ISettingFileManager&gt;)</h4>
   <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Managers.SettingFileManager.html">SettingFileManager</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingFileManager(ISettingFileRepository settingFileRepository, ILogger&lt;ISettingFileManager&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingFileManager(ISettingFileRepository settingFileRepository, ISettingFileCountRepository settingFileCountRepository, ILogger&lt;ISettingFileManager&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,6 +151,13 @@ class.</p>
         <td><span class="parametername">settingFileRepository</span></td>
         <td><p>The setting file repository to use
 with this manager.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.ISettingFileCountRepository.html">ISettingFileCountRepository</a></td>
+        <td><span class="parametername">settingFileCountRepository</span></td>
+        <td><p>The setting file count
+repository to use with this manager.</p>
 </td>
       </tr>
       <tr>
@@ -186,8 +193,31 @@ with this manager.</p>
       </tr>
     </tbody>
   </table>
+  <h4 id="CG_Orange_Managers_SettingFileManager__settingFileCountRepository" data-uid="CG.Orange.Managers.SettingFileManager._settingFileCountRepository">_settingFileCountRepository</h4>
+  <div class="markdown level1 summary"><p>This field contains the setting file count repository for this manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ISettingFileCountRepository _settingFileCountRepository</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.ISettingFileCountRepository.html">ISettingFileCountRepository</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h4 id="CG_Orange_Managers_SettingFileManager__settingFileRepository" data-uid="CG.Orange.Managers.SettingFileManager._settingFileRepository">_settingFileRepository</h4>
-  <div class="markdown level1 summary"><p>This field contains the repository for this manager.</p>
+  <div class="markdown level1 summary"><p>This field contains the setting file repository for this manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -307,7 +337,7 @@ with this manager.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;long&gt; CountAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;int&gt; CountAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,7 +366,7 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

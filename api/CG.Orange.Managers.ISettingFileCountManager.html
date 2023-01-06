@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class OrangeDbContext
+    <title>Interface ISettingFileCountManager
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class OrangeDbContext
+    <meta name="title" content="Interface ISettingFileCountManager
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,37 +78,32 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.OrangeDbContext">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Managers.ISettingFileCountManager">
   
   
-  <h1 id="CG_Orange_Data_OrangeDbContext" data-uid="CG.Orange.Data.OrangeDbContext" class="text-break">Class OrangeDbContext
+  <h1 id="CG_Orange_Managers_ISettingFileCountManager" data-uid="CG.Orange.Managers.ISettingFileCountManager" class="text-break">Interface ISettingFileCountManager
   </h1>
-  <div class="markdown level0 summary"><p>This class is a data-context for the <a class="xref" href="CG.Orange.html">CG.Orange</a>
-microservice.</p>
+  <div class="markdown level0 summary"><p>This interface represents an object that manages operations related to
+<see cref="!:SettingFileCountModel"></see> objects.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">OrangeDbContext</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Data.html">CG.Orange.Data</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Data.dll</h6>
-  <h5 id="CG_Orange_Data_OrangeDbContext_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Managers.html">CG.Orange.Managers</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Abstractions.dll</h6>
+  <h5 id="CG_Orange_Managers_ISettingFileCountManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OrangeDbContext : DbContext</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISettingFileCountManager</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Data_OrangeDbContext__ctor_" data-uid="CG.Orange.Data.OrangeDbContext.#ctor*"></a>
-  <h4 id="CG_Orange_Data_OrangeDbContext__ctor_DbContextOptions_CG_Orange_Data_OrangeDbContext__" data-uid="CG.Orange.Data.OrangeDbContext.#ctor(DbContextOptions{CG.Orange.Data.OrangeDbContext})">OrangeDbContext(DbContextOptions&lt;OrangeDbContext&gt;)</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Data.OrangeDbContext.html">OrangeDbContext</a>
-class.</p>
+  <a id="CG_Orange_Managers_ISettingFileCountManager_AnyAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.AnyAsync*"></a>
+  <h4 id="CG_Orange_Managers_ISettingFileCountManager_AnyAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:SettingFileCountModel"></see> objects
+in the underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OrangeDbContext(DbContextOptions&lt;OrangeDbContext&gt; options)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; AnyAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,25 +116,15 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DbContextOptions</span>&lt;<a class="xref" href="CG.Orange.Data.OrangeDbContext.html">OrangeDbContext</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The options to use with this data-context.</p>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <a id="CG_Orange_Data_OrangeDbContext_ProviderProperties_" data-uid="CG.Orange.Data.OrangeDbContext.ProviderProperties*"></a>
-  <h4 id="CG_Orange_Data_OrangeDbContext_ProviderProperties" data-uid="CG.Orange.Data.OrangeDbContext.ProviderProperties">ProviderProperties</h4>
-  <div class="markdown level1 summary"><p>This property contains the list of provider properties.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ProviderPropertyEntity&gt; ProviderProperties { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -149,93 +134,39 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DbSet</span>&lt;<span class="xref">ProviderPropertyEntity</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>A task to perform the operation that returns <code>true</code> if there
+are any <see cref="!:SettingFileCountModel"></see> objects; <code>false</code> otherwise.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_OrangeDbContext_Providers_" data-uid="CG.Orange.Data.OrangeDbContext.Providers*"></a>
-  <h4 id="CG_Orange_Data_OrangeDbContext_Providers" data-uid="CG.Orange.Data.OrangeDbContext.Providers">Providers</h4>
-  <div class="markdown level1 summary"><p>This property contains the list of providers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ProviderEntity&gt; Providers { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
+        <th>Condition</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DbSet</span>&lt;<span class="xref">ProviderEntity</span>&gt;</td>
-        <td></td>
+        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><p>This exception is thrown whenever the
+manager fails to complete the operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_OrangeDbContext_SettingFileCounts_" data-uid="CG.Orange.Data.OrangeDbContext.SettingFileCounts*"></a>
-  <h4 id="CG_Orange_Data_OrangeDbContext_SettingFileCounts" data-uid="CG.Orange.Data.OrangeDbContext.SettingFileCounts">SettingFileCounts</h4>
-  <div class="markdown level1 summary"><p>This property contains the list of setting files counts.</p>
+  <a id="CG_Orange_Managers_ISettingFileCountManager_CountAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.CountAsync*"></a>
+  <h4 id="CG_Orange_Managers_ISettingFileCountManager_CountAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:SettingFileCountModel"></see> objects in the
+underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;SettingFileCountEntity&gt; SettingFileCounts { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DbSet</span>&lt;<span class="xref">SettingFileCountEntity</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Data_OrangeDbContext_SettingFiles_" data-uid="CG.Orange.Data.OrangeDbContext.SettingFiles*"></a>
-  <h4 id="CG_Orange_Data_OrangeDbContext_SettingFiles" data-uid="CG.Orange.Data.OrangeDbContext.SettingFiles">SettingFiles</h4>
-  <div class="markdown level1 summary"><p>This property contains the list of setting files.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;SettingFileEntity&gt; SettingFiles { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DbSet</span>&lt;<span class="xref">SettingFileEntity</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="CG_Orange_Data_OrangeDbContext_OnModelCreating_" data-uid="CG.Orange.Data.OrangeDbContext.OnModelCreating*"></a>
-  <h4 id="CG_Orange_Data_OrangeDbContext_OnModelCreating_ModelBuilder_" data-uid="CG.Orange.Data.OrangeDbContext.OnModelCreating(ModelBuilder)">OnModelCreating(ModelBuilder)</h4>
-  <div class="markdown level1 summary"><p>This method is called to create the data model.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnModelCreating(ModelBuilder modelBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; CountAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,9 +179,106 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ModelBuilder</span></td>
-        <td><span class="parametername">modelBuilder</span></td>
-        <td><p>The builder to use for the operation.</p>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>A task to perform the operation that returns a count of the
+number of <see cref="!:SettingFileCountModel"></see> objects in the underlying storage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><p>This exception is thrown whenever the
+manager fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.FindAllAsync*"></a>
+  <h4 id="CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:SettingFileCountModel"></see> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;SettingFileCountModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileCountModel</span>&gt;&gt;</td>
+        <td><p>A task to perform the operation that returns a sequence of
+<see cref="!:SettingFileCountModel"></see> objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><p>This exception is thrown whenever the
+manager fails to complete the operation.</p>
 </td>
       </tr>
     </tbody>

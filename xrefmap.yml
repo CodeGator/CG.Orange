@@ -364,6 +364,51 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Entities.ProviderPropertyEntity.Value
   nameWithType: ProviderPropertyEntity.Value
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity
+  name: SettingFileCountEntity
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html
+  commentId: T:CG.Orange.Data.Entities.SettingFileCountEntity
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity
+  nameWithType: SettingFileCountEntity
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.Count
+  name: Count
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_Count
+  commentId: P:CG.Orange.Data.Entities.SettingFileCountEntity.Count
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.Count
+  nameWithType: SettingFileCountEntity.Count
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.Count*
+  name: Count
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_Count_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileCountEntity.Count
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.Count
+  nameWithType: SettingFileCountEntity.Count
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc
+  name: CreatedOnUtc
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_CreatedOnUtc
+  commentId: P:CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc
+  nameWithType: SettingFileCountEntity.CreatedOnUtc
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc*
+  name: CreatedOnUtc
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_CreatedOnUtc_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc
+  nameWithType: SettingFileCountEntity.CreatedOnUtc
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.Id
+  name: Id
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_Id
+  commentId: P:CG.Orange.Data.Entities.SettingFileCountEntity.Id
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.Id
+  nameWithType: SettingFileCountEntity.Id
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.Id*
+  name: Id
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_Id_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileCountEntity.Id
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.Id
+  nameWithType: SettingFileCountEntity.Id
 - uid: CG.Orange.Data.Entities.SettingFileEntity
   name: SettingFileEntity
   href: api/CG.Orange.Data.Entities.SettingFileEntity.html
@@ -467,14 +512,6 @@ references:
   fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).AuditedEntityMapBase
   nameWithType: AuditedEntityMapBase<TEntity>.AuditedEntityMapBase
   nameWithType.vb: AuditedEntityMapBase(Of TEntity).AuditedEntityMapBase
-- uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1._modelBuilder
-  name: _modelBuilder
-  href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1__modelBuilder
-  commentId: F:CG.Orange.Data.Maps.AuditedEntityMapBase`1._modelBuilder
-  fullName: CG.Orange.Data.Maps.AuditedEntityMapBase<TEntity>._modelBuilder
-  fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity)._modelBuilder
-  nameWithType: AuditedEntityMapBase<TEntity>._modelBuilder
-  nameWithType.vb: AuditedEntityMapBase(Of TEntity)._modelBuilder
 - uid: CG.Orange.Data.Maps.AuditedEntityMapBase`1.Configure(EntityTypeBuilder{`0})
   name: Configure(EntityTypeBuilder<TEntity>)
   href: api/CG.Orange.Data.Maps.AuditedEntityMapBase-1.html#CG_Orange_Data_Maps_AuditedEntityMapBase_1_Configure_EntityTypeBuilder__0__
@@ -493,6 +530,58 @@ references:
   fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).Configure
   nameWithType: AuditedEntityMapBase<TEntity>.Configure
   nameWithType.vb: AuditedEntityMapBase(Of TEntity).Configure
+- uid: CG.Orange.Data.Maps.EntityMapBase`1
+  name: EntityMapBase<TEntity>
+  href: api/CG.Orange.Data.Maps.EntityMapBase-1.html
+  commentId: T:CG.Orange.Data.Maps.EntityMapBase`1
+  name.vb: EntityMapBase(Of TEntity)
+  fullName: CG.Orange.Data.Maps.EntityMapBase<TEntity>
+  fullName.vb: CG.Orange.Data.Maps.EntityMapBase(Of TEntity)
+  nameWithType: EntityMapBase<TEntity>
+  nameWithType.vb: EntityMapBase(Of TEntity)
+- uid: CG.Orange.Data.Maps.EntityMapBase`1.#ctor(ModelBuilder)
+  name: EntityMapBase(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.EntityMapBase-1.html#CG_Orange_Data_Maps_EntityMapBase_1__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.EntityMapBase`1.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.EntityMapBase<TEntity>.EntityMapBase(ModelBuilder)
+  fullName.vb: CG.Orange.Data.Maps.EntityMapBase(Of TEntity).EntityMapBase(ModelBuilder)
+  nameWithType: EntityMapBase<TEntity>.EntityMapBase(ModelBuilder)
+  nameWithType.vb: EntityMapBase(Of TEntity).EntityMapBase(ModelBuilder)
+- uid: CG.Orange.Data.Maps.EntityMapBase`1.#ctor*
+  name: EntityMapBase
+  href: api/CG.Orange.Data.Maps.EntityMapBase-1.html#CG_Orange_Data_Maps_EntityMapBase_1__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.EntityMapBase`1.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.EntityMapBase<TEntity>.EntityMapBase
+  fullName.vb: CG.Orange.Data.Maps.EntityMapBase(Of TEntity).EntityMapBase
+  nameWithType: EntityMapBase<TEntity>.EntityMapBase
+  nameWithType.vb: EntityMapBase(Of TEntity).EntityMapBase
+- uid: CG.Orange.Data.Maps.EntityMapBase`1._modelBuilder
+  name: _modelBuilder
+  href: api/CG.Orange.Data.Maps.EntityMapBase-1.html#CG_Orange_Data_Maps_EntityMapBase_1__modelBuilder
+  commentId: F:CG.Orange.Data.Maps.EntityMapBase`1._modelBuilder
+  fullName: CG.Orange.Data.Maps.EntityMapBase<TEntity>._modelBuilder
+  fullName.vb: CG.Orange.Data.Maps.EntityMapBase(Of TEntity)._modelBuilder
+  nameWithType: EntityMapBase<TEntity>._modelBuilder
+  nameWithType.vb: EntityMapBase(Of TEntity)._modelBuilder
+- uid: CG.Orange.Data.Maps.EntityMapBase`1.Configure(EntityTypeBuilder{`0})
+  name: Configure(EntityTypeBuilder<TEntity>)
+  href: api/CG.Orange.Data.Maps.EntityMapBase-1.html#CG_Orange_Data_Maps_EntityMapBase_1_Configure_EntityTypeBuilder__0__
+  commentId: M:CG.Orange.Data.Maps.EntityMapBase`1.Configure(EntityTypeBuilder{`0})
+  name.vb: Configure(EntityTypeBuilder(Of TEntity))
+  fullName: CG.Orange.Data.Maps.EntityMapBase<TEntity>.Configure(EntityTypeBuilder<TEntity>)
+  fullName.vb: CG.Orange.Data.Maps.EntityMapBase(Of TEntity).Configure(EntityTypeBuilder(Of TEntity))
+  nameWithType: EntityMapBase<TEntity>.Configure(EntityTypeBuilder<TEntity>)
+  nameWithType.vb: EntityMapBase(Of TEntity).Configure(EntityTypeBuilder(Of TEntity))
+- uid: CG.Orange.Data.Maps.EntityMapBase`1.Configure*
+  name: Configure
+  href: api/CG.Orange.Data.Maps.EntityMapBase-1.html#CG_Orange_Data_Maps_EntityMapBase_1_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.EntityMapBase`1.Configure
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.EntityMapBase<TEntity>.Configure
+  fullName.vb: CG.Orange.Data.Maps.EntityMapBase(Of TEntity).Configure
+  nameWithType: EntityMapBase<TEntity>.Configure
+  nameWithType.vb: EntityMapBase(Of TEntity).Configure
 - uid: CG.Orange.Data.Maps.ProviderEntityMap
   name: ProviderEntityMap
   href: api/CG.Orange.Data.Maps.ProviderEntityMap.html
@@ -563,6 +652,41 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Maps.ProviderPropertyEntityMap.Configure
   nameWithType: ProviderPropertyEntityMap.Configure
+- uid: CG.Orange.Data.Maps.SettingFileCountEntityMap
+  name: SettingFileCountEntityMap
+  href: api/CG.Orange.Data.Maps.SettingFileCountEntityMap.html
+  commentId: T:CG.Orange.Data.Maps.SettingFileCountEntityMap
+  fullName: CG.Orange.Data.Maps.SettingFileCountEntityMap
+  nameWithType: SettingFileCountEntityMap
+- uid: CG.Orange.Data.Maps.SettingFileCountEntityMap.#ctor(ModelBuilder)
+  name: SettingFileCountEntityMap(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.SettingFileCountEntityMap.html#CG_Orange_Data_Maps_SettingFileCountEntityMap__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.SettingFileCountEntityMap.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.SettingFileCountEntityMap.SettingFileCountEntityMap(ModelBuilder)
+  nameWithType: SettingFileCountEntityMap.SettingFileCountEntityMap(ModelBuilder)
+- uid: CG.Orange.Data.Maps.SettingFileCountEntityMap.#ctor*
+  name: SettingFileCountEntityMap
+  href: api/CG.Orange.Data.Maps.SettingFileCountEntityMap.html#CG_Orange_Data_Maps_SettingFileCountEntityMap__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.SettingFileCountEntityMap.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.SettingFileCountEntityMap.SettingFileCountEntityMap
+  nameWithType: SettingFileCountEntityMap.SettingFileCountEntityMap
+- uid: CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure(EntityTypeBuilder{SettingFileCountEntity})
+  name: Configure(EntityTypeBuilder<SettingFileCountEntity>)
+  href: api/CG.Orange.Data.Maps.SettingFileCountEntityMap.html#CG_Orange_Data_Maps_SettingFileCountEntityMap_Configure_EntityTypeBuilder_SettingFileCountEntity__
+  commentId: M:CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure(EntityTypeBuilder{SettingFileCountEntity})
+  name.vb: Configure(EntityTypeBuilder(Of SettingFileCountEntity))
+  fullName: CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure(EntityTypeBuilder<SettingFileCountEntity>)
+  fullName.vb: CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure(EntityTypeBuilder(Of SettingFileCountEntity))
+  nameWithType: SettingFileCountEntityMap.Configure(EntityTypeBuilder<SettingFileCountEntity>)
+  nameWithType.vb: SettingFileCountEntityMap.Configure(EntityTypeBuilder(Of SettingFileCountEntity))
+- uid: CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure*
+  name: Configure
+  href: api/CG.Orange.Data.Maps.SettingFileCountEntityMap.html#CG_Orange_Data_Maps_SettingFileCountEntityMap_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.SettingFileCountEntityMap.Configure
+  nameWithType: SettingFileCountEntityMap.Configure
 - uid: CG.Orange.Data.Maps.SettingFileEntityMap
   name: SettingFileEntityMap
   href: api/CG.Orange.Data.Maps.SettingFileEntityMap.html
@@ -659,6 +783,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.OrangeDbContext.Providers
   nameWithType: OrangeDbContext.Providers
+- uid: CG.Orange.Data.OrangeDbContext.SettingFileCounts
+  name: SettingFileCounts
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_SettingFileCounts
+  commentId: P:CG.Orange.Data.OrangeDbContext.SettingFileCounts
+  fullName: CG.Orange.Data.OrangeDbContext.SettingFileCounts
+  nameWithType: OrangeDbContext.SettingFileCounts
+- uid: CG.Orange.Data.OrangeDbContext.SettingFileCounts*
+  name: SettingFileCounts
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_SettingFileCounts_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.SettingFileCounts
+  isSpec: "True"
+  fullName: CG.Orange.Data.OrangeDbContext.SettingFileCounts
+  nameWithType: OrangeDbContext.SettingFileCounts
 - uid: CG.Orange.Data.OrangeDbContext.SettingFiles
   name: SettingFiles
   href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_SettingFiles
@@ -995,6 +1132,98 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.ProviderRepository.UpdateAsync
   nameWithType: ProviderRepository.UpdateAsync
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository
+  name: SettingFileCountRepository
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html
+  commentId: T:CG.Orange.Data.Repositories.SettingFileCountRepository
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository
+  nameWithType: SettingFileCountRepository
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{ISettingFileCountRepository})
+  name: SettingFileCountRepository(OrangeDbContext, IMapper, ILogger<ISettingFileCountRepository>)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository__ctor_CG_Orange_Data_OrangeDbContext_IMapper_ILogger_ISettingFileCountRepository__
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{ISettingFileCountRepository})
+  name.vb: SettingFileCountRepository(OrangeDbContext, IMapper, ILogger(Of ISettingFileCountRepository))
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.SettingFileCountRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger<ISettingFileCountRepository>)
+  fullName.vb: CG.Orange.Data.Repositories.SettingFileCountRepository.SettingFileCountRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger(Of ISettingFileCountRepository))
+  nameWithType: SettingFileCountRepository.SettingFileCountRepository(OrangeDbContext, IMapper, ILogger<ISettingFileCountRepository>)
+  nameWithType.vb: SettingFileCountRepository.SettingFileCountRepository(OrangeDbContext, IMapper, ILogger(Of ISettingFileCountRepository))
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.#ctor*
+  name: SettingFileCountRepository
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository__ctor_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileCountRepository.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.SettingFileCountRepository
+  nameWithType: SettingFileCountRepository.SettingFileCountRepository
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository._dbContext
+  name: _dbContext
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository__dbContext
+  commentId: F:CG.Orange.Data.Repositories.SettingFileCountRepository._dbContext
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository._dbContext
+  nameWithType: SettingFileCountRepository._dbContext
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository._logger
+  name: _logger
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository__logger
+  commentId: F:CG.Orange.Data.Repositories.SettingFileCountRepository._logger
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository._logger
+  nameWithType: SettingFileCountRepository._logger
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository._mapper
+  name: _mapper
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository__mapper
+  commentId: F:CG.Orange.Data.Repositories.SettingFileCountRepository._mapper
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository._mapper
+  nameWithType: SettingFileCountRepository._mapper
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.AnyAsync(CancellationToken)
+  nameWithType: SettingFileCountRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileCountRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.AnyAsync
+  nameWithType: SettingFileCountRepository.AnyAsync
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync(CancellationToken)
+  nameWithType: SettingFileCountRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CountAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync
+  nameWithType: SettingFileCountRepository.CountAsync
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
+  name: CreateAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CreateAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(System.Int32, CancellationToken)
+  nameWithType: SettingFileCountRepository.CreateAsync(Int32, CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync
+  nameWithType: SettingFileCountRepository.CreateAsync
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync(CancellationToken)
+  nameWithType: SettingFileCountRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync
+  nameWithType: SettingFileCountRepository.FindAllAsync
 - uid: CG.Orange.Data.Repositories.SettingFileRepository
   name: SettingFileRepository
   href: api/CG.Orange.Data.Repositories.SettingFileRepository.html
@@ -1522,6 +1751,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync
   nameWithType: ISeedDirector.SeedSettingFilesAsync
+- uid: CG.Orange.Directors.IStatisticsDirector
+  name: IStatisticsDirector
+  href: api/CG.Orange.Directors.IStatisticsDirector.html
+  commentId: T:CG.Orange.Directors.IStatisticsDirector
+  fullName: CG.Orange.Directors.IStatisticsDirector
+  nameWithType: IStatisticsDirector
 - uid: CG.Orange.Directors.SeedDirector
   name: SeedDirector
   href: api/CG.Orange.Directors.SeedDirector.html
@@ -1601,6 +1836,34 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync
   nameWithType: SeedDirector.SeedSettingFilesAsync
+- uid: CG.Orange.Directors.StatisticsDirector
+  name: StatisticsDirector
+  href: api/CG.Orange.Directors.StatisticsDirector.html
+  commentId: T:CG.Orange.Directors.StatisticsDirector
+  fullName: CG.Orange.Directors.StatisticsDirector
+  nameWithType: StatisticsDirector
+- uid: CG.Orange.Directors.StatisticsDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticsDirector})
+  name: StatisticsDirector(ILogger<IStatisticsDirector>)
+  href: api/CG.Orange.Directors.StatisticsDirector.html#CG_Orange_Directors_StatisticsDirector__ctor_ILogger_CG_Orange_Directors_IStatisticsDirector__
+  commentId: M:CG.Orange.Directors.StatisticsDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticsDirector})
+  name.vb: StatisticsDirector(ILogger(Of IStatisticsDirector))
+  fullName: CG.Orange.Directors.StatisticsDirector.StatisticsDirector(ILogger<CG.Orange.Directors.IStatisticsDirector>)
+  fullName.vb: CG.Orange.Directors.StatisticsDirector.StatisticsDirector(ILogger(Of CG.Orange.Directors.IStatisticsDirector))
+  nameWithType: StatisticsDirector.StatisticsDirector(ILogger<IStatisticsDirector>)
+  nameWithType.vb: StatisticsDirector.StatisticsDirector(ILogger(Of IStatisticsDirector))
+- uid: CG.Orange.Directors.StatisticsDirector.#ctor*
+  name: StatisticsDirector
+  href: api/CG.Orange.Directors.StatisticsDirector.html#CG_Orange_Directors_StatisticsDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.StatisticsDirector.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.StatisticsDirector.StatisticsDirector
+  nameWithType: StatisticsDirector.StatisticsDirector
+- uid: CG.Orange.Directors.StatisticsDirector._logger
+  name: _logger
+  href: api/CG.Orange.Directors.StatisticsDirector.html#CG_Orange_Directors_StatisticsDirector__logger
+  commentId: F:CG.Orange.Directors.StatisticsDirector._logger
+  fullName: CG.Orange.Directors.StatisticsDirector._logger
+  nameWithType: StatisticsDirector._logger
 - uid: CG.Orange.Globals
   name: Globals
   href: api/CG.Orange.Globals.html
@@ -3263,6 +3526,51 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.IProviderPropertyManager.UpdateAsync
   nameWithType: IProviderPropertyManager.UpdateAsync
+- uid: CG.Orange.Managers.ISettingFileCountManager
+  name: ISettingFileCountManager
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html
+  commentId: T:CG.Orange.Managers.ISettingFileCountManager
+  fullName: CG.Orange.Managers.ISettingFileCountManager
+  nameWithType: ISettingFileCountManager
+- uid: CG.Orange.Managers.ISettingFileCountManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileCountManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileCountManager.AnyAsync(CancellationToken)
+  nameWithType: ISettingFileCountManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileCountManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.ISettingFileCountManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ISettingFileCountManager.AnyAsync
+  nameWithType: ISettingFileCountManager.AnyAsync
+- uid: CG.Orange.Managers.ISettingFileCountManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileCountManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileCountManager.CountAsync(CancellationToken)
+  nameWithType: ISettingFileCountManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileCountManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.ISettingFileCountManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ISettingFileCountManager.CountAsync
+  nameWithType: ISettingFileCountManager.CountAsync
+- uid: CG.Orange.Managers.ISettingFileCountManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileCountManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileCountManager.FindAllAsync(CancellationToken)
+  nameWithType: ISettingFileCountManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileCountManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.ISettingFileCountManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ISettingFileCountManager.FindAllAsync
+  nameWithType: ISettingFileCountManager.FindAllAsync
 - uid: CG.Orange.Managers.ISettingFileManager
   name: ISettingFileManager
   href: api/CG.Orange.Managers.ISettingFileManager.html
@@ -3785,21 +4093,94 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ProviderPropertyManager.UpdateAsync
   nameWithType: ProviderPropertyManager.UpdateAsync
+- uid: CG.Orange.Managers.SettingFileCountManager
+  name: SettingFileCountManager
+  href: api/CG.Orange.Managers.SettingFileCountManager.html
+  commentId: T:CG.Orange.Managers.SettingFileCountManager
+  fullName: CG.Orange.Managers.SettingFileCountManager
+  nameWithType: SettingFileCountManager
+- uid: CG.Orange.Managers.SettingFileCountManager.#ctor(ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileCountManager})
+  name: SettingFileCountManager(ISettingFileCountRepository, ILogger<ISettingFileCountManager>)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager__ctor_ISettingFileCountRepository_ILogger_CG_Orange_Managers_ISettingFileCountManager__
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.#ctor(ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileCountManager})
+  name.vb: SettingFileCountManager(ISettingFileCountRepository, ILogger(Of ISettingFileCountManager))
+  fullName: CG.Orange.Managers.SettingFileCountManager.SettingFileCountManager(ISettingFileCountRepository, ILogger<CG.Orange.Managers.ISettingFileCountManager>)
+  fullName.vb: CG.Orange.Managers.SettingFileCountManager.SettingFileCountManager(ISettingFileCountRepository, ILogger(Of CG.Orange.Managers.ISettingFileCountManager))
+  nameWithType: SettingFileCountManager.SettingFileCountManager(ISettingFileCountRepository, ILogger<ISettingFileCountManager>)
+  nameWithType.vb: SettingFileCountManager.SettingFileCountManager(ISettingFileCountRepository, ILogger(Of ISettingFileCountManager))
+- uid: CG.Orange.Managers.SettingFileCountManager.#ctor*
+  name: SettingFileCountManager
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager__ctor_
+  commentId: Overload:CG.Orange.Managers.SettingFileCountManager.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Managers.SettingFileCountManager.SettingFileCountManager
+  nameWithType: SettingFileCountManager.SettingFileCountManager
+- uid: CG.Orange.Managers.SettingFileCountManager._logger
+  name: _logger
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager__logger
+  commentId: F:CG.Orange.Managers.SettingFileCountManager._logger
+  fullName: CG.Orange.Managers.SettingFileCountManager._logger
+  nameWithType: SettingFileCountManager._logger
+- uid: CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository
+  name: _settingFileCountRepository
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager__settingFileCountRepository
+  commentId: F:CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository
+  fullName: CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository
+  nameWithType: SettingFileCountManager._settingFileCountRepository
+- uid: CG.Orange.Managers.SettingFileCountManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileCountManager.AnyAsync(CancellationToken)
+  nameWithType: SettingFileCountManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.SettingFileCountManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.SettingFileCountManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.SettingFileCountManager.AnyAsync
+  nameWithType: SettingFileCountManager.AnyAsync
+- uid: CG.Orange.Managers.SettingFileCountManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileCountManager.CountAsync(CancellationToken)
+  nameWithType: SettingFileCountManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.SettingFileCountManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.SettingFileCountManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.SettingFileCountManager.CountAsync
+  nameWithType: SettingFileCountManager.CountAsync
+- uid: CG.Orange.Managers.SettingFileCountManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileCountManager.FindAllAsync(CancellationToken)
+  nameWithType: SettingFileCountManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.SettingFileCountManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.SettingFileCountManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.SettingFileCountManager.FindAllAsync
+  nameWithType: SettingFileCountManager.FindAllAsync
 - uid: CG.Orange.Managers.SettingFileManager
   name: SettingFileManager
   href: api/CG.Orange.Managers.SettingFileManager.html
   commentId: T:CG.Orange.Managers.SettingFileManager
   fullName: CG.Orange.Managers.SettingFileManager
   nameWithType: SettingFileManager
-- uid: CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
-  name: SettingFileManager(ISettingFileRepository, ILogger<ISettingFileManager>)
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_CG_Orange_Repositories_ISettingFileRepository_ILogger_CG_Orange_Managers_ISettingFileManager__
-  commentId: M:CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
-  name.vb: SettingFileManager(ISettingFileRepository, ILogger(Of ISettingFileManager))
-  fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager(CG.Orange.Repositories.ISettingFileRepository, ILogger<CG.Orange.Managers.ISettingFileManager>)
-  fullName.vb: CG.Orange.Managers.SettingFileManager.SettingFileManager(CG.Orange.Repositories.ISettingFileRepository, ILogger(Of CG.Orange.Managers.ISettingFileManager))
-  nameWithType: SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger<ISettingFileManager>)
-  nameWithType.vb: SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger(Of ISettingFileManager))
+- uid: CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,CG.Orange.Repositories.ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
+  name: SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger<ISettingFileManager>)
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_CG_Orange_Repositories_ISettingFileRepository_CG_Orange_Repositories_ISettingFileCountRepository_ILogger_CG_Orange_Managers_ISettingFileManager__
+  commentId: M:CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,CG.Orange.Repositories.ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
+  name.vb: SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger(Of ISettingFileManager))
+  fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager(CG.Orange.Repositories.ISettingFileRepository, CG.Orange.Repositories.ISettingFileCountRepository, ILogger<CG.Orange.Managers.ISettingFileManager>)
+  fullName.vb: CG.Orange.Managers.SettingFileManager.SettingFileManager(CG.Orange.Repositories.ISettingFileRepository, CG.Orange.Repositories.ISettingFileCountRepository, ILogger(Of CG.Orange.Managers.ISettingFileManager))
+  nameWithType: SettingFileManager.SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger<ISettingFileManager>)
+  nameWithType.vb: SettingFileManager.SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger(Of ISettingFileManager))
 - uid: CG.Orange.Managers.SettingFileManager.#ctor*
   name: SettingFileManager
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_
@@ -3813,6 +4194,12 @@ references:
   commentId: F:CG.Orange.Managers.SettingFileManager._logger
   fullName: CG.Orange.Managers.SettingFileManager._logger
   nameWithType: SettingFileManager._logger
+- uid: CG.Orange.Managers.SettingFileManager._settingFileCountRepository
+  name: _settingFileCountRepository
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__settingFileCountRepository
+  commentId: F:CG.Orange.Managers.SettingFileManager._settingFileCountRepository
+  fullName: CG.Orange.Managers.SettingFileManager._settingFileCountRepository
+  nameWithType: SettingFileManager._settingFileCountRepository
 - uid: CG.Orange.Managers.SettingFileManager._settingFileRepository
   name: _settingFileRepository
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__settingFileRepository
@@ -4237,6 +4624,51 @@ references:
   commentId: F:CG.Orange.Models.ProviderType.Secret
   fullName: CG.Orange.Models.ProviderType.Secret
   nameWithType: ProviderType.Secret
+- uid: CG.Orange.Models.SettingFileCountModel
+  name: SettingFileCountModel
+  href: api/CG.Orange.Models.SettingFileCountModel.html
+  commentId: T:CG.Orange.Models.SettingFileCountModel
+  fullName: CG.Orange.Models.SettingFileCountModel
+  nameWithType: SettingFileCountModel
+- uid: CG.Orange.Models.SettingFileCountModel.Count
+  name: Count
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_Count
+  commentId: P:CG.Orange.Models.SettingFileCountModel.Count
+  fullName: CG.Orange.Models.SettingFileCountModel.Count
+  nameWithType: SettingFileCountModel.Count
+- uid: CG.Orange.Models.SettingFileCountModel.Count*
+  name: Count
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_Count_
+  commentId: Overload:CG.Orange.Models.SettingFileCountModel.Count
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileCountModel.Count
+  nameWithType: SettingFileCountModel.Count
+- uid: CG.Orange.Models.SettingFileCountModel.CreatedOnUtc
+  name: CreatedOnUtc
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_CreatedOnUtc
+  commentId: P:CG.Orange.Models.SettingFileCountModel.CreatedOnUtc
+  fullName: CG.Orange.Models.SettingFileCountModel.CreatedOnUtc
+  nameWithType: SettingFileCountModel.CreatedOnUtc
+- uid: CG.Orange.Models.SettingFileCountModel.CreatedOnUtc*
+  name: CreatedOnUtc
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_CreatedOnUtc_
+  commentId: Overload:CG.Orange.Models.SettingFileCountModel.CreatedOnUtc
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileCountModel.CreatedOnUtc
+  nameWithType: SettingFileCountModel.CreatedOnUtc
+- uid: CG.Orange.Models.SettingFileCountModel.Id
+  name: Id
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_Id
+  commentId: P:CG.Orange.Models.SettingFileCountModel.Id
+  fullName: CG.Orange.Models.SettingFileCountModel.Id
+  nameWithType: SettingFileCountModel.Id
+- uid: CG.Orange.Models.SettingFileCountModel.Id*
+  name: Id
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_Id_
+  commentId: Overload:CG.Orange.Models.SettingFileCountModel.Id
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileCountModel.Id
+  nameWithType: SettingFileCountModel.Id
 - uid: CG.Orange.Models.SettingFileExtensions
   name: SettingFileExtensions
   href: api/CG.Orange.Models.SettingFileExtensions.html
@@ -5114,6 +5546,64 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.IProviderRepository.UpdateAsync
   nameWithType: IProviderRepository.UpdateAsync
+- uid: CG.Orange.Repositories.ISettingFileCountRepository
+  name: ISettingFileCountRepository
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html
+  commentId: T:CG.Orange.Repositories.ISettingFileCountRepository
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository
+  nameWithType: ISettingFileCountRepository
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.AnyAsync(CancellationToken)
+  nameWithType: ISettingFileCountRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Repositories.ISettingFileCountRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.AnyAsync
+  nameWithType: ISettingFileCountRepository.AnyAsync
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.CountAsync(CancellationToken)
+  nameWithType: ISettingFileCountRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CountAsync_
+  commentId: Overload:CG.Orange.Repositories.ISettingFileCountRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.CountAsync
+  nameWithType: ISettingFileCountRepository.CountAsync
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
+  name: CreateAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CreateAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(System.Int32, CancellationToken)
+  nameWithType: ISettingFileCountRepository.CreateAsync(Int32, CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync
+  nameWithType: ISettingFileCountRepository.CreateAsync
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync(CancellationToken)
+  nameWithType: ISettingFileCountRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync
+  nameWithType: ISettingFileCountRepository.FindAllAsync
 - uid: CG.Orange.Repositories.ISettingFileRepository
   name: ISettingFileRepository
   href: api/CG.Orange.Repositories.ISettingFileRepository.html
