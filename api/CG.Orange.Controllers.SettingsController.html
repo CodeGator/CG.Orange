@@ -100,13 +100,13 @@
   <h3 id="constructors">Constructors
   </h3>
   <a id="CG_Orange_Controllers_SettingsController__ctor_" data-uid="CG.Orange.Controllers.SettingsController.#ctor*"></a>
-  <h4 id="CG_Orange_Controllers_SettingsController__ctor_IConfigurationDirector_ILogger_CG_Orange_Controllers_SettingsController__" data-uid="CG.Orange.Controllers.SettingsController.#ctor(IConfigurationDirector,ILogger{CG.Orange.Controllers.SettingsController})">SettingsController(IConfigurationDirector, ILogger&lt;SettingsController&gt;)</h4>
+  <h4 id="CG_Orange_Controllers_SettingsController__ctor_CG_Orange_IOrangeApi_ILogger_CG_Orange_Controllers_SettingsController__" data-uid="CG.Orange.Controllers.SettingsController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.SettingsController})">SettingsController(IOrangeApi, ILogger&lt;SettingsController&gt;)</h4>
   <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Controllers.SettingsController.html">SettingsController</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingsController(IConfigurationDirector configurationDirector, ILogger&lt;SettingsController&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public SettingsController(IOrangeApi orangeApi, ILogger&lt;SettingsController&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,10 +119,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IConfigurationDirector</span></td>
-        <td><span class="parametername">configurationDirector</span></td>
-        <td><p>The configuration director to
-use with this controller.</p>
+        <td><a class="xref" href="CG.Orange.IOrangeApi.html">IOrangeApi</a></td>
+        <td><span class="parametername">orangeApi</span></td>
+        <td><p>The API to use with this controller.</p>
 </td>
       </tr>
       <tr>
@@ -135,29 +134,6 @@ use with this controller.</p>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="CG_Orange_Controllers_SettingsController__configurationDirector" data-uid="CG.Orange.Controllers.SettingsController._configurationDirector">_configurationDirector</h4>
-  <div class="markdown level1 summary"><p>This field contains the configuration director for this controller.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IConfigurationDirector _configurationDirector</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IConfigurationDirector</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h4 id="CG_Orange_Controllers_SettingsController__logger" data-uid="CG.Orange.Controllers.SettingsController._logger">_logger</h4>
   <div class="markdown level1 summary"><p>This field contains the logger for this controller.</p>
 </div>
@@ -177,6 +153,29 @@ use with this controller.</p>
     <tbody>
       <tr>
         <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Controllers.SettingsController.html">SettingsController</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="CG_Orange_Controllers_SettingsController__orangeApi" data-uid="CG.Orange.Controllers.SettingsController._orangeApi">_orangeApi</h4>
+  <div class="markdown level1 summary"><p>This field contains the api for this controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IOrangeApi _orangeApi</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.IOrangeApi.html">IOrangeApi</a></td>
         <td></td>
       </tr>
     </tbody>

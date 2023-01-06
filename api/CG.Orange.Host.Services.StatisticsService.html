@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISeedDirector
+    <title>Class StatisticsService
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISeedDirector
+    <meta name="title" content="Class StatisticsService
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,31 +78,151 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Directors.ISeedDirector">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Host.Services.StatisticsService">
   
   
-  <h1 id="CG_Orange_Directors_ISeedDirector" data-uid="CG.Orange.Directors.ISeedDirector" class="text-break">Interface ISeedDirector
+  <h1 id="CG_Orange_Host_Services_StatisticsService" data-uid="CG.Orange.Host.Services.StatisticsService" class="text-break">Class StatisticsService
   </h1>
-  <div class="markdown level0 summary"><p>This interface represents an object that performs data seeding operations.</p>
+  <div class="markdown level0 summary"><p>The class is a hosted service that periodically aggregates various
+statistics together for the Orange microservice.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Directors.html">CG.Orange.Directors</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Abstractions.dll</h6>
-  <h5 id="CG_Orange_Directors_ISeedDirector_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISeedDirector</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StatisticsService</span></div>
   </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Host.Services.html">CG.Orange.Host.Services</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Host.dll</h6>
+  <h5 id="CG_Orange_Host_Services_StatisticsService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">class StatisticsService : BackgroundService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="CG_Orange_Host_Services_StatisticsService__ctor_" data-uid="CG.Orange.Host.Services.StatisticsService.#ctor*"></a>
+  <h4 id="CG_Orange_Host_Services_StatisticsService__ctor_IServiceProvider_IOptions_HostedServicesOptions__ILogger_CG_Orange_Host_Services_StatisticsService__" data-uid="CG.Orange.Host.Services.StatisticsService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.StatisticsService})">StatisticsService(IServiceProvider, IOptions&lt;HostedServicesOptions&gt;, ILogger&lt;StatisticsService&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Host.Services.StatisticsService.html">StatisticsService</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatisticsService(IServiceProvider serviceProvider, IOptions&lt;HostedServicesOptions&gt; hostedServiceOptions, ILogger&lt;StatisticsService&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceProvider</span></td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>The service provider to use with
+this service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IOptions</span>&lt;<span class="xref">HostedServicesOptions</span>&gt;</td>
+        <td><span class="parametername">hostedServiceOptions</span></td>
+        <td><p>The hosted service options to
+use with this service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Host.Services.StatisticsService.html">StatisticsService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use with this service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="CG_Orange_Host_Services_StatisticsService__hostedServiceOptions" data-uid="CG.Orange.Host.Services.StatisticsService._hostedServiceOptions">_hostedServiceOptions</h4>
+  <div class="markdown level1 summary"><p>This field contains the hosted service options for this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly HostedServicesOptions _hostedServiceOptions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HostedServicesOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="CG_Orange_Host_Services_StatisticsService__logger" data-uid="CG.Orange.Host.Services.StatisticsService._logger">_logger</h4>
+  <div class="markdown level1 summary"><p>This field contains the logger for this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;StatisticsService&gt; _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Host.Services.StatisticsService.html">StatisticsService</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="CG_Orange_Host_Services_StatisticsService__serviceProvider" data-uid="CG.Orange.Host.Services.StatisticsService._serviceProvider">_serviceProvider</h4>
+  <div class="markdown level1 summary"><p>This field contains the service provider for this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IServiceProvider _serviceProvider</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_" data-uid="CG.Orange.Directors.ISeedDirector.SeedProvidersAsync*"></a>
-  <h4 id="CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_IEnumerable_ProviderModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)">SeedProvidersAsync(IEnumerable&lt;ProviderModel&gt;, Boolean, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:ProviderModel"></see>
-objects, from the given configuration.</p>
+  <a id="CG_Orange_Host_Services_StatisticsService_ExecuteAsync_" data-uid="CG.Orange.Host.Services.StatisticsService.ExecuteAsync*"></a>
+  <h4 id="CG_Orange_Host_Services_StatisticsService_ExecuteAsync_CancellationToken_" data-uid="CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)">ExecuteAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method performs work for the service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SeedProvidersAsync(IEnumerable&lt;ProviderModel&gt; providers, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override async Task ExecuteAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,28 +234,6 @@ objects, from the given configuration.</p>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
-        <td><span class="parametername">providers</span></td>
-        <td><p>The collection of <see cref="!:ProviderModel"></see>
-objects to use for the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">force</span></td>
-        <td><p><code>true</code> to force the seeding operation when data
-already exists in the associated table(s), <code>false</code> to stop the
-operation whenever data is detected in the associated table(s).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">userName</span></td>
-        <td><p>The user name of the person performing the
-operation.</p>
-</td>
-      </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
@@ -157,107 +255,6 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">Task</span></td>
         <td><p>A task to perform the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CG.Orange.Directors.DirectorException.html">DirectorException</a></td>
-        <td><p>This exception is thrown whenever
-the director fails to complete the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_" data-uid="CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync*"></a>
-  <h4 id="CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_IEnumerable_SettingFileModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)">SeedSettingFilesAsync(IEnumerable&lt;SettingFileModel&gt;, Boolean, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:SettingFileModel"></see>
-objects, from the given configuration.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SeedSettingFilesAsync(IEnumerable&lt;SettingFileModel&gt; settingFiles, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
-        <td><span class="parametername">settingFiles</span></td>
-        <td><p>The collection of <see cref="!:SettingFileModel"></see>
-objects to use for the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">force</span></td>
-        <td><p><code>true</code> to force the seeding operation when data
-already exists in the associated table(s), <code>false</code> to stop the
-operation whenever data is detected in the associated table(s).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">userName</span></td>
-        <td><p>The user name of the person performing the
-operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A cancellation token that is monitored
-for the lifetime of the method.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task to perform the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="CG.Orange.Directors.DirectorException.html">DirectorException</a></td>
-        <td><p>This exception is thrown whenever
-the director fails to complete the operation.</p>
 </td>
       </tr>
     </tbody>

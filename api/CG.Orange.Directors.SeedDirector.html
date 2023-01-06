@@ -92,11 +92,15 @@ interface.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SeedDirector</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CG.Orange.Directors.ISeedDirector.html">ISeedDirector</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Directors.html">CG.Orange.Directors</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.dll</h6>
   <h5 id="CG_Orange_Directors_SeedDirector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SeedDirector : SeedDirectorBase&lt;SeedDirector&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SeedDirector : SeedDirectorBase&lt;SeedDirector&gt;, ISeedDirector</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -285,12 +289,133 @@ with this director.</p>
   <a id="CG_Orange_Directors_SeedDirector_SeedProvidersAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedProvidersAsync*"></a>
   <h4 id="CG_Orange_Directors_SeedDirector_SeedProvidersAsync_IConfiguration_System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IConfiguration,System.Boolean,System.String,CancellationToken)">SeedProvidersAsync(IConfiguration, Boolean, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:ProviderModel"></see>
-objects.</p>
+objects, from the given configuration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">async Task SeedProvidersAsync(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual async Task SeedProvidersAsync(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="parametername">dataSection</span></td>
+        <td><p>The data to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td><p><code>true</code> to force the seeding operation when data
+already exists in the associated table(s), <code>false</code> to stop the
+operation whenever data is detected in the associated table(s).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>The user name of the person performing the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task to perform the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Directors_SeedDirector_SeedProvidersAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedProvidersAsync*"></a>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedProvidersAsync_IEnumerable_ProviderModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)">SeedProvidersAsync(IEnumerable&lt;ProviderModel&gt;, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task SeedProvidersAsync(IEnumerable&lt;ProviderModel&gt; providers, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
+        <td><span class="parametername">providers</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync*"></a>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_IConfiguration_System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration,System.Boolean,System.String,CancellationToken)">SeedSettingFilesAsync(IConfiguration, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:SettingFileModel"></see>
+objects, from the given configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual async Task SeedSettingFilesAsync(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,14 +474,12 @@ for the lifetime of the method.</p>
     </tbody>
   </table>
   <a id="CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync*"></a>
-  <h4 id="CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_IConfiguration_System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration,System.Boolean,System.String,CancellationToken)">SeedSettingFilesAsync(IConfiguration, Boolean, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:SettingFileModel"></see>
-objects.</p>
-</div>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_IEnumerable_SettingFileModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)">SeedSettingFilesAsync(IEnumerable&lt;SettingFileModel&gt;, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">async Task SeedSettingFilesAsync(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task SeedSettingFilesAsync(IEnumerable&lt;SettingFileModel&gt; settingFiles, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,32 +492,24 @@ objects.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IConfiguration</span></td>
-        <td><span class="parametername">dataSection</span></td>
-        <td><p>The data to use for the operation.</p>
-</td>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><span class="parametername">settingFiles</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">force</span></td>
-        <td><p><code>true</code> to force the seeding operation when data
-already exists in the associated table(s), <code>false</code> to stop the
-operation whenever data is detected in the associated table(s).</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">userName</span></td>
-        <td><p>The user name of the person performing the
-operation.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A cancellation token that is monitored
-for the lifetime of the method.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -409,11 +524,14 @@ for the lifetime of the method.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span></td>
-        <td><p>A task to perform the operation.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="CG.Orange.Directors.ISeedDirector.html">ISeedDirector</a>
+  </div>
 </article>
           </div>
           

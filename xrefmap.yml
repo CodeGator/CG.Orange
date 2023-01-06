@@ -72,15 +72,15 @@ references:
   commentId: T:CG.Orange.Controllers.SettingsController
   fullName: CG.Orange.Controllers.SettingsController
   nameWithType: SettingsController
-- uid: CG.Orange.Controllers.SettingsController.#ctor(IConfigurationDirector,ILogger{CG.Orange.Controllers.SettingsController})
-  name: SettingsController(IConfigurationDirector, ILogger<SettingsController>)
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__ctor_IConfigurationDirector_ILogger_CG_Orange_Controllers_SettingsController__
-  commentId: M:CG.Orange.Controllers.SettingsController.#ctor(IConfigurationDirector,ILogger{CG.Orange.Controllers.SettingsController})
-  name.vb: SettingsController(IConfigurationDirector, ILogger(Of SettingsController))
-  fullName: CG.Orange.Controllers.SettingsController.SettingsController(IConfigurationDirector, ILogger<CG.Orange.Controllers.SettingsController>)
-  fullName.vb: CG.Orange.Controllers.SettingsController.SettingsController(IConfigurationDirector, ILogger(Of CG.Orange.Controllers.SettingsController))
-  nameWithType: SettingsController.SettingsController(IConfigurationDirector, ILogger<SettingsController>)
-  nameWithType.vb: SettingsController.SettingsController(IConfigurationDirector, ILogger(Of SettingsController))
+- uid: CG.Orange.Controllers.SettingsController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.SettingsController})
+  name: SettingsController(IOrangeApi, ILogger<SettingsController>)
+  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__ctor_CG_Orange_IOrangeApi_ILogger_CG_Orange_Controllers_SettingsController__
+  commentId: M:CG.Orange.Controllers.SettingsController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.SettingsController})
+  name.vb: SettingsController(IOrangeApi, ILogger(Of SettingsController))
+  fullName: CG.Orange.Controllers.SettingsController.SettingsController(CG.Orange.IOrangeApi, ILogger<CG.Orange.Controllers.SettingsController>)
+  fullName.vb: CG.Orange.Controllers.SettingsController.SettingsController(CG.Orange.IOrangeApi, ILogger(Of CG.Orange.Controllers.SettingsController))
+  nameWithType: SettingsController.SettingsController(IOrangeApi, ILogger<SettingsController>)
+  nameWithType.vb: SettingsController.SettingsController(IOrangeApi, ILogger(Of SettingsController))
 - uid: CG.Orange.Controllers.SettingsController.#ctor*
   name: SettingsController
   href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__ctor_
@@ -88,18 +88,18 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Controllers.SettingsController.SettingsController
   nameWithType: SettingsController.SettingsController
-- uid: CG.Orange.Controllers.SettingsController._configurationDirector
-  name: _configurationDirector
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__configurationDirector
-  commentId: F:CG.Orange.Controllers.SettingsController._configurationDirector
-  fullName: CG.Orange.Controllers.SettingsController._configurationDirector
-  nameWithType: SettingsController._configurationDirector
 - uid: CG.Orange.Controllers.SettingsController._logger
   name: _logger
   href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__logger
   commentId: F:CG.Orange.Controllers.SettingsController._logger
   fullName: CG.Orange.Controllers.SettingsController._logger
   nameWithType: SettingsController._logger
+- uid: CG.Orange.Controllers.SettingsController._orangeApi
+  name: _orangeApi
+  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__orangeApi
+  commentId: F:CG.Orange.Controllers.SettingsController._orangeApi
+  fullName: CG.Orange.Controllers.SettingsController._orangeApi
+  nameWithType: SettingsController._orangeApi
 - uid: CG.Orange.Controllers.SettingsController.PostAsync(SettingsRequestVM)
   name: PostAsync(SettingsRequestVM)
   href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController_PostAsync_SettingsRequestVM_
@@ -383,6 +383,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Entities.SettingFileCountEntity.Count
   nameWithType: SettingFileCountEntity.Count
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy
+  name: CreatedBy
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_CreatedBy
+  commentId: P:CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy
+  nameWithType: SettingFileCountEntity.CreatedBy
+- uid: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy*
+  name: CreatedBy
+  href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_CreatedBy_
+  commentId: Overload:CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy
+  nameWithType: SettingFileCountEntity.CreatedBy
 - uid: CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc
   name: CreatedOnUtc
   href: api/CG.Orange.Data.Entities.SettingFileCountEntity.html#CG_Orange_Data_Entities_SettingFileCountEntity_CreatedOnUtc
@@ -1198,12 +1211,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CountAsync
   nameWithType: SettingFileCountRepository.CountAsync
-- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
-  name: CreateAsync(Int32, CancellationToken)
-  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CreateAsync_System_Int32_CancellationToken_
-  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
-  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(System.Int32, CancellationToken)
-  nameWithType: SettingFileCountRepository.CreateAsync(Int32, CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(SettingFileCountModel,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CreateAsync_SettingFileCountModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(SettingFileCountModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync(SettingFileCountModel, CancellationToken)
+  nameWithType: SettingFileCountRepository.CreateAsync(SettingFileCountModel, CancellationToken)
 - uid: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_CreateAsync_
@@ -1732,18 +1745,189 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync
   nameWithType: IConfigurationDirector.ReadConfigurationAsync
+- uid: CG.Orange.Directors.IProviderDirector
+  name: IProviderDirector
+  href: api/CG.Orange.Directors.IProviderDirector.html
+  commentId: T:CG.Orange.Directors.IProviderDirector
+  fullName: CG.Orange.Directors.IProviderDirector
+  nameWithType: IProviderDirector
+- uid: CG.Orange.Directors.IProviderDirector.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.AnyAsync(CancellationToken)
+  nameWithType: IProviderDirector.AnyAsync(CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_AnyAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.AnyAsync
+  nameWithType: IProviderDirector.AnyAsync
+- uid: CG.Orange.Directors.IProviderDirector.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.CountAsync(CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.CountAsync(CancellationToken)
+  nameWithType: IProviderDirector.CountAsync(CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_CountAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.CountAsync
+  nameWithType: IProviderDirector.CountAsync
+- uid: CG.Orange.Directors.IProviderDirector.CreateAsync(ProviderModel,System.String,CancellationToken)
+  name: CreateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_CreateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.CreateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.CreateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderDirector.CreateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_CreateAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.CreateAsync
+  nameWithType: IProviderDirector.CreateAsync
+- uid: CG.Orange.Directors.IProviderDirector.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  name: DeleteAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_DeleteAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.DeleteAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderDirector.DeleteAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_DeleteAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.DeleteAsync
+  nameWithType: IProviderDirector.DeleteAsync
+- uid: CG.Orange.Directors.IProviderDirector.DisableAsync(ProviderModel,System.String,CancellationToken)
+  name: DisableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_DisableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.DisableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.DisableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderDirector.DisableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.DisableAsync*
+  name: DisableAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_DisableAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.DisableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.DisableAsync
+  nameWithType: IProviderDirector.DisableAsync
+- uid: CG.Orange.Directors.IProviderDirector.EnableAsync(ProviderModel,System.String,CancellationToken)
+  name: EnableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_EnableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.EnableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.EnableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderDirector.EnableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.EnableAsync*
+  name: EnableAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_EnableAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.EnableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.EnableAsync
+  nameWithType: IProviderDirector.EnableAsync
+- uid: CG.Orange.Directors.IProviderDirector.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.FindAllAsync(CancellationToken)
+  nameWithType: IProviderDirector.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_FindAllAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.FindAllAsync
+  nameWithType: IProviderDirector.FindAllAsync
+- uid: CG.Orange.Directors.IProviderDirector.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: IProviderDirector.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_FindByIdAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.FindByIdAsync
+  nameWithType: IProviderDirector.FindByIdAsync
+- uid: CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
+  name: FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
+  name.vb: FindByTagAndTypeAsync(String, Nullable(Of ProviderType), CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync(System.String, System.Nullable<ProviderType>, CancellationToken)
+  fullName.vb: CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync(System.String, System.Nullable(Of ProviderType), CancellationToken)
+  nameWithType: IProviderDirector.FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
+  nameWithType.vb: IProviderDirector.FindByTagAndTypeAsync(String, Nullable(Of ProviderType), CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync*
+  name: FindByTagAndTypeAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_FindByTagAndTypeAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.FindByTagAndTypeAsync
+  nameWithType: IProviderDirector.FindByTagAndTypeAsync
+- uid: CG.Orange.Directors.IProviderDirector.Properties
+  name: Properties
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_Properties
+  commentId: P:CG.Orange.Directors.IProviderDirector.Properties
+  fullName: CG.Orange.Directors.IProviderDirector.Properties
+  nameWithType: IProviderDirector.Properties
+- uid: CG.Orange.Directors.IProviderDirector.Properties*
+  name: Properties
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_Properties_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.Properties
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.Properties
+  nameWithType: IProviderDirector.Properties
+- uid: CG.Orange.Directors.IProviderDirector.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  name: UpdateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_UpdateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IProviderDirector.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IProviderDirector.UpdateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: IProviderDirector.UpdateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.IProviderDirector.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Directors.IProviderDirector.html#CG_Orange_Directors_IProviderDirector_UpdateAsync_
+  commentId: Overload:CG.Orange.Directors.IProviderDirector.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IProviderDirector.UpdateAsync
+  nameWithType: IProviderDirector.UpdateAsync
 - uid: CG.Orange.Directors.ISeedDirector
   name: ISeedDirector
   href: api/CG.Orange.Directors.ISeedDirector.html
   commentId: T:CG.Orange.Directors.ISeedDirector
   fullName: CG.Orange.Directors.ISeedDirector
   nameWithType: ISeedDirector
-- uid: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IConfiguration,System.String,System.Boolean,CancellationToken)
-  name: SeedSettingFilesAsync(IConfiguration, String, Boolean, CancellationToken)
-  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_IConfiguration_System_String_System_Boolean_CancellationToken_
-  commentId: M:CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IConfiguration,System.String,System.Boolean,CancellationToken)
-  fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IConfiguration, System.String, System.Boolean, CancellationToken)
-  nameWithType: ISeedDirector.SeedSettingFilesAsync(IConfiguration, String, Boolean, CancellationToken)
+- uid: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)
+  name: SeedProvidersAsync(IEnumerable<ProviderModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_IEnumerable_ProviderModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedProvidersAsync(IEnumerable(Of ProviderModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable<ProviderModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable(Of ProviderModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: ISeedDirector.SeedProvidersAsync(IEnumerable<ProviderModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: ISeedDirector.SeedProvidersAsync(IEnumerable(Of ProviderModel), Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync*
+  name: SeedProvidersAsync
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_
+  commentId: Overload:CG.Orange.Directors.ISeedDirector.SeedProvidersAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync
+  nameWithType: ISeedDirector.SeedProvidersAsync
+- uid: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFilesAsync(IEnumerable<SettingFileModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_IEnumerable_SettingFileModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedSettingFilesAsync(IEnumerable(Of SettingFileModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IEnumerable<SettingFileModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IEnumerable(Of SettingFileModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: ISeedDirector.SeedSettingFilesAsync(IEnumerable<SettingFileModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: ISeedDirector.SeedSettingFilesAsync(IEnumerable(Of SettingFileModel), Boolean, String, CancellationToken)
 - uid: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync*
   name: SeedSettingFilesAsync
   href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_
@@ -1751,12 +1935,340 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync
   nameWithType: ISeedDirector.SeedSettingFilesAsync
-- uid: CG.Orange.Directors.IStatisticsDirector
-  name: IStatisticsDirector
-  href: api/CG.Orange.Directors.IStatisticsDirector.html
-  commentId: T:CG.Orange.Directors.IStatisticsDirector
-  fullName: CG.Orange.Directors.IStatisticsDirector
-  nameWithType: IStatisticsDirector
+- uid: CG.Orange.Directors.ISettingDirector
+  name: ISettingDirector
+  href: api/CG.Orange.Directors.ISettingDirector.html
+  commentId: T:CG.Orange.Directors.ISettingDirector
+  fullName: CG.Orange.Directors.ISettingDirector
+  nameWithType: ISettingDirector
+- uid: CG.Orange.Directors.ISettingDirector.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.AnyAsync(CancellationToken)
+  nameWithType: ISettingDirector.AnyAsync(CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.AnyAsync(System.String,System.String,CancellationToken)
+  name: AnyAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_AnyAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.AnyAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.AnyAsync(System.String, System.String, CancellationToken)
+  nameWithType: ISettingDirector.AnyAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_AnyAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.AnyAsync
+  nameWithType: ISettingDirector.AnyAsync
+- uid: CG.Orange.Directors.ISettingDirector.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.CountAsync(CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.CountAsync(CancellationToken)
+  nameWithType: ISettingDirector.CountAsync(CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_CountAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.CountAsync
+  nameWithType: ISettingDirector.CountAsync
+- uid: CG.Orange.Directors.ISettingDirector.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_CreateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.CreateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingDirector.CreateAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_CreateAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.CreateAsync
+  nameWithType: ISettingDirector.CreateAsync
+- uid: CG.Orange.Directors.ISettingDirector.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  name: DeleteAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_DeleteAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.DeleteAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingDirector.DeleteAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_DeleteAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.DeleteAsync
+  nameWithType: ISettingDirector.DeleteAsync
+- uid: CG.Orange.Directors.ISettingDirector.DisableAsync(SettingFileModel,System.String,CancellationToken)
+  name: DisableAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_DisableAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.DisableAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.DisableAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingDirector.DisableAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.DisableAsync*
+  name: DisableAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_DisableAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.DisableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.DisableAsync
+  nameWithType: ISettingDirector.DisableAsync
+- uid: CG.Orange.Directors.ISettingDirector.EnableAsync(SettingFileModel,System.String,CancellationToken)
+  name: EnableAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_EnableAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.EnableAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.EnableAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingDirector.EnableAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.EnableAsync*
+  name: EnableAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_EnableAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.EnableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.EnableAsync
+  nameWithType: ISettingDirector.EnableAsync
+- uid: CG.Orange.Directors.ISettingDirector.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.FindAllAsync(CancellationToken)
+  nameWithType: ISettingDirector.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_FindAllAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.FindAllAsync
+  nameWithType: ISettingDirector.FindAllAsync
+- uid: CG.Orange.Directors.ISettingDirector.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
+  name: FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.FindByApplicationAndEnvironmentAsync(System.String, System.String, CancellationToken)
+  nameWithType: ISettingDirector.FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.FindByApplicationAndEnvironmentAsync*
+  name: FindByApplicationAndEnvironmentAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_FindByApplicationAndEnvironmentAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.FindByApplicationAndEnvironmentAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.FindByApplicationAndEnvironmentAsync
+  nameWithType: ISettingDirector.FindByApplicationAndEnvironmentAsync
+- uid: CG.Orange.Directors.ISettingDirector.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: ISettingDirector.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_FindByIdAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.FindByIdAsync
+  nameWithType: ISettingDirector.FindByIdAsync
+- uid: CG.Orange.Directors.ISettingDirector.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  name: UpdateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_UpdateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISettingDirector.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ISettingDirector.UpdateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: ISettingDirector.UpdateAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ISettingDirector.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Directors.ISettingDirector.html#CG_Orange_Directors_ISettingDirector_UpdateAsync_
+  commentId: Overload:CG.Orange.Directors.ISettingDirector.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISettingDirector.UpdateAsync
+  nameWithType: ISettingDirector.UpdateAsync
+- uid: CG.Orange.Directors.IStatisticDirector
+  name: IStatisticDirector
+  href: api/CG.Orange.Directors.IStatisticDirector.html
+  commentId: T:CG.Orange.Directors.IStatisticDirector
+  fullName: CG.Orange.Directors.IStatisticDirector
+  nameWithType: IStatisticDirector
+- uid: CG.Orange.Directors.ProviderDirector
+  name: ProviderDirector
+  href: api/CG.Orange.Directors.ProviderDirector.html
+  commentId: T:CG.Orange.Directors.ProviderDirector
+  fullName: CG.Orange.Directors.ProviderDirector
+  nameWithType: ProviderDirector
+- uid: CG.Orange.Directors.ProviderDirector.#ctor(IProviderManager,IProviderPropertyManager,ILogger{CG.Orange.Directors.IProviderDirector})
+  name: ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger<IProviderDirector>)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector__ctor_IProviderManager_IProviderPropertyManager_ILogger_CG_Orange_Directors_IProviderDirector__
+  commentId: M:CG.Orange.Directors.ProviderDirector.#ctor(IProviderManager,IProviderPropertyManager,ILogger{CG.Orange.Directors.IProviderDirector})
+  name.vb: ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger(Of IProviderDirector))
+  fullName: CG.Orange.Directors.ProviderDirector.ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger<CG.Orange.Directors.IProviderDirector>)
+  fullName.vb: CG.Orange.Directors.ProviderDirector.ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger(Of CG.Orange.Directors.IProviderDirector))
+  nameWithType: ProviderDirector.ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger<IProviderDirector>)
+  nameWithType.vb: ProviderDirector.ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger(Of IProviderDirector))
+- uid: CG.Orange.Directors.ProviderDirector.#ctor*
+  name: ProviderDirector
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.ProviderDirector
+  nameWithType: ProviderDirector.ProviderDirector
+- uid: CG.Orange.Directors.ProviderDirector._logger
+  name: _logger
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector__logger
+  commentId: F:CG.Orange.Directors.ProviderDirector._logger
+  fullName: CG.Orange.Directors.ProviderDirector._logger
+  nameWithType: ProviderDirector._logger
+- uid: CG.Orange.Directors.ProviderDirector._providerManager
+  name: _providerManager
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector__providerManager
+  commentId: F:CG.Orange.Directors.ProviderDirector._providerManager
+  fullName: CG.Orange.Directors.ProviderDirector._providerManager
+  nameWithType: ProviderDirector._providerManager
+- uid: CG.Orange.Directors.ProviderDirector._providerPropertyManager
+  name: _providerPropertyManager
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector__providerPropertyManager
+  commentId: F:CG.Orange.Directors.ProviderDirector._providerPropertyManager
+  fullName: CG.Orange.Directors.ProviderDirector._providerPropertyManager
+  nameWithType: ProviderDirector._providerPropertyManager
+- uid: CG.Orange.Directors.ProviderDirector.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.AnyAsync(CancellationToken)
+  nameWithType: ProviderDirector.AnyAsync(CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_AnyAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.AnyAsync
+  nameWithType: ProviderDirector.AnyAsync
+- uid: CG.Orange.Directors.ProviderDirector.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.CountAsync(CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.CountAsync(CancellationToken)
+  nameWithType: ProviderDirector.CountAsync(CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_CountAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.CountAsync
+  nameWithType: ProviderDirector.CountAsync
+- uid: CG.Orange.Directors.ProviderDirector.CreateAsync(ProviderModel,System.String,CancellationToken)
+  name: CreateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_CreateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.CreateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.CreateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderDirector.CreateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_CreateAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.CreateAsync
+  nameWithType: ProviderDirector.CreateAsync
+- uid: CG.Orange.Directors.ProviderDirector.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  name: DeleteAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_DeleteAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.DeleteAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.DeleteAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderDirector.DeleteAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_DeleteAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.DeleteAsync
+  nameWithType: ProviderDirector.DeleteAsync
+- uid: CG.Orange.Directors.ProviderDirector.DisableAsync(ProviderModel,System.String,CancellationToken)
+  name: DisableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_DisableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.DisableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.DisableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderDirector.DisableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.DisableAsync*
+  name: DisableAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_DisableAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.DisableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.DisableAsync
+  nameWithType: ProviderDirector.DisableAsync
+- uid: CG.Orange.Directors.ProviderDirector.EnableAsync(ProviderModel,System.String,CancellationToken)
+  name: EnableAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_EnableAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.EnableAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.EnableAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderDirector.EnableAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.EnableAsync*
+  name: EnableAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_EnableAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.EnableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.EnableAsync
+  nameWithType: ProviderDirector.EnableAsync
+- uid: CG.Orange.Directors.ProviderDirector.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.FindAllAsync(CancellationToken)
+  nameWithType: ProviderDirector.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_FindAllAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.FindAllAsync
+  nameWithType: ProviderDirector.FindAllAsync
+- uid: CG.Orange.Directors.ProviderDirector.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: ProviderDirector.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_FindByIdAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.FindByIdAsync
+  nameWithType: ProviderDirector.FindByIdAsync
+- uid: CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
+  name: FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)
+  name.vb: FindByTagAndTypeAsync(String, Nullable(Of ProviderType), CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync(System.String, System.Nullable<ProviderType>, CancellationToken)
+  fullName.vb: CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync(System.String, System.Nullable(Of ProviderType), CancellationToken)
+  nameWithType: ProviderDirector.FindByTagAndTypeAsync(String, Nullable<ProviderType>, CancellationToken)
+  nameWithType.vb: ProviderDirector.FindByTagAndTypeAsync(String, Nullable(Of ProviderType), CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync*
+  name: FindByTagAndTypeAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_FindByTagAndTypeAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync
+  nameWithType: ProviderDirector.FindByTagAndTypeAsync
+- uid: CG.Orange.Directors.ProviderDirector.Properties
+  name: Properties
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_Properties
+  commentId: P:CG.Orange.Directors.ProviderDirector.Properties
+  fullName: CG.Orange.Directors.ProviderDirector.Properties
+  nameWithType: ProviderDirector.Properties
+- uid: CG.Orange.Directors.ProviderDirector.Properties*
+  name: Properties
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_Properties_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.Properties
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.Properties
+  nameWithType: ProviderDirector.Properties
+- uid: CG.Orange.Directors.ProviderDirector.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  name: UpdateAsync(ProviderModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_UpdateAsync_ProviderModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ProviderDirector.UpdateAsync(ProviderModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ProviderDirector.UpdateAsync(ProviderModel, System.String, CancellationToken)
+  nameWithType: ProviderDirector.UpdateAsync(ProviderModel, String, CancellationToken)
+- uid: CG.Orange.Directors.ProviderDirector.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Directors.ProviderDirector.html#CG_Orange_Directors_ProviderDirector_UpdateAsync_
+  commentId: Overload:CG.Orange.Directors.ProviderDirector.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ProviderDirector.UpdateAsync
+  nameWithType: ProviderDirector.UpdateAsync
 - uid: CG.Orange.Directors.SeedDirector
   name: SeedDirector
   href: api/CG.Orange.Directors.SeedDirector.html
@@ -1816,6 +2328,15 @@ references:
   commentId: M:CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
   fullName: CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IConfiguration, System.Boolean, System.String, CancellationToken)
   nameWithType: SeedDirector.SeedProvidersAsync(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)
+  name: SeedProvidersAsync(IEnumerable<ProviderModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedProvidersAsync_IEnumerable_ProviderModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedProvidersAsync(IEnumerable(Of ProviderModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IEnumerable<ProviderModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedProvidersAsync(IEnumerable(Of ProviderModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedProvidersAsync(IEnumerable<ProviderModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: SeedDirector.SeedProvidersAsync(IEnumerable(Of ProviderModel), Boolean, String, CancellationToken)
 - uid: CG.Orange.Directors.SeedDirector.SeedProvidersAsync*
   name: SeedProvidersAsync
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedProvidersAsync_
@@ -1829,6 +2350,15 @@ references:
   commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
   fullName: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration, System.Boolean, System.String, CancellationToken)
   nameWithType: SeedDirector.SeedSettingFilesAsync(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFilesAsync(IEnumerable<SettingFileModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_IEnumerable_SettingFileModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedSettingFilesAsync(IEnumerable(Of SettingFileModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IEnumerable<SettingFileModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IEnumerable(Of SettingFileModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedSettingFilesAsync(IEnumerable<SettingFileModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: SeedDirector.SeedSettingFilesAsync(IEnumerable(Of SettingFileModel), Boolean, String, CancellationToken)
 - uid: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync*
   name: SeedSettingFilesAsync
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_
@@ -1836,34 +2366,210 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync
   nameWithType: SeedDirector.SeedSettingFilesAsync
-- uid: CG.Orange.Directors.StatisticsDirector
-  name: StatisticsDirector
-  href: api/CG.Orange.Directors.StatisticsDirector.html
-  commentId: T:CG.Orange.Directors.StatisticsDirector
-  fullName: CG.Orange.Directors.StatisticsDirector
-  nameWithType: StatisticsDirector
-- uid: CG.Orange.Directors.StatisticsDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticsDirector})
-  name: StatisticsDirector(ILogger<IStatisticsDirector>)
-  href: api/CG.Orange.Directors.StatisticsDirector.html#CG_Orange_Directors_StatisticsDirector__ctor_ILogger_CG_Orange_Directors_IStatisticsDirector__
-  commentId: M:CG.Orange.Directors.StatisticsDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticsDirector})
-  name.vb: StatisticsDirector(ILogger(Of IStatisticsDirector))
-  fullName: CG.Orange.Directors.StatisticsDirector.StatisticsDirector(ILogger<CG.Orange.Directors.IStatisticsDirector>)
-  fullName.vb: CG.Orange.Directors.StatisticsDirector.StatisticsDirector(ILogger(Of CG.Orange.Directors.IStatisticsDirector))
-  nameWithType: StatisticsDirector.StatisticsDirector(ILogger<IStatisticsDirector>)
-  nameWithType.vb: StatisticsDirector.StatisticsDirector(ILogger(Of IStatisticsDirector))
-- uid: CG.Orange.Directors.StatisticsDirector.#ctor*
-  name: StatisticsDirector
-  href: api/CG.Orange.Directors.StatisticsDirector.html#CG_Orange_Directors_StatisticsDirector__ctor_
-  commentId: Overload:CG.Orange.Directors.StatisticsDirector.#ctor
+- uid: CG.Orange.Directors.SettingDirector
+  name: SettingDirector
+  href: api/CG.Orange.Directors.SettingDirector.html
+  commentId: T:CG.Orange.Directors.SettingDirector
+  fullName: CG.Orange.Directors.SettingDirector
+  nameWithType: SettingDirector
+- uid: CG.Orange.Directors.SettingDirector.#ctor(ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.ISettingDirector})
+  name: SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger<ISettingDirector>)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__ctor_ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_ISettingDirector__
+  commentId: M:CG.Orange.Directors.SettingDirector.#ctor(ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.ISettingDirector})
+  name.vb: SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger(Of ISettingDirector))
+  fullName: CG.Orange.Directors.SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger<CG.Orange.Directors.ISettingDirector>)
+  fullName.vb: CG.Orange.Directors.SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger(Of CG.Orange.Directors.ISettingDirector))
+  nameWithType: SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger<ISettingDirector>)
+  nameWithType.vb: SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger(Of ISettingDirector))
+- uid: CG.Orange.Directors.SettingDirector.#ctor*
+  name: SettingDirector
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.#ctor
   isSpec: "True"
-  fullName: CG.Orange.Directors.StatisticsDirector.StatisticsDirector
-  nameWithType: StatisticsDirector.StatisticsDirector
-- uid: CG.Orange.Directors.StatisticsDirector._logger
+  fullName: CG.Orange.Directors.SettingDirector.SettingDirector
+  nameWithType: SettingDirector.SettingDirector
+- uid: CG.Orange.Directors.SettingDirector._logger
   name: _logger
-  href: api/CG.Orange.Directors.StatisticsDirector.html#CG_Orange_Directors_StatisticsDirector__logger
-  commentId: F:CG.Orange.Directors.StatisticsDirector._logger
-  fullName: CG.Orange.Directors.StatisticsDirector._logger
-  nameWithType: StatisticsDirector._logger
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__logger
+  commentId: F:CG.Orange.Directors.SettingDirector._logger
+  fullName: CG.Orange.Directors.SettingDirector._logger
+  nameWithType: SettingDirector._logger
+- uid: CG.Orange.Directors.SettingDirector._settingFileCountManager
+  name: _settingFileCountManager
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__settingFileCountManager
+  commentId: F:CG.Orange.Directors.SettingDirector._settingFileCountManager
+  fullName: CG.Orange.Directors.SettingDirector._settingFileCountManager
+  nameWithType: SettingDirector._settingFileCountManager
+- uid: CG.Orange.Directors.SettingDirector._settingFileManager
+  name: _settingFileManager
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__settingFileManager
+  commentId: F:CG.Orange.Directors.SettingDirector._settingFileManager
+  fullName: CG.Orange.Directors.SettingDirector._settingFileManager
+  nameWithType: SettingDirector._settingFileManager
+- uid: CG.Orange.Directors.SettingDirector.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.AnyAsync(CancellationToken)
+  nameWithType: SettingDirector.AnyAsync(CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.AnyAsync(System.String,System.String,CancellationToken)
+  name: AnyAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_AnyAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.AnyAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.AnyAsync(System.String, System.String, CancellationToken)
+  nameWithType: SettingDirector.AnyAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_AnyAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.AnyAsync
+  nameWithType: SettingDirector.AnyAsync
+- uid: CG.Orange.Directors.SettingDirector.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.CountAsync(CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.CountAsync(CancellationToken)
+  nameWithType: SettingDirector.CountAsync(CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_CountAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.CountAsync
+  nameWithType: SettingDirector.CountAsync
+- uid: CG.Orange.Directors.SettingDirector.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_CreateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.CreateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.CreateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingDirector.CreateAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_CreateAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.CreateAsync
+  nameWithType: SettingDirector.CreateAsync
+- uid: CG.Orange.Directors.SettingDirector.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  name: DeleteAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_DeleteAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.DeleteAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.DeleteAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingDirector.DeleteAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.DeleteAsync*
+  name: DeleteAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_DeleteAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.DeleteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.DeleteAsync
+  nameWithType: SettingDirector.DeleteAsync
+- uid: CG.Orange.Directors.SettingDirector.DisableAsync(SettingFileModel,System.String,CancellationToken)
+  name: DisableAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_DisableAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.DisableAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.DisableAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingDirector.DisableAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.DisableAsync*
+  name: DisableAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_DisableAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.DisableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.DisableAsync
+  nameWithType: SettingDirector.DisableAsync
+- uid: CG.Orange.Directors.SettingDirector.EnableAsync(SettingFileModel,System.String,CancellationToken)
+  name: EnableAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_EnableAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.EnableAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.EnableAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingDirector.EnableAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.EnableAsync*
+  name: EnableAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_EnableAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.EnableAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.EnableAsync
+  nameWithType: SettingDirector.EnableAsync
+- uid: CG.Orange.Directors.SettingDirector.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.FindAllAsync(CancellationToken)
+  nameWithType: SettingDirector.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_FindAllAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.FindAllAsync
+  nameWithType: SettingDirector.FindAllAsync
+- uid: CG.Orange.Directors.SettingDirector.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
+  name: FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.FindByApplicationAndEnvironmentAsync(System.String, System.String, CancellationToken)
+  nameWithType: SettingDirector.FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.FindByApplicationAndEnvironmentAsync*
+  name: FindByApplicationAndEnvironmentAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_FindByApplicationAndEnvironmentAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.FindByApplicationAndEnvironmentAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.FindByApplicationAndEnvironmentAsync
+  nameWithType: SettingDirector.FindByApplicationAndEnvironmentAsync
+- uid: CG.Orange.Directors.SettingDirector.FindByIdAsync(System.Int32,CancellationToken)
+  name: FindByIdAsync(Int32, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_FindByIdAsync_System_Int32_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.FindByIdAsync(System.Int32,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.FindByIdAsync(System.Int32, CancellationToken)
+  nameWithType: SettingDirector.FindByIdAsync(Int32, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.FindByIdAsync*
+  name: FindByIdAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_FindByIdAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.FindByIdAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.FindByIdAsync
+  nameWithType: SettingDirector.FindByIdAsync
+- uid: CG.Orange.Directors.SettingDirector.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  name: UpdateAsync(SettingFileModel, String, CancellationToken)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_UpdateAsync_SettingFileModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SettingDirector.UpdateAsync(SettingFileModel,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SettingDirector.UpdateAsync(SettingFileModel, System.String, CancellationToken)
+  nameWithType: SettingDirector.UpdateAsync(SettingFileModel, String, CancellationToken)
+- uid: CG.Orange.Directors.SettingDirector.UpdateAsync*
+  name: UpdateAsync
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector_UpdateAsync_
+  commentId: Overload:CG.Orange.Directors.SettingDirector.UpdateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SettingDirector.UpdateAsync
+  nameWithType: SettingDirector.UpdateAsync
+- uid: CG.Orange.Directors.StatisticDirector
+  name: StatisticDirector
+  href: api/CG.Orange.Directors.StatisticDirector.html
+  commentId: T:CG.Orange.Directors.StatisticDirector
+  fullName: CG.Orange.Directors.StatisticDirector
+  nameWithType: StatisticDirector
+- uid: CG.Orange.Directors.StatisticDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticDirector})
+  name: StatisticDirector(ILogger<IStatisticDirector>)
+  href: api/CG.Orange.Directors.StatisticDirector.html#CG_Orange_Directors_StatisticDirector__ctor_ILogger_CG_Orange_Directors_IStatisticDirector__
+  commentId: M:CG.Orange.Directors.StatisticDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticDirector})
+  name.vb: StatisticDirector(ILogger(Of IStatisticDirector))
+  fullName: CG.Orange.Directors.StatisticDirector.StatisticDirector(ILogger<CG.Orange.Directors.IStatisticDirector>)
+  fullName.vb: CG.Orange.Directors.StatisticDirector.StatisticDirector(ILogger(Of CG.Orange.Directors.IStatisticDirector))
+  nameWithType: StatisticDirector.StatisticDirector(ILogger<IStatisticDirector>)
+  nameWithType.vb: StatisticDirector.StatisticDirector(ILogger(Of IStatisticDirector))
+- uid: CG.Orange.Directors.StatisticDirector.#ctor*
+  name: StatisticDirector
+  href: api/CG.Orange.Directors.StatisticDirector.html#CG_Orange_Directors_StatisticDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.StatisticDirector.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.StatisticDirector.StatisticDirector
+  nameWithType: StatisticDirector.StatisticDirector
+- uid: CG.Orange.Directors.StatisticDirector._logger
+  name: _logger
+  href: api/CG.Orange.Directors.StatisticDirector.html#CG_Orange_Directors_StatisticDirector__logger
+  commentId: F:CG.Orange.Directors.StatisticDirector._logger
+  fullName: CG.Orange.Directors.StatisticDirector._logger
+  nameWithType: StatisticDirector._logger
 - uid: CG.Orange.Globals
   name: Globals
   href: api/CG.Orange.Globals.html
@@ -1930,6 +2636,18 @@ references:
   commentId: F:CG.Orange.Globals.Models.Providers.TagLength
   fullName: CG.Orange.Globals.Models.Providers.TagLength
   nameWithType: Globals.Models.Providers.TagLength
+- uid: CG.Orange.Globals.Models.SettingFileCounts
+  name: Globals.Models.SettingFileCounts
+  href: api/CG.Orange.Globals.Models.SettingFileCounts.html
+  commentId: T:CG.Orange.Globals.Models.SettingFileCounts
+  fullName: CG.Orange.Globals.Models.SettingFileCounts
+  nameWithType: Globals.Models.SettingFileCounts
+- uid: CG.Orange.Globals.Models.SettingFileCounts.CreatedByLength
+  name: CreatedByLength
+  href: api/CG.Orange.Globals.Models.SettingFileCounts.html#CG_Orange_Globals_Models_SettingFileCounts_CreatedByLength
+  commentId: F:CG.Orange.Globals.Models.SettingFileCounts.CreatedByLength
+  fullName: CG.Orange.Globals.Models.SettingFileCounts.CreatedByLength
+  nameWithType: Globals.Models.SettingFileCounts.CreatedByLength
 - uid: CG.Orange.Globals.Models.SettingFiles
   name: Globals.Models.SettingFiles
   href: api/CG.Orange.Globals.Models.SettingFiles.html
@@ -1998,6 +2716,19 @@ references:
   commentId: T:CG.Orange.Host.Options.HostedServicesOptions
   fullName: CG.Orange.Host.Options.HostedServicesOptions
   nameWithType: HostedServicesOptions
+- uid: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
+  name: StatisticsService
+  href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_StatisticsService
+  commentId: P:CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
+  fullName: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
+  nameWithType: HostedServicesOptions.StatisticsService
+- uid: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService*
+  name: StatisticsService
+  href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_StatisticsService_
+  commentId: Overload:CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
+  nameWithType: HostedServicesOptions.StatisticsService
 - uid: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
   name: WarmupService
   href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_WarmupService
@@ -2011,6 +2742,51 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
   nameWithType: HostedServicesOptions.WarmupService
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions
+  name: StatisticsServiceOptions
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html
+  commentId: T:CG.Orange.Host.Options.StatisticsServiceOptions
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions
+  nameWithType: StatisticsServiceOptions
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
+  name: IsDisabled
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_IsDisabled
+  commentId: P:CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
+  nameWithType: StatisticsServiceOptions.IsDisabled
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled*
+  name: IsDisabled
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_IsDisabled_
+  commentId: Overload:CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
+  nameWithType: StatisticsServiceOptions.IsDisabled
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
+  name: OperatingDelay
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_OperatingDelay
+  commentId: P:CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
+  nameWithType: StatisticsServiceOptions.OperatingDelay
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay*
+  name: OperatingDelay
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_OperatingDelay_
+  commentId: Overload:CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
+  nameWithType: StatisticsServiceOptions.OperatingDelay
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
+  name: StartupDelay
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_StartupDelay
+  commentId: P:CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
+  nameWithType: StatisticsServiceOptions.StartupDelay
+- uid: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay*
+  name: StartupDelay
+  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_StartupDelay_
+  commentId: Overload:CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
+  isSpec: "True"
+  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
+  nameWithType: StatisticsServiceOptions.StartupDelay
 - uid: CG.Orange.Host.Options.WarmupServiceOptions
   name: WarmupServiceOptions
   href: api/CG.Orange.Host.Options.WarmupServiceOptions.html
@@ -2227,19 +3003,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OnInitializedAsync
   nameWithType: Index.OnInitializedAsync
-- uid: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
-  name: ProviderManager
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_ProviderManager
-  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
-  nameWithType: Index.ProviderManager
-- uid: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager*
-  name: ProviderManager
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_ProviderManager_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OrangeApi
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OrangeApi
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Index.OrangeApi
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OrangeApi
+  nameWithType: Index.OrangeApi
+- uid: CG.Orange.Host.Pages.Admin.Providers.Index.OrangeApi*
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_OrangeApi_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Index.OrangeApi
   isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.ProviderManager
-  nameWithType: Index.ProviderManager
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Index.OrangeApi
+  nameWithType: Index.OrangeApi
 - uid: CG.Orange.Host.Pages.Admin.Providers.Index.SnackbarService
   name: SnackbarService
   href: api/CG.Orange.Host.Pages.Admin.Providers.Index.html#CG_Orange_Host_Pages_Admin_Providers_Index_SnackbarService
@@ -2458,6 +3234,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OnValidSubmit
   nameWithType: Provider.OnValidSubmit
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OrangeApi
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OrangeApi
+  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.OrangeApi
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OrangeApi
+  nameWithType: Provider.OrangeApi
+- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.OrangeApi*
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_OrangeApi_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.OrangeApi
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.OrangeApi
+  nameWithType: Provider.OrangeApi
 - uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
   name: ProviderId
   href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderId
@@ -2471,32 +3260,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderId
   nameWithType: Provider.ProviderId
-- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
-  name: ProviderManager
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderManager
-  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
-  nameWithType: Provider.ProviderManager
-- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager*
-  name: ProviderManager
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderManager_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
-  isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderManager
-  nameWithType: Provider.ProviderManager
-- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
-  name: ProviderPropertyManager
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderPropertyManager
-  commentId: P:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
-  nameWithType: Provider.ProviderPropertyManager
-- uid: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager*
-  name: ProviderPropertyManager
-  href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_ProviderPropertyManager_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
-  isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Providers.Provider.ProviderPropertyManager
-  nameWithType: Provider.ProviderPropertyManager
 - uid: CG.Orange.Host.Pages.Admin.Providers.Provider.SnackbarService
   name: SnackbarService
   href: api/CG.Orange.Host.Pages.Admin.Providers.Provider.html#CG_Orange_Host_Pages_Admin_Providers_Provider_SnackbarService
@@ -2703,6 +3466,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Index.OnInitializedAsync
   nameWithType: Index.OnInitializedAsync
+- uid: CG.Orange.Host.Pages.Admin.Settings.Index.OrangeApi
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_OrangeApi
+  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Index.OrangeApi
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.OrangeApi
+  nameWithType: Index.OrangeApi
+- uid: CG.Orange.Host.Pages.Admin.Settings.Index.OrangeApi*
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_OrangeApi_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Index.OrangeApi
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.OrangeApi
+  nameWithType: Index.OrangeApi
 - uid: CG.Orange.Host.Pages.Admin.Settings.Index.ParseAndVerifyAsync(IBrowserFile)
   name: ParseAndVerifyAsync(IBrowserFile)
   href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_ParseAndVerifyAsync_IBrowserFile_
@@ -2716,19 +3492,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Index.ParseAndVerifyAsync
   nameWithType: Index.ParseAndVerifyAsync
-- uid: CG.Orange.Host.Pages.Admin.Settings.Index.SettingFileManager
-  name: SettingFileManager
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_SettingFileManager
-  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Index.SettingFileManager
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.SettingFileManager
-  nameWithType: Index.SettingFileManager
-- uid: CG.Orange.Host.Pages.Admin.Settings.Index.SettingFileManager*
-  name: SettingFileManager
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_SettingFileManager_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Index.SettingFileManager
-  isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Index.SettingFileManager
-  nameWithType: Index.SettingFileManager
 - uid: CG.Orange.Host.Pages.Admin.Settings.Index.SnackbarService
   name: SnackbarService
   href: api/CG.Orange.Host.Pages.Admin.Settings.Index.html#CG_Orange_Host_Pages_Admin_Settings_Index_SnackbarService
@@ -2877,32 +3640,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OnValidSubmitAsync
   nameWithType: Setting.OnValidSubmitAsync
-- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
-  name: ProviderManager
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_ProviderManager
-  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
-  nameWithType: Setting.ProviderManager
-- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager*
-  name: ProviderManager
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_ProviderManager_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.OrangeApi
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_OrangeApi
+  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Setting.OrangeApi
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OrangeApi
+  nameWithType: Setting.OrangeApi
+- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.OrangeApi*
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_OrangeApi_
+  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.OrangeApi
   isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.ProviderManager
-  nameWithType: Setting.ProviderManager
-- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager
-  name: SettingFileManager
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_SettingFileManager
-  commentId: P:CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager
-  nameWithType: Setting.SettingFileManager
-- uid: CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager*
-  name: SettingFileManager
-  href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_SettingFileManager_
-  commentId: Overload:CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager
-  isSpec: "True"
-  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.SettingFileManager
-  nameWithType: Setting.SettingFileManager
+  fullName: CG.Orange.Host.Pages.Admin.Settings.Setting.OrangeApi
+  nameWithType: Setting.OrangeApi
 - uid: CG.Orange.Host.Pages.Admin.Settings.Setting.SettingId
   name: SettingId
   href: api/CG.Orange.Host.Pages.Admin.Settings.Setting.html#CG_Orange_Host_Pages_Admin_Settings_Setting_SettingId
@@ -3027,6 +3777,59 @@ references:
   commentId: N:CG.Orange.Host.Services
   fullName: CG.Orange.Host.Services
   nameWithType: CG.Orange.Host.Services
+- uid: CG.Orange.Host.Services.StatisticsService
+  name: StatisticsService
+  href: api/CG.Orange.Host.Services.StatisticsService.html
+  commentId: T:CG.Orange.Host.Services.StatisticsService
+  fullName: CG.Orange.Host.Services.StatisticsService
+  nameWithType: StatisticsService
+- uid: CG.Orange.Host.Services.StatisticsService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.StatisticsService})
+  name: StatisticsService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<StatisticsService>)
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__ctor_IServiceProvider_IOptions_HostedServicesOptions__ILogger_CG_Orange_Host_Services_StatisticsService__
+  commentId: M:CG.Orange.Host.Services.StatisticsService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.StatisticsService})
+  name.vb: StatisticsService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of StatisticsService))
+  fullName: CG.Orange.Host.Services.StatisticsService.StatisticsService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<CG.Orange.Host.Services.StatisticsService>)
+  fullName.vb: CG.Orange.Host.Services.StatisticsService.StatisticsService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of CG.Orange.Host.Services.StatisticsService))
+  nameWithType: StatisticsService.StatisticsService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<StatisticsService>)
+  nameWithType.vb: StatisticsService.StatisticsService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of StatisticsService))
+- uid: CG.Orange.Host.Services.StatisticsService.#ctor*
+  name: StatisticsService
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__ctor_
+  commentId: Overload:CG.Orange.Host.Services.StatisticsService.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Host.Services.StatisticsService.StatisticsService
+  nameWithType: StatisticsService.StatisticsService
+- uid: CG.Orange.Host.Services.StatisticsService._hostedServiceOptions
+  name: _hostedServiceOptions
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__hostedServiceOptions
+  commentId: F:CG.Orange.Host.Services.StatisticsService._hostedServiceOptions
+  fullName: CG.Orange.Host.Services.StatisticsService._hostedServiceOptions
+  nameWithType: StatisticsService._hostedServiceOptions
+- uid: CG.Orange.Host.Services.StatisticsService._logger
+  name: _logger
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__logger
+  commentId: F:CG.Orange.Host.Services.StatisticsService._logger
+  fullName: CG.Orange.Host.Services.StatisticsService._logger
+  nameWithType: StatisticsService._logger
+- uid: CG.Orange.Host.Services.StatisticsService._serviceProvider
+  name: _serviceProvider
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__serviceProvider
+  commentId: F:CG.Orange.Host.Services.StatisticsService._serviceProvider
+  fullName: CG.Orange.Host.Services.StatisticsService._serviceProvider
+  nameWithType: StatisticsService._serviceProvider
+- uid: CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)
+  name: ExecuteAsync(CancellationToken)
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService_ExecuteAsync_CancellationToken_
+  commentId: M:CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)
+  fullName: CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)
+  nameWithType: StatisticsService.ExecuteAsync(CancellationToken)
+- uid: CG.Orange.Host.Services.StatisticsService.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService_ExecuteAsync_
+  commentId: Overload:CG.Orange.Host.Services.StatisticsService.ExecuteAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Services.StatisticsService.ExecuteAsync
+  nameWithType: StatisticsService.ExecuteAsync
 - uid: CG.Orange.Host.Services.WarmupService
   name: WarmupService
   href: api/CG.Orange.Host.Services.WarmupService.html
@@ -3049,18 +3852,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Services.WarmupService.WarmupService
   nameWithType: WarmupService.WarmupService
-- uid: CG.Orange.Host.Services.WarmupService._cts
-  name: _cts
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__cts
-  commentId: F:CG.Orange.Host.Services.WarmupService._cts
-  fullName: CG.Orange.Host.Services.WarmupService._cts
-  nameWithType: WarmupService._cts
-- uid: CG.Orange.Host.Services.WarmupService._executingTask
-  name: _executingTask
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__executingTask
-  commentId: F:CG.Orange.Host.Services.WarmupService._executingTask
-  fullName: CG.Orange.Host.Services.WarmupService._executingTask
-  nameWithType: WarmupService._executingTask
 - uid: CG.Orange.Host.Services.WarmupService._hostedServiceOptions
   name: _hostedServiceOptions
   href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService__hostedServiceOptions
@@ -3079,19 +3870,6 @@ references:
   commentId: F:CG.Orange.Host.Services.WarmupService._serviceProvider
   fullName: CG.Orange.Host.Services.WarmupService._serviceProvider
   nameWithType: WarmupService._serviceProvider
-- uid: CG.Orange.Host.Services.WarmupService.Dispose
-  name: Dispose()
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_Dispose
-  commentId: M:CG.Orange.Host.Services.WarmupService.Dispose
-  fullName: CG.Orange.Host.Services.WarmupService.Dispose()
-  nameWithType: WarmupService.Dispose()
-- uid: CG.Orange.Host.Services.WarmupService.Dispose*
-  name: Dispose
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_Dispose_
-  commentId: Overload:CG.Orange.Host.Services.WarmupService.Dispose
-  isSpec: "True"
-  fullName: CG.Orange.Host.Services.WarmupService.Dispose
-  nameWithType: WarmupService.Dispose
 - uid: CG.Orange.Host.Services.WarmupService.ExecuteAsync(CancellationToken)
   name: ExecuteAsync(CancellationToken)
   href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_ExecuteAsync_CancellationToken_
@@ -3105,32 +3883,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Services.WarmupService.ExecuteAsync
   nameWithType: WarmupService.ExecuteAsync
-- uid: CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)
-  name: StartAsync(CancellationToken)
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StartAsync_CancellationToken_
-  commentId: M:CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)
-  fullName: CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)
-  nameWithType: WarmupService.StartAsync(CancellationToken)
-- uid: CG.Orange.Host.Services.WarmupService.StartAsync*
-  name: StartAsync
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StartAsync_
-  commentId: Overload:CG.Orange.Host.Services.WarmupService.StartAsync
-  isSpec: "True"
-  fullName: CG.Orange.Host.Services.WarmupService.StartAsync
-  nameWithType: WarmupService.StartAsync
-- uid: CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)
-  name: StopAsync(CancellationToken)
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StopAsync_CancellationToken_
-  commentId: M:CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)
-  fullName: CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)
-  nameWithType: WarmupService.StopAsync(CancellationToken)
-- uid: CG.Orange.Host.Services.WarmupService.StopAsync*
-  name: StopAsync
-  href: api/CG.Orange.Host.Services.WarmupService.html#CG_Orange_Host_Services_WarmupService_StopAsync_
-  commentId: Overload:CG.Orange.Host.Services.WarmupService.StopAsync
-  isSpec: "True"
-  fullName: CG.Orange.Host.Services.WarmupService.StopAsync
-  nameWithType: WarmupService.StopAsync
 - uid: CG.Orange.Host.Themes
   name: CG.Orange.Host.Themes
   href: api/CG.Orange.Host.Themes.html
@@ -3245,6 +3997,77 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.ViewModels.SettingsRequestVM.Environment
   nameWithType: SettingsRequestVM.Environment
+- uid: CG.Orange.IOrangeApi
+  name: IOrangeApi
+  href: api/CG.Orange.IOrangeApi.html
+  commentId: T:CG.Orange.IOrangeApi
+  fullName: CG.Orange.IOrangeApi
+  nameWithType: IOrangeApi
+- uid: CG.Orange.IOrangeApi.Configurations
+  name: Configurations
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Configurations
+  commentId: P:CG.Orange.IOrangeApi.Configurations
+  fullName: CG.Orange.IOrangeApi.Configurations
+  nameWithType: IOrangeApi.Configurations
+- uid: CG.Orange.IOrangeApi.Configurations*
+  name: Configurations
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Configurations_
+  commentId: Overload:CG.Orange.IOrangeApi.Configurations
+  isSpec: "True"
+  fullName: CG.Orange.IOrangeApi.Configurations
+  nameWithType: IOrangeApi.Configurations
+- uid: CG.Orange.IOrangeApi.Providers
+  name: Providers
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Providers
+  commentId: P:CG.Orange.IOrangeApi.Providers
+  fullName: CG.Orange.IOrangeApi.Providers
+  nameWithType: IOrangeApi.Providers
+- uid: CG.Orange.IOrangeApi.Providers*
+  name: Providers
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Providers_
+  commentId: Overload:CG.Orange.IOrangeApi.Providers
+  isSpec: "True"
+  fullName: CG.Orange.IOrangeApi.Providers
+  nameWithType: IOrangeApi.Providers
+- uid: CG.Orange.IOrangeApi.Seeding
+  name: Seeding
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Seeding
+  commentId: P:CG.Orange.IOrangeApi.Seeding
+  fullName: CG.Orange.IOrangeApi.Seeding
+  nameWithType: IOrangeApi.Seeding
+- uid: CG.Orange.IOrangeApi.Seeding*
+  name: Seeding
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Seeding_
+  commentId: Overload:CG.Orange.IOrangeApi.Seeding
+  isSpec: "True"
+  fullName: CG.Orange.IOrangeApi.Seeding
+  nameWithType: IOrangeApi.Seeding
+- uid: CG.Orange.IOrangeApi.Settings
+  name: Settings
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Settings
+  commentId: P:CG.Orange.IOrangeApi.Settings
+  fullName: CG.Orange.IOrangeApi.Settings
+  nameWithType: IOrangeApi.Settings
+- uid: CG.Orange.IOrangeApi.Settings*
+  name: Settings
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Settings_
+  commentId: Overload:CG.Orange.IOrangeApi.Settings
+  isSpec: "True"
+  fullName: CG.Orange.IOrangeApi.Settings
+  nameWithType: IOrangeApi.Settings
+- uid: CG.Orange.IOrangeApi.Statistics
+  name: Statistics
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Statistics
+  commentId: P:CG.Orange.IOrangeApi.Statistics
+  fullName: CG.Orange.IOrangeApi.Statistics
+  nameWithType: IOrangeApi.Statistics
+- uid: CG.Orange.IOrangeApi.Statistics*
+  name: Statistics
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Statistics_
+  commentId: Overload:CG.Orange.IOrangeApi.Statistics
+  isSpec: "True"
+  fullName: CG.Orange.IOrangeApi.Statistics
+  nameWithType: IOrangeApi.Statistics
 - uid: CG.Orange.Managers
   name: CG.Orange.Managers
   href: api/CG.Orange.Managers.html
@@ -3558,6 +4381,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ISettingFileCountManager.CountAsync
   nameWithType: ISettingFileCountManager.CountAsync
+- uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_SettingFileCountModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel, System.String, CancellationToken)
+  nameWithType: ISettingFileCountManager.CreateAsync(SettingFileCountModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.ISettingFileCountManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ISettingFileCountManager.CreateAsync
+  nameWithType: ISettingFileCountManager.CreateAsync
 - uid: CG.Orange.Managers.ISettingFileCountManager.FindAllAsync(CancellationToken)
   name: FindAllAsync(CancellationToken)
   href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_CancellationToken_
@@ -4121,12 +4957,12 @@ references:
   commentId: F:CG.Orange.Managers.SettingFileCountManager._logger
   fullName: CG.Orange.Managers.SettingFileCountManager._logger
   nameWithType: SettingFileCountManager._logger
-- uid: CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository
-  name: _settingFileCountRepository
-  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager__settingFileCountRepository
-  commentId: F:CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository
-  fullName: CG.Orange.Managers.SettingFileCountManager._settingFileCountRepository
-  nameWithType: SettingFileCountManager._settingFileCountRepository
+- uid: CG.Orange.Managers.SettingFileCountManager._repository
+  name: _repository
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager__repository
+  commentId: F:CG.Orange.Managers.SettingFileCountManager._repository
+  fullName: CG.Orange.Managers.SettingFileCountManager._repository
+  nameWithType: SettingFileCountManager._repository
 - uid: CG.Orange.Managers.SettingFileCountManager.AnyAsync(CancellationToken)
   name: AnyAsync(CancellationToken)
   href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_AnyAsync_CancellationToken_
@@ -4153,6 +4989,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileCountManager.CountAsync
   nameWithType: SettingFileCountManager.CountAsync
+- uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_SettingFileCountModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel, System.String, CancellationToken)
+  nameWithType: SettingFileCountManager.CreateAsync(SettingFileCountModel, String, CancellationToken)
+- uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.SettingFileCountManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.SettingFileCountManager.CreateAsync
+  nameWithType: SettingFileCountManager.CreateAsync
 - uid: CG.Orange.Managers.SettingFileCountManager.FindAllAsync(CancellationToken)
   name: FindAllAsync(CancellationToken)
   href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_FindAllAsync_CancellationToken_
@@ -4172,15 +5021,15 @@ references:
   commentId: T:CG.Orange.Managers.SettingFileManager
   fullName: CG.Orange.Managers.SettingFileManager
   nameWithType: SettingFileManager
-- uid: CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,CG.Orange.Repositories.ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
-  name: SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger<ISettingFileManager>)
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_CG_Orange_Repositories_ISettingFileRepository_CG_Orange_Repositories_ISettingFileCountRepository_ILogger_CG_Orange_Managers_ISettingFileManager__
-  commentId: M:CG.Orange.Managers.SettingFileManager.#ctor(CG.Orange.Repositories.ISettingFileRepository,CG.Orange.Repositories.ISettingFileCountRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
-  name.vb: SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger(Of ISettingFileManager))
-  fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager(CG.Orange.Repositories.ISettingFileRepository, CG.Orange.Repositories.ISettingFileCountRepository, ILogger<CG.Orange.Managers.ISettingFileManager>)
-  fullName.vb: CG.Orange.Managers.SettingFileManager.SettingFileManager(CG.Orange.Repositories.ISettingFileRepository, CG.Orange.Repositories.ISettingFileCountRepository, ILogger(Of CG.Orange.Managers.ISettingFileManager))
-  nameWithType: SettingFileManager.SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger<ISettingFileManager>)
-  nameWithType.vb: SettingFileManager.SettingFileManager(ISettingFileRepository, ISettingFileCountRepository, ILogger(Of ISettingFileManager))
+- uid: CG.Orange.Managers.SettingFileManager.#ctor(ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
+  name: SettingFileManager(ISettingFileRepository, ILogger<ISettingFileManager>)
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_ISettingFileRepository_ILogger_CG_Orange_Managers_ISettingFileManager__
+  commentId: M:CG.Orange.Managers.SettingFileManager.#ctor(ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
+  name.vb: SettingFileManager(ISettingFileRepository, ILogger(Of ISettingFileManager))
+  fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger<CG.Orange.Managers.ISettingFileManager>)
+  fullName.vb: CG.Orange.Managers.SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger(Of CG.Orange.Managers.ISettingFileManager))
+  nameWithType: SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger<ISettingFileManager>)
+  nameWithType.vb: SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger(Of ISettingFileManager))
 - uid: CG.Orange.Managers.SettingFileManager.#ctor*
   name: SettingFileManager
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_
@@ -4194,18 +5043,12 @@ references:
   commentId: F:CG.Orange.Managers.SettingFileManager._logger
   fullName: CG.Orange.Managers.SettingFileManager._logger
   nameWithType: SettingFileManager._logger
-- uid: CG.Orange.Managers.SettingFileManager._settingFileCountRepository
-  name: _settingFileCountRepository
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__settingFileCountRepository
-  commentId: F:CG.Orange.Managers.SettingFileManager._settingFileCountRepository
-  fullName: CG.Orange.Managers.SettingFileManager._settingFileCountRepository
-  nameWithType: SettingFileManager._settingFileCountRepository
-- uid: CG.Orange.Managers.SettingFileManager._settingFileRepository
-  name: _settingFileRepository
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__settingFileRepository
-  commentId: F:CG.Orange.Managers.SettingFileManager._settingFileRepository
-  fullName: CG.Orange.Managers.SettingFileManager._settingFileRepository
-  nameWithType: SettingFileManager._settingFileRepository
+- uid: CG.Orange.Managers.SettingFileManager._repository
+  name: _repository
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__repository
+  commentId: F:CG.Orange.Managers.SettingFileManager._repository
+  fullName: CG.Orange.Managers.SettingFileManager._repository
+  nameWithType: SettingFileManager._repository
 - uid: CG.Orange.Managers.SettingFileManager.AnyAsync(CancellationToken)
   name: AnyAsync(CancellationToken)
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager_AnyAsync_CancellationToken_
@@ -4643,6 +5486,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.SettingFileCountModel.Count
   nameWithType: SettingFileCountModel.Count
+- uid: CG.Orange.Models.SettingFileCountModel.CreatedBy
+  name: CreatedBy
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_CreatedBy
+  commentId: P:CG.Orange.Models.SettingFileCountModel.CreatedBy
+  fullName: CG.Orange.Models.SettingFileCountModel.CreatedBy
+  nameWithType: SettingFileCountModel.CreatedBy
+- uid: CG.Orange.Models.SettingFileCountModel.CreatedBy*
+  name: CreatedBy
+  href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_CreatedBy_
+  commentId: Overload:CG.Orange.Models.SettingFileCountModel.CreatedBy
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileCountModel.CreatedBy
+  nameWithType: SettingFileCountModel.CreatedBy
 - uid: CG.Orange.Models.SettingFileCountModel.CreatedOnUtc
   name: CreatedOnUtc
   href: api/CG.Orange.Models.SettingFileCountModel.html#CG_Orange_Models_SettingFileCountModel_CreatedOnUtc
@@ -4867,6 +5723,129 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Options.SettingFileOptions.SettingFiles
   nameWithType: SettingFileOptions.SettingFiles
+- uid: CG.Orange.OrangeApi
+  name: OrangeApi
+  href: api/CG.Orange.OrangeApi.html
+  commentId: T:CG.Orange.OrangeApi
+  fullName: CG.Orange.OrangeApi
+  nameWithType: OrangeApi
+- uid: CG.Orange.OrangeApi.#ctor(IConfigurationDirector,IProviderDirector,ISeedDirector,ISettingDirector,IStatisticDirector,ILogger{CG.Orange.IOrangeApi})
+  name: OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger<IOrangeApi>)
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__ctor_IConfigurationDirector_IProviderDirector_ISeedDirector_ISettingDirector_IStatisticDirector_ILogger_CG_Orange_IOrangeApi__
+  commentId: M:CG.Orange.OrangeApi.#ctor(IConfigurationDirector,IProviderDirector,ISeedDirector,ISettingDirector,IStatisticDirector,ILogger{CG.Orange.IOrangeApi})
+  name.vb: OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger(Of IOrangeApi))
+  fullName: CG.Orange.OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger<CG.Orange.IOrangeApi>)
+  fullName.vb: CG.Orange.OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger(Of CG.Orange.IOrangeApi))
+  nameWithType: OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger<IOrangeApi>)
+  nameWithType.vb: OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger(Of IOrangeApi))
+- uid: CG.Orange.OrangeApi.#ctor*
+  name: OrangeApi
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__ctor_
+  commentId: Overload:CG.Orange.OrangeApi.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.OrangeApi
+  nameWithType: OrangeApi.OrangeApi
+- uid: CG.Orange.OrangeApi._configurationDirector
+  name: _configurationDirector
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__configurationDirector
+  commentId: F:CG.Orange.OrangeApi._configurationDirector
+  fullName: CG.Orange.OrangeApi._configurationDirector
+  nameWithType: OrangeApi._configurationDirector
+- uid: CG.Orange.OrangeApi._logger
+  name: _logger
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__logger
+  commentId: F:CG.Orange.OrangeApi._logger
+  fullName: CG.Orange.OrangeApi._logger
+  nameWithType: OrangeApi._logger
+- uid: CG.Orange.OrangeApi._providerDirector
+  name: _providerDirector
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__providerDirector
+  commentId: F:CG.Orange.OrangeApi._providerDirector
+  fullName: CG.Orange.OrangeApi._providerDirector
+  nameWithType: OrangeApi._providerDirector
+- uid: CG.Orange.OrangeApi._seedDirector
+  name: _seedDirector
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__seedDirector
+  commentId: F:CG.Orange.OrangeApi._seedDirector
+  fullName: CG.Orange.OrangeApi._seedDirector
+  nameWithType: OrangeApi._seedDirector
+- uid: CG.Orange.OrangeApi._settingDirector
+  name: _settingDirector
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__settingDirector
+  commentId: F:CG.Orange.OrangeApi._settingDirector
+  fullName: CG.Orange.OrangeApi._settingDirector
+  nameWithType: OrangeApi._settingDirector
+- uid: CG.Orange.OrangeApi._statisticsDirector
+  name: _statisticsDirector
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__statisticsDirector
+  commentId: F:CG.Orange.OrangeApi._statisticsDirector
+  fullName: CG.Orange.OrangeApi._statisticsDirector
+  nameWithType: OrangeApi._statisticsDirector
+- uid: CG.Orange.OrangeApi.Configurations
+  name: Configurations
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Configurations
+  commentId: P:CG.Orange.OrangeApi.Configurations
+  fullName: CG.Orange.OrangeApi.Configurations
+  nameWithType: OrangeApi.Configurations
+- uid: CG.Orange.OrangeApi.Configurations*
+  name: Configurations
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Configurations_
+  commentId: Overload:CG.Orange.OrangeApi.Configurations
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.Configurations
+  nameWithType: OrangeApi.Configurations
+- uid: CG.Orange.OrangeApi.Providers
+  name: Providers
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Providers
+  commentId: P:CG.Orange.OrangeApi.Providers
+  fullName: CG.Orange.OrangeApi.Providers
+  nameWithType: OrangeApi.Providers
+- uid: CG.Orange.OrangeApi.Providers*
+  name: Providers
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Providers_
+  commentId: Overload:CG.Orange.OrangeApi.Providers
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.Providers
+  nameWithType: OrangeApi.Providers
+- uid: CG.Orange.OrangeApi.Seeding
+  name: Seeding
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Seeding
+  commentId: P:CG.Orange.OrangeApi.Seeding
+  fullName: CG.Orange.OrangeApi.Seeding
+  nameWithType: OrangeApi.Seeding
+- uid: CG.Orange.OrangeApi.Seeding*
+  name: Seeding
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Seeding_
+  commentId: Overload:CG.Orange.OrangeApi.Seeding
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.Seeding
+  nameWithType: OrangeApi.Seeding
+- uid: CG.Orange.OrangeApi.Settings
+  name: Settings
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Settings
+  commentId: P:CG.Orange.OrangeApi.Settings
+  fullName: CG.Orange.OrangeApi.Settings
+  nameWithType: OrangeApi.Settings
+- uid: CG.Orange.OrangeApi.Settings*
+  name: Settings
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Settings_
+  commentId: Overload:CG.Orange.OrangeApi.Settings
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.Settings
+  nameWithType: OrangeApi.Settings
+- uid: CG.Orange.OrangeApi.Statistics
+  name: Statistics
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Statistics
+  commentId: P:CG.Orange.OrangeApi.Statistics
+  fullName: CG.Orange.OrangeApi.Statistics
+  nameWithType: OrangeApi.Statistics
+- uid: CG.Orange.OrangeApi.Statistics*
+  name: Statistics
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Statistics_
+  commentId: Overload:CG.Orange.OrangeApi.Statistics
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.Statistics
+  nameWithType: OrangeApi.Statistics
 - uid: CG.Orange.Plugins.Azure
   name: CG.Orange.Plugins.Azure
   href: api/CG.Orange.Plugins.Azure.html
@@ -5578,12 +6557,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.ISettingFileCountRepository.CountAsync
   nameWithType: ISettingFileCountRepository.CountAsync
-- uid: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
-  name: CreateAsync(Int32, CancellationToken)
-  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CreateAsync_System_Int32_CancellationToken_
-  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(System.Int32,CancellationToken)
-  fullName: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(System.Int32, CancellationToken)
-  nameWithType: ISettingFileCountRepository.CreateAsync(Int32, CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(SettingFileCountModel,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CreateAsync_SettingFileCountModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(SettingFileCountModel,CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync(SettingFileCountModel, CancellationToken)
+  nameWithType: ISettingFileCountRepository.CreateAsync(SettingFileCountModel, CancellationToken)
 - uid: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_CreateAsync_

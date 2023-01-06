@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SettingFileCountEntity
+    <title>Class StatisticDirector
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SettingFileCountEntity
+    <meta name="title" content="Class StatisticDirector
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,19 +78,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Directors.StatisticDirector">
   
   
-  <h1 id="CG_Orange_Data_Entities_SettingFileCountEntity" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity" class="text-break">Class SettingFileCountEntity
+  <h1 id="CG_Orange_Directors_StatisticDirector" data-uid="CG.Orange.Directors.StatisticDirector" class="text-break">Class StatisticDirector
   </h1>
-  <div class="markdown level0 summary"><p>This class is an entity that represents a count of the number of
-setting files in the system, at a given point in time.</p>
+  <div class="markdown level0 summary"><p>This class is a default implementation of the <a class="xref" href="CG.Orange.Directors.IStatisticDirector.html">IStatisticDirector</a>
+interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SettingFileCountEntity</span></div>
+    <div class="level1"><span class="xref">StatisticDirector</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="CG.Orange.Directors.IStatisticDirector.html">IStatisticDirector</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -116,24 +120,53 @@ setting files in the system, at a given point in time.</p>
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Data.Entities.html">CG.Orange.Data.Entities</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Data.dll</h6>
-  <h5 id="CG_Orange_Data_Entities_SettingFileCountEntity_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Directors.html">CG.Orange.Directors</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.dll</h6>
+  <h5 id="CG_Orange_Directors_StatisticDirector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SettingFileCountEntity</code></pre>
+    <pre><code class="lang-csharp hljs">class StatisticDirector : IStatisticDirector</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Data_Entities_SettingFileCountEntity_Count_" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.Count*"></a>
-  <h4 id="CG_Orange_Data_Entities_SettingFileCountEntity_Count" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.Count">Count</h4>
-  <div class="markdown level1 summary"><p>This property contains the count of setting files.</p>
+  <a id="CG_Orange_Directors_StatisticDirector__ctor_" data-uid="CG.Orange.Directors.StatisticDirector.#ctor*"></a>
+  <h4 id="CG_Orange_Directors_StatisticDirector__ctor_ILogger_CG_Orange_Directors_IStatisticDirector__" data-uid="CG.Orange.Directors.StatisticDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticDirector})">StatisticDirector(ILogger&lt;IStatisticDirector&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Directors.StatisticDirector.html">StatisticDirector</a>
+class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StatisticDirector(ILogger&lt;IStatisticDirector&gt; logger)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.IStatisticDirector.html">IStatisticDirector</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use with this director.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="CG_Orange_Directors_StatisticDirector__logger" data-uid="CG.Orange.Directors.StatisticDirector._logger">_logger</h4>
+  <div class="markdown level1 summary"><p>This field contains the logger for this director.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;IStatisticDirector&gt; _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -143,83 +176,15 @@ setting files in the system, at a given point in time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.IStatisticDirector.html">IStatisticDirector</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Data_Entities_SettingFileCountEntity_CreatedBy_" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy*"></a>
-  <h4 id="CG_Orange_Data_Entities_SettingFileCountEntity_CreatedBy" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.CreatedBy">CreatedBy</h4>
-  <div class="markdown level1 summary"><p>This property contains the name of the person who created the entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CreatedBy { get; set; }</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="CG.Orange.Directors.IStatisticDirector.html">IStatisticDirector</a>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Data_Entities_SettingFileCountEntity_CreatedOnUtc_" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc*"></a>
-  <h4 id="CG_Orange_Data_Entities_SettingFileCountEntity_CreatedOnUtc" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.CreatedOnUtc">CreatedOnUtc</h4>
-  <div class="markdown level1 summary"><p>This property contains the UTC date/time when entity was created.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime CreatedOnUtc { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DateTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Data_Entities_SettingFileCountEntity_Id_" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.Id*"></a>
-  <h4 id="CG_Orange_Data_Entities_SettingFileCountEntity_Id" data-uid="CG.Orange.Data.Entities.SettingFileCountEntity.Id">Id</h4>
-  <div class="markdown level1 summary"><p>This property contains the identifier for the entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

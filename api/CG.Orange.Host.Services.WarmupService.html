@@ -83,9 +83,9 @@
   
   <h1 id="CG_Orange_Host_Services_WarmupService" data-uid="CG.Orange.Host.Services.WarmupService" class="text-break">Class WarmupService
   </h1>
-  <div class="markdown level0 summary"><p>The class is a hosted service that warms up the website, on startup,
-by pre-fetching all the settings at least once, so the secrets are
-pulled from their remote services, and cached locally.</p>
+  <div class="markdown level0 summary"><p>The class is a hosted service that warms up the Orange microservice, on
+startup, by pre-fetching all the settings so the secrets are pulled
+from their remote services, and, if applicable, cached locally.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -93,15 +93,11 @@ pulled from their remote services, and cached locally.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">WarmupService</span></div>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IDisposable</span></div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Host.Services.html">CG.Orange.Host.Services</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.Host.dll</h6>
   <h5 id="CG_Orange_Host_Services_WarmupService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">class WarmupService : IHostedService</code></pre>
+    <pre><code class="lang-csharp hljs">class WarmupService : BackgroundService</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -149,52 +145,6 @@ use with this service.</p>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="CG_Orange_Host_Services_WarmupService__cts" data-uid="CG.Orange.Host.Services.WarmupService._cts">_cts</h4>
-  <div class="markdown level1 summary"><p>This field contains a cancellation token source for this service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly CancellationTokenSource _cts</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationTokenSource</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 id="CG_Orange_Host_Services_WarmupService__executingTask" data-uid="CG.Orange.Host.Services.WarmupService._executingTask">_executingTask</h4>
-  <div class="markdown level1 summary"><p>This field contains the task for this service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task? _executingTask</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Task</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h4 id="CG_Orange_Host_Services_WarmupService__hostedServiceOptions" data-uid="CG.Orange.Host.Services.WarmupService._hostedServiceOptions">_hostedServiceOptions</h4>
   <div class="markdown level1 summary"><p>This field contains the hosted service options for this service.</p>
 </div>
@@ -266,23 +216,14 @@ use with this service.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Host_Services_WarmupService_Dispose_" data-uid="CG.Orange.Host.Services.WarmupService.Dispose*"></a>
-  <h4 id="CG_Orange_Host_Services_WarmupService_Dispose" data-uid="CG.Orange.Host.Services.WarmupService.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>This method disposes of managed resources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
-  </div>
   <a id="CG_Orange_Host_Services_WarmupService_ExecuteAsync_" data-uid="CG.Orange.Host.Services.WarmupService.ExecuteAsync*"></a>
   <h4 id="CG_Orange_Host_Services_WarmupService_ExecuteAsync_CancellationToken_" data-uid="CG.Orange.Host.Services.WarmupService.ExecuteAsync(CancellationToken)">ExecuteAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method warms up the website.</p>
+  <div class="markdown level1 summary"><p>This method performs work for the service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual async Task ExecuteAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override async Task ExecuteAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,98 +260,6 @@ for the lifetime of the method.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Host_Services_WarmupService_StartAsync_" data-uid="CG.Orange.Host.Services.WarmupService.StartAsync*"></a>
-  <h4 id="CG_Orange_Host_Services_WarmupService_StartAsync_CancellationToken_" data-uid="CG.Orange.Host.Services.WarmupService.StartAsync(CancellationToken)">StartAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method starts the service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task StartAsync(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A cancellation token that is monitored
-for the lifetime of the method.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task to perform the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Host_Services_WarmupService_StopAsync_" data-uid="CG.Orange.Host.Services.WarmupService.StopAsync*"></a>
-  <h4 id="CG_Orange_Host_Services_WarmupService_StopAsync_CancellationToken_" data-uid="CG.Orange.Host.Services.WarmupService.StopAsync(CancellationToken)">StopAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method stops the service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task StopAsync(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A cancellation token that is monitored
-for the lifetime of the method.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td><p>A task to perform the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IDisposable</span>
-  </div>
 </article>
           </div>
           

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SettingFileManager
+    <title>Class ProviderDirector
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SettingFileManager
+    <meta name="title" content="Class ProviderDirector
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,21 +78,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Managers.SettingFileManager">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Directors.ProviderDirector">
   
   
-  <h1 id="CG_Orange_Managers_SettingFileManager" data-uid="CG.Orange.Managers.SettingFileManager" class="text-break">Class SettingFileManager
+  <h1 id="CG_Orange_Directors_ProviderDirector" data-uid="CG.Orange.Directors.ProviderDirector" class="text-break">Class ProviderDirector
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class is a default implementation of the <a class="xref" href="CG.Orange.Directors.IProviderDirector.html">IProviderDirector</a>
+interface.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SettingFileManager</span></div>
+    <div class="level1"><span class="xref">ProviderDirector</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="CG.Orange.Managers.ISettingFileManager.html">ISettingFileManager</a></div>
+    <div><a class="xref" href="CG.Orange.Directors.IProviderDirector.html">IProviderDirector</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -118,23 +120,23 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Managers.html">CG.Orange.Managers</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Directors.html">CG.Orange.Directors</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.dll</h6>
-  <h5 id="CG_Orange_Managers_SettingFileManager_syntax">Syntax</h5>
+  <h5 id="CG_Orange_Directors_ProviderDirector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">class SettingFileManager : ISettingFileManager</code></pre>
+    <pre><code class="lang-csharp hljs">class ProviderDirector : IProviderDirector</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="CG_Orange_Managers_SettingFileManager__ctor_" data-uid="CG.Orange.Managers.SettingFileManager.#ctor*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager__ctor_ISettingFileRepository_ILogger_CG_Orange_Managers_ISettingFileManager__" data-uid="CG.Orange.Managers.SettingFileManager.#ctor(ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})">SettingFileManager(ISettingFileRepository, ILogger&lt;ISettingFileManager&gt;)</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Managers.SettingFileManager.html">SettingFileManager</a>
+  <a id="CG_Orange_Directors_ProviderDirector__ctor_" data-uid="CG.Orange.Directors.ProviderDirector.#ctor*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector__ctor_IProviderManager_IProviderPropertyManager_ILogger_CG_Orange_Directors_IProviderDirector__" data-uid="CG.Orange.Directors.ProviderDirector.#ctor(IProviderManager,IProviderPropertyManager,ILogger{CG.Orange.Directors.IProviderDirector})">ProviderDirector(IProviderManager, IProviderPropertyManager, ILogger&lt;IProviderDirector&gt;)</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Directors.ProviderDirector.html">ProviderDirector</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingFileManager(ISettingFileRepository settingFileRepository, ILogger&lt;ISettingFileManager&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProviderDirector(IProviderManager providerManager, IProviderPropertyManager providerPropertyManager, ILogger&lt;IProviderDirector&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,29 +149,36 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISettingFileRepository</span></td>
-        <td><span class="parametername">settingFileRepository</span></td>
-        <td><p>The setting file repository to use
-with this manager.</p>
+        <td><span class="xref">IProviderManager</span></td>
+        <td><span class="parametername">providerManager</span></td>
+        <td><p>The provider manager to use with
+this director.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Managers.ISettingFileManager.html">ISettingFileManager</a>&gt;</td>
+        <td><span class="xref">IProviderPropertyManager</span></td>
+        <td><span class="parametername">providerPropertyManager</span></td>
+        <td><p>The provider property manager
+to use with this director.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.IProviderDirector.html">IProviderDirector</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td><p>The logger to use with this manager.</p>
+        <td><p>The logger to use with this director.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <h4 id="CG_Orange_Managers_SettingFileManager__logger" data-uid="CG.Orange.Managers.SettingFileManager._logger">_logger</h4>
-  <div class="markdown level1 summary"><p>This field contains the logger for this manager.</p>
+  <h4 id="CG_Orange_Directors_ProviderDirector__logger" data-uid="CG.Orange.Directors.ProviderDirector._logger">_logger</h4>
+  <div class="markdown level1 summary"><p>This field contains the logger for this director.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;ISettingFileManager&gt; _logger</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly ILogger&lt;IProviderDirector&gt; _logger</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,18 +190,18 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Managers.ISettingFileManager.html">ISettingFileManager</a>&gt;</td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.IProviderDirector.html">IProviderDirector</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h4 id="CG_Orange_Managers_SettingFileManager__repository" data-uid="CG.Orange.Managers.SettingFileManager._repository">_repository</h4>
-  <div class="markdown level1 summary"><p>This field contains the repository for this manager.</p>
+  <h4 id="CG_Orange_Directors_ProviderDirector__providerManager" data-uid="CG.Orange.Directors.ProviderDirector._providerManager">_providerManager</h4>
+  <div class="markdown level1 summary"><p>This field contains the provider manager for this director.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ISettingFileRepository _repository</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly IProviderManager _providerManager</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,15 +213,63 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ISettingFileRepository</span></td>
+        <td><span class="xref">IProviderManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="CG_Orange_Directors_ProviderDirector__providerPropertyManager" data-uid="CG.Orange.Directors.ProviderDirector._providerPropertyManager">_providerPropertyManager</h4>
+  <div class="markdown level1 summary"><p>This field contains the provider property manager for this director.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IProviderPropertyManager _providerPropertyManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IProviderPropertyManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="CG_Orange_Directors_ProviderDirector_Properties_" data-uid="CG.Orange.Directors.ProviderDirector.Properties*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_Properties" data-uid="CG.Orange.Directors.ProviderDirector.Properties">Properties</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IProviderPropertyManager Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IProviderPropertyManager</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Managers_SettingFileManager_AnyAsync_" data-uid="CG.Orange.Managers.SettingFileManager.AnyAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_AnyAsync_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_AnyAsync_" data-uid="CG.Orange.Directors.ProviderDirector.AnyAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_AnyAsync_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -251,58 +308,8 @@ with this manager.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_AnyAsync_" data-uid="CG.Orange.Managers.SettingFileManager.AnyAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_AnyAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.AnyAsync(System.String,System.String,CancellationToken)">AnyAsync(String, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;bool&gt; AnyAsync(string applicationName, string environmentName, CancellationToken cancellationToken = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">applicationName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">environmentName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Managers_SettingFileManager_CountAsync_" data-uid="CG.Orange.Managers.SettingFileManager.CountAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_CountAsync_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_CountAsync_" data-uid="CG.Orange.Directors.ProviderDirector.CountAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_CountAsync_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -341,13 +348,13 @@ with this manager.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_CreateAsync_" data-uid="CG.Orange.Managers.SettingFileManager.CreateAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_CreateAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.CreateAsync(SettingFileModel,System.String,CancellationToken)">CreateAsync(SettingFileModel, String, CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_CreateAsync_" data-uid="CG.Orange.Directors.ProviderDirector.CreateAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_CreateAsync_ProviderModel_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.CreateAsync(ProviderModel,System.String,CancellationToken)">CreateAsync(ProviderModel, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;SettingFileModel&gt; CreateAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;ProviderModel&gt; CreateAsync(ProviderModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -360,8 +367,8 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFileModel</span></td>
-        <td><span class="parametername">settingFile</span></td>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
@@ -386,18 +393,18 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_DeleteAsync_" data-uid="CG.Orange.Managers.SettingFileManager.DeleteAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_DeleteAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.DeleteAsync(SettingFileModel,System.String,CancellationToken)">DeleteAsync(SettingFileModel, String, CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_DeleteAsync_" data-uid="CG.Orange.Directors.ProviderDirector.DeleteAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_DeleteAsync_ProviderModel_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.DeleteAsync(ProviderModel,System.String,CancellationToken)">DeleteAsync(ProviderModel, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task DeleteAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task DeleteAsync(ProviderModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,8 +417,8 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFileModel</span></td>
-        <td><span class="parametername">settingFile</span></td>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
@@ -441,13 +448,13 @@ with this manager.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_DisableAsync_" data-uid="CG.Orange.Managers.SettingFileManager.DisableAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_DisableAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.DisableAsync(SettingFileModel,System.String,CancellationToken)">DisableAsync(SettingFileModel, String, CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_DisableAsync_" data-uid="CG.Orange.Directors.ProviderDirector.DisableAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_DisableAsync_ProviderModel_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.DisableAsync(ProviderModel,System.String,CancellationToken)">DisableAsync(ProviderModel, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;SettingFileModel&gt; DisableAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;ProviderModel&gt; DisableAsync(ProviderModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,8 +467,8 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFileModel</span></td>
-        <td><span class="parametername">settingFile</span></td>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
@@ -486,18 +493,18 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_EnableAsync_" data-uid="CG.Orange.Managers.SettingFileManager.EnableAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_EnableAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.EnableAsync(SettingFileModel,System.String,CancellationToken)">EnableAsync(SettingFileModel, String, CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_EnableAsync_" data-uid="CG.Orange.Directors.ProviderDirector.EnableAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_EnableAsync_ProviderModel_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.EnableAsync(ProviderModel,System.String,CancellationToken)">EnableAsync(ProviderModel, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;SettingFileModel&gt; EnableAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;ProviderModel&gt; EnableAsync(ProviderModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -510,8 +517,8 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFileModel</span></td>
-        <td><span class="parametername">settingFile</span></td>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
@@ -536,18 +543,18 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_FindAllAsync_" data-uid="CG.Orange.Managers.SettingFileManager.FindAllAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_FindAllAsync_" data-uid="CG.Orange.Directors.ProviderDirector.FindAllAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IEnumerable&lt;SettingFileModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;IEnumerable&lt;ProviderModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -576,68 +583,18 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileModel</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">ProviderModel</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_FindByApplicationAndEnvironmentAsync_" data-uid="CG.Orange.Managers.SettingFileManager.FindByApplicationAndEnvironmentAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_FindByApplicationAndEnvironmentAsync_System_String_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.FindByApplicationAndEnvironmentAsync(System.String,System.String,CancellationToken)">FindByApplicationAndEnvironmentAsync(String, String, CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_FindByIdAsync_" data-uid="CG.Orange.Directors.ProviderDirector.FindByIdAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_FindByIdAsync_System_Int32_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.FindByIdAsync(System.Int32,CancellationToken)">FindByIdAsync(Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;SettingFileModel?&gt; FindByApplicationAndEnvironmentAsync(string applicationName, string environmentName, CancellationToken cancellationToken = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">applicationName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">environmentName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">SettingFileModel</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Managers_SettingFileManager_FindByIdAsync_" data-uid="CG.Orange.Managers.SettingFileManager.FindByIdAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_FindByIdAsync_System_Int32_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.FindByIdAsync(System.Int32,CancellationToken)">FindByIdAsync(Int32, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;SettingFileModel?&gt; FindByIdAsync(int id, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;ProviderModel?&gt; FindByIdAsync(int id, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -671,18 +628,18 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">SettingFileModel</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderModel</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_SettingFileManager_UpdateAsync_" data-uid="CG.Orange.Managers.SettingFileManager.UpdateAsync*"></a>
-  <h4 id="CG_Orange_Managers_SettingFileManager_UpdateAsync_SettingFileModel_System_String_CancellationToken_" data-uid="CG.Orange.Managers.SettingFileManager.UpdateAsync(SettingFileModel,System.String,CancellationToken)">UpdateAsync(SettingFileModel, String, CancellationToken)</h4>
+  <a id="CG_Orange_Directors_ProviderDirector_FindByTagAndTypeAsync_" data-uid="CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_FindByTagAndTypeAsync_System_String_System_Nullable_ProviderType__CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.FindByTagAndTypeAsync(System.String,System.Nullable{ProviderType},CancellationToken)">FindByTagAndTypeAsync(String, Nullable&lt;ProviderType&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual async Task&lt;SettingFileModel&gt; UpdateAsync(SettingFileModel settingFile, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;ProviderModel?&gt; FindByTagAndTypeAsync(string tag, ProviderType? providerType, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -695,8 +652,58 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFileModel</span></td>
-        <td><span class="parametername">settingFile</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderType</span>&gt;</td>
+        <td><span class="parametername">providerType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ProviderModel</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Directors_ProviderDirector_UpdateAsync_" data-uid="CG.Orange.Directors.ProviderDirector.UpdateAsync*"></a>
+  <h4 id="CG_Orange_Directors_ProviderDirector_UpdateAsync_ProviderModel_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ProviderDirector.UpdateAsync(ProviderModel,System.String,CancellationToken)">UpdateAsync(ProviderModel, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task&lt;ProviderModel&gt; UpdateAsync(ProviderModel provider, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ProviderModel</span></td>
+        <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
       <tr>
@@ -721,14 +728,14 @@ with this manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileModel</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="CG.Orange.Managers.ISettingFileManager.html">ISettingFileManager</a>
+      <a class="xref" href="CG.Orange.Directors.IProviderDirector.html">IProviderDirector</a>
   </div>
 </article>
           </div>
