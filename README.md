@@ -10,7 +10,7 @@
 ![Alt](https://repobeats.axiom.co/api/embed/7691ab3e13795551e146c7203987f95588918bf4.svg "Repobeats analytics image")
 
 ### What does it do?
-Orange is an idea for a self contained configuration microservice. The scenario is: You upload a JSON configuration file, with placeholders for any secrets. Then, later, you connect to the microservice and get that same configuration back, with secrets pulled from external sources, like Azure, or AWS.
+Orange is an idea for a configuration microservice. The scenario is: You upload a JSON configuration file, with placeholders for any secrets. Then, later, you connect to the microservice and get that same configuration back, with secrets pulled from external sources, like Azure, or AWS.
 
 ### What platform(s) does it support?
 * [.NET 7.x](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or higher
