@@ -46,6 +46,27 @@ public interface ISettingFileCountManager
         );
 
     /// <summary>
+    /// This method creates a new <see cref="SettingFileCountModel"/> object in the 
+    /// underlying storage.
+    /// </summary>
+    /// <param name="settingFileCount">The model to create in the underlying storage.</param>
+    /// <param name="userName">The user name of the person performing the 
+    /// operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation that returns the newly created
+    /// <see cref="SettingFileCountModel"/> object.</returns>
+    /// <exception cref="ArgumentException">This exception is thrown whenever one
+    /// or more arguments are missing, or invalid.</exception>
+    /// <exception cref="ManagerException">This exception is thrown whenever the
+    /// manager fails to complete the operation.</exception>
+    Task<SettingFileCountModel> CreateAsync(
+        SettingFileCountModel settingFileCount,
+        string userName,
+        CancellationToken cancellationToken = default
+        );
+
+    /// <summary>
     /// This method counts the number of <see cref="SettingFileCountModel"/> objects in the 
     /// underlying storage.
     /// </summary>

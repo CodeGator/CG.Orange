@@ -17,10 +17,5 @@ internal class HostedServicesOptions
     /// </summary>
     public WarmupServiceOptions? WarmupService { get; set; }
 
-    /// <summary>
-    /// This property contains configuration settings for the statistics service.
-    /// </summary>
-    public StatisticsServiceOptions? StatisticsService { get; set; }
-
     #endregion
 }

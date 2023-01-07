@@ -20,7 +20,7 @@ internal class WarmupService : BackgroundService
     internal protected readonly IServiceProvider _serviceProvider = null!;
 
     /// <summary>
-    /// This field contains the hosted service options for this service.
+    /// This field contains the hosted service _settingFileCountChartOptions for this service.
     /// </summary>
     internal protected readonly HostedServicesOptions _hostedServiceOptions = null!;
 
@@ -43,7 +43,7 @@ internal class WarmupService : BackgroundService
     /// </summary>
     /// <param name="serviceProvider">The service provider to use with 
     /// this service.</param>
-    /// <param name="hostedServiceOptions">The hosted service options to
+    /// <param name="hostedServiceOptions">The hosted service _settingFileCountChartOptions to
     /// use with this service.</param>
     /// <param name="logger">The logger to use with this service.</param>
     public WarmupService(
@@ -83,7 +83,7 @@ internal class WarmupService : BackgroundService
     {
         try
         {
-            // Were options provided?
+            // Were _settingFileCountChartOptions provided?
             if (_hostedServiceOptions.WarmupService is not null)
             {
                 // Are we disabled?

@@ -44,7 +44,7 @@ internal static class WebApplicationBuilderExtensions
             completeSectionName
             );
 
-        // Configure the hosted services part of the BLL options.
+        // Configure the hosted services part of the BLL _settingFileCountChartOptions.
         webApplicationBuilder.Services.ConfigureOptions<HostedServicesOptions>(
             webApplicationBuilder.Configuration.GetSection(completeSectionName),
             out var hostedServiceOptions
@@ -65,7 +65,6 @@ internal static class WebApplicationBuilderExtensions
 
         // Add the hosted services.
         webApplicationBuilder.Services.AddHostedService<WarmupService>();
-        webApplicationBuilder.Services.AddHostedService<StatisticsService>();
 
         // Tell the world what we are about to do.
         bootstrapLogger?.LogDebug(
@@ -125,7 +124,7 @@ internal static class WebApplicationBuilderExtensions
             sectionName
             );
 
-        // Configure the identity options.
+        // Configure the identity _settingFileCountChartOptions.
         webApplicationBuilder.Services.ConfigureOptions<OrangeIdentityOptions>(
             webApplicationBuilder.Configuration.GetSection(sectionName),
             out var identityOptions

@@ -7,5 +7,16 @@ namespace CG.Orange.Directors;
 /// </summary>
 public interface IDashboardDirector
 {
-    // TODO : write the code for this.
+    /// <summary>
+    /// This method returns data for a setting file count chart.
+    /// </summary>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation that returns data for the
+    /// given chart.</returns>
+    /// <exception cref="DirectorException">This exception is thrown whenever the
+    /// director fails to complete the operation.</exception>
+    Task<SettingFileCountChartModel> GetSettingFileCountDataAsync(
+        CancellationToken cancellationToken = default
+        );
 }
