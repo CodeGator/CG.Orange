@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StatisticsServiceOptions
+    <title>Class SettingFileCountChartModel
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StatisticsServiceOptions
+    <meta name="title" content="Class SettingFileCountChartModel
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Models.SettingFileCountChartModel">
   
   
-  <h1 id="CG_Orange_Host_Options_StatisticsServiceOptions" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions" class="text-break">Class StatisticsServiceOptions
+  <h1 id="CG_Orange_Models_SettingFileCountChartModel" data-uid="CG.Orange.Models.SettingFileCountChartModel" class="text-break">Class SettingFileCountChartModel
   </h1>
-  <div class="markdown level0 summary"><p>This class contains configuration settings for the statistics service.</p>
+  <div class="markdown level0 summary"><p>This class is a model that represents the setting file count chart.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StatisticsServiceOptions</span></div>
+    <div class="level1"><span class="xref">SettingFileCountChartModel</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -115,22 +115,22 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Host.Options.html">CG.Orange.Host.Options</a></h6>
-  <h6><strong>Assembly</strong>: CG.Orange.Host.dll</h6>
-  <h5 id="CG_Orange_Host_Options_StatisticsServiceOptions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Models.html">CG.Orange.Models</a></h6>
+  <h6><strong>Assembly</strong>: CG.Orange.Primitives.dll</h6>
+  <h5 id="CG_Orange_Models_SettingFileCountChartModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">class StatisticsServiceOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public class SettingFileCountChartModel</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="CG_Orange_Host_Options_StatisticsServiceOptions_IsDisabled_" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled*"></a>
-  <h4 id="CG_Orange_Host_Options_StatisticsServiceOptions_IsDisabled" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled">IsDisabled</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the service is disabled, or not.</p>
+  <a id="CG_Orange_Models_SettingFileCountChartModel_Labels_" data-uid="CG.Orange.Models.SettingFileCountChartModel.Labels*"></a>
+  <h4 id="CG_Orange_Models_SettingFileCountChartModel_Labels" data-uid="CG.Orange.Models.SettingFileCountChartModel.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>This property contains a collection of chart labels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDisabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Labels { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,19 +142,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Host_Options_StatisticsServiceOptions_OperatingDelay_" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay*"></a>
-  <h4 id="CG_Orange_Host_Options_StatisticsServiceOptions_OperatingDelay" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay">OperatingDelay</h4>
-  <div class="markdown level1 summary"><p>This property contains an optional operating delay for the service.</p>
+  <a id="CG_Orange_Models_SettingFileCountChartModel_Series_" data-uid="CG.Orange.Models.SettingFileCountChartModel.Series*"></a>
+  <h4 id="CG_Orange_Models_SettingFileCountChartModel_Series" data-uid="CG.Orange.Models.SettingFileCountChartModel.Series">Series</h4>
+  <div class="markdown level1 summary"><p>This property contains a <a class="xref" href="CG.Orange.Models.ChartSeriesModel.html">ChartSeriesModel</a> objects.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan? OperatingDelay { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;ChartSeriesModel&gt; Series { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,31 +166,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="CG_Orange_Host_Options_StatisticsServiceOptions_StartupDelay_" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay*"></a>
-  <h4 id="CG_Orange_Host_Options_StatisticsServiceOptions_StartupDelay" data-uid="CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay">StartupDelay</h4>
-  <div class="markdown level1 summary"><p>This property contains an optional startup delay for the service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan? StartupDelay { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="CG.Orange.Models.ChartSeriesModel.html">ChartSeriesModel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

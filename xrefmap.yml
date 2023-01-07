@@ -1970,15 +1970,15 @@ references:
   commentId: T:CG.Orange.Directors.DashboardDirector
   fullName: CG.Orange.Directors.DashboardDirector
   nameWithType: DashboardDirector
-- uid: CG.Orange.Directors.DashboardDirector.#ctor(ILogger{CG.Orange.Directors.IDashboardDirector})
-  name: DashboardDirector(ILogger<IDashboardDirector>)
-  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_ILogger_CG_Orange_Directors_IDashboardDirector__
-  commentId: M:CG.Orange.Directors.DashboardDirector.#ctor(ILogger{CG.Orange.Directors.IDashboardDirector})
-  name.vb: DashboardDirector(ILogger(Of IDashboardDirector))
-  fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector(ILogger<CG.Orange.Directors.IDashboardDirector>)
-  fullName.vb: CG.Orange.Directors.DashboardDirector.DashboardDirector(ILogger(Of CG.Orange.Directors.IDashboardDirector))
-  nameWithType: DashboardDirector.DashboardDirector(ILogger<IDashboardDirector>)
-  nameWithType.vb: DashboardDirector.DashboardDirector(ILogger(Of IDashboardDirector))
+- uid: CG.Orange.Directors.DashboardDirector.#ctor(ISettingFileCountManager,ILogger{CG.Orange.Directors.IDashboardDirector})
+  name: DashboardDirector(ISettingFileCountManager, ILogger<IDashboardDirector>)
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_ISettingFileCountManager_ILogger_CG_Orange_Directors_IDashboardDirector__
+  commentId: M:CG.Orange.Directors.DashboardDirector.#ctor(ISettingFileCountManager,ILogger{CG.Orange.Directors.IDashboardDirector})
+  name.vb: DashboardDirector(ISettingFileCountManager, ILogger(Of IDashboardDirector))
+  fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger<CG.Orange.Directors.IDashboardDirector>)
+  fullName.vb: CG.Orange.Directors.DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger(Of CG.Orange.Directors.IDashboardDirector))
+  nameWithType: DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger<IDashboardDirector>)
+  nameWithType.vb: DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger(Of IDashboardDirector))
 - uid: CG.Orange.Directors.DashboardDirector.#ctor*
   name: DashboardDirector
   href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_
@@ -1992,6 +1992,25 @@ references:
   commentId: F:CG.Orange.Directors.DashboardDirector._logger
   fullName: CG.Orange.Directors.DashboardDirector._logger
   nameWithType: DashboardDirector._logger
+- uid: CG.Orange.Directors.DashboardDirector._settingFileCountManager
+  name: _settingFileCountManager
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__settingFileCountManager
+  commentId: F:CG.Orange.Directors.DashboardDirector._settingFileCountManager
+  fullName: CG.Orange.Directors.DashboardDirector._settingFileCountManager
+  nameWithType: DashboardDirector._settingFileCountManager
+- uid: CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+  name: GetSettingFileCountDataAsync(CancellationToken)
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector_GetSettingFileCountDataAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+  fullName: CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+  nameWithType: DashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+- uid: CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync*
+  name: GetSettingFileCountDataAsync
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector_GetSettingFileCountDataAsync_
+  commentId: Overload:CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync
+  nameWithType: DashboardDirector.GetSettingFileCountDataAsync
 - uid: CG.Orange.Directors.DirectorException
   name: DirectorException
   href: api/CG.Orange.Directors.DirectorException.html
@@ -2054,6 +2073,19 @@ references:
   commentId: T:CG.Orange.Directors.IDashboardDirector
   fullName: CG.Orange.Directors.IDashboardDirector
   nameWithType: IDashboardDirector
+- uid: CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+  name: GetSettingFileCountDataAsync(CancellationToken)
+  href: api/CG.Orange.Directors.IDashboardDirector.html#CG_Orange_Directors_IDashboardDirector_GetSettingFileCountDataAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+  fullName: CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+  nameWithType: IDashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
+- uid: CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync*
+  name: GetSettingFileCountDataAsync
+  href: api/CG.Orange.Directors.IDashboardDirector.html#CG_Orange_Directors_IDashboardDirector_GetSettingFileCountDataAsync_
+  commentId: Overload:CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync
+  nameWithType: IDashboardDirector.GetSettingFileCountDataAsync
 - uid: CG.Orange.Directors.IProviderDirector
   name: IProviderDirector
   href: api/CG.Orange.Directors.IProviderDirector.html
@@ -2228,6 +2260,22 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync
   nameWithType: ISeedDirector.SeedProvidersAsync
+- uid: CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync(IEnumerable{SettingFileCountModel},System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFileCountsAsync(IEnumerable<SettingFileCountModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFileCountsAsync_IEnumerable_SettingFileCountModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync(IEnumerable{SettingFileCountModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedSettingFileCountsAsync(IEnumerable(Of SettingFileCountModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync(IEnumerable<SettingFileCountModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync(IEnumerable(Of SettingFileCountModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: ISeedDirector.SeedSettingFileCountsAsync(IEnumerable<SettingFileCountModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: ISeedDirector.SeedSettingFileCountsAsync(IEnumerable(Of SettingFileCountModel), Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync*
+  name: SeedSettingFileCountsAsync
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFileCountsAsync_
+  commentId: Overload:CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISeedDirector.SeedSettingFileCountsAsync
+  nameWithType: ISeedDirector.SeedSettingFileCountsAsync
 - uid: CG.Orange.Directors.ISeedDirector.SeedSettingFilesAsync(IEnumerable{SettingFileModel},System.Boolean,System.String,CancellationToken)
   name: SeedSettingFilesAsync(IEnumerable<SettingFileModel>, Boolean, String, CancellationToken)
   href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedSettingFilesAsync_IEnumerable_SettingFileModel__System_Boolean_System_String_CancellationToken_
@@ -2578,15 +2626,15 @@ references:
   commentId: T:CG.Orange.Directors.SeedDirector
   fullName: CG.Orange.Directors.SeedDirector
   nameWithType: SeedDirector
-- uid: CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
-  name: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger<SeedDirector>)
-  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ILogger_CG_Orange_Directors_SeedDirector__
-  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})
-  name.vb: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger(Of SeedDirector))
-  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger<CG.Orange.Directors.SeedDirector>)
-  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger(Of CG.Orange.Directors.SeedDirector))
-  nameWithType: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger<SeedDirector>)
-  nameWithType.vb: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger(Of SeedDirector))
+- uid: CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger<SeedDirector>)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_SeedDirector__
+  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name.vb: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger(Of SeedDirector))
+  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger<CG.Orange.Directors.SeedDirector>)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger(Of CG.Orange.Directors.SeedDirector))
+  nameWithType: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger<SeedDirector>)
+  nameWithType.vb: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger(Of SeedDirector))
 - uid: CG.Orange.Directors.SeedDirector.#ctor*
   name: SeedDirector
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_
@@ -2606,6 +2654,12 @@ references:
   commentId: F:CG.Orange.Directors.SeedDirector._providerPropertyManager
   fullName: CG.Orange.Directors.SeedDirector._providerPropertyManager
   nameWithType: SeedDirector._providerPropertyManager
+- uid: CG.Orange.Directors.SeedDirector._settingFileCountManager
+  name: _settingFileCountManager
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__settingFileCountManager
+  commentId: F:CG.Orange.Directors.SeedDirector._settingFileCountManager
+  fullName: CG.Orange.Directors.SeedDirector._settingFileCountManager
+  nameWithType: SeedDirector._settingFileCountManager
 - uid: CG.Orange.Directors.SeedDirector._settingFileManager
   name: _settingFileManager
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__settingFileManager
@@ -2647,6 +2701,28 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedProvidersAsync
   nameWithType: SeedDirector.SeedProvidersAsync
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFileCountsAsync(IConfiguration, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_IConfiguration_System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IConfiguration, System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedSettingFileCountsAsync(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IEnumerable{SettingFileCountModel},System.Boolean,System.String,CancellationToken)
+  name: SeedSettingFileCountsAsync(IEnumerable<SettingFileCountModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_IEnumerable_SettingFileCountModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IEnumerable{SettingFileCountModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedSettingFileCountsAsync(IEnumerable(Of SettingFileCountModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IEnumerable<SettingFileCountModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IEnumerable(Of SettingFileCountModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedSettingFileCountsAsync(IEnumerable<SettingFileCountModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: SeedDirector.SeedSettingFileCountsAsync(IEnumerable(Of SettingFileCountModel), Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync*
+  name: SeedSettingFileCountsAsync
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync
+  nameWithType: SeedDirector.SeedSettingFileCountsAsync
 - uid: CG.Orange.Directors.SeedDirector.SeedSettingFilesAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
   name: SeedSettingFilesAsync(IConfiguration, Boolean, String, CancellationToken)
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedSettingFilesAsync_IConfiguration_System_Boolean_System_String_CancellationToken_
@@ -3015,19 +3091,6 @@ references:
   commentId: T:CG.Orange.Host.Options.HostedServicesOptions
   fullName: CG.Orange.Host.Options.HostedServicesOptions
   nameWithType: HostedServicesOptions
-- uid: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
-  name: StatisticsService
-  href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_StatisticsService
-  commentId: P:CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
-  fullName: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
-  nameWithType: HostedServicesOptions.StatisticsService
-- uid: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService*
-  name: StatisticsService
-  href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_StatisticsService_
-  commentId: Overload:CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.HostedServicesOptions.StatisticsService
-  nameWithType: HostedServicesOptions.StatisticsService
 - uid: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
   name: WarmupService
   href: api/CG.Orange.Host.Options.HostedServicesOptions.html#CG_Orange_Host_Options_HostedServicesOptions_WarmupService
@@ -3041,51 +3104,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.Options.HostedServicesOptions.WarmupService
   nameWithType: HostedServicesOptions.WarmupService
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions
-  name: StatisticsServiceOptions
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html
-  commentId: T:CG.Orange.Host.Options.StatisticsServiceOptions
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions
-  nameWithType: StatisticsServiceOptions
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
-  name: IsDisabled
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_IsDisabled
-  commentId: P:CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
-  nameWithType: StatisticsServiceOptions.IsDisabled
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled*
-  name: IsDisabled
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_IsDisabled_
-  commentId: Overload:CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.IsDisabled
-  nameWithType: StatisticsServiceOptions.IsDisabled
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
-  name: OperatingDelay
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_OperatingDelay
-  commentId: P:CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
-  nameWithType: StatisticsServiceOptions.OperatingDelay
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay*
-  name: OperatingDelay
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_OperatingDelay_
-  commentId: Overload:CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.OperatingDelay
-  nameWithType: StatisticsServiceOptions.OperatingDelay
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
-  name: StartupDelay
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_StartupDelay
-  commentId: P:CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
-  nameWithType: StatisticsServiceOptions.StartupDelay
-- uid: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay*
-  name: StartupDelay
-  href: api/CG.Orange.Host.Options.StatisticsServiceOptions.html#CG_Orange_Host_Options_StatisticsServiceOptions_StartupDelay_
-  commentId: Overload:CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
-  isSpec: "True"
-  fullName: CG.Orange.Host.Options.StatisticsServiceOptions.StartupDelay
-  nameWithType: StatisticsServiceOptions.StartupDelay
 - uid: CG.Orange.Host.Options.WarmupServiceOptions
   name: WarmupServiceOptions
   href: api/CG.Orange.Host.Options.WarmupServiceOptions.html
@@ -4070,65 +4088,69 @@ references:
   commentId: T:CG.Orange.Host.Pages.Home.Index
   fullName: CG.Orange.Host.Pages.Home.Index
   nameWithType: Index
+- uid: CG.Orange.Host.Pages.Home.Index._settingFileCountLabels
+  name: _settingFileCountLabels
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__settingFileCountLabels
+  commentId: F:CG.Orange.Host.Pages.Home.Index._settingFileCountLabels
+  fullName: CG.Orange.Host.Pages.Home.Index._settingFileCountLabels
+  nameWithType: Index._settingFileCountLabels
+- uid: CG.Orange.Host.Pages.Home.Index._settingFileCountOptions
+  name: _settingFileCountOptions
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__settingFileCountOptions
+  commentId: F:CG.Orange.Host.Pages.Home.Index._settingFileCountOptions
+  fullName: CG.Orange.Host.Pages.Home.Index._settingFileCountOptions
+  nameWithType: Index._settingFileCountOptions
+- uid: CG.Orange.Host.Pages.Home.Index._settingFileCounts
+  name: _settingFileCounts
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__settingFileCounts
+  commentId: F:CG.Orange.Host.Pages.Home.Index._settingFileCounts
+  fullName: CG.Orange.Host.Pages.Home.Index._settingFileCounts
+  nameWithType: Index._settingFileCounts
+- uid: CG.Orange.Host.Pages.Home.Index.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_OnInitializedAsync
+  commentId: M:CG.Orange.Host.Pages.Home.Index.OnInitializedAsync
+  fullName: CG.Orange.Host.Pages.Home.Index.OnInitializedAsync()
+  nameWithType: Index.OnInitializedAsync()
+- uid: CG.Orange.Host.Pages.Home.Index.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_OnInitializedAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Home.Index.OnInitializedAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Home.Index.OnInitializedAsync
+  nameWithType: Index.OnInitializedAsync
+- uid: CG.Orange.Host.Pages.Home.Index.OrangeApi
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_OrangeApi
+  commentId: P:CG.Orange.Host.Pages.Home.Index.OrangeApi
+  fullName: CG.Orange.Host.Pages.Home.Index.OrangeApi
+  nameWithType: Index.OrangeApi
+- uid: CG.Orange.Host.Pages.Home.Index.OrangeApi*
+  name: OrangeApi
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_OrangeApi_
+  commentId: Overload:CG.Orange.Host.Pages.Home.Index.OrangeApi
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Home.Index.OrangeApi
+  nameWithType: Index.OrangeApi
+- uid: CG.Orange.Host.Pages.Home.Index.SnackbarService
+  name: SnackbarService
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_SnackbarService
+  commentId: P:CG.Orange.Host.Pages.Home.Index.SnackbarService
+  fullName: CG.Orange.Host.Pages.Home.Index.SnackbarService
+  nameWithType: Index.SnackbarService
+- uid: CG.Orange.Host.Pages.Home.Index.SnackbarService*
+  name: SnackbarService
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_SnackbarService_
+  commentId: Overload:CG.Orange.Host.Pages.Home.Index.SnackbarService
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Home.Index.SnackbarService
+  nameWithType: Index.SnackbarService
 - uid: CG.Orange.Host.Services
   name: CG.Orange.Host.Services
   href: api/CG.Orange.Host.Services.html
   commentId: N:CG.Orange.Host.Services
   fullName: CG.Orange.Host.Services
   nameWithType: CG.Orange.Host.Services
-- uid: CG.Orange.Host.Services.StatisticsService
-  name: StatisticsService
-  href: api/CG.Orange.Host.Services.StatisticsService.html
-  commentId: T:CG.Orange.Host.Services.StatisticsService
-  fullName: CG.Orange.Host.Services.StatisticsService
-  nameWithType: StatisticsService
-- uid: CG.Orange.Host.Services.StatisticsService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.StatisticsService})
-  name: StatisticsService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<StatisticsService>)
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__ctor_IServiceProvider_IOptions_HostedServicesOptions__ILogger_CG_Orange_Host_Services_StatisticsService__
-  commentId: M:CG.Orange.Host.Services.StatisticsService.#ctor(IServiceProvider,IOptions{HostedServicesOptions},ILogger{CG.Orange.Host.Services.StatisticsService})
-  name.vb: StatisticsService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of StatisticsService))
-  fullName: CG.Orange.Host.Services.StatisticsService.StatisticsService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<CG.Orange.Host.Services.StatisticsService>)
-  fullName.vb: CG.Orange.Host.Services.StatisticsService.StatisticsService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of CG.Orange.Host.Services.StatisticsService))
-  nameWithType: StatisticsService.StatisticsService(IServiceProvider, IOptions<HostedServicesOptions>, ILogger<StatisticsService>)
-  nameWithType.vb: StatisticsService.StatisticsService(IServiceProvider, IOptions(Of HostedServicesOptions), ILogger(Of StatisticsService))
-- uid: CG.Orange.Host.Services.StatisticsService.#ctor*
-  name: StatisticsService
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__ctor_
-  commentId: Overload:CG.Orange.Host.Services.StatisticsService.#ctor
-  isSpec: "True"
-  fullName: CG.Orange.Host.Services.StatisticsService.StatisticsService
-  nameWithType: StatisticsService.StatisticsService
-- uid: CG.Orange.Host.Services.StatisticsService._hostedServiceOptions
-  name: _hostedServiceOptions
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__hostedServiceOptions
-  commentId: F:CG.Orange.Host.Services.StatisticsService._hostedServiceOptions
-  fullName: CG.Orange.Host.Services.StatisticsService._hostedServiceOptions
-  nameWithType: StatisticsService._hostedServiceOptions
-- uid: CG.Orange.Host.Services.StatisticsService._logger
-  name: _logger
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__logger
-  commentId: F:CG.Orange.Host.Services.StatisticsService._logger
-  fullName: CG.Orange.Host.Services.StatisticsService._logger
-  nameWithType: StatisticsService._logger
-- uid: CG.Orange.Host.Services.StatisticsService._serviceProvider
-  name: _serviceProvider
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService__serviceProvider
-  commentId: F:CG.Orange.Host.Services.StatisticsService._serviceProvider
-  fullName: CG.Orange.Host.Services.StatisticsService._serviceProvider
-  nameWithType: StatisticsService._serviceProvider
-- uid: CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)
-  name: ExecuteAsync(CancellationToken)
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService_ExecuteAsync_CancellationToken_
-  commentId: M:CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)
-  fullName: CG.Orange.Host.Services.StatisticsService.ExecuteAsync(CancellationToken)
-  nameWithType: StatisticsService.ExecuteAsync(CancellationToken)
-- uid: CG.Orange.Host.Services.StatisticsService.ExecuteAsync*
-  name: ExecuteAsync
-  href: api/CG.Orange.Host.Services.StatisticsService.html#CG_Orange_Host_Services_StatisticsService_ExecuteAsync_
-  commentId: Overload:CG.Orange.Host.Services.StatisticsService.ExecuteAsync
-  isSpec: "True"
-  fullName: CG.Orange.Host.Services.StatisticsService.ExecuteAsync
-  nameWithType: StatisticsService.ExecuteAsync
 - uid: CG.Orange.Host.Services.WarmupService
   name: WarmupService
   href: api/CG.Orange.Host.Services.WarmupService.html
@@ -4837,6 +4859,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ISettingFileCountManager.CountAsync
   nameWithType: ISettingFileCountManager.CountAsync
+- uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_SettingFileCountModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel, System.String, CancellationToken)
+  nameWithType: ISettingFileCountManager.CreateAsync(SettingFileCountModel, String, CancellationToken)
 - uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)
   name: CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)
   href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_SettingFileCountModel_TimeSpan_System_String_CancellationToken_
@@ -5445,6 +5473,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileCountManager.CountAsync
   nameWithType: SettingFileCountManager.CountAsync
+- uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, String, CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_SettingFileCountModel_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel, System.String, CancellationToken)
+  nameWithType: SettingFileCountManager.CreateAsync(SettingFileCountModel, String, CancellationToken)
 - uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)
   name: CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)
   href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_SettingFileCountModel_TimeSpan_System_String_CancellationToken_
@@ -5705,6 +5739,38 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
   nameWithType: AuditedModelBase.LastUpdatedOnUtc
+- uid: CG.Orange.Models.ChartSeriesModel
+  name: ChartSeriesModel
+  href: api/CG.Orange.Models.ChartSeriesModel.html
+  commentId: T:CG.Orange.Models.ChartSeriesModel
+  fullName: CG.Orange.Models.ChartSeriesModel
+  nameWithType: ChartSeriesModel
+- uid: CG.Orange.Models.ChartSeriesModel.Data
+  name: Data
+  href: api/CG.Orange.Models.ChartSeriesModel.html#CG_Orange_Models_ChartSeriesModel_Data
+  commentId: P:CG.Orange.Models.ChartSeriesModel.Data
+  fullName: CG.Orange.Models.ChartSeriesModel.Data
+  nameWithType: ChartSeriesModel.Data
+- uid: CG.Orange.Models.ChartSeriesModel.Data*
+  name: Data
+  href: api/CG.Orange.Models.ChartSeriesModel.html#CG_Orange_Models_ChartSeriesModel_Data_
+  commentId: Overload:CG.Orange.Models.ChartSeriesModel.Data
+  isSpec: "True"
+  fullName: CG.Orange.Models.ChartSeriesModel.Data
+  nameWithType: ChartSeriesModel.Data
+- uid: CG.Orange.Models.ChartSeriesModel.Name
+  name: Name
+  href: api/CG.Orange.Models.ChartSeriesModel.html#CG_Orange_Models_ChartSeriesModel_Name
+  commentId: P:CG.Orange.Models.ChartSeriesModel.Name
+  fullName: CG.Orange.Models.ChartSeriesModel.Name
+  nameWithType: ChartSeriesModel.Name
+- uid: CG.Orange.Models.ChartSeriesModel.Name*
+  name: Name
+  href: api/CG.Orange.Models.ChartSeriesModel.html#CG_Orange_Models_ChartSeriesModel_Name_
+  commentId: Overload:CG.Orange.Models.ChartSeriesModel.Name
+  isSpec: "True"
+  fullName: CG.Orange.Models.ChartSeriesModel.Name
+  nameWithType: ChartSeriesModel.Name
 - uid: CG.Orange.Models.ConfigurationEventModel
   name: ConfigurationEventModel
   href: api/CG.Orange.Models.ConfigurationEventModel.html
@@ -6020,6 +6086,38 @@ references:
   commentId: F:CG.Orange.Models.ProviderType.Secret
   fullName: CG.Orange.Models.ProviderType.Secret
   nameWithType: ProviderType.Secret
+- uid: CG.Orange.Models.SettingFileCountChartModel
+  name: SettingFileCountChartModel
+  href: api/CG.Orange.Models.SettingFileCountChartModel.html
+  commentId: T:CG.Orange.Models.SettingFileCountChartModel
+  fullName: CG.Orange.Models.SettingFileCountChartModel
+  nameWithType: SettingFileCountChartModel
+- uid: CG.Orange.Models.SettingFileCountChartModel.Labels
+  name: Labels
+  href: api/CG.Orange.Models.SettingFileCountChartModel.html#CG_Orange_Models_SettingFileCountChartModel_Labels
+  commentId: P:CG.Orange.Models.SettingFileCountChartModel.Labels
+  fullName: CG.Orange.Models.SettingFileCountChartModel.Labels
+  nameWithType: SettingFileCountChartModel.Labels
+- uid: CG.Orange.Models.SettingFileCountChartModel.Labels*
+  name: Labels
+  href: api/CG.Orange.Models.SettingFileCountChartModel.html#CG_Orange_Models_SettingFileCountChartModel_Labels_
+  commentId: Overload:CG.Orange.Models.SettingFileCountChartModel.Labels
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileCountChartModel.Labels
+  nameWithType: SettingFileCountChartModel.Labels
+- uid: CG.Orange.Models.SettingFileCountChartModel.Series
+  name: Series
+  href: api/CG.Orange.Models.SettingFileCountChartModel.html#CG_Orange_Models_SettingFileCountChartModel_Series
+  commentId: P:CG.Orange.Models.SettingFileCountChartModel.Series
+  fullName: CG.Orange.Models.SettingFileCountChartModel.Series
+  nameWithType: SettingFileCountChartModel.Series
+- uid: CG.Orange.Models.SettingFileCountChartModel.Series*
+  name: Series
+  href: api/CG.Orange.Models.SettingFileCountChartModel.html#CG_Orange_Models_SettingFileCountChartModel_Series_
+  commentId: Overload:CG.Orange.Models.SettingFileCountChartModel.Series
+  isSpec: "True"
+  fullName: CG.Orange.Models.SettingFileCountChartModel.Series
+  nameWithType: SettingFileCountChartModel.Series
 - uid: CG.Orange.Models.SettingFileCountModel
   name: SettingFileCountModel
   href: api/CG.Orange.Models.SettingFileCountModel.html
@@ -6289,6 +6387,25 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Options.ProviderOptions.Providers
   nameWithType: ProviderOptions.Providers
+- uid: CG.Orange.Options.SettingFileCountOptions
+  name: SettingFileCountOptions
+  href: api/CG.Orange.Options.SettingFileCountOptions.html
+  commentId: T:CG.Orange.Options.SettingFileCountOptions
+  fullName: CG.Orange.Options.SettingFileCountOptions
+  nameWithType: SettingFileCountOptions
+- uid: CG.Orange.Options.SettingFileCountOptions.SettingFileCounts
+  name: SettingFileCounts
+  href: api/CG.Orange.Options.SettingFileCountOptions.html#CG_Orange_Options_SettingFileCountOptions_SettingFileCounts
+  commentId: P:CG.Orange.Options.SettingFileCountOptions.SettingFileCounts
+  fullName: CG.Orange.Options.SettingFileCountOptions.SettingFileCounts
+  nameWithType: SettingFileCountOptions.SettingFileCounts
+- uid: CG.Orange.Options.SettingFileCountOptions.SettingFileCounts*
+  name: SettingFileCounts
+  href: api/CG.Orange.Options.SettingFileCountOptions.html#CG_Orange_Options_SettingFileCountOptions_SettingFileCounts_
+  commentId: Overload:CG.Orange.Options.SettingFileCountOptions.SettingFileCounts
+  isSpec: "True"
+  fullName: CG.Orange.Options.SettingFileCountOptions.SettingFileCounts
+  nameWithType: SettingFileCountOptions.SettingFileCounts
 - uid: CG.Orange.Options.SettingFileOptions
   name: SettingFileOptions
   href: api/CG.Orange.Options.SettingFileOptions.html

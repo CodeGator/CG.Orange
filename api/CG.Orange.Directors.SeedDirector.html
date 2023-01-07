@@ -105,14 +105,14 @@ interface.</p>
   <h3 id="constructors">Constructors
   </h3>
   <a id="CG_Orange_Directors_SeedDirector__ctor_" data-uid="CG.Orange.Directors.SeedDirector.#ctor*"></a>
-  <h4 id="CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ILogger_CG_Orange_Directors_SeedDirector__" data-uid="CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ILogger{CG.Orange.Directors.SeedDirector})">SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ILogger&lt;SeedDirector&gt;)</h4>
+  <h4 id="CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_SeedDirector__" data-uid="CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.SeedDirector})">SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger&lt;SeedDirector&gt;)</h4>
   <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Directors.SeedDirector.html">SeedDirector</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SeedDirector(IProviderManager providerManager, IProviderPropertyManager providerPropertyManager, ISettingFileManager settingFileManager, ILogger&lt;SeedDirector&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public SeedDirector(IProviderManager providerManager, IProviderPropertyManager providerPropertyManager, ISettingFileManager settingFileManager, ISettingFileCountManager settingFileCountManager, ILogger&lt;SeedDirector&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,6 +143,13 @@ to use with this director.</p>
         <td><span class="parametername">settingFileManager</span></td>
         <td><p>The setting file manager to use
 with this director.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ISettingFileCountManager</span></td>
+        <td><span class="parametername">settingFileCountManager</span></td>
+        <td><p>The setting file count manager
+to use with this director.</p>
 </td>
       </tr>
       <tr>
@@ -197,6 +204,29 @@ with this director.</p>
     <tbody>
       <tr>
         <td><span class="xref">IProviderPropertyManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h4 id="CG_Orange_Directors_SeedDirector__settingFileCountManager" data-uid="CG.Orange.Directors.SeedDirector._settingFileCountManager">_settingFileCountManager</h4>
+  <div class="markdown level1 summary"><p>This field contains the setting file count manager for this director.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ISettingFileCountManager _settingFileCountManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISettingFileCountManager</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -373,6 +403,127 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ProviderModel</span>&gt;</td>
         <td><span class="parametername">providers</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync*"></a>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_IConfiguration_System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IConfiguration,System.Boolean,System.String,CancellationToken)">SeedSettingFileCountsAsync(IConfiguration, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:SettingFileCountModel"></see>
+objects, from the given configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual async Task SeedSettingFileCountsAsync(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="parametername">dataSection</span></td>
+        <td><p>The data to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td><p><code>true</code> to force the seeding operation when data
+already exists in the associated table(s), <code>false</code> to stop the
+operation whenever data is detected in the associated table(s).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>The user name of the person performing the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task to perform the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync*"></a>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedSettingFileCountsAsync_IEnumerable_SettingFileCountModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedSettingFileCountsAsync(IEnumerable{SettingFileCountModel},System.Boolean,System.String,CancellationToken)">SeedSettingFileCountsAsync(IEnumerable&lt;SettingFileCountModel&gt;, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task SeedSettingFileCountsAsync(IEnumerable&lt;SettingFileCountModel&gt; settingFileCounts, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileCountModel</span>&gt;</td>
+        <td><span class="parametername">settingFileCounts</span></td>
         <td></td>
       </tr>
       <tr>
