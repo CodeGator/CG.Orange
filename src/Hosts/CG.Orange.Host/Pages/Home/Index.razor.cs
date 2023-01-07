@@ -17,8 +17,7 @@ public partial class Index
     /// </summary>
     internal protected ChartOptions _configurationEventOptions = new()
     {
-        InterpolationOption = InterpolationOption.NaturalSpline,
-        YAxisLines = false,
+        InterpolationOption = InterpolationOption.Straight,
         LineStrokeWidth = 3
     };
 
@@ -38,7 +37,6 @@ public partial class Index
     internal protected ChartOptions _settingFileCountOptions = new()
     {
         InterpolationOption = InterpolationOption.Straight,
-        YAxisLines = false,
         LineStrokeWidth = 3
     };
 
@@ -71,6 +69,12 @@ public partial class Index
     /// </summary>
     [Inject]
     protected ISnackbar SnackbarService { get; set; } = null!;
+
+    /// <summary>
+    /// This property contains the BLL options for the page.
+    /// </summary>
+    [Inject]
+    protected IOptions<OrangeBllOptions> BllOptions { get; set; } = null!;
 
     #endregion
 
