@@ -1970,15 +1970,15 @@ references:
   commentId: T:CG.Orange.Directors.DashboardDirector
   fullName: CG.Orange.Directors.DashboardDirector
   nameWithType: DashboardDirector
-- uid: CG.Orange.Directors.DashboardDirector.#ctor(ISettingFileCountManager,ILogger{CG.Orange.Directors.IDashboardDirector})
-  name: DashboardDirector(ISettingFileCountManager, ILogger<IDashboardDirector>)
-  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_ISettingFileCountManager_ILogger_CG_Orange_Directors_IDashboardDirector__
-  commentId: M:CG.Orange.Directors.DashboardDirector.#ctor(ISettingFileCountManager,ILogger{CG.Orange.Directors.IDashboardDirector})
-  name.vb: DashboardDirector(ISettingFileCountManager, ILogger(Of IDashboardDirector))
-  fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger<CG.Orange.Directors.IDashboardDirector>)
-  fullName.vb: CG.Orange.Directors.DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger(Of CG.Orange.Directors.IDashboardDirector))
-  nameWithType: DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger<IDashboardDirector>)
-  nameWithType.vb: DashboardDirector.DashboardDirector(ISettingFileCountManager, ILogger(Of IDashboardDirector))
+- uid: CG.Orange.Directors.DashboardDirector.#ctor(IOptions{OrangeBllOptions},ISettingFileCountManager,IConfigurationEventManager,ISettingFileManager,ILogger{CG.Orange.Directors.IDashboardDirector})
+  name: DashboardDirector(IOptions<OrangeBllOptions>, ISettingFileCountManager, IConfigurationEventManager, ISettingFileManager, ILogger<IDashboardDirector>)
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_IOptions_OrangeBllOptions__ISettingFileCountManager_IConfigurationEventManager_ISettingFileManager_ILogger_CG_Orange_Directors_IDashboardDirector__
+  commentId: M:CG.Orange.Directors.DashboardDirector.#ctor(IOptions{OrangeBllOptions},ISettingFileCountManager,IConfigurationEventManager,ISettingFileManager,ILogger{CG.Orange.Directors.IDashboardDirector})
+  name.vb: DashboardDirector(IOptions(Of OrangeBllOptions), ISettingFileCountManager, IConfigurationEventManager, ISettingFileManager, ILogger(Of IDashboardDirector))
+  fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector(IOptions<OrangeBllOptions>, ISettingFileCountManager, IConfigurationEventManager, ISettingFileManager, ILogger<CG.Orange.Directors.IDashboardDirector>)
+  fullName.vb: CG.Orange.Directors.DashboardDirector.DashboardDirector(IOptions(Of OrangeBllOptions), ISettingFileCountManager, IConfigurationEventManager, ISettingFileManager, ILogger(Of CG.Orange.Directors.IDashboardDirector))
+  nameWithType: DashboardDirector.DashboardDirector(IOptions<OrangeBllOptions>, ISettingFileCountManager, IConfigurationEventManager, ISettingFileManager, ILogger<IDashboardDirector>)
+  nameWithType.vb: DashboardDirector.DashboardDirector(IOptions(Of OrangeBllOptions), ISettingFileCountManager, IConfigurationEventManager, ISettingFileManager, ILogger(Of IDashboardDirector))
 - uid: CG.Orange.Directors.DashboardDirector.#ctor*
   name: DashboardDirector
   href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_
@@ -1986,6 +1986,18 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector
   nameWithType: DashboardDirector.DashboardDirector
+- uid: CG.Orange.Directors.DashboardDirector._configurationEventManager
+  name: _configurationEventManager
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__configurationEventManager
+  commentId: F:CG.Orange.Directors.DashboardDirector._configurationEventManager
+  fullName: CG.Orange.Directors.DashboardDirector._configurationEventManager
+  nameWithType: DashboardDirector._configurationEventManager
+- uid: CG.Orange.Directors.DashboardDirector._dashboardOptions
+  name: _dashboardOptions
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__dashboardOptions
+  commentId: F:CG.Orange.Directors.DashboardDirector._dashboardOptions
+  fullName: CG.Orange.Directors.DashboardDirector._dashboardOptions
+  nameWithType: DashboardDirector._dashboardOptions
 - uid: CG.Orange.Directors.DashboardDirector._logger
   name: _logger
   href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__logger
@@ -1998,6 +2010,25 @@ references:
   commentId: F:CG.Orange.Directors.DashboardDirector._settingFileCountManager
   fullName: CG.Orange.Directors.DashboardDirector._settingFileCountManager
   nameWithType: DashboardDirector._settingFileCountManager
+- uid: CG.Orange.Directors.DashboardDirector._settingFileManager
+  name: _settingFileManager
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__settingFileManager
+  commentId: F:CG.Orange.Directors.DashboardDirector._settingFileManager
+  fullName: CG.Orange.Directors.DashboardDirector._settingFileManager
+  nameWithType: DashboardDirector._settingFileManager
+- uid: CG.Orange.Directors.DashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+  name: GetConfigurationEventDataAsync(CancellationToken)
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector_GetConfigurationEventDataAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.DashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+  fullName: CG.Orange.Directors.DashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+  nameWithType: DashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+- uid: CG.Orange.Directors.DashboardDirector.GetConfigurationEventDataAsync*
+  name: GetConfigurationEventDataAsync
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector_GetConfigurationEventDataAsync_
+  commentId: Overload:CG.Orange.Directors.DashboardDirector.GetConfigurationEventDataAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.DashboardDirector.GetConfigurationEventDataAsync
+  nameWithType: DashboardDirector.GetConfigurationEventDataAsync
 - uid: CG.Orange.Directors.DashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
   name: GetSettingFileCountDataAsync(CancellationToken)
   href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector_GetSettingFileCountDataAsync_CancellationToken_
@@ -2073,6 +2104,19 @@ references:
   commentId: T:CG.Orange.Directors.IDashboardDirector
   fullName: CG.Orange.Directors.IDashboardDirector
   nameWithType: IDashboardDirector
+- uid: CG.Orange.Directors.IDashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+  name: GetConfigurationEventDataAsync(CancellationToken)
+  href: api/CG.Orange.Directors.IDashboardDirector.html#CG_Orange_Directors_IDashboardDirector_GetConfigurationEventDataAsync_CancellationToken_
+  commentId: M:CG.Orange.Directors.IDashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+  fullName: CG.Orange.Directors.IDashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+  nameWithType: IDashboardDirector.GetConfigurationEventDataAsync(CancellationToken)
+- uid: CG.Orange.Directors.IDashboardDirector.GetConfigurationEventDataAsync*
+  name: GetConfigurationEventDataAsync
+  href: api/CG.Orange.Directors.IDashboardDirector.html#CG_Orange_Directors_IDashboardDirector_GetConfigurationEventDataAsync_
+  commentId: Overload:CG.Orange.Directors.IDashboardDirector.GetConfigurationEventDataAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.IDashboardDirector.GetConfigurationEventDataAsync
+  nameWithType: IDashboardDirector.GetConfigurationEventDataAsync
 - uid: CG.Orange.Directors.IDashboardDirector.GetSettingFileCountDataAsync(CancellationToken)
   name: GetSettingFileCountDataAsync(CancellationToken)
   href: api/CG.Orange.Directors.IDashboardDirector.html#CG_Orange_Directors_IDashboardDirector_GetSettingFileCountDataAsync_CancellationToken_
@@ -2244,6 +2288,22 @@ references:
   commentId: T:CG.Orange.Directors.ISeedDirector
   fullName: CG.Orange.Directors.ISeedDirector
   nameWithType: ISeedDirector
+- uid: CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync(IEnumerable{ConfigurationEventModel},System.Boolean,System.String,CancellationToken)
+  name: SeedConfigurationEventsAsync(IEnumerable<ConfigurationEventModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedConfigurationEventsAsync_IEnumerable_ConfigurationEventModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync(IEnumerable{ConfigurationEventModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedConfigurationEventsAsync(IEnumerable(Of ConfigurationEventModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync(IEnumerable<ConfigurationEventModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync(IEnumerable(Of ConfigurationEventModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: ISeedDirector.SeedConfigurationEventsAsync(IEnumerable<ConfigurationEventModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: ISeedDirector.SeedConfigurationEventsAsync(IEnumerable(Of ConfigurationEventModel), Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync*
+  name: SeedConfigurationEventsAsync
+  href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedConfigurationEventsAsync_
+  commentId: Overload:CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync
+  nameWithType: ISeedDirector.SeedConfigurationEventsAsync
 - uid: CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)
   name: SeedProvidersAsync(IEnumerable<ProviderModel>, Boolean, String, CancellationToken)
   href: api/CG.Orange.Directors.ISeedDirector.html#CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_IEnumerable_ProviderModel__System_Boolean_System_String_CancellationToken_
@@ -2626,15 +2686,15 @@ references:
   commentId: T:CG.Orange.Directors.SeedDirector
   fullName: CG.Orange.Directors.SeedDirector
   nameWithType: SeedDirector
-- uid: CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.SeedDirector})
-  name: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger<SeedDirector>)
-  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_SeedDirector__
-  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.SeedDirector})
-  name.vb: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger(Of SeedDirector))
-  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger<CG.Orange.Directors.SeedDirector>)
-  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger(Of CG.Orange.Directors.SeedDirector))
-  nameWithType: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger<SeedDirector>)
-  nameWithType.vb: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger(Of SeedDirector))
+- uid: CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,IConfigurationEventManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger<SeedDirector>)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ISettingFileCountManager_IConfigurationEventManager_ILogger_CG_Orange_Directors_SeedDirector__
+  commentId: M:CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,IConfigurationEventManager,ILogger{CG.Orange.Directors.SeedDirector})
+  name.vb: SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger(Of SeedDirector))
+  fullName: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger<CG.Orange.Directors.SeedDirector>)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger(Of CG.Orange.Directors.SeedDirector))
+  nameWithType: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger<SeedDirector>)
+  nameWithType.vb: SeedDirector.SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger(Of SeedDirector))
 - uid: CG.Orange.Directors.SeedDirector.#ctor*
   name: SeedDirector
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__ctor_
@@ -2642,6 +2702,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SeedDirector.SeedDirector
   nameWithType: SeedDirector.SeedDirector
+- uid: CG.Orange.Directors.SeedDirector._configurationEventManager
+  name: _configurationEventManager
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__configurationEventManager
+  commentId: F:CG.Orange.Directors.SeedDirector._configurationEventManager
+  fullName: CG.Orange.Directors.SeedDirector._configurationEventManager
+  nameWithType: SeedDirector._configurationEventManager
 - uid: CG.Orange.Directors.SeedDirector._providerManager
   name: _providerManager
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector__providerManager
@@ -2666,6 +2732,28 @@ references:
   commentId: F:CG.Orange.Directors.SeedDirector._settingFileManager
   fullName: CG.Orange.Directors.SeedDirector._settingFileManager
   nameWithType: SeedDirector._settingFileManager
+- uid: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  name: SeedConfigurationEventsAsync(IConfiguration, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_IConfiguration_System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IConfiguration,System.Boolean,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IConfiguration, System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedConfigurationEventsAsync(IConfiguration, Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IEnumerable{ConfigurationEventModel},System.Boolean,System.String,CancellationToken)
+  name: SeedConfigurationEventsAsync(IEnumerable<ConfigurationEventModel>, Boolean, String, CancellationToken)
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_IEnumerable_ConfigurationEventModel__System_Boolean_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IEnumerable{ConfigurationEventModel},System.Boolean,System.String,CancellationToken)
+  name.vb: SeedConfigurationEventsAsync(IEnumerable(Of ConfigurationEventModel), Boolean, String, CancellationToken)
+  fullName: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IEnumerable<ConfigurationEventModel>, System.Boolean, System.String, CancellationToken)
+  fullName.vb: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IEnumerable(Of ConfigurationEventModel), System.Boolean, System.String, CancellationToken)
+  nameWithType: SeedDirector.SeedConfigurationEventsAsync(IEnumerable<ConfigurationEventModel>, Boolean, String, CancellationToken)
+  nameWithType.vb: SeedDirector.SeedConfigurationEventsAsync(IEnumerable(Of ConfigurationEventModel), Boolean, String, CancellationToken)
+- uid: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync*
+  name: SeedConfigurationEventsAsync
+  href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_
+  commentId: Overload:CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync
+  isSpec: "True"
+  fullName: CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync
+  nameWithType: SeedDirector.SeedConfigurationEventsAsync
 - uid: CG.Orange.Directors.SeedDirector.SeedFromConfiguration(System.String,IConfiguration,System.Boolean,System.String,CancellationToken)
   name: SeedFromConfiguration(String, IConfiguration, Boolean, String, CancellationToken)
   href: api/CG.Orange.Directors.SeedDirector.html#CG_Orange_Directors_SeedDirector_SeedFromConfiguration_System_String_IConfiguration_System_Boolean_System_String_CancellationToken_
@@ -4088,6 +4176,24 @@ references:
   commentId: T:CG.Orange.Host.Pages.Home.Index
   fullName: CG.Orange.Host.Pages.Home.Index
   nameWithType: Index
+- uid: CG.Orange.Host.Pages.Home.Index._configurationEventLabels
+  name: _configurationEventLabels
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__configurationEventLabels
+  commentId: F:CG.Orange.Host.Pages.Home.Index._configurationEventLabels
+  fullName: CG.Orange.Host.Pages.Home.Index._configurationEventLabels
+  nameWithType: Index._configurationEventLabels
+- uid: CG.Orange.Host.Pages.Home.Index._configurationEventOptions
+  name: _configurationEventOptions
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__configurationEventOptions
+  commentId: F:CG.Orange.Host.Pages.Home.Index._configurationEventOptions
+  fullName: CG.Orange.Host.Pages.Home.Index._configurationEventOptions
+  nameWithType: Index._configurationEventOptions
+- uid: CG.Orange.Host.Pages.Home.Index._configurationEvents
+  name: _configurationEvents
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__configurationEvents
+  commentId: F:CG.Orange.Host.Pages.Home.Index._configurationEvents
+  fullName: CG.Orange.Host.Pages.Home.Index._configurationEvents
+  nameWithType: Index._configurationEvents
 - uid: CG.Orange.Host.Pages.Home.Index._settingFileCountLabels
   name: _settingFileCountLabels
   href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index__settingFileCountLabels
@@ -4106,6 +4212,32 @@ references:
   commentId: F:CG.Orange.Host.Pages.Home.Index._settingFileCounts
   fullName: CG.Orange.Host.Pages.Home.Index._settingFileCounts
   nameWithType: Index._settingFileCounts
+- uid: CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync
+  name: InitializeConfigurationEventChartAsync()
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_InitializeConfigurationEventChartAsync
+  commentId: M:CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync
+  fullName: CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync()
+  nameWithType: Index.InitializeConfigurationEventChartAsync()
+- uid: CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync*
+  name: InitializeConfigurationEventChartAsync
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_InitializeConfigurationEventChartAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync
+  nameWithType: Index.InitializeConfigurationEventChartAsync
+- uid: CG.Orange.Host.Pages.Home.Index.InitializeSettingFileChartAsync
+  name: InitializeSettingFileChartAsync()
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_InitializeSettingFileChartAsync
+  commentId: M:CG.Orange.Host.Pages.Home.Index.InitializeSettingFileChartAsync
+  fullName: CG.Orange.Host.Pages.Home.Index.InitializeSettingFileChartAsync()
+  nameWithType: Index.InitializeSettingFileChartAsync()
+- uid: CG.Orange.Host.Pages.Home.Index.InitializeSettingFileChartAsync*
+  name: InitializeSettingFileChartAsync
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_InitializeSettingFileChartAsync_
+  commentId: Overload:CG.Orange.Host.Pages.Home.Index.InitializeSettingFileChartAsync
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Home.Index.InitializeSettingFileChartAsync
+  nameWithType: Index.InitializeSettingFileChartAsync
 - uid: CG.Orange.Host.Pages.Home.Index.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_OnInitializedAsync
@@ -4468,6 +4600,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ConfigurationEventManager.CountAsync
   nameWithType: ConfigurationEventManager.CountAsync
+- uid: CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel,CancellationToken)
+  name: CreateAsync(ConfigurationEventModel, CancellationToken)
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_CreateAsync_ConfigurationEventModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel,CancellationToken)
+  fullName: CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel, CancellationToken)
+  nameWithType: ConfigurationEventManager.CreateAsync(ConfigurationEventModel, CancellationToken)
 - uid: CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel,TimeSpan,CancellationToken)
   name: CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
   href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_CreateAsync_ConfigurationEventModel_TimeSpan_CancellationToken_
@@ -4526,6 +4664,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.IConfigurationEventManager.CountAsync
   nameWithType: IConfigurationEventManager.CountAsync
+- uid: CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel,CancellationToken)
+  name: CreateAsync(ConfigurationEventModel, CancellationToken)
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_CreateAsync_ConfigurationEventModel_CancellationToken_
+  commentId: M:CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel,CancellationToken)
+  fullName: CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel, CancellationToken)
+  nameWithType: IConfigurationEventManager.CreateAsync(ConfigurationEventModel, CancellationToken)
 - uid: CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel,TimeSpan,CancellationToken)
   name: CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
   href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_CreateAsync_ConfigurationEventModel_TimeSpan_CancellationToken_
@@ -5771,6 +5915,38 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.ChartSeriesModel.Name
   nameWithType: ChartSeriesModel.Name
+- uid: CG.Orange.Models.ConfigurationEventChartModel
+  name: ConfigurationEventChartModel
+  href: api/CG.Orange.Models.ConfigurationEventChartModel.html
+  commentId: T:CG.Orange.Models.ConfigurationEventChartModel
+  fullName: CG.Orange.Models.ConfigurationEventChartModel
+  nameWithType: ConfigurationEventChartModel
+- uid: CG.Orange.Models.ConfigurationEventChartModel.Labels
+  name: Labels
+  href: api/CG.Orange.Models.ConfigurationEventChartModel.html#CG_Orange_Models_ConfigurationEventChartModel_Labels
+  commentId: P:CG.Orange.Models.ConfigurationEventChartModel.Labels
+  fullName: CG.Orange.Models.ConfigurationEventChartModel.Labels
+  nameWithType: ConfigurationEventChartModel.Labels
+- uid: CG.Orange.Models.ConfigurationEventChartModel.Labels*
+  name: Labels
+  href: api/CG.Orange.Models.ConfigurationEventChartModel.html#CG_Orange_Models_ConfigurationEventChartModel_Labels_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventChartModel.Labels
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventChartModel.Labels
+  nameWithType: ConfigurationEventChartModel.Labels
+- uid: CG.Orange.Models.ConfigurationEventChartModel.Series
+  name: Series
+  href: api/CG.Orange.Models.ConfigurationEventChartModel.html#CG_Orange_Models_ConfigurationEventChartModel_Series
+  commentId: P:CG.Orange.Models.ConfigurationEventChartModel.Series
+  fullName: CG.Orange.Models.ConfigurationEventChartModel.Series
+  nameWithType: ConfigurationEventChartModel.Series
+- uid: CG.Orange.Models.ConfigurationEventChartModel.Series*
+  name: Series
+  href: api/CG.Orange.Models.ConfigurationEventChartModel.html#CG_Orange_Models_ConfigurationEventChartModel_Series_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventChartModel.Series
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventChartModel.Series
+  nameWithType: ConfigurationEventChartModel.Series
 - uid: CG.Orange.Models.ConfigurationEventModel
   name: ConfigurationEventModel
   href: api/CG.Orange.Models.ConfigurationEventModel.html
@@ -6272,6 +6448,25 @@ references:
   commentId: N:CG.Orange.Options
   fullName: CG.Orange.Options
   nameWithType: CG.Orange.Options
+- uid: CG.Orange.Options.ConfigurationEventOptions
+  name: ConfigurationEventOptions
+  href: api/CG.Orange.Options.ConfigurationEventOptions.html
+  commentId: T:CG.Orange.Options.ConfigurationEventOptions
+  fullName: CG.Orange.Options.ConfigurationEventOptions
+  nameWithType: ConfigurationEventOptions
+- uid: CG.Orange.Options.ConfigurationEventOptions.ConfigurationEvents
+  name: ConfigurationEvents
+  href: api/CG.Orange.Options.ConfigurationEventOptions.html#CG_Orange_Options_ConfigurationEventOptions_ConfigurationEvents
+  commentId: P:CG.Orange.Options.ConfigurationEventOptions.ConfigurationEvents
+  fullName: CG.Orange.Options.ConfigurationEventOptions.ConfigurationEvents
+  nameWithType: ConfigurationEventOptions.ConfigurationEvents
+- uid: CG.Orange.Options.ConfigurationEventOptions.ConfigurationEvents*
+  name: ConfigurationEvents
+  href: api/CG.Orange.Options.ConfigurationEventOptions.html#CG_Orange_Options_ConfigurationEventOptions_ConfigurationEvents_
+  commentId: Overload:CG.Orange.Options.ConfigurationEventOptions.ConfigurationEvents
+  isSpec: "True"
+  fullName: CG.Orange.Options.ConfigurationEventOptions.ConfigurationEvents
+  nameWithType: ConfigurationEventOptions.ConfigurationEvents
 - uid: CG.Orange.Options.DashboardOptions
   name: DashboardOptions
   href: api/CG.Orange.Options.DashboardOptions.html

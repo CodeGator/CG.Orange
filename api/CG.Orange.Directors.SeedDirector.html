@@ -105,14 +105,14 @@ interface.</p>
   <h3 id="constructors">Constructors
   </h3>
   <a id="CG_Orange_Directors_SeedDirector__ctor_" data-uid="CG.Orange.Directors.SeedDirector.#ctor*"></a>
-  <h4 id="CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_SeedDirector__" data-uid="CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.SeedDirector})">SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, ILogger&lt;SeedDirector&gt;)</h4>
+  <h4 id="CG_Orange_Directors_SeedDirector__ctor_IProviderManager_IProviderPropertyManager_ISettingFileManager_ISettingFileCountManager_IConfigurationEventManager_ILogger_CG_Orange_Directors_SeedDirector__" data-uid="CG.Orange.Directors.SeedDirector.#ctor(IProviderManager,IProviderPropertyManager,ISettingFileManager,ISettingFileCountManager,IConfigurationEventManager,ILogger{CG.Orange.Directors.SeedDirector})">SeedDirector(IProviderManager, IProviderPropertyManager, ISettingFileManager, ISettingFileCountManager, IConfigurationEventManager, ILogger&lt;SeedDirector&gt;)</h4>
   <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Orange.Directors.SeedDirector.html">SeedDirector</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SeedDirector(IProviderManager providerManager, IProviderPropertyManager providerPropertyManager, ISettingFileManager settingFileManager, ISettingFileCountManager settingFileCountManager, ILogger&lt;SeedDirector&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public SeedDirector(IProviderManager providerManager, IProviderPropertyManager providerPropertyManager, ISettingFileManager settingFileManager, ISettingFileCountManager settingFileCountManager, IConfigurationEventManager configurationEventManager, ILogger&lt;SeedDirector&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,6 +153,13 @@ to use with this director.</p>
 </td>
       </tr>
       <tr>
+        <td><span class="xref">IConfigurationEventManager</span></td>
+        <td><span class="parametername">configurationEventManager</span></td>
+        <td><p>The configuration event manager
+to use with this director.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="xref">ILogger</span>&lt;<a class="xref" href="CG.Orange.Directors.SeedDirector.html">SeedDirector</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td><p>The logger to use with this director.</p>
@@ -162,6 +169,29 @@ to use with this director.</p>
   </table>
   <h3 id="fields">Fields
   </h3>
+  <h4 id="CG_Orange_Directors_SeedDirector__configurationEventManager" data-uid="CG.Orange.Directors.SeedDirector._configurationEventManager">_configurationEventManager</h4>
+  <div class="markdown level1 summary"><p>This field contains the configuration event manager for this director.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IConfigurationEventManager _configurationEventManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IConfigurationEventManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h4 id="CG_Orange_Directors_SeedDirector__providerManager" data-uid="CG.Orange.Directors.SeedDirector._providerManager">_providerManager</h4>
   <div class="markdown level1 summary"><p>This field contains the provider manager for this director.</p>
 </div>
@@ -256,6 +286,127 @@ to use with this director.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
+  <a id="CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync*"></a>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_IConfiguration_System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IConfiguration,System.Boolean,System.String,CancellationToken)">SeedConfigurationEventsAsync(IConfiguration, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:ConfigurationEventModel"></see>
+objects, from the given configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual async Task SeedConfigurationEventsAsync(IConfiguration dataSection, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="parametername">dataSection</span></td>
+        <td><p>The data to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td><p><code>true</code> to force the seeding operation when data
+already exists in the associated table(s), <code>false</code> to stop the
+operation whenever data is detected in the associated table(s).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>The user name of the person performing the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task to perform the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_" data-uid="CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync*"></a>
+  <h4 id="CG_Orange_Directors_SeedDirector_SeedConfigurationEventsAsync_IEnumerable_ConfigurationEventModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedConfigurationEventsAsync(IEnumerable{ConfigurationEventModel},System.Boolean,System.String,CancellationToken)">SeedConfigurationEventsAsync(IEnumerable&lt;ConfigurationEventModel&gt;, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual async Task SeedConfigurationEventsAsync(IEnumerable&lt;ConfigurationEventModel&gt; configurationEvents, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ConfigurationEventModel</span>&gt;</td>
+        <td><span class="parametername">configurationEvents</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="CG_Orange_Directors_SeedDirector_SeedFromConfiguration_" data-uid="CG.Orange.Directors.SeedDirector.SeedFromConfiguration*"></a>
   <h4 id="CG_Orange_Directors_SeedDirector_SeedFromConfiguration_System_String_IConfiguration_System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.SeedDirector.SeedFromConfiguration(System.String,IConfiguration,System.Boolean,System.String,CancellationToken)">SeedFromConfiguration(String, IConfiguration, Boolean, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>

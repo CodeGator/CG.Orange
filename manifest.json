@@ -486,7 +486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.DashboardDirector.html",
-          "hash": "gTK5Yx0ojWGvBU5k4Vcq8bSaKwxilroVYhHACPzoark="
+          "hash": "WoPIpQ6jav7gxWFI6U5XtHMxcQTYJNQEbekPpuMleXE="
         }
       },
       "is_incremental": false,
@@ -522,7 +522,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.IDashboardDirector.html",
-          "hash": "khjFYPjiR+5R4t6bbPGodyBYvirx0K7KYjpPdfdrcb0="
+          "hash": "trqpkhzefTm9qQUvFCZOc266BmXcwg2DlDkrr9eUlZ4="
         }
       },
       "is_incremental": false,
@@ -546,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.ISeedDirector.html",
-          "hash": "9sVmyD27FQ4gANzdMDFTMAhKfs5OfoPn+Ga/1A2UKAc="
+          "hash": "/ZnufWeTFS8XoeCjvPKrgH9z1Hy89/nJPOM2r65PCYc="
         }
       },
       "is_incremental": false,
@@ -582,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Directors.SeedDirector.html",
-          "hash": "aIsunGCWzsHbL4uUo2lf9DrpU5kw0BtLRBxoJpyNo68="
+          "hash": "sdAfvIfgDHCXD3Q9UCyeKqBvcPbrxRWRHeu3NFJLbNA="
         }
       },
       "is_incremental": false,
@@ -870,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Host.Pages.Home.Index.html",
-          "hash": "0ZhLOsHCRPH52WsniJ6DwauW3/ZSCv9HdmgeEZAtyF4="
+          "hash": "CgDqj1PRhKlkIR31jyE7XWJX2oC6v5/6XsJsJ3p/JUM="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Managers.ConfigurationEventManager.html",
-          "hash": "92PpDOTpPVn6a9w4I/Fd6/H4HpMTxodW34mkUijKR/4="
+          "hash": "HXqwdKW71Y74U0x0U702OeyhOlBT09H0mL/maAeriZg="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Managers.IConfigurationEventManager.html",
-          "hash": "WZQsOSHJm1nwIOctgr5L211vtCc8W0lY819vm3ngjX4="
+          "hash": "6/TNDnQqYfNiPPzZnRCe3e1X/7vZc+Pf9RvvRdrbZAc="
         }
       },
       "is_incremental": false,
@@ -1166,6 +1166,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Models.ConfigurationEventChartModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Models.ConfigurationEventChartModel.html",
+          "hash": "x/imyF36NoMScIOf2NTDkU9q2sL4tcyB411YrCs9Pos="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Orange.Models.ConfigurationEventModel.yml",
       "output": {
         ".html": {
@@ -1278,7 +1290,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Models.html",
-          "hash": "KsXWnkfMKdGtve6cVQNJJy45D0CtT7WOKxXA3nztgR4="
+          "hash": "v3rfL09VIQUjJ8LQoN6DXeTOvq9aBwsSP2ho0JR0aGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Orange.Options.ConfigurationEventOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Orange.Options.ConfigurationEventOptions.html",
+          "hash": "6XCEsjEkO37dsxR8xSPJooYQH7o7tzyQss3tmV3219s="
         }
       },
       "is_incremental": false,
@@ -1362,7 +1386,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Orange.Options.html",
-          "hash": "1u45DjLBEmAuMSeHOSvAm2V5noMD5s1y0geJKn6GFLs="
+          "hash": "4HZ6QsIJNpX9ttphrZEDUwfpG6PNh9H6h70/Xl5dE0k="
         }
       },
       "is_incremental": false,
@@ -1770,7 +1794,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HR78Jhuqa8AjOq8bg/vExYj6I7aA0HJhdzc6c8VZRa0="
+          "hash": "UjokcIFWHOsTmE/UqzCOxHvuWchE4fM2OWpB5uKZ000="
         }
       },
       "is_incremental": false,
@@ -1889,7 +1913,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 146,
+          "total_file_count": 148,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

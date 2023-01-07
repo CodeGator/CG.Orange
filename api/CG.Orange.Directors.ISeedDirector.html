@@ -94,6 +94,90 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <a id="CG_Orange_Directors_ISeedDirector_SeedConfigurationEventsAsync_" data-uid="CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync*"></a>
+  <h4 id="CG_Orange_Directors_ISeedDirector_SeedConfigurationEventsAsync_IEnumerable_ConfigurationEventModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ISeedDirector.SeedConfigurationEventsAsync(IEnumerable{ConfigurationEventModel},System.Boolean,System.String,CancellationToken)">SeedConfigurationEventsAsync(IEnumerable&lt;ConfigurationEventModel&gt;, Boolean, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:ConfigurationEventModel"></see>
+objects, from the given configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SeedConfigurationEventsAsync(IEnumerable&lt;ConfigurationEventModel&gt; configurationEvents, bool force, string userName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ConfigurationEventModel</span>&gt;</td>
+        <td><span class="parametername">configurationEvents</span></td>
+        <td><p>The collection of <see cref="!:ConfigurationEventModel"></see>
+objects to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td><p><code>true</code> to force the seeding operation when data
+already exists in the associated table(s), <code>false</code> to stop the
+operation whenever data is detected in the associated table(s).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>The user name of the person performing the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task to perform the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Directors.DirectorException.html">DirectorException</a></td>
+        <td><p>This exception is thrown whenever
+the director fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_" data-uid="CG.Orange.Directors.ISeedDirector.SeedProvidersAsync*"></a>
   <h4 id="CG_Orange_Directors_ISeedDirector_SeedProvidersAsync_IEnumerable_ProviderModel__System_Boolean_System_String_CancellationToken_" data-uid="CG.Orange.Directors.ISeedDirector.SeedProvidersAsync(IEnumerable{ProviderModel},System.Boolean,System.String,CancellationToken)">SeedProvidersAsync(IEnumerable&lt;ProviderModel&gt;, Boolean, String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>This method performs a seeding operation for <see cref="!:ProviderModel"></see>
