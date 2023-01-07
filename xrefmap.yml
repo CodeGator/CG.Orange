@@ -4212,6 +4212,19 @@ references:
   commentId: F:CG.Orange.Host.Pages.Home.Index._settingFileCounts
   fullName: CG.Orange.Host.Pages.Home.Index._settingFileCounts
   nameWithType: Index._settingFileCounts
+- uid: CG.Orange.Host.Pages.Home.Index.BllOptions
+  name: BllOptions
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_BllOptions
+  commentId: P:CG.Orange.Host.Pages.Home.Index.BllOptions
+  fullName: CG.Orange.Host.Pages.Home.Index.BllOptions
+  nameWithType: Index.BllOptions
+- uid: CG.Orange.Host.Pages.Home.Index.BllOptions*
+  name: BllOptions
+  href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_BllOptions_
+  commentId: Overload:CG.Orange.Host.Pages.Home.Index.BllOptions
+  isSpec: "True"
+  fullName: CG.Orange.Host.Pages.Home.Index.BllOptions
+  nameWithType: Index.BllOptions
 - uid: CG.Orange.Host.Pages.Home.Index.InitializeConfigurationEventChartAsync
   name: InitializeConfigurationEventChartAsync()
   href: api/CG.Orange.Host.Pages.Home.Index.html#CG_Orange_Host_Pages_Home_Index_InitializeConfigurationEventChartAsync
