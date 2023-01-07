@@ -66,53 +66,53 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Controllers.AccountController.ClientLoginAsync
   nameWithType: AccountController.ClientLoginAsync
-- uid: CG.Orange.Controllers.SettingsController
-  name: SettingsController
-  href: api/CG.Orange.Controllers.SettingsController.html
-  commentId: T:CG.Orange.Controllers.SettingsController
-  fullName: CG.Orange.Controllers.SettingsController
-  nameWithType: SettingsController
-- uid: CG.Orange.Controllers.SettingsController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.SettingsController})
-  name: SettingsController(IOrangeApi, ILogger<SettingsController>)
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__ctor_CG_Orange_IOrangeApi_ILogger_CG_Orange_Controllers_SettingsController__
-  commentId: M:CG.Orange.Controllers.SettingsController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.SettingsController})
-  name.vb: SettingsController(IOrangeApi, ILogger(Of SettingsController))
-  fullName: CG.Orange.Controllers.SettingsController.SettingsController(CG.Orange.IOrangeApi, ILogger<CG.Orange.Controllers.SettingsController>)
-  fullName.vb: CG.Orange.Controllers.SettingsController.SettingsController(CG.Orange.IOrangeApi, ILogger(Of CG.Orange.Controllers.SettingsController))
-  nameWithType: SettingsController.SettingsController(IOrangeApi, ILogger<SettingsController>)
-  nameWithType.vb: SettingsController.SettingsController(IOrangeApi, ILogger(Of SettingsController))
-- uid: CG.Orange.Controllers.SettingsController.#ctor*
-  name: SettingsController
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__ctor_
-  commentId: Overload:CG.Orange.Controllers.SettingsController.#ctor
+- uid: CG.Orange.Controllers.ConfigurationController
+  name: ConfigurationController
+  href: api/CG.Orange.Controllers.ConfigurationController.html
+  commentId: T:CG.Orange.Controllers.ConfigurationController
+  fullName: CG.Orange.Controllers.ConfigurationController
+  nameWithType: ConfigurationController
+- uid: CG.Orange.Controllers.ConfigurationController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.ConfigurationController})
+  name: ConfigurationController(IOrangeApi, ILogger<ConfigurationController>)
+  href: api/CG.Orange.Controllers.ConfigurationController.html#CG_Orange_Controllers_ConfigurationController__ctor_CG_Orange_IOrangeApi_ILogger_CG_Orange_Controllers_ConfigurationController__
+  commentId: M:CG.Orange.Controllers.ConfigurationController.#ctor(CG.Orange.IOrangeApi,ILogger{CG.Orange.Controllers.ConfigurationController})
+  name.vb: ConfigurationController(IOrangeApi, ILogger(Of ConfigurationController))
+  fullName: CG.Orange.Controllers.ConfigurationController.ConfigurationController(CG.Orange.IOrangeApi, ILogger<CG.Orange.Controllers.ConfigurationController>)
+  fullName.vb: CG.Orange.Controllers.ConfigurationController.ConfigurationController(CG.Orange.IOrangeApi, ILogger(Of CG.Orange.Controllers.ConfigurationController))
+  nameWithType: ConfigurationController.ConfigurationController(IOrangeApi, ILogger<ConfigurationController>)
+  nameWithType.vb: ConfigurationController.ConfigurationController(IOrangeApi, ILogger(Of ConfigurationController))
+- uid: CG.Orange.Controllers.ConfigurationController.#ctor*
+  name: ConfigurationController
+  href: api/CG.Orange.Controllers.ConfigurationController.html#CG_Orange_Controllers_ConfigurationController__ctor_
+  commentId: Overload:CG.Orange.Controllers.ConfigurationController.#ctor
   isSpec: "True"
-  fullName: CG.Orange.Controllers.SettingsController.SettingsController
-  nameWithType: SettingsController.SettingsController
-- uid: CG.Orange.Controllers.SettingsController._logger
+  fullName: CG.Orange.Controllers.ConfigurationController.ConfigurationController
+  nameWithType: ConfigurationController.ConfigurationController
+- uid: CG.Orange.Controllers.ConfigurationController._logger
   name: _logger
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__logger
-  commentId: F:CG.Orange.Controllers.SettingsController._logger
-  fullName: CG.Orange.Controllers.SettingsController._logger
-  nameWithType: SettingsController._logger
-- uid: CG.Orange.Controllers.SettingsController._orangeApi
+  href: api/CG.Orange.Controllers.ConfigurationController.html#CG_Orange_Controllers_ConfigurationController__logger
+  commentId: F:CG.Orange.Controllers.ConfigurationController._logger
+  fullName: CG.Orange.Controllers.ConfigurationController._logger
+  nameWithType: ConfigurationController._logger
+- uid: CG.Orange.Controllers.ConfigurationController._orangeApi
   name: _orangeApi
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController__orangeApi
-  commentId: F:CG.Orange.Controllers.SettingsController._orangeApi
-  fullName: CG.Orange.Controllers.SettingsController._orangeApi
-  nameWithType: SettingsController._orangeApi
-- uid: CG.Orange.Controllers.SettingsController.PostAsync(SettingsRequestVM)
+  href: api/CG.Orange.Controllers.ConfigurationController.html#CG_Orange_Controllers_ConfigurationController__orangeApi
+  commentId: F:CG.Orange.Controllers.ConfigurationController._orangeApi
+  fullName: CG.Orange.Controllers.ConfigurationController._orangeApi
+  nameWithType: ConfigurationController._orangeApi
+- uid: CG.Orange.Controllers.ConfigurationController.PostAsync(SettingsRequestVM)
   name: PostAsync(SettingsRequestVM)
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController_PostAsync_SettingsRequestVM_
-  commentId: M:CG.Orange.Controllers.SettingsController.PostAsync(SettingsRequestVM)
-  fullName: CG.Orange.Controllers.SettingsController.PostAsync(SettingsRequestVM)
-  nameWithType: SettingsController.PostAsync(SettingsRequestVM)
-- uid: CG.Orange.Controllers.SettingsController.PostAsync*
+  href: api/CG.Orange.Controllers.ConfigurationController.html#CG_Orange_Controllers_ConfigurationController_PostAsync_SettingsRequestVM_
+  commentId: M:CG.Orange.Controllers.ConfigurationController.PostAsync(SettingsRequestVM)
+  fullName: CG.Orange.Controllers.ConfigurationController.PostAsync(SettingsRequestVM)
+  nameWithType: ConfigurationController.PostAsync(SettingsRequestVM)
+- uid: CG.Orange.Controllers.ConfigurationController.PostAsync*
   name: PostAsync
-  href: api/CG.Orange.Controllers.SettingsController.html#CG_Orange_Controllers_SettingsController_PostAsync_
-  commentId: Overload:CG.Orange.Controllers.SettingsController.PostAsync
+  href: api/CG.Orange.Controllers.ConfigurationController.html#CG_Orange_Controllers_ConfigurationController_PostAsync_
+  commentId: Overload:CG.Orange.Controllers.ConfigurationController.PostAsync
   isSpec: "True"
-  fullName: CG.Orange.Controllers.SettingsController.PostAsync
-  nameWithType: SettingsController.PostAsync
+  fullName: CG.Orange.Controllers.ConfigurationController.PostAsync
+  nameWithType: ConfigurationController.PostAsync
 - uid: CG.Orange.Data
   name: CG.Orange.Data
   href: api/CG.Orange.Data.html
@@ -183,6 +183,103 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Entities.AuditedEntityBase.LastUpdatedOnUtc
   nameWithType: AuditedEntityBase.LastUpdatedOnUtc
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity
+  name: ConfigurationEventEntity
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html
+  commentId: T:CG.Orange.Data.Entities.ConfigurationEventEntity
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity
+  nameWithType: ConfigurationEventEntity
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.ApplicationName
+  name: ApplicationName
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_ApplicationName
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.ApplicationName
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.ApplicationName
+  nameWithType: ConfigurationEventEntity.ApplicationName
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.ApplicationName*
+  name: ApplicationName
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_ApplicationName_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.ApplicationName
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.ApplicationName
+  nameWithType: ConfigurationEventEntity.ApplicationName
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.ClientId
+  name: ClientId
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_ClientId
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.ClientId
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.ClientId
+  nameWithType: ConfigurationEventEntity.ClientId
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.ClientId*
+  name: ClientId
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_ClientId_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.ClientId
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.ClientId
+  nameWithType: ConfigurationEventEntity.ClientId
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.CreatedOnUtc
+  name: CreatedOnUtc
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_CreatedOnUtc
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.CreatedOnUtc
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.CreatedOnUtc
+  nameWithType: ConfigurationEventEntity.CreatedOnUtc
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.CreatedOnUtc*
+  name: CreatedOnUtc
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_CreatedOnUtc_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.CreatedOnUtc
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.CreatedOnUtc
+  nameWithType: ConfigurationEventEntity.CreatedOnUtc
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.ElapsedTime
+  name: ElapsedTime
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_ElapsedTime
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.ElapsedTime
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.ElapsedTime
+  nameWithType: ConfigurationEventEntity.ElapsedTime
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.ElapsedTime*
+  name: ElapsedTime
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_ElapsedTime_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.ElapsedTime
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.ElapsedTime
+  nameWithType: ConfigurationEventEntity.ElapsedTime
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.EnvironmentName
+  name: EnvironmentName
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_EnvironmentName
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.EnvironmentName
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.EnvironmentName
+  nameWithType: ConfigurationEventEntity.EnvironmentName
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.EnvironmentName*
+  name: EnvironmentName
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_EnvironmentName_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.EnvironmentName
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.EnvironmentName
+  nameWithType: ConfigurationEventEntity.EnvironmentName
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.HostName
+  name: HostName
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_HostName
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.HostName
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.HostName
+  nameWithType: ConfigurationEventEntity.HostName
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.HostName*
+  name: HostName
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_HostName_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.HostName
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.HostName
+  nameWithType: ConfigurationEventEntity.HostName
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.Id
+  name: Id
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_Id
+  commentId: P:CG.Orange.Data.Entities.ConfigurationEventEntity.Id
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.Id
+  nameWithType: ConfigurationEventEntity.Id
+- uid: CG.Orange.Data.Entities.ConfigurationEventEntity.Id*
+  name: Id
+  href: api/CG.Orange.Data.Entities.ConfigurationEventEntity.html#CG_Orange_Data_Entities_ConfigurationEventEntity_Id_
+  commentId: Overload:CG.Orange.Data.Entities.ConfigurationEventEntity.Id
+  isSpec: "True"
+  fullName: CG.Orange.Data.Entities.ConfigurationEventEntity.Id
+  nameWithType: ConfigurationEventEntity.Id
 - uid: CG.Orange.Data.Entities.ProviderEntity
   name: ProviderEntity
   href: api/CG.Orange.Data.Entities.ProviderEntity.html
@@ -543,6 +640,41 @@ references:
   fullName.vb: CG.Orange.Data.Maps.AuditedEntityMapBase(Of TEntity).Configure
   nameWithType: AuditedEntityMapBase<TEntity>.Configure
   nameWithType.vb: AuditedEntityMapBase(Of TEntity).Configure
+- uid: CG.Orange.Data.Maps.ConfigurationEventEntityMap
+  name: ConfigurationEventEntityMap
+  href: api/CG.Orange.Data.Maps.ConfigurationEventEntityMap.html
+  commentId: T:CG.Orange.Data.Maps.ConfigurationEventEntityMap
+  fullName: CG.Orange.Data.Maps.ConfigurationEventEntityMap
+  nameWithType: ConfigurationEventEntityMap
+- uid: CG.Orange.Data.Maps.ConfigurationEventEntityMap.#ctor(ModelBuilder)
+  name: ConfigurationEventEntityMap(ModelBuilder)
+  href: api/CG.Orange.Data.Maps.ConfigurationEventEntityMap.html#CG_Orange_Data_Maps_ConfigurationEventEntityMap__ctor_ModelBuilder_
+  commentId: M:CG.Orange.Data.Maps.ConfigurationEventEntityMap.#ctor(ModelBuilder)
+  fullName: CG.Orange.Data.Maps.ConfigurationEventEntityMap.ConfigurationEventEntityMap(ModelBuilder)
+  nameWithType: ConfigurationEventEntityMap.ConfigurationEventEntityMap(ModelBuilder)
+- uid: CG.Orange.Data.Maps.ConfigurationEventEntityMap.#ctor*
+  name: ConfigurationEventEntityMap
+  href: api/CG.Orange.Data.Maps.ConfigurationEventEntityMap.html#CG_Orange_Data_Maps_ConfigurationEventEntityMap__ctor_
+  commentId: Overload:CG.Orange.Data.Maps.ConfigurationEventEntityMap.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.ConfigurationEventEntityMap.ConfigurationEventEntityMap
+  nameWithType: ConfigurationEventEntityMap.ConfigurationEventEntityMap
+- uid: CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure(EntityTypeBuilder{ConfigurationEventEntity})
+  name: Configure(EntityTypeBuilder<ConfigurationEventEntity>)
+  href: api/CG.Orange.Data.Maps.ConfigurationEventEntityMap.html#CG_Orange_Data_Maps_ConfigurationEventEntityMap_Configure_EntityTypeBuilder_ConfigurationEventEntity__
+  commentId: M:CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure(EntityTypeBuilder{ConfigurationEventEntity})
+  name.vb: Configure(EntityTypeBuilder(Of ConfigurationEventEntity))
+  fullName: CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure(EntityTypeBuilder<ConfigurationEventEntity>)
+  fullName.vb: CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure(EntityTypeBuilder(Of ConfigurationEventEntity))
+  nameWithType: ConfigurationEventEntityMap.Configure(EntityTypeBuilder<ConfigurationEventEntity>)
+  nameWithType.vb: ConfigurationEventEntityMap.Configure(EntityTypeBuilder(Of ConfigurationEventEntity))
+- uid: CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure*
+  name: Configure
+  href: api/CG.Orange.Data.Maps.ConfigurationEventEntityMap.html#CG_Orange_Data_Maps_ConfigurationEventEntityMap_Configure_
+  commentId: Overload:CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure
+  isSpec: "True"
+  fullName: CG.Orange.Data.Maps.ConfigurationEventEntityMap.Configure
+  nameWithType: ConfigurationEventEntityMap.Configure
 - uid: CG.Orange.Data.Maps.EntityMapBase`1
   name: EntityMapBase<TEntity>
   href: api/CG.Orange.Data.Maps.EntityMapBase-1.html
@@ -757,6 +889,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.OrangeDbContext.OrangeDbContext
   nameWithType: OrangeDbContext.OrangeDbContext
+- uid: CG.Orange.Data.OrangeDbContext.ConfigurationEvents
+  name: ConfigurationEvents
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_ConfigurationEvents
+  commentId: P:CG.Orange.Data.OrangeDbContext.ConfigurationEvents
+  fullName: CG.Orange.Data.OrangeDbContext.ConfigurationEvents
+  nameWithType: OrangeDbContext.ConfigurationEvents
+- uid: CG.Orange.Data.OrangeDbContext.ConfigurationEvents*
+  name: ConfigurationEvents
+  href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_ConfigurationEvents_
+  commentId: Overload:CG.Orange.Data.OrangeDbContext.ConfigurationEvents
+  isSpec: "True"
+  fullName: CG.Orange.Data.OrangeDbContext.ConfigurationEvents
+  nameWithType: OrangeDbContext.ConfigurationEvents
 - uid: CG.Orange.Data.OrangeDbContext.OnModelCreating(ModelBuilder)
   name: OnModelCreating(ModelBuilder)
   href: api/CG.Orange.Data.OrangeDbContext.html#CG_Orange_Data_OrangeDbContext_OnModelCreating_ModelBuilder_
@@ -828,6 +973,111 @@ references:
   commentId: N:CG.Orange.Data.Repositories
   fullName: CG.Orange.Data.Repositories
   nameWithType: CG.Orange.Data.Repositories
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository
+  name: ConfigurationEventRepository
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html
+  commentId: T:CG.Orange.Data.Repositories.ConfigurationEventRepository
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository
+  nameWithType: ConfigurationEventRepository
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{IConfigurationEventRepository})
+  name: ConfigurationEventRepository(OrangeDbContext, IMapper, ILogger<IConfigurationEventRepository>)
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository__ctor_CG_Orange_Data_OrangeDbContext_IMapper_ILogger_IConfigurationEventRepository__
+  commentId: M:CG.Orange.Data.Repositories.ConfigurationEventRepository.#ctor(CG.Orange.Data.OrangeDbContext,IMapper,ILogger{IConfigurationEventRepository})
+  name.vb: ConfigurationEventRepository(OrangeDbContext, IMapper, ILogger(Of IConfigurationEventRepository))
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.ConfigurationEventRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger<IConfigurationEventRepository>)
+  fullName.vb: CG.Orange.Data.Repositories.ConfigurationEventRepository.ConfigurationEventRepository(CG.Orange.Data.OrangeDbContext, IMapper, ILogger(Of IConfigurationEventRepository))
+  nameWithType: ConfigurationEventRepository.ConfigurationEventRepository(OrangeDbContext, IMapper, ILogger<IConfigurationEventRepository>)
+  nameWithType.vb: ConfigurationEventRepository.ConfigurationEventRepository(OrangeDbContext, IMapper, ILogger(Of IConfigurationEventRepository))
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.#ctor*
+  name: ConfigurationEventRepository
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository__ctor_
+  commentId: Overload:CG.Orange.Data.Repositories.ConfigurationEventRepository.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.ConfigurationEventRepository
+  nameWithType: ConfigurationEventRepository.ConfigurationEventRepository
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository._dbContext
+  name: _dbContext
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository__dbContext
+  commentId: F:CG.Orange.Data.Repositories.ConfigurationEventRepository._dbContext
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository._dbContext
+  nameWithType: ConfigurationEventRepository._dbContext
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository._logger
+  name: _logger
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository__logger
+  commentId: F:CG.Orange.Data.Repositories.ConfigurationEventRepository._logger
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository._logger
+  nameWithType: ConfigurationEventRepository._logger
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository._mapper
+  name: _mapper
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository__mapper
+  commentId: F:CG.Orange.Data.Repositories.ConfigurationEventRepository._mapper
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository._mapper
+  nameWithType: ConfigurationEventRepository._mapper
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ConfigurationEventRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.AnyAsync(CancellationToken)
+  nameWithType: ConfigurationEventRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ConfigurationEventRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.AnyAsync
+  nameWithType: ConfigurationEventRepository.AnyAsync
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ConfigurationEventRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.CountAsync(CancellationToken)
+  nameWithType: ConfigurationEventRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_CountAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ConfigurationEventRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.CountAsync
+  nameWithType: ConfigurationEventRepository.CountAsync
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.CreateAsync(ConfigurationEventModel,CancellationToken)
+  name: CreateAsync(ConfigurationEventModel, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_CreateAsync_ConfigurationEventModel_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ConfigurationEventRepository.CreateAsync(ConfigurationEventModel,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.CreateAsync(ConfigurationEventModel, CancellationToken)
+  nameWithType: ConfigurationEventRepository.CreateAsync(ConfigurationEventModel, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ConfigurationEventRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.CreateAsync
+  nameWithType: ConfigurationEventRepository.CreateAsync
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  name: DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_DeleteOlderThanAsync_TimeSpan_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  nameWithType: ConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.DeleteOlderThanAsync*
+  name: DeleteOlderThanAsync
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_DeleteOlderThanAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ConfigurationEventRepository.DeleteOlderThanAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.DeleteOlderThanAsync
+  nameWithType: ConfigurationEventRepository.DeleteOlderThanAsync
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.ConfigurationEventRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.FindAllAsync(CancellationToken)
+  nameWithType: ConfigurationEventRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Data.Repositories.ConfigurationEventRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Data.Repositories.ConfigurationEventRepository.html#CG_Orange_Data_Repositories_ConfigurationEventRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.ConfigurationEventRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.ConfigurationEventRepository.FindAllAsync
+  nameWithType: ConfigurationEventRepository.FindAllAsync
 - uid: CG.Orange.Data.Repositories.ProviderPropertyRepository
   name: ProviderPropertyRepository
   href: api/CG.Orange.Data.Repositories.ProviderPropertyRepository.html
@@ -1224,6 +1474,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.CreateAsync
   nameWithType: SettingFileCountRepository.CreateAsync
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  name: DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_DeleteOlderThanAsync_TimeSpan_CancellationToken_
+  commentId: M:CG.Orange.Data.Repositories.SettingFileCountRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  nameWithType: SettingFileCountRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+- uid: CG.Orange.Data.Repositories.SettingFileCountRepository.DeleteOlderThanAsync*
+  name: DeleteOlderThanAsync
+  href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_DeleteOlderThanAsync_
+  commentId: Overload:CG.Orange.Data.Repositories.SettingFileCountRepository.DeleteOlderThanAsync
+  isSpec: "True"
+  fullName: CG.Orange.Data.Repositories.SettingFileCountRepository.DeleteOlderThanAsync
+  nameWithType: SettingFileCountRepository.DeleteOlderThanAsync
 - uid: CG.Orange.Data.Repositories.SettingFileCountRepository.FindAllAsync(CancellationToken)
   name: FindAllAsync(CancellationToken)
   href: api/CG.Orange.Data.Repositories.SettingFileCountRepository.html#CG_Orange_Data_Repositories_SettingFileCountRepository_FindAllAsync_CancellationToken_
@@ -1623,15 +1886,15 @@ references:
   commentId: T:CG.Orange.Directors.ConfigurationDirector
   fullName: CG.Orange.Directors.ConfigurationDirector
   nameWithType: ConfigurationDirector
-- uid: CG.Orange.Directors.ConfigurationDirector.#ctor(IProcessorFactory,ISettingFileManager,IProviderManager,ILogger{CG.Orange.Directors.IConfigurationDirector})
-  name: ConfigurationDirector(IProcessorFactory, ISettingFileManager, IProviderManager, ILogger<IConfigurationDirector>)
-  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__ctor_IProcessorFactory_ISettingFileManager_IProviderManager_ILogger_CG_Orange_Directors_IConfigurationDirector__
-  commentId: M:CG.Orange.Directors.ConfigurationDirector.#ctor(IProcessorFactory,ISettingFileManager,IProviderManager,ILogger{CG.Orange.Directors.IConfigurationDirector})
-  name.vb: ConfigurationDirector(IProcessorFactory, ISettingFileManager, IProviderManager, ILogger(Of IConfigurationDirector))
-  fullName: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector(IProcessorFactory, ISettingFileManager, IProviderManager, ILogger<CG.Orange.Directors.IConfigurationDirector>)
-  fullName.vb: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector(IProcessorFactory, ISettingFileManager, IProviderManager, ILogger(Of CG.Orange.Directors.IConfigurationDirector))
-  nameWithType: ConfigurationDirector.ConfigurationDirector(IProcessorFactory, ISettingFileManager, IProviderManager, ILogger<IConfigurationDirector>)
-  nameWithType.vb: ConfigurationDirector.ConfigurationDirector(IProcessorFactory, ISettingFileManager, IProviderManager, ILogger(Of IConfigurationDirector))
+- uid: CG.Orange.Directors.ConfigurationDirector.#ctor(IOptions{OrangeBllOptions},IProcessorFactory,ISettingFileManager,IProviderManager,IConfigurationEventManager,ILogger{CG.Orange.Directors.IConfigurationDirector})
+  name: ConfigurationDirector(IOptions<OrangeBllOptions>, IProcessorFactory, ISettingFileManager, IProviderManager, IConfigurationEventManager, ILogger<IConfigurationDirector>)
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__ctor_IOptions_OrangeBllOptions__IProcessorFactory_ISettingFileManager_IProviderManager_IConfigurationEventManager_ILogger_CG_Orange_Directors_IConfigurationDirector__
+  commentId: M:CG.Orange.Directors.ConfigurationDirector.#ctor(IOptions{OrangeBllOptions},IProcessorFactory,ISettingFileManager,IProviderManager,IConfigurationEventManager,ILogger{CG.Orange.Directors.IConfigurationDirector})
+  name.vb: ConfigurationDirector(IOptions(Of OrangeBllOptions), IProcessorFactory, ISettingFileManager, IProviderManager, IConfigurationEventManager, ILogger(Of IConfigurationDirector))
+  fullName: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector(IOptions<OrangeBllOptions>, IProcessorFactory, ISettingFileManager, IProviderManager, IConfigurationEventManager, ILogger<CG.Orange.Directors.IConfigurationDirector>)
+  fullName.vb: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector(IOptions(Of OrangeBllOptions), IProcessorFactory, ISettingFileManager, IProviderManager, IConfigurationEventManager, ILogger(Of CG.Orange.Directors.IConfigurationDirector))
+  nameWithType: ConfigurationDirector.ConfigurationDirector(IOptions<OrangeBllOptions>, IProcessorFactory, ISettingFileManager, IProviderManager, IConfigurationEventManager, ILogger<IConfigurationDirector>)
+  nameWithType.vb: ConfigurationDirector.ConfigurationDirector(IOptions(Of OrangeBllOptions), IProcessorFactory, ISettingFileManager, IProviderManager, IConfigurationEventManager, ILogger(Of IConfigurationDirector))
 - uid: CG.Orange.Directors.ConfigurationDirector.#ctor*
   name: ConfigurationDirector
   href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__ctor_
@@ -1639,6 +1902,18 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.ConfigurationDirector.ConfigurationDirector
   nameWithType: ConfigurationDirector.ConfigurationDirector
+- uid: CG.Orange.Directors.ConfigurationDirector._configurationEventManager
+  name: _configurationEventManager
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__configurationEventManager
+  commentId: F:CG.Orange.Directors.ConfigurationDirector._configurationEventManager
+  fullName: CG.Orange.Directors.ConfigurationDirector._configurationEventManager
+  nameWithType: ConfigurationDirector._configurationEventManager
+- uid: CG.Orange.Directors.ConfigurationDirector._dashboardOptions
+  name: _dashboardOptions
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__dashboardOptions
+  commentId: F:CG.Orange.Directors.ConfigurationDirector._dashboardOptions
+  fullName: CG.Orange.Directors.ConfigurationDirector._dashboardOptions
+  nameWithType: ConfigurationDirector._dashboardOptions
 - uid: CG.Orange.Directors.ConfigurationDirector._logger
   name: _logger
   href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector__logger
@@ -1663,12 +1938,12 @@ references:
   commentId: F:CG.Orange.Directors.ConfigurationDirector._settingFileManager
   fullName: CG.Orange.Directors.ConfigurationDirector._settingFileManager
   nameWithType: ConfigurationDirector._settingFileManager
-- uid: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
-  name: ReadConfigurationAsync(String, String, CancellationToken)
-  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_System_String_System_String_CancellationToken_
-  commentId: M:CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
-  fullName: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String, System.String, CancellationToken)
-  nameWithType: ConfigurationDirector.ReadConfigurationAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,System.String,System.String,CancellationToken)
+  name: ReadConfigurationAsync(String, String, String, String, CancellationToken)
+  href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_System_String_System_String_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String,System.String,System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync(System.String, System.String, System.String, System.String, CancellationToken)
+  nameWithType: ConfigurationDirector.ReadConfigurationAsync(String, String, String, String, CancellationToken)
 - uid: CG.Orange.Directors.ConfigurationDirector.ReadConfigurationAsync*
   name: ReadConfigurationAsync
   href: api/CG.Orange.Directors.ConfigurationDirector.html#CG_Orange_Directors_ConfigurationDirector_ReadConfigurationAsync_
@@ -1689,6 +1964,34 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.ConfigurationDirector.ReplaceTokensAsync
   nameWithType: ConfigurationDirector.ReplaceTokensAsync
+- uid: CG.Orange.Directors.DashboardDirector
+  name: DashboardDirector
+  href: api/CG.Orange.Directors.DashboardDirector.html
+  commentId: T:CG.Orange.Directors.DashboardDirector
+  fullName: CG.Orange.Directors.DashboardDirector
+  nameWithType: DashboardDirector
+- uid: CG.Orange.Directors.DashboardDirector.#ctor(ILogger{CG.Orange.Directors.IDashboardDirector})
+  name: DashboardDirector(ILogger<IDashboardDirector>)
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_ILogger_CG_Orange_Directors_IDashboardDirector__
+  commentId: M:CG.Orange.Directors.DashboardDirector.#ctor(ILogger{CG.Orange.Directors.IDashboardDirector})
+  name.vb: DashboardDirector(ILogger(Of IDashboardDirector))
+  fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector(ILogger<CG.Orange.Directors.IDashboardDirector>)
+  fullName.vb: CG.Orange.Directors.DashboardDirector.DashboardDirector(ILogger(Of CG.Orange.Directors.IDashboardDirector))
+  nameWithType: DashboardDirector.DashboardDirector(ILogger<IDashboardDirector>)
+  nameWithType.vb: DashboardDirector.DashboardDirector(ILogger(Of IDashboardDirector))
+- uid: CG.Orange.Directors.DashboardDirector.#ctor*
+  name: DashboardDirector
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__ctor_
+  commentId: Overload:CG.Orange.Directors.DashboardDirector.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Directors.DashboardDirector.DashboardDirector
+  nameWithType: DashboardDirector.DashboardDirector
+- uid: CG.Orange.Directors.DashboardDirector._logger
+  name: _logger
+  href: api/CG.Orange.Directors.DashboardDirector.html#CG_Orange_Directors_DashboardDirector__logger
+  commentId: F:CG.Orange.Directors.DashboardDirector._logger
+  fullName: CG.Orange.Directors.DashboardDirector._logger
+  nameWithType: DashboardDirector._logger
 - uid: CG.Orange.Directors.DirectorException
   name: DirectorException
   href: api/CG.Orange.Directors.DirectorException.html
@@ -1732,12 +2035,12 @@ references:
   commentId: T:CG.Orange.Directors.IConfigurationDirector
   fullName: CG.Orange.Directors.IConfigurationDirector
   nameWithType: IConfigurationDirector
-- uid: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
-  name: ReadConfigurationAsync(String, String, CancellationToken)
-  href: api/CG.Orange.Directors.IConfigurationDirector.html#CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_System_String_System_String_CancellationToken_
-  commentId: M:CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,CancellationToken)
-  fullName: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String, System.String, CancellationToken)
-  nameWithType: IConfigurationDirector.ReadConfigurationAsync(String, String, CancellationToken)
+- uid: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,System.String,System.String,CancellationToken)
+  name: ReadConfigurationAsync(String, String, String, String, CancellationToken)
+  href: api/CG.Orange.Directors.IConfigurationDirector.html#CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_System_String_System_String_System_String_System_String_CancellationToken_
+  commentId: M:CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String,System.String,System.String,System.String,CancellationToken)
+  fullName: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync(System.String, System.String, System.String, System.String, CancellationToken)
+  nameWithType: IConfigurationDirector.ReadConfigurationAsync(String, String, String, String, CancellationToken)
 - uid: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync*
   name: ReadConfigurationAsync
   href: api/CG.Orange.Directors.IConfigurationDirector.html#CG_Orange_Directors_IConfigurationDirector_ReadConfigurationAsync_
@@ -1745,6 +2048,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.IConfigurationDirector.ReadConfigurationAsync
   nameWithType: IConfigurationDirector.ReadConfigurationAsync
+- uid: CG.Orange.Directors.IDashboardDirector
+  name: IDashboardDirector
+  href: api/CG.Orange.Directors.IDashboardDirector.html
+  commentId: T:CG.Orange.Directors.IDashboardDirector
+  fullName: CG.Orange.Directors.IDashboardDirector
+  nameWithType: IDashboardDirector
 - uid: CG.Orange.Directors.IProviderDirector
   name: IProviderDirector
   href: api/CG.Orange.Directors.IProviderDirector.html
@@ -2077,12 +2386,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.ISettingDirector.UpdateAsync
   nameWithType: ISettingDirector.UpdateAsync
-- uid: CG.Orange.Directors.IStatisticDirector
-  name: IStatisticDirector
-  href: api/CG.Orange.Directors.IStatisticDirector.html
-  commentId: T:CG.Orange.Directors.IStatisticDirector
-  fullName: CG.Orange.Directors.IStatisticDirector
-  nameWithType: IStatisticDirector
 - uid: CG.Orange.Directors.ProviderDirector
   name: ProviderDirector
   href: api/CG.Orange.Directors.ProviderDirector.html
@@ -2372,15 +2675,15 @@ references:
   commentId: T:CG.Orange.Directors.SettingDirector
   fullName: CG.Orange.Directors.SettingDirector
   nameWithType: SettingDirector
-- uid: CG.Orange.Directors.SettingDirector.#ctor(ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.ISettingDirector})
-  name: SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger<ISettingDirector>)
-  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__ctor_ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_ISettingDirector__
-  commentId: M:CG.Orange.Directors.SettingDirector.#ctor(ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.ISettingDirector})
-  name.vb: SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger(Of ISettingDirector))
-  fullName: CG.Orange.Directors.SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger<CG.Orange.Directors.ISettingDirector>)
-  fullName.vb: CG.Orange.Directors.SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger(Of CG.Orange.Directors.ISettingDirector))
-  nameWithType: SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger<ISettingDirector>)
-  nameWithType.vb: SettingDirector.SettingDirector(ISettingFileManager, ISettingFileCountManager, ILogger(Of ISettingDirector))
+- uid: CG.Orange.Directors.SettingDirector.#ctor(IOptions{OrangeBllOptions},ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.ISettingDirector})
+  name: SettingDirector(IOptions<OrangeBllOptions>, ISettingFileManager, ISettingFileCountManager, ILogger<ISettingDirector>)
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__ctor_IOptions_OrangeBllOptions__ISettingFileManager_ISettingFileCountManager_ILogger_CG_Orange_Directors_ISettingDirector__
+  commentId: M:CG.Orange.Directors.SettingDirector.#ctor(IOptions{OrangeBllOptions},ISettingFileManager,ISettingFileCountManager,ILogger{CG.Orange.Directors.ISettingDirector})
+  name.vb: SettingDirector(IOptions(Of OrangeBllOptions), ISettingFileManager, ISettingFileCountManager, ILogger(Of ISettingDirector))
+  fullName: CG.Orange.Directors.SettingDirector.SettingDirector(IOptions<OrangeBllOptions>, ISettingFileManager, ISettingFileCountManager, ILogger<CG.Orange.Directors.ISettingDirector>)
+  fullName.vb: CG.Orange.Directors.SettingDirector.SettingDirector(IOptions(Of OrangeBllOptions), ISettingFileManager, ISettingFileCountManager, ILogger(Of CG.Orange.Directors.ISettingDirector))
+  nameWithType: SettingDirector.SettingDirector(IOptions<OrangeBllOptions>, ISettingFileManager, ISettingFileCountManager, ILogger<ISettingDirector>)
+  nameWithType.vb: SettingDirector.SettingDirector(IOptions(Of OrangeBllOptions), ISettingFileManager, ISettingFileCountManager, ILogger(Of ISettingDirector))
 - uid: CG.Orange.Directors.SettingDirector.#ctor*
   name: SettingDirector
   href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__ctor_
@@ -2388,6 +2691,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SettingDirector.SettingDirector
   nameWithType: SettingDirector.SettingDirector
+- uid: CG.Orange.Directors.SettingDirector._dashboardOptions
+  name: _dashboardOptions
+  href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__dashboardOptions
+  commentId: F:CG.Orange.Directors.SettingDirector._dashboardOptions
+  fullName: CG.Orange.Directors.SettingDirector._dashboardOptions
+  nameWithType: SettingDirector._dashboardOptions
 - uid: CG.Orange.Directors.SettingDirector._logger
   name: _logger
   href: api/CG.Orange.Directors.SettingDirector.html#CG_Orange_Directors_SettingDirector__logger
@@ -2542,34 +2851,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Directors.SettingDirector.UpdateAsync
   nameWithType: SettingDirector.UpdateAsync
-- uid: CG.Orange.Directors.StatisticDirector
-  name: StatisticDirector
-  href: api/CG.Orange.Directors.StatisticDirector.html
-  commentId: T:CG.Orange.Directors.StatisticDirector
-  fullName: CG.Orange.Directors.StatisticDirector
-  nameWithType: StatisticDirector
-- uid: CG.Orange.Directors.StatisticDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticDirector})
-  name: StatisticDirector(ILogger<IStatisticDirector>)
-  href: api/CG.Orange.Directors.StatisticDirector.html#CG_Orange_Directors_StatisticDirector__ctor_ILogger_CG_Orange_Directors_IStatisticDirector__
-  commentId: M:CG.Orange.Directors.StatisticDirector.#ctor(ILogger{CG.Orange.Directors.IStatisticDirector})
-  name.vb: StatisticDirector(ILogger(Of IStatisticDirector))
-  fullName: CG.Orange.Directors.StatisticDirector.StatisticDirector(ILogger<CG.Orange.Directors.IStatisticDirector>)
-  fullName.vb: CG.Orange.Directors.StatisticDirector.StatisticDirector(ILogger(Of CG.Orange.Directors.IStatisticDirector))
-  nameWithType: StatisticDirector.StatisticDirector(ILogger<IStatisticDirector>)
-  nameWithType.vb: StatisticDirector.StatisticDirector(ILogger(Of IStatisticDirector))
-- uid: CG.Orange.Directors.StatisticDirector.#ctor*
-  name: StatisticDirector
-  href: api/CG.Orange.Directors.StatisticDirector.html#CG_Orange_Directors_StatisticDirector__ctor_
-  commentId: Overload:CG.Orange.Directors.StatisticDirector.#ctor
-  isSpec: "True"
-  fullName: CG.Orange.Directors.StatisticDirector.StatisticDirector
-  nameWithType: StatisticDirector.StatisticDirector
-- uid: CG.Orange.Directors.StatisticDirector._logger
-  name: _logger
-  href: api/CG.Orange.Directors.StatisticDirector.html#CG_Orange_Directors_StatisticDirector__logger
-  commentId: F:CG.Orange.Directors.StatisticDirector._logger
-  fullName: CG.Orange.Directors.StatisticDirector._logger
-  nameWithType: StatisticDirector._logger
 - uid: CG.Orange.Globals
   name: Globals
   href: api/CG.Orange.Globals.html
@@ -2600,6 +2881,24 @@ references:
   commentId: F:CG.Orange.Globals.Models.AuditedModelBases.LastUpdatedByLength
   fullName: CG.Orange.Globals.Models.AuditedModelBases.LastUpdatedByLength
   nameWithType: Globals.Models.AuditedModelBases.LastUpdatedByLength
+- uid: CG.Orange.Globals.Models.ConfigurationEvents
+  name: Globals.Models.ConfigurationEvents
+  href: api/CG.Orange.Globals.Models.ConfigurationEvents.html
+  commentId: T:CG.Orange.Globals.Models.ConfigurationEvents
+  fullName: CG.Orange.Globals.Models.ConfigurationEvents
+  nameWithType: Globals.Models.ConfigurationEvents
+- uid: CG.Orange.Globals.Models.ConfigurationEvents.ClientIdLength
+  name: ClientIdLength
+  href: api/CG.Orange.Globals.Models.ConfigurationEvents.html#CG_Orange_Globals_Models_ConfigurationEvents_ClientIdLength
+  commentId: F:CG.Orange.Globals.Models.ConfigurationEvents.ClientIdLength
+  fullName: CG.Orange.Globals.Models.ConfigurationEvents.ClientIdLength
+  nameWithType: Globals.Models.ConfigurationEvents.ClientIdLength
+- uid: CG.Orange.Globals.Models.ConfigurationEvents.HostNameLength
+  name: HostNameLength
+  href: api/CG.Orange.Globals.Models.ConfigurationEvents.html#CG_Orange_Globals_Models_ConfigurationEvents_HostNameLength
+  commentId: F:CG.Orange.Globals.Models.ConfigurationEvents.HostNameLength
+  fullName: CG.Orange.Globals.Models.ConfigurationEvents.HostNameLength
+  nameWithType: Globals.Models.ConfigurationEvents.HostNameLength
 - uid: CG.Orange.Globals.Models.Providers
   name: Globals.Models.Providers
   href: api/CG.Orange.Globals.Models.Providers.html
@@ -3984,6 +4283,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Host.ViewModels.SettingsRequestVM.Application
   nameWithType: SettingsRequestVM.Application
+- uid: CG.Orange.Host.ViewModels.SettingsRequestVM.ClientId
+  name: ClientId
+  href: api/CG.Orange.Host.ViewModels.SettingsRequestVM.html#CG_Orange_Host_ViewModels_SettingsRequestVM_ClientId
+  commentId: P:CG.Orange.Host.ViewModels.SettingsRequestVM.ClientId
+  fullName: CG.Orange.Host.ViewModels.SettingsRequestVM.ClientId
+  nameWithType: SettingsRequestVM.ClientId
+- uid: CG.Orange.Host.ViewModels.SettingsRequestVM.ClientId*
+  name: ClientId
+  href: api/CG.Orange.Host.ViewModels.SettingsRequestVM.html#CG_Orange_Host_ViewModels_SettingsRequestVM_ClientId_
+  commentId: Overload:CG.Orange.Host.ViewModels.SettingsRequestVM.ClientId
+  isSpec: "True"
+  fullName: CG.Orange.Host.ViewModels.SettingsRequestVM.ClientId
+  nameWithType: SettingsRequestVM.ClientId
 - uid: CG.Orange.Host.ViewModels.SettingsRequestVM.Environment
   name: Environment
   href: api/CG.Orange.Host.ViewModels.SettingsRequestVM.html#CG_Orange_Host_ViewModels_SettingsRequestVM_Environment
@@ -4016,6 +4328,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.IOrangeApi.Configurations
   nameWithType: IOrangeApi.Configurations
+- uid: CG.Orange.IOrangeApi.Dashboard
+  name: Dashboard
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Dashboard
+  commentId: P:CG.Orange.IOrangeApi.Dashboard
+  fullName: CG.Orange.IOrangeApi.Dashboard
+  nameWithType: IOrangeApi.Dashboard
+- uid: CG.Orange.IOrangeApi.Dashboard*
+  name: Dashboard
+  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Dashboard_
+  commentId: Overload:CG.Orange.IOrangeApi.Dashboard
+  isSpec: "True"
+  fullName: CG.Orange.IOrangeApi.Dashboard
+  nameWithType: IOrangeApi.Dashboard
 - uid: CG.Orange.IOrangeApi.Providers
   name: Providers
   href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Providers
@@ -4055,25 +4380,156 @@ references:
   isSpec: "True"
   fullName: CG.Orange.IOrangeApi.Settings
   nameWithType: IOrangeApi.Settings
-- uid: CG.Orange.IOrangeApi.Statistics
-  name: Statistics
-  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Statistics
-  commentId: P:CG.Orange.IOrangeApi.Statistics
-  fullName: CG.Orange.IOrangeApi.Statistics
-  nameWithType: IOrangeApi.Statistics
-- uid: CG.Orange.IOrangeApi.Statistics*
-  name: Statistics
-  href: api/CG.Orange.IOrangeApi.html#CG_Orange_IOrangeApi_Statistics_
-  commentId: Overload:CG.Orange.IOrangeApi.Statistics
-  isSpec: "True"
-  fullName: CG.Orange.IOrangeApi.Statistics
-  nameWithType: IOrangeApi.Statistics
 - uid: CG.Orange.Managers
   name: CG.Orange.Managers
   href: api/CG.Orange.Managers.html
   commentId: N:CG.Orange.Managers
   fullName: CG.Orange.Managers
   nameWithType: CG.Orange.Managers
+- uid: CG.Orange.Managers.ConfigurationEventManager
+  name: ConfigurationEventManager
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html
+  commentId: T:CG.Orange.Managers.ConfigurationEventManager
+  fullName: CG.Orange.Managers.ConfigurationEventManager
+  nameWithType: ConfigurationEventManager
+- uid: CG.Orange.Managers.ConfigurationEventManager.#ctor(IConfigurationEventRepository,ILogger{CG.Orange.Managers.IConfigurationEventManager})
+  name: ConfigurationEventManager(IConfigurationEventRepository, ILogger<IConfigurationEventManager>)
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager__ctor_IConfigurationEventRepository_ILogger_CG_Orange_Managers_IConfigurationEventManager__
+  commentId: M:CG.Orange.Managers.ConfigurationEventManager.#ctor(IConfigurationEventRepository,ILogger{CG.Orange.Managers.IConfigurationEventManager})
+  name.vb: ConfigurationEventManager(IConfigurationEventRepository, ILogger(Of IConfigurationEventManager))
+  fullName: CG.Orange.Managers.ConfigurationEventManager.ConfigurationEventManager(IConfigurationEventRepository, ILogger<CG.Orange.Managers.IConfigurationEventManager>)
+  fullName.vb: CG.Orange.Managers.ConfigurationEventManager.ConfigurationEventManager(IConfigurationEventRepository, ILogger(Of CG.Orange.Managers.IConfigurationEventManager))
+  nameWithType: ConfigurationEventManager.ConfigurationEventManager(IConfigurationEventRepository, ILogger<IConfigurationEventManager>)
+  nameWithType.vb: ConfigurationEventManager.ConfigurationEventManager(IConfigurationEventRepository, ILogger(Of IConfigurationEventManager))
+- uid: CG.Orange.Managers.ConfigurationEventManager.#ctor*
+  name: ConfigurationEventManager
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager__ctor_
+  commentId: Overload:CG.Orange.Managers.ConfigurationEventManager.#ctor
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ConfigurationEventManager.ConfigurationEventManager
+  nameWithType: ConfigurationEventManager.ConfigurationEventManager
+- uid: CG.Orange.Managers.ConfigurationEventManager._logger
+  name: _logger
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager__logger
+  commentId: F:CG.Orange.Managers.ConfigurationEventManager._logger
+  fullName: CG.Orange.Managers.ConfigurationEventManager._logger
+  nameWithType: ConfigurationEventManager._logger
+- uid: CG.Orange.Managers.ConfigurationEventManager._repository
+  name: _repository
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager__repository
+  commentId: F:CG.Orange.Managers.ConfigurationEventManager._repository
+  fullName: CG.Orange.Managers.ConfigurationEventManager._repository
+  nameWithType: ConfigurationEventManager._repository
+- uid: CG.Orange.Managers.ConfigurationEventManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ConfigurationEventManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ConfigurationEventManager.AnyAsync(CancellationToken)
+  nameWithType: ConfigurationEventManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.ConfigurationEventManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.ConfigurationEventManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ConfigurationEventManager.AnyAsync
+  nameWithType: ConfigurationEventManager.AnyAsync
+- uid: CG.Orange.Managers.ConfigurationEventManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ConfigurationEventManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ConfigurationEventManager.CountAsync(CancellationToken)
+  nameWithType: ConfigurationEventManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.ConfigurationEventManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.ConfigurationEventManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ConfigurationEventManager.CountAsync
+  nameWithType: ConfigurationEventManager.CountAsync
+- uid: CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel,TimeSpan,CancellationToken)
+  name: CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_CreateAsync_ConfigurationEventModel_TimeSpan_CancellationToken_
+  commentId: M:CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel,TimeSpan,CancellationToken)
+  fullName: CG.Orange.Managers.ConfigurationEventManager.CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
+  nameWithType: ConfigurationEventManager.CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
+- uid: CG.Orange.Managers.ConfigurationEventManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.ConfigurationEventManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ConfigurationEventManager.CreateAsync
+  nameWithType: ConfigurationEventManager.CreateAsync
+- uid: CG.Orange.Managers.ConfigurationEventManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.ConfigurationEventManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.ConfigurationEventManager.FindAllAsync(CancellationToken)
+  nameWithType: ConfigurationEventManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.ConfigurationEventManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.ConfigurationEventManager.html#CG_Orange_Managers_ConfigurationEventManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.ConfigurationEventManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.ConfigurationEventManager.FindAllAsync
+  nameWithType: ConfigurationEventManager.FindAllAsync
+- uid: CG.Orange.Managers.IConfigurationEventManager
+  name: IConfigurationEventManager
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html
+  commentId: T:CG.Orange.Managers.IConfigurationEventManager
+  fullName: CG.Orange.Managers.IConfigurationEventManager
+  nameWithType: IConfigurationEventManager
+- uid: CG.Orange.Managers.IConfigurationEventManager.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IConfigurationEventManager.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IConfigurationEventManager.AnyAsync(CancellationToken)
+  nameWithType: IConfigurationEventManager.AnyAsync(CancellationToken)
+- uid: CG.Orange.Managers.IConfigurationEventManager.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_AnyAsync_
+  commentId: Overload:CG.Orange.Managers.IConfigurationEventManager.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IConfigurationEventManager.AnyAsync
+  nameWithType: IConfigurationEventManager.AnyAsync
+- uid: CG.Orange.Managers.IConfigurationEventManager.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IConfigurationEventManager.CountAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IConfigurationEventManager.CountAsync(CancellationToken)
+  nameWithType: IConfigurationEventManager.CountAsync(CancellationToken)
+- uid: CG.Orange.Managers.IConfigurationEventManager.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_CountAsync_
+  commentId: Overload:CG.Orange.Managers.IConfigurationEventManager.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IConfigurationEventManager.CountAsync
+  nameWithType: IConfigurationEventManager.CountAsync
+- uid: CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel,TimeSpan,CancellationToken)
+  name: CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_CreateAsync_ConfigurationEventModel_TimeSpan_CancellationToken_
+  commentId: M:CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel,TimeSpan,CancellationToken)
+  fullName: CG.Orange.Managers.IConfigurationEventManager.CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
+  nameWithType: IConfigurationEventManager.CreateAsync(ConfigurationEventModel, TimeSpan, CancellationToken)
+- uid: CG.Orange.Managers.IConfigurationEventManager.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_CreateAsync_
+  commentId: Overload:CG.Orange.Managers.IConfigurationEventManager.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IConfigurationEventManager.CreateAsync
+  nameWithType: IConfigurationEventManager.CreateAsync
+- uid: CG.Orange.Managers.IConfigurationEventManager.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Managers.IConfigurationEventManager.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Managers.IConfigurationEventManager.FindAllAsync(CancellationToken)
+  nameWithType: IConfigurationEventManager.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Managers.IConfigurationEventManager.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Managers.IConfigurationEventManager.html#CG_Orange_Managers_IConfigurationEventManager_FindAllAsync_
+  commentId: Overload:CG.Orange.Managers.IConfigurationEventManager.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Managers.IConfigurationEventManager.FindAllAsync
+  nameWithType: IConfigurationEventManager.FindAllAsync
 - uid: CG.Orange.Managers.IProviderManager
   name: IProviderManager
   href: api/CG.Orange.Managers.IProviderManager.html
@@ -4381,12 +4837,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.ISettingFileCountManager.CountAsync
   nameWithType: ISettingFileCountManager.CountAsync
-- uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
-  name: CreateAsync(SettingFileCountModel, String, CancellationToken)
-  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_SettingFileCountModel_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel, System.String, CancellationToken)
-  nameWithType: ISettingFileCountManager.CreateAsync(SettingFileCountModel, String, CancellationToken)
+- uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)
+  href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_SettingFileCountModel_TimeSpan_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel, TimeSpan, System.String, CancellationToken)
+  nameWithType: ISettingFileCountManager.CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)
 - uid: CG.Orange.Managers.ISettingFileCountManager.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Managers.ISettingFileCountManager.html#CG_Orange_Managers_ISettingFileCountManager_CreateAsync_
@@ -4989,12 +5445,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileCountManager.CountAsync
   nameWithType: SettingFileCountManager.CountAsync
-- uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
-  name: CreateAsync(SettingFileCountModel, String, CancellationToken)
-  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_SettingFileCountModel_System_String_CancellationToken_
-  commentId: M:CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,System.String,CancellationToken)
-  fullName: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel, System.String, CancellationToken)
-  nameWithType: SettingFileCountManager.CreateAsync(SettingFileCountModel, String, CancellationToken)
+- uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)
+  name: CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)
+  href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_SettingFileCountModel_TimeSpan_System_String_CancellationToken_
+  commentId: M:CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)
+  fullName: CG.Orange.Managers.SettingFileCountManager.CreateAsync(SettingFileCountModel, TimeSpan, System.String, CancellationToken)
+  nameWithType: SettingFileCountManager.CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)
 - uid: CG.Orange.Managers.SettingFileCountManager.CreateAsync*
   name: CreateAsync
   href: api/CG.Orange.Managers.SettingFileCountManager.html#CG_Orange_Managers_SettingFileCountManager_CreateAsync_
@@ -5249,6 +5705,103 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Models.AuditedModelBase.LastUpdatedOnUtc
   nameWithType: AuditedModelBase.LastUpdatedOnUtc
+- uid: CG.Orange.Models.ConfigurationEventModel
+  name: ConfigurationEventModel
+  href: api/CG.Orange.Models.ConfigurationEventModel.html
+  commentId: T:CG.Orange.Models.ConfigurationEventModel
+  fullName: CG.Orange.Models.ConfigurationEventModel
+  nameWithType: ConfigurationEventModel
+- uid: CG.Orange.Models.ConfigurationEventModel.ApplicationName
+  name: ApplicationName
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_ApplicationName
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.ApplicationName
+  fullName: CG.Orange.Models.ConfigurationEventModel.ApplicationName
+  nameWithType: ConfigurationEventModel.ApplicationName
+- uid: CG.Orange.Models.ConfigurationEventModel.ApplicationName*
+  name: ApplicationName
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_ApplicationName_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.ApplicationName
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.ApplicationName
+  nameWithType: ConfigurationEventModel.ApplicationName
+- uid: CG.Orange.Models.ConfigurationEventModel.ClientId
+  name: ClientId
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_ClientId
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.ClientId
+  fullName: CG.Orange.Models.ConfigurationEventModel.ClientId
+  nameWithType: ConfigurationEventModel.ClientId
+- uid: CG.Orange.Models.ConfigurationEventModel.ClientId*
+  name: ClientId
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_ClientId_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.ClientId
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.ClientId
+  nameWithType: ConfigurationEventModel.ClientId
+- uid: CG.Orange.Models.ConfigurationEventModel.CreatedOnUtc
+  name: CreatedOnUtc
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_CreatedOnUtc
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.CreatedOnUtc
+  fullName: CG.Orange.Models.ConfigurationEventModel.CreatedOnUtc
+  nameWithType: ConfigurationEventModel.CreatedOnUtc
+- uid: CG.Orange.Models.ConfigurationEventModel.CreatedOnUtc*
+  name: CreatedOnUtc
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_CreatedOnUtc_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.CreatedOnUtc
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.CreatedOnUtc
+  nameWithType: ConfigurationEventModel.CreatedOnUtc
+- uid: CG.Orange.Models.ConfigurationEventModel.ElapsedTime
+  name: ElapsedTime
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_ElapsedTime
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.ElapsedTime
+  fullName: CG.Orange.Models.ConfigurationEventModel.ElapsedTime
+  nameWithType: ConfigurationEventModel.ElapsedTime
+- uid: CG.Orange.Models.ConfigurationEventModel.ElapsedTime*
+  name: ElapsedTime
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_ElapsedTime_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.ElapsedTime
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.ElapsedTime
+  nameWithType: ConfigurationEventModel.ElapsedTime
+- uid: CG.Orange.Models.ConfigurationEventModel.EnvironmentName
+  name: EnvironmentName
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_EnvironmentName
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.EnvironmentName
+  fullName: CG.Orange.Models.ConfigurationEventModel.EnvironmentName
+  nameWithType: ConfigurationEventModel.EnvironmentName
+- uid: CG.Orange.Models.ConfigurationEventModel.EnvironmentName*
+  name: EnvironmentName
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_EnvironmentName_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.EnvironmentName
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.EnvironmentName
+  nameWithType: ConfigurationEventModel.EnvironmentName
+- uid: CG.Orange.Models.ConfigurationEventModel.HostName
+  name: HostName
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_HostName
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.HostName
+  fullName: CG.Orange.Models.ConfigurationEventModel.HostName
+  nameWithType: ConfigurationEventModel.HostName
+- uid: CG.Orange.Models.ConfigurationEventModel.HostName*
+  name: HostName
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_HostName_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.HostName
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.HostName
+  nameWithType: ConfigurationEventModel.HostName
+- uid: CG.Orange.Models.ConfigurationEventModel.Id
+  name: Id
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_Id
+  commentId: P:CG.Orange.Models.ConfigurationEventModel.Id
+  fullName: CG.Orange.Models.ConfigurationEventModel.Id
+  nameWithType: ConfigurationEventModel.Id
+- uid: CG.Orange.Models.ConfigurationEventModel.Id*
+  name: Id
+  href: api/CG.Orange.Models.ConfigurationEventModel.html#CG_Orange_Models_ConfigurationEventModel_Id_
+  commentId: Overload:CG.Orange.Models.ConfigurationEventModel.Id
+  isSpec: "True"
+  fullName: CG.Orange.Models.ConfigurationEventModel.Id
+  nameWithType: ConfigurationEventModel.Id
 - uid: CG.Orange.Models.ProviderModel
   name: ProviderModel
   href: api/CG.Orange.Models.ProviderModel.html
@@ -5621,12 +6174,44 @@ references:
   commentId: N:CG.Orange.Options
   fullName: CG.Orange.Options
   nameWithType: CG.Orange.Options
+- uid: CG.Orange.Options.DashboardOptions
+  name: DashboardOptions
+  href: api/CG.Orange.Options.DashboardOptions.html
+  commentId: T:CG.Orange.Options.DashboardOptions
+  fullName: CG.Orange.Options.DashboardOptions
+  nameWithType: DashboardOptions
+- uid: CG.Orange.Options.DashboardOptions.MaxHistory
+  name: MaxHistory
+  href: api/CG.Orange.Options.DashboardOptions.html#CG_Orange_Options_DashboardOptions_MaxHistory
+  commentId: P:CG.Orange.Options.DashboardOptions.MaxHistory
+  fullName: CG.Orange.Options.DashboardOptions.MaxHistory
+  nameWithType: DashboardOptions.MaxHistory
+- uid: CG.Orange.Options.DashboardOptions.MaxHistory*
+  name: MaxHistory
+  href: api/CG.Orange.Options.DashboardOptions.html#CG_Orange_Options_DashboardOptions_MaxHistory_
+  commentId: Overload:CG.Orange.Options.DashboardOptions.MaxHistory
+  isSpec: "True"
+  fullName: CG.Orange.Options.DashboardOptions.MaxHistory
+  nameWithType: DashboardOptions.MaxHistory
 - uid: CG.Orange.Options.OrangeBllOptions
   name: OrangeBllOptions
   href: api/CG.Orange.Options.OrangeBllOptions.html
   commentId: T:CG.Orange.Options.OrangeBllOptions
   fullName: CG.Orange.Options.OrangeBllOptions
   nameWithType: OrangeBllOptions
+- uid: CG.Orange.Options.OrangeBllOptions.Dashboard
+  name: Dashboard
+  href: api/CG.Orange.Options.OrangeBllOptions.html#CG_Orange_Options_OrangeBllOptions_Dashboard
+  commentId: P:CG.Orange.Options.OrangeBllOptions.Dashboard
+  fullName: CG.Orange.Options.OrangeBllOptions.Dashboard
+  nameWithType: OrangeBllOptions.Dashboard
+- uid: CG.Orange.Options.OrangeBllOptions.Dashboard*
+  name: Dashboard
+  href: api/CG.Orange.Options.OrangeBllOptions.html#CG_Orange_Options_OrangeBllOptions_Dashboard_
+  commentId: Overload:CG.Orange.Options.OrangeBllOptions.Dashboard
+  isSpec: "True"
+  fullName: CG.Orange.Options.OrangeBllOptions.Dashboard
+  nameWithType: OrangeBllOptions.Dashboard
 - uid: CG.Orange.Options.OrangeIdentityOptions
   name: OrangeIdentityOptions
   href: api/CG.Orange.Options.OrangeIdentityOptions.html
@@ -5729,15 +6314,15 @@ references:
   commentId: T:CG.Orange.OrangeApi
   fullName: CG.Orange.OrangeApi
   nameWithType: OrangeApi
-- uid: CG.Orange.OrangeApi.#ctor(IConfigurationDirector,IProviderDirector,ISeedDirector,ISettingDirector,IStatisticDirector,ILogger{CG.Orange.IOrangeApi})
-  name: OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger<IOrangeApi>)
-  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__ctor_IConfigurationDirector_IProviderDirector_ISeedDirector_ISettingDirector_IStatisticDirector_ILogger_CG_Orange_IOrangeApi__
-  commentId: M:CG.Orange.OrangeApi.#ctor(IConfigurationDirector,IProviderDirector,ISeedDirector,ISettingDirector,IStatisticDirector,ILogger{CG.Orange.IOrangeApi})
-  name.vb: OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger(Of IOrangeApi))
-  fullName: CG.Orange.OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger<CG.Orange.IOrangeApi>)
-  fullName.vb: CG.Orange.OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger(Of CG.Orange.IOrangeApi))
-  nameWithType: OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger<IOrangeApi>)
-  nameWithType.vb: OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IStatisticDirector, ILogger(Of IOrangeApi))
+- uid: CG.Orange.OrangeApi.#ctor(IConfigurationDirector,IProviderDirector,ISeedDirector,ISettingDirector,IDashboardDirector,ILogger{CG.Orange.IOrangeApi})
+  name: OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IDashboardDirector, ILogger<IOrangeApi>)
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__ctor_IConfigurationDirector_IProviderDirector_ISeedDirector_ISettingDirector_IDashboardDirector_ILogger_CG_Orange_IOrangeApi__
+  commentId: M:CG.Orange.OrangeApi.#ctor(IConfigurationDirector,IProviderDirector,ISeedDirector,ISettingDirector,IDashboardDirector,ILogger{CG.Orange.IOrangeApi})
+  name.vb: OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IDashboardDirector, ILogger(Of IOrangeApi))
+  fullName: CG.Orange.OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IDashboardDirector, ILogger<CG.Orange.IOrangeApi>)
+  fullName.vb: CG.Orange.OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IDashboardDirector, ILogger(Of CG.Orange.IOrangeApi))
+  nameWithType: OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IDashboardDirector, ILogger<IOrangeApi>)
+  nameWithType.vb: OrangeApi.OrangeApi(IConfigurationDirector, IProviderDirector, ISeedDirector, ISettingDirector, IDashboardDirector, ILogger(Of IOrangeApi))
 - uid: CG.Orange.OrangeApi.#ctor*
   name: OrangeApi
   href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi__ctor_
@@ -5794,6 +6379,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.OrangeApi.Configurations
   nameWithType: OrangeApi.Configurations
+- uid: CG.Orange.OrangeApi.Dashboard
+  name: Dashboard
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Dashboard
+  commentId: P:CG.Orange.OrangeApi.Dashboard
+  fullName: CG.Orange.OrangeApi.Dashboard
+  nameWithType: OrangeApi.Dashboard
+- uid: CG.Orange.OrangeApi.Dashboard*
+  name: Dashboard
+  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Dashboard_
+  commentId: Overload:CG.Orange.OrangeApi.Dashboard
+  isSpec: "True"
+  fullName: CG.Orange.OrangeApi.Dashboard
+  nameWithType: OrangeApi.Dashboard
 - uid: CG.Orange.OrangeApi.Providers
   name: Providers
   href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Providers
@@ -5833,19 +6431,6 @@ references:
   isSpec: "True"
   fullName: CG.Orange.OrangeApi.Settings
   nameWithType: OrangeApi.Settings
-- uid: CG.Orange.OrangeApi.Statistics
-  name: Statistics
-  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Statistics
-  commentId: P:CG.Orange.OrangeApi.Statistics
-  fullName: CG.Orange.OrangeApi.Statistics
-  nameWithType: OrangeApi.Statistics
-- uid: CG.Orange.OrangeApi.Statistics*
-  name: Statistics
-  href: api/CG.Orange.OrangeApi.html#CG_Orange_OrangeApi_Statistics_
-  commentId: Overload:CG.Orange.OrangeApi.Statistics
-  isSpec: "True"
-  fullName: CG.Orange.OrangeApi.Statistics
-  nameWithType: OrangeApi.Statistics
 - uid: CG.Orange.Plugins.Azure
   name: CG.Orange.Plugins.Azure
   href: api/CG.Orange.Plugins.Azure.html
@@ -6276,6 +6861,77 @@ references:
   commentId: N:CG.Orange.Repositories
   fullName: CG.Orange.Repositories
   nameWithType: CG.Orange.Repositories
+- uid: CG.Orange.Repositories.IConfigurationEventRepository
+  name: IConfigurationEventRepository
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html
+  commentId: T:CG.Orange.Repositories.IConfigurationEventRepository
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository
+  nameWithType: IConfigurationEventRepository
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync(CancellationToken)
+  name: AnyAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_AnyAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync(CancellationToken)
+  nameWithType: IConfigurationEventRepository.AnyAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync*
+  name: AnyAsync
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_AnyAsync_
+  commentId: Overload:CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync
+  nameWithType: IConfigurationEventRepository.AnyAsync
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.CountAsync(CancellationToken)
+  name: CountAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_CountAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IConfigurationEventRepository.CountAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.CountAsync(CancellationToken)
+  nameWithType: IConfigurationEventRepository.CountAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.CountAsync*
+  name: CountAsync
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_CountAsync_
+  commentId: Overload:CG.Orange.Repositories.IConfigurationEventRepository.CountAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.CountAsync
+  nameWithType: IConfigurationEventRepository.CountAsync
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync(ConfigurationEventModel,CancellationToken)
+  name: CreateAsync(ConfigurationEventModel, CancellationToken)
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_CreateAsync_ConfigurationEventModel_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync(ConfigurationEventModel,CancellationToken)
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync(ConfigurationEventModel, CancellationToken)
+  nameWithType: IConfigurationEventRepository.CreateAsync(ConfigurationEventModel, CancellationToken)
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync*
+  name: CreateAsync
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_CreateAsync_
+  commentId: Overload:CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync
+  nameWithType: IConfigurationEventRepository.CreateAsync
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  name: DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_DeleteOlderThanAsync_TimeSpan_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  nameWithType: IConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync*
+  name: DeleteOlderThanAsync
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_DeleteOlderThanAsync_
+  commentId: Overload:CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync
+  nameWithType: IConfigurationEventRepository.DeleteOlderThanAsync
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync(CancellationToken)
+  name: FindAllAsync(CancellationToken)
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_FindAllAsync_CancellationToken_
+  commentId: M:CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync(CancellationToken)
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync(CancellationToken)
+  nameWithType: IConfigurationEventRepository.FindAllAsync(CancellationToken)
+- uid: CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync*
+  name: FindAllAsync
+  href: api/CG.Orange.Repositories.IConfigurationEventRepository.html#CG_Orange_Repositories_IConfigurationEventRepository_FindAllAsync_
+  commentId: Overload:CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync
+  nameWithType: IConfigurationEventRepository.FindAllAsync
 - uid: CG.Orange.Repositories.IProviderPropertyRepository
   name: IProviderPropertyRepository
   href: api/CG.Orange.Repositories.IProviderPropertyRepository.html
@@ -6570,6 +7226,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Repositories.ISettingFileCountRepository.CreateAsync
   nameWithType: ISettingFileCountRepository.CreateAsync
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  name: DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_DeleteOlderThanAsync_TimeSpan_CancellationToken_
+  commentId: M:CG.Orange.Repositories.ISettingFileCountRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+  nameWithType: ISettingFileCountRepository.DeleteOlderThanAsync(TimeSpan, CancellationToken)
+- uid: CG.Orange.Repositories.ISettingFileCountRepository.DeleteOlderThanAsync*
+  name: DeleteOlderThanAsync
+  href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_DeleteOlderThanAsync_
+  commentId: Overload:CG.Orange.Repositories.ISettingFileCountRepository.DeleteOlderThanAsync
+  isSpec: "True"
+  fullName: CG.Orange.Repositories.ISettingFileCountRepository.DeleteOlderThanAsync
+  nameWithType: ISettingFileCountRepository.DeleteOlderThanAsync
 - uid: CG.Orange.Repositories.ISettingFileCountRepository.FindAllAsync(CancellationToken)
   name: FindAllAsync(CancellationToken)
   href: api/CG.Orange.Repositories.ISettingFileCountRepository.html#CG_Orange_Repositories_ISettingFileCountRepository_FindAllAsync_CancellationToken_

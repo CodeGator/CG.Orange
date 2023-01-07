@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISettingFileCountManager
+    <title>Interface IConfigurationEventRepository
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISettingFileCountManager
+    <meta name="title" content="Interface IConfigurationEventRepository
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,26 +78,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Orange.Managers.ISettingFileCountManager">
+            <article class="content wrap" id="_content" data-uid="CG.Orange.Repositories.IConfigurationEventRepository">
   
   
-  <h1 id="CG_Orange_Managers_ISettingFileCountManager" data-uid="CG.Orange.Managers.ISettingFileCountManager" class="text-break">Interface ISettingFileCountManager
+  <h1 id="CG_Orange_Repositories_IConfigurationEventRepository" data-uid="CG.Orange.Repositories.IConfigurationEventRepository" class="text-break">Interface IConfigurationEventRepository
   </h1>
-  <div class="markdown level0 summary"><p>This interface represents an object that manages operations related to
-<see cref="!:SettingFileCountModel"></see> objects.</p>
+  <div class="markdown level0 summary"><p>This interface represents an object that manages the storage and retrieval
+of <see cref="!:ConfigurationEventModel"></see> objects.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Managers.html">CG.Orange.Managers</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Orange.Repositories.html">CG.Orange.Repositories</a></h6>
   <h6><strong>Assembly</strong>: CG.Orange.Abstractions.dll</h6>
-  <h5 id="CG_Orange_Managers_ISettingFileCountManager_syntax">Syntax</h5>
+  <h5 id="CG_Orange_Repositories_IConfigurationEventRepository_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISettingFileCountManager</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IConfigurationEventRepository</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Orange_Managers_ISettingFileCountManager_AnyAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.AnyAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileCountManager_AnyAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:SettingFileCountModel"></see> objects
+  <a id="CG_Orange_Repositories_IConfigurationEventRepository_AnyAsync_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IConfigurationEventRepository_AnyAsync_CancellationToken_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.AnyAsync(CancellationToken)">AnyAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method indicates whether there are any <see cref="!:ConfigurationEventModel"></see> objects
 in the underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -136,7 +136,7 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><p>A task to perform the operation that returns <code>true</code> if there
-are any <see cref="!:SettingFileCountModel"></see> objects; <code>false</code> otherwise.</p>
+are any <see cref="!:ConfigurationEventModel"></see> objects; <code>false</code> otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -151,16 +151,16 @@ are any <see cref="!:SettingFileCountModel"></see> objects; <code>false</code> o
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
         <td><p>This exception is thrown whenever the
-manager fails to complete the operation.</p>
+repository fails to complete the operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_ISettingFileCountManager_CountAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.CountAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileCountManager_CountAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:SettingFileCountModel"></see> objects in the
+  <a id="CG_Orange_Repositories_IConfigurationEventRepository_CountAsync_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.CountAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IConfigurationEventRepository_CountAsync_CancellationToken_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.CountAsync(CancellationToken)">CountAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method counts the number of <see cref="!:ConfigurationEventModel"></see> objects in the
 underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -199,7 +199,7 @@ for the lifetime of the method.</p>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>A task to perform the operation that returns a count of the
-number of <see cref="!:SettingFileCountModel"></see> objects in the underlying storage.</p>
+number of <see cref="!:ConfigurationEventModel"></see> objects in the underlying storage.</p>
 </td>
       </tr>
     </tbody>
@@ -214,22 +214,22 @@ number of <see cref="!:SettingFileCountModel"></see> objects in the underlying s
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
         <td><p>This exception is thrown whenever the
-manager fails to complete the operation.</p>
+repository fails to complete the operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_ISettingFileCountManager_CreateAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.CreateAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileCountManager_CreateAsync_SettingFileCountModel_TimeSpan_System_String_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.CreateAsync(SettingFileCountModel,TimeSpan,System.String,CancellationToken)">CreateAsync(SettingFileCountModel, TimeSpan, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method creates a new <see cref="!:SettingFileCountModel"></see> object in the
+  <a id="CG_Orange_Repositories_IConfigurationEventRepository_CreateAsync_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IConfigurationEventRepository_CreateAsync_ConfigurationEventModel_CancellationToken_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.CreateAsync(ConfigurationEventModel,CancellationToken)">CreateAsync(ConfigurationEventModel, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method creates a new <see cref="!:ConfigurationEventModel"></see> object in the
 underlying storage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;SettingFileCountModel&gt; CreateAsync(SettingFileCountModel settingFileCount, TimeSpan maxHistory, string userName, CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ConfigurationEventModel&gt; CreateAsync(ConfigurationEventModel configurationEvent, CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,11 +242,74 @@ underlying storage.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SettingFileCountModel</span></td>
-        <td><span class="parametername">settingFileCount</span></td>
-        <td><p>The model to create in the underlying storage.</p>
+        <td><span class="xref">ConfigurationEventModel</span></td>
+        <td><span class="parametername">configurationEvent</span></td>
+        <td><p>The model to use for the operation.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token that is monitored
+for the lifetime of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">ConfigurationEventModel</span>&gt;</td>
+        <td><p>A task to perform the operation that returns the newly created
+<see cref="!:ConfigurationEventModel"></see> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
+        <td><p>This exception is thrown whenever the
+repository fails to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Orange_Repositories_IConfigurationEventRepository_DeleteOlderThanAsync_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IConfigurationEventRepository_DeleteOlderThanAsync_TimeSpan_CancellationToken_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.DeleteOlderThanAsync(TimeSpan,CancellationToken)">DeleteOlderThanAsync(TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method removes any statistics that are older than the specified
+maximum history value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteOlderThanAsync(TimeSpan maxHistory, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">maxHistory</span></td>
@@ -255,13 +318,6 @@ time.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">userName</span></td>
-        <td><p>The user name of the person performing the
-operation.</p>
-</td>
-      </tr>
-      <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A cancellation token that is monitored
@@ -280,9 +336,8 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">SettingFileCountModel</span>&gt;</td>
-        <td><p>A task to perform the operation that returns the newly created
-<see cref="!:SettingFileCountModel"></see> object.</p>
+        <td><span class="xref">Task</span></td>
+        <td><p>A task to perform the operation.</p>
 </td>
       </tr>
     </tbody>
@@ -297,21 +352,21 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
         <td><p>This exception is thrown whenever the
-manager fails to complete the operation.</p>
+repository fails to complete the operation.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_" data-uid="CG.Orange.Managers.ISettingFileCountManager.FindAllAsync*"></a>
-  <h4 id="CG_Orange_Managers_ISettingFileCountManager_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Managers.ISettingFileCountManager.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:SettingFileCountModel"></see> objects.</p>
+  <a id="CG_Orange_Repositories_IConfigurationEventRepository_FindAllAsync_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync*"></a>
+  <h4 id="CG_Orange_Repositories_IConfigurationEventRepository_FindAllAsync_CancellationToken_" data-uid="CG.Orange.Repositories.IConfigurationEventRepository.FindAllAsync(CancellationToken)">FindAllAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>This method searches for all the <see cref="!:ConfigurationEventModel"></see> objects.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;SettingFileCountModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;ConfigurationEventModel&gt;&gt; FindAllAsync(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,9 +397,9 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">SettingFileCountModel</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">ConfigurationEventModel</span>&gt;&gt;</td>
         <td><p>A task to perform the operation that returns a sequence of
-<see cref="!:SettingFileCountModel"></see> objects.</p>
+<see cref="!:ConfigurationEventModel"></see> objects.</p>
 </td>
       </tr>
     </tbody>
@@ -359,9 +414,9 @@ for the lifetime of the method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="CG.Orange.Managers.ManagerException.html">ManagerException</a></td>
+        <td><a class="xref" href="CG.Orange.Repositories.RepositoryException.html">RepositoryException</a></td>
         <td><p>This exception is thrown whenever the
-manager fails to complete the operation.</p>
+repository fails to complete the operation.</p>
 </td>
       </tr>
     </tbody>
