@@ -6,11 +6,18 @@
 @*<MudText Typo="Typo.body1" Class="pb-5">Convenient configuration services.</MudText>*@
 
 <MudGrid Class="pt-5">
-    <MudItem xs="4">
+    <MudItem xs="6">
         <MudChart ChartType="ChartType.Line"
                   ChartOptions="@_settingFileCountOptions"
                   ChartSeries="@_settingFileCounts"
                   XAxisLabels="@_settingFileCountLabels"
+                  Width="100%" Height="100%" />
+    </MudItem>
+    <MudItem xs="6">
+        <MudChart ChartType="ChartType.Line"
+                  ChartOptions="@_configurationEventOptions"
+                  ChartSeries="@_configurationEvents"
+                  XAxisLabels="@_configurationEventLabels"
                   Width="100%" Height="100%" />
     </MudItem>
 </MudGrid>

@@ -80,4 +80,29 @@ public interface ISeedDirector
         string userName,
         CancellationToken cancellationToken = default
         );
+
+    /// <summary>
+    /// This method performs a seeding operation for <see cref="ConfigurationEventModel"/>
+    /// objects, from the given configuration.
+    /// </summary>
+    /// <param name="configurationEvents">The collection of <see cref="ConfigurationEventModel"/> 
+    /// objects to use for the operation.</param>
+    /// <param name="force"><c>true</c> to force the seeding operation when data
+    /// already exists in the associated table(s), <c>false</c> to stop the 
+    /// operation whenever data is detected in the associated table(s).</param>
+    /// <param name="userName">The user name of the person performing the 
+    /// operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation.</returns>
+    /// <exception cref="ArgumentException">This exception is thrown whenever
+    /// one or more arguments are missing, or invalid.</exception>
+    /// <exception cref="DirectorException">This exception is thrown whenever
+    /// the director fails to complete the operation.</exception>
+    Task SeedConfigurationEventsAsync(
+        IEnumerable<ConfigurationEventModel> configurationEvents,
+        bool force,
+        string userName,
+        CancellationToken cancellationToken = default
+        );
 }

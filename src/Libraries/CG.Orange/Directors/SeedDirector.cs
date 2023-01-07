@@ -33,6 +33,11 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>, ISeedDirector
     /// </summary>
     internal protected readonly ISettingFileCountManager _settingFileCountManager = null!;
 
+    /// <summary>
+    /// This field contains the configuration event manager for this director.
+    /// </summary>
+    internal protected readonly IConfigurationEventManager _configurationEventManager = null!;
+
     #endregion
 
     // *******************************************************************
@@ -53,12 +58,15 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>, ISeedDirector
     /// with this director.</param>
     /// <param name="settingFileCountManager">The setting file count manager 
     /// to use with this director.</param>
+    /// <param name="configurationEventManager">The configuration event manager 
+    /// to use with this director.</param>
     /// <param name="logger">The logger to use with this director.</param>
     public SeedDirector(
         IProviderManager providerManager,
         IProviderPropertyManager providerPropertyManager,
         ISettingFileManager settingFileManager,
         ISettingFileCountManager settingFileCountManager,
+        IConfigurationEventManager configurationEventManager,
         ILogger<SeedDirector> logger
         ) : base(logger)
     {
@@ -66,13 +74,15 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>, ISeedDirector
         Guard.Instance().ThrowIfNull(providerManager, nameof(providerManager))
             .ThrowIfNull(providerPropertyManager, nameof(providerPropertyManager))
             .ThrowIfNull(settingFileCountManager, nameof(settingFileCountManager))
-            .ThrowIfNull(settingFileManager, nameof(settingFileManager));
+            .ThrowIfNull(settingFileManager, nameof(settingFileManager))
+            .ThrowIfNull(configurationEventManager, nameof(configurationEventManager));
 
         // Save the reference(s).
         _providerManager = providerManager;
         _providerPropertyManager = providerPropertyManager;
         _settingFileManager = settingFileManager;
         _settingFileCountManager = settingFileCountManager;
+        _configurationEventManager = configurationEventManager;
     }
 
     #endregion
@@ -178,6 +188,107 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>, ISeedDirector
             throw new DirectorException(
                 message: $"The director failed to seed one or more " +
                 "setting file counts!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc/>
+    public async virtual Task SeedConfigurationEventsAsync(
+        IEnumerable<ConfigurationEventModel> configurationEvents,
+        bool force,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(configurationEvents, nameof(configurationEvents))
+            .ThrowIfNullOrEmpty(userName, nameof(userName));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Checking the force flag"
+                );
+
+            // Should we check for existing data?
+            if (!force)
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Checking for existing configuration events"
+                    );
+
+                // Are there existing setting files?
+                var hasExistingData = await _configurationEventManager.AnyAsync(
+                    cancellationToken
+                    ).ConfigureAwait(false);
+
+                // Should we stop?
+                if (hasExistingData)
+                {
+                    // Log what we didn't do.
+                    _logger.LogWarning(
+                        "Skipping seeding configuration events because the 'force' flag " +
+                        "was not specified and there are existing rows in the " +
+                        "database."
+                        );
+                    return; // Nothing else to do!
+                }
+            }
+
+            // Start by counting how many objects are already there.
+            var originalCount = await _configurationEventManager.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Seeding '{count}' configuration events",
+                configurationEvents.Count()
+                );
+
+            // Loop through the objects.
+            foreach (var configurationEvent in configurationEvents)
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Creating a configuration event"
+                    );
+
+                // Create the setting file count.
+                _ = await _configurationEventManager.CreateAsync(
+                    configurationEvent,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+
+            // Count how many objects are there now.
+            var finalCount = await _configurationEventManager.CountAsync(
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Log what we did.
+            _logger.LogInformation(
+                "Seeded a total of {count} configuration events",
+                finalCount - originalCount
+                );
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to seed one or more configuration events!"
+                );
+
+            // Provider better context.
+            throw new DirectorException(
+                message: $"The director failed to seed one or more " +
+                "configuration events!",
                 innerException: ex
                 );
         }
@@ -441,6 +552,14 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>, ISeedDirector
                     cancellationToken
                     ).ConfigureAwait(false);
                 break;
+            case "configurationevents":
+                await SeedConfigurationEventsAsync(
+                    dataSection,
+                    force,
+                    userName,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+                break;
             case "settingfiles":
                 await SeedSettingFilesAsync(
                     dataSection,
@@ -565,7 +684,60 @@ public class SeedDirector : SeedDirectorBase<SeedDirector>, ISeedDirector
             userName,
             cancellationToken
             ).ConfigureAwait(false);
+    }
 
+    // *******************************************************************
+
+    /// <summary>
+    /// This method performs a seeding operation for <see cref="ConfigurationEventModel"/>
+    /// objects, from the given configuration.
+    /// </summary>
+    /// <param name="dataSection">The data to use for the operation.</param>
+    /// <param name="force"><c>true</c> to force the seeding operation when data
+    /// already exists in the associated table(s), <c>false</c> to stop the 
+    /// operation whenever data is detected in the associated table(s).</param>
+    /// <param name="userName">The user name of the person performing the 
+    /// operation.</param>
+    /// <param name="cancellationToken">A cancellation token that is monitored
+    /// for the lifetime of the method.</param>
+    /// <returns>A task to perform the operation.</returns>
+    protected async virtual Task SeedConfigurationEventsAsync(
+        IConfiguration dataSection,
+        bool force,
+        string userName,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Log what we are about to do.
+        _logger.LogDebug(
+            "Binding the incoming seed data to our options"
+            );
+
+        // Bind the incoming data to our options.
+        var options = new ConfigurationEventOptions();
+        dataSection.Bind(options);
+
+        // Log what we are about to do.
+        _logger.LogDebug(
+            "Validating the incoming seed data"
+            );
+
+        // Validate the options.
+        Guard.Instance().ThrowIfInvalidObject(options, nameof(options));
+
+        // Log what we are about to do.
+        _logger.LogTrace(
+            "Deferring to the {name} method",
+            nameof(ISeedDirector.SeedConfigurationEventsAsync)
+            );
+
+        // Call the overload
+        await SeedConfigurationEventsAsync(
+            options.ConfigurationEvents,
+            force,
+            userName,
+            cancellationToken
+            ).ConfigureAwait(false);
     }
 
     // *******************************************************************

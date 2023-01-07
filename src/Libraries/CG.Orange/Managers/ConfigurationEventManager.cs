@@ -160,6 +160,59 @@ internal class ConfigurationEventManager : IConfigurationEventManager
     // *******************************************************************
 
     /// <inheritdoc />
+    public virtual async Task<ConfigurationEventModel> CreateAsync(
+        ConfigurationEventModel configurationEvent,
+        CancellationToken cancellationToken = default
+        )
+    {
+        // Validate the parameters before attempting to use them.
+        Guard.Instance().ThrowIfNull(configurationEvent, nameof(configurationEvent));
+
+        try
+        {
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the {name} model stats",
+                nameof(SettingFileModel)
+                );
+
+            // NOTE : we don't set the created date here because that's coming
+            //   from seed data, in this method.
+
+            // Log what we are about to do.
+            _logger.LogTrace(
+                "Deferring to {name}",
+                nameof(ISettingFileRepository.CreateAsync)
+                );
+
+            // Perform the operation.
+            var newConfigurationEvent = await _repository.CreateAsync(
+                configurationEvent,
+                cancellationToken
+                ).ConfigureAwait(false);
+
+            // Return the results.
+            return newConfigurationEvent;
+        }
+        catch (Exception ex)
+        {
+            // Log what happened.
+            _logger.LogError(
+                ex,
+                "Failed to create a configuration event!"
+                );
+
+            // Provider better context.
+            throw new ManagerException(
+                message: $"The manager failed to search for configuration event!",
+                innerException: ex
+                );
+        }
+    }
+
+    // *******************************************************************
+
+    /// <inheritdoc />
     public virtual async Task<int> CountAsync(
         CancellationToken cancellationToken = default
         )

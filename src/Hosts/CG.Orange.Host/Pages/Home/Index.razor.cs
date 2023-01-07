@@ -13,11 +13,31 @@ public partial class Index
     #region Fields
 
     /// <summary>
+    /// This field contains the data for the configuration event chart.
+    /// </summary>
+    internal protected ChartOptions _configurationEventOptions = new()
+    {
+        InterpolationOption = InterpolationOption.NaturalSpline,
+        YAxisLines = false,
+        LineStrokeWidth = 3
+    };
+
+    /// <summary>
+    /// This field contains the data for the configuration event chart.
+    /// </summary>
+    internal protected List<ChartSeries> _configurationEvents = new();
+
+    /// <summary>
+    /// This field contains the labels for the configuration event chart.
+    /// </summary>
+    internal protected string[] _configurationEventLabels = Array.Empty<string>();
+
+    /// <summary>
     /// This field contains the data for the setting file count chart.
     /// </summary>
     internal protected ChartOptions _settingFileCountOptions = new()
     {
-        InterpolationOption = InterpolationOption.NaturalSpline,
+        InterpolationOption = InterpolationOption.Straight,
         YAxisLines = false,
         LineStrokeWidth = 3
     };
@@ -68,21 +88,9 @@ public partial class Index
     {
         try
         {
-            // Get the data for the setting file count chart.
-            var series = await OrangeApi.Dashboard.GetSettingFileCountDataAsync();
-
-            // Convert the data to something MudBlazor understands.
-            _settingFileCounts = series.Series.Select(x => new ChartSeries()
-            {
-                Data = x.Data.ToArray(),
-                Name = x.Name
-            }).ToList();
-
-            // Convert the labels to something MudBlazor understands.
-            _settingFileCountLabels = series.Labels.ToArray();
-
-            // Setup the Y max.
-            _settingFileCountOptions.YAxisTicks = (int)_settingFileCounts.Select(x => x.Data).Max().First();
+            // Initialize the charts.
+            await InitializeConfigurationEventChartAsync();
+            await InitializeSettingFileChartAsync();
 
             // Give the base class a chance.
             await base.OnInitializedAsync();
@@ -97,6 +105,66 @@ public partial class Index
                 options => options.CloseAfterNavigation = true
                 );
         }
+    }
+
+    #endregion
+
+    // *******************************************************************
+    // Protected methods.
+    // *******************************************************************
+
+    #region Protected methods
+
+    /// <summary>
+    /// This method initializes the setting file chart.
+    /// </summary>
+    /// <returns>A task to perform the operation.</returns>
+    protected async Task InitializeSettingFileChartAsync()
+    {
+        // Get the data for the setting file count chart.
+        var series = await OrangeApi.Dashboard.GetSettingFileCountDataAsync();
+
+        // Convert the data to something MudBlazor understands.
+        _settingFileCounts = series.Series.Select(x => new ChartSeries()
+        {
+            Data = x.Data.ToArray(),
+            Name = x.Name
+        }).ToList();
+
+        // Convert the labels to something MudBlazor understands.
+        _settingFileCountLabels = series.Labels.ToArray();
+
+        // Setup the Y max.
+        _settingFileCountOptions.YAxisTicks = (int)(_settingFileCounts.Any()
+                ? _settingFileCounts.First().Data.Max()
+                : 0);
+    }
+
+    // *******************************************************************
+
+    /// <summary>
+    /// This method initializes the configuration event chart.
+    /// </summary>
+    /// <returns>A task to perform the operation.</returns>
+    protected async Task InitializeConfigurationEventChartAsync()
+    {
+        // Get the data for the setting file count chart.
+        var series = await OrangeApi.Dashboard.GetConfigurationEventDataAsync();
+
+        // Convert the data to something MudBlazor understands.
+        _configurationEvents = series.Series.Select(x => new ChartSeries()
+        {
+            Data = x.Data.ToArray(),
+            Name = x.Name
+        }).ToList();
+
+        // Convert the labels to something MudBlazor understands.
+        _configurationEventLabels = series.Labels.ToArray();
+
+        // Setup the Y max.
+        _configurationEventOptions.YAxisTicks = (int)(_configurationEvents.Any()
+                ? _configurationEvents.First().Data.Max()
+                : 0);
     }
 
     #endregion
