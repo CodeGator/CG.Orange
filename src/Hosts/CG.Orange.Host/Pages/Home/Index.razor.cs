@@ -15,6 +15,16 @@ public partial class Index
     /// <summary>
     /// This field contains the data for the setting file count chart.
     /// </summary>
+    internal protected ChartOptions _settingFileCountOptions = new()
+    {
+        InterpolationOption = InterpolationOption.NaturalSpline,
+        YAxisLines = false,
+        LineStrokeWidth = 3
+    };
+
+    /// <summary>
+    /// This field contains the data for the setting file count chart.
+    /// </summary>
     internal protected List<ChartSeries> _settingFileCounts = new();
 
     /// <summary>
@@ -70,6 +80,9 @@ public partial class Index
 
             // Convert the labels to something MudBlazor understands.
             _settingFileCountLabels = series.Labels.ToArray();
+
+            // Setup the Y max.
+            _settingFileCountOptions.YAxisTicks = (int)_settingFileCounts.Select(x => x.Data).Max().First();
 
             // Give the base class a chance.
             await base.OnInitializedAsync();

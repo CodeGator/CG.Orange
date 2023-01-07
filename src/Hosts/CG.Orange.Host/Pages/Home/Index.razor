@@ -7,15 +7,10 @@
 
 <MudGrid Class="pt-5">
     <MudItem xs="4">
-        <MudPaper>
-            <MudChart ChartType="ChartType.Bar"
-                      ChartSeries="@_settingFileCounts"
-                      XAxisLabels="@_settingFileCountLabels" />
-        </MudPaper>
+        <MudChart ChartType="ChartType.Line"
+                  ChartOptions="@_settingFileCountOptions"
+                  ChartSeries="@_settingFileCounts"
+                  XAxisLabels="@_settingFileCountLabels"
+                  Width="100%" Height="100%" />
     </MudItem>
 </MudGrid>
-
-
-
-
-

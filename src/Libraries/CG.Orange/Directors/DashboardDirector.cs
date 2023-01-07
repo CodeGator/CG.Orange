@@ -78,7 +78,7 @@ internal class DashboardDirector : IDashboardDirector
             // Create a series for the data. 
             var series = new ChartSeriesModel()
             {
-                Name = "Setting File Counts (avg) / day"
+                Name = "Setting File Counts / day"
             };
 
             // Loop through the data, grouped by date.
@@ -109,7 +109,7 @@ internal class DashboardDirector : IDashboardDirector
                 series.Data.Add(avg);
 
                 // Add the label for the day.
-                model.Labels.Add($"{day.Key:dd}");
+                model.Labels.Add($"{day.Key:MM}/{day.Key:dd}");
             }
 
             // Add the series to the model.
