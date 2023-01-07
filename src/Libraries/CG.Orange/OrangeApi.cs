@@ -36,7 +36,7 @@ internal class OrangeApi : IOrangeApi
     /// <summary>
     /// This field contains the statistics director for this API.
     /// </summary>
-    internal protected readonly IStatisticDirector _statisticsDirector = null!;
+    internal protected readonly IDashboardDirector _statisticsDirector = null!;
 
     /// <summary>
     /// This field contains the logger for this API.
@@ -64,7 +64,7 @@ internal class OrangeApi : IOrangeApi
     public ISettingDirector Settings => _settingDirector;
 
     /// <inheritdoc/>
-    public IStatisticDirector Statistics => _statisticsDirector;
+    public IDashboardDirector Dashboard => _statisticsDirector;
 
     #endregion
 
@@ -93,7 +93,7 @@ internal class OrangeApi : IOrangeApi
         IProviderDirector providerDirector,
         ISeedDirector seedDirector, 
         ISettingDirector settingDirector,
-        IStatisticDirector statisticsDirector,
+        IDashboardDirector statisticsDirector,
         ILogger<IOrangeApi> logger
         )
     {

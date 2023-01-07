@@ -2,7 +2,7 @@
 namespace CG.Orange.Host.ViewModels;
 
 /// <summary>
-/// This class represents a request for configuration settings from a 
+/// This class represents a request for a configuration from the ORANGE
 /// client provider.
 /// </summary>
 public class SettingsRequestVM
@@ -25,6 +25,12 @@ public class SettingsRequestVM
     /// </summary>
     [MaxLength(64)]
     public string? Environment { get; set; }
+
+    /// <summary>
+    /// This property contains the optional client identifier for the caller.
+    /// </summary>
+    [MaxLength(200)]
+    public string? ClientId { get; set; }
 
     #endregion
 }

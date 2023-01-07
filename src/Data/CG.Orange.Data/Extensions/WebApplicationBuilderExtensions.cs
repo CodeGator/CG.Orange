@@ -43,6 +43,7 @@ public static class WebApplicationBuilderExtensions003
             );
 
         // Add the repositories
+        webApplicationBuilder.Services.AddScoped<IConfigurationEventRepository, ConfigurationEventRepository>();
         webApplicationBuilder.Services.AddScoped<ISettingFileRepository, SettingFileRepository>();
         webApplicationBuilder.Services.AddScoped<ISettingFileCountRepository, SettingFileCountRepository>();
         webApplicationBuilder.Services.AddScoped<IProviderRepository, ProviderRepository>();
@@ -57,6 +58,7 @@ public static class WebApplicationBuilderExtensions003
         webApplicationBuilder.Services.AddAutoMapper(cfg =>
         {
             // Wire up the conversion maps.
+            cfg.CreateMap<ConfigurationEventModel, ConfigurationEventEntity>().ReverseMap();
             cfg.CreateMap<SettingFileModel, SettingFileEntity>().ReverseMap();
             cfg.CreateMap<SettingFileCountModel, SettingFileCountEntity>().ReverseMap();
             cfg.CreateMap<ProviderModel, ProviderEntity>().ReverseMap();

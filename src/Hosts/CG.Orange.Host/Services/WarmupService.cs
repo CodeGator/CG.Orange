@@ -177,6 +177,8 @@ internal class WarmupService : BackgroundService
                     _ = await orangeApi.Configurations.ReadConfigurationAsync(
                         settingFile.ApplicationName,
                         settingFile.EnvironmentName,
+                        "warmup",
+                        "localhost",
                         cancellationToken
                         ).ConfigureAwait(false);
                 }

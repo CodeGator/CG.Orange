@@ -14,5 +14,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Logging;
 global using System.ComponentModel.DataAnnotations;
 global using System.Text;
+global using System.Diagnostics;
+global using Microsoft.Extensions.Options;
 
 global using ISeedDirector = CG.Orange.Directors.ISeedDirector;

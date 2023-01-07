@@ -14,6 +14,16 @@ internal class ConfigurationDirector : IConfigurationDirector
     #region Fields
 
     /// <summary>
+    /// This field contains the dashboard options for this director.
+    /// </summary>
+    internal protected readonly DashboardOptions? _dashboardOptions;
+
+    /// <summary>
+    /// This field contains the configuration event manager for this director.
+    /// </summary>
+    internal protected readonly IConfigurationEventManager _configurationEventManager = null!;
+
+    /// <summary>
     /// This field contains the processor factory for this director.
     /// </summary>
     internal protected readonly IProcessorFactory _processorFactory;
@@ -45,30 +55,39 @@ internal class ConfigurationDirector : IConfigurationDirector
     /// This constructor creates a new instance of the <see cref="ConfigurationDirector"/>
     /// class.
     /// </summary>
+    /// <param name="bllOptions">The BLL options to use with this director.</param>
     /// <param name="processorFactory">The processor factory to use with
     /// this director.</param>
     /// <param name="settingFileManager">The setting file manager to use 
     /// with this director.</param>
     /// <param name="providerManager">The provider manager to use with
     /// this director.</param>
+    /// <param name="configurationEventManager">The configuration event 
+    /// manager to use with this director.</param>
     /// <param name="logger">The logger to use with this director.</param>
     public ConfigurationDirector(
+        IOptions<OrangeBllOptions> bllOptions,
         IProcessorFactory processorFactory,
         ISettingFileManager settingFileManager,
         IProviderManager providerManager,
+        IConfigurationEventManager configurationEventManager,
         ILogger<IConfigurationDirector> logger
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(processorFactory, nameof(processorFactory))
+        Guard.Instance().ThrowIfNull(bllOptions, nameof(bllOptions))
+            .ThrowIfNull(processorFactory, nameof(processorFactory))
             .ThrowIfNull(settingFileManager, nameof(settingFileManager))
             .ThrowIfNull(providerManager, nameof(providerManager))
+            .ThrowIfNull(configurationEventManager, nameof(configurationEventManager))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s).
+        _dashboardOptions = bllOptions.Value.Dashboard;
         _processorFactory = processorFactory;
         _settingFileManager = settingFileManager;
         _providerManager = providerManager;
+        _configurationEventManager = configurationEventManager;
         _logger = logger;
     }
 
@@ -84,6 +103,8 @@ internal class ConfigurationDirector : IConfigurationDirector
     public virtual async Task<Dictionary<string, string>> ReadConfigurationAsync(
         string applicationName, 
         string? environmentName, 
+        string? clientId,
+        string? remoteIpAddress,
         CancellationToken cancellationToken = default
         )
     {
@@ -94,6 +115,10 @@ internal class ConfigurationDirector : IConfigurationDirector
         //   application and/or environment - with associated secret
         //   values. This is the only place we'll ever combine the
         //   settings with their associated secrets.
+
+        // Keep track of how long this takes.
+        var sw = new Stopwatch();
+        sw.Start();
 
         try
         {
@@ -253,6 +278,20 @@ internal class ConfigurationDirector : IConfigurationDirector
                 cancellationToken
                 ).ConfigureAwait(false);
 
+            // Record the event.
+            await _configurationEventManager.CreateAsync(
+                new ConfigurationEventModel()
+                {
+                     ApplicationName = applicationName,
+                     EnvironmentName = environmentName,
+                     ClientId = clientId,
+                     ElapsedTime = sw.Elapsed,
+                     HostName = remoteIpAddress
+                },
+                _dashboardOptions is null ? TimeSpan.FromDays(7) : _dashboardOptions.MaxHistory,
+                cancellationToken
+                ).ConfigureAwait(false);
+
             // Return the results.
             return kvpCollection;
         }
@@ -268,6 +307,18 @@ internal class ConfigurationDirector : IConfigurationDirector
             throw new DirectorException(
                 message: $"The manager failed to search for a configuration!",
                 innerException: ex
+                );
+        }
+        finally
+        {
+            // Stop the watch.
+            sw.Stop();
+
+            // Log the elapsed time.
+            _logger.LogDebug(
+                "Elapsed time for {name} method: {ts}",
+                nameof(ConfigurationDirector.ReplaceTokensAsync),
+                sw.Elapsed
                 );
         }
     }
@@ -584,7 +635,7 @@ internal class ConfigurationDirector : IConfigurationDirector
             
             // Add the setting.
             dest.Add(key, value ?? "");
-        }
+        }        
 
         // Return the results.
         return dest;

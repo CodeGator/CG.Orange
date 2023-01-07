@@ -3,18 +3,18 @@ namespace CG.Orange.Repositories;
 
 /// <summary>
 /// This interface represents an object that manages the storage and retrieval
-/// of <see cref="SettingFileCountModel"/> objects.
+/// of <see cref="ConfigurationEventModel"/> objects.
 /// </summary>
-public interface ISettingFileCountRepository
+public interface IConfigurationEventRepository
 {
     /// <summary>
-    /// This method indicates whether there are any <see cref="SettingFileCountModel"/> objects
+    /// This method indicates whether there are any <see cref="ConfigurationEventModel"/> objects
     /// in the underlying storage.
     /// </summary>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns <c>true</c> if there
-    /// are any <see cref="SettingFileCountModel"/> objects; <c>false</c> otherwise.</returns>
+    /// are any <see cref="ConfigurationEventModel"/> objects; <c>false</c> otherwise.</returns>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
     Task<bool> AnyAsync(
@@ -22,13 +22,13 @@ public interface ISettingFileCountRepository
         );
 
     /// <summary>
-    /// This method counts the number of <see cref="SettingFileCountModel"/> objects in the 
+    /// This method counts the number of <see cref="ConfigurationEventModel"/> objects in the 
     /// underlying storage.
     /// </summary>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns a count of the 
-    /// number of <see cref="SettingFileCountModel"/> objects in the underlying storage.</returns>
+    /// number of <see cref="ConfigurationEventModel"/> objects in the underlying storage.</returns>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
     Task<int> CountAsync(
@@ -36,20 +36,20 @@ public interface ISettingFileCountRepository
         );
 
     /// <summary>
-    /// This method creates a new <see cref="SettingFileCountModel"/> object in the 
+    /// This method creates a new <see cref="ConfigurationEventModel"/> object in the 
     /// underlying storage.
     /// </summary>
-    /// <param name="settingFileCount">The model to use for the operation.</param>
+    /// <param name="configurationEvent">The model to use for the operation.</param>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns the newly created
-    /// <see cref="SettingFileCountModel"/> object.</returns>
+    /// <see cref="ConfigurationEventModel"/> object.</returns>
     /// <exception cref="ArgumentException">This exception is thrown whenever one
     /// or more arguments are missing, or invalid.</exception>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
-    Task<SettingFileCountModel> CreateAsync(
-        SettingFileCountModel settingFileCount,
+    Task<ConfigurationEventModel> CreateAsync(
+        ConfigurationEventModel configurationEvent,
         CancellationToken cancellationToken = default
         );
 
@@ -72,15 +72,15 @@ public interface ISettingFileCountRepository
         );
 
     /// <summary>
-    /// This method searches for all the <see cref="SettingFileCountModel"/> objects.
+    /// This method searches for all the <see cref="ConfigurationEventModel"/> objects.
     /// </summary>
     /// <param name="cancellationToken">A cancellation token that is monitored
     /// for the lifetime of the method.</param>
     /// <returns>A task to perform the operation that returns a sequence of 
-    /// <see cref="SettingFileCountModel"/> objects.</returns>
+    /// <see cref="ConfigurationEventModel"/> objects.</returns>
     /// <exception cref="RepositoryException">This exception is thrown whenever the
     /// repository fails to complete the operation.</exception>
-    Task<IEnumerable<SettingFileCountModel>> FindAllAsync(
+    Task<IEnumerable<ConfigurationEventModel>> FindAllAsync(
         CancellationToken cancellationToken = default
         );
 }

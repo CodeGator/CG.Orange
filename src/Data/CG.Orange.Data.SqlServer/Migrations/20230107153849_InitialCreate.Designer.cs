@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CG.Orange.Data.SqlServer.Migrations
 {
     [DbContext(typeof(OrangeDbContext))]
-    [Migration("20230106132829_InitialCreate")]
+    [Migration("20230107153849_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,6 +24,46 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("CG.Orange.Data.Entities.ConfigurationEventEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationName")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("nvarchar(32)");
+
+                    b.Property<string>("ClientId")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("CreatedOnUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("ElapsedTime")
+                        .HasColumnType("time");
+
+                    b.Property<string>("EnvironmentName")
+                        .HasMaxLength(32)
+                        .HasColumnType("nvarchar(32)");
+
+                    b.Property<string>("HostName")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex(new[] { "ApplicationName", "EnvironmentName", "ClientId", "HostName", "ElapsedTime", "CreatedOnUtc" }, "IX_ConfigurationEvents")
+                        .IsUnique()
+                        .HasFilter("[EnvironmentName] IS NOT NULL AND [ClientId] IS NOT NULL AND [HostName] IS NOT NULL");
+
+                    b.ToTable("ConfigurationEvents", "Orange");
+                });
 
             modelBuilder.Entity("CG.Orange.Data.Entities.ProviderEntity", b =>
                 {
@@ -138,6 +178,10 @@ namespace CG.Orange.Data.SqlServer.Migrations
 
                     b.Property<int>("Count")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOnUtc")
                         .HasColumnType("datetime2");

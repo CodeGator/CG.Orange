@@ -15,6 +15,25 @@ namespace CG.Orange.Data.Sqlite.Migrations
                 name: "Orange");
 
             migrationBuilder.CreateTable(
+                name: "ConfigurationEvents",
+                schema: "Orange",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ApplicationName = table.Column<string>(type: "TEXT", maxLength: 32, nullable: false),
+                    EnvironmentName = table.Column<string>(type: "TEXT", maxLength: 32, nullable: true),
+                    ElapsedTime = table.Column<TimeSpan>(type: "TEXT", nullable: false),
+                    ClientId = table.Column<string>(type: "TEXT", maxLength: 200, nullable: true),
+                    HostName = table.Column<string>(type: "TEXT", maxLength: 255, nullable: true),
+                    CreatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ConfigurationEvents", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Providers",
                 schema: "Orange",
                 columns: table => new
@@ -45,6 +64,7 @@ namespace CG.Orange.Data.Sqlite.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Count = table.Column<int>(type: "INTEGER", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: false),
                     CreatedOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -101,6 +121,13 @@ namespace CG.Orange.Data.Sqlite.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_ConfigurationEvents",
+                schema: "Orange",
+                table: "ConfigurationEvents",
+                columns: new[] { "ApplicationName", "EnvironmentName", "ClientId", "HostName", "ElapsedTime", "CreatedOnUtc" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProviderProperties",
                 schema: "Orange",
                 table: "ProviderProperties",
@@ -144,6 +171,10 @@ namespace CG.Orange.Data.Sqlite.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ConfigurationEvents",
+                schema: "Orange");
+
             migrationBuilder.DropTable(
                 name: "ProviderProperties",
                 schema: "Orange");

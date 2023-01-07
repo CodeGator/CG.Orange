@@ -15,6 +15,25 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 name: "Orange");
 
             migrationBuilder.CreateTable(
+                name: "ConfigurationEvents",
+                schema: "Orange",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ApplicationName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
+                    EnvironmentName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
+                    ElapsedTime = table.Column<TimeSpan>(type: "time", nullable: false),
+                    ClientId = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    HostName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ConfigurationEvents", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Providers",
                 schema: "Orange",
                 columns: table => new
@@ -45,6 +64,7 @@ namespace CG.Orange.Data.SqlServer.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Count = table.Column<int>(type: "int", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -101,6 +121,14 @@ namespace CG.Orange.Data.SqlServer.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_ConfigurationEvents",
+                schema: "Orange",
+                table: "ConfigurationEvents",
+                columns: new[] { "ApplicationName", "EnvironmentName", "ClientId", "HostName", "ElapsedTime", "CreatedOnUtc" },
+                unique: true,
+                filter: "[EnvironmentName] IS NOT NULL AND [ClientId] IS NOT NULL AND [HostName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProviderProperties",
                 schema: "Orange",
                 table: "ProviderProperties",
@@ -145,6 +173,10 @@ namespace CG.Orange.Data.SqlServer.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ConfigurationEvents",
+                schema: "Orange");
+
             migrationBuilder.DropTable(
                 name: "ProviderProperties",
                 schema: "Orange");

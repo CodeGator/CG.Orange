@@ -2,10 +2,9 @@
 namespace CG.Orange.Options;
 
 /// <summary>
-/// This class contains configuration settings for the Orange business 
-/// logic layer.
+/// This class contains configuration settings for dashboard operations.
 /// </summary>
-public class OrangeBllOptions
+public class DashboardOptions
 {
     // *******************************************************************
     // Properties.
@@ -14,9 +13,10 @@ public class OrangeBllOptions
     #region Properties
 
     /// <summary>
-    /// This property contains configuration settings for dashboard operations.
+    /// This property contains the maximum amount of history to keep at 
+    /// any point in time.
     /// </summary>
-    public DashboardOptions? Dashboard { get; set; }
+    public TimeSpan MaxHistory { get; set; } = TimeSpan.FromDays(7);
 
     #endregion
 }

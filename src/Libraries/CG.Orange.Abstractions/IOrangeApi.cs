@@ -30,8 +30,8 @@ public interface IOrangeApi
     ISettingDirector Settings { get; }
 
     /// <summary>
-    /// This property contains an object for performing statistics related
-    /// operations.
+    /// This property contains an object that produces statistics suitable for
+    /// display on a dashboard.
     /// </summary>
-    IStatisticDirector Statistics { get; }
+    IDashboardDirector Dashboard { get; }
 }

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CG.Orange.Data.Sqlite.Migrations
 {
     [DbContext(typeof(OrangeDbContext))]
-    [Migration("20230106132811_InitialCreate")]
+    [Migration("20230107153705_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -19,6 +19,43 @@ namespace CG.Orange.Data.Sqlite.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.1");
+
+            modelBuilder.Entity("CG.Orange.Data.Entities.ConfigurationEventEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ApplicationName")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ClientId")
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedOnUtc")
+                        .HasColumnType("TEXT");
+
+                    b.Property<TimeSpan>("ElapsedTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EnvironmentName")
+                        .HasMaxLength(32)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("HostName")
+                        .HasMaxLength(255)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex(new[] { "ApplicationName", "EnvironmentName", "ClientId", "HostName", "ElapsedTime", "CreatedOnUtc" }, "IX_ConfigurationEvents")
+                        .IsUnique();
+
+                    b.ToTable("ConfigurationEvents", "Orange");
+                });
 
             modelBuilder.Entity("CG.Orange.Data.Entities.ProviderEntity", b =>
                 {
@@ -127,6 +164,10 @@ namespace CG.Orange.Data.Sqlite.Migrations
 
                     b.Property<int>("Count")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedOnUtc")
                         .HasColumnType("TEXT");

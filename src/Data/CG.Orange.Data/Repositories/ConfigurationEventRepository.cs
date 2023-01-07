@@ -2,10 +2,10 @@
 namespace CG.Orange.Data.Repositories;
 
 /// <summary>
-/// This class is an EFCORE implementation of the <see cref="ISettingFileCountRepository"/>
+/// This class is an EFCORE implementation of the <see cref="IConfigurationEventRepository"/>
 /// interface.
 /// </summary>
-internal class SettingFileCountRepository : ISettingFileCountRepository
+internal class ConfigurationEventRepository : IConfigurationEventRepository
 {
     // *******************************************************************
     // Fields.
@@ -26,7 +26,7 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
     /// <summary>
     /// This field contains the logger for this repository.
     /// </summary>
-    internal protected readonly ILogger<ISettingFileCountRepository> _logger = null!;
+    internal protected readonly ILogger<IConfigurationEventRepository> _logger = null!;
 
     #endregion
 
@@ -37,17 +37,17 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="SettingFileCountRepository"/>
+    /// This constructor creates a new instance of the <see cref="ConfigurationEventRepository"/>
     /// class.
     /// </summary>
     /// <param name="dbContext">The EFCORE data-context to use with this 
     /// repository.</param>
     /// <param name="mapper">The auto-mapper to use with this repository.</param>
     /// <param name="logger">The logger to use with this repository.</param>
-    public SettingFileCountRepository(
+    public ConfigurationEventRepository(
         OrangeDbContext dbContext,
         IMapper mapper,
-        ILogger<ISettingFileCountRepository> logger
+        ILogger<IConfigurationEventRepository> logger
         )
     {
         // Validate the parameters before attempting to use them.
@@ -78,11 +78,11 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
         {
             // Log what we are about to do.
             _logger.LogDebug(
-                "Searching for setting file counts"
+                "Searching for configuration events"
                 );
 
             // Search for any entities in the data-store.
-            var data = await _dbContext.SettingFileCounts.AnyAsync(
+            var data = await _dbContext.ConfigurationEvents.AnyAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
@@ -94,7 +94,7 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting file counts!"
+                "Failed to search for configuration events!"
                 );
 
             // Provider better context.
@@ -121,7 +121,7 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
                 );
 
             // Search for any entities in the data-store.
-            var data = await _dbContext.SettingFileCounts.CountAsync(
+            var data = await _dbContext.ConfigurationEvents.CountAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
@@ -133,13 +133,13 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to count setting file counts!"
+                "Failed to count configuration events!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
-                message: $"The repository failed to count setting file " +
-                "counts!",
+                message: $"The repository failed to count configuration " +
+                "events!",
                 innerException: ex
                 );
         }
@@ -148,25 +148,25 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<SettingFileCountModel> CreateAsync(
-        SettingFileCountModel settingFileCount,
+    public virtual async Task<ConfigurationEventModel> CreateAsync(
+        ConfigurationEventModel configurationEvent,
         CancellationToken cancellationToken = default
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(settingFileCount, nameof(settingFileCount));
+        Guard.Instance().ThrowIfNull(configurationEvent, nameof(configurationEvent));
 
         try
         {
             // Log what we are about to do.
             _logger.LogDebug(
                 "Converting a {entity} model to an entity",
-                nameof(SettingFileCountModel)
+                nameof(ConfigurationEventModel)
                 );
 
             // Convert the model to an entity.
-            var entity = _mapper.Map<Entities.SettingFileCountEntity>(
-                settingFileCount
+            var entity = _mapper.Map<Entities.ConfigurationEventEntity>(
+                configurationEvent
                 );
 
             // Did we fail?
@@ -174,7 +174,7 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(SettingFileCountModel)} " +
+                    $"Failed to map the {nameof(ConfigurationEventModel)} " +
                     "model to an entity."
                     );
             }
@@ -182,12 +182,12 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Adding the {entity} to the {ctx} data-context.",
-                nameof(SettingFileCountEntity),
+                nameof(ConfigurationEventEntity),
                 nameof(OrangeDbContext)
                 );
 
             // Add the entity to the data-store.
-            _dbContext.SettingFileCounts.Attach(entity);
+            _dbContext.ConfigurationEvents.Attach(entity);
 
             // Mark the entity as added so EFCORE will insert it.
             _dbContext.Entry(entity).State = EntityState.Added;
@@ -206,11 +206,11 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what we are about to do.
             _logger.LogDebug(
                 "Converting a {entity} entity to a model",
-                nameof(SettingFileCountEntity)
+                nameof(ConfigurationEventEntity)
                 );
 
             // Convert the entity to a model.
-            var result = _mapper.Map<SettingFileCountModel>(
+            var result = _mapper.Map<ConfigurationEventModel>(
                 entity
                 );
 
@@ -219,7 +219,7 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             {
                 // Panic!!
                 throw new AutoMapperMappingException(
-                    $"Failed to map the {nameof(SettingFileCountEntity)} " +
+                    $"Failed to map the {nameof(ConfigurationEventEntity)} " +
                     "entity to a model."
                     );
             }
@@ -232,13 +232,13 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to create a setting file count!"
+                "Failed to create a configuration event!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
-                message: $"The repository failed to create a setting " +
-                "file count!",
+                message: $"The repository failed to create a configuration " +
+                "event!",
                 innerException: ex
                 );
         }
@@ -265,22 +265,22 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Calculate a cutoff date.
             var cutoffDate = DateTime.UtcNow.Subtract(maxHistory);
 
-            // Perform the count search.
-            var settingFileCounts = await _dbContext.SettingFileCounts.Where(
-                x => x.CreatedOnUtc < cutoffDate
+            // Perform the event search.
+            var configurationEvents = await _dbContext.ConfigurationEvents.Where(
+                x=> x.CreatedOnUtc < cutoffDate
                 ).ToListAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
             // Log what we are about to do.
             _logger.LogDebug(
-                "Removing {count} outdated setting file counts.",
-                settingFileCounts.Count
+                "Removing {count} outdated configuration events.",
+                configurationEvents.Count
                 );
 
-            // Remove the count.
-            _dbContext.SettingFileCounts.RemoveRange(
-                settingFileCounts
+            // Remove the events.
+            _dbContext.ConfigurationEvents.RemoveRange(
+                configurationEvents
                 );
 
             // Log what we are about to do.
@@ -299,13 +299,13 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to remove outdated setting file counts!"
+                "Failed to remove outdated configuration events!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
                 message: $"The repository failed to remove outdated " +
-                "setting file counts",
+                "configuration events!",
                 innerException: ex
                 );
         }
@@ -314,7 +314,7 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
     // *******************************************************************
 
     /// <inheritdoc/>
-    public virtual async Task<IEnumerable<SettingFileCountModel>> FindAllAsync(
+    public virtual async Task<IEnumerable<ConfigurationEventModel>> FindAllAsync(
         CancellationToken cancellationToken = default
         )
     {
@@ -322,19 +322,19 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
         {
             // Log what we are about to do.
             _logger.LogDebug(
-                "Searching for setting file counts."
+                "Searching for configuration events."
                 );
 
-            // Perform the setting file search.
-            var settingFileCounts = await _dbContext.SettingFileCounts
+            // Perform the configuration search.
+            var configurationEvents = await _dbContext.ConfigurationEvents
                 .AsNoTracking()
                 .ToListAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
 
             // Convert the entities to a models.
-            var result = settingFileCounts.Select(x =>
-                _mapper.Map<SettingFileCountModel>(x)
+            var result = configurationEvents.Select(x =>
+                _mapper.Map<ConfigurationEventModel>(x)
                 );
 
             // Return the results.
@@ -345,13 +345,13 @@ internal class SettingFileCountRepository : ISettingFileCountRepository
             // Log what happened.
             _logger.LogError(
                 ex,
-                "Failed to search for setting file counts!"
+                "Failed to search for configuration events!"
                 );
 
             // Provider better context.
             throw new RepositoryException(
                 message: $"The repository failed to search for " +
-                "setting file counts!",
+                "configuration events!",
                 innerException: ex
                 );
         }

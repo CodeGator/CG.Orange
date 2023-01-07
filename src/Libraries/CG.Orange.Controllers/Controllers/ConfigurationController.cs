@@ -2,12 +2,12 @@
 namespace CG.Orange.Controllers;
 
 /// <summary>
-/// This class is a REST controller for <see cref="SettingFileModel"/> resources.
+/// This class is a REST controller for configuration resources.
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
 [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-public class SettingsController : ControllerBase
+public class ConfigurationController : ControllerBase
 {
     // *******************************************************************
     // Fields.
@@ -23,7 +23,7 @@ public class SettingsController : ControllerBase
     /// <summary>
     /// This field contains the logger for this controller.
     /// </summary>
-    internal protected readonly ILogger<SettingsController> _logger = null!;
+    internal protected readonly ILogger<ConfigurationController> _logger = null!;
 
     #endregion
 
@@ -34,13 +34,13 @@ public class SettingsController : ControllerBase
     #region Constructors
 
     /// <summary>
-    /// This constructor creates a new instance of the <see cref="SettingsController"/>
+    /// This constructor creates a new instance of the <see cref="ConfigurationController"/>
     /// </summary>
     /// <param name="orangeApi">The API to use with this controller.</param>
     /// <param name="logger">The logger to use with this controller.</param>
-    public SettingsController(
+    public ConfigurationController(
         IOrangeApi orangeApi,
-        ILogger<SettingsController> logger
+        ILogger<ConfigurationController> logger
         )
     {
         // Validate the parameters before attempting to use them.
@@ -107,7 +107,9 @@ public class SettingsController : ControllerBase
             // Read the complete configuration (with secrets).
             var result = await _orangeApi.Configurations.ReadConfigurationAsync(
                 model.Application,
-                model.Environment
+                model.Environment,
+                model.ClientId,
+                HttpContext.Request.Host.ToString()
                 ).ConfigureAwait(false);
 
             // Return the results.

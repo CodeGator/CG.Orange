@@ -1,6 +1,10 @@
 ﻿
 namespace CG.Orange.Managers;
 
+/// <summary>
+/// This class is a default implementation of the <see cref="IProviderManager"/>
+/// interface.
+/// </summary>
 internal class ProviderManager : IProviderManager
 {
     // *******************************************************************

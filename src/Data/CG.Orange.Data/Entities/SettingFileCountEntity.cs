@@ -29,7 +29,7 @@ public class SettingFileCountEntity
     public string CreatedBy { get; set; } = "anonymous";
 
     /// <summary>
-    /// This property contains the UTC date/time when entity was created.
+    /// This property contains the UTC date/time when the event took place.
     /// </summary>
     public DateTime CreatedOnUtc { get; set; }
 

@@ -101,5 +101,25 @@ public static class Globals
             /// </summary>
             public const int CreatedByLength = 32;
         }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This class contains sizes for <see cref="ConfigurationEventModel"/> properties.
+        /// </summary>
+        public static class ConfigurationEvents
+        {
+            /// <summary>
+            /// This constant represents the length of the <see cref="ConfigurationEventModel.ClientId"/> 
+            /// property.
+            /// </summary>
+            public const int ClientIdLength = 200;
+
+            /// <summary>
+            /// This constant represents the length of the <see cref="ConfigurationEventModel.HostName"/> 
+            /// property.
+            /// </summary>
+            public const int HostNameLength = 255;
+        }
     }
 }

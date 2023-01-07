@@ -27,7 +27,7 @@ try
     builder.Services.AddHttpContextAccessor();
 
     builder.Services.AddControllers().AddApplicationPart(
-        typeof(CG.Orange.Controllers.SettingsController).Assembly
+        typeof(CG.Orange.Controllers.ConfigurationController).Assembly
         );
 
     // Add MudBlazor stuff

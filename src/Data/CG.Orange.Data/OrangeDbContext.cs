@@ -14,6 +14,11 @@ public class OrangeDbContext : DbContext
     #region Properties
 
     /// <summary>
+    /// This property contains the list of configuration events.
+    /// </summary>
+    public virtual DbSet<ConfigurationEventEntity> ConfigurationEvents { get; set; } = null!;
+
+    /// <summary>
     /// This property contains the list of providers.
     /// </summary>
     public virtual DbSet<ProviderEntity> Providers { get; set; } = null!;
@@ -68,6 +73,7 @@ public class OrangeDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Map the entities.
+        modelBuilder.ApplyConfiguration(new ConfigurationEventEntityMap(modelBuilder));
         modelBuilder.ApplyConfiguration(new SettingFileEntityMap(modelBuilder));
         modelBuilder.ApplyConfiguration(new SettingFileCountEntityMap(modelBuilder));
         modelBuilder.ApplyConfiguration(new ProviderEntityMap(modelBuilder));

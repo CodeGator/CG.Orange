@@ -14,6 +14,11 @@ internal class SettingDirector : ISettingDirector
     #region Fields
 
     /// <summary>
+    /// This field contains the dashboard options for this director.
+    /// </summary>
+    internal protected readonly DashboardOptions? _dashboardOptions;
+
+    /// <summary>
     /// This field contains the setting file manager for this director.
     /// </summary>
     internal protected readonly ISettingFileManager _settingFileManager = null!;
@@ -40,22 +45,26 @@ internal class SettingDirector : ISettingDirector
     /// This constructor creates a new instance of the <see cref="SettingDirector"/>
     /// class.
     /// </summary>
+    /// <param name="bllOptions">The BLL options to use with this director.</param>
     /// <param name="settingFileManager">The setting file manager to use
     /// with this director.</param>
     /// <param name="settingFileCountManager">The setting file count 
     /// manager to use with this director.</param>
     /// <param name="logger">The logger to use with this director.</param>
     public SettingDirector(
+        IOptions<OrangeBllOptions> bllOptions,
         ISettingFileManager settingFileManager,
         ISettingFileCountManager settingFileCountManager,
         ILogger<ISettingDirector> logger
         )
     {
         // Validate the parameters before attempting to use them.
-        Guard.Instance().ThrowIfNull(settingFileManager, nameof(settingFileManager))
+        Guard.Instance().ThrowIfNull(bllOptions, nameof(bllOptions))
+            .ThrowIfNull(settingFileManager, nameof(settingFileManager))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s).
+        _dashboardOptions = bllOptions.Value.Dashboard;
         _settingFileManager = settingFileManager;   
         _settingFileCountManager = settingFileCountManager;
         _logger = logger;
@@ -194,7 +203,8 @@ internal class SettingDirector : ISettingDirector
             // Defer to the manager for the event.
             await _settingFileCountManager.CreateAsync(
                 new SettingFileCountModel() { Count = count },
-                userName,
+                _dashboardOptions is null ? TimeSpan.FromDays(7) : _dashboardOptions.MaxHistory,
+                userName,                
                 cancellationToken
                 ).ConfigureAwait(false);
 
@@ -247,6 +257,7 @@ internal class SettingDirector : ISettingDirector
             // Defer to the manager for the event.
             await _settingFileCountManager.CreateAsync(
                 new SettingFileCountModel() { Count = count },
+                _dashboardOptions is null ? TimeSpan.FromDays(7) : _dashboardOptions.MaxHistory,
                 userName,
                 cancellationToken
                 ).ConfigureAwait(false);
