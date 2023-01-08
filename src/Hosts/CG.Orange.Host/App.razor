@@ -1,5 +1,6 @@
 ﻿<CascadingAuthenticationState>
-    <Router AppAssembly="@typeof(App).Assembly">
+    <Router AppAssembly="@typeof(App).Assembly"
+            AdditionalAssemblies=@_routedAssemblies>
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
                 <NotAuthorized>
@@ -23,3 +24,10 @@
         </NotFound>
     </Router>
 </CascadingAuthenticationState>
+
+@code {
+    // Build a combined list of routed assemblies, for Blazor.
+    List<Assembly> _routedAssemblies = BlazorResources.RoutedAssemblies.Concat(
+            new[] { Assembly.Load("CG.Blazor") }
+        ).ToList();
+}

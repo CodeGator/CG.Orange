@@ -23,3 +23,4 @@ global using System.IdentityModel.Tokens.Jwt;
 global using System.Reflection;
 global using System.Text;
 global using Microsoft.AspNetCore.Builder;
+global using CG.Blazor.Themes;

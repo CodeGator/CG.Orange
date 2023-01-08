@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="CG.Blazor" Version="2023.1.7" />
         <PackageReference Include="CG.Blazor.Plugins" Version="2023.1.11" />
         <PackageReference Include="CG.Logging" Version="2023.1.2" />
         <PackageReference Include="CG.Reflection" Version="2023.1.4" />
