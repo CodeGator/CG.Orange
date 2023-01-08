@@ -6563,6 +6563,19 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Options.OrangeIdentityOptions.CookieName
   nameWithType: OrangeIdentityOptions.CookieName
+- uid: CG.Orange.Options.OrangeIdentityOptions.DeveloperBypass
+  name: DeveloperBypass
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_DeveloperBypass
+  commentId: P:CG.Orange.Options.OrangeIdentityOptions.DeveloperBypass
+  fullName: CG.Orange.Options.OrangeIdentityOptions.DeveloperBypass
+  nameWithType: OrangeIdentityOptions.DeveloperBypass
+- uid: CG.Orange.Options.OrangeIdentityOptions.DeveloperBypass*
+  name: DeveloperBypass
+  href: api/CG.Orange.Options.OrangeIdentityOptions.html#CG_Orange_Options_OrangeIdentityOptions_DeveloperBypass_
+  commentId: Overload:CG.Orange.Options.OrangeIdentityOptions.DeveloperBypass
+  isSpec: "True"
+  fullName: CG.Orange.Options.OrangeIdentityOptions.DeveloperBypass
+  nameWithType: OrangeIdentityOptions.DeveloperBypass
 - uid: CG.Orange.Options.ProviderOptions
   name: ProviderOptions
   href: api/CG.Orange.Options.ProviderOptions.html
@@ -7858,22 +7871,6 @@ references:
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005
   fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005
   nameWithType: WebApplicationBuilderExtensions005
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddOrangeIdentity(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeIdentity_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddOrangeIdentity(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions005.AddOrangeIdentity(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions005.AddOrangeIdentity(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity*
-  name: AddOrangeIdentity
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeIdentity_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity
-  isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity
-  nameWithType: WebApplicationBuilderExtensions005.AddOrangeIdentity
 - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
   name: AddOrangeServices(WebApplicationBuilder, String, Nullable<ILogger>)
   href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeServices_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
