@@ -5668,15 +5668,15 @@ references:
   commentId: T:CG.Orange.Managers.SettingFileManager
   fullName: CG.Orange.Managers.SettingFileManager
   nameWithType: SettingFileManager
-- uid: CG.Orange.Managers.SettingFileManager.#ctor(ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
-  name: SettingFileManager(ISettingFileRepository, ILogger<ISettingFileManager>)
-  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_ISettingFileRepository_ILogger_CG_Orange_Managers_ISettingFileManager__
-  commentId: M:CG.Orange.Managers.SettingFileManager.#ctor(ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
-  name.vb: SettingFileManager(ISettingFileRepository, ILogger(Of ISettingFileManager))
-  fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger<CG.Orange.Managers.ISettingFileManager>)
-  fullName.vb: CG.Orange.Managers.SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger(Of CG.Orange.Managers.ISettingFileManager))
-  nameWithType: SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger<ISettingFileManager>)
-  nameWithType.vb: SettingFileManager.SettingFileManager(ISettingFileRepository, ILogger(Of ISettingFileManager))
+- uid: CG.Orange.Managers.SettingFileManager.#ctor(ICryptographer,ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
+  name: SettingFileManager(ICryptographer, ISettingFileRepository, ILogger<ISettingFileManager>)
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_ICryptographer_ISettingFileRepository_ILogger_CG_Orange_Managers_ISettingFileManager__
+  commentId: M:CG.Orange.Managers.SettingFileManager.#ctor(ICryptographer,ISettingFileRepository,ILogger{CG.Orange.Managers.ISettingFileManager})
+  name.vb: SettingFileManager(ICryptographer, ISettingFileRepository, ILogger(Of ISettingFileManager))
+  fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager(ICryptographer, ISettingFileRepository, ILogger<CG.Orange.Managers.ISettingFileManager>)
+  fullName.vb: CG.Orange.Managers.SettingFileManager.SettingFileManager(ICryptographer, ISettingFileRepository, ILogger(Of CG.Orange.Managers.ISettingFileManager))
+  nameWithType: SettingFileManager.SettingFileManager(ICryptographer, ISettingFileRepository, ILogger<ISettingFileManager>)
+  nameWithType.vb: SettingFileManager.SettingFileManager(ICryptographer, ISettingFileRepository, ILogger(Of ISettingFileManager))
 - uid: CG.Orange.Managers.SettingFileManager.#ctor*
   name: SettingFileManager
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__ctor_
@@ -5684,6 +5684,12 @@ references:
   isSpec: "True"
   fullName: CG.Orange.Managers.SettingFileManager.SettingFileManager
   nameWithType: SettingFileManager.SettingFileManager
+- uid: CG.Orange.Managers.SettingFileManager._cryptographer
+  name: _cryptographer
+  href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__cryptographer
+  commentId: F:CG.Orange.Managers.SettingFileManager._cryptographer
+  fullName: CG.Orange.Managers.SettingFileManager._cryptographer
+  nameWithType: SettingFileManager._cryptographer
 - uid: CG.Orange.Managers.SettingFileManager._logger
   name: _logger
   href: api/CG.Orange.Managers.SettingFileManager.html#CG_Orange_Managers_SettingFileManager__logger
