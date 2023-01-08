@@ -1,4 +1,7 @@
 ﻿
+using static CG.Orange.Globals.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace CG.Orange.Managers;
 
 /// <summary>
@@ -12,6 +15,11 @@ internal class SettingFileManager : ISettingFileManager
     // *******************************************************************
 
     #region Fields
+
+    /// <summary>
+    /// This field contains the cryptographer for this manager.
+    /// </summary>
+    internal protected readonly ICryptographer _cryptographer = null!;
 
     /// <summary>
     /// This field contains the repository for this manager.
@@ -35,21 +43,26 @@ internal class SettingFileManager : ISettingFileManager
     /// This constructor creates a new instance of the <see cref="SettingFileManager"/>
     /// class.
     /// </summary>
+    /// <param name="cryptographer">The cryptographer to use with this
+    /// manager.</param>
     /// <param name="settingFileRepository">The setting file repository to use
     /// with this manager.</param>
     /// <param name="logger">The logger to use with this manager.</param>
     /// <exception cref="ArgumentException">This exception is thrown whenever one
     /// or more arguments are missing, or invalid.</exception>
     public SettingFileManager(
+        ICryptographer cryptographer,
         ISettingFileRepository settingFileRepository,
         ILogger<ISettingFileManager> logger
         )
     {
         // Validate the arguments before attempting to use them.
-        Guard.Instance().ThrowIfNull(settingFileRepository, nameof(settingFileRepository))
+        Guard.Instance().ThrowIfNull(cryptographer, nameof(cryptographer))
+            .ThrowIfNull(settingFileRepository, nameof(settingFileRepository))
             .ThrowIfNull(logger, nameof(logger));
 
         // Save the reference(s)
+        _cryptographer = cryptographer;
         _repository = settingFileRepository;
         _logger = logger;
     }
@@ -204,6 +217,27 @@ internal class SettingFileManager : ISettingFileManager
             settingFile.LastUpdatedBy = null;
             settingFile.LastUpdatedOnUtc = null;
 
+            // Is there JSON?
+            if (!string.IsNullOrEmpty(settingFile.Json))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting json for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Encrypt the JSON, at rest.
+                settingFile.Json = await _cryptographer.AesEncryptAsync(
+                    settingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set non-null JSON.
+                settingFile.Json = "{ }";
+            }
+
             // Log what we are about to do.
             _logger.LogTrace(
                 "Deferring to {name}",
@@ -216,10 +250,32 @@ internal class SettingFileManager : ISettingFileManager
                 cancellationToken
                 ).ConfigureAwait(false);
 
-            // Log what we are about to do.
-            _logger.LogTrace(
-                "Counting setting files"
-                );
+            // Is there JSON?
+            if (!string.IsNullOrEmpty(newSettingFile.Json))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting JSON for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Decrypt the JSON.
+                newSettingFile.Json = await _cryptographer.AesDecryptAsync(
+                    newSettingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Setting empty JSON for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Set non-null JSON.
+                newSettingFile.Json = "{ }";
+            }
 
             // Return the results.
             return newSettingFile;
@@ -316,16 +372,50 @@ internal class SettingFileManager : ISettingFileManager
 
             // Log what we are about to do.
             _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
+                "Updating the {name} model stats for: {id}",
+                nameof(SettingFileModel),
+                settingFile.Id
                 );
 
             // Ensure the stats are correct.
             settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
             settingFile.LastUpdatedBy = userName;
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the properties for setting file: {id}",
+                settingFile.Id
+                );
+
             // Disable the settingFile.
             settingFile.IsDisabled = true;
+
+            // Is there JSON?
+            if (!string.IsNullOrEmpty(settingFile.Json))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting json for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Encrypt the JSON.
+                settingFile.Json = await _cryptographer.AesEncryptAsync(
+                    settingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Setting empty JSON for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Set non-null JSON.
+                settingFile.Json = "{ }";
+            }
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -334,10 +424,28 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Perform the operation.
-            return await _repository.UpdateAsync(
+            var updatedSettingFile = await _repository.UpdateAsync(
                 settingFile,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Is there JSON?
+            if (string.IsNullOrEmpty(updatedSettingFile.Json))
+            {
+                // Decrypt the JSON.
+                updatedSettingFile.Json = await _cryptographer.AesDecryptAsync(
+                    updatedSettingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set non-null JSON.
+                updatedSettingFile.Json = "{ }";
+            }
+
+            // Return the results.
+            return updatedSettingFile;
         }
         catch (Exception ex)
         {
@@ -378,16 +486,50 @@ internal class SettingFileManager : ISettingFileManager
 
             // Log what we are about to do.
             _logger.LogDebug(
-                "Updating the {name} model stats",
-                nameof(SettingFileModel)
+                "Updating the {name} model stats for: {id}",
+                nameof(SettingFileModel),
+                settingFile.Id
                 );
 
             // Ensure the stats are correct.
             settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
             settingFile.LastUpdatedBy = userName;
 
+            // Log what we are about to do.
+            _logger.LogDebug(
+                "Updating the properties for setting file: {id}",
+                settingFile.Id
+                );
+
             // Enable the settingFile.
             settingFile.IsDisabled = false;
+
+            // Is there JSON?
+            if (!string.IsNullOrEmpty(settingFile.Json))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting json for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Encrypt the JSON.
+                settingFile.Json = await _cryptographer.AesEncryptAsync(
+                    settingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Setting empty JSON for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Set non-null JSON.
+                settingFile.Json = "{ }";
+            }
 
             // Log what we are about to do.
             _logger.LogTrace(
@@ -396,10 +538,28 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Perform the operation.
-            return await _repository.UpdateAsync(
+            var updatedSettingFile = await _repository.UpdateAsync(
                 settingFile,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Is there JSON?
+            if (string.IsNullOrEmpty(updatedSettingFile.Json))
+            {
+                // Decrypt the JSON.
+                updatedSettingFile.Json = await _cryptographer.AesDecryptAsync(
+                    updatedSettingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set non-null JSON.
+                updatedSettingFile.Json = "{ }";
+            }
+
+            // Return the results.
+            return updatedSettingFile;
         }
         catch (Exception ex)
         {
@@ -433,9 +593,55 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Perform the operation.
-            var result = await _repository.FindAllAsync(
+            var data = await _repository.FindAllAsync(
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // We must create the secondary list here because the loop
+            //   below creates temporary objects inside the enumeration
+            //   process, so, the work we do to decrypt the JSON gets
+            //   lost unless we manually copy the results to another list.
+            var result = new List<SettingFileModel>();
+
+            // Loop through the setting files.
+            foreach (var settingFile in data)
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting JSON for setting file: {key}",
+                    settingFile.Id
+                    );
+
+                // Is there JSON?
+                if (!string.IsNullOrEmpty(settingFile.Json))
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting JSON for setting file: {id}",
+                        settingFile.Id
+                        );
+
+                    // Decrypt the JSON.
+                    settingFile.Json = await _cryptographer.AesDecryptAsync(
+                        settingFile.Json,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+                else
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Setting empty JSON for setting file: {id}",
+                        settingFile.Id
+                        );
+
+                    // Set non-null JSON.
+                    settingFile.Json = "{ }";
+                }
+
+                // Add to the list.
+                result.Add(settingFile);
+            }
 
             // Return the results.
             return result;
@@ -477,14 +683,51 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Perform the operation.
-            var result = await _repository.FindByApplicationAndEnvironmentAsync(
+            var data = await _repository.FindByApplicationAndEnvironmentAsync(
                 applicationName,
                 environmentName,
                 cancellationToken
                 ).ConfigureAwait(false);
 
+            // Did we find a match?
+            if (data is not null)
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting JSON for setting file: {key}",
+                    data.Id
+                    );
+
+                // Is there JSON?
+                if (!string.IsNullOrEmpty(data.Json))
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting JSON for setting file: {id}",
+                        data.Id
+                        );
+
+                    // Decrypt the JSON.
+                    data.Json = await _cryptographer.AesDecryptAsync(
+                        data.Json,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+                else
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Setting empty JSON for setting file: {id}",
+                        data.Id
+                        );
+
+                    // Set non-null JSON.
+                    data.Json = "{ }";
+                }
+            }
+
             // Return the results.
-            return result;
+            return data;
         }
         catch (Exception ex)
         {
@@ -527,6 +770,37 @@ internal class SettingFileManager : ISettingFileManager
                 id,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Did we find a match?
+            if (result is not null)
+            {
+                // Is there JSON?
+                if (!string.IsNullOrEmpty(result.Json))
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Decrypting JSON for setting file: {id}",
+                        result.Id
+                        );
+
+                    // Decrypt the JSON.
+                    result.Json = await _cryptographer.AesDecryptAsync(
+                        result.Json,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+                else
+                {
+                    // Log what we are about to do.
+                    _logger.LogDebug(
+                        "Setting empty JSON for setting file: {id}",
+                        result.Id
+                        );
+
+                    // Set non-null JSON.
+                    result.Json = "{ }";
+                }
+            }
 
             // Return the results.
             return result;
@@ -573,6 +847,33 @@ internal class SettingFileManager : ISettingFileManager
             settingFile.LastUpdatedOnUtc = DateTime.UtcNow;
             settingFile.LastUpdatedBy = userName;
 
+            // Is there JSON?
+            if (!string.IsNullOrEmpty(settingFile.Json))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Encrypting json for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Encrypt the JSON, at rest.
+                settingFile.Json = await _cryptographer.AesEncryptAsync(
+                    settingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Setting empty JSON for setting file: {id}",
+                    settingFile.Id
+                    );
+
+                // Set non-null JSON.
+                settingFile.Json = "{ }";
+            }
+
             // Log what we are about to do.
             _logger.LogTrace(
                 "Deferring to {name}",
@@ -580,10 +881,41 @@ internal class SettingFileManager : ISettingFileManager
                 );
 
             // Perform the operation.
-            return await _repository.UpdateAsync(
+            var updatedSettingFile = await _repository.UpdateAsync(
                 settingFile,
                 cancellationToken
                 ).ConfigureAwait(false);
+
+            // Is there a value?
+            if (!string.IsNullOrEmpty(updatedSettingFile.Json))
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Decrypting JSON for setting file: {id}",
+                    updatedSettingFile.Id
+                    );
+
+                // Decrypt the JSON.
+                updatedSettingFile.Json = await _cryptographer.AesDecryptAsync(
+                    updatedSettingFile.Json,
+                    cancellationToken
+                    ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Log what we are about to do.
+                _logger.LogDebug(
+                    "Setting empty JSON for setting file: {id}",
+                    updatedSettingFile.Id
+                    );
+
+                // Set non-null JSON.
+                updatedSettingFile.Json = "{ }";
+            }
+
+            // Return the results.
+            return updatedSettingFile;
+
         }
         catch (Exception ex)
         {

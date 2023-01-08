@@ -424,10 +424,8 @@ internal class ProviderPropertyManager : IProviderPropertyManager
             //   gets lost unless we manually copy the results to another list.
             var result = new List<ProviderPropertyModel>();
 
-            // Loop through the properties with values.
-            foreach (var providerProperty in data.Where(x => 
-                !string.IsNullOrEmpty(x.Value)
-                ))
+            // Loop through the properties.
+            foreach (var providerProperty in data)
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -435,11 +433,20 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                     providerProperty.Key
                     );
 
-                // Decrypt the value.
-                providerProperty.Value = await _cryptographer.AesDecryptAsync(
-                    providerProperty.Value,
-                    cancellationToken
-                    ).ConfigureAwait(false);
+                // Is there a value?
+                if (string.IsNullOrEmpty(providerProperty.Value))
+                {
+                    // Decrypt the value.
+                    providerProperty.Value = await _cryptographer.AesDecryptAsync(
+                        providerProperty.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+                else
+                {
+                    // Set non-null value.
+                    providerProperty.Value = "";
+                }
 
                 // Add to the list.
                 result.Add(providerProperty);
@@ -490,9 +497,7 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                 ).ConfigureAwait(false);
 
             // Loop through the properties.
-            foreach (var providerProperty in result.Where(x => 
-                !string.IsNullOrEmpty(x.Value)
-                ))
+            foreach (var providerProperty in result)
             {
                 // Log what we are about to do.
                 _logger.LogDebug(
@@ -500,11 +505,20 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                     providerProperty.Key
                     );
 
-                // Decrypt the value.
-                providerProperty.Value = await _cryptographer.AesDecryptAsync(
-                    providerProperty.Value,
-                    cancellationToken
-                    ).ConfigureAwait(false);
+                // Is there a value?
+                if (string.IsNullOrEmpty(providerProperty.Value))
+                {
+                    // Decrypt the value.
+                    providerProperty.Value = await _cryptographer.AesDecryptAsync(
+                        providerProperty.Value,
+                        cancellationToken
+                        ).ConfigureAwait(false);
+                }
+                else
+                {
+                    // Set non-null value.
+                    providerProperty.Value = "";
+                }
             }
 
             // Return the results.
@@ -572,6 +586,11 @@ internal class ProviderPropertyManager : IProviderPropertyManager
                     result.Value,
                     cancellationToken
                     ).ConfigureAwait(false);
+            }
+            else
+            {
+                // Set non-null value.
+                result.Value = "";
             }
 
             // Return the results.
