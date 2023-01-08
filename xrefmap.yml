@@ -4355,44 +4355,25 @@ references:
   commentId: N:CG.Orange.Host.Themes
   fullName: CG.Orange.Host.Themes
   nameWithType: CG.Orange.Host.Themes
-- uid: CG.Orange.Host.Themes.DefaultTheme
-  name: DefaultTheme
-  href: api/CG.Orange.Host.Themes.DefaultTheme.html
-  commentId: T:CG.Orange.Host.Themes.DefaultTheme
-  fullName: CG.Orange.Host.Themes.DefaultTheme
-  nameWithType: DefaultTheme
-- uid: CG.Orange.Host.Themes.DefaultTheme.#ctor
-  name: DefaultTheme()
-  href: api/CG.Orange.Host.Themes.DefaultTheme.html#CG_Orange_Host_Themes_DefaultTheme__ctor
-  commentId: M:CG.Orange.Host.Themes.DefaultTheme.#ctor
-  fullName: CG.Orange.Host.Themes.DefaultTheme.DefaultTheme()
-  nameWithType: DefaultTheme.DefaultTheme()
-- uid: CG.Orange.Host.Themes.DefaultTheme.#ctor*
-  name: DefaultTheme
-  href: api/CG.Orange.Host.Themes.DefaultTheme.html#CG_Orange_Host_Themes_DefaultTheme__ctor_
-  commentId: Overload:CG.Orange.Host.Themes.DefaultTheme.#ctor
+- uid: CG.Orange.Host.Themes.OrangeTheme
+  name: OrangeTheme
+  href: api/CG.Orange.Host.Themes.OrangeTheme.html
+  commentId: T:CG.Orange.Host.Themes.OrangeTheme
+  fullName: CG.Orange.Host.Themes.OrangeTheme
+  nameWithType: OrangeTheme
+- uid: CG.Orange.Host.Themes.OrangeTheme.#ctor
+  name: OrangeTheme()
+  href: api/CG.Orange.Host.Themes.OrangeTheme.html#CG_Orange_Host_Themes_OrangeTheme__ctor
+  commentId: M:CG.Orange.Host.Themes.OrangeTheme.#ctor
+  fullName: CG.Orange.Host.Themes.OrangeTheme.OrangeTheme()
+  nameWithType: OrangeTheme.OrangeTheme()
+- uid: CG.Orange.Host.Themes.OrangeTheme.#ctor*
+  name: OrangeTheme
+  href: api/CG.Orange.Host.Themes.OrangeTheme.html#CG_Orange_Host_Themes_OrangeTheme__ctor_
+  commentId: Overload:CG.Orange.Host.Themes.OrangeTheme.#ctor
   isSpec: "True"
-  fullName: CG.Orange.Host.Themes.DefaultTheme.DefaultTheme
-  nameWithType: DefaultTheme.DefaultTheme
-- uid: CG.Orange.Host.Themes.DefaultTheme._instance
-  name: _instance
-  href: api/CG.Orange.Host.Themes.DefaultTheme.html#CG_Orange_Host_Themes_DefaultTheme__instance
-  commentId: F:CG.Orange.Host.Themes.DefaultTheme._instance
-  fullName: CG.Orange.Host.Themes.DefaultTheme._instance
-  nameWithType: DefaultTheme._instance
-- uid: CG.Orange.Host.Themes.DefaultTheme.Instance
-  name: Instance()
-  href: api/CG.Orange.Host.Themes.DefaultTheme.html#CG_Orange_Host_Themes_DefaultTheme_Instance
-  commentId: M:CG.Orange.Host.Themes.DefaultTheme.Instance
-  fullName: CG.Orange.Host.Themes.DefaultTheme.Instance()
-  nameWithType: DefaultTheme.Instance()
-- uid: CG.Orange.Host.Themes.DefaultTheme.Instance*
-  name: Instance
-  href: api/CG.Orange.Host.Themes.DefaultTheme.html#CG_Orange_Host_Themes_DefaultTheme_Instance_
-  commentId: Overload:CG.Orange.Host.Themes.DefaultTheme.Instance
-  isSpec: "True"
-  fullName: CG.Orange.Host.Themes.DefaultTheme.Instance
-  nameWithType: DefaultTheme.Instance
+  fullName: CG.Orange.Host.Themes.OrangeTheme.OrangeTheme
+  nameWithType: OrangeTheme.OrangeTheme
 - uid: CG.Orange.Host.ViewModels
   name: CG.Orange.Host.ViewModels
   href: api/CG.Orange.Host.ViewModels.html
@@ -7783,88 +7764,320 @@ references:
   commentId: N:Microsoft.AspNetCore.Builder
   fullName: Microsoft.AspNetCore.Builder
   nameWithType: Microsoft.AspNetCore.Builder
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions
-  name: WebApplicationBuilderExtensions
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html
-  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions
-  nameWithType: WebApplicationBuilderExtensions
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions_AddInMemoryDataAccess_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions.AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions.AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess*
-  name: AddInMemoryDataAccess
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions_AddInMemoryDataAccess_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess
-  isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions.AddInMemoryDataAccess
-  nameWithType: WebApplicationBuilderExtensions.AddInMemoryDataAccess
 - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001
   name: WebApplicationBuilderExtensions001
   href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001
   fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001
   nameWithType: WebApplicationBuilderExtensions001
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddManagers(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddManagers_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddManagers(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions001.AddManagers(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions001.AddManagers(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers*
-  name: AddManagers
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddManagers_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddInMemoryDataAccess_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions001.AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions001.AddInMemoryDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess*
+  name: AddInMemoryDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions001_AddInMemoryDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddManagers
-  nameWithType: WebApplicationBuilderExtensions001.AddManagers
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions001.AddInMemoryDataAccess
+  nameWithType: WebApplicationBuilderExtensions001.AddInMemoryDataAccess
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002
+  name: WebApplicationBuilderExtensions002
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002
+  nameWithType: WebApplicationBuilderExtensions002
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddSqliteDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions002_AddSqliteDataAccess_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddSqliteDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions002.AddSqliteDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions002.AddSqliteDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess*
+  name: AddSqliteDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions002_AddSqliteDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions002.AddSqliteDataAccess
+  nameWithType: WebApplicationBuilderExtensions002.AddSqliteDataAccess
 - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003
   name: WebApplicationBuilderExtensions003
   href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html
   commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003
   fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003
   nameWithType: WebApplicationBuilderExtensions003
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name: AddRepositories(WebApplicationBuilder, String, Nullable<ILogger>)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddRepositories_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
-  name.vb: AddRepositories(WebApplicationBuilder, String, Nullable(Of ILogger))
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
-  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
-  nameWithType: WebApplicationBuilderExtensions003.AddRepositories(WebApplicationBuilder, String, Nullable<ILogger>)
-  nameWithType.vb: WebApplicationBuilderExtensions003.AddRepositories(WebApplicationBuilder, String, Nullable(Of ILogger))
-- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories*
-  name: AddRepositories
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddRepositories_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddSqlServerDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddSqlServerDataAccess_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddSqlServerDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions003.AddSqlServerDataAccess(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions003.AddSqlServerDataAccess(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess*
+  name: AddSqlServerDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions003_AddSqlServerDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddRepositories
-  nameWithType: WebApplicationBuilderExtensions003.AddRepositories
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions
-  name: WebApplicationExtensions
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html
-  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions
-  nameWithType: WebApplicationExtensions
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions003.AddSqlServerDataAccess
+  nameWithType: WebApplicationBuilderExtensions003.AddSqlServerDataAccess
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004
+  name: WebApplicationBuilderExtensions004
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004
+  nameWithType: WebApplicationBuilderExtensions004
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddOrangeRepositories(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions004_AddOrangeRepositories_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddOrangeRepositories(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions004.AddOrangeRepositories(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions004.AddOrangeRepositories(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories*
+  name: AddOrangeRepositories
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions004_AddOrangeRepositories_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions004.AddOrangeRepositories
+  nameWithType: WebApplicationBuilderExtensions004.AddOrangeRepositories
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005
+  name: WebApplicationBuilderExtensions005
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005
+  nameWithType: WebApplicationBuilderExtensions005
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddOrangeIdentity(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeIdentity_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddOrangeIdentity(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions005.AddOrangeIdentity(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions005.AddOrangeIdentity(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity*
+  name: AddOrangeIdentity
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeIdentity_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeIdentity
+  nameWithType: WebApplicationBuilderExtensions005.AddOrangeIdentity
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddOrangeServices(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeServices_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddOrangeServices(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions005.AddOrangeServices(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions005.AddOrangeServices(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices*
+  name: AddOrangeServices
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions005_AddOrangeServices_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions005.AddOrangeServices
+  nameWithType: WebApplicationBuilderExtensions005.AddOrangeServices
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006
+  name: WebApplicationBuilderExtensions006
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006
+  nameWithType: WebApplicationBuilderExtensions006
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddOrangeControllers(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions006_AddOrangeControllers_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddOrangeControllers(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions006.AddOrangeControllers(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions006.AddOrangeControllers(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers*
+  name: AddOrangeControllers
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions006_AddOrangeControllers_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions006.AddOrangeControllers
+  nameWithType: WebApplicationBuilderExtensions006.AddOrangeControllers
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007
+  name: WebApplicationBuilderExtensions007
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007
+  nameWithType: WebApplicationBuilderExtensions007
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name: AddOrangeManagers(WebApplicationBuilder, String, Nullable<ILogger>)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions007_AddOrangeManagers_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_String_System_Nullable_ILogger__
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.String,System.Nullable{ILogger})
+  name.vb: AddOrangeManagers(WebApplicationBuilder, String, Nullable(Of ILogger))
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable<ILogger>)
+  fullName.vb: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.String, System.Nullable(Of ILogger))
+  nameWithType: WebApplicationBuilderExtensions007.AddOrangeManagers(WebApplicationBuilder, String, Nullable<ILogger>)
+  nameWithType.vb: WebApplicationBuilderExtensions007.AddOrangeManagers(WebApplicationBuilder, String, Nullable(Of ILogger))
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers*
+  name: AddOrangeManagers
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.html#Microsoft_AspNetCore_Builder_WebApplicationBuilderExtensions007_AddOrangeManagers_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilderExtensions007.AddOrangeManagers
+  nameWithType: WebApplicationBuilderExtensions007.AddOrangeManagers
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions001
+  name: WebApplicationExtensions001
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions001.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions001
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions001
+  nameWithType: WebApplicationExtensions001
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions001.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
   name: UseInMemoryDataAccess(WebApplication)
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions_UseInMemoryDataAccess_Microsoft_AspNetCore_Builder_WebApplication_
-  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
-  nameWithType: WebApplicationExtensions.UseInMemoryDataAccess(WebApplication)
-- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess*
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions001_UseInMemoryDataAccess_Microsoft_AspNetCore_Builder_WebApplication_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions001.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions001.UseInMemoryDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  nameWithType: WebApplicationExtensions001.UseInMemoryDataAccess(WebApplication)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions001.UseInMemoryDataAccess*
   name: UseInMemoryDataAccess
-  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions_UseInMemoryDataAccess_
-  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions001.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions001_UseInMemoryDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions001.UseInMemoryDataAccess
   isSpec: "True"
-  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions.UseInMemoryDataAccess
-  nameWithType: WebApplicationExtensions.UseInMemoryDataAccess
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions001.UseInMemoryDataAccess
+  nameWithType: WebApplicationExtensions001.UseInMemoryDataAccess
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002
+  name: WebApplicationExtensions002
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions002
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002
+  nameWithType: WebApplicationExtensions002
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  name: DropAndRecreateDatabaseAsync(WebApplication, CancellationToken)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_DropAndRecreateDatabaseAsync_Microsoft_AspNetCore_Builder_WebApplication_CancellationToken_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication, CancellationToken)
+  nameWithType: WebApplicationExtensions002.DropAndRecreateDatabaseAsync(WebApplication, CancellationToken)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync*
+  name: DropAndRecreateDatabaseAsync
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_DropAndRecreateDatabaseAsync_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.DropAndRecreateDatabaseAsync
+  nameWithType: WebApplicationExtensions002.DropAndRecreateDatabaseAsync
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  name: MigrateDatabaseAsync(WebApplication, CancellationToken)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_MigrateDatabaseAsync_Microsoft_AspNetCore_Builder_WebApplication_CancellationToken_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication, CancellationToken)
+  nameWithType: WebApplicationExtensions002.MigrateDatabaseAsync(WebApplication, CancellationToken)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync*
+  name: MigrateDatabaseAsync
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_MigrateDatabaseAsync_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.MigrateDatabaseAsync
+  nameWithType: WebApplicationExtensions002.MigrateDatabaseAsync
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  name: UseSqliteDataAccess(WebApplication)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_UseSqliteDataAccess_Microsoft_AspNetCore_Builder_WebApplication_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseSqliteDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  nameWithType: WebApplicationExtensions002.UseSqliteDataAccess(WebApplication)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseSqliteDataAccess*
+  name: UseSqliteDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions002.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions002_UseSqliteDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseSqliteDataAccess
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions002.UseSqliteDataAccess
+  nameWithType: WebApplicationExtensions002.UseSqliteDataAccess
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003
+  name: WebApplicationExtensions003
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions003
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003
+  nameWithType: WebApplicationExtensions003
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  name: DropAndRecreateDatabaseAsync(WebApplication, CancellationToken)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions003_DropAndRecreateDatabaseAsync_Microsoft_AspNetCore_Builder_WebApplication_CancellationToken_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions003.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.DropAndRecreateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication, CancellationToken)
+  nameWithType: WebApplicationExtensions003.DropAndRecreateDatabaseAsync(WebApplication, CancellationToken)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.DropAndRecreateDatabaseAsync*
+  name: DropAndRecreateDatabaseAsync
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions003_DropAndRecreateDatabaseAsync_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions003.DropAndRecreateDatabaseAsync
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.DropAndRecreateDatabaseAsync
+  nameWithType: WebApplicationExtensions003.DropAndRecreateDatabaseAsync
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  name: MigrateDatabaseAsync(WebApplication, CancellationToken)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions003_MigrateDatabaseAsync_Microsoft_AspNetCore_Builder_WebApplication_CancellationToken_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions003.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication,CancellationToken)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.MigrateDatabaseAsync(Microsoft.AspNetCore.Builder.WebApplication, CancellationToken)
+  nameWithType: WebApplicationExtensions003.MigrateDatabaseAsync(WebApplication, CancellationToken)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.MigrateDatabaseAsync*
+  name: MigrateDatabaseAsync
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions003_MigrateDatabaseAsync_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions003.MigrateDatabaseAsync
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.MigrateDatabaseAsync
+  nameWithType: WebApplicationExtensions003.MigrateDatabaseAsync
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.UseSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  name: UseSqlServerDataAccess(WebApplication)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions003_UseSqlServerDataAccess_Microsoft_AspNetCore_Builder_WebApplication_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions003.UseSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.UseSqlServerDataAccess(Microsoft.AspNetCore.Builder.WebApplication)
+  nameWithType: WebApplicationExtensions003.UseSqlServerDataAccess(WebApplication)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.UseSqlServerDataAccess*
+  name: UseSqlServerDataAccess
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions003.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions003_UseSqlServerDataAccess_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions003.UseSqlServerDataAccess
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions003.UseSqlServerDataAccess
+  nameWithType: WebApplicationExtensions003.UseSqlServerDataAccess
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions004
+  name: WebApplicationExtensions004
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions004.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions004
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions004
+  nameWithType: WebApplicationExtensions004
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions004.UseOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplication)
+  name: UseOrangeIdentity(WebApplication)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions004.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions004_UseOrangeIdentity_Microsoft_AspNetCore_Builder_WebApplication_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions004.UseOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions004.UseOrangeIdentity(Microsoft.AspNetCore.Builder.WebApplication)
+  nameWithType: WebApplicationExtensions004.UseOrangeIdentity(WebApplication)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions004.UseOrangeIdentity*
+  name: UseOrangeIdentity
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions004.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions004_UseOrangeIdentity_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions004.UseOrangeIdentity
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions004.UseOrangeIdentity
+  nameWithType: WebApplicationExtensions004.UseOrangeIdentity
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions005
+  name: WebApplicationExtensions005
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions005.html
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationExtensions005
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions005
+  nameWithType: WebApplicationExtensions005
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions005.UseOrangeControllers(Microsoft.AspNetCore.Builder.WebApplication)
+  name: UseOrangeControllers(WebApplication)
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions005_UseOrangeControllers_Microsoft_AspNetCore_Builder_WebApplication_
+  commentId: M:Microsoft.AspNetCore.Builder.WebApplicationExtensions005.UseOrangeControllers(Microsoft.AspNetCore.Builder.WebApplication)
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions005.UseOrangeControllers(Microsoft.AspNetCore.Builder.WebApplication)
+  nameWithType: WebApplicationExtensions005.UseOrangeControllers(WebApplication)
+- uid: Microsoft.AspNetCore.Builder.WebApplicationExtensions005.UseOrangeControllers*
+  name: UseOrangeControllers
+  href: api/Microsoft.AspNetCore.Builder.WebApplicationExtensions005.html#Microsoft_AspNetCore_Builder_WebApplicationExtensions005_UseOrangeControllers_
+  commentId: Overload:Microsoft.AspNetCore.Builder.WebApplicationExtensions005.UseOrangeControllers
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationExtensions005.UseOrangeControllers
+  nameWithType: WebApplicationExtensions005.UseOrangeControllers
