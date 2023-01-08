@@ -1,9 +1,9 @@
 
-### CG.Orange.Data.SqlServer - README
+## CG.Orange.Data.SqlServer - README
 
 This project contains an EFCORE SQLServer provider for the **CG.Orange** microservice.
 
-#### Notes
+### Notes
 
 To add/remove/change EFCORE migrations follow these steps:
     
@@ -12,6 +12,7 @@ To add/remove/change EFCORE migrations follow these steps:
 3. Use the normal add-migration commands, in the Package Manager Console window. Remember to use the -p CG.Orange.Data.SqlServer argument, so the migrations will end up in the right project.
 
 So here's an example command line for adding a migration in Visual Studio: 
+
 ```
 add-migration MyMigration -p CG.Orange.Data.SqlServer
 ```

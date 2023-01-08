@@ -1,9 +1,9 @@
 
-### CG.Orange.Data.Sqlite - README
+## CG.Orange.Data.Sqlite - README
 
 This project contains an EFCORE SQLite provider for the **CG.Orange** microservice.
 
-#### Notes
+### Notes
 
 To add/remove/change EFCORE migrations follow these steps:
     
