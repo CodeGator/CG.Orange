@@ -1,5 +1,5 @@
 ﻿@page "/admin/providers"
-@attribute [Authorize(Roles = "SuperAdmin")]
+@attribute [Authorize(Policy = PolicyNameDefaults.SuperAdminPolicy)]
 
 <PageTitle>Providers</PageTitle>
 

@@ -36,5 +36,12 @@ public class OrangeIdentityOptions
     [Required]
     public string CookieName { get; set; } = "Orange.Identity";
 
+    /// <summary>
+    /// This property indicates when a developer bypass is in effect, which 
+    /// allows access to everything without requiring credentials of any
+    /// kind (only works in a development environment).
+    /// </summary>
+    public bool DeveloperBypass { get; set; }
+
     #endregion
 }

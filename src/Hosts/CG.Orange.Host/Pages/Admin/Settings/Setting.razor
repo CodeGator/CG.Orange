@@ -1,5 +1,5 @@
 ﻿@page "/admin/settings/setting/{SettingId:int}"
-@attribute [Authorize(Roles = "SuperAdmin")]
+@attribute [Authorize(Policy = PolicyNameDefaults.SuperAdminPolicy)]
 
 <PageTitle>Setting</PageTitle>
 
