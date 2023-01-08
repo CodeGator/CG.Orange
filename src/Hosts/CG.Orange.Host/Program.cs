@@ -1,6 +1,6 @@
-using CG.Orange.Host.Hubs;
 using Serilog;
 
+// Uncomment this line to help troubleshoot startup problems.
 //BootstrapLogger.LogLevelToDebug();
 
 try
@@ -25,20 +25,17 @@ try
     builder.Services.AddRazorPages();
     builder.Services.AddServerSideBlazor();
     builder.Services.AddHttpContextAccessor();
-
-    builder.Services.AddControllers().AddApplicationPart(
-        typeof(CG.Orange.Controllers.ConfigurationController).Assembly
-        );
-
+    
     // Add MudBlazor stuff
     builder.Services.AddMudServices();
 
     // Add Orange stuff.
     builder.AddDataAccess(bootstrapLogger: BootstrapLogger.Instance())
-        .AddRepositories(bootstrapLogger: BootstrapLogger.Instance())
-        .AddManagers(bootstrapLogger: BootstrapLogger.Instance())
+        .AddOrangeRepositories(bootstrapLogger: BootstrapLogger.Instance())
+        .AddOrangeManagers(bootstrapLogger: BootstrapLogger.Instance())
         .AddSeeding<SeedDirector>(bootstrapLogger: BootstrapLogger.Instance())
         .AddBlazorPlugins(bootstrapLogger: BootstrapLogger.Instance())
+        .AddOrangeControllers(bootstrapLogger: BootstrapLogger.Instance())
         .AddOrangeIdentity(bootstrapLogger: BootstrapLogger.Instance())
         .AddOrangeServices(bootstrapLogger: BootstrapLogger.Instance());
 
@@ -63,13 +60,13 @@ try
     app.MapBlazorHub();
     app.MapHub<SignalRHub>("/_backchannel");
     app.MapFallbackToPage("/_Host");
-    app.MapControllers();
-    
+        
     // Use Orange stuff.
     app.UseDataAccess()
         .UseOrangeIdentity()
         .UseSeeding()
-        .UseBlazorPlugins();
+        .UseBlazorPlugins()
+        .UseOrangeControllers();
 
     // Run the application.
     app.Run();

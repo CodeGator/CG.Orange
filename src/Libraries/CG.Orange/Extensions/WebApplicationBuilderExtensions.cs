@@ -5,7 +5,7 @@ namespace Microsoft.AspNetCore.Builder;
 /// This class contains extension methods related to the <see cref="WebApplicationBuilder"/>
 /// type.
 /// </summary>
-public static class WebApplicationBuilderExtensions001
+public static class WebApplicationBuilderExtensions007
 {
     // *******************************************************************
     // Public methods.
@@ -27,7 +27,7 @@ public static class WebApplicationBuilderExtensions001
     /// parameter, for chaining calls together, Fluent style.</returns>
     /// <exception cref="ArgumentException">This exception is thrown whenever
     /// one or more arguments are missing, or invalid.</exception>
-    public static WebApplicationBuilder AddManagers(
+    public static WebApplicationBuilder AddOrangeManagers(
         this WebApplicationBuilder webApplicationBuilder,
         string sectionName = "BLL",
         ILogger? bootstrapLogger = null

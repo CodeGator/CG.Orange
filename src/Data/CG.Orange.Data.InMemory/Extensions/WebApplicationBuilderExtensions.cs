@@ -5,7 +5,7 @@ namespace Microsoft.AspNetCore.Builder;
 /// This class contains extension methods related to the <see cref="WebApplicationBuilder"/>
 /// type.
 /// </summary>
-public static class WebApplicationBuilderExtensions
+public static class WebApplicationBuilderExtensions001
 {
     // *******************************************************************
     // Public methods.
@@ -26,6 +26,13 @@ public static class WebApplicationBuilderExtensions
     /// parameter, for chaining calls together, Fluent style.</returns>
     /// <exception cref="ArgumentException">This exception is thrown whenever
     /// one or more arguments are missing, or invalid.</exception>
+    /// <remarks>
+    /// <para>
+    /// This method must NOT have its signature changed! The method follows 
+    /// a convention used by the <see cref="CG.EntityFrameworkCore"/> 
+    /// package.
+    /// </para>
+    /// </remarks>
     public static WebApplicationBuilder AddInMemoryDataAccess(
         this WebApplicationBuilder webApplicationBuilder,
         string sectionName = "DAL:InMemory",

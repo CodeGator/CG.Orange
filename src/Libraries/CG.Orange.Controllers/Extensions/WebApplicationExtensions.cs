@@ -5,7 +5,7 @@ namespace Microsoft.AspNetCore.Builder;
 /// This class contains extension methods related to the <see cref="WebApplication"/>
 /// type.
 /// </summary>
-internal static class WebApplicationExtensions004
+public static class WebApplicationExtensions005
 {
     // *******************************************************************
     // Public methods.
@@ -14,30 +14,23 @@ internal static class WebApplicationExtensions004
     #region Public methods
 
     /// <summary>
-    /// This method registers any identity middleware required to integrate 
-    /// with an ODIC identity authority.
+    /// This method registers any middleware or startup code required for
+    /// the <see cref="CG.Orange"/> service layer.
     /// </summary>
     /// <param name="webApplication">The web application builder to 
     /// use for the operation.</param>
     /// <returns>The value of the <paramref name="webApplication"/>
     /// parameter, for chaining calls together, Fluent style</returns>
-    public static WebApplication UseOrangeIdentity(
+    public static WebApplication UseOrangeControllers(
         this WebApplication webApplication
         )
     {
         // Log what we are about to do.
         webApplication.Logger.LogDebug(
-            "Adding authorization middleware"
+            "Mapping controllers"
             );
 
-        webApplication.UseAuthorization();
-
-        // Log what we are about to do.
-        webApplication.Logger.LogDebug(
-            "Adding authentication middleware"
-            );
-
-        webApplication.UseAuthentication();
+        webApplication.MapControllers();
 
         // Return the application.
         return webApplication;

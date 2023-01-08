@@ -5,7 +5,7 @@ namespace Microsoft.AspNetCore.Builder;
 /// This class contains extension methods related to the <see cref="WebApplication"/>
 /// type.
 /// </summary>
-public static class WebApplicationExtensions
+public static class WebApplicationExtensions002
 {
     // *******************************************************************
     // Public methods.
@@ -20,6 +20,13 @@ public static class WebApplicationExtensions
     /// operation.</param>
     /// <returns>The value of the <paramref name="webApplication"/>
     /// parameter, for chaining calls together, Fluent style.</returns>
+    /// <remarks>
+    /// <para>
+    /// This method must NOT have its signature changed! The method follows 
+    /// a convention used by the <see cref="CG.EntityFrameworkCore"/> 
+    /// package.
+    /// </para>
+    /// </remarks>
     public static WebApplication UseSqliteDataAccess(
         this WebApplication webApplication
         )

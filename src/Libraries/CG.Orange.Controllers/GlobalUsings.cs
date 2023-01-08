@@ -11,3 +11,6 @@ global using System.ComponentModel.DataAnnotations;
 global using System.Net.Mime;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;
+
