@@ -2,7 +2,7 @@
 namespace CG.Orange;
 
 /// <summary>
-/// This interface represents the API for the Orange microservice.
+/// This interface represents the API for the <see cref="CG.Orange"/> microservice.
 /// </summary>
 public interface IOrangeApi
 {

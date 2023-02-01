@@ -1,8 +1,4 @@
-﻿using CG.Validations;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
-
+﻿
 namespace CG.Orange.Host.Pages
 {
     /// <summary>
